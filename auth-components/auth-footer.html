@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth footer</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  colors: {
+                      // Custom color palette
+                      footer: {
+                          bg: '#000000e6',
+                          text: '#D0D5DD',
+                          muted: '#98A2B3',
+                          divider: '#667085',
+                          link: '#D0D5DD',
+                          linkHover: '#ffffff',
+                          copyright: '#D0D5DD',
+                          dark: {
+                              bg: '#000000e6', // same as default in this case
+                              text: '#cecac4',
+                              muted: '#afa99e',
+                              divider: '#655e53',
+                              link: '#cecac4',
+                              linkHover: '#ffffff',
+                              copyright: '#cecac4',
+                          }
+                      }
+                  }
+              }
+          }
+      }
+    </script>
+
+    <style>
+            * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Poppins, Inter, Montserrat, Open Sans, arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-footer-bg text-footer-text p-5 max-w-4xl mx-auto dark:bg-footer-dark-bg dark:text-footer-dark-text"
+  >
+    <div
+      class="w-full relative bottom-0 z-20 mt-auto flex justify-center items-end"
+    >
+      <div class="flex flex-col items-center gap-4 self-stretch w-full pt-6">
+        <!-- footer top -->
+        <div class="flex justify-between items-start self-stretch">
+          <p
+            class="text-footer-copyright dark:text-footer-dark-copyright text-xs font-normal leading-[1.125rem] mb-0"
+          >
+            © 2025 Company
+          </p>
+
+          <!-- social-icons container -->
+          <div class="flex justify-center items-center gap-4">
+            <div class="flex justify-center items-center">
+              <a href="" class="flex justify-center h-5">
+                <svg
+                  class="w-5 h-5"
+                  data-icon="mail-auth"
+                  width="18"
+                  height="14"
+                  viewBox="0 0 18 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.667038 0.954873C0.666253 0.88366 0.675466 0.812088 0.694996 0.742402C0.726068 0.631381 0.781798 0.53066 0.855908 0.446518C0.994735 0.288898 1.19806 0.189453 1.42461 0.189453H16.5755C16.7067 0.189453 16.8308 0.222832 16.9384 0.281564C17.0144 0.322877 17.0843 0.377811 17.1441 0.445815C17.2139 0.524807 17.2674 0.618458 17.2995 0.721555C17.3032 0.733478 17.3066 0.745528 17.3098 0.757696C17.3265 0.822441 17.3343 0.888661 17.3336 0.954577V12.3106C17.3336 12.729 16.9944 13.0682 16.576 13.0682H1.42461C1.00621 13.0682 0.667038 12.729 0.667038 12.3106V0.954873ZM2.18218 2.46221V11.553H15.8185V2.46221L9.45487 7.23491C9.18551 7.43693 8.81514 7.43693 8.54578 7.23491L2.18218 2.46221ZM14.3034 1.7046H3.69726L9.00033 5.68189L14.3034 1.7046Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="flex justify-center items-center">
+              <a href="" class="flex justify-center h-5">
+                <svg
+                  class="w-5 h-5"
+                  data-icon="discord-auth"
+                  width="20"
+                  height="15"
+                  viewBox="0 0 20 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.3631 1.72176C15.1763 1.16651 13.9074 0.762978 12.5808 0.533203C12.4178 0.827767 12.2275 1.22396 12.0963 1.53913C10.686 1.32705 9.28875 1.32705 7.90445 1.53913C7.77324 1.22396 7.57857 0.827767 7.41419 0.533203C6.08612 0.762978 4.81574 1.16799 3.62899 1.7247C1.2353 5.34187 0.586416 8.8692 0.910861 12.3464C2.49848 13.532 4.03707 14.2522 5.5497 14.7235C5.92317 14.2095 6.25626 13.6631 6.54321 13.0873C5.99671 12.8796 5.47327 12.6233 4.97869 12.3258C5.1099 12.2286 5.23824 12.127 5.36224 12.0224C8.37885 13.4334 11.6565 13.4334 14.637 12.0224C14.7625 12.127 14.8908 12.2286 15.0206 12.3258C14.5246 12.6248 13.9997 12.8811 13.4532 13.0887C13.7401 13.6631 14.0718 14.211 14.4467 14.725C15.9608 14.2537 17.5008 13.5335 19.0884 12.3464C19.4691 8.31543 18.4381 4.8205 16.3631 1.72176ZM6.95418 10.208C6.04863 10.208 5.306 9.36258 5.306 8.3331C5.306 7.30362 6.03277 6.45677 6.95418 6.45677C7.87562 6.45677 8.61823 7.30214 8.60237 8.3331C8.6038 9.36258 7.87562 10.208 6.95418 10.208ZM13.0451 10.208C12.1395 10.208 11.3969 9.36258 11.3969 8.3331C11.3969 7.30362 12.1237 6.45677 13.0451 6.45677C13.9665 6.45677 14.7091 7.30214 14.6933 8.3331C14.6933 9.36258 13.9665 10.208 13.0451 10.208Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="flex justify-center items-center">
+              <a href="" class="flex justify-center h-5">
+                <svg
+                  class="w-5 h-5"
+                  data-icon="x-auth"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask id="path-1-inside-1_9988_61809" fill="white">
+                    <path
+                      d="M11.4285 8.85221L17.0135 2.5H15.6905L10.839 8.0144L6.96701 2.5H2.5L8.35652 10.8396L2.5 17.5H3.823L8.94302 11.6754L13.033 17.5H17.5M4.30051 3.47619H6.33301L15.6895 16.5718H13.6565"
+                    ></path>
+                  </mask>
+                  <path
+                    d="M11.4285 8.85221L17.0135 2.5H15.6905L10.839 8.0144L6.96701 2.5H2.5L8.35652 10.8396L2.5 17.5H3.823L8.94302 11.6754L13.033 17.5H17.5M4.30051 3.47619H6.33301L15.6895 16.5718H13.6565"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M17.0135 2.5L17.7645 3.1603L19.2243 1.5H17.0135V2.5ZM15.6905 2.5V1.5H15.2384L14.9398 1.83946L15.6905 2.5ZM10.839 8.0144L10.0206 8.58905L10.7507 9.62875L11.5898 8.67494L10.839 8.0144ZM6.96701 2.5L7.78541 1.92535L7.48675 1.5H6.96701V2.5ZM2.5 2.5V1.5H0.57579L1.68164 3.0747L2.5 2.5ZM8.35652 10.8396L9.10749 11.4999L9.62716 10.9089L9.17488 10.2648L8.35652 10.8396ZM2.5 17.5L1.74902 16.8397L0.2891 18.5H2.5V17.5ZM3.823 17.5V18.5H4.2754L4.57408 18.1602L3.823 17.5ZM8.94302 11.6754L9.76141 11.1007L9.03104 10.0606L8.19194 11.0151L8.94302 11.6754ZM13.033 17.5L12.2146 18.0747L12.5133 18.5H13.033V17.5ZM6.33301 3.47619L7.14667 2.89484L6.84755 2.47619H6.33301V3.47619ZM15.6895 16.5718V17.5718H17.633L16.5032 15.9904L15.6895 16.5718ZM12.1795 9.51251L17.7645 3.1603L16.2625 1.8397L10.6775 8.19191L12.1795 9.51251ZM17.0135 1.5H15.6905V3.5H17.0135V1.5ZM14.9398 1.83946L10.0882 7.35387L11.5898 8.67494L16.4413 3.16054L14.9398 1.83946ZM11.6574 7.43975L7.78541 1.92535L6.14861 3.07465L10.0206 8.58905L11.6574 7.43975ZM6.96701 1.5H2.5V3.5H6.96701V1.5ZM1.68164 3.0747L7.53816 11.4143L9.17488 10.2648L3.31836 1.9253L1.68164 3.0747ZM7.60554 10.1792L1.74902 16.8397L3.25098 18.1603L9.10749 11.4999L7.60554 10.1792ZM2.5 18.5H3.823V16.5H2.5V18.5ZM4.57408 18.1602L9.6941 12.3356L8.19194 11.0151L3.07193 16.8398L4.57408 18.1602ZM8.12463 12.25L12.2146 18.0747L13.8514 16.9253L9.76141 11.1007L8.12463 12.25ZM13.033 18.5H17.5V16.5H13.033V18.5ZM4.30051 4.47619H6.33301V2.47619H4.30051V4.47619ZM5.51935 4.05753L14.8759 17.1531L16.5032 15.9904L7.14667 2.89484L5.51935 4.05753ZM15.6895 15.5718H13.6565V17.5718H15.6895V15.5718Z"
+                    fill="currentColor"
+                    mask="url(#path-1-inside-1_9988_61809)"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="flex justify-center items-center">
+              <a href="" class="flex justify-center h-5">
+                <svg
+                  class="w-5 h-5"
+                  data-icon="instagram"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.54066 2.10383C3.99177 2.31729 3.52758 2.6019 3.0634 3.06608C2.59921 3.52688 2.3146 3.99446 2.10114 4.53996C1.89446 5.06852 1.75554 5.67502 1.71489 6.56273C1.67423 7.45044 1.66406 7.73505 1.66406 9.99839C1.66406 12.2617 1.67423 12.5463 1.71489 13.434C1.75554 14.3218 1.89785 14.9283 2.10114 15.4568C2.3146 16.0057 2.59921 16.4699 3.0634 16.9341C3.52758 17.3983 3.99177 17.6829 4.54066 17.8963C5.06923 18.103 5.67572 18.2419 6.56343 18.2826C7.45115 18.3232 7.73576 18.3334 9.99909 18.3334C12.2624 18.3334 12.547 18.3232 13.4347 18.2826C14.3225 18.2419 14.929 18.0996 15.4575 17.8963C16.0064 17.6829 16.4706 17.3983 16.9348 16.9341C17.399 16.4699 17.6836 16.0057 17.897 15.4568C18.1037 14.9283 18.2426 14.3218 18.2833 13.434C18.324 12.5463 18.3341 12.2617 18.3341 9.99839C18.3341 7.73505 18.324 7.45044 18.2833 6.56273C18.2426 5.67502 18.1003 5.06852 17.897 4.53996C17.6836 3.99446 17.399 3.52688 16.9382 3.06608C16.474 2.6019 16.0098 2.31729 15.4609 2.10383C14.9323 1.89715 14.3258 1.75823 13.4381 1.71757C12.5504 1.67691 12.2658 1.66675 10.0025 1.66675C7.73914 1.66675 7.45453 1.67691 6.56682 1.71757C5.67572 1.75484 5.06923 1.89715 4.54066 2.10383ZM13.367 3.21517C14.1802 3.25244 14.6206 3.38797 14.9154 3.50316C15.305 3.65563 15.5829 3.83521 15.8743 4.1266C16.1657 4.41798 16.3452 4.69582 16.4977 5.08546C16.6129 5.38024 16.7484 5.82071 16.7857 6.63388C16.8264 7.51143 16.8331 7.77571 16.8331 10.0018C16.8331 12.2278 16.823 12.4921 16.7857 13.3697C16.7484 14.1828 16.6129 14.6233 16.4977 14.9181C16.3452 15.3077 16.1657 15.5856 15.8743 15.877C15.5829 16.1683 15.305 16.3479 14.9154 16.5004C14.6206 16.6156 14.1802 16.7511 13.367 16.7884C12.4894 16.829 12.2252 16.8358 9.99909 16.8358C7.77303 16.8358 7.50875 16.8257 6.6312 16.7884C5.81802 16.7511 5.37755 16.6156 5.08278 16.5004C4.69313 16.3479 4.4153 16.1683 4.12391 15.877C3.83252 15.5856 3.65295 15.3077 3.50048 14.9181C3.38528 14.6233 3.24975 14.1828 3.21248 13.3697C3.17182 12.4921 3.16504 12.2278 3.16504 10.0018C3.16504 7.77571 3.17521 7.51143 3.21248 6.63388C3.24975 5.82071 3.38528 5.38024 3.50048 5.08546C3.65295 4.69582 3.83252 4.41798 4.12391 4.1266C4.4153 3.83521 4.69313 3.65563 5.08278 3.50316C5.37755 3.38797 5.81802 3.25244 6.6312 3.21517C7.50875 3.17451 7.77303 3.16773 9.99909 3.16773C12.2252 3.16773 12.4894 3.17451 13.367 3.21517Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M5.7207 10.0017C5.7207 12.3667 7.63844 14.2811 10 14.2811C12.3616 14.2811 14.2794 12.3633 14.2794 10.0017C14.2794 7.64015 12.365 5.72241 10 5.72241C7.63505 5.72241 5.7207 7.63676 5.7207 10.0017ZM12.7784 10.0017C12.7784 11.5366 11.5349 12.7801 10 12.7801C8.46516 12.7801 7.22169 11.5366 7.22169 10.0017C7.22169 8.46687 8.46516 7.22339 10 7.22339C11.5349 7.22339 12.7784 8.46687 12.7784 10.0017Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M14.4507 6.55252C15.0027 6.55252 15.4502 6.10502 15.4502 5.55299C15.4502 5.00097 15.0027 4.55347 14.4507 4.55347C13.8987 4.55347 13.4512 5.00097 13.4512 5.55299C13.4512 6.10502 13.8987 6.55252 14.4507 6.55252Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- divider -->
+        <div
+          class="relative block self-stretch border-t border-footer-divider dark:border-footer-dark-divider h-px opacity-50"
+        ></div>
+
+        <!-- link-row-1 -->
+        <div class="flex justify-center items-center flex-wrap gap-[4px_12px]">
+          <a
+            href=""
+            class="text-footer-link dark:text-footer-dark-link text-xs font-normal leading-[1.125rem] transition-colors duration-150 hover:text-white hover:underline dark:hover:text-[#e8e6e3]"
+            >DMCA</a
+          >
+          <a
+            href=""
+            class="text-footer-link dark:text-footer-dark-link text-xs font-normal leading-[1.125rem] transition-colors duration-150 hover:text-white hover:underline dark:hover:text-[#e8e6e3]"
+            >Anti Sexual Exploitation Policies</a
+          >
+          <a
+            href=""
+            class="text-footer-link dark:text-footer-dark-link text-xs font-normal leading-[1.125rem] transition-colors duration-150 hover:text-white hover:underline dark:hover:text-[#e8e6e3]"
+            >Privacy Policies</a
+          >
+          <a
+            href=""
+            class="text-footer-link dark:text-footer-dark-link text-xs font-normal leading-[1.125rem] transition-colors duration-150 hover:text-white hover:underline dark:hover:text-[#e8e6e3]"
+            >Ai Generated Content</a
+          >
+        </div>
+
+        <!-- link-row-2 -->
+        <div class="flex justify-center items-center flex-wrap gap-[4px_12px]">
+          <a
+            href=""
+            class="text-footer-link dark:text-footer-dark-link text-xs font-normal leading-[1.125rem] transition-colors duration-150 hover:text-white hover:underline dark:hover:text-[#e8e6e3]"
+            >Terms & Conditions (Creators)</a
+          >
+          <a
+            href=""
+            class="text-footer-link dark:text-footer-dark-link text-xs font-normal leading-[1.125rem] transition-colors duration-150 hover:text-white hover:underline dark:hover:text-[#e8e6e3]"
+            >Terms & Conditions (Fans)</a
+          >
+          <a
+            href=""
+            class="text-footer-link dark:text-footer-dark-link text-xs font-normal leading-[1.125rem] transition-colors duration-150 hover:text-white hover:underline dark:hover:text-[#e8e6e3]"
+            >Content Removal Request</a
+          >
+        </div>
+
+        <!-- sponsores -->
+        <div class="flex justify-center items-center gap-4">
+          <!-- visa & master card container -->
+          <div class="flex items-center gap-4">
+            <svg
+              class="w-[1.95313rem] h-5"
+              data-icon="visa"
+              width="57"
+              height="17"
+              viewBox="0 0 57 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.9397 15.8589L22.7773 0.311993H27.3144L24.4759 15.8589H19.9397ZM40.8474 0.653057C39.5454 0.212565 38.1699 -0.00846885 36.7851 0.000248118C32.3075 0.000248118 29.1531 2.10624 29.126 5.12519C29.1013 7.35649 31.3783 8.60101 33.0974 9.34345C34.8614 10.1049 35.4542 10.5904 35.4458 11.2702C35.4347 12.3108 34.0367 12.786 32.7347 12.786C30.9206 12.786 29.9574 12.548 28.4686 11.9714L27.8851 11.7247L27.249 15.2005C28.3072 15.6336 30.2649 16.0096 32.2965 16.0286C37.0603 16.0286 40.1527 13.9472 40.1883 10.7236C40.2053 8.95715 38.9993 7.61267 36.3834 6.50456C34.7994 5.79067 33.8295 5.30681 33.8397 4.57944C33.8397 3.93456 34.661 3.2445 36.4352 3.2445C37.5977 3.2202 38.7528 3.42282 39.8265 3.83941L40.2325 4.01865L40.8474 0.653057ZM52.5035 0.311993H49.0128C47.9316 0.311993 47.1222 0.588043 46.6474 1.59542L39.9378 15.7796H44.7135C44.7135 15.7796 45.4779 13.8933 45.6537 13.4792L51.3756 13.4856C51.5089 14.0218 51.9192 15.7796 51.9192 15.7796H56.1589L52.5035 0.311993ZM46.9532 10.3064C47.3277 9.41168 48.7588 5.96596 48.7588 5.96596C48.7317 6.00721 49.1308 5.06647 49.3593 4.48346L49.6659 5.82243C49.6659 5.82243 50.5339 9.52907 50.7148 10.3064H46.9532ZM16.0897 0.311993L11.6631 10.8767L11.1917 8.72953C10.3679 6.25472 7.80039 3.57368 4.92969 2.23157L8.97756 15.7796L13.7609 15.7748L20.8791 0.311993H16.0677"
+                fill="url(#paint0_linear_7076_1134087)"
+              ></path>
+              <path
+                d="M7.33471 0.31177H0.0585981L0 0.634591C5.68534 1.92038 9.44695 5.0266 11.0088 8.75785L9.41977 1.61898C9.14544 0.63619 8.35051 0.342702 7.36614 0.308594"
+                fill="url(#paint1_linear_7076_1134087)"
+              ></path>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_7076_1134087"
+                  x1="30.5443"
+                  y1="0"
+                  x2="30.5443"
+                  y2="16.0286"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="white"></stop>
+                  <stop
+                    offset="1"
+                    stop-color="white"
+                    stop-opacity="0.75"
+                  ></stop>
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_7076_1134087"
+                  x1="5.50442"
+                  y1="0.308594"
+                  x2="5.50442"
+                  y2="8.75785"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="white"></stop>
+                  <stop
+                    offset="1"
+                    stop-color="white"
+                    stop-opacity="0.75"
+                  ></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+
+            <svg
+              class="w-[1.95313rem] h-5"
+              data-icon="mastercard"
+              width="27"
+              height="16"
+              viewBox="0 0 27 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.348 14.0888C11.9342 15.2805 10.1003 16 8.09624 16C3.62481 16 0 12.4183 0 8C0 3.58172 3.62481 0 8.09624 0C10.1003 0 11.9342 0.719462 13.348 1.91125C14.7618 0.719462 16.5958 0 18.5998 0C23.0713 0 26.6961 3.58172 26.6961 8C26.6961 12.4183 23.0713 16 18.5998 16C16.5958 16 14.7618 15.2805 13.348 14.0888Z"
+                fill="#ED0006"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.3438 14.0888C15.0844 12.6214 16.1882 10.4381 16.1882 8C16.1882 5.56193 15.0844 3.37859 13.3438 1.91125C14.7575 0.719462 16.5915 0 18.5955 0C23.067 0 26.6918 3.58172 26.6918 8C26.6918 12.4183 23.067 16 18.5955 16C16.5915 16 14.7575 15.2805 13.3438 14.0888Z"
+                fill="#F9A000"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.3523 14.0886C15.0929 12.6213 16.1967 10.438 16.1967 7.99989C16.1967 5.56182 15.0929 3.37848 13.3523 1.91113C11.6116 3.37848 10.5078 5.56182 10.5078 7.99989C10.5078 10.438 11.6116 12.6213 13.3523 14.0886Z"
+                fill="#FF5E00"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- security-matrics container -->
+          <div class="flex items-center gap-4">
+            <a href="">
+              <img
+                src="https://i.ibb.co.com/JwR5f6sW/Blue-Content-PCI-Validation-White-Rec.webp"
+                alt="SecurityMetrics PCI validation certification logo"
+                class="w-24"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- address -->
+        <address
+          class="text-footer-muted dark:text-footer-dark-muted text-[0.625rem] leading-[normal] text-center"
+        >
+          Madlinks Media Ltd., c/o First Floor, 24 Edgware Rood, London, United
+          Kingdom, W2 1DS
+        </address>
+      </div>
+    </div>
+  </body>
+</html>

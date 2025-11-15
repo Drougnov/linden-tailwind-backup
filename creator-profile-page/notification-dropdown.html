@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="max-sm:text-sm">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification Dropdown</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+</head>
+    <body class="bg-white font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#202324]">
+        <!-- dropdown-wrapper -->
+        <div class="fixed top-0 bottom-[calc(100%+1rem)] right-0 left-auto block w-screen h-[100svh] rounded-[0.625rem] z-[10000] bg-white md:top-[4.5rem] md:right-4 md:left-[unset] md:w-auto xl:right-[2.125rem]">
+            <div class="[background:linear-gradient(180deg,rgba(255,255,255,0.2)_-4.5%,rgba(255,255,255,0)_11.18%),rgba(0,0,0,0.7)] backdrop-blur-[5px] md:[background:none] md:backdrop-blur-[0] dark:[background:linear-gradient(180deg,rgba(24,26,27,0.2)_-4.5%,rgba(24,26,27,0)_11.18%),rgba(0,0,0,0.7)]">
+                <!-- mobile-bg-blur -->
+                <div class="flex flex-col w-full relative shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-black/20 md:w-[26.875rem] md:bg-transparent">
+                    <!-- back-button for mobile -->
+                    <div class="flex justify-start items-center h-14 p-2 md:hidden">
+                        <span class="flex justify-center items-center w-10 h-10 cursor-pointer">
+                            <img src="https://i.ibb.co.com/Mx1xkK2X/chevron-left-big.webp" alt="chevron-left" class="h-5">
+                        </span>
+                    </div>
+
+                    <!-- data-tabs-container -->
+                    <div class="flex flex-col w-full relative [background:linear-gradient(180deg,rgba(255,255,255,0.2)_-4.5%,rgba(255,255,255,0)_11.18%),rgba(0,0,0,0.7)] backdrop-blur-[25px] md:w-auto md:pt-2 dark:[background:linear-gradient(180deg,rgba(24,26,27,0.2)_-4.5%,rgba(24,26,27,0)_11.18%),rgba(0,0,0,0.7)]">
+                        <!-- tab-menu-container -->
+                        <ul class="flex flex-row gap-[1.438rem] overflow-x-auto whitespace-nowrap [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] px-2 pt-4 border-b border-[#344054] dark:border-[#766d61]">
+                            <li class="flex flex-col gap-1 flex-grow flex-shrink w-[9.375rem] pb-2 border-b-[0.125rem] border-transparent cursor-pointer group active [&.active]:border-[#07F468] dark:[&.active]:border-[#05af4a]">
+                                <div class="flex justify-center items-center gap-2.5 p-[0.313rem]">
+                                    <img src="https://i.ibb.co.com/tMTvb2n1/mail.webp" alt="mail" class="w-5 h-5 [filter:brightness(0)_invert(1)] opacity-70 group-[.active]:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(67%)_saturate(2300%)_hue-rotate(86deg)_brightness(100%)_contrast(98%)]">
+                                    
+                                    <small class="flex justify-center items-center text-xs leading-loose font-semibold text-black min-w-[1.25rem] h-[1.125rem] tracking-[0.016rem] px-1 rounded-sm bg-white group-[.active]:bg-[#07F468] dark:text-[#e8e6e3] dark:bg-[#181a1b] dark:group-[.active]:bg-[#06c353]">11</small>
+                                </div>
+                            </li>
+
+                            <li class="flex flex-col gap-1 flex-grow flex-shrink w-[9.375rem] pb-2 border-b-[0.125rem] border-transparent cursor-pointer group [&.active]:border-[#07F468] dark:[&.active]:border-[#05af4a]">
+                                <div class="flex justify-center items-center gap-2.5 p-[0.313rem]">
+                                    <img src="https://i.ibb.co.com/Fkw6Kyk6/shopping-bag.webp" alt="shopping-bag" class="w-5 h-5 [filter:brightness(0)_invert(1)] opacity-70 group-[.active]:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(67%)_saturate(2300%)_hue-rotate(86deg)_brightness(100%)_contrast(98%)]">
+                                </div>
+                            </li>
+
+                            <li class="flex flex-col gap-1 flex-grow flex-shrink w-[9.375rem] pb-2 border-b-[0.125rem] border-transparent cursor-pointer group [&.active]:border-[#07F468] dark:[&.active]:border-[#05af4a]">
+                                <div class="flex justify-center items-center gap-2.5 p-[0.313rem]">
+                                    <img src="https://i.ibb.co.com/ZzQKHR1f/chat.webp" alt="chat" class="w-5 h-5 [filter:brightness(0)_invert(1)] opacity-70 group-[.active]:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(67%)_saturate(2300%)_hue-rotate(86deg)_brightness(100%)_contrast(98%)]">
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <!-- tab-content-container -->
+                    <div class="flex flex-col items-stretch self-stretch h-[100svh] max-h-[calc(100svh-7rem)] md:h-[33.375rem] md:max-h-[unset]">
+                        <!-- first tab content items -->
+                        <div class="block flex-1">
+                            <!-- wrapper for notifications -->
+                            <div class="flex flex-col self-stretch h-[100svh] max-h-[calc(100svh-7rem)] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] backdrop-blur-[50px] md:h-[33.375rem] md:max-h-[unset]">
+                                <!-- container for notifications -->
+                                <div class="flex flex-col items-start self-stretch pb-1 ">
+                                    <!-- notification card - warning -->
+                                    <div class="flex justify-center items-center relative self-stretch border-b border-[#344054] border-l border-l-[3px] group notification-success [&.notification-success]:border-l-[#2ed3b7] dark:border-[#766d61] dark:[&.notification-success]:border-l-[#1f937f]">
+                                        <!-- notification-body -->
+                                        <div class="flex flex-col items-start gap-4 flex-grow self-stretch relative px-2 py-3 z-[2] [transition:all_0.15s_ease-in-out] group-[.notification-success]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(46,211,183,0.3)_0%,rgba(46,211,183,0.3)_100%),rgba(0,0,0,0.9)] dark:group-[.notification-success]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(35,168,151,0.3)_0%,rgba(35,168,151,0.3)_100%),rgba(0,0,0,0.9)]">
+                                            <div class="flex justify-start items-start gap-5 self-stretch relative">
+                                                <!-- notification close -->
+                                                <a href="" class="hidden absolute top-0 right-0 justify-center items-center w-6 h-6 no-underline sm:flex">
+                                                    <img src="https://i.ibb.co.com/nsDx2VGw/close-icon.webp" alt="close-icon" class="w-4 h-4 pointer-events-none">
+                                                </a>
+
+                                                <!-- notification icons -->
+                                                <div class="flex justify-center items-center relative min-w-[2.5rem] w-10 h-10 rounded-lg group-[.notification-success]:bg-[#2ed3b71a] dark:group-[.notification-success]:bg-[#23a8971a]">
+                                                    <img src="https://i.ibb.co.com/21jCDTJv/featured-media-bg-compressed-optimized-5-1.webp" alt="featured-media-bg-compressed-optimized-5-1" class="w-10 h-10 rounded-[0.313rem] object-cover">
+                                                    <!-- small-icon -->
+                                                    <div class="absolute bottom-[-0.563rem] right-[-0.563rem] flex justify-center items-center w-[1.375rem] h-[1.375rem] rounded-lg group-[.notification-success]:bg-[#2ed3b7] dark:group-[.notification-success]:bg-[#23a897]">
+                                                        <img src="https://i.ibb.co.com/GfbMXS2c/check-circle-broken.webp" alt="check-circle-broken" class="w-4 h-4 opacity-90">
+                                                    </div>
+                                                </div>
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-col items-start self-stretch flex-grow">
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-col items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pr-6">
+                                                            <p class="text-sm text-[#edeff3] dark:text-[#dfdcd7]">Congratulations, your profile avatar has been approved.</p>
+                                                        </div>
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end gap-2 self-stretch pt-2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span class="text-xs leading-normal text-[#edeff3] dark:text-[#dfdcd7]">3d</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- notification card - warning -->
+                                    <div class="flex justify-center items-center relative self-stretch border-b border-[#344054] border-l border-l-[3px] group notification-success [&.notification-success]:border-l-[#2ed3b7] dark:border-[#766d61] dark:[&.notification-success]:border-l-[#1f937f]">
+                                        <!-- notification-body -->
+                                        <div class="flex flex-col items-start gap-4 flex-grow self-stretch relative px-2 py-3 z-[2] [transition:all_0.15s_ease-in-out] group-[.notification-success]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(46,211,183,0.3)_0%,rgba(46,211,183,0.3)_100%),rgba(0,0,0,0.9)] dark:group-[.notification-success]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(35,168,151,0.3)_0%,rgba(35,168,151,0.3)_100%),rgba(0,0,0,0.9)]">
+                                            <div class="flex justify-start items-start gap-5 self-stretch relative">
+                                                <!-- notification close -->
+                                                <a href="" class="hidden absolute top-0 right-0 justify-center items-center w-6 h-6 no-underline sm:flex">
+                                                    <img src="https://i.ibb.co.com/nsDx2VGw/close-icon.webp" alt="close-icon" class="w-4 h-4 pointer-events-none">
+                                                </a>
+
+                                                <!-- notification icons -->
+                                                <div class="flex justify-center items-center relative min-w-[2.5rem] w-10 h-10 rounded-lg group-[.notification-success]:bg-[#2ed3b71a] dark:group-[.notification-success]:bg-[#23a8971a]">
+                                                    <img src="https://i.ibb.co.com/21jCDTJv/featured-media-bg-compressed-optimized-5-1.webp" alt="featured-media-bg-compressed-optimized-5-1" class="w-10 h-10 rounded-[0.313rem] object-cover">
+                                                    <!-- small-icon -->
+                                                    <div class="absolute bottom-[-0.563rem] right-[-0.563rem] flex justify-center items-center w-[1.375rem] h-[1.375rem] rounded-lg group-[.notification-success]:bg-[#2ed3b7] dark:group-[.notification-success]:bg-[#23a897]">
+                                                        <img src="https://i.ibb.co.com/GfbMXS2c/check-circle-broken.webp" alt="check-circle-broken" class="w-4 h-4 opacity-90">
+                                                    </div>
+                                                </div>
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-col items-start self-stretch flex-grow">
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-col items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pr-6">
+                                                            <p class="text-sm text-[#edeff3] dark:text-[#dfdcd7]">Congratulations, your profile avatar has been approved.</p>
+                                                        </div>
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end gap-2 self-stretch pt-2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span class="text-xs leading-normal text-[#edeff3] dark:text-[#dfdcd7]">3d</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- notification card - warning -->
+                                    <div class="flex justify-center items-center relative self-stretch border-b border-[#344054] border-l border-l-[3px] group notification-success [&.notification-success]:border-l-[#2ed3b7] dark:border-[#766d61] dark:[&.notification-success]:border-l-[#1f937f]">
+                                        <!-- notification-body -->
+                                        <div class="flex flex-col items-start gap-4 flex-grow self-stretch relative px-2 py-3 z-[2] [transition:all_0.15s_ease-in-out] group-[.notification-success]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(46,211,183,0.3)_0%,rgba(46,211,183,0.3)_100%),rgba(0,0,0,0.9)] dark:group-[.notification-success]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(35,168,151,0.3)_0%,rgba(35,168,151,0.3)_100%),rgba(0,0,0,0.9)]">
+                                            <div class="flex justify-start items-start gap-5 self-stretch relative">
+                                                <!-- notification close -->
+                                                <a href="" class="hidden absolute top-0 right-0 justify-center items-center w-6 h-6 no-underline sm:flex">
+                                                    <img src="https://i.ibb.co.com/nsDx2VGw/close-icon.webp" alt="close-icon" class="w-4 h-4 pointer-events-none">
+                                                </a>
+
+                                                <!-- notification icons -->
+                                                <div class="flex justify-center items-center relative min-w-[2.5rem] w-10 h-10 rounded-lg group-[.notification-success]:bg-[#2ed3b71a] dark:group-[.notification-success]:bg-[#23a8971a]">
+                                                    <img src="https://i.ibb.co.com/21jCDTJv/featured-media-bg-compressed-optimized-5-1.webp" alt="featured-media-bg-compressed-optimized-5-1" class="w-10 h-10 rounded-[0.313rem] object-cover">
+                                                    <!-- small-icon -->
+                                                    <div class="absolute bottom-[-0.563rem] right-[-0.563rem] flex justify-center items-center w-[1.375rem] h-[1.375rem] rounded-lg group-[.notification-success]:bg-[#2ed3b7] dark:group-[.notification-success]:bg-[#23a897]">
+                                                        <img src="https://i.ibb.co.com/GfbMXS2c/check-circle-broken.webp" alt="check-circle-broken" class="w-4 h-4 opacity-90">
+                                                    </div>
+                                                </div>
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-col items-start self-stretch flex-grow">
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-col items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pr-6">
+                                                            <p class="text-sm text-[#edeff3] dark:text-[#dfdcd7]">Congratulations, your profile avatar has been approved.</p>
+                                                        </div>
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end gap-2 self-stretch pt-2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span class="text-xs leading-normal text-[#edeff3] dark:text-[#dfdcd7]">3d</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- notification card - warning -->
+                                    <div class="flex justify-center items-center relative self-stretch border-b border-[#344054] border-l border-l-[3px] group notification-success [&.notification-success]:border-l-[#2ed3b7] dark:border-[#766d61] dark:[&.notification-success]:border-l-[#1f937f]">
+                                        <!-- notification-body -->
+                                        <div class="flex flex-col items-start gap-4 flex-grow self-stretch relative px-2 py-3 z-[2] [transition:all_0.15s_ease-in-out] group-[.notification-success]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(46,211,183,0.3)_0%,rgba(46,211,183,0.3)_100%),rgba(0,0,0,0.9)] dark:group-[.notification-success]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(35,168,151,0.3)_0%,rgba(35,168,151,0.3)_100%),rgba(0,0,0,0.9)]">
+                                            <div class="flex justify-start items-start gap-5 self-stretch relative">
+                                                <!-- notification close -->
+                                                <a href="" class="hidden absolute top-0 right-0 justify-center items-center w-6 h-6 no-underline sm:flex">
+                                                    <img src="https://i.ibb.co.com/nsDx2VGw/close-icon.webp" alt="close-icon" class="w-4 h-4 pointer-events-none">
+                                                </a>
+
+                                                <!-- notification icons -->
+                                                <div class="flex justify-center items-center relative min-w-[2.5rem] w-10 h-10 rounded-lg group-[.notification-success]:bg-[#2ed3b71a] dark:group-[.notification-success]:bg-[#23a8971a]">
+                                                    <img src="https://i.ibb.co.com/21jCDTJv/featured-media-bg-compressed-optimized-5-1.webp" alt="featured-media-bg-compressed-optimized-5-1" class="w-10 h-10 rounded-[0.313rem] object-cover">
+                                                    <!-- small-icon -->
+                                                    <div class="absolute bottom-[-0.563rem] right-[-0.563rem] flex justify-center items-center w-[1.375rem] h-[1.375rem] rounded-lg group-[.notification-success]:bg-[#2ed3b7] dark:group-[.notification-success]:bg-[#23a897]">
+                                                        <img src="https://i.ibb.co.com/GfbMXS2c/check-circle-broken.webp" alt="check-circle-broken" class="w-4 h-4 opacity-90">
+                                                    </div>
+                                                </div>
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-col items-start self-stretch flex-grow">
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-col items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pr-6">
+                                                            <p class="text-sm text-[#edeff3] dark:text-[#dfdcd7]">Congratulations, your profile avatar has been approved.</p>
+                                                        </div>
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end gap-2 self-stretch pt-2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span class="text-xs leading-normal text-[#edeff3] dark:text-[#dfdcd7]">3d</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- notification card - info -->
+                                    <div class="flex justify-center items-center relative self-stretch border-b border-[#344054] border-l border-l-[3px] group notification-info [&.notification-info]:border-l-[#22ccee] dark:border-[#766d61] dark:[&.notification-info]:border-l-[#0c88a1]">
+                                        <!-- notification-body -->
+                                        <div class="flex flex-col items-start gap-4 flex-grow self-stretch relative px-2 py-3 z-[2] [transition:all_0.15s_ease-in-out] group-[.notification-info]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(34,204,238,0.3)_0%,rgba(34,204,238,0.3)_100%),rgba(0,0,0,0.9)] dark:group-[.notification-info]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(14,152,180,0.3)_0%,rgba(14,152,180,0.3)_100%),rgba(0,0,0,0.9)]">
+                                            <div class="flex justify-start items-start gap-5 self-stretch relative">
+                                                <!-- notification close -->
+                                                <a href="" class="hidden absolute top-0 right-0 justify-center items-center w-6 h-6 no-underline sm:flex">
+                                                    <img src="https://i.ibb.co.com/nsDx2VGw/close-icon.webp" alt="close-icon" class="w-4 h-4 pointer-events-none">
+                                                </a>
+
+                                                <!-- notification icons -->
+                                                <div class="flex justify-center items-center relative min-w-[2.5rem] w-10 h-10 rounded-lg group-[.notification-info]:bg-[#22ccee1a] dark:group-[.notification-info]:bg-[#0e98b41a]">
+                                                    <img src="https://i.ibb.co.com/M5j20vzR/card-download-icon.webp" alt="card-download-icon" class="w-6">
+                                                </div>
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-col items-start self-stretch flex-grow">
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-col items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pr-6">
+                                                            <p class="text-sm text-[#edeff3] dark:text-[#dfdcd7]">Your payout 10USD is currently being processed.</p>
+                                                        </div>
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end gap-2 self-stretch pt-2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span class="text-xs leading-normal text-[#edeff3] dark:text-[#dfdcd7]">1w</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- notification card - info -->
+                                    <div class="flex justify-center items-center relative self-stretch border-b border-[#344054] border-l border-l-[3px] group notification-info [&.notification-info]:border-l-[#22ccee] dark:border-[#766d61] dark:[&.notification-info]:border-l-[#0c88a1]">
+                                        <!-- notification-body -->
+                                        <div class="flex flex-col items-start gap-4 flex-grow self-stretch relative px-2 py-3 z-[2] [transition:all_0.15s_ease-in-out] group-[.notification-info]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(34,204,238,0.3)_0%,rgba(34,204,238,0.3)_100%),rgba(0,0,0,0.9)] dark:group-[.notification-info]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(14,152,180,0.3)_0%,rgba(14,152,180,0.3)_100%),rgba(0,0,0,0.9)]">
+                                            <div class="flex justify-start items-start gap-5 self-stretch relative">
+                                                <!-- notification close -->
+                                                <a href="" class="hidden absolute top-0 right-0 justify-center items-center w-6 h-6 no-underline sm:flex">
+                                                    <img src="https://i.ibb.co.com/nsDx2VGw/close-icon.webp" alt="close-icon" class="w-4 h-4 pointer-events-none">
+                                                </a>
+
+                                                <!-- notification icons -->
+                                                <div class="flex justify-center items-center relative min-w-[2.5rem] w-10 h-10 rounded-lg group-[.notification-info]:bg-[#22ccee1a] dark:group-[.notification-info]:bg-[#0e98b41a]">
+                                                    <img src="https://i.ibb.co.com/M5j20vzR/card-download-icon.webp" alt="card-download-icon" class="w-6">
+                                                </div>
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-col items-start self-stretch flex-grow">
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-col items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pr-6">
+                                                            <p class="text-sm text-[#edeff3] dark:text-[#dfdcd7]">Your payout 10USD is currently being processed.</p>
+                                                        </div>
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end gap-2 self-stretch pt-2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span class="text-xs leading-normal text-[#edeff3] dark:text-[#dfdcd7]">1w</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- notification card - info -->
+                                    <div class="flex justify-center items-center relative self-stretch border-b border-[#344054] border-l border-l-[3px] group notification-info [&.notification-info]:border-l-[#22ccee] dark:border-[#766d61] dark:[&.notification-info]:border-l-[#0c88a1]">
+                                        <!-- notification-body -->
+                                        <div class="flex flex-col items-start gap-4 flex-grow self-stretch relative px-2 py-3 z-[2] [transition:all_0.15s_ease-in-out] group-[.notification-info]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(34,204,238,0.3)_0%,rgba(34,204,238,0.3)_100%),rgba(0,0,0,0.9)] dark:group-[.notification-info]:[background:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%),linear-gradient(0deg,rgba(14,152,180,0.3)_0%,rgba(14,152,180,0.3)_100%),rgba(0,0,0,0.9)]">
+                                            <div class="flex justify-start items-start gap-5 self-stretch relative">
+                                                <!-- notification close -->
+                                                <a href="" class="hidden absolute top-0 right-0 justify-center items-center w-6 h-6 no-underline sm:flex">
+                                                    <img src="https://i.ibb.co.com/nsDx2VGw/close-icon.webp" alt="close-icon" class="w-4 h-4 pointer-events-none">
+                                                </a>
+
+                                                <!-- notification icons -->
+                                                <div class="flex justify-center items-center relative min-w-[2.5rem] w-10 h-10 rounded-lg group-[.notification-info]:bg-[#22ccee1a] dark:group-[.notification-info]:bg-[#0e98b41a]">
+                                                    <img src="https://i.ibb.co.com/M5j20vzR/card-download-icon.webp" alt="card-download-icon" class="w-6">
+                                                </div>
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-col items-start self-stretch flex-grow">
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-col items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pr-6">
+                                                            <p class="text-sm text-[#edeff3] dark:text-[#dfdcd7]">Your payout 10USD is currently being processed.</p>
+                                                        </div>
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end gap-2 self-stretch pt-2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span class="text-xs leading-normal text-[#edeff3] dark:text-[#dfdcd7]">1w</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

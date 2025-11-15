@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Uploader Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="src/style.css" />
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            screens: {
+              sm: '480px',
+              md: '768px',
+              lg: '1010px',
+              xl: '1365px',
+            },
+            colors: {
+              'raisin-black': '#221f1f',
+              'athens-gray': '#f9fafb',
+              'mischka': '#d0d5dd',
+              'bright-gray': '#edeff3',
+              'ebony-2': '#0c111d',
+              'gull-gray': '#98A2B3',
+              'white': '#ffffff',
+              'pale-sky': '#667085',
+              'black': '#000',
+              'oxford-blue': '#344054',
+
+
+              // for dark
+              'american-silver': '#d3d0ca',
+              'eerie-black': '#1b1d1e',
+              'eerie-black-2': '#181a1b',
+              'independence': '#4a5568',
+              'raisin-black-2': '#202325',
+              'arsenic': '#3b4043',
+              'rich-black': '#0a0e17',
+              'quick-silver': '#afa99e',
+              'grullo': '#9e9589',
+              'timberwolf': '#dbd8d3',
+              'vodka': '#bdb7ef',
+              'platinum': '#e8e6e3'
+            },
+            fontFamily: {
+              sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+            },
+            boxShadow: {
+              'sh1': '0 1px 2px 0 rgba(16, 24, 40, 0.05)',
+              'sh1-dark': '0 1px 2px 0 rgba(13, 19, 32, 0.05)'
+            }
+          },
+        },
+      }
+    </script>
+
+    <style>
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-family: Poppins, Inter, Montserrat, Open Sans, arial, sans-serif;
+          }
+          body,
+          input::placeholder{
+              font-family: Poppins, Inter, Montserrat, Open Sans, arial, sans-serif;
+          }
+
+          .manage-icon{
+              filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%);
+          }
+    </style>
+  </head>
+  <body
+    class="p-2 flex flex-col gap-6 bg-[#f9fafb] dark:bg-[#1b1d1e] backdrop-filter backdrop-blur-lg"
+  >
+    <div
+      class="relative flex flex-col items-stretch border-t border-[#0C111D] dark:border-[#857c6d] bg-[rgba(249,250,251,1)] dark:bg-[#1b1d1e] shadow-[0_0_8px_0px_rgba(0,0,0,0.10)] dark:shadow-[0_0_8px_0px_rgba(0,0,0,0.10)] md:sticky md:top-0 md:z-[99] md:overflow-hidden md:w-full"
+    >
+      <ul
+        class="flex flex-row items-stretch items-center overflow-x-auto whitespace-nowrap list-none border-b border-[#d0d5dd] dark:border-[#3b4043] [scrollbar-width:none]"
+      >
+        <li
+          class="tab-head-list-item active flex flex-1 basis-0 bg-[#3440541a] dark:bg-[#2a33431a] border-b border-[#0C111D] dark:border-[#857c6d]"
+        >
+          <a
+            href=""
+            class="tab-trigger flex flex-col items-center justify-center w-full gap-0.5 whitespace-nowrap pt-[.563rem] pb-[.563rem] px-4 min-w-[5rem]"
+          >
+            <img
+              src="https://i.ibb.co/jkjtwC9C/svgviewer-png-output-17.webp"
+              alt="svgviewer-png-output-17"
+              class="w-10 h-10 rounded-full"
+            />
+          </a>
+        </li>
+
+        <li class="tab-head-list-item flex flex-1 basis-0">
+          <a
+            href=""
+            class="tab-trigger flex flex-col items-center justify-center w-full gap-0.5 whitespace-nowrap pt-[.563rem] pb-[.563rem] px-4 min-w-[5rem] opacity-70 !opacity-100"
+          >
+            <img
+              src="https://i.ibb.co/Kz93m55z/svgviewer-png-output-18.webp"
+              alt="svgviewer-png-output-18"
+            />
+            <span class="flex items-center gap-0.5 pointer-events-none">
+              <span
+                class="text-[#667085] dark:text-[#dbd8d3] text-xs leading-[1.125rem] whitespace-nowrap font-medium"
+                >A-Z</span
+              >
+            </span>
+          </a>
+        </li>
+
+        <li class="tab-head-list-item flex flex-1 basis-0">
+          <a
+            href=""
+            class="tab-trigger flex flex-col items-center justify-center w-full gap-0.5 whitespace-nowrap pt-[.563rem] pb-[.563rem] px-4 min-w-[5rem] opacity-70"
+          >
+            <img
+              src="https://i.ibb.co/WNRLqNhJ/svgviewer-png-output-19.webp"
+              alt="svgviewer-png-output-19"
+            />
+            <span class="flex items-center gap-0.5 pointer-events-none">
+              <span
+                class="text-[#667085] dark:text-[#dbd8d3] text-xs leading-[1.125rem] whitespace-nowrap font-medium"
+                >癖好</span
+              >
+            </span>
+          </a>
+        </li>
+
+        <li class="tab-head-list-item flex flex-1 basis-0">
+          <a
+            href=""
+            class="tab-trigger flex flex-col items-center justify-center w-full gap-0.5 whitespace-nowrap pt-[.563rem] pb-[.563rem] px-4 min-w-[5rem] opacity-70"
+          >
+            <img
+              src="https://i.ibb.co/39N92CGq/svgviewer-png-output-20.webp"
+              alt="svgviewer-png-output-20"
+            />
+            <span class="flex items-center gap-0.5 pointer-events-none">
+              <span
+                class="text-[#667085] dark:text-[#dbd8d3] text-xs leading-[1.125rem] whitespace-nowrap font-medium"
+                >服裝</span
+              >
+            </span>
+          </a>
+        </li>
+
+        <li class="tab-head-list-item flex flex-1 basis-0">
+          <a
+            href=""
+            class="tab-trigger flex flex-col items-center justify-center w-full gap-0.5 whitespace-nowrap pt-[.563rem] pb-[.563rem] px-4 min-w-[5rem] opacity-70"
+          >
+            <img
+              src="https://i.ibb.co/NdgG4wHg/svgviewer-png-output-21.webp"
+              alt="svgviewer-png-output-21"
+            />
+            <span class="flex items-center gap-0.5 pointer-events-none">
+              <span
+                class="text-[#667085] dark:text-[#dbd8d3] text-xs leading-[1.125rem] whitespace-nowrap font-medium"
+                >場景</span
+              >
+            </span>
+          </a>
+        </li>
+
+        <li class="tab-head-list-item flex flex-1 basis-0">
+          <a
+            href=""
+            class="tab-trigger flex flex-col items-center justify-center w-full gap-0.5 whitespace-nowrap pt-[.563rem] pb-[.563rem] px-4 min-w-[5rem] opacity-70"
+          >
+            <img
+              src="https://i.ibb.co/JWBKYGH1/svgviewer-png-output-22.webp"
+              alt="svgviewer-png-output-22"
+            />
+            <span class="flex items-center gap-0.5 pointer-events-none">
+              <span
+                class="text-[#667085] dark:text-[#dbd8d3] text-xs leading-[1.125rem] whitespace-nowrap font-medium"
+                >身分</span
+              >
+            </span>
+          </a>
+        </li>
+
+        <li class="tab-head-list-item flex flex-1 basis-0">
+          <a
+            href=""
+            class="tab-trigger flex flex-col items-center justify-center w-full gap-0.5 whitespace-nowrap pt-[.563rem] pb-[.563rem] px-4 min-w-[5rem] opacity-70"
+          >
+            <img
+              src="https://i.ibb.co/DDps3vy4/svgviewer-png-output-23.webp"
+              alt="svgviewer-png-output-23"
+            />
+            <span class="flex items-center gap-0.5 pointer-events-none">
+              <span
+                class="text-[#667085] dark:text-[#dbd8d3] text-xs leading-[1.125rem] whitespace-nowrap font-medium"
+                >身型</span
+              >
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <div
+        class="flex flex-col flex-1 w-full overflow-y-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+      >
+        <div class="flex flex-col w-full self-stretch">
+          <div
+            class="md:gap-4 relative flex flex-col justify-start pt-4 pb-4 px-4 gap-6"
+          >
+            <div class="flex justify-start gap-4">
+              <div
+                class="text-[#0c111d] dark:text-[#dbd8d3] w-18 leading-6 text-base uppercase"
+              >
+                History
+              </div>
+              <div class="flex flex-wrap gap-2 flex-1 basis-0"></div>
+            </div>
+
+            <div class="flex justify-start gap-4">
+              <div
+                class="text-[#0c111d] dark:text-[#dbd8d3] w-18 leading-6 text-base uppercase"
+              >
+                Personal
+              </div>
+              <div class="flex flex-wrap gap-2 flex-1 basis-0">
+                <label for="tag-checkbox-1" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-1"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >Bluebettle</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-2" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-2"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >Bluebettle</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-3" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-3"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >dhdt</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-4" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-4"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >Hello</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-5" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-5"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >Hko</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-6" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-6"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >Personal1</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-7" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-7"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >Bluebettle</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-8" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-8"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >Bluebettle</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-9" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-9"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >dhdt</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-10" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-10"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >Hello</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-11" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-11"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >Hko</span
+                      >
+                    </span>
+                  </span>
+                </label>
+
+                <label for="tag-checkbox-12" class="inline-flex cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="tag-checkbox-12"
+                    class="appearance-none w-3 h-3 border border-[#999] dark:border-[#4d5356] rounded-sm bg-transparent hidden"
+                  />
+                  <span
+                    data-tag-button
+                    class="flex justify-center items-center gap-0.5 whitespace-normal break-words overflow-wrap-anywhere py-1 text-[#344054] dark:text-[#bdb7af] rounded-none px-2 min-w-[3.5rem] leading-5 text-sm text-left bg-white dark:bg-[#181a1b] font-medium"
+                  >
+                    <span class="inline-flex relative overflow-hidden">
+                      <span
+                        class="text-[#344054] dark:text-[#bdb7af] leading-5 text-sm text-left font-medium"
+                        >Personal1</span
+                      >
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="flex justify-end gap-0.5">
+              <img
+                src="https://i.ibb.co/pjmB59vC/svgviewer-png-output-24.png"
+                alt="svgviewer-png-output-24"
+                class="w-5 h-5 manage-icon cursor-pointer"
+              />
+              <span
+                class="text-[#155eef] dark:text-[#2d84ff] leading-5 text-sm font-medium not-italic cursor-pointer"
+              >
+                Manage Personal Tags
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

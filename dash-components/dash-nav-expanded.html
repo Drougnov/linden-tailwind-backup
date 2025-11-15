@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Expanded</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      'sm-md': '550px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  colors: {
+                      primary: {
+                          DEFAULT: '#FB5BA2',
+                          dark: '#C30676',
+                      },
+                      accent: {
+                          DEFAULT: '#F40793',
+                          dark: '#C30676',
+                      },
+                      status: {
+                          DEFAULT: '#FDB022',
+                          dark: '#B77702',
+                      },
+                      avatar: {
+                          DEFAULT: '#4CC9F0',
+                          dark: '#4CC9F0',
+                      },
+                      background: {
+                          DEFAULT: 'rgba(234, 236, 240, 0.9)',
+                          dark: 'rgba(34,37,38,0.9)',
+                      },
+                      panel: {
+                          hover: {
+                              DEFAULT: 'rgba(12, 17, 29, 0.1)',
+                              dark: 'rgba(12, 17, 29, 0.1)',
+                          }
+                      },
+                      notification: {
+                          hover: {
+                              DEFAULT: 'rgba(251, 91, 162, 0.1)',
+                              dark: 'rgba(251, 91, 162, 0.1)',
+                          }
+                      },
+                      sidebar: {
+                          bg: {
+                              DEFAULT: 'rgba(255, 255, 255, 0.7)',
+                              dark: 'rgba(24, 26, 27, 0.7)'
+                          },
+                          active: {
+                              DEFAULT: 'rgba(251, 91, 162, 0.2)',
+                              dark: 'rgba(148, 4, 68, 0.2)'
+                          },
+                          text: {
+                              DEFAULT: '#475467',
+                              dark: '#B1B1AA'
+                          },
+                          'active-text': {
+                              DEFAULT: '#ff0066',
+                              dark: '#ff1a75'
+                          },
+                          logout: {
+                              bg: {
+                                  DEFAULT: 'rgba(41, 112, 255, 0.1)',
+                                  dark: 'rgba(0, 60, 179, 0.1)'
+                              },
+                              hover: {
+                                  DEFAULT: 'rgba(12, 17, 29, 0.1)',
+                                  dark: 'rgba(10, 14, 23, 0.1)'
+                              },
+                              text: {
+                                  DEFAULT: '#2970ff',
+                                  dark: '#3698ff'
+                              }
+                          },
+                          help: {
+                              text: {
+                                  DEFAULT: '#667085',
+                                  dark: '#9e9589'
+                              }
+                          }
+                      }
+                  },
+                  backdropBlur: {
+                      xs: '5px',
+                      lg: '25px',
+                  },
+                  boxShadow: {
+                      sidebar: '0 0 8px 0 rgba(0, 0, 0, 0.08)'
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  }
+              }
+          }
+      }
+    </script>
+  </head>
+  <body class="font-sans">
+    <div
+      class="sidebar-main-wrapper flex flex-col items-center justify-start bg-sidebar-bg dark:bg-sidebar-bg-dark w-full pt-2 pb-2 gap-4 left-0 backdrop-blur-lg px-4 fixed top-0 z-[5] h-auto sm:h-auto sm-md:h-auto h-screen shadow-sidebar opacity-100 visible pointer-events-auto scale-100 origin-[100%_0] dark:shadow-none"
+    >
+      <!-- nav-close-button -->
+      <div class="flex flex-col items-end self-stretch">
+        <a
+          href=""
+          class="flex items-center justify-center w-8 h-8 cursor-pointer"
+        >
+          <img
+            src="https://i.ibb.co/HfPJmd0W/svgviewer-png-output-40.webp"
+            alt="svgviewer-png-output-40"
+            class="w-6 h-6"
+          />
+        </a>
+      </div>
+
+      <!-- main-navigation -->
+      <div
+        class="sidebar-nav-wrapper flex-1 sm:flex-1 sm-md:flex-1 flex-none flex flex-col items-center self-stretch gap-1 px-2 py-1"
+      >
+        <div class="flex flex-col items-center self-stretch gap-1">
+          <div class="flex flex-col self-stretch relative z-[5]">
+            <div
+              class="menu-panel grid gap-4 items-center self-stretch grid-cols-3 sm:grid-cols-5 sm-md:grid-cols-6"
+            >
+              <!-- analytics -->
+              <div class="sidebar-item active group">
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem] group-hover:bg-sidebar-active dark:group-hover:bg-sidebar-active-dark transition-all duration-200"
+                >
+                  <img
+                    src="https://i.ibb.co/5hHTvKRb/svgviewer-png-output-42.webp"
+                    alt="analytics"
+                    class="w-6 h-6 pointer-events-none group-hover:[filter:brightness(0)_saturate(100%)_invert(29%)_sepia(98%)_saturate(5809%)_hue-rotate(325deg)_brightness(92%)_contrast(121%)]"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none group-hover:text-sidebar-active-text dark:group-hover:text-sidebar-active-text-dark"
+                    >Analytics</span
+                  >
+                </a>
+              </div>
+
+              <!-- payout -->
+              <div class="sidebar-item group">
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem] group-hover:bg-sidebar-active dark:group-hover:bg-sidebar-active-dark transition-all duration-200"
+                >
+                  <img
+                    src="https://i.ibb.co/20NyykW9/svgviewer-png-output-41.webp"
+                    alt="payout"
+                    class="w-6 h-6 pointer-events-none group-hover:[filter:brightness(0)_saturate(100%)_invert(29%)_sepia(98%)_saturate(5809%)_hue-rotate(325deg)_brightness(92%)_contrast(121%)]"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none group-hover:text-sidebar-active-text dark:group-hover:text-sidebar-active-text-dark"
+                    >Payout</span
+                  >
+                </a>
+              </div>
+
+              <!-- orders -->
+              <div class="sidebar-item group">
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem] group-hover:bg-sidebar-active dark:group-hover:bg-sidebar-active-dark transition-all duration-200"
+                >
+                  <img
+                    src="https://i.ibb.co/vChqh7TX/svgviewer-png-output-43.webp"
+                    alt="orders"
+                    class="w-6 h-6 pointer-events-none group-hover:[filter:brightness(0)_saturate(100%)_invert(29%)_sepia(98%)_saturate(5809%)_hue-rotate(325deg)_brightness(92%)_contrast(121%)]"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none group-hover:text-sidebar-active-text dark:group-hover:text-sidebar-active-text-dark"
+                    >Orders</span
+                  >
+                </a>
+              </div>
+
+              <!-- media -->
+              <div class="sidebar-item group">
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem] group-hover:bg-sidebar-active dark:group-hover:bg-sidebar-active-dark transition-all duration-200"
+                >
+                  <img
+                    src="https://i.ibb.co/HDtj7Y6g/svgviewer-png-output-44.webp"
+                    alt="orders"
+                    class="w-6 h-6 pointer-events-none group-hover:[filter:brightness(0)_saturate(100%)_invert(29%)_sepia(98%)_saturate(5809%)_hue-rotate(325deg)_brightness(92%)_contrast(121%)]"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none group-hover:text-sidebar-active-text dark:group-hover:text-sidebar-active-text-dark"
+                    >Media</span
+                  >
+                </a>
+              </div>
+
+              <!-- chats -->
+              <div
+                class="sidebar-item disabled group opacity-50 pointer-events-none"
+              >
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem]"
+                >
+                  <img
+                    src="https://i.ibb.co/nNs119bY/svgviewer-png-output-45.webp"
+                    alt="chats"
+                    class="w-6 h-6 pointer-events-none"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none"
+                    >Chats</span
+                  >
+                </a>
+              </div>
+
+              <!-- subscriptions -->
+              <div class="sidebar-item group">
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem] group-hover:bg-sidebar-active dark:group-hover:bg-sidebar-active-dark transition-all duration-200"
+                >
+                  <img
+                    src="https://i.ibb.co/4nTx2sMh/svgviewer-png-output-46.webp"
+                    alt="subscriptions"
+                    class="w-6 h-6 pointer-events-none group-hover:[filter:brightness(0)_saturate(100%)_invert(29%)_sepia(98%)_saturate(5809%)_hue-rotate(325deg)_brightness(92%)_contrast(121%)]"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none group-hover:text-sidebar-active-text dark:group-hover:text-sidebar-active-text-dark"
+                    >Subscriptions</span
+                  >
+                </a>
+              </div>
+
+              <!-- shops -->
+              <div
+                class="sidebar-item disabled group opacity-50 pointer-events-none"
+              >
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem]"
+                >
+                  <img
+                    src="https://i.ibb.co/LDwydPyB/svgviewer-png-output-47.webp"
+                    alt="shops"
+                    class="w-6 h-6 pointer-events-none"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none"
+                    >Shops</span
+                  >
+                </a>
+              </div>
+
+              <!-- profile -->
+              <div class="sidebar-item group">
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem] group-hover:bg-sidebar-active dark:group-hover:bg-sidebar-active-dark transition-all duration-200"
+                >
+                  <img
+                    src="https://i.ibb.co/VWvYhczd/svgviewer-png-output-48.webp"
+                    alt="profile"
+                    class="w-6 h-6 pointer-events-none group-hover:[filter:brightness(0)_saturate(100%)_invert(29%)_sepia(98%)_saturate(5809%)_hue-rotate(325deg)_brightness(92%)_contrast(121%)]"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none group-hover:text-sidebar-active-text dark:group-hover:text-sidebar-active-text-dark"
+                    >Profile</span
+                  >
+                </a>
+              </div>
+
+              <!-- settings -->
+              <div class="sidebar-item group">
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem] group-hover:bg-sidebar-active dark:group-hover:bg-sidebar-active-dark transition-all duration-200"
+                >
+                  <img
+                    src="https://i.ibb.co/w5pz6GM/svgviewer-png-output-49.webp"
+                    alt="settings"
+                    class="w-6 h-6 pointer-events-none group-hover:[filter:brightness(0)_saturate(100%)_invert(29%)_sepia(98%)_saturate(5809%)_hue-rotate(325deg)_brightness(92%)_contrast(121%)]"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none group-hover:text-sidebar-active-text dark:group-hover:text-sidebar-active-text-dark"
+                    >Profile</span
+                  >
+                </a>
+              </div>
+
+              <!-- x-repost -->
+              <div
+                class="sidebar-item disabled group opacity-50 pointer-events-none"
+              >
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem]"
+                >
+                  <img
+                    src="https://i.ibb.co/Fkh7SSXw/svgviewer-png-output-50.webp"
+                    alt="x-repost"
+                    class="w-6 h-6 pointer-events-none"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none"
+                    >X Repost</span
+                  >
+                </a>
+              </div>
+
+              <!-- blog -->
+              <div
+                class="sidebar-item disabled group opacity-50 pointer-events-none"
+              >
+                <a
+                  href=""
+                  class="main-menu-item flex flex-col items-center justify-center self-stretch gap-0.5 p-2 rounded min-w-[4.5rem] min-h-[4.5rem]"
+                >
+                  <img
+                    src="https://i.ibb.co/JWyS5PwL/svgviewer-png-output-51.webp"
+                    alt="blog"
+                    class="w-6 h-6 pointer-events-none"
+                  />
+                  <span
+                    class="text-sidebar-text dark:text-sidebar-text-dark text-[0.625rem] leading-[1.125rem] text-center font-medium pointer-events-none"
+                    >Blog</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sidebar-bottom-controls -->
+      <div class="flex flex-col gap-2 items-center self-stretch py-2">
+        <div class="flex justify-between items-center gap-2 self-stretch px-2">
+          <!-- help -->
+          <a
+            href=""
+            class="inline-flex items-center opacity-50 py-1 gap-1.5 transition-all duration-200 pointer-events-none px-1.5"
+          >
+            <img
+              src="https://i.ibb.co/xSY4RGZp/svgviewer-png-output-52.webp"
+              alt="help"
+              class="w-5 h-5 pointer-events-none"
+            />
+            <span
+              class="text-sidebar-help-text dark:text-sidebar-help-text-dark leading-[1.125rem] pointer-events-none text-[0.75rem] font-medium"
+              >Help</span
+            >
+          </a>
+
+          <!-- logout -->
+          <a
+            href=""
+            class="logout-button py-1 px-1.5 transition-all duration-200 rounded bg-sidebar-logout-bg dark:bg-sidebar-logout-bg-dark inline-flex items-center gap-1.5 hover:bg-sidebar-logout-hover dark:hover:bg-sidebar-logout-hover-dark"
+          >
+            <img
+              src="https://i.ibb.co/ccpY1KKt/svgviewer-png-output-53.webp"
+              alt="logout"
+              class="w-5 h-5 pointer-events-none"
+            />
+            <span
+              class="text-sidebar-logout-text dark:text-sidebar-logout-text-dark leading-[1.125rem] pointer-events-none text-[0.75rem] font-medium"
+              >Logout</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

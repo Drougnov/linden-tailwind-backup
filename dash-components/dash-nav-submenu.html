@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Submenu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            screens: {
+              sm: '480px',
+              'sm-md': '550px',
+              md: '768px',
+              lg: '1010px',
+              xl: '1365px',
+            },
+            colors: {
+                primary: {
+                    DEFAULT: '#FB5BA2',
+                    dark: '#C30676',
+                },
+                accent: {
+                    DEFAULT: '#F40793',
+                    dark: '#C30676',
+                },
+                status: {
+                    DEFAULT: '#FDB022',
+                    dark: '#B77702',
+                },
+                avatar: {
+                    DEFAULT: '#4CC9F0',
+                    dark: '#4CC9F0',
+                },
+                background: {
+                    DEFAULT: 'rgba(234, 236, 240, 0.9)',
+                    dark: 'rgba(34,37,38,0.9)',
+                },
+                panel: {
+                    hover: {
+                        DEFAULT: 'rgba(12, 17, 29, 0.1)',
+                        dark: 'rgba(12, 17, 29, 0.1)',
+                    }
+                },
+                notification: {
+                    hover: {
+                        DEFAULT: 'rgba(251, 91, 162, 0.1)',
+                        dark: 'rgba(251, 91, 162, 0.1)',
+                    }
+                },
+                sidebar: {
+                    bg: {
+                        DEFAULT: 'rgba(255, 255, 255, 0.7)',
+                        dark: 'rgba(24, 26, 27, 0.7)'
+                    },
+                    active: {
+                        DEFAULT: 'rgba(251, 91, 162, 0.2)',
+                        dark: 'rgba(148, 4, 68, 0.2)'
+                    },
+                    text: {
+                        DEFAULT: '#475467',
+                        dark: '#B1B1AA'
+                    },
+                    'active-text': {
+                        DEFAULT: '#ff0066',
+                        dark: '#ff1a75'
+                    },
+                    logout: {
+                        bg: {
+                            DEFAULT: 'rgba(41, 112, 255, 0.1)',
+                            dark: 'rgba(0, 60, 179, 0.1)'
+                        },
+                        hover: {
+                            DEFAULT: 'rgba(12, 17, 29, 0.1)',
+                            dark: 'rgba(10, 14, 23, 0.1)'
+                        },
+                        text: {
+                            DEFAULT: '#2970ff',
+                            dark: '#3698ff'
+                        }
+                    },
+                    help: {
+                        text: {
+                            DEFAULT: '#667085',
+                            dark: '#9e9589'
+                        }
+                    }
+                },
+                submenu: {
+                  bg: {
+                    DEFAULT: 'rgba(249,250,251,0.7)',
+                    dark: 'rgba(27,29,30,0.7)',
+                  },
+                  title: {
+                    text: {
+                      DEFAULT: '#344054',
+                      dark: '#bdb7af',
+                    },
+                  },
+                  item: {
+                    text: {
+                      DEFAULT: '#667085',
+                      dark: '#9e9589',
+                    },
+                    hoverText: {
+                      DEFAULT: '#07f468',
+                      dark: '#23f97a',
+                    },
+                    'hover-shadow': {
+                      DEFAULT: '#07f468',
+                      dark: '#06c353',
+                    },
+                    'hover-bg': {
+                      DEFAULT: 'rgba(12,17,29,0.1)',
+                      dark: 'rgba(10,14,23,0.1)',
+                    },
+                  },
+                }
+            },
+            backdropBlur: {
+                xs: '5px',
+                lg: '25px',
+            },
+            fontFamily: {
+                sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+            },
+            boxShadow: {
+                sidebar: '0 0 8px 0 rgba(0, 0, 0, 0.08)',
+                green: '4px 4px 0 0 #07f468',
+                'green-dark': '4px 4px 0 0 #06c353'
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans">
+    <div
+      class="fixed top-0 left-0 z-10 flex h-screen w-screen flex-col items-start gap-4 overflow-hidden bg-submenu-bg dark:bg-submenu-bg-dark px-4 py-2 shadow-md backdrop-blur-lg"
+    >
+      <!-- submenu-header -->
+      <div class="flex flex-col-reverse sm:flex-col gap-4 w-full">
+        <!-- title -->
+        <div class="flex items-center gap-2 flex-1 justify-center">
+          <img
+            src="https://i.ibb.co/jPTp5JWq/svgviewer-png-output-54.webp"
+            alt="icon"
+            class="w-5 h-5"
+          />
+          <span class="text-sm font-semibold text-submenu-title-text dark:text-submenu-title-text-dark">Profile</span>
+        </div>
+
+        <!-- back-button -->
+        <div>
+          <a
+            href="#"
+            class="flex h-6 w-8 items-center justify-center rounded-md transition hover:bg-submenu-item-hover-bg dark:hover:bg-submenu-item-hover-bg-dark"
+          >
+            <img
+              src="https://i.ibb.co/yc4yx8NT/svgviewer-png-output-55.webp"
+              alt="back"
+              class="pointer-events-none h-6 w-6"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- submenu-body -->
+      <div class="flex flex-col gap-2 w-full">
+        <ul class="flex flex-col gap-2 w-full">
+          <!-- Item 1 -->
+          <li class="flex flex-col w-full">
+            <a
+              href="#"
+              class="relative flex items-center justify-center w-full gap-3 rounded-md px-4 py-2 hover:bg-transparent group"
+            >
+              <span
+                class="relative z-10 text-sm font-medium text-submenu-item-text dark:text-submenu-item-text-dark transition group-hover:text-submenu-item-hover-shadow dark:group-hover:text-submenu-item-hover-shadow-dark"
+              >
+                Edit Profile
+              </span>
+              <div
+                class="absolute top-0 left-0 z-0 h-full w-[calc(100%-1.25rem)] opacity-0 group-hover:opacity-100 group-hover:visible invisible bg-black shadow-green dark:shadow-green-dark transition"
+              ></div>
+              <div
+                class="absolute top-0 left-[calc(100%-1.25rem)] z-0 h-full w-4 -translate-x-[0.438rem] -skew-x-[20deg] bg-black shadow-green dark:shadow-green-dark opacity-0 group-hover:opacity-100 group-hover:visible invisible transition"
+              ></div>
+            </a>
+          </li>
+
+          <!-- Item 2 (disabled) -->
+          <li class="flex flex-col w-full opacity-50 pointer-events-none">
+            <a
+              href="#"
+              class="relative flex items-center justify-center w-full gap-3 rounded-md px-4 py-2 hover:bg-transparent group"
+            >
+              <span class="relative z-10 flex gap-1">
+                <span
+                  class="relative z-10 text-sm font-medium text-submenu-item-text dark:text-submenu-item-text-dark transition group-hover:text-submenu-item-hover-shadow dark:group-hover:text-submenu-item-hover-shadow-dark"
+                >
+                  Subscribers & Followers
+                </span>
+                <small
+                  class="text-[0.625rem] font-medium text-submenu-item-text dark:text-submenu-item-text-dark group-hover:text-submenu-item-hover-shadow dark:group-hover:text-submenu-item-hover-shadow-dark"
+                  >79</small
+                >
+              </span>
+              <div
+                class="absolute top-0 left-0 z-0 h-full w-[calc(100%-1.25rem)] opacity-0 group-hover:opacity-100 group-hover:visible invisible bg-black shadow-green dark:shadow-green-dark transition"
+              ></div>
+              <div
+                class="absolute top-0 left-[calc(100%-1.25rem)] z-0 h-full w-4 -translate-x-[0.438rem] -skew-x-[20deg] bg-black shadow-green dark:shadow-green-dark opacity-0 group-hover:opacity-100 group-hover:visible invisible transition"
+              ></div>
+            </a>
+          </li>
+
+          <!-- Item 3 (disabled) -->
+          <li class="flex flex-col w-full opacity-50 pointer-events-none">
+            <a
+              href="#"
+              class="relative flex items-center justify-center w-full gap-3 rounded-md px-4 py-2 hover:bg-transparent group"
+            >
+              <span class="relative z-10 flex gap-1">
+                <span
+                  class="relative z-10 text-sm font-medium text-submenu-item-text dark:text-submenu-item-text-dark transition group-hover:text-submenu-item-hover-shadow dark:group-hover:text-submenu-item-hover-shadow-dark"
+                >
+                  Your Posts
+                </span>
+              </span>
+              <div
+                class="absolute top-0 left-0 z-0 h-full w-[calc(100%-1.25rem)] opacity-0 group-hover:opacity-100 group-hover:visible invisible bg-black shadow-green dark:shadow-green-dark transition"
+              ></div>
+              <div
+                class="absolute top-0 left-[calc(100%-1.25rem)] z-0 h-full w-4 -translate-x-[0.438rem] -skew-x-[20deg] bg-black shadow-green dark:shadow-green-dark opacity-0 group-hover:opacity-100 group-hover:visible invisible transition"
+              ></div>
+            </a>
+          </li>
+
+          <!-- Item 4 -->
+          <li class="flex flex-col w-full">
+            <a
+              href="#"
+              class="relative flex items-center justify-center w-full gap-3 rounded-md px-4 py-2 hover:bg-transparent group"
+            >
+              <span class="relative z-10 flex gap-1">
+                <span
+                  class="relative z-10 text-sm font-medium text-submenu-item-text dark:text-submenu-item-text-dark transition group-hover:text-submenu-item-hover-shadow dark:group-hover:text-submenu-item-hover-shadow-dark"
+                >
+                  Referrals
+                </span>
+                <small
+                  class="text-[0.625rem] font-medium text-submenu-item-text dark:text-submenu-item-text-dark group-hover:text-submenu-item-hover-shadow dark:group-hover:text-submenu-item-hover-shadow-dark"
+                  >19</small
+                >
+              </span>
+              <div
+                class="absolute top-0 left-0 z-0 h-full w-[calc(100%-1.25rem)] opacity-0 group-hover:opacity-100 group-hover:visible invisible bg-black shadow-green dark:shadow-green-dark transition"
+              ></div>
+              <div
+                class="absolute top-0 left-[calc(100%-1.25rem)] z-0 h-full w-4 -translate-x-[0.438rem] -skew-x-[20deg] bg-black shadow-green dark:shadow-green-dark opacity-0 group-hover:opacity-100 group-hover:visible invisible transition"
+              ></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

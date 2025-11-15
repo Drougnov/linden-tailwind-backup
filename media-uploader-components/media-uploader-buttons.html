@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Uploader Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="src/style.css" />
+
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            screens: {
+              sm: '480px',
+              md: '768px',
+              lg: '1010px',
+              xl: '1365px',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body>
+    <section
+      class="min-h-screen p-2 flex flex-col gap-6 bg-[#f9fafb] dark:bg-[#1b1d1e] backdrop-filter backdrop-blur-lg"
+    >
+      <h1 class="text-2xl font-semibold">Button components</h1>
+
+      <!-- components-container -->
+      <div class="flex flex-col gap-6">
+        <!-- next-button -->
+        <button
+          class="flex items-center justify-center h-10 pr-2 pl-[1.4rem] bg-[#07f468] hover:bg-black group w-max"
+          style="clip-path: polygon(8% 0, 100% 0, 105% 105%, 0 105%);"
+        >
+          <div
+            class="flex flex-row-reverse items-center justify-center gap-[0.3125rem]"
+          >
+            <img
+              src="https://i.ibb.co/hx8ztZFf/svgviewer-png-output-8.webp"
+              alt="arrow-right"
+              class="transition duration-150 ease-in-out group-hover:filter group-hover:[filter:brightness(0)_saturate(100%)_invert(50%)_sepia(94%)_saturate(408%)_hue-rotate(100deg)_brightness(93%)_contrast(87%)]"
+            />
+            <span
+              class="transition duration-150 ease-in-out pt-1 pb-1 text-black group-hover:text-[#07f468] font-medium uppercase text-[1.125rem] leading-7 break-words flex"
+              style="font-family: 'Poppins', sans-serif;"
+            >
+              Next
+            </span>
+          </div>
+        </button>
+
+        <!-- save-button -->
+        <button
+          class="relative flex items-center justify-center h-10 px-2 bg-black hover:bg-[#07F468] group transition-opacity duration-100 w-max"
+        >
+          <!-- Skewed pseudo-element replacement -->
+          <span
+            class="block absolute top-0 right-[-0.563rem] w-4 h-full z-[1] skew-x-[20deg] bg-black group-hover:bg-[#07F468] transition-none"
+            aria-hidden="true"
+          ></span>
+
+          <div
+            class="flex items-center justify-center gap-[0.3125rem] relative z-10"
+          >
+            <img
+              src="https://i.ibb.co/Sw3WhF1p/svgviewer-png-output-9.webp"
+              alt="upload"
+              class="w-6 h-6 transition duration-150 ease-in-out group-hover:filter group-hover:[filter:brightness(0)_saturate(100%)_invert(0%)_sepia(96%)_saturate(7494%)_hue-rotate(96deg)_brightness(112%)_contrast(97%)]"
+            />
+            <span
+              class="transition duration-150 ease-in-out pt-1 pb-1 text-white font-medium uppercase text-[1.125rem] leading-7 break-words flex group-hover:text-black"
+            >
+              Save
+            </span>
+          </div>
+        </button>
+
+        <!-- Add Tier Button -->
+        <button
+          class="w-max [clip-path:polygon(8%_0,_100%_0,_105%_105%,_0_105%)] group flex items-center justify-center gap-[0.625rem] py-1 pl-[1.4rem] pr-2 bg-black hover:bg-[#07f468] relative cursor-pointer"
+        >
+          <div class="flex items-center justify-center gap-[0.625rem]">
+            <img
+              src="https://i.ibb.co/N2xH2QVV/svgviewer-png-output-13.webp"
+              alt="Add"
+              class="[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] w-6 h-6 transition duration-200 group-hover:filter-none"
+            />
+            <span
+              class="add-tier-button-text text-[#07f468] text-lg leading-7 font-medium uppercase transition-colors duration-200 group-hover:text-black"
+            >
+              Add Tier
+            </span>
+          </div>
+        </button>
+
+        <!-- Cancel & Save buttons -->
+        <div class="flex items-center justify-end">
+          <div class="flex items-center gap-2">
+            <!-- Cancel Button -->
+            <button
+              class="flex items-center justify-center min-w-[6.25rem] px-2 py-1 text-[1.125rem] font-medium leading-7 text-[#0c111d] dark:text-[#dbd8d3] bg-transparent border-none outline-none hover:bg-white dark:hover:bg-[#181a1b]"
+            >
+              <span
+                class="text-[#0c111d] dark:text-[#dbd8d3] text-[1.125rem] leading-7 font-medium break-words"
+                >Cancel</span
+              >
+            </button>
+
+            <!-- Save Button -->
+            <button
+              class="flex items-center justify-center gap-2 min-w-[5.3125rem] px-2 py-1 bg-[rgba(52,64,84,0.05)] dark:bg-[rgba(42,51,67,0.05)] border-0"
+            >
+              <span
+                class="text-[#98a2b3] dark:text-[#afa99e] break-words text-[1.125rem] leading-7 uppercase font-medium"
+                >Save</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

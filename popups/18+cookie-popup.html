@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18+ Cookie Popup</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  colors: {
+                      primary: {
+                          DEFAULT: '#ff0066',
+                          dark: '#cc0052',
+                          hover: '#ff1a75'
+                      },
+                      text: {
+                          DEFAULT: 'white',
+                          dark: '#e8e6e3'
+                      },
+                      background: {
+                          light: 'rgba(255, 255, 255, 0.20)',
+                          dark: 'rgba(24, 26, 27, 0.20)',
+                          mobile: {
+                              light: 'rgba(255, 255, 255, 0.25)',
+                              dark: 'rgba(24, 26, 27, 0.25)'
+                          }
+                      },
+                      button: {
+                          exit: {
+                              light: 'rgba(255, 255, 255, 0.7)',
+                              dark: 'rgba(24, 26, 27, 0.7)',
+                              hover: {
+                                  light: 'white',
+                                  dark: '#181a1b'
+                              }
+                          }
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  }
+              }
+          }
+      }
+    </script>
+  </head>
+  <body class="font-sans p-0 m-0 box-border">
+    <!-- outer-wrapper -->
+    <div
+      class="fixed bottom-0 right-0 z-[99999] w-full h-full overflow-auto block md:flex md:justify-center md:items-center bg-black/65 backdrop-blur-[20px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] md:inset-0"
+    >
+      <!-- inner-wrapper -->
+      <div
+        class="h-full w-full min-w-0 max-w-none [box-shadow:0_-3px_3px_0_rgba(0,0,0,0.1)] md:max-h-fit md:flex md:justify-center md:items-center [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] md:[box-shadow:none]"
+      >
+        <div
+          class="h-full w-full rounded-none overflow-hidden bg-cover md:h-[31.75rem] md:w-[36.625rem] md:rounded-[0.9375rem]"
+        >
+          <div class="relative h-full pr-0 md:pr-[18.313rem]">
+            <div
+              class="h-full flex flex-col justify-between p-0 bg-transparent backdrop-blur-none md:gap-6 md:p-8 md:backdrop-blur-[5px] md:bg-background-light dark:md:bg-background-dark"
+            >
+              <!-- Header -->
+              <div class="flex pt-8 px-6 md:pt-0 md:px-0">
+                <div class="flex flex-col gap-6 w-1/2 md:gap-8">
+                  <img
+                    class="w-8 h-8 opacity-70 cursor-pointer"
+                    src="https://i.ibb.co.com/mF9x2JG0/svgviewer-png-output-85.webp"
+                    alt="globe"
+                  />
+                </div>
+
+                <div href="" class="flex w-1/2 justify-end">
+                  <img
+                    src="https://i.ibb.co/jZQNHC2t/svgviewer-png-output-4.webp"
+                    class="w-12 h-12 opacity-70"
+                  />
+                </div>
+              </div>
+
+              <div
+                class="w-full flex flex-col gap-4 py-6 px-2 backdrop-blur-[30px] bg-background-mobile-light dark:bg-background-mobile-dark md:flex-1 md:gap-6 md:p-0 md:backdrop-blur-none md:bg-transparent dark:md:bg-transparent"
+              >
+                <div class="flex flex-col gap-2 items-center md:items-start">
+                  <h2
+                    class="text-xl font-medium tracking-normal leading-8 text-text dark:text-text-dark md:text-[1.438rem] md:tracking-[0.029rem] md:leading-normal"
+                  >
+                    Age Verification
+                  </h2>
+                  <p
+                    class="text-base font-normal tracking-[0.02rem] text-center text-text dark:text-text-dark md:text-left"
+                  >
+                    You must be over 18 to visit the website.
+                  </p>
+                </div>
+
+                <div class="flex flex-col gap-2 mt-auto md:gap-4">
+                  <button
+                    class="w-full h-12 inline-flex justify-center items-center relative px-6 py-2 gap-2.5 rounded-[0.625rem] bg-primary border border-primary dark:bg-primary-dark dark:border-[#b30047] text-white text-[0.9375rem] font-medium cursor-pointer transition-all duration-100 ease-in-out outline-none hover:bg-gradient-to-b from-[#FF408C] to-[#F00] hover:[box-shadow:0px_0px_20px_0px_rgba(255,150,192,0.80)_inset,_8px_8px_30px_0px_rgba(255,0,102,0.70),_0px_0px_35px_0px_rgba(255,255,221,0.50),_-8px_-8px_30px_0px_rgba(255,0,0,0.70)]"
+                  >
+                    <div class="flex items-center gap-5">
+                      <span
+                        class="text-white text-lg font-medium leading-6 break-words dark:text-text-dark"
+                        >I'm over 18</span
+                      >
+                    </div>
+                  </button>
+
+                  <button
+                    class="w-full h-12 inline-flex justify-center items-center relative px-6 py-2 gap-2.5 rounded-[0.625rem] bg-button-exit-light dark:bg-button-exit-dark text-[0.9375rem] font-medium cursor-pointer transition-all duration-100 ease-in-out outline-none hover:bg-button-exit-hover-light dark:hover:bg-button-exit-hover-dark"
+                  >
+                    <div class="flex items-center gap-5">
+                      <span
+                        class="text-primary text-lg font-medium leading-6 break-words dark:text-primary-hover"
+                        >I'm under 18</span
+                      >
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 w-full h-full bg-cover md:bg-[40%] -z-10 hidden md:block"
+              style="background-image: url(https://i.ibb.co.com/F4cf3W53/profile-slidein-bg.webp);"
+            ></div>
+            <div
+              class="absolute inset-0 w-full h-full bg-cover bg-[75%] -z-10 block md:hidden"
+              style="background-image: url(https://i.ibb.co.com/F4cf3W53/profile-slidein-bg.webp);"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
