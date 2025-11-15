@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  }
+
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="font-sans p-2 m-0 box-border [&.dark]:bg-[#202324]">
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1 md:gap-2 w-full overflow-auto"
+    >
+      <!-- media-card -->
+      <div class="relative aspect-video rounded-sm group">
+        <!-- bg-wrapper -->
+        <div class="relative">
+          <img
+            src="https://i.ibb.co.com/bjGQxr5S/sample-bg-image.webp"
+            alt="sample-bg-image"
+            class="[clip-path:inset(0)] aspect-video object-cover w-full h-full"
+          />
+        </div>
+
+        <!-- video-tag -->
+        <div
+          class="absolute bottom-0 right-0 flex justify-center items-center z-[1] px-1 py-0.5 gap-[0.1875rem] bg-[rgba(48,52,55,.7)] dark:bg-[rgba(31,44,63,0.50)] group-hover:hidden"
+        >
+          <span
+            class="text-xs text-white leading-normal tracking-[0.008rem] dark:text-[#e8e6e3]"
+            >Video</span
+          >
+          <img
+            src="https://i.ibb.co.com/wN978Hjm/video.webp"
+            alt="video"
+            class="w-4 h-4"
+          />
+        </div>
+
+        <!-- top-tag-section -->
+        <div
+          class="hidden justify-between items-center w-full absolute left-0 pl-1 top-1 z-[2] group-hover:flex"
+        >
+          <!-- icon-tag -->
+          <div
+            class="flex justify-center items-center gap-[0.188rem] px-1 py-0.5 rounded bg-[rgba(24,34,48,0.50)] dark:bg-[rgba(31,44,63,0.50)] drop-shadow-[0_0_20px_rgba(0,0,0,0.25)]"
+          >
+            <img
+              src="https://i.ibb.co.com/wN978Hjm/video.webp"
+              alt="video"
+              class="w-4 h-4"
+            />
+            <span
+              class="text-xs text-white leading-[1rem] tracking-[0.008rem] dark:text-[#e8e6e3]"
+              >14:55</span
+            >
+          </div>
+
+          <!-- media-stats -->
+          <div
+            class="flex items-center gap-2 px-[0.625rem] drop-shadow-[0_0_20px_rgba(0,0,0,0.25)]"
+          >
+            <div class="flex items-center gap-[0.813rem] px-1 opacity-70">
+              <span
+                class="flex justify-center items-center gap-[0.188rem] filter drop-shadow-[0_0_.313rem_#000]"
+              >
+                <img
+                  src="https://i.ibb.co.com/7tbwzFsQ/heart.webp"
+                  alt="heart"
+                  class="w-[0.75rem] [filter:brightness(100)_saturate(0)]"
+                />
+                <span
+                  class="text-xs leading-normal font-medium text-white tracking-[0.008rem] dark:text-[#e8e6e3]"
+                  >0</span
+                >
+              </span>
+
+              <span
+                class="flex justify-center items-center gap-[0.1875rem] filter drop-shadow-[0_0_.313rem_#000]"
+              >
+                <img
+                  src="https://i.ibb.co.com/Kjv16vLZ/eye.webp"
+                  alt="eye"
+                  class="w-[0.75rem] [filter:brightness(100)_saturate(0)]"
+                />
+                <span
+                  class="text-xs leading-normal font-medium text-white tracking-[0.0075rem] dark:text-[#e8e6e3]"
+                  >4</span
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- add-button -->
+        <div
+          data-add-button
+          class="flex justify-center items-center absolute top-0 right-0 z-[3] w-6 h-6 bg-[#07F468] dark:bg-[#06c454] cursor-pointer group/button hover:bg-black dark:hover:bg-[#181a1b]"
+        >
+          <img
+            src="https://i.ibb.co.com/RpWmJkcb/plus.webp"
+            alt="plus"
+            class="w-6 h-6 [filter:brightness(0)] group-hover/button:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]"
+          />
+        </div>
+
+        <!-- remove-button -->
+        <div
+          data-remove-button
+          class="hidden justify-center items-center absolute top-0 right-0 z-[3] w-6 h-6 bg-[#0c111d] dark:bg-[#0a0e17] cursor-pointer group/button hover:bg-[#ff4405] dark:hover:bg-[#c93300]"
+        >
+          <img
+            src="https://i.ibb.co.com/GvhXTbgB/minus.webp"
+            alt="minus"
+            class="w-6 h-6 [filter:brightness(100)_saturate(0)]"
+          />
+        </div>
+
+        <!-- overflow-container (title) -->
+        <div
+          class="hidden flex-col justify-end absolute bottom-0 left-0 w-full h-full overflow-hidden p-1 z-[1] gap-1 [background:linear-gradient(180deg,rgba(0,0,0,.5)_0,rgba(0,0,0,.25)_15%,rgba(0,0,0,.25)_80%,rgba(0,0,0,.5)_100%),rgba(255,255,255,.01)] md:gap-2 group-hover:flex group-hover"
+        >
+          <h4
+            class="text-xs text-white font-medium leading-normal tracking-[0.008rem] dark:text-[#e8e6e3] [text-shadow:0_0_4px_rgba(0,0,0,.4)] line-clamp-2"
+          >
+            Video test for coming soon
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const addButton = document.querySelector('[data-add-button]');
+          const removeButton = document.querySelector('[data-remove-button]');
+
+          // Add event listener to the add button
+          addButton.addEventListener('click', function() {
+              addButton.classList.add('hidden');
+              removeButton.classList.remove('hidden');
+              removeButton.classList.add('flex');
+          });
+
+          // Add event listener to the remove button
+          removeButton.addEventListener('click', function() {
+              removeButton.classList.add('hidden');
+              removeButton.classList.remove('flex');
+              addButton.classList.remove('hidden');
+          });
+      });
+    </script>
+  </body>
+</html>

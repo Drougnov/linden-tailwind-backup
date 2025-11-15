@@ -1,0 +1,3039 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+                  colors: {
+                      // Light mode colors
+                      light: {
+                          primary: '#004eeb',
+                          primaryHover: '#003ebc',
+                          text: {
+                              primary: '#101828',
+                              secondary: '#344054',
+                              tertiary: '#475467',
+                              quaternary: '#667085',
+                              trendGreen: '#107569',
+                              trendRed: '#bc1b06'
+                          },
+                          bg: {
+                              container: 'hsla(0, 0%, 100%, 0.7)',
+                              section: 'hsla(0, 0%, 100%, 0.4)',
+                              button: '#fff',
+                          },
+                          border: {
+                              primary: '#d0d5dd',
+                          }
+                      },
+                      // Dark mode colors
+                      dark: {
+                          primary: '#3f9dff',
+                          primaryHover: '#003ebc',
+                          text: {
+                              primary: '#d6d3cd',
+                              secondary: '#bdb7af',
+                              tertiary: '#b1aaa0',
+                              quaternary: '#9e9589',
+                          },
+                          bg: {
+                              container: 'rgba(24, 26, 27, 0.7)',
+                              section: 'rgba(24, 26, 27, 0.4)',
+                              button: '#181a1b',
+                          },
+                          border: {
+                              primary: '#3b4043',
+                          }
+                      },
+                  }
+              },
+          },
+      }
+    </script>
+  </head>
+
+  <body class="font-sans p-0 m-0 box-border bg-[#ae969680]">
+    <section class="p-2 flex flex-col gap-6 dark:bg-dark-primary-bg">
+      <!-- overview/insight (empty) -->
+      <div
+        class="flex flex-col gap-6 [backdrop-filter:blur(25px)] bg-light-bg-section [box-shadow:0px_4px_6px_-2px_rgba(16,_24,_40,_0.08)] dark:bg-dark-bg-section dark:[box-shadow:0px_4px_6px_-2px_rgba(13,_19,_32,_0.08)]"
+      >
+        <!-- section-header -->
+        <div
+          class="flex flex-col items-start justify-between p-2 sm:flex-row sm:items-center md:p-4"
+        >
+          <!-- title -->
+          <div
+            class="flex items-center gap-2 flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+          >
+            <span>
+              <img
+                src="https://i.ibb.co.com/1G8tw4x3/svgviewer-png-output.webp"
+                alt="overview/insight"
+                class="w-6 h-6"
+              />
+            </span>
+            <h2
+              class="m-0 font-medium text-xl leading-[1.875rem] text-light-text-quaternary dark:text-dark-text-quaternary"
+            >
+              Overview/Insight
+            </h2>
+          </div>
+          <!-- last-date -->
+          <div
+            class="flex items-center gap-4 w-full justify-between sm:justify-end sm:w-auto"
+          >
+            <span
+              class="text-sm leading-5 text-light-text-quaternary dark:text-dark-text-quaternary"
+              >Last updated at
+              <span
+                class="text-sm leading-5 text-light-text-quaternary dark:text-dark-text-quaternary"
+                >7:14 PM</span
+              ></span
+            >
+            <button
+              class="group flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-light-bg-button dark:bg-dark-bg-button [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] hover:bg-light-primary dark:hover:bg-dark-primaryHover [outline: none] border-0"
+            >
+              <span>
+                <img
+                  src="https://i.ibb.co.com/tPv74nnJ/svgviewer-png-output-1.webp"
+                  alt="refresh"
+                  class="w-[.875rem] h-[.875rem] group-hover:[filter:brightness(0)_invert(1)]"
+                />
+              </span>
+              <span
+                class="text-xs font-medium leading-[1.125rem] text-light-primary dark:text-dark-primary group-hover:text-white dark:group-hover:text-[#e8e6e3]"
+                >Refresh</span
+              >
+            </button>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div
+          class="grid grid-cols-1 gap-4 px-0 pt-0 pb-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 md:px-4"
+        >
+          <!-- left-column -->
+          <div class="flex flex-col gap-4">
+            <!-- subscribers -->
+            <div
+              class="group/container relative flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 p-4 rounded-sm min-w-0 min-h-0 [backdrop-filter:blur(25px)] bg-light-bg-container dark:bg-dark-bg-container"
+            >
+              <div
+                class="flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 min-w-0 min-h-0"
+              >
+                <!-- hover-overlay -->
+                <div
+                  class="absolute hidden group-hover/container:flex items-start justify-end w-full h-full top-0 left-0 z-[10000] [box-shadow:0_0_10px_0_rgba(0,_0,_0,_0.25)]"
+                >
+                  <button
+                    class="group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-light-bg-button dark:bg-dark-bg-button [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] hover/container:bg-light-primary dark:hover/container:bg-dark-primaryHover"
+                  >
+                    <span
+                      class="text-xs font-medium leading-[1.125rem] text-light-primary dark:text-dark-primary group-hover/button:text-white dark:group-hover/button:text-[#e8e6e3]"
+                      >Trend</span
+                    >
+                    <span>
+                      <img
+                        src="https://i.ibb.co.com/7dh1cRfK/svgviewer-png-output-2.webp"
+                        alt="expand"
+                        class="w-[.875rem] h-[.875rem] group-hover/button:[filter:brightness(0)_invert(1)]"
+                      />
+                    </span>
+                  </button>
+                </div>
+
+                <!-- title -->
+                <div class="flex items-center gap-2">
+                  <h3
+                    class="m-0 font-medium text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >
+                    Subscribers
+                  </h3>
+                </div>
+
+                <!-- data-content (new) -->
+                <div
+                  class="flex flex-col flex-grow flex-shrink [flex-basis: auto] justify-center items-start gap-4 min-w-0 min-h-0"
+                >
+                  <div
+                    class="flex items-center gap-6 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col gap-2 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                    >
+                      <div class="relative">
+                        <span
+                          class="text-xs font-medium leading-[1.125rem] text-light-text-tertiary dark:text-dark-text-tertiary"
+                          >New</span
+                        >
+                      </div>
+
+                      <div class="flex justify-between">
+                        <span>
+                          <span
+                            class="text-[2.25rem] font-semibold leading-[2.75rem] tracking-[-0.045rem] text-light-text-primary dark:text-dark-text-primary"
+                            >--</span
+                          >
+                        </span>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- data-content (recurring) -->
+                <div
+                  class="flex flex-col flex-grow flex-shrink [flex-basis: auto] justify-center items-start gap-4 min-w-0 min-h-0"
+                >
+                  <div
+                    class="flex items-center gap-6 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col gap-2 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                    >
+                      <div class="relative">
+                        <span
+                          class="text-xs font-medium leading-[1.125rem] text-light-text-tertiary dark:text-dark-text-tertiary"
+                          >RECURRING</span
+                        >
+                      </div>
+
+                      <div class="flex justify-between">
+                        <span>
+                          <span
+                            class="text-[2.25rem] font-semibold leading-[2.75rem] tracking-[-0.045rem] text-light-text-primary dark:text-dark-text-primary"
+                            >--</span
+                          >
+                        </span>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- fans-->
+            <div
+              class="group/container relative flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 p-4 rounded-sm min-w-0 min-h-0 [backdrop-filter:blur(25px)] bg-light-bg-container dark:bg-dark-bg-container"
+            >
+              <div
+                class="flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 min-w-0 min-h-0"
+              >
+                <!-- hover-overlay -->
+                <div
+                  class="absolute hidden group-hover/container:flex items-start justify-end w-full h-full top-0 left-0 z-[10000] [box-shadow:0_0_10px_0_rgba(0,_0,_0,_0.25)]"
+                >
+                  <button
+                    class="group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-light-bg-button dark:bg-dark-bg-button [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] hover/container:bg-light-primary dark:hover/container:bg-dark-primaryHover"
+                  >
+                    <span
+                      class="text-xs font-medium leading-[1.125rem] text-light-primary dark:text-dark-primary group-hover/button:text-white dark:group-hover/button:text-[#e8e6e3]"
+                      >Trend</span
+                    >
+                    <span>
+                      <img
+                        src="https://i.ibb.co.com/7dh1cRfK/svgviewer-png-output-2.webp"
+                        alt="expand"
+                        class="w-[.875rem] h-[.875rem] group-hover/button:[filter:brightness(0)_invert(1)]"
+                      />
+                    </span>
+                  </button>
+                </div>
+
+                <!-- title -->
+                <div class="flex items-center gap-2">
+                  <h3
+                    class="m-0 font-medium text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >
+                    Fans
+                  </h3>
+                </div>
+
+                <!-- data-content (new followers - profile visit) -->
+                <div
+                  class="flex flex-col flex-grow flex-shrink [flex-basis: auto] justify-center items-start gap-4 min-w-0 min-h-0"
+                >
+                  <div
+                    class="flex items-center gap-6 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >NEW FOLLOWERS</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >--</span
+                        >
+                        <div></div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >PROFILE VISIT</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >--</span
+                        >
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- middle-column -->
+          <div class="flex flex-col gap-4">
+            <!-- earnings-->
+            <div
+              class="group/container relative flex flex-col gap-4 p-4 rounded-sm [backdrop-filter:blur(25px)] bg-light-bg-container dark:bg-dark-bg-container"
+              style="flex: unset;"
+            >
+              <div
+                class="flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 min-w-0 min-h-0"
+              >
+                <!-- hover-overlay -->
+                <div
+                  class="absolute hidden group-hover/container:flex items-start justify-end w-full h-full top-0 left-0 z-[10000] [box-shadow:0_0_10px_0_rgba(0,_0,_0,_0.25)]"
+                >
+                  <button
+                    class="group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-light-bg-button dark:bg-dark-bg-button [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] hover/container:bg-light-primary dark:hover/container:bg-dark-primaryHover"
+                  >
+                    <span
+                      class="text-xs font-medium leading-[1.125rem] text-light-primary dark:text-dark-primary group-hover/button:text-white dark:group-hover/button:text-[#e8e6e3]"
+                      >Trend</span
+                    >
+                    <span>
+                      <img
+                        src="https://i.ibb.co.com/7dh1cRfK/svgviewer-png-output-2.webp"
+                        alt="expand"
+                        class="w-[.875rem] h-[.875rem] group-hover/button:[filter:brightness(0)_invert(1)]"
+                      />
+                    </span>
+                  </button>
+                </div>
+
+                <!-- title -->
+                <div class="flex items-center gap-2">
+                  <h3
+                    class="m-0 font-medium text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >
+                    Earnings
+                  </h3>
+                </div>
+
+                <div class="flex justify-between">
+                  <span>
+                    <span
+                      class="text-[2.25rem] font-semibold leading-[2.75rem] tracking-[-0.045rem] text-light-text-primary dark:text-dark-text-primary"
+                      >--</span
+                    >
+                  </span>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- likes -->
+            <div
+              class="group relative flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 p-4 rounded-sm min-w-0 min-h-0 [backdrop-filter:blur(25px)] bg-light-bg-container dark:bg-dark-bg-container"
+            >
+              <div
+                class="flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 min-w-0 min-h-0"
+              >
+                <!-- title -->
+                <div class="flex items-center gap-2">
+                  <h3
+                    class="m-0 font-medium text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >
+                    Likes
+                  </h3>
+                </div>
+
+                <!-- data-content (media-merch) -->
+                <div
+                  class="flex flex-col flex-grow flex-shrink [flex-basis: auto] justify-center items-start gap-4 min-w-0 min-h-0"
+                >
+                  <div
+                    class="flex items-center gap-6 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >MEDIA</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >--</span
+                        >
+                        <div></div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >MERCH</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >--</span
+                        >
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- data-content (profile-feed) -->
+                <div
+                  class="flex flex-col flex-grow flex-shrink [flex-basis: auto] justify-center items-start gap-4 min-w-0 min-h-0"
+                >
+                  <div
+                    class="flex items-center gap-6 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >PROFILE</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >--</span
+                        >
+                        <div></div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >FEED</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >--</span
+                        >
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right-column -->
+          <div class="flex flex-col gap-4 col-span-full xl:col-auto">
+            <!-- top contributors -->
+            <div
+              class="group/container relative flex flex-col gap-4 p-4 rounded-sm min-w-0 [backdrop-filter:blur(25px)] bg-light-bg-container dark:bg-dark-bg-container"
+            >
+              <div class="flex flex-col gap-4 min-w-0">
+                <!-- hover-overlay -->
+                <div
+                  class="absolute hidden group-hover/container:flex items-start justify-end w-full h-full top-0 left-0 z-[10000] [box-shadow:0_0_10px_0_rgba(0,_0,_0,_0.25)]"
+                >
+                  <button
+                    class="group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-light-bg-button dark:bg-dark-bg-button [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] hover/container:bg-light-primary dark:hover/container:bg-dark-primaryHover"
+                  >
+                    <span
+                      class="text-xs font-medium leading-[1.125rem] text-light-primary dark:text-dark-primary group-hover/button:text-white dark:group-hover/button:text-[#e8e6e3]"
+                      >Trend</span
+                    >
+                    <span>
+                      <img
+                        src="https://i.ibb.co.com/7dh1cRfK/svgviewer-png-output-2.webp"
+                        alt="expand"
+                        class="w-[.875rem] h-[.875rem] group-hover/button:[filter:brightness(0)_invert(1)]"
+                      />
+                    </span>
+                  </button>
+                </div>
+
+                <!-- title -->
+                <div class="flex items-center gap-2">
+                  <h3
+                    class="m-0 font-medium text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >
+                    Top Contributors
+                  </h3>
+                </div>
+
+                <!-- data-content -->
+                <div
+                  class="flex flex-col items-start flex-grow flex-shrink [flex-basis: auto] self-stretch -ml-4 min-w-0 min-h-0"
+                ></div>
+              </div>
+
+              <!-- empty-state -->
+              <div
+                class="flex flex-col items-start justify-start flex-grow flex-shrink [flex-basis: auto] gap-4 min-w-0 min-h-0"
+              >
+                <div
+                  class="absolute pointer-events-none [box-shadow:0_0_10px_0_rgba(0,_0,_0,_0.25)] z-[10000] w-full h-full items-start justify-end hidden left-0 top-0"
+                ></div>
+
+                <!-- data-content -->
+                <div
+                  class="flex flex-col items-start flex-grow flex-shrink [flex-basis: auto] self-stretch -ml-4 min-w-0 min-h-0"
+                >
+                  <!-- data-content -->
+                  <div
+                    class="flex flex-col items-start justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-4 min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col items-center justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-2 pt-6 pb-6 min-h-[21.25rem] min-w-0"
+                    >
+                      <div class="flex items-center justify-center p-4">
+                        <div
+                          class="relative flex items-center justify-center w-[10.0625rem] h-[10.0625rem]"
+                        >
+                          <img
+                            src="https://i.ibb.co.com/vx2RDHM3/svgviewer-png-output-3.webp"
+                            alt="list"
+                            class="w-32 h-32"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col items-center text-center gap-2">
+                        <span
+                          class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                          >No trend to show at the moment</span
+                        >
+                        <a href="#" class="text-base leading-6">
+                          <span
+                            class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                            >Learn ways to earn</span
+                          >
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- overview/insight (with data) -->
+      <div
+        class="flex flex-col gap-6 [backdrop-filter:blur(25px)] bg-light-bg-section [box-shadow:0px_4px_6px_-2px_rgba(16,_24,_40,_0.08)] dark:bg-dark-bg-section dark:[box-shadow:0px_4px_6px_-2px_rgba(13,_19,_32,_0.08)]"
+      >
+        <!-- section-header -->
+        <div
+          class="flex flex-col items-start justify-between p-2 sm:flex-row sm:items-center md:p-4"
+        >
+          <!-- title -->
+          <div
+            class="flex items-center gap-2 flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+          >
+            <span>
+              <img
+                src="https://i.ibb.co.com/1G8tw4x3/svgviewer-png-output.webp"
+                alt="overview/insight"
+                class="w-6 h-6"
+              />
+            </span>
+            <h2
+              class="m-0 font-medium text-xl leading-[1.875rem] text-light-text-quaternary dark:text-dark-text-quaternary"
+            >
+              Overview/Insight
+            </h2>
+          </div>
+          <!-- last-date -->
+          <div
+            class="flex items-center gap-4 w-full justify-between sm:justify-end sm:w-auto"
+          >
+            <span
+              class="text-sm leading-5 text-light-text-quaternary dark:text-dark-text-quaternary"
+              >Last updated at
+              <span
+                class="text-sm leading-5 text-light-text-quaternary dark:text-dark-text-quaternary"
+                >7:14 PM</span
+              ></span
+            >
+            <button
+              class="group flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-light-bg-button dark:bg-dark-bg-button [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] hover:bg-light-primary dark:hover:bg-dark-primaryHover [outline: none] border-0"
+            >
+              <span>
+                <img
+                  src="https://i.ibb.co.com/tPv74nnJ/svgviewer-png-output-1.webp"
+                  alt="refresh"
+                  class="w-[.875rem] h-[.875rem] group-hover:[filter:brightness(0)_invert(1)]"
+                />
+              </span>
+              <span
+                class="text-xs font-medium leading-[1.125rem] text-light-primary dark:text-dark-primary group-hover:text-white dark:group-hover:text-[#e8e6e3]"
+                >Refresh</span
+              >
+            </button>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div
+          class="grid grid-cols-1 gap-4 px-0 pt-0 pb-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 md:px-4"
+        >
+          <!-- left-column -->
+          <div class="flex flex-col gap-4">
+            <!-- subscribers -->
+            <div
+              class="group/container relative flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 p-4 rounded-sm min-w-0 min-h-0 [backdrop-filter:blur(25px)] bg-light-bg-container dark:bg-dark-bg-container"
+            >
+              <div
+                class="flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 min-w-0 min-h-0"
+              >
+                <!-- hover-overlay -->
+                <div
+                  class="absolute hidden group-hover/container:flex items-start justify-end w-full h-full top-0 left-0 z-[10000] [box-shadow:0_0_10px_0_rgba(0,_0,_0,_0.25)]"
+                >
+                  <button
+                    class="group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-light-bg-button dark:bg-dark-bg-button [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] hover/container:bg-light-primary dark:hover/container:bg-dark-primaryHover"
+                  >
+                    <span
+                      class="text-xs font-medium leading-[1.125rem] text-light-primary dark:text-dark-primary group-hover/button:text-white dark:group-hover/button:text-[#e8e6e3]"
+                      >Trend</span
+                    >
+                    <span>
+                      <img
+                        src="https://i.ibb.co.com/7dh1cRfK/svgviewer-png-output-2.webp"
+                        alt="expand"
+                        class="w-[.875rem] h-[.875rem] group-hover/button:[filter:brightness(0)_invert(1)]"
+                      />
+                    </span>
+                  </button>
+                </div>
+
+                <!-- title -->
+                <div class="flex items-center gap-2">
+                  <h3
+                    class="m-0 font-medium text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >
+                    Subscribers
+                  </h3>
+                </div>
+
+                <!-- data-content (new) -->
+                <div
+                  class="flex flex-col flex-grow flex-shrink [flex-basis: auto] justify-center items-start gap-4 min-w-0 min-h-0"
+                >
+                  <div
+                    class="flex items-center gap-6 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col gap-2 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                    >
+                      <div class="relative">
+                        <span
+                          class="text-xs font-medium leading-[1.125rem] text-light-text-tertiary dark:text-dark-text-tertiary"
+                          >New</span
+                        >
+                      </div>
+
+                      <div class="flex justify-between">
+                        <span>
+                          <span
+                            class="text-[2.25rem] font-semibold leading-[2.75rem] tracking-[-0.045rem] text-light-text-primary dark:text-dark-text-primary"
+                            >3</span
+                          >
+                        </span>
+                        <div class="flex items-end justify-between gap-1">
+                          <div class="flex flex-col items-center gap-1">
+                            <span class="flex gap-1">
+                              <img
+                                src="https://i.ibb.co.com/93tZHrmQ/svgviewer-png-output-4.webp"
+                                alt="trend-up"
+                                class="h-5 w-5"
+                              />
+                              <span
+                                class="text-light-text-trendGreen dark:text-light-text-trendGreen leading-5 text-sm font-medium"
+                                >200%</span
+                              >
+                            </span>
+                            <span
+                              class="-ml-4 text-light-text-secondary dark:text-dark-text-secondary leading-[1.125rem] text-xs"
+                              >vs yesterday</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- data-content (recurring) -->
+                <div
+                  class="flex flex-col flex-grow flex-shrink [flex-basis: auto] justify-center items-start gap-4 min-w-0 min-h-0"
+                >
+                  <div
+                    class="flex items-center gap-6 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col gap-2 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                    >
+                      <div class="relative">
+                        <span
+                          class="text-xs font-medium leading-[1.125rem] text-light-text-tertiary dark:text-dark-text-tertiary"
+                          >RECURRING</span
+                        >
+                      </div>
+
+                      <div class="flex justify-between">
+                        <span>
+                          <span
+                            class="text-[2.25rem] font-semibold leading-[2.75rem] tracking-[-0.045rem] text-light-text-primary dark:text-dark-text-primary"
+                            >0</span
+                          >
+                        </span>
+                        <div class="flex items-end justify-between gap-1">
+                          <div class="flex flex-col items-center gap-1">
+                            <span class="flex gap-1">
+                              <img
+                                src="https://i.ibb.co.com/93tZHrmQ/svgviewer-png-output-4.webp"
+                                alt="trend-up"
+                                class="h-5 w-5"
+                              />
+                              <span
+                                class="text-light-text-trendGreen dark:text-light-text-trendGreen leading-5 text-sm font-medium"
+                                >200%</span
+                              >
+                            </span>
+                            <span
+                              class="-ml-4 text-light-text-secondary dark:text-dark-text-secondary leading-[1.125rem] text-xs"
+                              >vs yesterday</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- fans-->
+            <div
+              class="group/container relative flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 p-4 rounded-sm min-w-0 min-h-0 [backdrop-filter:blur(25px)] bg-light-bg-container dark:bg-dark-bg-container"
+            >
+              <div
+                class="flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 min-w-0 min-h-0"
+              >
+                <!-- hover-overlay -->
+                <div
+                  class="absolute hidden group-hover/container:flex items-start justify-end w-full h-full top-0 left-0 z-[10000] [box-shadow:0_0_10px_0_rgba(0,_0,_0,_0.25)]"
+                >
+                  <button
+                    class="group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-light-bg-button dark:bg-dark-bg-button [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] hover/container:bg-light-primary dark:hover/container:bg-dark-primaryHover"
+                  >
+                    <span
+                      class="text-xs font-medium leading-[1.125rem] text-light-primary dark:text-dark-primary group-hover/button:text-white dark:group-hover/button:text-[#e8e6e3]"
+                      >Trend</span
+                    >
+                    <span>
+                      <img
+                        src="https://i.ibb.co.com/7dh1cRfK/svgviewer-png-output-2.webp"
+                        alt="expand"
+                        class="w-[.875rem] h-[.875rem] group-hover/button:[filter:brightness(0)_invert(1)]"
+                      />
+                    </span>
+                  </button>
+                </div>
+
+                <!-- title -->
+                <div class="flex items-center gap-2">
+                  <h3
+                    class="m-0 font-medium text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >
+                    Fans
+                  </h3>
+                </div>
+
+                <!-- data-content (new followers - profile visit) -->
+                <div
+                  class="flex flex-col flex-grow flex-shrink [flex-basis: auto] justify-center items-start gap-4 min-w-0 min-h-0"
+                >
+                  <div
+                    class="flex items-center gap-6 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >NEW FOLLOWERS</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >1</span
+                        >
+                        <div class="flex items-end justify-between gap-1">
+                          <div class="flex flex-col items-center gap-1">
+                            <span class="flex gap-1">
+                              <img
+                                src="https://i.ibb.co.com/sdvYZGVp/svgviewer-png-output-5.webp"
+                                alt="trend-down"
+                                class="h-5 w-5"
+                              />
+                              <span
+                                class="text-light-text-trendRed dark:text-light-text-trendRed leading-5 text-sm font-medium"
+                                >-50%</span
+                              >
+                            </span>
+                            <span
+                              class="-ml-4 text-light-text-secondary dark:text-dark-text-secondary leading-[1.125rem] text-xs"
+                              >vs yesterday</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >PROFILE VISIT</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >4</span
+                        >
+                        <div class="flex items-end justify-between gap-1">
+                          <div class="flex flex-col items-center gap-1">
+                            <span class="flex gap-1">
+                              <img
+                                src="https://i.ibb.co.com/sdvYZGVp/svgviewer-png-output-5.webp"
+                                alt="trend-down"
+                                class="h-5 w-5"
+                              />
+                              <span
+                                class="text-light-text-trendRed dark:text-light-text-trendRed leading-5 text-sm font-medium"
+                                >-60%</span
+                              >
+                            </span>
+                            <span
+                              class="-ml-4 text-light-text-secondary dark:text-dark-text-secondary leading-[1.125rem] text-xs"
+                              >vs yesterday</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- middle-column -->
+          <div class="flex flex-col gap-4">
+            <!-- earnings-->
+            <div
+              class="group/container relative flex flex-col gap-4 p-4 rounded-sm [backdrop-filter:blur(25px)] bg-light-bg-container dark:bg-dark-bg-container"
+              style="flex: unset;"
+            >
+              <div
+                class="flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 min-w-0 min-h-0"
+              >
+                <!-- hover-overlay -->
+                <div
+                  class="absolute hidden group-hover/container:flex items-start justify-end w-full h-full top-0 left-0 z-[10000] [box-shadow:0_0_10px_0_rgba(0,_0,_0,_0.25)]"
+                >
+                  <button
+                    class="group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-light-bg-button dark:bg-dark-bg-button [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] hover/container:bg-light-primary dark:hover/container:bg-dark-primaryHover"
+                  >
+                    <span
+                      class="text-xs font-medium leading-[1.125rem] text-light-primary dark:text-dark-primary group-hover/button:text-white dark:group-hover/button:text-[#e8e6e3]"
+                      >Trend</span
+                    >
+                    <span>
+                      <img
+                        src="https://i.ibb.co.com/7dh1cRfK/svgviewer-png-output-2.webp"
+                        alt="expand"
+                        class="w-[.875rem] h-[.875rem] group-hover/button:[filter:brightness(0)_invert(1)]"
+                      />
+                    </span>
+                  </button>
+                </div>
+
+                <!-- title -->
+                <div class="flex items-center gap-2">
+                  <h3
+                    class="m-0 font-medium text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >
+                    Earnings
+                  </h3>
+                </div>
+
+                <div class="flex justify-between">
+                  <span>
+                    <span
+                      class="text-[2.25rem] font-semibold leading-[2.75rem] tracking-[-0.045rem] text-light-text-primary dark:text-dark-text-primary"
+                      >89.70<span
+                        class="text-light-text-primary dark:text-dark-text-primary mb-1 ml-1 leading-[1.875rem] text-xl font-bold"
+                        >USD</span
+                      ></span
+                    >
+                  </span>
+                  <div class="flex items-end justify-between gap-1">
+                    <div class="flex flex-col items-center gap-1">
+                      <span class="flex gap-1">
+                        <img
+                          src="https://i.ibb.co.com/93tZHrmQ/svgviewer-png-output-4.webp"
+                          alt="trend-up"
+                          class="h-5 w-5"
+                        />
+                        <span
+                          class="text-light-text-trendGreen dark:text-light-text-trendGreen leading-5 text-sm font-medium"
+                          >200%</span
+                        >
+                      </span>
+                      <span
+                        class="-ml-4 text-light-text-secondary dark:text-dark-text-secondary leading-[1.125rem] text-xs"
+                        >vs yesterday</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- likes -->
+            <div
+              class="group relative flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 p-4 rounded-sm min-w-0 min-h-0 [backdrop-filter:blur(25px)] bg-light-bg-container dark:bg-dark-bg-container"
+            >
+              <div
+                class="flex flex-col flex-grow flex-shrink [flex-basis: auto] gap-4 min-w-0 min-h-0"
+              >
+                <!-- title -->
+                <div class="flex items-center gap-2">
+                  <h3
+                    class="m-0 font-medium text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >
+                    Likes
+                  </h3>
+                </div>
+
+                <!-- data-content (media-merch) -->
+                <div
+                  class="flex flex-col flex-grow flex-shrink [flex-basis: auto] justify-center items-start gap-4 min-w-0 min-h-0"
+                >
+                  <div
+                    class="flex items-center gap-6 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >MEDIA</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >--</span
+                        >
+                        <div></div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >MERCH</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >--</span
+                        >
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- data-content (profile-feed) -->
+                <div
+                  class="flex flex-col flex-grow flex-shrink [flex-basis: auto] justify-center items-start gap-4 min-w-0 min-h-0"
+                >
+                  <div
+                    class="flex items-center gap-6 w-full flex-grow flex-shrink [flex-basis: auto] min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >PROFILE</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >1</span
+                        >
+                        <div class="flex items-end justify-between gap-1">
+                          <div class="flex flex-col items-center gap-1">
+                            <span class="flex gap-1">
+                              <span
+                                class="text-light-text-primary dark:text-dark-text-primary leading-5 text-sm font-medium"
+                                >0%</span
+                              >
+                            </span>
+                            <span
+                              class="-ml-4 text-light-text-secondary dark:text-dark-text-secondary leading-[1.125rem] text-xs"
+                              >vs yesterday</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex flex-col gap-2 w-full flex-shrink items-start"
+                    >
+                      <span
+                        class="text-xs font-medium leading-[1.125rem] whitespace-nowrap text-light-text-tertiary dark:text-dark-text-tertiary"
+                        >FEED</span
+                      >
+
+                      <div class="flex items-end justify-between w-full gap-1">
+                        <span
+                          class="text-[1.875rem] font-semibold leading-[2.375rem] text-light-text-primary dark:text-dark-text-primary"
+                          >--</span
+                        >
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right-column -->
+          <div class="flex flex-col gap-4 col-span-full xl:col-auto">
+            <!-- top contributors -->
+            <div
+              class="group/container relative flex flex-col gap-4 p-4 rounded-sm min-w-0 [backdrop-filter:blur(25px)] bg-light-bg-container dark:bg-dark-bg-container"
+            >
+              <div class="flex flex-col gap-4 min-w-0">
+                <!-- hover-overlay -->
+                <div
+                  class="absolute hidden group-hover/container:flex items-start justify-end w-full h-full top-0 left-0 z-[10000] [box-shadow:0_0_10px_0_rgba(0,_0,_0,_0.25)]"
+                >
+                  <button
+                    class="group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-light-bg-button dark:bg-dark-bg-button [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] hover/container:bg-light-primary dark:hover/container:bg-dark-primaryHover"
+                  >
+                    <span
+                      class="text-xs font-medium leading-[1.125rem] text-light-primary dark:text-dark-primary group-hover/button:text-white dark:group-hover/button:text-[#e8e6e3]"
+                      >Trend</span
+                    >
+                    <span>
+                      <img
+                        src="https://i.ibb.co.com/7dh1cRfK/svgviewer-png-output-2.webp"
+                        alt="expand"
+                        class="w-[.875rem] h-[.875rem] group-hover/button:[filter:brightness(0)_invert(1)]"
+                      />
+                    </span>
+                  </button>
+                </div>
+
+                <!-- title -->
+                <div class="flex items-center gap-2">
+                  <h3
+                    class="m-0 font-medium text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >
+                    Top Contributors
+                  </h3>
+                </div>
+
+                <!-- data-content -->
+                <div
+                  class="flex flex-col items-start flex-grow flex-shrink [flex-basis: auto] self-stretch -ml-4 min-w-0 min-h-0"
+                ></div>
+              </div>
+
+              <!-- empty-state -->
+              <div
+                class="flex flex-col items-start justify-start flex-grow flex-shrink [flex-basis: auto] gap-4 min-w-0 min-h-0"
+              >
+                <div
+                  class="absolute pointer-events-none [box-shadow:0_0_10px_0_rgba(0,_0,_0,_0.25)] z-[10000] w-full h-full items-start justify-end hidden left-0 top-0"
+                ></div>
+
+                <!-- data-content -->
+                <div
+                  class="flex flex-col items-start flex-grow flex-shrink [flex-basis: auto] self-stretch -ml-4 min-w-0 min-h-0"
+                >
+                  <!-- data-content -->
+                  <div
+                    class="flex flex-col items-start justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-4 min-w-0 min-h-0"
+                  >
+                    <div
+                      class="flex flex-col items-center justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-2 pt-6 pb-6 min-h-[21.25rem] min-w-0"
+                    >
+                      <div class="flex items-center justify-center p-4">
+                        <div
+                          class="relative flex items-center justify-center w-[10.0625rem] h-[10.0625rem]"
+                        >
+                          <img
+                            src="https://i.ibb.co.com/vx2RDHM3/svgviewer-png-output-3.webp"
+                            alt="list"
+                            class="w-32 h-32"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col items-center text-center gap-2">
+                        <span
+                          class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                          >No trend to show at the moment</span
+                        >
+                        <a href="#" class="text-base leading-6">
+                          <span
+                            class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                            >Learn ways to earn</span
+                          >
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- trends (empty) -->
+      <div
+        class="relative z-0 shadow-[0px_4px_6px_-2px_rgba(16,_24,_40,_0.08)] gap-6 bg-light-bg-section flex flex-col dark:bg-dark-bg-section dark:shadow-[0px_4px_6px_-2px_rgba(13,_19,_32,_0.08)] before:content-[''] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:backdrop-blur-[25px] before:z-[-1]"
+      >
+        <!-- section-header -->
+        <div
+          class="section-header px-4 pt-4 pb-0 flex justify-between items-start sm:items-center"
+        >
+          <!-- title -->
+          <div
+            class="title flex items-center gap-2 flex-grow flex-shrink basis-auto min-w-0 min-h-0"
+          >
+            <span>
+              <img
+                src="https://i.ibb.co.com/wrrYKHLv/svgviewer-png-output-6.webp"
+                alt="trends"
+                class="w-6 h-6"
+              />
+            </span>
+            <h2
+              class="m-0 text-light-text-quaternary dark:text-dark-text-quaternary text-xl leading-[1.875rem] font-medium"
+            >
+              Trends
+            </h2>
+          </div>
+
+          <!-- select-dropdown -->
+          <div
+            class="select-dropdown relative z-[10000] flex md:hidden justify-end"
+            id="select-dropdown"
+          >
+            <div
+              class="trends-select cursor-pointer min-w-[5.75rem] rounded-[0.5rem] border-none bg-white/30 dark:bg-[#181a1b]/30"
+            >
+              <div
+                class="dash-select__trigger flex items-center justify-center gap-1 rounded-[0.5rem] bg-white/50 px-[0.875rem] py-[0.625rem] dark:bg-[#181a1b]/50"
+              >
+                <span
+                  class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                  >Yearly</span
+                >
+                <img
+                  class="select-arrow h-6 w-6 transition-transform duration-200"
+                  src="https://i.ibb.co.com/7dq66KXb/svgviewer-png-output-8.webp"
+                  alt="arrow-down"
+                />
+              </div>
+              <div
+                class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full min-w-[15rem] origin-top scale-95 opacity-0 shadow-lg transition-all duration-200 ease-out [transform-origin:50%_0]"
+              >
+                <div
+                  class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white/90 dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]/90"
+                >
+                  <div
+                    class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                  >
+                    <div
+                      class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                    >
+                      <span
+                        class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                        >Yearly</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                  >
+                    <div
+                      class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                    >
+                      <span
+                        class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                        >Monthly</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                  >
+                    <div
+                      class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                    >
+                      <span
+                        class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                        >Weekly</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                  >
+                    <div
+                      class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                    >
+                      <span
+                        class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                        >Daily</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <select
+              class="dash-real-select hidden"
+              name="trends-select"
+              required
+            >
+              <option value="yearly">Yearly</option>
+              <option value="monthly">Monthly</option>
+              <option value="weekly">Weekly</option>
+              <option value="daily">Daily</option>
+            </select>
+          </div>
+
+          <!-- tabs-button-group -->
+          <div
+            class="trends-tabs-wrapper hidden md:flex px-1 py-1 rounded-[3rem] bg-gradient-to-r from-[rgba(251,_91,_162,_0.15)] to-[rgba(251,_91,_162,_0.08)] border-none shadow-[0_1px_2px_0_rgba(16,_24,_40,_0.05)] overflow-hidden items-start"
+          >
+            <button
+              class="trends-tabs-wrapper-button px-4 py-2 text-sm font-medium leading-5 justify-center items-center flex gap-2 outline-none border-none"
+            >
+              Yearly
+            </button>
+            <button
+              class="trends-tabs-wrapper-button px-4 py-2 text-sm font-medium leading-5 justify-center items-center flex gap-2 outline-none border-none"
+            >
+              Monthly
+            </button>
+            <button
+              class="trends-tabs-wrapper-button px-4 py-2 text-sm font-medium leading-5 justify-center items-center flex gap-2 outline-none border-none"
+            >
+              Weekly
+            </button>
+            <button
+              class="trends-tabs-wrapper-button active px-4 py-2 text-sm font-medium leading-5 justify-center items-center flex gap-2 outline-none border-none rounded-[3rem] bg-black text-white"
+            >
+              Daily
+            </button>
+          </div>
+        </div>
+
+        <!-- all-analytics-data -->
+        <div class="analytics-container px-4 pt-0 pb-4 flex flex-col gap-4">
+          <!-- row -->
+          <div
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3"
+          >
+            <!-- white-card-column-container (media) -->
+            <div
+              class="col-span-full xl:col-span-2 gap-4 w-full order-0 flex flex-col"
+            >
+              <!-- white-card -->
+              <div
+                class="flex-grow flex-shrink basis-auto rounded-sm p-4 backdrop-blur-[25px] gap-4 bg-light-bg-container dark:bg-dark-bg-container flex flex-col min-w-0 min-h-0"
+              >
+                <!-- tabs-container -->
+                <div>
+                  <!-- title -->
+                  <div class="flex items-center justify-between gap-2">
+                    <h3
+                      class="text-light-text-secondary dark:text-dark-text-secondary m-0 leading-6 text-base font-medium"
+                    >
+                      Top Media
+                    </h3>
+                    <!-- tabs-button-group -->
+                    <div
+                      class="trends-tabs-wrapper hidden md:flex px-1 py-1 rounded-[3rem] bg-gradient-to-r from-[rgba(251,_91,_162,_0.15)] to-[rgba(251,_91,_162,_0.08)] border-none shadow-[0_1px_2px_0_rgba(16,_24,_40,_0.05)] overflow-hidden items-start"
+                    >
+                      <button
+                        class="trends-tabs-wrapper-button active px-4 py-2 text-sm font-medium leading-5 justify-center items-center flex gap-2 outline-none border-none rounded-[3rem] bg-black text-white"
+                      >
+                        Views
+                      </button>
+                      <button
+                        class="trends-tabs-wrapper-button px-4 py-2 text-sm font-medium leading-5 justify-center items-center flex gap-2 outline-none border-none"
+                      >
+                        P2V Sales
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- tabs-content -->
+                <div class="flex flex-col items-stretch h-full">
+                  <!-- tabbed-container -->
+                  <div
+                    class="flex-1 flex mt-[-0.5rem] gap-4 justify-start items-start flex-col min-w-0 min-h-0"
+                  >
+                    <!-- table-container -->
+                    <div class="mx-[-1rem] self-stretch">
+                      <!-- data-container -->
+                      <div
+                        class="justify-center gap-4 items-start flex-col min-w-0 min-h-0 flex"
+                      >
+                        <div
+                          class="flex flex-col items-start justify-center flex-grow flex-shrink basis-auto w-full gap-4 min-w-0 min-h-0"
+                        >
+                          <div
+                            class="flex flex-col items-center justify-center flex-grow flex-shrink basis-auto w-full gap-2 pt-6 pb-6 min-h-[21.25rem] min-w-0"
+                          >
+                            <div class="flex items-center justify-center p-4">
+                              <div
+                                class="relative flex items-center justify-center w-[10.0625rem] h-[10.0625rem]"
+                              >
+                                <img
+                                  src="https://i.ibb.co.com/vx2RDHM3/svgviewer-png-output-3.webp"
+                                  alt="list"
+                                  class="w-32 h-32"
+                                />
+                              </div>
+                            </div>
+
+                            <div
+                              class="flex flex-col items-center text-center gap-2 text-center"
+                            >
+                              <span
+                                class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                                >No trend to show at the moment</span
+                              >
+                              <a href="#" class="text-base leading-6">
+                                <span
+                                  class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                                  >Learn ways to earn</span
+                                >
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- white-card-column-container (tags) -->
+            <div
+              class="second-white-card-column w-full gap-4 order-2 xl:order-1 flex flex-col"
+            >
+              <!-- white-card -->
+              <div
+                class="flex-grow flex-shrink basis-auto rounded-sm p-4 backdrop-blur-[25px] gap-4 bg-light-bg-container dark:bg-dark-bg-container flex flex-col min-w-0 min-h-0"
+              >
+                <!-- tabs-container -->
+                <div>
+                  <!-- title -->
+                  <div class="flex items-center justify-between gap-2">
+                    <h3
+                      class="text-light-text-secondary dark:text-dark-text-secondary m-0 leading-6 text-base font-medium"
+                    >
+                      Top Tags
+                    </h3>
+                  </div>
+                </div>
+
+                <!-- tabs-content -->
+                <div class="flex flex-col items-stretch h-full">
+                  <!-- tabbed-container -->
+                  <div
+                    class="flex-1 flex mt-[-0.5rem] gap-4 justify-start items-start flex-col min-w-0 min-h-0"
+                  >
+                    <!-- table-container -->
+                    <div class="mx-[-1rem] self-stretch">
+                      <!-- data-container -->
+                      <div
+                        class="justify-center gap-4 items-start flex-col min-w-0 min-h-0 flex"
+                      >
+                        <div
+                          class="flex flex-col items-start justify-center flex-grow flex-shrink basis-auto w-full gap-4 min-w-0 min-h-0"
+                        >
+                          <div
+                            class="flex flex-col items-center justify-center flex-grow flex-shrink basis-auto w-full gap-2 pt-6 pb-6 min-h-[21.25rem] min-w-0"
+                          >
+                            <div class="flex items-center justify-center p-4">
+                              <div
+                                class="relative flex items-center justify-center w-[10.0625rem] h-[10.0625rem]"
+                              >
+                                <img
+                                  src="https://i.ibb.co.com/vx2RDHM3/svgviewer-png-output-3.webp"
+                                  alt="list"
+                                  class="w-32 h-32"
+                                />
+                              </div>
+                            </div>
+
+                            <div
+                              class="flex flex-col items-center text-center gap-2 text-center"
+                            >
+                              <span
+                                class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                                >No trend to show at the moment</span
+                              >
+                              <a href="#" class="text-base leading-6">
+                                <span
+                                  class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                                  >Learn ways to earn</span
+                                >
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- white-card-column-container (merch) -->
+            <div
+              class="third-white-card-column col-span-full gap-4 w-full order-1 xl:col-span-2 flex flex-col"
+            >
+              <!-- white-card -->
+              <div
+                class="flex-grow flex-shrink basis-auto rounded-sm p-4 backdrop-blur-[25px] gap-4 bg-light-bg-container dark:bg-dark-bg-container flex flex-col min-w-0 min-h-0"
+              >
+                <!-- tabs-container -->
+                <div>
+                  <!-- title -->
+                  <div class="flex items-center justify-between gap-2">
+                    <h3
+                      class="text-light-text-secondary dark:text-dark-text-secondary m-0 leading-6 text-base font-medium"
+                    >
+                      Top Merch
+                    </h3>
+                  </div>
+                </div>
+
+                <!-- tabs-content -->
+                <div class="flex flex-col items-stretch h-full">
+                  <!-- tabbed-container -->
+                  <div
+                    class="flex-1 flex mt-[-0.5rem] gap-4 justify-start items-start flex-col min-w-0 min-h-0"
+                  >
+                    <!-- table-container -->
+                    <div class="mx-[-1rem] self-stretch">
+                      <!-- data-container -->
+                      <div
+                        class="justify-center gap-4 items-start flex-col min-w-0 min-h-0 flex"
+                      >
+                        <div
+                          class="flex flex-col items-start justify-center flex-grow flex-shrink basis-auto w-full gap-4 min-w-0 min-h-0"
+                        >
+                          <div
+                            class="flex flex-col items-center justify-center flex-grow flex-shrink basis-auto w-full gap-2 pt-6 pb-6 min-h-[21.25rem] min-w-0"
+                          >
+                            <div class="flex items-center justify-center p-4">
+                              <div
+                                class="relative flex items-center justify-center w-[10.0625rem] h-[10.0625rem]"
+                              >
+                                <img
+                                  src="https://i.ibb.co.com/vx2RDHM3/svgviewer-png-output-3.webp"
+                                  alt="list"
+                                  class="w-32 h-32"
+                                />
+                              </div>
+                            </div>
+
+                            <div
+                              class="flex flex-col items-center text-center gap-2 text-center"
+                            >
+                              <span
+                                class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                                >No trend to show at the moment</span
+                              >
+                              <a href="#" class="text-base leading-6">
+                                <span
+                                  class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                                  >Learn ways to earn</span
+                                >
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- white-card-column-container (countries) -->
+            <div
+              class="fourth-white-card-column w-full gap-4 order-3 flex flex-col"
+            >
+              <!-- white-card -->
+              <div
+                class="flex-grow flex-shrink basis-auto rounded-sm p-4 backdrop-blur-[25px] gap-4 bg-light-bg-container dark:bg-dark-bg-container flex flex-col min-w-0 min-h-0"
+              >
+                <!-- tabs-container -->
+                <div>
+                  <!-- title -->
+                  <div class="flex items-center justify-between gap-2">
+                    <h3
+                      class="text-light-text-secondary dark:text-dark-text-secondary m-0 leading-6 text-base font-medium"
+                    >
+                      Top Countries
+                    </h3>
+                  </div>
+                </div>
+
+                <!-- tabs-content -->
+                <div class="flex flex-col items-stretch h-full">
+                  <!-- tabbed-container -->
+                  <div
+                    class="flex-1 flex mt-[-0.5rem] gap-4 justify-start items-start flex-col min-w-0 min-h-0"
+                  >
+                    <!-- table-container -->
+                    <div class="mx-[-1rem] self-stretch">
+                      <!-- data-container -->
+                      <div
+                        class="justify-center gap-4 items-start flex-col min-w-0 min-h-0 flex"
+                      >
+                        <div
+                          class="flex flex-col items-start justify-center flex-grow flex-shrink basis-auto w-full gap-4 min-w-0 min-h-0"
+                        >
+                          <div
+                            class="flex flex-col items-center justify-center flex-grow flex-shrink basis-auto w-full gap-2 pt-6 pb-6 min-h-[21.25rem] min-w-0"
+                          >
+                            <div class="flex items-center justify-center p-4">
+                              <div
+                                class="relative flex items-center justify-center w-[10.0625rem] h-[10.0625rem]"
+                              >
+                                <img
+                                  src="https://i.ibb.co.com/vx2RDHM3/svgviewer-png-output-3.webp"
+                                  alt="list"
+                                  class="w-32 h-32"
+                                />
+                              </div>
+                            </div>
+
+                            <div
+                              class="flex flex-col items-center text-center gap-2 text-center"
+                            >
+                              <span
+                                class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                                >No trend to show at the moment</span
+                              >
+                              <a href="#" class="text-base leading-6">
+                                <span
+                                  class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                                  >Learn ways to earn</span
+                                >
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- subscription-insight -->
+      <div
+        class="max-w-[59.5rem] w-full flex flex-col gap-4 bg-white/90 dark:bg-[#181a1b]/90 md:p-6 p-4 px-2"
+      >
+        <!-- popup-header -->
+        <div
+          class="flex flex-col justify-between items-start relative gap-4 md:gap-2 md:flex-row md:items-center"
+        >
+          <!-- title -->
+          <div class="flex items-center gap-2">
+            <img
+              src="https://i.ibb.co.com/MyhfGRNH/svgviewer-png-output-12.webp"
+              alt="logo"
+              class="w-6 h-6"
+            />
+            <h3
+              class="text-lg md:text-2xl font-semibold text-[#0c111d] dark:text-[#dbd8d3]"
+            >
+              Subscriptions Insight
+            </h3>
+          </div>
+
+          <!-- select dropdown & close button -->
+          <div class="flex items-center gap-4 w-full md:w-auto">
+            <!-- select-dropdown -->
+            <div
+              class="select-dropdown w-full md:w-auto relative z-[10000]"
+              id="select-dropdown"
+            >
+              <div
+                class="trends-select cursor-pointer min-w-[5.75rem] rounded-[0.5rem] border-none bg-white/30 dark:bg-[#181a1b]/30"
+              >
+                <div
+                  class="dash-select__trigger flex items-center justify-center gap-1 rounded-[0.5rem] bg-white/50 px-[0.875rem] py-[0.625rem] dark:bg-[#181a1b]/50"
+                >
+                  <span
+                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                    >Daily</span
+                  >
+                  <img
+                    class="select-arrow h-6 w-6 transition-transform duration-200"
+                    src="https://i.ibb.co.com/7dq66KXb/svgviewer-png-output-8.webp"
+                    alt="arrow-down"
+                  />
+                </div>
+                <div
+                  class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full min-w-[15rem] origin-top scale-95 opacity-0 h-0 overflow-hidden pointer-events-none shadow-lg transition-all duration-200 ease-out [transform-origin:50%_0]"
+                >
+                  <div
+                    class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white/90 dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]/90"
+                  >
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Yearly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Monthly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Weekly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Daily</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >All Time</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <select
+                class="dash-real-select hidden"
+                name="trends-select"
+                required
+              >
+                <option value="yearly">Yearly</option>
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+                <option value="all-time">All Time</option>
+              </select>
+            </div>
+
+            <!-- close-button -->
+            <div
+              class="close-button absolute -top-2 right-0 p-2.5 bg-white shadow-[0px_1px_3px_0px_rgba(16,24,40,0.1),0px_1px_2px_0px_rgba(16,24,40,0.06)] rounded-full flex justify-center items-center dark:bg-[#181a1b] dark:shadow-[0px_1px_3px_0px_rgba(13,19,32,0.1),0px_1px_2px_0px_rgba(13,19,32,0.06)] md:static"
+            >
+              <img
+                src="https://i.ibb.co.com/dJWn0Btc/svgviewer-png-output-13.webp"
+                alt="close-button"
+                class="w-6 h-6"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <!-- left-column -->
+          <div class="flex flex-col gap-4 p-4 w-full h-[25.875rem]">
+            <h3
+              class="text-base font-medium leading-6 text-[#0C111D] dark:text-[#dbd8d3]"
+            >
+              Subscriptions Insight
+            </h3>
+
+            <div class="flex flex-col justify-center items-center gap-6 h-full">
+              <div
+                class="flex justify-center items-center backdrop-blur-[50px] w-40 h-40"
+              >
+                <img
+                  src="https://i.ibb.co.com/Kzh3f1Rr/pie-chart.png"
+                  alt="pie-chart"
+                  class="w-32 h-32"
+                />
+              </div>
+
+              <div class="flex flex-col items-center text-center gap-2">
+                <span
+                  class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >No trend to show at the moment</span
+                >
+                <a href="#" class="text-base leading-6">
+                  <span
+                    class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                    >Learn ways to earn</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- right-column -->
+          <div class="flex flex-col gap-4 p-4 w-full h-[25.875rem]">
+            <h3
+              class="text-base font-medium leading-6 text-[#0C111D] dark:text-[#dbd8d3]"
+            >
+              Tiers Breakdown
+            </h3>
+
+            <div class="flex flex-col justify-center items-center gap-6 h-full">
+              <div
+                class="flex justify-center items-center backdrop-blur-[50px] w-40 h-40"
+              >
+                <img
+                  src="https://i.ibb.co.com/Kzh3f1Rr/pie-chart.png"
+                  alt="pie-chart"
+                  class="w-32 h-32"
+                />
+              </div>
+
+              <div class="flex flex-col items-center text-center gap-2">
+                <span
+                  class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >No trend to show at the moment</span
+                >
+                <a href="#" class="text-base leading-6">
+                  <span
+                    class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                    >Learn ways to earn</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- subscription-insight (all-time) -->
+      <div
+        class="max-w-[59.5rem] w-full flex flex-col gap-4 bg-white/90 dark:bg-[#181a1b]/90 md:p-6 p-4 px-2"
+      >
+        <!-- popup-header -->
+        <div
+          class="flex flex-col justify-between items-start relative gap-4 md:gap-2 md:flex-row md:items-center"
+        >
+          <!-- title -->
+          <div class="flex items-center gap-2">
+            <img
+              src="https://i.ibb.co.com/MyhfGRNH/svgviewer-png-output-12.webp"
+              alt="logo"
+              class="w-6 h-6"
+            />
+            <h3
+              class="text-lg md:text-2xl font-semibold text-[#0c111d] dark:text-[#dbd8d3]"
+            >
+              Subscriptions Insight
+            </h3>
+          </div>
+
+          <!-- select dropdown & close button -->
+          <div class="flex items-center gap-4 w-full md:w-auto">
+            <!-- select-dropdown -->
+            <div
+              class="select-dropdown w-full md:w-auto relative z-[10000]"
+              id="select-dropdown"
+            >
+              <div
+                class="trends-select cursor-pointer min-w-[5.75rem] rounded-[0.5rem] border-none bg-white/30 dark:bg-[#181a1b]/30"
+              >
+                <div
+                  class="dash-select__trigger flex items-center justify-center gap-1 rounded-[0.5rem] bg-white/50 px-[0.875rem] py-[0.625rem] dark:bg-[#181a1b]/50"
+                >
+                  <span
+                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                    >Daily</span
+                  >
+                  <img
+                    class="select-arrow h-6 w-6 transition-transform duration-200"
+                    src="https://i.ibb.co.com/7dq66KXb/svgviewer-png-output-8.webp"
+                    alt="arrow-down"
+                  />
+                </div>
+                <div
+                  class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full min-w-[15rem] origin-top scale-95 opacity-0 h-0 overflow-hidden pointer-events-none shadow-lg transition-all duration-200 ease-out [transform-origin:50%_0]"
+                >
+                  <div
+                    class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white/90 dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]/90"
+                  >
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Yearly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Monthly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Weekly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Daily</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >All Time</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <select
+                class="dash-real-select hidden"
+                name="trends-select"
+                required
+              >
+                <option value="yearly">Yearly</option>
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+                <option value="all-time">All Time</option>
+              </select>
+            </div>
+
+            <!-- close-button -->
+            <div
+              class="close-button absolute -top-2 right-0 p-2.5 bg-white shadow-[0px_1px_3px_0px_rgba(16,24,40,0.1),0px_1px_2px_0px_rgba(16,24,40,0.06)] rounded-full flex justify-center items-center dark:bg-[#181a1b] dark:shadow-[0px_1px_3px_0px_rgba(13,19,32,0.1),0px_1px_2px_0px_rgba(13,19,32,0.06)] md:static"
+            >
+              <img
+                src="https://i.ibb.co.com/dJWn0Btc/svgviewer-png-output-13.webp"
+                alt="close-button"
+                class="w-6 h-6"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- row (desktop) -->
+        <div class="hidden md:flex flex-col gap-4">
+          <!-- left-column -->
+          <div class="flex flex-col gap-4 p-4 w-full h-[25.875rem]">
+            <div class="flex justify-between items-center gap-2">
+              <h3
+                class="text-base font-medium leading-6 text-[#0C111D] dark:text-[#dbd8d3]"
+              >
+                Subscriptions Insight
+              </h3>
+
+              <!-- Button Group -->
+              <div
+                class="flex items-start overflow-hidden rounded-[0.438rem] border border-light-border-primary bg-[hsla(0,0%,100%,0.3)] shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] dark:border-dark-border-primary dark:bg-[rgba(24,26,27,0.3)] dark:shadow-[0_1px_2px_0_rgba(24,36,61,0.05)]"
+              >
+                <button
+                  class="flex items-center justify-center px-[0.668rem] py-[0.445rem] bg-transparent outline-none border-r group active border-light-border-primary dark:border-dark-border-primary"
+                >
+                  <img
+                    src="https://i.ibb.co.com/1G8tw4x3/svgviewer-png-output.webp"
+                    alt="overview/insight"
+                    class="h-[1.125rem] w-[1.125rem] [filter:brightness(0)_saturate(100%)_invert(94%)_sepia(9%)_saturate(210%)_hue-rotate(182deg)_brightness(90%)_contrast(91%)] group-[.active]:[filter:brightness(0)]"
+                  />
+                </button>
+                <button
+                  class="flex items-center justify-center px-[0.668rem] py-[0.445rem] bg-transparent outline-none border-none group"
+                >
+                  <img
+                    src="https://i.ibb.co.com/hJzgJVdF/trend-line.webp"
+                    alt="trends"
+                    class="h-[1.125rem] w-[1.125rem] [filter:brightness(0)_saturate(100%)_invert(94%)_sepia(9%)_saturate(210%)_hue-rotate(182deg)_brightness(90%)_contrast(91%)] group-[.active]:[filter:brightness(0)]"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-center items-center gap-6 h-full">
+              <div
+                class="flex justify-center items-center backdrop-blur-[50px] w-40 h-40"
+              >
+                <img
+                  src="https://i.ibb.co.com/Kzh3f1Rr/pie-chart.png"
+                  alt="pie-chart"
+                  class="w-32 h-32"
+                />
+              </div>
+
+              <div class="flex flex-col items-center text-center gap-2">
+                <span
+                  class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >No trend to show at the moment</span
+                >
+                <a href="#" class="text-base leading-6">
+                  <span
+                    class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                    >Learn ways to earn</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- right-column -->
+          <div class="flex flex-col gap-4 p-4 w-full h-[25.875rem]">
+            <div class="flex justify-between items-center gap-2">
+              <h3
+                class="text-base font-medium leading-6 text-[#0C111D] dark:text-[#dbd8d3]"
+              >
+                Tiers Breakdown
+              </h3>
+
+              <!-- button-group -->
+              <div class="button-group">
+                <!-- Button Group -->
+                <div
+                  class="flex items-start overflow-hidden rounded-[0.438rem] border border-light-border-primary bg-[hsla(0,0%,100%,0.3)] shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] dark:border-dark-border-primary dark:bg-[rgba(24,26,27,0.3)] dark:shadow-[0_1px_2px_0_rgba(24,36,61,0.05)]"
+                >
+                  <button
+                    class="flex items-center justify-center px-[0.668rem] py-[0.445rem] bg-transparent outline-none border-r border-light-border-primary dark:border-dark-border-primary group"
+                  >
+                    <img
+                      src="https://i.ibb.co.com/1G8tw4x3/svgviewer-png-output.webp"
+                      alt="overview/insight"
+                      class="h-[1.125rem] w-[1.125rem] [filter:brightness(0)_saturate(100%)_invert(94%)_sepia(9%)_saturate(210%)_hue-rotate(182deg)_brightness(90%)_contrast(91%)] group-[.active]:[filter:brightness(0)]"
+                    />
+                  </button>
+                  <button
+                    class="flex items-center justify-center px-[0.668rem] py-[0.445rem] bg-transparent outline-none border-none group active"
+                  >
+                    <img
+                      src="https://i.ibb.co.com/hJzgJVdF/trend-line.webp"
+                      alt="trends"
+                      class="h-[1.125rem] w-[1.125rem] [filter:brightness(0)_saturate(100%)_invert(94%)_sepia(9%)_saturate(210%)_hue-rotate(182deg)_brightness(90%)_contrast(91%)] group-[.active]:[filter:brightness(0)]"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-center items-center gap-6 h-full">
+              <div
+                class="flex justify-center items-center backdrop-blur-[50px] w-40 h-40"
+              >
+                <img
+                  src="https://i.ibb.co.com/Kzh3f1Rr/pie-chart.png"
+                  alt="pie-chart"
+                  class="w-32 h-32"
+                />
+              </div>
+
+              <div class="flex flex-col items-center text-center gap-2">
+                <span
+                  class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >No trend to show at the moment</span
+                >
+                <a href="#" class="text-base leading-6">
+                  <span
+                    class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                    >Learn ways to earn</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row (mobile) -->
+        <div class="flex justify-center items-start gap-4 md:hidden">
+          <div class="flex flex-col justify-center gap-2 w-full">
+            <div class="flex justify-center items-center p-4">
+              <div
+                class="flex justify-center items-center relative w-[10.0625rem] h-[10.0625rem]"
+              >
+                <img
+                  src="https://i.ibb.co.com/PzzRMWDc/monitor.webp"
+                  alt="monitor"
+                  class="w-[8rem] h-[8rem]"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col items-center text-center gap-2 px-4">
+              <p
+                class="text-light-text-secondary dark:text-dark-text-secondary text-base"
+              >
+                Use tablet or desktop to view full trend.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- earnings-insight -->
+      <div
+        class="max-w-[59.5rem] w-full flex flex-col gap-4 bg-white/90 dark:bg-[#181a1b]/90 md:p-6 p-4 px-2"
+      >
+        <!-- popup-header -->
+        <div
+          class="flex flex-col justify-between items-start relative gap-4 md:gap-2 md:flex-row md:items-center"
+        >
+          <!-- title -->
+          <div class="flex items-center gap-2">
+            <img
+              src="https://i.ibb.co.com/rGSXLKX4/money.webp"
+              alt="money"
+              class="w-6 h-6"
+            />
+            <h3
+              class="text-lg md:text-2xl font-semibold text-[#0c111d] dark:text-[#dbd8d3]"
+            >
+              Earnings Insight
+            </h3>
+          </div>
+
+          <!-- select dropdown & close button -->
+          <div class="flex items-center gap-4 w-full md:w-auto">
+            <!-- select-dropdown -->
+            <div
+              class="select-dropdown w-full md:w-auto relative z-[10000]"
+              id="select-dropdown"
+            >
+              <div
+                class="trends-select cursor-pointer min-w-[5.75rem] rounded-[0.5rem] border-none bg-white/30 dark:bg-[#181a1b]/30"
+              >
+                <div
+                  class="dash-select__trigger flex items-center justify-center gap-1 rounded-[0.5rem] bg-white/50 px-[0.875rem] py-[0.625rem] dark:bg-[#181a1b]/50"
+                >
+                  <span
+                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                    >Daily</span
+                  >
+                  <img
+                    class="select-arrow h-6 w-6 transition-transform duration-200"
+                    src="https://i.ibb.co.com/7dq66KXb/svgviewer-png-output-8.webp"
+                    alt="arrow-down"
+                  />
+                </div>
+                <div
+                  class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full min-w-[15rem] origin-top scale-95 opacity-0 h-0 overflow-hidden pointer-events-none shadow-lg transition-all duration-200 ease-out [transform-origin:50%_0]"
+                >
+                  <div
+                    class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white/90 dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]/90"
+                  >
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Yearly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Monthly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Weekly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Daily</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >All Time</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <select
+                class="dash-real-select hidden"
+                name="trends-select"
+                required
+              >
+                <option value="yearly">Yearly</option>
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+                <option value="all-time">All Time</option>
+              </select>
+            </div>
+
+            <!-- close-button -->
+            <div
+              class="close-button absolute -top-2 right-0 p-2.5 bg-white shadow-[0px_1px_3px_0px_rgba(16,24,40,0.1),0px_1px_2px_0px_rgba(16,24,40,0.06)] rounded-full flex justify-center items-center dark:bg-[#181a1b] dark:shadow-[0px_1px_3px_0px_rgba(13,19,32,0.1),0px_1px_2px_0px_rgba(13,19,32,0.06)] md:static"
+            >
+              <img
+                src="https://i.ibb.co.com/dJWn0Btc/svgviewer-png-output-13.webp"
+                alt="close-button"
+                class="w-6 h-6"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div class="grid grid-cols-2">
+          <div
+            class="flex w-full flex-col gap-4 rounded-[0.125rem] border-r border-light-border-primary bg-light-bg-container p-4 text-center backdrop-blur-[25px] dark:border-dark-border-primary dark:bg-dark-bg-container"
+          >
+            <h3
+              class="text-light-text-darkgray dark:text-white text-base leading-7 md:text-lg font-semibold"
+            >
+              Total Earnings
+            </h3>
+
+            <div class="flex flex-col justify-center items-center gap-4">
+              <span
+                class="text-light-text-primary dark:text-dark-text-primary tracking-[-0.045rem] text-3xl leading-[2.375rem] font-semibold md:text-4xl md:leading-[2.75rem]"
+                >--</span
+              >
+
+              <div class="flex flex-col gap-2 justify-center items-center">
+                <span
+                  class="text-sm font-medium text-light-text-secondary dark:text-dark-text-secondary"
+                  >--</span
+                >
+                <span
+                  class="text-xs leading-normal text-light-text-secondary dark:text-dark-text-secondary"
+                  >vs yesterday</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex w-full flex-col gap-4 rounded-[0.125rem] bg-light-bg-container p-4 text-center backdrop-blur-[25px] dark:bg-dark-bg-container"
+          >
+            <h3
+              class="text-light-text-darkgray dark:text-white text-base leading-7 md:text-lg font-semibold"
+            >
+              Total Earnings
+            </h3>
+
+            <div class="flex flex-col justify-center items-center gap-4">
+              <span
+                class="text-light-text-primary dark:text-dark-text-primary tracking-[-0.045rem] text-3xl leading-[2.375rem] font-semibold md:text-4xl md:leading-[2.75rem]"
+                >--</span
+              >
+
+              <div class="flex flex-col gap-2 justify-center items-center">
+                <span
+                  class="text-sm font-medium text-light-text-secondary dark:text-dark-text-secondary"
+                  >--</span
+                >
+                <span
+                  class="text-xs leading-normal text-light-text-secondary dark:text-dark-text-secondary"
+                  >vs yesterday</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div class="flex flex-col md:flex-row gap-4">
+          <!-- left-column -->
+          <div
+            class="flex flex-col gap-4 p-4 w-full h-[25.875rem] bg-light-bg-container dark:bg-dark-bg-container"
+          >
+            <div class="flex justify-between items-center gap-2">
+              <h3
+                class="text-light-text-darkgray dark:text-white text-lg font-semibold"
+              >
+                Sales Insight
+              </h3>
+            </div>
+
+            <div class="flex flex-col justify-center items-center gap-6 h-full">
+              <div
+                class="flex justify-center items-center backdrop-blur-[50px] w-40 h-40"
+              >
+                <img
+                  src="https://i.ibb.co.com/Kzh3f1Rr/pie-chart.png"
+                  alt="pie-chart"
+                  class="w-32 h-32"
+                />
+              </div>
+
+              <div class="flex flex-col items-center gap-2">
+                <span
+                  class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >No trend to show at the moment</span
+                >
+                <a href="#" class="text-base leading-6">
+                  <span
+                    class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                    >Learn ways to earn</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- right-column -->
+          <div
+            class="flex flex-col gap-4 p-4 w-full h-[25.875rem] bg-light-bg-container dark:bg-dark-bg-container"
+          >
+            <div class="flex justify-between items-center gap-2">
+              <h3
+                class="text-light-text-darkgray dark:text-white text-lg font-semibold"
+              >
+                Tokens Trend
+              </h3>
+            </div>
+
+            <div class="flex flex-col justify-center items-center gap-6 h-full">
+              <div
+                class="flex justify-center items-center backdrop-blur-[50px] w-40 h-40"
+              >
+                <img
+                  src="https://i.ibb.co.com/Kzh3f1Rr/pie-chart.png"
+                  alt="pie-chart"
+                  class="w-32 h-32"
+                />
+              </div>
+
+              <div class="flex flex-col items-center gap-2">
+                <span
+                  class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                  >No trend to show at the moment</span
+                >
+                <a href="#" class="text-base leading-6">
+                  <span
+                    class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                    >Learn ways to earn</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div
+          class="flex flex-col gap-4 p-4 rounded-sm bg-light-bg-container backdrop-blur-[25px] dark:bg-dark-bg-container"
+        >
+          <h3
+            class="text-light-text-darkgray dark:text-white text-lg font-semibold"
+          >
+            Top Countries
+          </h3>
+
+          <!-- data-content -->
+          <div
+            class="flex flex-col items-start flex-grow flex-shrink [flex-basis: auto] self-stretch -ml-4 min-w-0 min-h-0"
+          >
+            <!-- data-content -->
+            <div
+              class="flex flex-col items-start justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-4 min-w-0 min-h-0"
+            >
+              <div
+                class="flex flex-col items-center justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-2 pt-6 pb-6 min-h-[21.25rem] min-w-0"
+              >
+                <div class="flex items-center justify-center p-4">
+                  <div
+                    class="relative flex items-center justify-center w-[10.0625rem] h-[10.0625rem]"
+                  >
+                    <img
+                      src="https://i.ibb.co.com/vx2RDHM3/svgviewer-png-output-3.webp"
+                      alt="list"
+                      class="w-32 h-32"
+                    />
+                  </div>
+                </div>
+
+                <div class="flex flex-col items-center gap-2 text-center">
+                  <span
+                    class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                    >No trend to show at the moment</span
+                  >
+                  <a href="#" class="text-base leading-6">
+                    <span
+                      class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                      >Learn ways to earn</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- contributors-insight -->
+      <div
+        class="max-w-[59.5rem] w-full flex flex-col gap-4 bg-white/90 dark:bg-[#181a1b]/90 md:p-6 p-4 px-2"
+      >
+        <!-- popup-header -->
+        <div
+          class="flex flex-col justify-between items-start relative gap-4 md:gap-2 md:flex-row md:items-center"
+        >
+          <!-- title -->
+          <div class="flex items-center gap-2">
+            <img
+              src="https://i.ibb.co.com/rGSXLKX4/money.webp"
+              alt="money"
+              class="w-6 h-6"
+            />
+            <h3
+              class="text-lg md:text-2xl font-semibold text-[#0c111d] dark:text-[#dbd8d3]"
+            >
+              Contributors Insight
+            </h3>
+          </div>
+
+          <!-- select dropdown & close button -->
+          <div class="flex items-center gap-4 w-full md:w-auto">
+            <!-- select-dropdown -->
+            <div
+              class="select-dropdown w-full md:w-auto relative z-[10000]"
+              id="select-dropdown"
+            >
+              <div
+                class="trends-select cursor-pointer min-w-[5.75rem] rounded-[0.5rem] border-none bg-white/30 dark:bg-[#181a1b]/30"
+              >
+                <div
+                  class="dash-select__trigger flex items-center justify-center gap-1 rounded-[0.5rem] bg-white/50 px-[0.875rem] py-[0.625rem] dark:bg-[#181a1b]/50"
+                >
+                  <span
+                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                    >Daily</span
+                  >
+                  <img
+                    class="select-arrow h-6 w-6 transition-transform duration-200"
+                    src="https://i.ibb.co.com/7dq66KXb/svgviewer-png-output-8.webp"
+                    alt="arrow-down"
+                  />
+                </div>
+                <div
+                  class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full min-w-[15rem] origin-top scale-95 opacity-0 h-0 overflow-hidden pointer-events-none shadow-lg transition-all duration-200 ease-out [transform-origin:50%_0]"
+                >
+                  <div
+                    class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white/90 dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]/90"
+                  >
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Yearly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Monthly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Weekly</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >Daily</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                    >
+                      <div
+                        class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                      >
+                        <span
+                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                          >All Time</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <select
+                class="dash-real-select hidden"
+                name="trends-select"
+                required
+              >
+                <option value="yearly">Yearly</option>
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+                <option value="all-time">All Time</option>
+              </select>
+            </div>
+
+            <!-- close-button -->
+            <div
+              class="close-button absolute -top-2 right-0 p-2.5 bg-white shadow-[0px_1px_3px_0px_rgba(16,24,40,0.1),0px_1px_2px_0px_rgba(16,24,40,0.06)] rounded-full flex justify-center items-center dark:bg-[#181a1b] dark:shadow-[0px_1px_3px_0px_rgba(13,19,32,0.1),0px_1px_2px_0px_rgba(13,19,32,0.06)] md:static"
+            >
+              <img
+                src="https://i.ibb.co.com/dJWn0Btc/svgviewer-png-output-13.webp"
+                alt="close-button"
+                class="w-6 h-6"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div
+          class="flex flex-col gap-4 p-4 rounded-sm bg-light-bg-container backdrop-blur-[25px] dark:bg-dark-bg-container"
+        >
+          <h3
+            class="text-light-text-darkgray dark:text-white text-lg font-semibold"
+          >
+            Top Contributors
+          </h3>
+
+          <!-- data-content -->
+          <div
+            class="flex flex-col items-start flex-grow flex-shrink [flex-basis: auto] self-stretch -ml-4 min-w-0 min-h-0"
+          >
+            <!-- data-content -->
+            <div
+              class="flex flex-col items-start justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-4 min-w-0 min-h-0"
+            >
+              <div
+                class="flex flex-col items-center justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-2 pt-6 pb-6 min-h-[21.25rem] min-w-0"
+              >
+                <div class="flex items-center justify-center p-4">
+                  <div
+                    class="relative flex items-center justify-center w-[10.0625rem] h-[10.0625rem]"
+                  >
+                    <img
+                      src="https://i.ibb.co.com/vx2RDHM3/svgviewer-png-output-3.webp"
+                      alt="list"
+                      class="w-32 h-32"
+                    />
+                  </div>
+                </div>
+
+                <div class="flex flex-col items-center gap-2 text-center">
+                  <span
+                    class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                    >No trend to show at the moment</span
+                  >
+                  <a href="#" class="text-base leading-6">
+                    <span
+                      class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                      >Learn ways to earn</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div
+          class="flex flex-col gap-4 p-4 rounded-sm bg-light-bg-container backdrop-blur-[25px] dark:bg-dark-bg-container"
+        >
+          <h3
+            class="text-light-text-darkgray dark:text-white text-lg font-semibold"
+          >
+            Top Fans
+          </h3>
+
+          <!-- data-content -->
+          <div
+            class="flex flex-col items-start flex-grow flex-shrink [flex-basis: auto] self-stretch -ml-4 min-w-0 min-h-0"
+          >
+            <!-- data-content -->
+            <div
+              class="flex flex-col items-start justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-4 min-w-0 min-h-0"
+            >
+              <div
+                class="flex flex-col items-center justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-2 pt-6 pb-6 min-h-[21.25rem] min-w-0"
+              >
+                <div class="flex items-center justify-center p-4">
+                  <div
+                    class="relative flex items-center justify-center w-[10.0625rem] h-[10.0625rem]"
+                  >
+                    <img
+                      src="https://i.ibb.co.com/vx2RDHM3/svgviewer-png-output-3.webp"
+                      alt="list"
+                      class="w-32 h-32"
+                    />
+                  </div>
+                </div>
+
+                <div class="flex flex-col items-center gap-2 text-center">
+                  <span
+                    class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                    >No trend to show at the moment</span
+                  >
+                  <a href="#" class="text-base leading-6">
+                    <span
+                      class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                      >Learn ways to earn</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div
+          class="flex flex-col gap-4 p-4 rounded-sm bg-light-bg-container backdrop-blur-[25px] dark:bg-dark-bg-container"
+        >
+          <h3
+            class="text-light-text-darkgray dark:text-white text-lg font-semibold"
+          >
+            Top Order Spenders
+          </h3>
+
+          <!-- data-content -->
+          <div
+            class="flex flex-col items-start flex-grow flex-shrink [flex-basis: auto] self-stretch -ml-4 min-w-0 min-h-0"
+          >
+            <!-- data-content -->
+            <div
+              class="flex flex-col items-start justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-4 min-w-0 min-h-0"
+            >
+              <div
+                class="flex flex-col items-center justify-center flex-grow flex-shrink [flex-basis: auto] w-full gap-2 pt-6 pb-6 min-h-[21.25rem] min-w-0"
+              >
+                <div class="flex items-center justify-center p-4">
+                  <div
+                    class="relative flex items-center justify-center w-[10.0625rem] h-[10.0625rem]"
+                  >
+                    <img
+                      src="https://i.ibb.co.com/vx2RDHM3/svgviewer-png-output-3.webp"
+                      alt="list"
+                      class="w-32 h-32"
+                    />
+                  </div>
+                </div>
+
+                <div class="flex flex-col items-center gap-2 text-center">
+                  <span
+                    class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary"
+                    >No trend to show at the moment</span
+                  >
+                  <a href="#" class="text-base leading-6">
+                    <span
+                      class="text-base leading-6 text-light-text-secondary dark:text-dark-text-secondary underline"
+                      >Learn ways to earn</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- select-dropdown -->
+      <div
+        class="select-dropdown w-full md:w-auto relative z-[10000]"
+        id="select-dropdown"
+      >
+        <div
+          class="trends-select cursor-pointer min-w-[5.75rem] rounded-[0.5rem] border-none bg-white/30 dark:bg-[#181a1b]/30"
+        >
+          <div
+            class="dash-select__trigger flex items-center justify-center gap-1 rounded-[0.5rem] bg-white/50 px-[0.875rem] py-[0.625rem] dark:bg-[#181a1b]/50"
+          >
+            <span
+              class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+              >Daily</span
+            >
+            <img
+              class="select-arrow h-6 w-6 transition-transform duration-200"
+              src="https://i.ibb.co.com/7dq66KXb/svgviewer-png-output-8.webp"
+              alt="arrow-down"
+            />
+          </div>
+          <div
+            class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full min-w-[15rem] origin-top scale-95 opacity-0 h-0 overflow-hidden pointer-events-none shadow-lg transition-all duration-200 ease-out [transform-origin:50%_0]"
+          >
+            <div
+              class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white/90 dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]/90"
+            >
+              <div
+                class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+              >
+                <div
+                  class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                >
+                  <span
+                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                    >Yearly</span
+                  >
+                </div>
+              </div>
+              <div
+                class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+              >
+                <div
+                  class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                >
+                  <span
+                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                    >Monthly</span
+                  >
+                </div>
+              </div>
+              <div
+                class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+              >
+                <div
+                  class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                >
+                  <span
+                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                    >Weekly</span
+                  >
+                </div>
+              </div>
+              <div
+                class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+              >
+                <div
+                  class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                >
+                  <span
+                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                    >Daily</span
+                  >
+                </div>
+              </div>
+              <div
+                class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+              >
+                <div
+                  class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]"
+                >
+                  <span
+                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                    >All Time</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <select class="dash-real-select hidden" name="trends-select" required>
+          <option value="yearly">Yearly</option>
+          <option value="monthly">Monthly</option>
+          <option value="weekly">Weekly</option>
+          <option value="daily">Daily</option>
+          <option value="all-time">All Time</option>
+        </select>
+      </div>
+
+      <!-- chart-category-list -->
+      <div
+        class="flex justify-center items-center gap-2 flex-wrap px-2 bg-white dark:bg-black"
+      >
+        <div class="flex items-center gap-2">
+          <div
+            class="block w-2 h-2 rounded-full bg-[#4cc9f0] dark:bg-[#0d799b]"
+          ></div>
+          <span
+            class="text-light-text-quaternary dark:text-dark-text-quaternary text-xs leading-normal"
+            >Subscription</span
+          >
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div
+            class="block w-2 h-2 rounded-full bg-[#4361ee] dark:bg-[#0e28a0]"
+          ></div>
+          <span
+            class="text-light-text-quaternary dark:text-dark-text-quaternary text-xs leading-normal"
+            >Pay to View</span
+          >
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div
+            class="block w-2 h-2 rounded-full bg-[#3a0ba3] dark:bg-[#340a91]"
+          ></div>
+          <span
+            class="text-light-text-quaternary dark:text-dark-text-quaternary text-xs leading-normal"
+            >Merch</span
+          >
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div
+            class="block w-2 h-2 rounded-full bg-[#f72485] dark:bg-[#b40756]"
+          ></div>
+          <span
+            class="text-light-text-quaternary dark:text-dark-text-quaternary text-xs leading-normal"
+            >Wishtender</span
+          >
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div
+            class="block w-2 h-2 rounded-full bg-[#98a2b3] dark:bg-[#444c5b]"
+          ></div>
+          <span
+            class="text-light-text-quaternary dark:text-dark-text-quaternary text-xs leading-normal"
+            >Custom Request</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Initialize all dropdowns on the page
+          document.querySelectorAll('.trends-select').forEach(trendsSelect => {
+              const selectDropdown = trendsSelect.closest('.select-dropdown');
+              const trigger = trendsSelect.querySelector('.dash-select__trigger span');
+              const arrow = trendsSelect.querySelector('.select-arrow');
+              const options = trendsSelect.querySelectorAll('.option');
+              const realSelect = selectDropdown.querySelector('.dash-real-select');
+              const optionsContainer = trendsSelect.querySelector('.dash-options-container');
+
+              // Set initial value
+              if (realSelect) {
+                  realSelect.value = 'yearly';
+              }
+
+              // Toggle dropdown with smooth transitions
+              trendsSelect.addEventListener('click', function(e) {
+                  e.stopPropagation();
+
+                  const isOpening = !optionsContainer.classList.contains('open');
+
+                  // Close all other selects first
+                  document.querySelectorAll('.trends-select').forEach(s => {
+                      if (s !== trendsSelect) {
+                          closeDropdown(s);
+                      }
+                  });
+
+                  if (isOpening) {
+                      // Position dropdown based on available space
+                      positionDropdown(trendsSelect);
+                      openDropdown(trendsSelect);
+                  } else {
+                      closeDropdown(trendsSelect);
+                  }
+              });
+
+              // Handle option selection
+              options.forEach(option => {
+                  option.addEventListener('click', function(e) {
+                      e.stopPropagation();
+
+                      const selectedText = this.querySelector('span').textContent;
+                      if (trigger) trigger.textContent = selectedText;
+                      if (realSelect) realSelect.value = selectedText.toLowerCase();
+
+                      // Close the dropdown
+                      closeDropdown(trendsSelect);
+
+                      // Trigger change event on the real select
+                      if (realSelect) realSelect.dispatchEvent(new Event('change'));
+                  });
+              });
+
+              // Position dropdown up or down based on available space
+              function positionDropdown(select) {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+                  if (!optionsContainer) return;
+
+                  const rect = select.getBoundingClientRect();
+                  const spaceBelow = window.innerHeight - rect.bottom;
+                  const spaceAbove = rect.top;
+                  const optionsHeight = optionsContainer.scrollHeight;
+
+                  optionsContainer.classList.remove('upward', 'downward');
+
+                  if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                      optionsContainer.classList.add('upward');
+                      optionsContainer.style.top = 'auto';
+                      optionsContainer.style.bottom = 'calc(100% + 0.5rem)';
+                  } else {
+                      optionsContainer.classList.add('downward');
+                      optionsContainer.style.top = 'calc(100% + 0.5rem)';
+                      optionsContainer.style.bottom = 'auto';
+                  }
+              }
+
+              function openDropdown(select) {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+                  const arrow = select.querySelector('.select-arrow');
+
+                  if (!optionsContainer || !arrow) return;
+
+                  optionsContainer.classList.add('open');
+                  arrow.classList.add('rotate-180');
+                  optionsContainer.classList.remove('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+                  optionsContainer.classList.add('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+              }
+
+              function closeDropdown(select) {
+                  const optionsContainer = select?.querySelector('.dash-options-container');
+                  const arrow = select?.querySelector('.select-arrow');
+
+                  if (!optionsContainer || !arrow) return;
+
+                  optionsContainer.classList.remove('open');
+                  arrow.classList.remove('rotate-180');
+                  optionsContainer.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+                  optionsContainer.classList.add('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+              }
+          });
+
+          // Close dropdowns when clicking outside
+          document.addEventListener('click', function() {
+              document.querySelectorAll('.trends-select').forEach(select => {
+                  closeDropdown(select);
+              });
+          });
+
+          // Reposition dropdowns on window resize
+          window.addEventListener('resize', function() {
+              document.querySelectorAll('.trends-select').forEach(select => {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+                  if (optionsContainer && optionsContainer.classList.contains('open')) {
+                      positionDropdown(select);
+                  }
+              });
+          });
+      });
+    </script>
+  </body>
+</html>

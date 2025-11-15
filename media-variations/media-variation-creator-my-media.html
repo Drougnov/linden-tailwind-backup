@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                      'max-md': { 'max': '768px' }
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  }
+
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="font-sans p-8 m-0 box-border bg-white [&.dark]:bg-[#202324]">
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 w-full gap-0.5 md:gap-4"
+    >
+      <!-- media-card (video) -->
+      <div class="flex flex-col gap-2 w-full min-h-full relative">
+        <!-- media -->
+        <div
+          class="video-container w-full relative aspect-video cursor-pointer"
+        >
+          <!-- bg-wrapper -->
+          <div
+            class="w-full h-full bg-cover bg-center bg-no-repeat aspect-video overflow-hidden relative"
+          >
+            <div class="w-full h-full flex justify-center items-center">
+              <video
+                class="object-cover w-full h-full"
+                src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              ></video>
+            </div>
+          </div>
+
+          <!-- top-tag-section -->
+          <div
+            class="flex justify-between items-center w-full absolute left-0 pl-1 top-1 z-[99999]"
+          >
+            <!-- icon-tag -->
+            <div
+              class="flex justify-center items-center gap-[0.188rem] px-1 py-0.5 rounded bg-[rgba(24,34,48,0.50)] dark:bg-[rgba(31,44,63,0.50)] drop-shadow-[0_0_20px_rgba(0,0,0,0.25)]"
+            >
+              <img
+                src="https://i.ibb.co.com/wN978Hjm/video.webp"
+                alt="video"
+                class="w-4 h-4"
+              />
+              <span
+                class="text-xs text-white leading-[1rem] tracking-[0.008rem] dark:text-[#e8e6e3]"
+                >14:55</span
+              >
+            </div>
+
+            <!-- media-stats -->
+            <div
+              class="flex items-center gap-2 px-[0.625rem] drop-shadow-[0_0_20px_rgba(0,0,0,0.25)]"
+            >
+              <span
+                class="flex justify-center items-center gap-1 filter drop-shadow-[0_0_.313rem_#000]"
+              >
+                <span
+                  class="text-xs leading-none whitespace-nowrap text-white tracking-[0.01875rem] dark:text-[#e8e6e3]"
+                  >5mo</span
+                >
+              </span>
+
+              <div class="flex items-center gap-[0.813rem] px-1 opacity-70">
+                <span
+                  class="flex justify-center items-center gap-[0.188rem] filter drop-shadow-[0_0_.313rem_#000]"
+                >
+                  <img
+                    src="https://i.ibb.co.com/7tbwzFsQ/heart.webp"
+                    alt="heart"
+                    class="w-[0.75rem] [filter:brightness(100)_saturate(0)]"
+                  />
+                  <span
+                    class="text-xs leading-normal font-medium text-white tracking-[0.008rem] dark:text-[#e8e6e3]"
+                    >0</span
+                  >
+                </span>
+
+                <span
+                  class="flex justify-center items-center gap-[0.1875rem] filter drop-shadow-[0_0_.313rem_#000]"
+                >
+                  <img
+                    src="https://i.ibb.co.com/Kjv16vLZ/eye.webp"
+                    alt="eye"
+                    class="w-[0.75rem] [filter:brightness(100)_saturate(0)]"
+                  />
+                  <span
+                    class="text-xs leading-normal font-medium text-white tracking-[0.0075rem] dark:text-[#e8e6e3]"
+                    >4</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- published-tag-section -->
+          <div class="flex absolute left-0 bottom-0 z-[99999]">
+            <span
+              class="flex justify-center items-center p-1 gap-2 backdrop-blur-[10px] bg-[#07f468] dark:bg-[#06c454]"
+            >
+              <img
+                src="https://i.ibb.co.com/bMFQRqBP/upload.webp"
+                alt="upload"
+                class="w-4 h-4"
+              />
+            </span>
+            <span
+              class="text-[#07f468] text-xs font-medium leading-[1.125rem] flex justify-center items-center gap-2 px-[.375rem] py-[0.188rem] bg-black dark:bg-[#181a1b] dark:text-[#23f97b]"
+              >Published</span
+            >
+          </div>
+        </div>
+
+        <!-- media-info -->
+        <div class="flex flex-col gap-1 w-full">
+          <!-- title -->
+          <div class="flex items-start gap-1">
+            <span
+              class="text-sm font-medium flex-grow line-clamp-2 text-[#0c111d] dark:text-[#dbd8d3] h-10"
+              >Took a walk in the park.</span
+            >
+            <div class="relative cursor-pointer">
+              <!-- select-dropdown -->
+              <div
+                class="select-dropdown w-auto relative z-[1] flex-1"
+                id="select-dropdown"
+              >
+                <div
+                  class="media-select cursor-pointer rounded-[0.5rem] border-none"
+                >
+                  <div class="dash-select__trigger">
+                    <span
+                      class="cursor-pointer w-6 h-6 rounded-[0.313rem] flex justify-center items-center hover:bg-[rgba(41,112,255,0.2)]"
+                    >
+                      <img
+                        src="https://i.ibb.co.com/bgGv5xSL/3-dots.webp"
+                        alt="three-dots-vertical"
+                        class="w-4 h-4"
+                      />
+                    </span>
+                  </div>
+
+                  <div
+                    class="dash-options-container w-full fixed max-md:!top-[unset] max-md:!bottom-0 left-0 md:absolute md:left-auto md:right-0 md:top-[calc(100%+0.5rem)] md:bottom-unset z-[9999] md:w-max origin-top scale-95 opacity-0 h-0 overflow-hidden pointer-events-none shadow-lg transition-all duration-200 ease-out [transform-origin:50%_0] rounded-[0.625rem]"
+                  >
+                    <div
+                      class="border border-[rgba(186,188,203,0.5)] rounded-[0.625rem] bg-white dark:border-[rgba(61,71,73)] dark:bg-[#181a1b] overflow-hidden py-1 md:py-0"
+                    >
+                      <div
+                        class="option flex items-center justify-center gap-[0.5rem] [&.selected]:bg-[#f2f4f7] dark:[&.selected]:bg-[#1e2022] hover:bg-[#f2f4f7] h-[4.25rem] md:h-max px-[0.625rem] md:px-2 py-[0.625rem] dark:hover:bg-[#1e2022]"
+                      >
+                        <div
+                          class="option-inner-container flex items-center flex-1 gap-6 md:gap-[0.75rem]"
+                        >
+                          <img
+                            src="https://i.ibb.co.com/wZgQbKp9/svgviewer-png-output-49.webp"
+                            alt="edit"
+                            class="w-4 h-4 md:w-6 md:h-6"
+                          />
+                          <span
+                            class="text-base text-[#0c111d] font-medium capitalize text-balance dark:text-[#dbd8d3]"
+                            >Edit Details</span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="option flex items-center justify-center gap-[0.5rem] [&.selected]:bg-[#f2f4f7] dark:[&.selected]:bg-[#1e2022] hover:bg-[#f2f4f7] h-[4.25rem] md:h-max px-[0.625rem] md:px-2 py-[0.625rem] dark:hover:bg-[#1e2022]"
+                      >
+                        <div
+                          class="option-inner-container flex items-center flex-1 gap-6 md:gap-[0.75rem]"
+                        >
+                          <img
+                            src="https://i.ibb.co.com/Z1cw0ZpJ/svgviewer-png-output-50.webp"
+                            alt="subscription-tier"
+                            class="w-4 h-4 md:w-6 md:h-6"
+                          />
+                          <div
+                            class="flex items-center justify-between md:justify-start gap-[0.625rem] w-full"
+                          >
+                            <span
+                              class="text-base text-[#0c111d] font-medium capitalize text-balance dark:text-[#dbd8d3]"
+                              >Add To Subscription Tier</span
+                            >
+                            <img
+                              src="https://i.ibb.co.com/4bwSScz/svgviewer-png-output-51.webp"
+                              alt="arrow-right"
+                              class="w-6 h-6"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="option flex items-center justify-center gap-[0.5rem] [&.selected]:bg-[#f2f4f7] dark:[&.selected]:bg-[#1e2022] hover:bg-[#f2f4f7] h-[4.25rem] md:h-max px-[0.625rem] md:px-2 py-[0.625rem] dark:hover:bg-[#1e2022]"
+                      >
+                        <div
+                          class="option-inner-container flex items-center flex-1 gap-6 md:gap-[0.75rem]"
+                        >
+                          <img
+                            src="https://i.ibb.co.com/k2GVhBwd/svgviewer-png-output-52.webp"
+                            alt="report"
+                            class="w-4 h-4 md:w-6 md:h-6"
+                          />
+                          <span
+                            class="text-base text-[#0c111d] font-medium capitalize text-balance dark:text-[#dbd8d3]"
+                            >Unpublish</span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="option flex items-center justify-center gap-[0.5rem] [&.selected]:bg-[#f2f4f7] dark:[&.selected]:bg-[#1e2022] hover:bg-[#f2f4f7] h-[4.25rem] md:h-max px-[0.625rem] md:px-2 py-[0.625rem] dark:hover:bg-[#1e2022] md:border-t border-[#dee5ec] dark:border-[#2b3b4b]"
+                      >
+                        <div
+                          class="option-inner-container flex items-center flex-1 gap-6 md:gap-[0.75rem]"
+                        >
+                          <img
+                            src="https://i.ibb.co.com/wH3Wh66/svgviewer-png-output-53.webp"
+                            alt="delete"
+                            class="w-4 h-4 md:w-6 md:h-6"
+                          />
+                          <span
+                            class="text-base text-[#ff4405] font-medium capitalize text-balance dark:text-[#ff571e]"
+                            >Delete Media</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <select
+                  class="dash-real-select hidden"
+                  name="media-select"
+                  required
+                >
+                  <option value="edit">Edit Details</option>
+                  <option value="subscription-tier">
+                    Add To Subscription Tier
+                  </option>
+                  <option value="unpublish">Unpublish</option>
+                  <option value="delete">Delete Media</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- select-dropdown -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Initialize all dropdowns on the page
+          document.querySelectorAll('.media-select').forEach(orderSelect => {
+              const selectDropdown = orderSelect.closest('.select-dropdown');
+              const trigger = orderSelect.querySelector('.dash-select__trigger span');
+              const options = orderSelect.querySelectorAll('.option');
+              const realSelect = selectDropdown.querySelector('.dash-real-select');
+              const optionsContainer = orderSelect.querySelector('.dash-options-container');
+
+              // Toggle dropdown with smooth transitions
+              orderSelect.addEventListener('click', function(e) {
+                  e.stopPropagation();
+
+                  const isOpening = !optionsContainer.classList.contains('open');
+
+                  // Close all other selects first
+                  document.querySelectorAll('.media-select').forEach(s => {
+                      if (s !== orderSelect) {
+                          closeDropdown(s);
+                      }
+                  });
+
+                  if (isOpening) {
+                      // Position dropdown based on available space
+                      positionDropdown(orderSelect);
+                      openDropdown(orderSelect);
+                  } else {
+                      closeDropdown(orderSelect);
+                  }
+              });
+
+              // Handle option selection
+              options.forEach(option => {
+                  option.addEventListener('click', function(e) {
+                      e.stopPropagation();
+
+                      // Remove "selected" class from all options first
+                      options.forEach(opt => opt.classList.remove('selected'));
+
+                      // Add "selected" class to the clicked option
+                      this.classList.add('selected');
+
+                      // Close the dropdown
+                      closeDropdown(orderSelect);
+
+                      // Trigger change event on the real select
+                      if (realSelect) realSelect.dispatchEvent(new Event('change'));
+                  });
+              });
+
+              // Position dropdown up or down based on available space
+              function positionDropdown(select) {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+                  if (!optionsContainer) return;
+
+                  const rect = select.getBoundingClientRect();
+                  const spaceBelow = window.innerHeight - rect.bottom;
+                  const spaceAbove = rect.top;
+                  const optionsHeight = optionsContainer.scrollHeight;
+
+                  optionsContainer.classList.remove('upward', 'downward');
+
+                  if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                      optionsContainer.classList.add('upward');
+                      optionsContainer.style.top = 'auto';
+                      optionsContainer.style.bottom = 'calc(100% + 0.5rem)';
+                  } else {
+                      optionsContainer.classList.add('downward');
+                      optionsContainer.style.top = 'calc(100% + 0.5rem)';
+                      optionsContainer.style.bottom = 'auto';
+                  }
+              }
+
+              function openDropdown(select) {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+
+                  if (!optionsContainer) return;
+
+                  optionsContainer.classList.add('open');
+                  optionsContainer.classList.remove('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+                  optionsContainer.classList.add('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+              }
+
+              function closeDropdown(select) {
+                  const optionsContainer = select?.querySelector('.dash-options-container');
+
+                  if (!optionsContainer) return;
+
+                  optionsContainer.classList.remove('open');
+                  optionsContainer.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+                  optionsContainer.classList.add('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+              }
+
+              // Close dropdowns when clicking outside
+              document.addEventListener('click', function() {
+                  console.log("clicked")
+                  document.querySelectorAll('.media-select').forEach(select => {
+                      closeDropdown(select);
+                  });
+              });
+
+              // Reposition dropdowns on window resize
+              window.addEventListener('resize', function() {
+                  document.querySelectorAll('.media-select').forEach(select => {
+                      const optionsContainer = select.querySelector('.dash-options-container');
+                      if (optionsContainer && optionsContainer.classList.contains('open')) {
+                          positionDropdown(select);
+                      }
+                  });
+              });
+          });
+      });
+    </script>
+  </body>
+</html>

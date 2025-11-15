@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="max-sm:text-sm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call</title>
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            screens: {
+              sm: '480px',
+              md: '768px',
+              lg: '1010px',
+              xl: '1365px',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+            },
+            keyframes: {
+              spinFast: {
+                '0%': { transform: 'rotate(0deg)' },
+                '100%': { transform: 'rotate(360deg)' },
+              },
+            },
+            animation: {
+              spinFast: 'spinFast 1s linear infinite',
+            },
+          }
+        }
+      }
+    </script>
+  </head>
+
+    <body class="bg-[#444444] font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]">
+        <!-- wrapper -->
+        <div class="w-[23.4375rem] h-[23.4375rem] flex flex-col bg-black/80 relative">
+            <!-- calling-info-section -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-4 pointer-events-none">
+                <!-- user-avatar-->
+                <div class="w-[7.5rem] h-[7.5rem] flex justify-center items-center relative">
+                    <img src="https://i.ibb.co.com/RGt0dKYD/green-loader-2.webp" alt="green-loader" class="absolute min-w-[8.125rem] h-[8.125rem] animate-spinFast z-[-1]">
+                    <img src="https://i.ibb.co.com/35W4r1KX/Vector-user.webp" alt="avatar" class="absolute top-4 left-3 w-[5.9375rem] h-[5.9375rem]">
+                </div>
+
+                <span class="text-sm text-white text-center">Calling @jennyben...</span>
+            </div>
+
+            <!-- bottom-controls-section -->
+            <div class="w-full h-full flex justify-end items-end flex-grow">
+                <div class="w-full flex justify-center items-center p-4">
+                    <div class="flex items-center gap-3 py-2">
+                        <!-- video-block -->
+                        <div class="flex justify-center items-center w-12 h-12 bg-white/5 rounded-full cursor-pointer">
+                            <img src="https://i.ibb.co.com/zVx0JM7X/block-video-1.webp" alt="block-video-1" class="w-[1.375rem] h-[1.375rem] drop-shadow-[0px_0px_4px_0px_#000000]">
+                        </div>
+
+                        <!-- microphone-off -->
+                        <div class="flex justify-center items-center w-12 h-12 bg-white/5 rounded-full cursor-pointer">
+                            <img src="https://i.ibb.co.com/zVhRMm4s/microphone-off-01.webp" alt="microphone-off-01" class="w-[1.375rem] h-[1.375rem] drop-shadow-[0px_0px_4px_0px_#000000]">
+                        </div>
+
+                        <!-- cut-call -->
+                        <div class="flex justify-center items-center w-12 h-12 bg-[#FF4405] rounded-full cursor-pointer">
+                            <img src="https://i.ibb.co.com/nshWZFfD/Communication.webp" alt="Communication" class="w-[1.375rem] h-[1.375rem]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- video-call-section -->
+            <div class="absolute right-[0.90625rem] top-3 flex justify-center items-center w-[7.5rem] h-[4.3125rem] bg-black rounded z-[1]">
+                <img src="https://i.ibb.co.com/zVx0JM7X/block-video-1.webp" alt="block-video-1" class="w-7 h-7">
+            </div>
+        </div>
+    </body>
+</html>

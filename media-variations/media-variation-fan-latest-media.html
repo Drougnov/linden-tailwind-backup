@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  }
+
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="font-sans p-2 m-0 box-border bg-white [&.dark]:bg-[#202324]">
+    <div class="flex items-start gap-2 md:gap-4">
+      <!-- media-card-container -->
+      <div
+        class="block rounded relative bg-[#f2f2f2] dark:bg-[#1f2223] w-[17.5rem] h-[9.90063rem] sm:w-[19.3125rem] sm:h-[10.938rem] md:w-[19.313rem]"
+      >
+        <div class="flex flex-col gap-2 w-full flex-grow">
+          <!-- media-card (video) -->
+          <div
+            class="relative w-full max-h-[9.901rem] sm:max-h-[unset] aspect-video after:content-[''] after:absolute after:inset-0 after:w-full after:h-full after:rounded-none after:bg-[linear-gradient(180deg,rgba(0,0,0,0.01)_-100%,rgba(0,0,0,0)_67.92%,rgba(0,0,0,0.02)_75.57%)] dark:after:bg-[linear-gradient(180deg,rgba(24,26,27,0.01)_-100%,rgba(24,26,27,0)_67.92%,rgba(24,26,27,0.02)_75.57%)] cursor-pointer"
+          >
+            <!-- bg-wrapper -->
+            <div
+              class="w-full h-full bg-cover bg-center bg-no-repeat aspect-video overflow-hidden relative"
+            >
+              <div class="w-full h-full flex justify-center items-center">
+                <video
+                  class="object-cover w-full h-full"
+                  src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                ></video>
+              </div>
+            </div>
+
+            <!-- top-tag-section -->
+            <div
+              class="flex justify-between items-center w-full absolute left-0 top-0 p-1 z-[99999]"
+            >
+              <!-- icon-tag -->
+              <div
+                class="flex justify-center items-center gap-[0.188rem] px-1 py-0.5 rounded bg-[rgba(24,34,48,0.50)] dark:bg-[rgba(31,44,63,0.50)] drop-shadow-[0_0_20px_rgba(0,0,0,0.25)]"
+              >
+                <img
+                  src="https://i.ibb.co.com/wN978Hjm/video.webp"
+                  alt="video"
+                  class="w-4 h-4"
+                />
+                <span
+                  class="text-xs text-white leading-[1rem] tracking-[0.008rem] dark:text-[#e8e6e3]"
+                  >14:55</span
+                >
+              </div>
+
+              <!-- media-stats -->
+              <div
+                class="flex items-center gap-[0.813rem] drop-shadow-[0_0_20px_rgba(0,0,0,0.25)]"
+              >
+                <span
+                  class="flex justify-center items-center gap-1 filter drop-shadow-[0_0_.313rem_#000]"
+                >
+                  <span
+                    class="text-xs leading-none whitespace-nowrap text-white tracking-[0.01875rem] dark:text-[#e8e6e3]"
+                    >5mo</span
+                  >
+                </span>
+
+                <div class="flex items-center gap-[0.813rem]">
+                  <span
+                    class="flex justify-center items-center gap-[0.188rem] filter drop-shadow-[0_0_.313rem_#000]"
+                  >
+                    <img
+                      src="https://i.ibb.co.com/7tbwzFsQ/heart.webp"
+                      alt="heart"
+                      class="w-[0.75rem] [filter:brightness(100)_saturate(0)]"
+                    />
+                    <span
+                      class="text-xs leading-normal font-medium text-white tracking-[0.008rem] dark:text-[#e8e6e3]"
+                      >0</span
+                    >
+                  </span>
+
+                  <span
+                    class="flex justify-center items-center gap-[0.1875rem] filter drop-shadow-[0_0_.313rem_#000]"
+                  >
+                    <img
+                      src="https://i.ibb.co.com/Kjv16vLZ/eye.webp"
+                      alt="eye"
+                      class="w-[0.75rem] [filter:brightness(100)_saturate(0)]"
+                    />
+                    <span
+                      class="text-xs leading-normal font-medium text-white tracking-[0.0075rem] dark:text-[#e8e6e3]"
+                      >4</span
+                    >
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- overlay-container (media-info) -->
+            <div
+              class="flex flex-col justify-end absolute bottom-0 left-0 w-full h-max overflow-hidden z-[1] gap-2 [background:linear-gradient(180deg,rgba(255,255,255,0)_50%,rgba(0,0,0,.80)_100%)] dark:[background:linear-gradient(180deg,rgba(24,26,27,0)_50%,rgba(24,26,27,0.80)_100%)]"
+            >
+              <div class="flex flex-col gap-2 p-2">
+                <h3
+                  class="text-base text-[#edeff3] dark:text-[#dfdcd7] font-medium line-clamp-1"
+                >
+                  My 2nd coming soon
+                </h3>
+                <div class="flex items-center gap-1">
+                  <div class="flex items-center relative w-5 h-5">
+                    <span
+                      class="flex justify-center items-center rounded-full relative w-5 h-5 overflow-hidden opacity-80"
+                    >
+                      <img
+                        src="https://i.ibb.co.com/jk1F8MqJ/featured-media-bg.webp"
+                        alt="avatar"
+                        class="w-full h-full object-cover"
+                      />
+                    </span>
+                  </div>
+
+                  <span
+                    class="text-xs leading-normal text-[#edeff3] dark:text-[#dfdcd7]"
+                    >Creator Allen</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- select-dropdown -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Initialize all dropdowns on the page
+          document.querySelectorAll('.media-select').forEach(orderSelect => {
+              const selectDropdown = orderSelect.closest('.select-dropdown');
+              const trigger = orderSelect.querySelector('.dash-select__trigger span');
+              const options = orderSelect.querySelectorAll('.option');
+              const realSelect = selectDropdown.querySelector('.dash-real-select');
+              const optionsContainer = orderSelect.querySelector('.dash-options-container');
+
+              // Toggle dropdown with smooth transitions
+              orderSelect.addEventListener('click', function(e) {
+                  e.stopPropagation();
+
+                  const isOpening = !optionsContainer.classList.contains('open');
+
+                  // Close all other selects first
+                  document.querySelectorAll('.media-select').forEach(s => {
+                      if (s !== orderSelect) {
+                          closeDropdown(s);
+                      }
+                  });
+
+                  if (isOpening) {
+                      // Position dropdown based on available space
+                      positionDropdown(orderSelect);
+                      openDropdown(orderSelect);
+                  } else {
+                      closeDropdown(orderSelect);
+                  }
+              });
+
+              // Handle option selection
+              options.forEach(option => {
+                  option.addEventListener('click', function(e) {
+                      e.stopPropagation();
+
+                      // Remove "selected" class from all options first
+                      options.forEach(opt => opt.classList.remove('selected'));
+
+                      // Add "selected" class to the clicked option
+                      this.classList.add('selected');
+
+                      // Close the dropdown
+                      closeDropdown(orderSelect);
+
+                      // Trigger change event on the real select
+                      if (realSelect) realSelect.dispatchEvent(new Event('change'));
+                  });
+              });
+
+              // Position dropdown up or down based on available space
+              function positionDropdown(select) {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+                  if (!optionsContainer) return;
+
+                  const rect = select.getBoundingClientRect();
+                  const spaceBelow = window.innerHeight - rect.bottom;
+                  const spaceAbove = rect.top;
+                  const optionsHeight = optionsContainer.scrollHeight;
+
+                  optionsContainer.classList.remove('upward', 'downward');
+
+                  if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                      optionsContainer.classList.add('upward');
+                      optionsContainer.style.top = 'auto';
+                      optionsContainer.style.bottom = 'calc(100% + 0.5rem)';
+                  } else {
+                      optionsContainer.classList.add('downward');
+                      optionsContainer.style.top = 'calc(100% + 0.5rem)';
+                      optionsContainer.style.bottom = 'auto';
+                  }
+              }
+
+              function openDropdown(select) {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+
+                  if (!optionsContainer) return;
+
+                  optionsContainer.classList.add('open');
+                  optionsContainer.classList.remove('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+                  optionsContainer.classList.add('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+              }
+
+              function closeDropdown(select) {
+                  const optionsContainer = select?.querySelector('.dash-options-container');
+
+                  if (!optionsContainer) return;
+
+                  optionsContainer.classList.remove('open');
+                  optionsContainer.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+                  optionsContainer.classList.add('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+              }
+
+              // Close dropdowns when clicking outside
+              document.addEventListener('click', function() {
+                  console.log("clicked")
+                  document.querySelectorAll('.media-select').forEach(select => {
+                      closeDropdown(select);
+                  });
+              });
+
+              // Reposition dropdowns on window resize
+              window.addEventListener('resize', function() {
+                  document.querySelectorAll('.media-select').forEach(select => {
+                      const optionsContainer = select.querySelector('.dash-options-container');
+                      if (optionsContainer && optionsContainer.classList.contains('open')) {
+                          positionDropdown(select);
+                      }
+                  });
+              });
+          });
+      });
+    </script>
+  </body>
+</html>

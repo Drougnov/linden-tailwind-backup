@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="max-sm:text-sm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body
+    class="bg-white font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#202324]"
+  >
+    <!-- dropdown-wrapper -->
+    <div
+      class="fixed top-0 left-0 block w-screen h-[100svh] overflow-hidden backdrop-blur-[5px] [background:linear-gradient(180deg,rgba(255,255,255,0.2)_-4.5%,rgba(255,255,255,0)_11.18%),rgba(0,0,0,0.5)] shadow-[0_0_24px_0_rgba(0,0,0,0.5)] z-[10001] md:absolute md:w-auto md:h-auto md:left-[unset] md:rounded-lg md:top-[4.5rem] md:right-4 xl:right-[2.125rem]"
+    >
+      <!-- back-button for mobile -->
+      <div
+        class="flex justify-start items-center bg-black/20 h-14 p-2 backdrop-blur-[25px] md:hidden"
+      >
+        <span class="flex justify-center items-center w-10 h-10 cursor-pointer">
+          <img
+            src="https://i.ibb.co.com/Mx1xkK2X/chevron-left-big.webp"
+            alt="chevron-left"
+            class="h-5"
+          />
+        </span>
+      </div>
+
+      <!-- dropdown-inner-wrapper -->
+      <div
+        class="flex flex-col w-full h-[calc(100svh-3.5rem)] sm:gap-4 md:w-[26.875rem] md:h-auto"
+      >
+        <!-- card-outer-wrapper -->
+        <div
+          class="w-full h-[12.875rem] min-h-[12.875rem] relative shadow-[0_0_8px_0_rgba(0,0,0,0.25)] overflow-hidden z-0 sm:w-[99%] sm:h-[22.125rem] sm:min-h-[22.125rem] sm:border-[3px] sm:border-white/50 sm:mt-[2.4rem] sm:mb-[1.2rem] sm:mx-auto sm:rounded-xl min-[636px]:w-[40.313rem] md:w-[26.875rem] md:w-[26.875rem] md:min-w-[26.875rem] md:h-[14.75rem] md:min-h-[14.75rem] md:m-0 md:border-0 md:rounded-t-lg md:rounded-b-none"
+        >
+          <!-- card-background-wrapper -->
+          <div
+            class="absolute -top-0.5 -left-0.5 flex justify-center items-center w-[calc(100%+4px)] h-[calc(100%+4px)] [background-image:url(https://i.ibb.co.com/tM26nx4Q/sample-bg-image.webp)] bg-cover bg-center bg-no-repeat z-0 pointer-events-none"
+          ></div>
+
+          <!-- card-contents-wrapper -->
+          <div class="flex flex-col w-full h-full relative z-[2]">
+            <!-- card-contents-container -->
+            <div class="flex flex-col h-full">
+              <!-- card-content__top -->
+              <div
+                class="flex flex-col w-full px-5 pt-5 sm:px-4 sm:pt-4 md:px-5 md:pt-5"
+              >
+                <div class="flex justify-between items-start gap-5">
+                  <!-- card-content__top--text-container -->
+                  <div class="flex flex-col h-9 md:h-auto">
+                    <span
+                      class="text-sm font-bold tracking-[-0.056rem] md:text-lg text-black"
+                      >OUR WEBSITE</span
+                    >
+                    <span class="text-sm font-bold md:text-base text-black"
+                      >PREMIUM</span
+                    >
+                  </div>
+
+                  <!-- card-logo-icon -->
+                  <div class="flex justify-center items-center w-9 h-9">
+                    <img
+                      src="https://i.ibb.co.com/nqKrwfwB/our-website-logo.webp"
+                      alt="our-website-logo-with-bg"
+                      class="w-full h-full [filter:brightness(0)_saturate(100)]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- card-content__bottom -->
+              <div
+                class="flex flex-col w-full px-4 py-3 gap-0.5 mt-auto sm:gap-1 md:px-5"
+              >
+                <span class="text-sm font-medium text-[#344054]">BALANCE</span>
+
+                <div class="flex justify-between items-center gap-1">
+                  <div class="flex items-center gap-1">
+                    <span
+                      class="text-2xl font-medium tracking-[-0.045rem] md:text-4xl md:leading-[2.75rem] text-black"
+                      >$</span
+                    >
+                    <span
+                      class="text-2xl font-medium tracking-[-0.045rem] md:text-4xl md:leading-[2.75rem] text-black"
+                      >30054.40</span
+                    >
+                    <img
+                      src="https://i.ibb.co.com/675rpz03/eye.webp"
+                      alt="eye"
+                      class="w-6 h-6 [filter:brightness(0)_saturate(100)]"
+                    />
+                  </div>
+
+                  <!-- credit-card-download-icon -->
+                  <div
+                    class="flex justify-center items-center w-[1.875rem] h-[1.875rem] rounded bg-[#182230]"
+                  >
+                    <img
+                      src="https://i.ibb.co.com/p6Ntxgtt/download.webp"
+                      alt="download"
+                      class="w-[1.125rem] h-[1.125rem] [filter:_brightness(0)_saturate(100%)_invert(94%)_sepia(0%)_saturate(7500%)_hue-rotate(124deg)_brightness(115%)_contrast(105%)]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- card-blur-bottom-section -->
+              <div
+                class="flex justify-center items-center gap-5 h-[max-content] mt-auto px-5 py-4 bg-black/10 backdrop-blur-[5px]"
+              >
+                <div
+                  class="flex justify-between items-start w-full h-full drop-shadow-[0_0_10px_-34px_rgba(0,0,0,0.75)]"
+                >
+                  <div class="flex flex-col">
+                    <span class="text-xs leading-normal text-white">NAME</span>
+                    <span class="text-sm leading-normal text-white"
+                      >MAX WANG</span
+                    >
+                  </div>
+
+                  <div class="flex flex-col">
+                    <div class="flex justify-end items-center gap-1">
+                      <span
+                        class="text-xs leading-normal text-right text-[#F2F4F7] md:text-white"
+                        >Last Withdrawn</span
+                      >
+                      <span
+                        class="text-xs leading-normal text-right text-[#F2F4F7] md:text-white"
+                        >11-31-2024</span
+                      >
+                    </div>
+
+                    <div class="flex">
+                      <a href="" class="flex items-center gap-0.5">
+                        <img
+                          src="https://i.ibb.co.com/WWphLLQb/history.webp"
+                          alt="history"
+                          class="w-[1.125rem] h-[1.125rem]"
+                        />
+                        <span
+                          class="text-sm leading-normal font-medium text-right underline text-[#F2F4F7] md:text-white"
+                          >TRANSCATION HISTORY</span
+                        >
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- links-container -->
+        <div
+          class="flex flex-col gap-4 pt-4 h-full backdrop-blur-[25px] shadow-[0_0_4px_0_rgba(0,0,0,0.25)] flex-grow md:pt-6"
+        >
+          <!-- links-list -->
+          <div
+            class="flex flex-col gap-2 overflow-y-auto max-h-[calc(100%-3rem)] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:overflow-y-[unset] md:max-h-[unset] md:gap-4"
+          >
+            <!-- latest-activity-button -->
+            <a
+              href=""
+              class="flex items-center bg-[#0C111D] border-t border-b border-[#FF00A6]"
+            >
+              <span class="bg-[#FF00A6] p-3 pb-4">
+                <img
+                  src="https://i.ibb.co.com/sdbps3XK/latest-activity.webp"
+                  alt="latest-activity"
+                  class="w-6 h-6"
+                />
+              </span>
+
+              <span class="flex items-center gap-2.5 flex-grow px-3 py-2.5">
+                <span
+                  class="text-lg font-semibold text-white flex-grow [text-shadow:0_0_4px_rgba(0,0,0,0.40)]"
+                  >Latest Activities</span
+                >
+
+                <span>
+                  <img
+                    src="https://i.ibb.co.com/hRx6tshS/svgviewer-png-output-5.webp"
+                    alt="svgviewer-png-output-5"
+                    class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(100%)_saturate(0%)_hue-rotate(257deg)_brightness(107%)_contrast(109%)]"
+                  />
+                </span>
+              </span>
+            </a>
+
+            <div class="flex flex-col">
+              <!-- dashboard-menu -->
+              <a
+                href="#"
+                class="flex items-center bg-[#0C111D] border-t border-b border-transparent group hover:border-[#FF00A6] hover:shadow-[0_4px_4px_0_rgba(0,0,0,0.15),0_0_40px_0_rgba(246,0,254,0.50)]"
+              >
+                <span class="p-3 bg-[#101828] group-hover:bg-[#FF00A6]">
+                  <img
+                    src="https://i.ibb.co.com/xSsgPCPV/bar-chart-07.webp"
+                    alt="bar-chart-07"
+                    class="w-6 h-6"
+                  />
+                </span>
+
+                <span class="flex items-center gap-2.5 flex-grow px-3 py-2.5">
+                  <span
+                    class="text-lg font-semibold text-white flex-grow [text-shadow:0_0_4px_rgba(0,0,0,0.40)]"
+                    >Dashboard</span
+                  >
+
+                  <span>
+                    <img
+                      src="https://i.ibb.co.com/hRx6tshS/svgviewer-png-output-5.webp"
+                      alt="svgviewer-png-output-5"
+                      class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(100%)_saturate(0%)_hue-rotate(257deg)_brightness(107%)_contrast(109%)]"
+                    />
+                  </span>
+                </span>
+              </a>
+
+              <!-- your-media-menu -->
+              <a
+                href="#"
+                class="flex items-center bg-[#0C111D] border-t border-b border-transparent group hover:border-[#FF00A6] hover:shadow-[0_4px_4px_0_rgba(0,0,0,0.15),0_0_40px_0_rgba(246,0,254,0.50)]"
+              >
+                <span class="p-3 bg-[#101828] group-hover:bg-[#FF00A6]">
+                  <img
+                    src="https://i.ibb.co.com/QFfvpjqt/image-3.webp"
+                    alt="image-3"
+                    class="w-6 h-6"
+                  />
+                </span>
+
+                <span class="flex items-center gap-2.5 flex-grow px-3 py-2.5">
+                  <span
+                    class="text-lg font-semibold text-white flex-grow [text-shadow:0_0_4px_rgba(0,0,0,0.40)]"
+                    >Your Media</span
+                  >
+
+                  <span>
+                    <img
+                      src="https://i.ibb.co.com/hRx6tshS/svgviewer-png-output-5.webp"
+                      alt="svgviewer-png-output-5"
+                      class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(100%)_saturate(0%)_hue-rotate(257deg)_brightness(107%)_contrast(109%)]"
+                    />
+                  </span>
+                </span>
+              </a>
+
+              <!-- your-subscription-menu -->
+              <a
+                href="#"
+                class="flex items-center bg-[#0C111D] border-t border-b border-transparent group hover:border-[#FF00A6] hover:shadow-[0_4px_4px_0_rgba(0,0,0,0.15),0_0_40px_0_rgba(246,0,254,0.50)]"
+              >
+                <span class="p-3 bg-[#101828] group-hover:bg-[#FF00A6]">
+                  <img
+                    src="https://i.ibb.co.com/m7p642s/logo-bg.webp"
+                    alt="logo-bg"
+                    class="w-6 h-6"
+                  />
+                </span>
+
+                <span class="flex items-center gap-2.5 flex-grow px-3 py-2.5">
+                  <span
+                    class="text-lg font-semibold text-white flex-grow [text-shadow:0_0_4px_rgba(0,0,0,0.40)]"
+                    >Your Subscriptions</span
+                  >
+
+                  <span>
+                    <img
+                      src="https://i.ibb.co.com/hRx6tshS/svgviewer-png-output-5.webp"
+                      alt="svgviewer-png-output-5"
+                      class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(100%)_saturate(0%)_hue-rotate(257deg)_brightness(107%)_contrast(109%)]"
+                    />
+                  </span>
+                </span>
+              </a>
+
+              <!-- your-orders-menu -->
+              <a
+                href="#"
+                class="flex items-center bg-[#0C111D] border-t border-b border-transparent group hover:border-[#FF00A6] hover:shadow-[0_4px_4px_0_rgba(0,0,0,0.15),0_0_40px_0_rgba(246,0,254,0.50)]"
+              >
+                <span class="p-3 bg-[#101828] group-hover:bg-[#FF00A6]">
+                  <img
+                    src="https://i.ibb.co.com/JjvP4Smp/order.webp"
+                    alt="order"
+                    class="w-6 h-6"
+                  />
+                </span>
+
+                <span class="flex items-center gap-2.5 flex-grow px-3 py-2.5">
+                  <span
+                    class="text-lg font-semibold text-white flex-grow [text-shadow:0_0_4px_rgba(0,0,0,0.40)]"
+                    >Your Orders</span
+                  >
+
+                  <span>
+                    <img
+                      src="https://i.ibb.co.com/hRx6tshS/svgviewer-png-output-5.webp"
+                      alt="svgviewer-png-output-5"
+                      class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(100%)_saturate(0%)_hue-rotate(257deg)_brightness(107%)_contrast(109%)]"
+                    />
+                  </span>
+                </span>
+              </a>
+            </div>
+
+            <div class="flex flex-col">
+              <!-- support-menu -->
+              <a
+                href="#"
+                class="flex items-center bg-[#0C111D] border-t border-b border-transparent group hover:border-[#79716b] hover:shadow-[0_4px_4px_0_rgba(0,0,0,0.15),0_0_40px_0_rgba(121,113,107,0.50)]"
+              >
+                <span class="p-3 bg-[#101828] group-hover:bg-[#79716b]">
+                  <img
+                    src="https://i.ibb.co.com/HfW4jfG9/support.webp"
+                    alt="support"
+                    class="w-6 h-6"
+                  />
+                </span>
+
+                <span class="flex items-center gap-2.5 flex-grow px-3 py-2.5">
+                  <span
+                    class="text-lg font-semibold text-white flex-grow [text-shadow:0_0_4px_rgba(0,0,0,0.40)]"
+                    >Support</span
+                  >
+
+                  <span>
+                    <img
+                      src="https://i.ibb.co.com/hRx6tshS/svgviewer-png-output-5.webp"
+                      alt="svgviewer-png-output-5"
+                      class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(100%)_saturate(0%)_hue-rotate(257deg)_brightness(107%)_contrast(109%)]"
+                    />
+                  </span>
+                </span>
+              </a>
+
+              <!-- our-website-discord-menu -->
+              <a
+                href="#"
+                class="flex items-center bg-[#0C111D] border-t border-b border-transparent group hover:border-[#79716b] hover:shadow-[0_4px_4px_0_rgba(0,0,0,0.15),0_0_40px_0_rgba(121,113,107,0.50)]"
+              >
+                <span class="p-3 bg-[#101828] group-hover:bg-[#79716b]">
+                  <img
+                    src="https://i.ibb.co.com/08fnR3R/discord.webp"
+                    alt="discord"
+                    class="w-6"
+                  />
+                </span>
+
+                <span class="flex items-center gap-2.5 flex-grow px-3 py-2.5">
+                  <span
+                    class="text-lg font-semibold text-white flex-grow [text-shadow:0_0_4px_rgba(0,0,0,0.40)]"
+                    >Our Website Discord</span
+                  >
+
+                  <span>
+                    <img
+                      src="https://i.ibb.co.com/hRx6tshS/svgviewer-png-output-5.webp"
+                      alt="svgviewer-png-output-5"
+                      class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(100%)_saturate(0%)_hue-rotate(257deg)_brightness(107%)_contrast(109%)]"
+                    />
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- mobile-fixed-bottom -->
+          <div
+            class="flex flex-col fixed bottom-0 left-0 w-full z-[999] md:static md:bottom-[unset]"
+          >
+            <button
+              class="flex items-center bg-[#0C111D] border-t border-b border-[#07F468] group hover:shadow-[0_4px_4px_0_rgba(0,0,0,0.15),0_0_40px_0_rgba(7,244,104,0.30)]"
+            >
+              <span class="p-3 bg-[#07F468]">
+                <img
+                  src="https://i.ibb.co.com/Gfb88yFY/log-out.webp"
+                  alt="log-out"
+                  class="w-6 h-6"
+                />
+              </span>
+
+              <span class="flex items-center gap-2.5 flex-grow px-3 py-2.5">
+                <span
+                  class="text-lg font-semibold text-[#07F468] flex-grow [text-shadow:0_0_4px_rgba(0,0,0,0.40)] text-left"
+                  >Logout</span
+                >
+
+                <span>
+                  <img
+                    src="https://i.ibb.co.com/hRx6tshS/svgviewer-png-output-5.webp"
+                    alt="svgviewer-png-output-5"
+                    class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(100%)_saturate(0%)_hue-rotate(257deg)_brightness(107%)_contrast(109%)]"
+                  />
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

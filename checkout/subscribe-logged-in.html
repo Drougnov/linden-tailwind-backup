@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="max-sm:text-sm">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    />
+    <title>
+      Dash Analytics Components
+    </title>
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            screens: {
+              sm: '480px',
+              md: '768px',
+              lg: '1010px',
+              xl: '1365px',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  
+  <body class="bg-[#272727] font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#202324]">
+    <!-- popup-wrapper -->
+    <div class="flex flex-col w-screen h-screen bg-white/10 backdrop-blur-[100px] drop-shadow-[0_4px_6px_-2px_#10182808,0_12px_16px_-4px_#10182814] md:flex-row overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:overflow-y-[unset]">
+        <!-- close-button (desktop) -->
+        <div class="hidden absolute -right-6 -top-6 justify-center items-center w-12 h-12 bg-white/10 backdrop-blur-[20px] rounded-full cursor-pointer z-[99] sm:flex">
+            <img src="https://i.ibb.co.com/bMbk5v87/x-close.webp" alt="close" class="w-8 h-8 drop-shadow-[0_0_8px_0_#00000080]">
+        </div>
+
+        <!-- image-container -->
+        <div class="flex flex-col justify-between w-screen aspect-[1.586/1] [background-image:url('https://i.ibb.co.com/svVRgMrk/buy-now-header-bg.webp')] bg-cover bg-center relative before:absolute before:inset-0 before:content-[''] before:bg-[linear-gradient(180deg,rgba(0,0,0,0)_60%,rgba(0,0,0,0.45)_100%)] before:z-[1] md:aspect-[unset] md:w-1/2 md:h-screen sm:justify-end md:before:bg-[linear-gradient(180deg,rgba(0,0,0,0)_50%,rgba(0,0,0,0.5)_100%)]">
+            <!-- back-button -->
+            <div class="flex justify-between gap-1 px-2 py-1 mb-auto sm:p-4 md:[background:linear-gradient(180deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0)_100%)] z-[2]">
+                <div class="w-10 h-10 flex justify-center items-center cursor-pointer sm:hidden">
+                    <img src="https://i.ibb.co.com/Gvkq58F5/chevron-left.webp" alt="chevron-left" class="w-6 h-6">
+                </div>
+
+                <div class="w-10 h-10 flex justify-center items-center cursor-pointer md:opacity-70">
+                    <img src="https://i.ibb.co.com/wrwKGMtw/volume-x.webp" alt="volume-x" class="w-6 h-6 md:w-8 md:h-8">
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2 p-2 drop-shadow-[0_0_8px_0_#00000080] z-[2] sm:gap-4 sm:p-4">
+                <div class="flex flex-col gap-1">
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-1">
+                            <h3 class="text-sm font-medium text-[#FCFAFF] md:drop-shadow-[0_0_8px_0_#00000080]">Princess Carrot Pop</h3>
+                            <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="w-2.5 h-2.5">
+                        </div>
+
+                        <span class="text-xs leading-normal font-medium text-[#FCFCFD] md:drop-shadow-[0_0_8px_0_#00000080]">@sammisjelly187</span>
+                    </div>
+                </div>
+
+                <p class="text-lg font-medium text-white md:drop-shadow-[0_0_8px_0_#00000080]">Subscribe now to instantly unlock 300+ premium media resources.</p>
+            </div>
+        </div>
+
+        <!-- form-container -->
+        <div class="w-screen flex flex-col gap-6 px-2 pt-4 pb-6 md:overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:px-4 sm:py-6 md:w-1/2 md:h-screen md:bg-black/50">
+            <!-- form-section -->
+            <div class="flex flex-col gap-6">
+                <!-- email-account-section -->
+                <div class="flex flex-col gap-2">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center border-b border-transparent">
+                    <!-- section-title -->
+                    <div class="flex items-center gap-2">
+                        <div class="flex justify-center items-center w-5 h-5">
+                        <img src="https://i.ibb.co.com/LX2mCL2d/Communication.webp" alt="envelope"
+                        class="w-5 h-5" />
+                        </div>
+                        <h3 class="text-base font-semibold text-[#F9FAFB] align-middle">
+                        ACCOUNT EMAIL
+                        </h3>
+                    </div>
+                    </div>
+                    <!-- email-container -->
+                    <div class="flex justify-between items-end">
+                    <!-- model-info -->
+                    <div class="flex items-center gap-2 py-1">
+                        <!-- avatar -->
+                        <div class="flex justify-center items-center w-10 h-9">
+                        <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar"
+                        class="h-full object-cover" />
+                        </div>
+                        <!-- info -->
+                        <div class="flex flex-col">
+                        <h3 class="text-xs leading-normal font-semibold text-white">
+                            Man goes 4eva
+                        </h3>
+                        <span class="text-xs leading-normal font-medium text-[#98A2B3]">
+                            existingmember@gmail.com
+                        </span>
+                        </div>
+                    </div>
+                    <!-- log-out-button -->
+                    <button class="flex items-center gap-0.5 bg-transparent border-none outline-none cursor-pointer">
+                        <img src="https://i.ibb.co.com/Gfb88yFY/log-out.webp" alt="log-out" class="w-4 h-4 [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(4%)_saturate(1168%)_hue-rotate(179deg)_brightness(98%)_contrast(82%)]"
+                        />
+                        <span class="text-xs leading-normal font-medium text-[#98A2B3]">
+                        Log out
+                        </span>
+                    </button>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col gap-6">
+                    <!-- subscription-section -->
+                    <div class="flex flex-col gap-4 md:order-2">
+                        <!-- title-container -->
+                        <div class="flex justify-between items-center border-b border-transparent">
+                            <!-- section-title -->
+                            <div class="flex items-center gap-2">
+                                <div class="flex justify-center items-center w-5 h-5">
+                                    <img src="https://i.ibb.co.com/gZsWNR4Q/our-website-full-white-logo.webp" alt="logo" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]">
+                                </div>
+                                <h3 class="text-base font-semibold text-[#F9FAFB] align-middle">SUBSCRIPTION</h3>
+                            </div>
+                        </div>
+
+                        <!-- new-subscription-wrapper -->
+                        <div class="flex flex-col gap-4">
+                            <div class="flex flex-col gap-2">
+                                <h4 class="text-xs leading-normal font-medium text-[#98A2B3]">New Subscribtion</h4>
+
+                                <!-- subscription-container -->
+                                <div class="flex w-full h-[4.9375rem] [box-shadow:4px_4px_0_0_#FFCC01,4px_4px_4px_0_#00000026] bg-[url('https://i.ibb.co.com/Y7FnqKqK/new-subscription-main-bg.webp')] bg-center bg-cover">
+                                    <!-- image-container -->
+                                    <div class="w-32 min-w-[8rem] relative">
+                                        <img src="https://i.ibb.co.com/zW50CqtW/new-subscription-bg.webp" alt="" class="w-full h-full object-cover">
+
+                                        <!-- logo-container -->
+                                        <div class="w-8 h-8 flex justify-center items-center absolute top-0 left-0 z-[1]">
+                                            <img src="https://i.ibb.co.com/PvS68T8W/logo-no-bg.webp" alt="logo" class="w-full h-full">
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[calc(100%+1.5rem)] h-full flex-grow pl-6 -ml-6 [clip-path:polygon(24px_0,100%_0,100%_100%,0_100%)] [background:linear-gradient(0deg,rgba(0,0,0,0.35),rgba(0,0,0,0.35)),linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.4)_100%),linear-gradient(0deg,rgba(255,204,1,0.1),rgba(255,204,1,0.1))] relative z-[2] backdrop-blur-[100px]">
+                                        <div class="flex flex-col gap-1 p-2">
+                                            <h3 class="text-sm font-semibold line-clamp-2 text-white drop-shadow-[0px_0px_4px_0px_#00000066]">FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.</h3>
+                                            <h4 class="h-[1.1875rem] flex justify-start items-center text-lg font-semibold font-semibold text-white drop-shadow-[0px_0px_4px_0px_#00000066]">USD$499.99<span class="text-sm font-medium text-white drop-shadow-[0px_0px_4px_0px_#00000066]">/mo</span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="text-xs leading-normal text-[#FFCC01]">Your membership will update in your next billing cycle (xx-xx-xxxx)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- payment-method-section -->
+                    <div class="flex flex-col gap-4 md:order-1">
+                        <!-- title-container -->
+                        <div class="flex justify-between items-center border-b border-transparent">
+                            <!-- section-title -->
+                            <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/m5nstLw2/svgviewer-png-output-30.png" alt="credit-card"
+                                class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]"
+                                />
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] align-middle">
+                                PAYMENT METHOD
+                            </h3>
+                            </div>
+                            <!-- arrow-container -->
+                            <div class="flex items-center gap-2.5">
+                            <span class="text-sm font-medium text-[#EAECF0]">
+                                Change Card
+                            </span>
+                            <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                                <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down"
+                                />
+                            </div>
+                            </div>
+                        </div>
+                        <!-- form-container -->
+                        <div class="flex items-center gap-6 bg-black/25 rounded-md px-4 py-2 border border-[#EAECF080]">
+                            <div class="flex justify-between items-center gap-2 py-2 w-full">
+                            <div class="flex items-center gap-2 flex-grow">
+                                <div class="flex items-center gap-2 flex-grow">
+                                <span class="text-base font-medium truncate whitespace-nowrap text-white flex-grow">
+                                    Jane Carter
+                                </span>
+                                <span class="text-base font-medium whitespace-nowrap text-white flex-grow">
+                                    ****3746
+                                </span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                <span class="text-xs leading-normal whitespace-nowrap text-white">
+                                    EXP 02/30
+                                </span>
+                                <img src="https://i.ibb.co.com/pr2VM4zR/svgviewer-png-output-32.png" alt="visa-logo"
+                                class="h-3" />
+                                </div>
+                            </div>
+                            <img src="https://i.ibb.co.com/3YVrnBJz/trash-bin.webp" alt="delete" class="w-[1.125rem] [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(2%)_saturate(335%)_hue-rotate(184deg)_brightness(97%)_contrast(95%)] cursor-pointer"
+                            />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- notes-section -->
+                    <div class="flex flex-col gap-6 md:order-3">
+                    <div class="flex flex-col gap-4">
+                        <!-- title-container -->
+                        <div class="flex justify-between items-center border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                            <img src="https://i.ibb.co.com/rRp5t6qr/Finance-e-Commerce.webp" alt="coins"
+                            class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]"
+                            />
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] align-middle">
+                            Notes
+                            <span class="text-xs font-normal leading-normal italic text-[#98A2B3]">
+                                Optional
+                            </span>
+                            </h3>
+                        </div>
+                        </div>
+                        <!-- text-area-section -->
+                        <div class="flex flex-col gap-2">
+                        <!-- text-area-wrapper -->
+                        <div class="relative h-[6.25rem]">
+                            <textarea name="" id="" class="w-full p-2 bg-white/10 border-b border-[#EAECF0] min-h-[6.25rem] text-base text-[#F9FAFB] placeholder:text-base placeholder:text-[#F9FAFB]/50 placeholder:font-sans peer focus:outline-none">
+                            </textarea>
+                            <div class="absolute top-2 left-2 flex justify-start items-start gap-2.5 min-h-[3.125rem] w-[calc(100%-1rem)] pointer-events-none peer-focus:hidden">
+                            <div class="w-6 h-6">
+                                <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar"
+                                />
+                            </div>
+                            <span class="text-base text-[#98A2B3]">
+                                Enter notes to @jenny1234....
+                            </span>
+                            </div>
+                            <div class="absolute bottom-2 right-2 flex items-center gap-2.5 min-h-[1.5rem] pointer-events-none peer-focus:hidden">
+                            <span class="text-xs leading-loose text-right tracking-[0.0075rem] opacity-70 text-[#F9FAFB]">
+                                300 Characters Left
+                            </span>
+                            <div class="flex justify-center items-center cursor-pointer">
+                                <img src="https://i.ibb.co.com/G3rtn7Sj/face-smile.webp" alt="face-smile"
+                                class="w-5 h-5" />
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- total-section (mobile) -->
+            <div class="flex gap-6 mt-auto">
+                <div class="flex flex-col gap-4 w-full">
+                    <p class="text-sm leading-normal tracking-[0.0175rem] text-[#98A2B3] hidden md:inline">You will be charged new subscription fee of <span class="text-sm leading-normal tracking-[0.0175rem] text-[#07F468]">$499.99</span> starting XX-XX-XXXX .You’ll pay <span class="text-sm leading-normal tracking-[0.0175rem] text-[#07F468]">$499.99</span> monthly on th 18th. This subscription will renew monthly, you can cancel anytime in your account. </p>
+
+                    <div class="flex gap-4 pt-2 border-t border-[#DEE5EC] w-full">
+                        <div class="flex gap-4 border-t border-transparent w-full">
+                            <div class="flex justify-between items-end gap-1 w-full">
+                                <h3 class="text-base font-semibold flex-grow text-[#F9FAFB]">
+                                    Total
+                                </h3>
+                                <h2 class="text-2xl font-semibold align-middle text-[#07F468]">
+                                    USD$6.99
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- checkbox-container -->
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-start gap-2">
+                            <input type="checkbox" name="terms-condition" id="terms-condition" class="appearance-none dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 mt-0.5 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer"
+                            />
+                            <label for="terms-condition" class="text-sm leading-normal tracking-[0.0175rem] text-[#98A2B3] cursor-pointer">
+                            I agree to Fansocial's
+                            <span class="text-sm leading-normal font-medium tracking-[0.0175rem] text-[#07F468] cursor-pointer">
+                                Terms and Condition
+                            </span>
+                            and
+                            <span class="text-sm leading-normal font-medium tracking-[0.0075rem] text-[#07F468] cursor-pointer">
+                                Privacy Policy
+                            </span>
+                            .
+                            </label>
+                        </div>
+                    </div>
+                    <!-- button -->
+                    <div class="w-full h-12">
+                        <button class="flex justify-center items-center gap-2 w-full h-12 border-t-[1.5px] border-b-[1.5px] border-transparent bg-[#07F468] px-4 [clip-path:polygon(24px_0,100%_0,calc(100%_-_24px)_100%,0_100%)] cursor-pointer group/button hover:bg-black">
+                            <span class="text-base leading-[1.875rem] font-semibold uppercase text-black group-hover/button:text-[#07F468]">
+                            Proceed Payment
+                            </span>
+                            <img src="https://i.ibb.co.com/NdmC2BjP/arrow-right.webp" alt="arrow-right"
+                            class="w-6 h-6 [filter:brightness(0)_saturate(100%)] group-hover/button:[filter:brightness(0)_saturate(100%)_invert(67%)_sepia(19%)_saturate(5664%)_hue-rotate(95deg)_brightness(112%)_contrast(94%)]"
+                            />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+
+</html>

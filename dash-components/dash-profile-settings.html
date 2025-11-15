@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="max-sm:text-sm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+                  colors: {
+                      // Light mode colors
+                      light: {
+                          text: {
+                              quaternary: '#667085',
+                          },
+                          bg: {
+                              section: 'hsla(0, 0%, 100%, 0.4)',
+                          },
+                      },
+                      // Dark mode colors
+                      dark: {
+                          text: {
+                              quaternary: '#9e9589',
+                          },
+                          bg: {
+                              section: 'rgba(24, 26, 27, 0.4)',
+                          },
+                      },
+                  }
+              },
+          },
+      }
+    </script>
+  </head>
+  <body
+    class="bg-white font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#202324]"
+  >
+    <!-- main-wrapper -->
+    <div class="flex flex-col md:flex-row">
+      <!-- dashboard-template-main -->
+      <div
+        class="w-full [height:calc(100vw-3rem)] relative z-[2] bg-transparent md:h-auto before:content-[''] before:fixed before:bg-[url('https://i.ibb.co.com/dw910Z5b/gradient-main-bg.webp')] before:bg-cover before:w-full before:bg-no-repeat before:h-full before:left-0 before:top-0 before:pointer-events-none"
+      >
+        <!-- dashboard-template-content -->
+        <div class="flex flex-col h-full">
+          <!-- container-wrapper -->
+          <div
+            class="flex flex-col w-full h-full bg-gradient-to-b from-[rgba(255,255,255,0.3)] dark:from-[rgba(24,26,27,0.3)] from-0% to-[rgba(255,255,255,0)] to-8% to:from-[rgba(24,26,27,0)]"
+          >
+            <!-- main-section -->
+            <div class="flex flex-col relative flex-grow">
+              <!-- inner-wrapper -->
+              <div class="flex flex-col h-full">
+                <!-- account-settings-wrapper -->
+                <div
+                  class="flex flex-col justify-start items-end w-full h-[calc(5.12px * 100 - 3rem)] max-w-full border border-white/50 [background:linear-gradient(180deg,rgba(255,255,255,0.50)_0%,rgba(255,255,255,0.00)_50%,rgba(255,255,255,0.50)_100%),rgba(255,255,255,0.01)] flex-1 overflow-y-auto lg:mt-6 lg:max-w-[26.6875rem] dark:border-[#30343680] dark:[[background:linear-gradient(180deg,rgba(24,26,27,0.50)_0%,rgba(24,26,27,0.00)_50%,rgba(24,26,27,0.50)_100%),rgba(24,26,27,0.01)]]"
+                >
+                  <!-- user-info -->
+                  <div
+                    class="flex flex-col justify-center items-center self-stretch gap-4 border-b border-white px-2 py-4 md:px-4 md:pt-10 md:pb-6 xl:p-6 dark:border-[#303436]"
+                  >
+                    <!-- avatar -->
+                    <div class="relative rounded-full w-[7.5rem] h-[7.5rem]">
+                      <div
+                        class="absolute top-0 left-0 w-[7.5rem] h-[7.5rem] border border-black rounded-full opacity-[0.08] dark:border-[#363b3d]"
+                      ></div>
+
+                      <div class="w-full h-full relative overflow-hidden">
+                        <img
+                          src="https://i.ibb.co.com/cKFHZbnm/placeholder-headshot-creator-trans-bg.webp"
+                          alt="placeholder-headshot-creator-trans-bg"
+                          class="w-full h-full object-cover rounded-full"
+                        />
+                      </div>
+
+                      <div
+                        class="absolute block rounded-full w-4 h-4 top-[7.125rem] left-[7.125rem] bg-[#07F468] dark:bg-[#06c353]"
+                      ></div>
+                    </div>
+
+                    <!-- user-details -->
+                    <div
+                      class="flex flex-col justify-center items-center gap-1 self-stretch text-center"
+                    >
+                      <div
+                        class="text-xl leading-normal font-semibold text-[#0c111d] dark:text-[#dbd8d3]"
+                      >
+                        lindenMay
+                      </div>
+                      <div class="text-base text-[#0c111d] dark:text-[#dbd8d3]">
+                        @linden
+                      </div>
+                      <div
+                        class="text-sm text-center self-stretch text-[#344054] dark:text-[#bdb7af]"
+                      >
+                        developer@contactlinden.com
+                      </div>
+                    </div>
+
+                    <!-- edit-profile-button -->
+                    <div class="inline-flex justify-start items-center gap-0.5">
+                      <a
+                        href="#"
+                        class="inline-flex justify-start items-center gap-0.5"
+                      >
+                        <div
+                          class="text-xs leading-normal font-medium text-[#155eef] dark:text-[#2b8cf1]"
+                        >
+                          Edit Profile
+                        </div>
+                        <div class="w-4 h-4 relative">
+                          <img
+                            src="https://i.ibb.co.com/hRx6tshS/svgviewer-png-output-5.webp"
+                            alt="svgviewer-png-output-5"
+                            class="w-4 h-4"
+                          />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Others Accout Pages Link -->
+                  <div
+                    class="flex flex-col justify-start items-start gap-4 self-stretch h-full px-2 py-4 md:gap-6 md:px-4 md:pt-10 md:pb-6 xl:p-6"
+                  >
+                    <!-- General Pages Link -->
+                    <div
+                      class="flex flex-col justify-start items-start self-stretch gap-1 md:gap-2"
+                    >
+                      <div
+                        class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]"
+                      >
+                        GENERAL
+                      </div>
+                      <!-- Link Item -->
+                      <div
+                        class="inline-flex justify-start items-center gap-2.5 self-stretch py-1 cursor-pointer group active"
+                      >
+                        <div
+                          class="text-base font-medium flex-grow text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                        >
+                          Account Information
+                        </div>
+
+                        <div class="w-6 h-6 relative">
+                          <img
+                            src="https://i.ibb.co.com/YTFLKydW/svgviewer-png-output-6.webp"
+                            alt="svgviewer-png-output-6"
+                            class="w-6 h-6 lg:group-[.active]:[filter:brightness(0)_saturate(100%)_invert(24%)_sepia(88%)_saturate(7497%)_hue-rotate(220deg)_brightness(96%)_contrast(101%)] group-[.disabled]:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Link Item -->
+                      <div
+                        class="inline-flex justify-start items-center gap-2.5 self-stretch py-1 cursor-pointer group"
+                      >
+                        <div
+                          class="text-base font-medium flex-grow text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                        >
+                          Change Password
+                        </div>
+
+                        <div class="w-6 h-6 relative">
+                          <img
+                            src="https://i.ibb.co.com/YTFLKydW/svgviewer-png-output-6.webp"
+                            alt="svgviewer-png-output-6"
+                            class="w-6 h-6 lg:group-[.active]:[filter:brightness(0)_saturate(100%)_invert(24%)_sepia(88%)_saturate(7497%)_hue-rotate(220deg)_brightness(96%)_contrast(101%)] group-[.disabled]:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Link Item -->
+                      <div
+                        class="inline-flex justify-start items-center gap-2.5 self-stretch py-1 cursor-pointer group disabled [&.disabled]:pointer-events-none"
+                      >
+                        <div
+                          class="text-base font-medium flex-grow text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                        >
+                          Privacy & Security
+                          <span
+                            class="text-sm text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                          >
+                            (Coming Soon)</span
+                          >
+                        </div>
+
+                        <div class="w-6 h-6 relative">
+                          <img
+                            src="https://i.ibb.co.com/YTFLKydW/svgviewer-png-output-6.webp"
+                            alt="svgviewer-png-output-6"
+                            class="w-6 h-6 lg:group-[.active]:[filter:brightness(0)_saturate(100%)_invert(24%)_sepia(88%)_saturate(7497%)_hue-rotate(220deg)_brightness(96%)_contrast(101%)] group-[.disabled]:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Call / Live stream Pages Link -->
+                    <div
+                      class="flex flex-col justify-start items-start self-stretch gap-1 md:gap-2"
+                    >
+                      <div
+                        class="text-xs leading-normal font-medium text-[#667085]"
+                      >
+                        CALL & LIVE STREAM SETTINGS
+                      </div>
+                      <!-- Link Item -->
+                      <div
+                        class="inline-flex justify-start items-center gap-2.5 self-stretch py-1 cursor-pointer group disabled [&.disabled]:pointer-events-none"
+                      >
+                        <div
+                          class="text-base font-medium flex-grow text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                        >
+                          Live Stream Settings
+                          <span
+                            class="text-sm text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                          >
+                            (Coming Soon)</span
+                          >
+                        </div>
+
+                        <div class="w-6 h-6 relative">
+                          <img
+                            src="https://i.ibb.co.com/YTFLKydW/svgviewer-png-output-6.webp"
+                            alt="svgviewer-png-output-6"
+                            class="w-6 h-6 lg:group-[.active]:[filter:brightness(0)_saturate(100%)_invert(24%)_sepia(88%)_saturate(7497%)_hue-rotate(220deg)_brightness(96%)_contrast(101%)] group-[.disabled]:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Link Item -->
+                      <div
+                        class="inline-flex justify-start items-center gap-2.5 self-stretch py-1 cursor-pointer group disabled [&.disabled]:pointer-events-none"
+                      >
+                        <div
+                          class="text-base font-medium flex-grow text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                        >
+                          Call Settings
+                          <span
+                            class="text-sm text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                          >
+                            (Coming Soon)</span
+                          >
+                        </div>
+
+                        <div class="w-6 h-6 relative">
+                          <img
+                            src="https://i.ibb.co.com/YTFLKydW/svgviewer-png-output-6.webp"
+                            alt="svgviewer-png-output-6"
+                            class="w-6 h-6 lg:group-[.active]:[filter:brightness(0)_saturate(100%)_invert(24%)_sepia(88%)_saturate(7497%)_hue-rotate(220deg)_brightness(96%)_contrast(101%)] group-[.disabled]:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Transactions Page Link -->
+                    <div
+                      class="flex flex-col justify-start items-start self-stretch gap-1 md:gap-2"
+                    >
+                      <div
+                        class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]"
+                      >
+                        TRANSACTION
+                      </div>
+                      <!-- Link Item -->
+                      <div
+                        class="inline-flex justify-start items-center gap-2.5 self-stretch py-1 cursor-pointer group"
+                      >
+                        <div
+                          class="text-base font-medium flex-grow text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                        >
+                          Shipping Address
+                        </div>
+
+                        <div class="w-6 h-6 relative">
+                          <img
+                            src="https://i.ibb.co.com/YTFLKydW/svgviewer-png-output-6.webp"
+                            alt="svgviewer-png-output-6"
+                            class="w-6 h-6 lg:group-[.active]:[filter:brightness(0)_saturate(100%)_invert(24%)_sepia(88%)_saturate(7497%)_hue-rotate(220deg)_brightness(96%)_contrast(101%)] group-[.disabled]:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Link Item -->
+                      <div
+                        class="inline-flex justify-start items-center gap-2.5 self-stretch py-1 cursor-pointer group"
+                      >
+                        <div
+                          class="text-base font-medium flex-grow text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                        >
+                          Payout Details
+                        </div>
+
+                        <div class="w-6 h-6 relative">
+                          <img
+                            src="https://i.ibb.co.com/YTFLKydW/svgviewer-png-output-6.webp"
+                            alt="svgviewer-png-output-6"
+                            class="w-6 h-6 lg:group-[.active]:[filter:brightness(0)_saturate(100%)_invert(24%)_sepia(88%)_saturate(7497%)_hue-rotate(220deg)_brightness(96%)_contrast(101%)] group-[.disabled]:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Social Media and Sharing Pages Link -->
+                    <div
+                      class="flex flex-col justify-start items-start self-stretch gap-1 md:gap-2"
+                    >
+                      <div
+                        class="text-xs leading-normal font-medium text-[#667085]"
+                      >
+                        SOCIAL MEDIA AND SHARING
+                      </div>
+                      <!-- Link Item -->
+                      <div
+                        class="inline-flex justify-start items-center gap-2.5 self-stretch py-1 cursor-pointer group disabled [&.disabled]:pointer-events-none"
+                      >
+                        <div
+                          class="text-base font-medium flex-grow text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                        >
+                          Newsletter & Email Settings
+                          <span
+                            class="text-sm text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                          >
+                            (Coming Soon)</span
+                          >
+                        </div>
+
+                        <div class="w-6 h-6 relative">
+                          <img
+                            src="https://i.ibb.co.com/YTFLKydW/svgviewer-png-output-6.webp"
+                            alt="svgviewer-png-output-6"
+                            class="w-6 h-6 lg:group-[.active]:[filter:brightness(0)_saturate(100%)_invert(24%)_sepia(88%)_saturate(7497%)_hue-rotate(220deg)_brightness(96%)_contrast(101%)] group-[.disabled]:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Link Item -->
+                      <div
+                        class="inline-flex justify-start items-center gap-2.5 self-stretch py-1 cursor-pointer group disabled [&.disabled]:pointer-events-none"
+                      >
+                        <div
+                          class="text-base font-medium flex-grow text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                        >
+                          X Repost Automation
+                          <span
+                            class="text-sm text-[#0c111d] group-[.active]:text-black lg:group-[.active]:text-[#004eeb] group-[.disabled]:text-[#667085] dark:text-[#dbd8d3] dark:group-[.active]:text-[#e8e6e3] dark:lg:group-[.active]:text-[#3f9dff] dark:group-[.disabled]:text-[#9e9589]"
+                          >
+                            (Coming Soon)</span
+                          >
+                        </div>
+
+                        <div class="w-6 h-6 relative">
+                          <img
+                            src="https://i.ibb.co.com/YTFLKydW/svgviewer-png-output-6.webp"
+                            alt="svgviewer-png-output-6"
+                            class="w-6 h-6 lg:group-[.active]:[filter:brightness(0)_saturate(100%)_invert(24%)_sepia(88%)_saturate(7497%)_hue-rotate(220deg)_brightness(96%)_contrast(101%)] group-[.disabled]:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

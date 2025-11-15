@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Include stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+          extend: {
+              fontFamily: {
+              sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+              },
+              colors: {
+                  // Light mode colors
+                  primary: {
+                      DEFAULT: '#2563eb',
+                      light: '#3b82f6',
+                      dark: '#1d4ed8'
+                  },
+                  error: {
+                      DEFAULT: '#dc2626',
+                      light: '#ef4444',
+                      dark: '#b91c1c'
+                  },
+                  success: {
+                      DEFAULT: '#16a34a',
+                      light: '#22c55e',
+                      dark: '#15803d'
+                  },
+                  text: {
+                      DEFAULT: '#334155',
+                      light: '#64748b',
+                      dark: '#1e293b',
+                      dash: '#667085',
+                      dashDark: '#101828'
+                  },
+                  border: {
+                      DEFAULT: '#cbd5e1',
+                      light: '#e2e8f0',
+                      dark: '#94a3b8',
+                      dash: '#D0D5DD'
+                  },
+
+                  // Dashboard specific colors (light mode)
+                  dash: {
+                      text: '#667085',
+                      border: '#D0D5DD',
+                      warning: '#ff4405',
+                      warningLight: '#FF7C1E',
+                      success: '#07f468',
+                      successLight: '#39FF14',
+                      published: '#D1E0FF',
+                      draft: '#FFFFFF',
+                      tab: {
+                          active: '#000',
+                          inactive: '#F06',
+                          bg: 'rgba(251,91,162,0.15)'
+                      },
+                      bg: {
+                          light: 'rgba(255,255,255,0.5)',
+                          lighter: 'rgba(255,255,255,0.3)',
+                          warning: 'rgba(255,68,5,0.1)'
+                      }
+                  },
+
+                  // Dark mode colors
+                  dark: {
+                      primary: '#3b82f6',
+                      error: '#f87171',
+                      success: '#4ade80',
+                      text: '#e2e8f0',
+                      border: '#4b5563',
+                      bg: '#1a202c',
+                      surface: '#2d3748',
+
+                      // Dashboard colors (dark mode)
+                      dash: {
+                          text: '#a0aec0',
+                          border: '#4a5568',
+                          warning: '#ff693e',
+                          warningLight: '#ff8c5a',
+                          success: '#0aff78',
+                          successLight: '#4dff9d',
+                          published: '#2c5282',
+                          draft: '#4a5568',
+                          tab: {
+                              active: '#ffffff',
+                              inactive: '#f687b3',
+                              bg: 'rgba(251,91,162,0.08)'
+                          },
+                          bg: {
+                              light: 'rgba(26,32,44,0.5)',
+                              lighter: 'rgba(26,32,44,0.3)',
+                              warning: 'rgba(201,51,0,0.1)'
+                          }
+                      }
+                  },
+
+                  // Additional colors from your new components
+                  'dash-text': '#0c111d',
+                  'dash-success': '#07f468',
+                  'dash-purple': '#4d20ff',
+                  'dash-pink': '#fb5ba2',
+                  'dash-blue': '#22CCEE',
+                  'dash-yellow': '#fdb022',
+                  'dash-orange': '#ff4405',
+                  'dash-gray': {
+                      50: '#F9FAFB',
+                      100: '#F2F4F7',
+                      200: '#EAECF0',
+                      300: '#D0D5DD',
+                      400: '#98A2B3',
+                      500: '#667085',
+                      600: '#475467',
+                      700: '#344054',
+                      800: '#1D2939',
+                      900: '#101828'
+                  },
+                  'dash-dark': '#0c111d',
+                  'dash-light': '#f9fafb',
+                  'dash-toast-notice': '#22CCEE',
+                  'dash-toast-alert': '#FDB022',
+                  'dash-toast-error': '#FF4405'
+              },
+              borderRadius: {
+                  'input': '4px',
+                  // Dash border radii
+                  'dash-input': '0.125rem',
+                  'dash-tag': '3.125rem',
+                  'dash-toggle': '0.75rem',
+                  'dash-dropdown': '0.5rem',
+                  'dash-tab': '3rem',
+                  'dash-card': '0.125rem',
+                  'dash-button': '0.313rem'
+              },
+              boxShadow: {
+                  'input': '0 0 0 3px rgba(37, 99, 235, 0.2)',
+                  // Dash shadows
+                  'dash-input': '0px 1px 2px 0px #1018280D',
+                  'dash-toggle': '0 1px 3px 0 rgba(16, 24, 40, 0.1), 0 1px 2px 0 rgba(16, 24, 40, 0.06)',
+                  'dash-tab': '0 1px 2px 0 rgba(16, 24, 40, 0.05)',
+                  'dash-dropdown': '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                  'dash-toast': '0 4px 8px -2px rgba(16, 24, 40, 0.1), 0 2px 4px -2px rgba(16, 24, 40, 0.06)',
+                  'dash-tooltip': '0 4px 8px -2px rgba(16, 24, 40, 0.1), 0 2px 4px -2px rgba(16, 24, 40, 0.06)',
+                  'dash-button': '4px 4px 0 0 #000',
+                  'dash-popup': '0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)',
+                  // Dark mode shadows
+                  'dark-input': '0 0 0 3px rgba(59, 130, 246, 0.3)',
+                  'dark-dash-input': '0px 1px 2px 0px rgba(0, 0, 0, 0.25)'
+              },
+              keyframes: {
+              'tooltips-vert': {
+                  'to': {
+                  opacity: '0.9',
+                  transform: 'translate(-50%, 0)'
+                  }
+              },
+              'tooltips-horz': {
+                  'to': {
+                  opacity: '0.9',
+                  transform: 'translate(0, -50%)'
+                  }
+              }
+              },
+              animation: {
+              'tooltips-vert': 'tooltips-vert 300ms ease-out forwards',
+              'tooltips-horz': 'tooltips-horz 300ms ease-out forwards'
+              }
+          }
+          }
+      }
+    </script>
+    <style>
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-family: Poppins, Inter, Montserrat, Open Sans, arial, sans-serif;
+      }
+      body,
+      input::placeholder{
+          font-family: Poppins, Inter, Montserrat, Open Sans, arial, sans-serif;
+      }
+      /* Hide number input arrows */
+      input[type=number]::-webkit-outer-spin-button,
+      input[type=number]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+      input[type=number] {
+          -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans bg-[#EAECF0] text-text [&.dark]:bg-black relative z-[2] before:content-[''] before:fixed before:bg-[url('https://i.ibb.co.com/dw910Z5b/gradient-main-bg.webp')] before:bg-cover before:w-full before:bg-no-repeat before:h-full before:left-0 before:top-0 before:pointer-events-none"
+  >
+    <!-- Dashboard Components Section -->
+    <section
+      class="flex flex-col gap-6 bg-white/50 filter backdrop-blur-[50px] p-2 md:p-5 dark:bg-black/50"
+    >
+      <h1 class="text-2xl font-semibold dark:text-white">
+        Form components with Dashboard Style
+      </h1>
+
+      <div class="flex flex-col gap-6 w-[28.25rem]">
+        <!-- event-title-input -->
+        <div class="flex w-full">
+          <!-- input-field -->
+          <div class="flex items-center gap-[0.375rem] z-[2] flex-1">
+            <div class="flex items-center gap-[0.375rem] w-full">
+              <input
+                type="text"
+                class="w-full h-11 flex gap-2 bg-white/30 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b4d] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm px-[0.875rem] py-[0.625rem] outline-none text-[#101828] dark:text-[#d6d3cd] text-base placeholder:text-[#667085] dark:placeholder:text-[#9e9689] placeholder:text-base placeholder:font-normal"
+                placeholder="Event Title"
+              />
+            </div>
+          </div>
+
+          <!-- dropdown-wrapper -->
+          <div class="h-11 flex items-center gap-[0.375rem] z-[1]">
+            <!-- dropdown-container -->
+            <div class="flex items-center gap-[0.375rem]">
+              <div
+                class="h-11 flex items-center bg-white/50 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm outline-none cursor-pointer"
+              >
+                <!-- drodpown-trigger -->
+                <div
+                  class="flex gap-2 p-2 border-b border-transparent rounded-l-lg"
+                >
+                  <div
+                    class="w-4 h-4 rounded-full bg-[#FF0464] dark:bg-[#ca004d]"
+                  ></div>
+                </div>
+                <!-- dropdown-arrow -->
+                <div
+                  class="flex justify-center items-center gap-1 rounded-tr-lg py-[0.625rem] pr-[0.875rem]"
+                >
+                  <img
+                    src="https://i.ibb.co.com/rRP9vQ3m/chevron-down.webp"
+                    alt="chevron-down"
+                    class="w-5 h-5"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- call-type-input -->
+        <div class="flex items-center gap-[0.375rem] w-full">
+          <div class="w-full flex flex-col gap-[0.375rem]">
+            <label
+              for=""
+              class="text-[#344054] text-xs leading-normal dark:text-[#bdb8af]"
+              >Call Type</label
+            >
+
+            <!-- dropdown-container -->
+            <div
+              class="flex w-full h-10 bg-white/50 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm cursor-pointer"
+            >
+              <div
+                class="flex items-center gap-2 rounded-l-lg border border-r-0 border-transparent py-2 px-3 flex-1"
+              >
+                <img
+                  src="https://i.ibb.co.com/d45N2GV5/video-recorder.webp"
+                  alt="video-recorder"
+                  class="w-5 h-5"
+                />
+                <span class="text-base text-[#101828] dark:text-[#d6d3cd]"
+                  >Video Call</span
+                >
+              </div>
+
+              <div
+                class="flex justify-center items-center gap-1 rounded-tr-lg py-[0.625rem] px-[0.875rem]"
+              >
+                <img
+                  src="https://i.ibb.co.com/rRP9vQ3m/chevron-down.webp"
+                  alt="chevron-down"
+                  class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(32%)_saturate(279%)_hue-rotate(183deg)_brightness(99%)_contrast(84%)]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ringtone preview input -->
+        <div class="flex items-center gap-2 w-full">
+          <!-- dropdown-container -->
+          <div
+            class="flex w-full h-10 bg-white/75 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1bbf] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm cursor-pointer flex-1"
+          >
+            <div
+              class="flex items-center gap-2 rounded-l-lg border border-r-0 border-transparent py-2 px-3 flex-1"
+            >
+              <img
+                src="https://i.ibb.co.com/yBYsGSGy/music-note-01.webp"
+                alt="music-note-01"
+                class="w-5 h-5"
+              />
+              <span class="text-base text-[#344054] dark:text-[#bdb8af]"
+                >Ringtone 1</span
+              >
+            </div>
+
+            <div
+              class="flex justify-center items-center gap-1 rounded-tr-lg py-[0.625rem] px-[0.875rem]"
+            >
+              <img
+                src="https://i.ibb.co.com/rRP9vQ3m/chevron-down.webp"
+                alt="chevron-down"
+                class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(32%)_saturate(279%)_hue-rotate(183deg)_brightness(99%)_contrast(84%)]"
+              />
+            </div>
+          </div>
+
+          <!-- preview-button -->
+          <div class="flex items-center gap-1 w-max cursor-pointer">
+            <img
+              src="https://i.ibb.co.com/GQN84JHZ/volume-min.webp"
+              alt="volume-min"
+              class="w-5 h-5"
+            />
+            <span class="text-sm font-medium text-[#344054] dark:text-[#bdb8af]"
+              >Preview</span
+            >
+          </div>
+        </div>
+
+        <!-- base-price input -->
+        <div class="flex items-center gap-2 w-full">
+          <div class="flex gap-4 w-full">
+            <div class="flex items-end gap-2 w-full">
+              <div class="w-1/2 flex flex-col gap-[0.375rem]">
+                <div class="flex flex-col gap-[0.375rem] w-full">
+                  <label
+                    for=""
+                    class="text-[#667085] dark:text-[#a0aec0] text-sm font-medium"
+                    >Base Price</label
+                  >
+                  <div
+                    class="flex items-center bg-white/50 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm cursor-pointer overflow-hidden"
+                  >
+                    <input
+                      type="number"
+                      class="w-full flex items-center gap-2 border border-b border-transparent bg-transparent py-2 px-3 flex-1 outline-none text-[#101828] dark:text-[#d6d3cd] text-base placeholder:text-[#667085] dark:placeholder:text-[#9e9689] placeholder:text-base placeholder:font-normal"
+                      value="1000"
+                    />
+                    <div
+                      class="flex justify-center items-center gap-1 py-[0.625rem] px-[0.875rem]"
+                    >
+                      <img
+                        src="https://i.ibb.co.com/tTMVKtQN/chevron-selector-vertical.webp"
+                        alt="chevron-selector-vertical"
+                        class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(32%)_saturate(279%)_hue-rotate(183deg)_brightness(99%)_contrast(84%)]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p
+                class="w-1/2 h-10 text-base text-black font-medium py-2 dark:text-white"
+              >
+                Tokens
+                <span class="text-sm text-black dark:text-white">/session</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- cancellation-fee input -->
+        <div class="flex items-start gap-2 w-full pl-6 opacity-50">
+          <div class="flex justify-center items-center w-6 min-w-6 h-6">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="checkbox-1"
+              class="appearance-none bg-white border border-[#D0D5DD] rounded-[4px] w-4 min-w-4 h-4 mr-1 checked:accent-[#07f468] checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-black checked:after:border-w-0 checked:after:border-b-2 checked:after:border-r-2 checked:after:rotate-45 checked:after:box-border cursor-pointer"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label
+              for="checkbox-1"
+              class="text-[#344054] text-base dark:text-[#bdb8af]"
+              >User can cancel in advance to void minimum charge</label
+            >
+            <div class="flex items-center gap-2">
+              <!-- input -->
+              <div
+                class="flex items-center bg-white/50 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm cursor-pointer overflow-hidden"
+              >
+                <input
+                  type="number"
+                  class="w-full flex items-center gap-2 border border-b border-transparent bg-transparent py-2 px-3 flex-1 outline-none text-[#101828] dark:text-[#d6d3cd] text-base placeholder:text-[#667085] dark:placeholder:text-[#9e9689] placeholder:text-base placeholder:font-normal"
+                  value="15"
+                />
+                <div
+                  class="flex justify-center items-center gap-1 py-[0.625rem] px-[0.875rem]"
+                >
+                  <img
+                    src="https://i.ibb.co.com/tTMVKtQN/chevron-selector-vertical.webp"
+                    alt="chevron-selector-vertical"
+                    class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(32%)_saturate(279%)_hue-rotate(183deg)_brightness(99%)_contrast(84%)]"
+                  />
+                </div>
+              </div>
+
+              <!-- dropdown -->
+              <div
+                class="flex w-full h-10 bg-white/50 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm cursor-pointer"
+              >
+                <div
+                  class="flex items-center gap-2 rounded-l-lg border border-r-0 border-transparent py-2 px-3 flex-1"
+                >
+                  <span class="text-base text-[#101828] dark:text-[#d6d3cd]"
+                    >Hour</span
+                  >
+                </div>
+
+                <div
+                  class="flex justify-center items-center gap-1 rounded-tr-lg py-[0.625rem] px-[0.875rem]"
+                >
+                  <img
+                    src="https://i.ibb.co.com/rRP9vQ3m/chevron-down.webp"
+                    alt="chevron-down"
+                    class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(32%)_saturate(279%)_hue-rotate(183deg)_brightness(99%)_contrast(84%)]"
+                  />
+                </div>
+              </div>
+
+              <span
+                class="text-base text-[#344054] dark:text-[#d6d3cd] whitespace-nowrap"
+                >in advance</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- off-hour surcharge input -->
+        <div class="flex flex-col gap-5">
+          <div class="flex gap-2">
+            <h3
+              class="text-[#344054] text-base font-medium dark:text-[#bdb8af]"
+            >
+              Off-hour Surcharge
+            </h3>
+            <div class="relative inline-flex group cursor-pointer">
+              <img
+                src="https://i.ibb.co/DPgMH5GG/svgviewer-png-output-15.webp"
+                alt="tooltip icon"
+                class="w-5 h-5"
+              />
+              <div
+                class="absolute flex left-full top-1/2 -translate-y-1/2 ml-2 w-[17.5rem] text-white bg-[rgba(16,24,40,0.7)] shadow-[0_4px_8px_-2px_rgba(16,24,40,0.1),0_2px_4px_-2px_rgba(16,24,40,0.06)] text-xs font-medium leading-[1.125rem] p-2 px-3 rounded-lg backdrop-blur-[25px] opacity-0 invisible pointer-events-none transition-all duration-150 ease-in-out z-[2] dark:bg-[rgba(14,19,32,0.9)] dark:text-text-dark-primary group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto before:content-[''] before:[border-width:5px_5px_5px_0] before:-left-[5px] before:top-1/2 before:-translate-y-1/2 before:[border-right-color:rgba(16,24,40,0.7)] before:border-solid before:[border-top-color:transparent] before:[border-bottom-color:transparent] before:[border-left-color:transparent] before:absolute before:w-0 before:h-0"
+              >
+                <span class="text-white dark:text-text-dark-primary"
+                  >When this toggle is on, your username and identity will be
+                  hidden from @princess.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <div class="flex justify-center items-center w-6 min-w-6 h-6">
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="checkbox-1"
+                class="appearance-none bg-white border border-[#D0D5DD] rounded-[4px] w-4 min-w-4 h-4 mr-1 checked:accent-[#07f468] checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-black checked:after:border-w-0 checked:after:border-b-2 checked:after:border-r-2 checked:after:rotate-45 checked:after:box-border cursor-pointer"
+              />
+            </div>
+
+            <div class="opacity-50">
+              <div class="flex items-center gap-2">
+                <span
+                  class="text-[#344054] text-base font-medium dark:text-[#bdb8af]"
+                  >Add</span
+                >
+                <!-- input -->
+                <div
+                  class="flex items-center bg-white/50 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm cursor-pointer overflow-hidden flex-1"
+                >
+                  <input
+                    type="number"
+                    class="w-full flex items-center gap-2 border border-b border-transparent bg-transparent py-2 px-3 flex-1 outline-none text-[#101828] dark:text-[#d6d3cd] text-base placeholder:text-[#667085] dark:placeholder:text-[#9e9689] placeholder:text-base placeholder:font-normal"
+                    value="60"
+                  />
+                  <div
+                    class="flex justify-center items-center gap-1 py-[0.625rem] px-[0.875rem]"
+                  >
+                    <img
+                      src="https://i.ibb.co.com/tTMVKtQN/chevron-selector-vertical.webp"
+                      alt="chevron-selector-vertical"
+                      class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(32%)_saturate(279%)_hue-rotate(183deg)_brightness(99%)_contrast(84%)]"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col justify-between h-10">
+                  <span
+                    class="text-base font-medium text-black dark:text-white whitespace-nowrap"
+                    >% from base price</span
+                  >
+                  <span
+                    class="text-xs leading-normal font-medium text-black dark:text-white whitespace-nowrap"
+                    >(1,600 tokens/session)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- calender availability inputs -->
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-3 w-full">
+            <span class="text-base text-[#667085] dark:text-[#9e9689] w-12"
+              >Sun</span
+            >
+            <span class="text-base text-[#667085] dark:text-[#9e9689] flex-1"
+              >Not Available</span
+            >
+            <div class="flex justify-end items-center gap-2 pl-1 w-[3.25rem]">
+              <img
+                src="https://i.ibb.co.com/VYqPvctj/plus-circle.webp"
+                alt="plus-circle"
+                class="w-5 h-5 cursor-pointer"
+              />
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1">
+            <span class="text-base text-[#667085] dark:text-[#9e9689] w-10"
+              >Mon</span
+            >
+
+            <!-- dropdown -->
+            <div
+              class="flex w-full h-10 bg-white/50 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm cursor-pointer flex-1"
+            >
+              <div
+                class="flex items-center gap-2 rounded-l-lg border border-r-0 border-transparent py-2 px-3 flex-1"
+              >
+                <span class="text-base text-[#101828] dark:text-[#d6d3cd]"
+                  >12:00 AM</span
+                >
+              </div>
+
+              <div
+                class="flex justify-center items-center gap-1 rounded-tr-lg py-[0.625rem] pr-[0.875rem]"
+              >
+                <img
+                  src="https://i.ibb.co.com/rRP9vQ3m/chevron-down.webp"
+                  alt="chevron-down"
+                  class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(32%)_saturate(279%)_hue-rotate(183deg)_brightness(99%)_contrast(84%)]"
+                />
+              </div>
+            </div>
+
+            <span class="text-base text-[#667085] dark:text-[#9e9689]">-</span>
+
+            <!-- dropdown -->
+            <div
+              class="flex w-full h-10 bg-white/50 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm cursor-pointer flex-1"
+            >
+              <div
+                class="flex items-center gap-2 rounded-l-lg border border-r-0 border-transparent py-2 px-3 flex-1"
+              >
+                <span class="text-base text-[#101828] dark:text-[#d6d3cd]"
+                  >9:00 AM</span
+                >
+              </div>
+
+              <div
+                class="flex justify-center items-center gap-1 rounded-tr-lg py-[0.625rem] pr-[0.875rem]"
+              >
+                <img
+                  src="https://i.ibb.co.com/rRP9vQ3m/chevron-down.webp"
+                  alt="chevron-down"
+                  class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(32%)_saturate(279%)_hue-rotate(183deg)_brightness(99%)_contrast(84%)]"
+                />
+              </div>
+            </div>
+
+            <!-- buttons -->
+            <div class="flex justify-end items-center gap-2 pl-1">
+              <img
+                src="https://i.ibb.co.com/LXwdW794/minus-circle.webp"
+                alt="minus-circle"
+                class="w-5 h-5 cursor-pointer"
+              />
+              <img
+                src="https://i.ibb.co.com/VYqPvctj/plus-circle.webp"
+                alt="plus-circle"
+                class="w-5 h-5 cursor-pointer"
+              />
+              <img
+                src="https://i.ibb.co.com/9HL0qTfR/cloud-moon.webp"
+                alt="cloud-moon"
+                class="w-5 h-5 cursor-pointer"
+              />
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1">
+            <span class="text-base text-[#667085] dark:text-[#9e9689] w-10"
+              >Sat</span
+            >
+
+            <!-- dropdown -->
+            <div
+              class="flex w-full h-10 bg-white/50 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm cursor-pointer flex-1"
+            >
+              <div
+                class="flex items-center gap-2 rounded-l-lg border border-r-0 border-transparent py-2 px-3 flex-1"
+              >
+                <span class="text-base text-[#101828] dark:text-[#d6d3cd]"
+                  >12:00 AM</span
+                >
+              </div>
+
+              <div
+                class="flex justify-center items-center gap-1 rounded-tr-lg py-[0.625rem] pr-[0.875rem]"
+              >
+                <img
+                  src="https://i.ibb.co.com/rRP9vQ3m/chevron-down.webp"
+                  alt="chevron-down"
+                  class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(32%)_saturate(279%)_hue-rotate(183deg)_brightness(99%)_contrast(84%)]"
+                />
+              </div>
+            </div>
+
+            <span class="text-base text-[#667085] dark:text-[#9e9689]">-</span>
+
+            <!-- dropdown -->
+            <div
+              class="flex w-full h-10 bg-white/50 border-b border-[#D0D5DD] [box-shadow:0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#776e62] dark:[box-shadow:0px_1px_2px_0px_#18243d0d] rounded-t-sm cursor-pointer flex-1"
+            >
+              <div
+                class="flex items-center gap-2 rounded-l-lg border border-r-0 border-transparent py-2 px-3 flex-1"
+              >
+                <span class="text-base text-[#101828] dark:text-[#d6d3cd]"
+                  >9:00 AM</span
+                >
+              </div>
+
+              <div
+                class="flex justify-center items-center gap-1 rounded-tr-lg py-[0.625rem] pr-[0.875rem]"
+              >
+                <img
+                  src="https://i.ibb.co.com/rRP9vQ3m/chevron-down.webp"
+                  alt="chevron-down"
+                  class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(32%)_saturate(279%)_hue-rotate(183deg)_brightness(99%)_contrast(84%)]"
+                />
+              </div>
+            </div>
+
+            <!-- buttons -->
+            <div class="flex justify-end items-center gap-2 pl-1">
+              <img
+                src="https://i.ibb.co.com/LXwdW794/minus-circle.webp"
+                alt="minus-circle"
+                class="w-5 h-5 cursor-pointer"
+              />
+              <img
+                src="https://i.ibb.co.com/VYqPvctj/plus-circle.webp"
+                alt="plus-circle"
+                class="w-5 h-5 cursor-pointer"
+              />
+              <img
+                src="https://i.ibb.co.com/9HL0qTfR/cloud-moon.webp"
+                alt="cloud-moon"
+                class="w-5 h-5 cursor-pointer [filter:brightness(0)_saturate(100%)_invert(18%)_sepia(93%)_saturate(7466%)_hue-rotate(329deg)_brightness(97%)_contrast(108%)]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- events/booking checkbox -->
+        <div class="flex items-center gap-2">
+          <div class="flex justify-center items-center w-6 min-w-6 h-5">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="checkbox-2"
+              class="appearance-none bg-white border border-[#D0D5DD] rounded-[4px] w-4 min-w-4 h-4 mr-1 checked:accent-[#FF0066] checked:bg-[#FF0066] checked:border-[#FF0066] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-white checked:after:border-w-0 checked:after:border-b-2 checked:after:border-r-2 checked:after:rotate-45 checked:after:box-border cursor-pointer"
+            />
+          </div>
+
+          <label
+            for="checkbox-2"
+            class="text-sm text-[#344054] dark:text-[#bdb8af] cursor-pointer"
+            >Show existing events/booking schedule</label
+          >
+        </div>
+
+        <!-- preview booking schedule button -->
+        <button
+          class="w-max h-8 flex justify-center items-center rounded-[3rem] border border-transparent [background-image:linear-gradient(#EAECF0,#EAECF0),linear-gradient(90deg,rgba(251,91,162,0.55),rgba(251,91,162,0.275))] [background-origin:border-box] [background-clip:content-box,border-box] overflow-hidden cursor-pointer dark:[background-image:linear-gradient(#222526,#222526),linear-gradient(90deg,rgba(147,4,67,0.55),rgba(147,4,67,0.275))]"
+        >
+          <div
+            class="flex justify-center items-center gap-1 bg-white/20 py-1 px-6 dark:bg-[rgba(24,26,27,0.2)]"
+          >
+            <div class="flex items-center gap-1">
+              <span
+                class="text-xs leading-normal font-medium text-[#FF0464] dark:text-[#ff1d73]"
+                >Preview booking schedule</span
+              >
+              <img
+                src="https://i.ibb.co.com/TqcrBSX3/arrow-up-right.webp"
+                alt="arrow-up-right"
+                class="w-4 h-4"
+              />
+            </div>
+          </div>
+        </button>
+
+        <!-- add-on-service button -->
+        <button
+          class="w-max flex justify-center items-center gap-2 py-1 px-2 bg-[#0C111D] dark:bg-[#162036]"
+        >
+          <img
+            src="https://i.ibb.co.com/5x1MP3s9/plus-square.webp"
+            alt="plus-square"
+            class="w-4 h-4"
+          />
+          <span
+            class="text-xs leading-normal font-semibold tracking-wider text-[#07F468] capitalize dark:text-[#23f97b]"
+            >add-on service</span
+          >
+        </button>
+
+        <!-- approval needed -->
+        <div
+          class="w-max h-[1.3125rem] flex items-center gap-0.5 rounded-md px-1 bg-[#0C111D]"
+        >
+          <img
+            src="https://i.ibb.co.com/2Yc13m5x/dots-horizontal.webp"
+            alt="dots-horizontal"
+            class="w-4 h-4"
+          />
+          <span
+            class="text-xs leading-normal font-semibold text-[#FFED29] italic"
+            >APPROVAL NEEDED</span
+          >
+        </div>
+
+        <!-- call start time button -->
+        <div
+          class="flex flex-col gap-2 bg-black/90 dark:bg-[rgba(24,26,27,0.9)] p-4 min-w-[30rem]"
+        >
+          <button
+            class="h-10 flex justify-center items-center gap-2.5 border-[0.03125rem] border-white dark:border-[#303436] p-2.5 rounded-[0.625rem] bg-black bg-opacity-0"
+          >
+            <span
+              class="text-sm leading-5 font-medium text-[#F9FAFB] dark:text-[#e5e3df]"
+              >12:00am</span
+            >
+          </button>
+
+          <button
+            class="h-10 flex justify-center items-center gap-2.5 border-[0.03125rem] border-[#FFED29] dark:border-[#a69800] p-2.5 rounded-[0.625rem] bg-black bg-opacity-0 relative"
+          >
+            <span
+              class="text-sm leading-5 font-medium text-[#FFED29] dark:text-[#ffee37]"
+              >3:00am</span
+            >
+            <div class="absolute right-4 flex justify-center items-center">
+              <img
+                src="https://i.ibb.co.com/tM8VftFg/line-chart-up-01.webp"
+                alt="line-chart-up-01"
+                class="w-4 h-4"
+              />
+            </div>
+          </button>
+
+          <button
+            class="h-10 flex justify-center items-center gap-2.5 border-[0.5px] border-white dark:border-[#303436] p-2.5 rounded-[0.625rem] bg-[#07F468] dark:bg-[#06c454]"
+          >
+            <span
+              class="text-sm leading-5 font-semibold text-[#0C111D] dark:text-[#dbd8d3]"
+              >4:00am</span
+            >
+          </button>
+
+          <div
+            class="flex justify-center items-center rounded-[3.125rem] border-[0.1875rem] border-white/15 dark:border-[#30343626] backdrop-blur-[50px]"
+          >
+            <div
+              class="flex items-center bg-white/15 dark:bg-[rgba(24,26,27,0.15)] rounded-[3.125rem] w-full"
+            >
+              <div
+                class="group flex justify-center items-center gap-0.5 py-1.5 px-2.5 rounded-[3.125rem] flex-1 cursor-pointer [&.active]:bg-[#07F468] dark:[&.active]:bg-[#06c454] active"
+              >
+                <span
+                  class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3] group-[.active]:text-[#0C111D] dark:group-[.active]:text-[#dbd8d3]"
+                  >12 MIN</span
+                >
+              </div>
+              <div
+                class="group flex justify-center items-center gap-0.5 py-1.5 px-2.5 rounded-[3.125rem] flex-1 cursor-pointer [&.active]:bg-[#07F468] dark:[&.active]:bg-[#06c454]"
+              >
+                <span
+                  class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]"
+                  >12 MIN</span
+                >
+              </div>
+              <div
+                class="group flex justify-center items-center gap-0.5 py-1.5 px-2.5 rounded-[3.125rem] flex-1 cursor-pointer [&.active]:bg-[#07F468] dark:[&.active]:bg-[#06c454]"
+              >
+                <span
+                  class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]"
+                  >12 MIN</span
+                >
+              </div>
+              <div
+                class="group flex justify-center items-center gap-0.5 py-1.5 px-2.5 rounded-[3.125rem] flex-1 cursor-pointer [&.active]:bg-[#07F468] dark:[&.active]:bg-[#06c454]"
+              >
+                <span
+                  class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]"
+                  >12 MIN</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- add-button -->
+        <button
+          class="w-max flex justify-center items-center gap-0.5 p-1 bg-transparent border-0 outline-none cursor-pointer"
+        >
+          <img
+            src="https://i.ibb.co.com/nNPSRZW5/plus-square-1.webp"
+            alt="plus-square-1"
+            class="w-5 h-5"
+          />
+          <span class="text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]"
+            >Add</span
+          >
+        </button>
+
+        <!-- view-profile & go-live buttons -->
+        <div class="flex justify-end items-center gap-2.5">
+          <button
+            class="flex justify-center items-center gap-2 bg-white border border-[#0C111D] py-1 px-3 rounded-2xl dark:bg-[#181a1b] dark:border-[#857c6d]"
+          >
+            <span class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]"
+              >VIEW PROFILE</span
+            >
+            <img
+              src="https://i.ibb.co.com/TqcrBSX3/arrow-up-right.webp"
+              alt="arrow-up-right"
+              class="w-3 h-3 [filter:brightness(0)_saturate(100%)]"
+            />
+          </button>
+
+          <button
+            class="flex justify-center items-center gap-2 bg-white border border-[#0C111D] py-1 px-3 rounded-2xl dark:bg-[#181a1b] dark:border-[#857c6d]"
+          >
+            <div class="w-2 h-2 rounded bg-[#FF4405] dark:bg-[#c93300]"></div>
+            <span class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]"
+              >GO LIVE</span
+            >
+            <img
+              src="https://i.ibb.co.com/TqcrBSX3/arrow-up-right.webp"
+              alt="arrow-up-right"
+              class="w-3 h-3 [filter:brightness(0)_saturate(100%)]"
+            />
+          </button>
+        </div>
+
+        <!-- online services -->
+        <div class="flex min-h-[100px]">
+          <div class="db w-1 bg-[#07F468] dark:bg-[#06c454]">
+            <span class="invisible">.</span>
+          </div>
+          <div
+            class="flex flex-col gap-4 p-4 border-t border-[#D0D5DD] dark:border-[#776e62] flex-1"
+          >
+            <div class="flex justify-between items-center gap-4">
+              <h3
+                class="text-lg font-semibold text-[#344054] dark:text-[#bdb8af]"
+              >
+                Video Call
+              </h3>
+
+              <label class="relative inline-block w-16 h-7 cursor-pointer">
+                <input
+                  type="checkbox"
+                  class="peer h-0 w-0 opacity-0"
+                  id="toggle-switch-1"
+                  checked=""
+                />
+                <span
+                  class="absolute inset-0 cursor-pointer rounded-[2.5rem] bg-[#98a2b380] transition-all duration-100 ease-in-out peer-checked:bg-[#07F468] dark:bg-[#444c5b80] dark:peer-checked:bg-[#06c454]"
+                ></span>
+                <span
+                  class="absolute left-[0.125rem] top-1/2 h-6 w-6 -translate-y-1/2 transform rounded-full bg-white shadow-[0_1px_3px_0_rgba(16,24,40,0.1),0_1px_2px_0_rgba(16,24,40,0.06)] transition-all duration-100 ease-in-out peer-checked:translate-x-[2.25rem] dark:bg-[#181a1b]"
+                ></span>
+                <div
+                  class="absolute left-1 top-1/2 -translate-y-1/2 transform w-9 hidden peer-checked:flex justify-center items-center px-1"
+                >
+                  <span
+                    class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]"
+                    >ON</span
+                  >
+                </div>
+
+                <div
+                  class="absolute right-1 top-1/2 -translate-y-1/2 transform w-9 flex peer-checked:hidden justify-center items-center px-1"
+                >
+                  <span
+                    class="text-sm font-medium text-white dark:text-[#e8e6e3]"
+                    >OFF</span
+                  >
+                </div>
+              </label>
+            </div>
+
+            <div class="flex justify-between items-start gap-4">
+              <p class="text-sm text-[#344054] dark:text-[#bdb8af]">
+                50 Tokens every 30 sec./maximum length 1 hour/repost on
+              </p>
+              <img
+                src="https://i.ibb.co.com/KcGwg81n/settings-02.webp"
+                alt="settings-02"
+                class="w-6 h-6 cursor-pointer"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- upcoming events -->
+        <div
+          class="flex gap-1.5 pr-1 rounded bg-[#F9FAFB] dark:bg-[#1b1d1e] shadow-[0_0_8px_0_#6358FF80]"
+        >
+          <div class="db w-1 bg-[#5549FF] dark:bg-[#363b3d]">
+            <span class="invisible">.</span>
+          </div>
+
+          <div class="flex gap-1 py-2 w-full">
+            <div class="flex items-center min-w-[3.4375rem] h-[3.125rem]">
+              <span
+                class="align-middle text-[0.6875rem] leading-4 font-medium text-[#344054] dark:text-[#bdb8af]"
+                >2:15pm-<br />9:30pm</span
+              >
+            </div>
+
+            <div class="flex flex-col gap-1 flex-1">
+              <h3
+                class="text-sm font-semibold text-[#5549FF] dark:text-[#4d89ff]"
+              >
+                Live call
+              </h3>
+
+              <div class="flex items-center gap-1">
+                <div class="w-5 h-5 flex justify-center items-center">
+                  <img
+                    src="https://i.ibb.co.com/rGTykjYb/Vector.webp"
+                    alt="Vector"
+                    class="w-full h-full"
+                  />
+                </div>
+                <span
+                  class="text-[0.6875rem] leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9689]"
+                  >Apples</span
+                >
+              </div>
+            </div>
+
+            <div class="flex items-center gap-[0.375rem] h-[3.125rem]">
+              <div class="flex items-center gap-1 rounded">
+                <div
+                  class="w-[0.375rem] h-[0.375rem] db bg-[#5549FF] dark:bg-[#0b00a0] rounded-full"
+                ></div>
+                <span
+                  class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9689]"
+                  >in 5 min</span
+                >
+              </div>
+
+              <button
+                class="flex items-center gap-[0.2875rem] rounded-[0.2875rem] py-[0.2156rem] px-[0.575rem] bg-[#5549FF] dark:bg-[#0b00a0] cursor-pointer"
+              >
+                <img
+                  src="https://i.ibb.co.com/ZpLTw1Sm/phone-incoming-02.webp"
+                  alt="phone-incoming-02"
+                  class="w-[1.149rem] h-[1.149rem]"
+                />
+                <span
+                  class="text-[0.86rem] leading-[1.29rem] font-semibold text-white dark:text-[#e8e6e3]"
+                  >JOIN CALL</span
+                >
+              </button>
+            </div>
+
+            <img
+              src="https://i.ibb.co.com/rKfXgfjL/dots-vertical.webp"
+              alt="dots-vertical"
+              class="cursor-pointer w-4 h-4"
+            />
+          </div>
+        </div>
+
+        <!-- chat with me (tooltip) -->
+        <div>
+          <div
+            class="flex w-max py-2.5 px-4 rounded-[1.25rem] bg-[#0C111DB2] dark:bg-[#162036b3] relative before:content-[''] before:absolute before:bottom-[-21px] before:left-[40px] before:w-[21px] before:h-[11px] before:bg-[#0C111DB2] dark:before:bg-[#162036b3] before:[clip-path:path('M0.883838_9.97471C0.421585_10.1968_-0.0354738_9.66202_0.255849_9.23998L6.35774_0.400146L20.8153_0.400148L0.883838_9.97471Z')] before:translate-y-[-100%] before:z-[-1]"
+          >
+            <span class="text-xs leading-normal text-white dark:text-[#e8e6e3]"
+              >I’m bored! Call or chat with me 💋</span
+            >
+          </div>
+
+          <div
+            class="w-10 flex justify-center items-center px-2 relative -mt-1 z-[1]"
+          >
+            <div class="flex justify-center items-center">
+              <img
+                src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp"
+                alt="avatar"
+                class="w-6 h-6"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- video, voice, messaging button -->
+        <div class="flex flex-col gap-6">
+          <!-- video-call -->
+          <div
+            class="flex rounded-3xl cursor-pointer overflow-hidden w-[31.25rem]"
+          >
+            <div class="flex z-[1] w-full">
+              <div
+                class="flex items-center gap-2 py-2 pl-6 pr-2 bg-[#0C111D] w-full"
+              >
+                <img
+                  src="https://i.ibb.co.com/xqnSbgmP/dash-cam.webp"
+                  alt="dash-cam"
+                  class="h-full"
+                />
+
+                <div class="flex flex-col gap-2">
+                  <h3
+                    class="text-2xl font-semibold text-white dark:text-[#e8e6e3]"
+                  >
+                    Video Call
+                  </h3>
+                  <div class="flex items-center gap-1">
+                    <img
+                      src="https://i.ibb.co.com/5XKCFLMG/token.webp"
+                      alt="token"
+                      class="w-8 h-8"
+                    />
+                    <span
+                      class="text-sm italic font-meidum text-white dark:text-[#e8e6e3] align-bottom"
+                      ><span
+                        class="text-xl leading-[1.875rem] font-bold text-white dark:text-[#e8e6e3]"
+                        >1500</span
+                      >
+                      every 30 seconds</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <img
+                src="https://i.ibb.co.com/h1DjTt7n/Union.png"
+                alt="Union"
+                class="w-[2.25rem] h-28"
+              />
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center gap-2 py-2 pl-10 pr-6 bg-[#FF0066] dark:bg-[#cc0052] w-[8.4375rem] ml-[-2.25rem] z-[0] rounded-r-3xl"
+            >
+              <img
+                src="https://i.ibb.co.com/bMFNwGrq/webcam-01.webp"
+                alt="webcam-01"
+                class="w-8 h-8"
+              />
+              <span class="text-base font-bold text-white whitespace-nowrap"
+                >Call now</span
+              >
+            </div>
+          </div>
+
+          <!-- voice-call -->
+          <div
+            class="flex rounded-3xl cursor-pointer overflow-hidden w-[31.25rem]"
+          >
+            <div class="flex z-[1] w-full">
+              <div
+                class="flex items-center gap-2 py-2 pl-6 pr-2 bg-[#0C111D] w-full"
+              >
+                <img
+                  src="https://i.ibb.co.com/VYMPPZTj/telephone.webp"
+                  alt="telephone"
+                  class="h-full"
+                />
+
+                <div class="flex flex-col gap-2">
+                  <h3
+                    class="text-2xl font-semibold text-white dark:text-[#e8e6e3]"
+                  >
+                    Voice Call
+                  </h3>
+                  <div class="flex items-center gap-1">
+                    <img
+                      src="https://i.ibb.co.com/5XKCFLMG/token.webp"
+                      alt="token"
+                      class="w-8 h-8"
+                    />
+                    <span
+                      class="text-sm italic font-meidum text-white dark:text-[#e8e6e3] align-bottom"
+                      ><span
+                        class="text-xl leading-[1.875rem] font-bold text-white dark:text-[#e8e6e3]"
+                        >200</span
+                      >
+                      every 30 seconds</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <img
+                src="https://i.ibb.co.com/h1DjTt7n/Union.png"
+                alt="Union"
+                class="w-[2.25rem] h-28"
+              />
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center gap-2 py-2 pl-10 pr-6 bg-[#FF0066] dark:bg-[#cc0052] w-[8.4375rem] ml-[-2.25rem] z-[0] rounded-r-3xl"
+            >
+              <img
+                src="https://i.ibb.co.com/MxChSBdm/phone-call-01.webp"
+                alt="phone-call-01"
+                class="w-8 h-8"
+              />
+              <span class="text-base font-bold text-white whitespace-nowrap"
+                >Call now</span
+              >
+            </div>
+          </div>
+
+          <!-- messaging -->
+          <div
+            class="flex rounded-3xl cursor-pointer overflow-hidden w-[31.25rem]"
+          >
+            <div class="flex z-[1] w-full">
+              <div
+                class="flex items-center gap-2 py-2 pl-6 pr-2 bg-[#0C111D] w-full"
+              >
+                <img
+                  src="https://i.ibb.co.com/Vp3b3bjw/Image.webp"
+                  alt="Image"
+                  class="h-full"
+                />
+
+                <div class="flex flex-col gap-2">
+                  <h3
+                    class="text-2xl font-semibold text-white dark:text-[#e8e6e3]"
+                  >
+                    Messaging
+                  </h3>
+                  <div class="flex items-center gap-1">
+                    <img
+                      src="https://i.ibb.co.com/5XKCFLMG/token.webp"
+                      alt="token"
+                      class="w-8 h-8"
+                    />
+                    <span
+                      class="text-xl leading-[1.875rem] font-bold italic text-white dark:text-[#e8e6e3]"
+                      >FREE</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <img
+                src="https://i.ibb.co.com/h1DjTt7n/Union.png"
+                alt="Union"
+                class="w-[2.25rem] h-28"
+              />
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center gap-2 py-2 pl-10 pr-6 bg-[#FF0066] dark:bg-[#cc0052] w-[8.4375rem] ml-[-2.25rem] z-[0] rounded-r-3xl flex-1"
+            >
+              <img
+                src="https://i.ibb.co.com/wrgDDFmn/message-dots-circle.webp"
+                alt="message-dots-circle"
+                class="w-8 h-8"
+              />
+              <span class="text-base font-bold text-white whitespace-nowrap"
+                >Chat now</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- select dropdown -->
+    <!-- <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const customSelects = document.querySelectorAll('.dash-select');
+
+          customSelects.forEach(select => {
+              const trigger = select.querySelector('.dash-select__trigger span');
+              const options = select.querySelectorAll('.dash-option');
+              const realSelect = select.parentElement.querySelector('.dash-real-select');
+
+              // Set initial value
+              const selectedOption = select.querySelector('.dash-option.selected');
+              if (selectedOption) {
+                  trigger.textContent = selectedOption.querySelector('span').textContent;
+                  realSelect.value = selectedOption.dataset.value;
+              }
+
+              // Toggle dropdown
+              select.addEventListener('click', function(e) {
+                  e.stopPropagation();
+
+                  // Close all other selects first
+                  document.querySelectorAll('.dash-select').forEach(s => {
+                      if (s !== select) {
+                          s.classList.remove('open');
+                          s.querySelector('.select-arrow').classList.remove('rotate-180');
+                          s.querySelector('.dash-options-container').classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                          s.querySelector('.dash-options-container').classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                      }
+                  });
+
+                  // Position dropdown based on available space
+                  positionDropdown(this);
+
+                  // Toggle this select
+                  this.classList.toggle('open');
+                  const arrow = this.querySelector('.select-arrow');
+                  const optionsContainer = this.querySelector('.dash-options-container');
+
+                  if (this.classList.contains('open')) {
+                      arrow.classList.add('rotate-180');
+                      optionsContainer.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+                      optionsContainer.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+                  } else {
+                      arrow.classList.remove('rotate-180');
+                      optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                      optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                  }
+              });
+
+              // Handle option selection
+              options.forEach(option => {
+                  option.addEventListener('click', function(e) {
+                      e.stopPropagation();
+
+                      options.forEach(opt => {
+                          opt.classList.remove('selected');
+                          const optSpan = opt.querySelector('span');
+                          optSpan.classList.remove('bg-white', 'font-medium', 'border-b', 'border-[#eaecf0]');
+                          optSpan.classList.add('font-normal');
+                      });
+
+                      this.classList.add('selected');
+                      const optionSpan = this.querySelector('span');
+                      optionSpan.classList.add('bg-white', 'font-medium', 'border-b', 'border-[#eaecf0]');
+                      optionSpan.classList.remove('font-normal');
+
+                      trigger.textContent = optionSpan.textContent;
+                      realSelect.value = this.dataset.value || optionSpan.textContent.toLowerCase();
+
+                      // Close the dropdown
+                      select.classList.remove('open');
+
+                      // Trigger change event on the real select
+                      realSelect.dispatchEvent(new Event('change'));
+                  });
+              });
+          });
+
+          // Close dropdown when clicking outside
+          document.addEventListener('click', function() {
+              document.querySelectorAll('.dash-select').forEach(select => {
+                  select.classList.remove('open');
+              });
+          });
+
+          // Position dropdown up or down based on available space
+          function positionDropdown(select) {
+              const optionsContainer = select.querySelector('.dash-options-container');
+              const rect = select.getBoundingClientRect();
+              const spaceBelow = window.innerHeight - rect.bottom;
+              const spaceAbove = rect.top;
+              const optionsHeight = select.querySelector('.dash-options').scrollHeight;
+
+              // Reset classes
+              select.classList.remove('upward');
+              optionsContainer.classList.remove('bottom-[calc(100%+0.5rem)]');
+              optionsContainer.classList.add('top-[calc(100%+0.5rem)]');
+
+              if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                  select.classList.add('upward');
+                  optionsContainer.classList.remove('top-[calc(100%+0.5rem)]');
+                  optionsContainer.classList.add('bottom-[calc(100%+0.5rem)]');
+              }
+          }
+
+          // Reposition dropdowns on window resize
+          window.addEventListener('resize', function() {
+              document.querySelectorAll('.dash-select.open').forEach(select => {
+                  positionDropdown(select);
+              });
+          });
+      });
+    </script> -->
+  </body>
+</html>

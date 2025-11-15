@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  }
+
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="font-sans p-2 m-0 box-border bg-white [&.dark]:bg-[#202324]">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0.5 md:gap-4 gap-x-2 w-full"
+    >
+      <!-- media-card (video) -->
+      <div class="flex flex-col gap-2 w-full">
+        <!-- media -->
+        <div
+          class="w-full relative aspect-video after:content-[''] after:absolute after:inset-0 after:w-full after:h-full after:rounded-none after:bg-[linear-gradient(180deg,rgba(0,0,0,0.6)_-24.72%,rgba(0,0,0,0)_41.92%,rgba(0,0,0,0.6)_108.57%)] cursor-pointer"
+        >
+          <!-- bg-wrapper -->
+          <div
+            class="w-full h-full bg-cover bg-center bg-no-repeat aspect-video overflow-hidden relative"
+          >
+            <div class="w-full h-full flex justify-center items-center">
+              <video
+                class="object-cover w-full h-full"
+                src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              ></video>
+            </div>
+          </div>
+
+          <!-- top-tag-section -->
+          <div
+            class="flex justify-between items-center w-full absolute left-0 top-1 z-[99999]"
+          >
+            <!-- icon-tag -->
+            <div
+              class="flex justify-center items-center gap-[0.188rem] px-1 py-0.5 rounded bg-[rgba(24,34,48,0.50)] dark:bg-[rgba(31,44,63,0.50)] drop-shadow-[0_0_20px_rgba(0,0,0,0.25)]"
+            >
+              <img
+                src="https://i.ibb.co.com/wN978Hjm/video.webp"
+                alt="video"
+                class="w-4 h-4"
+              />
+              <span
+                class="text-xs text-white leading-normal tracking-[0.008rem] dark:text-[#e8e6e3]"
+                >14:55</span
+              >
+            </div>
+
+            <!-- media-stats -->
+            <div
+              class="flex items-center gap-[0.813rem] px-1 drop-shadow-[0_0_20px_rgba(0,0,0,0.25)] opacity-70"
+            >
+              <span
+                class="flex justify-center items-center gap-1 filter drop-shadow-[0_0_.313rem_#000]"
+              >
+                <span
+                  class="text-xs leading-none whitespace-nowrap text-white tracking-[0.01875rem] dark:text-[#e8e6e3]"
+                  >5mo</span
+                >
+              </span>
+
+              <div class="flex items-center gap-[0.813rem] px-1">
+                <span
+                  class="flex justify-center items-center gap-[0.188rem] filter drop-shadow-[0_0_.313rem_#000]"
+                >
+                  <img
+                    src="https://i.ibb.co.com/7tbwzFsQ/heart.webp"
+                    alt="heart"
+                    class="w-[0.75rem] [filter:brightness(100)_saturate(0)]"
+                  />
+                  <span
+                    class="text-xs leading-normal font-medium text-white tracking-[0.008rem] dark:text-[#e8e6e3]"
+                    >0</span
+                  >
+                </span>
+
+                <span
+                  class="flex justify-center items-center gap-[0.1875rem] filter drop-shadow-[0_0_.313rem_#000]"
+                >
+                  <img
+                    src="https://i.ibb.co.com/Kjv16vLZ/eye.webp"
+                    alt="eye"
+                    class="w-[0.75rem] [filter:brightness(100)_saturate(0)]"
+                  />
+                  <span
+                    class="text-xs leading-normal font-medium text-white tracking-[0.0075rem] dark:text-[#e8e6e3]"
+                    >4</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- logo -->
+          <div class="absolute bottom-0 right-0 z-[10000]">
+            <img
+              src="https://i.ibb.co.com/3m62Qzvz/site-logo.webp"
+              alt="site-logo"
+              class="flex w-16 h-16 pointer-events-none [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(11%)_saturate(3489%)_hue-rotate(341deg)_brightness(93%)_contrast(95%)]"
+            />
+          </div>
+
+          <!-- play-icon -->
+          <div
+            class="flex justify-center items-center absolute top-0 left-0 w-full h-full overflow-hidden z-[1] cursor-pointer"
+          >
+            <div
+              class="flex justify-center items-center bg-black/10 dark:bg-[#181a1b1a] rounded-full backdrop-blur-[5px] w-20 h-20"
+            >
+              <img
+                src="https://i.ibb.co.com/BVS7xsrK/video-icon.webp"
+                alt="video-icon"
+                class="w-9 h-9 opacity-60 [filter:brightness(0)_saturate(100%)_invert(68%)_sepia(3%)_saturate(1620%)_hue-rotate(317deg)_brightness(94%)_contrast(101%)]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- media-info -->
+        <div class="flex flex-col gap-1">
+          <!-- title -->
+          <div class="flex items-start gap-1">
+            <span
+              class="text-sm font-medium flex-grow line-clamp-1 text-[#0c111d] dark:text-[#dbd8d3]"
+              >Took a walk in the park today.</span
+            >
+            <div class="relative cursor-pointer">
+              <!-- select-dropdown -->
+              <div
+                class="select-dropdown w-auto relative z-[1] flex-1"
+                id="select-dropdown"
+              >
+                <div
+                  class="media-select cursor-pointer rounded-[0.5rem] border-none"
+                >
+                  <div class="dash-select__trigger">
+                    <span
+                      class="cursor-pointer w-6 h-6 flex justify-center items-center"
+                    >
+                      <img
+                        src="https://i.ibb.co.com/9khFy274/three-dots-vertical.webp"
+                        alt="three-dots-vertical"
+                        class="w-full h-full"
+                      />
+                    </span>
+                  </div>
+
+                  <div
+                    class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-max origin-top scale-95 opacity-0 h-0 overflow-hidden pointer-events-none shadow-lg transition-all duration-200 ease-out [transform-origin:50%_0] rounded-[0.625rem]"
+                  >
+                    <div
+                      class="border border-[rgba(186,188,203,0.5)] rounded-[0.625rem] bg-white dark:border-[rgba(61,71,73)] dark:bg-[#181a1b] overflow-hidden"
+                    >
+                      <div
+                        class="option flex items-center justify-center gap-[0.5rem] [&.selected]:bg-white hover:bg-white p-[0.625rem] dark:[&.selected]:hover:bg-[#181a1b] dark:hover:bg-[#181a1b]"
+                      >
+                        <div
+                          class="option-inner-container flex items-center flex-1 gap-[0.5rem]"
+                        >
+                          <img
+                            src="https://i.ibb.co.com/jk1F8MqJ/featured-media-bg.webp"
+                            alt="avatar"
+                            class="w-4 h-4 object-cover rounded-full"
+                          />
+                          <span
+                            class="text-[0.875rem] leading-[1.5rem] text-[#0c111d] capitalize text-balance dark:text-[#dbd8d3]"
+                            >Go to Creator's Profile</span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="option flex items-center justify-center gap-[0.5rem] [&.selected]:bg-white hover:bg-white p-[0.625rem] dark:[&.selected]:hover:bg-[#181a1b] dark:hover:bg-[#181a1b]"
+                      >
+                        <div
+                          class="option-inner-container flex items-center flex-1 gap-[0.5rem]"
+                        >
+                          <img
+                            src="https://i.ibb.co.com/XrnHtvx2/share.webp"
+                            alt="share"
+                            class="w-4 h-4 object-cover"
+                          />
+                          <span
+                            class="text-[0.875rem] leading-[1.5rem] text-[#0c111d] capitalize text-balance dark:text-[#dbd8d3]"
+                            >Share</span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="option flex items-center justify-center gap-[0.5rem] [&.selected]:bg-white hover:bg-white p-[0.625rem] dark:[&.selected]:hover:bg-[#181a1b] dark:hover:bg-[#181a1b]"
+                      >
+                        <div
+                          class="option-inner-container flex items-center flex-1 gap-[0.5rem]"
+                        >
+                          <img
+                            src="https://i.ibb.co.com/1G7k3mG5/report.webp"
+                            alt="report"
+                            class="w-4 h-4 object-cover"
+                          />
+                          <span
+                            class="text-[0.875rem] leading-[1.5rem] text-[#0c111d] capitalize text-balance dark:text-[#dbd8d3]"
+                            >Report</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <select
+                  class="dash-real-select hidden"
+                  name="media-select"
+                  required
+                >
+                  <option value="profile">Go to Creator's Profile</option>
+                  <option value="share">Share</option>
+                  <option value="report">Report</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- user-info -->
+          <div class="flex items-end gap-1 flex-grow">
+            <div class="flex justify-center items-center gap-2 py-1">
+              <!-- avatar -->
+              <div class="w-6 h-6 overflow-hidden rounded-full">
+                <img
+                  src="https://i.ibb.co.com/jk1F8MqJ/featured-media-bg.webp"
+                  alt="avatar"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <!-- content -->
+              <div class="flex flex-col">
+                <!-- name -->
+                <a href="#" class="flex items-center gap-1 outline-none">
+                  <span
+                    class="text-xs leading-normal font-medium truncate text-[#667085] dark:text-[#9e9689]"
+                    >Mistress Jessica</span
+                  >
+                  <img
+                    src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp"
+                    alt="svgviewer-png-output-22"
+                    class="h-[0.625rem]"
+                  />
+                </a>
+
+                <!-- followers-wrap -->
+                <div class="flex items-start gap-3 flex-grow">
+                  <!-- followers -->
+                  <div class="flex items-center gap-1">
+                    <img
+                      src="https://i.ibb.co.com/Kjv16vLZ/eye.webp"
+                      alt="eye"
+                      class="w-[0.875rem]"
+                    />
+                    <span class="text-xs leading-normal text-[#667085]">0</span>
+                  </div>
+                  <!-- likes -->
+                  <div class="flex items-center gap-1 cursor-pointer">
+                    <img
+                      src="https://i.ibb.co.com/7tbwzFsQ/heart.webp"
+                      alt="heart"
+                      class="w-[0.875rem]"
+                    />
+                    <span class="text-xs leading-normal text-[#667085]">0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- select-dropdown -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Initialize all dropdowns on the page
+          document.querySelectorAll('.media-select').forEach(orderSelect => {
+              const selectDropdown = orderSelect.closest('.select-dropdown');
+              const trigger = orderSelect.querySelector('.dash-select__trigger span');
+              const options = orderSelect.querySelectorAll('.option');
+              const realSelect = selectDropdown.querySelector('.dash-real-select');
+              const optionsContainer = orderSelect.querySelector('.dash-options-container');
+
+              // Toggle dropdown with smooth transitions
+              orderSelect.addEventListener('click', function(e) {
+                  e.stopPropagation();
+
+                  const isOpening = !optionsContainer.classList.contains('open');
+
+                  // Close all other selects first
+                  document.querySelectorAll('.media-select').forEach(s => {
+                      if (s !== orderSelect) {
+                          closeDropdown(s);
+                      }
+                  });
+
+                  if (isOpening) {
+                      // Position dropdown based on available space
+                      positionDropdown(orderSelect);
+                      openDropdown(orderSelect);
+                  } else {
+                      closeDropdown(orderSelect);
+                  }
+              });
+
+              // Handle option selection
+              options.forEach(option => {
+                  option.addEventListener('click', function(e) {
+                      e.stopPropagation();
+
+                      // Remove "selected" class from all options first
+                      options.forEach(opt => opt.classList.remove('selected'));
+
+                      // Add "selected" class to the clicked option
+                      this.classList.add('selected');
+
+                      // Close the dropdown
+                      closeDropdown(orderSelect);
+
+                      // Trigger change event on the real select
+                      if (realSelect) realSelect.dispatchEvent(new Event('change'));
+                  });
+              });
+
+              // Position dropdown up or down based on available space
+              function positionDropdown(select) {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+                  if (!optionsContainer) return;
+
+                  const rect = select.getBoundingClientRect();
+                  const spaceBelow = window.innerHeight - rect.bottom;
+                  const spaceAbove = rect.top;
+                  const optionsHeight = optionsContainer.scrollHeight;
+
+                  optionsContainer.classList.remove('upward', 'downward');
+
+                  if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                      optionsContainer.classList.add('upward');
+                      optionsContainer.style.top = 'auto';
+                      optionsContainer.style.bottom = 'calc(100% + 0.5rem)';
+                  } else {
+                      optionsContainer.classList.add('downward');
+                      optionsContainer.style.top = 'calc(100% + 0.5rem)';
+                      optionsContainer.style.bottom = 'auto';
+                  }
+              }
+
+              function openDropdown(select) {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+
+                  if (!optionsContainer) return;
+
+                  optionsContainer.classList.add('open');
+                  optionsContainer.classList.remove('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+                  optionsContainer.classList.add('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+              }
+
+              function closeDropdown(select) {
+                  const optionsContainer = select?.querySelector('.dash-options-container');
+
+                  if (!optionsContainer) return;
+
+                  optionsContainer.classList.remove('open');
+                  optionsContainer.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+                  optionsContainer.classList.add('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+              }
+
+              // Close dropdowns when clicking outside
+              document.addEventListener('click', function() {
+                  console.log("clicked")
+                  document.querySelectorAll('.media-select').forEach(select => {
+                      closeDropdown(select);
+                  });
+              });
+
+              // Reposition dropdowns on window resize
+              window.addEventListener('resize', function() {
+                  document.querySelectorAll('.media-select').forEach(select => {
+                      const optionsContainer = select.querySelector('.dash-options-container');
+                      if (optionsContainer && optionsContainer.classList.contains('open')) {
+                          positionDropdown(select);
+                      }
+                  });
+              });
+          });
+      });
+    </script>
+  </body>
+</html>

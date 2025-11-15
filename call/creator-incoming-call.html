@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="max-sm:text-sm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call</title>
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            screens: {
+              sm: '480px',
+              md: '768px',
+              lg: '1010px',
+              xl: '1365px',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+            },
+            keyframes: {
+              spinFast: {
+                '0%': { transform: 'rotate(0deg)' },
+                '100%': { transform: 'rotate(360deg)' },
+              },
+            },
+            animation: {
+              spinFast: 'spinFast 1s linear infinite',
+            },
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body
+    class="bg-[#444444] font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]"
+  >
+    <!-- wrapper -->
+    <div
+      class="w-[18.75rem] flex flex-col justify-center items-center gap-6 p-4 rounded-[0.9375rem] bg-[#0C111DE5] relative"
+    >
+      <!-- header -->
+      <div class="flex items-center gap-2">
+        <img
+          src="https://i.ibb.co.com/9khyD9Md/phone-incoming-02.webp"
+          alt="phone-incoming-02"
+          class="w-6 h-6"
+        />
+        <h2 class="text-lg font-bold text-white">Incoming Video Call</h2>
+      </div>
+
+      <!-- user info section -->
+      <div
+        class="flex flex-col justify-center items-center gap-2 w-[6.8125rem] h-[8.375rem]"
+      >
+        <!-- avatar-container -->
+        <div
+          class="flex justify-center items-center w-[5.625rem] h-[5.625rem] relative"
+        >
+          <img
+            src="https://i.ibb.co.com/35W4r1KX/Vector-user.webp"
+            alt="user"
+            class="w-[4.375rem] h-[4.375rem]"
+          />
+          <img
+            src="https://i.ibb.co.com/RGt0dKYD/green-loader-2.webp"
+            alt="green-loader"
+            class="absolute top-[-0.625rem] -left-2 min-w-[6.25rem] h-[6.25rem] animate-spinFast"
+          />
+        </div>
+
+        <!-- name & username container -->
+        <div class="flex flex-col justify-center items-center gap-1">
+          <h3 class="text-base font-medium text-white">SirStrawberry</h3>
+          <span class="text-xs leading-normal text-[#98A2B3]"
+            >@sammisjelly187</span
+          >
+        </div>
+      </div>
+
+      <!-- bottom-section -->
+      <div class="flex flex-col justify-center items-center gap-3 w-full">
+        <!-- button-container -->
+        <div class="flex gap-2 w-full">
+          <button
+            class="flex justify-center items-center gap-1 w-full h-10 bg-[#07F468] px-3 py-2 border border-[#07F468] rounded cursor-pointer"
+          >
+            <img
+              src="https://i.ibb.co.com/tp6wnC7q/phone-1.webp"
+              alt="phone-1"
+              class="w-6 h-6"
+            />
+            <span class="text-sm font-semibold text-[#0C111D] uppercase"
+              >Accept</span
+            >
+          </button>
+
+          <button
+            class="flex justify-center items-center gap-1 w-full h-10 bg-[#EE3400] px-3 py-2 border border-[#EE3400] rounded cursor-pointer"
+          >
+            <img
+              src="https://i.ibb.co.com/20sMWhjg/phone-x-1-1.webp"
+              alt="phone-x-1"
+              class="w-6 h-6"
+            />
+            <span class="text-sm font-semibold text-white uppercase"
+              >Decline</span
+            >
+          </button>
+        </div>
+
+        <a href="#" class="flex items-center gap-0.5">
+          <span class="text-sm font-medium text-[#98A2B3]">Other Options</span>
+          <img
+            src="https://i.ibb.co.com/67sJstbJ/dots-horizontal-gray.webp"
+            alt=""
+            class="w-5 h-5"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

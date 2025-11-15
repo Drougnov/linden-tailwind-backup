@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en" class="max-sm:text-sm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+                  colors: {
+                      primary: {
+                          pink: '#FF0066',
+                          'pink-dark': '#b30047',
+                          'pink-light': '#FF1A76',
+                          gradient: {
+                              start: '#37FFD7',
+                              end: '#07F468',
+                              'start-dark': '#00ab91',
+                              'end-dark': '#06c454'
+                          }
+                      },
+                      text: {
+                          primary: '#0C111D',
+                          secondary: '#FCFAFF',
+                          tertiary: '#FCFCFD',
+                          dark: {
+                              primary: '#e8e6e3',
+                              secondary: '#dec8ff',
+                              tertiary: '#e6e4e1',
+                              muted: '#dbd8d3'
+                          }
+                      },
+                      bg: {
+                          overlay: 'rgba(0, 0, 0, 0.3)',
+                          card: 'rgba(255, 255, 255, 0.25)',
+                          form: 'hsla(0, 0%, 100%, 0.5)',
+                          dark: {
+                              switch: '#181a1b',
+                              overlay: 'rgba(24,26,27,0.3)',
+                              form: 'rgba(24,26,27,0.5)'
+                          },
+                          gradient: {
+                              overlay: 'rgba(0,0,0,0.45)',
+                              'overlay-dark': 'rgba(24,26,27,0.45)',
+                              overlayLg: 'rgba(0,0,0,0.9)',
+                              'overlayLg-dark': 'rgba(24,26,27,0.9)'
+                          }
+                      },
+                      border: {
+                          tab: '#F2F4F7',
+                          input: '#0C111D',
+                          'tab-dark': '#333739',
+                          'input-dark': '#857c6d'
+                      },
+                      gray: {
+                          500: '#6B7280',
+                          800: '#1F2937'
+                      }
+                  }
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="font-sans p-0 m-0 box-border">
+    <section class="flex flex-col md:p-8 gap-6 bg-gray-500 dark:bg-gray-800">
+      <!-- token-tip-step-2 -payment-1 -->
+      <div
+        class="token-popup-container flex flex-col w-full overflow-visible shadow-[0px_0px_20px_0px_rgba(0,0,0,0.25)] dark:shadow-[0px_0px_20px_0px_rgba(24,26,27,0.25)] backdrop-blur-[50px] relative md:w-max md:max-w-[31.6875rem] lg:max-w-none"
+      >
+        <!-- close-icon -->
+        <div
+          class="hidden absolute w-10 h-10 top-2 right-2 z-10 md:flex justify-center items-center cursor-pointer rounded-full bg-transparent [backdrop-filter:blur(0)] [filter:drop-shadow(0_0_20px_#FFFFFF)] md:w-12 md:h-12 md:-top-6 md:-right-6 md:bg-bg-overlay dark:md:bg-bg-dark-overlay md:[backdrop-filter:blur(20px)] md:[filter:none]"
+        >
+          <img
+            class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(90%)_sepia(9%)_saturate(72%)_hue-rotate(183deg)_brightness(105%)_contrast(91%)] md:w-[2.125rem] md:h-[2.125rem] md:[filter:none]"
+            src="https://i.ibb.co.com/XrzfWZFN/svgviewer-png-output-35.webp"
+            alt="close-icon"
+          />
+        </div>
+
+        <div
+          class="mobile-responsive-navbar fixed sm:absolute sm:bg-transparent sm:backdrop-blur-0 sm:transition-none w-full top-0 right-0 z-10 flex md:hidden justify-between items-center p-2 cursor-pointer bg-transparent"
+        >
+          <div class="w-10 h-10 flex justify-center items-center br-rounded">
+            <img
+              src="https://i.ibb.co.com/8njxTqWK/chevron-left.webp"
+              alt="chevron-left"
+              class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(90%)_sepia(9%)_saturate(72%)_hue-rotate(183deg)_brightness(105%)_contrast(91%)] md:w-[2.125rem] md:h-[2.125rem] md:[filter:none] cursor-pointer"
+            />
+          </div>
+          <div class="w-10 h-10 flex justify-center items-center br-rounded">
+            <img
+              class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(90%)_sepia(9%)_saturate(72%)_hue-rotate(183deg)_brightness(105%)_contrast(91%)] md:w-[2.125rem] md:h-[2.125rem] md:[filter:none] cursor-pointer"
+              src="https://i.ibb.co.com/XrzfWZFN/svgviewer-png-output-35.webp"
+              alt="close-icon"
+            />
+          </div>
+        </div>
+
+        <!-- column-container -->
+        <div
+          class="column-container flex flex-col lg:flex-row pb-0 max-h-screen sm:max-h-[unset] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]"
+        >
+          <!-- left-column -->
+          <div
+            class="w-full h-80 flex bg-[url('https://i.ibb.co.com/bjGQxr5S/sample-bg-image.webp')] bg-cover bg-center min-h-[23.4375rem] sm:min-h-[20rem] lg:w-[20.1875rem] lg:min-h-[unset] lg:h-[unset]"
+          >
+            <!-- Overlay Container -->
+            <div
+              class="w-full flex items-end bg-gradient-to-b from-transparent via-transparent to-bg-gradient-overlay dark:to-bg-gradient-overlay-dark lg:to-bg-gradient-overlayLg dark:lg:to-bg-gradient-overlayLg-dark"
+            >
+              <!-- Text Container -->
+              <div
+                class="p-2 flex flex-col gap-2.5 [filter:drop-shadow(0_0_0.5rem_rgba(0,0,0,0.5))] md:p-4"
+              >
+                <p
+                  class="text-xl leading-[1.875rem] text-white dark:text-text-dark-primary font-medium"
+                >
+                  I would love to get some tip if you appreciate my content. :)
+                  **** 123
+                </p>
+                <div class="flex flex-col">
+                  <div class="flex gap-1 items-center">
+                    <span
+                      class="text-sm leading-5 text-text-secondary dark:text-text-dark-secondary font-medium"
+                      >Princess Carrot Pop</span
+                    >
+                    <img
+                      src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp"
+                      alt="verified-tick"
+                      class="w-[0.6875rem] h-[0.625rem]"
+                    />
+                  </div>
+                  <span
+                    class="text-xs leading-[1.125rem] text-text-tertiary dark:text-text-dark-tertiary font-medium"
+                    >@sammisjelly187</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right-column -->
+          <div
+            class="w-full min-h-[unset] bg-bg-card dark:bg-bg-dark-form flex flex-col sm:min-h-[36.875rem] md:min-h-[32.375rem] md:max-w-[31.6875rem] lg:max-w-none lg:w-[32.5625rem] lg:min-h-[33.625rem] lg:max-h-[35.5rem] overflow-y-[unset] md:overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]"
+          >
+            <!-- tabs-content-container -->
+            <div class="flex flex-col">
+              <!-- top-up input section -->
+              <div class="flex flex-col gap-4 px-2 py-4 md:px-4 lg:px-6">
+                <!-- back-button -->
+                <div
+                  class="hidden md:flex items-center gap-0.5 w-max h-[1.125rem] cursor-pointer"
+                >
+                  <img
+                    src="https://i.ibb.co.com/8njxTqWK/chevron-left.webp"
+                    alt="chevron-left"
+                    class="w-4 h-4"
+                  />
+                  <span
+                    class="text-xs font-medium text-[#475467] dark:text-[#b1aaa0]"
+                    >Back</span
+                  >
+                </div>
+
+                <div class="flex flex-col gap-6">
+                  <!-- payment-method-section -->
+                  <div class="flex flex-col gap-4">
+                    <!-- title-section -->
+                    <div class="flex justify-between items-center gap-2">
+                      <!-- left -->
+                      <div class="flex items-center gap-2">
+                        <img
+                          src="https://i.ibb.co.com/m5nstLw2/svgviewer-png-output-30.png"
+                          alt="svgviewer-png-output-30"
+                          class="w-5 h-5"
+                        />
+                        <span
+                          class="text-base font-semibold text-[#344054] dark:text-[#bdb8bf] truncate"
+                          >PAYMENT METHOD</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- payment-card-wrapper -->
+                    <div class="flex flex-col">
+                      <!-- payment-card-container -->
+                      <div
+                        class="flex w-full min-h-[13.0625rem] sm:max-w-[29.6875rem] sm:mx-auto sm:my-0 sm:min-h-[17.3125rem] [background:url('https://i.ibb.co.com/jvrYTGkd/card-bg.webp'),#1D1D1D] bg-cover border border-[#fbfbfb5e] w-full rounded-xl"
+                      >
+                        <div
+                          class="px-4 py-5 flex flex-col justify-between w-full sm:p-6 rounded-xl"
+                        >
+                          <!-- checkbox-container -->
+                          <div
+                            class="flex justify-between items-center gap-[0.625rem]"
+                          >
+                            <div class="flex items-center gap-2">
+                              <div
+                                class="flex justify-center items-center w-6 min-w-6 h-6"
+                              >
+                                <input
+                                  type="checkbox"
+                                  name="checkbox"
+                                  id="checkbox-dash-3"
+                                  checked
+                                  class="appearance-none bg-white border border-[#D0D5DD] rounded-[4px] w-4 min-w-4 h-4 mr-1 checked:accent-[#07f468] checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-black checked:after:border-w-0 checked:after:border-b-2 checked:after:border-r-2 checked:after:rotate-45 checked:after:box-border cursor-pointer"
+                                />
+                              </div>
+                              <label
+                                for="checkbox-dash-3"
+                                class="text-xs sm:text-sm leading-normal sm:leading-normal ma-0 cursor-pointer text-[#98A2B3] dark:text-[#b0a99e]"
+                                >Save this card for faster checkout.</label
+                              >
+                            </div>
+
+                            <img
+                              src="https://i.ibb.co.com/pr2VM4zR/svgviewer-png-output-32.png"
+                              alt="visa"
+                              class="h-[1.0625rem]"
+                            />
+                          </div>
+
+                          <!-- input-fields -->
+                          <div class="flex gap-2">
+                            <div class="flex flex-col w-full gap-2">
+                              <!-- field-group -->
+                              <div class="flex w-full gap-4">
+                                <!-- input-field -->
+                                <div
+                                  class="flex flex-col gap-[0.125rem] w-full flex-grow sm:gap-[0.375rem]"
+                                >
+                                  <label
+                                    for=""
+                                    class="text-xs leading-normal sm:text-sm font-medium text-[#f9fafb] dark:text-[#dddad5]"
+                                    >Card Number</label
+                                  >
+                                  <div
+                                    class="flex items-center gap-2 border-b border-[#D0D5DD] bg-white/10 [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:bg-[#181a1b1a] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-9 sm:h-10 rounded-sm"
+                                  >
+                                    <input
+                                      type="text"
+                                      class="w-full max-w-full box-border text-base text-[#f9fafb] dark:text-[#dddad5] rounded-[0.625rem] border-none bg-transparent outline-none py-2 px-3 placeholder:text-[#757575] dark:placeholder:text-[#b2aba1] placeholder:text-base placeholder:font-normal placeholder:leading-6"
+                                      placeholder="Card Number"
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- input-field -->
+                                <div
+                                  class="flex flex-col gap-[0.125rem] w-full flex-grow sm:gap-[0.375rem] max-w-[10.75rem]"
+                                >
+                                  <label
+                                    for=""
+                                    class="text-xs leading-normal sm:text-sm font-medium text-[#f9fafb] dark:text-[#dddad5]"
+                                    >Expiration Date</label
+                                  >
+                                  <div
+                                    class="flex items-center gap-2 border-b border-[#D0D5DD] bg-white/10 [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:bg-[#181a1b1a] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-9 sm:h-10 rounded-sm"
+                                  >
+                                    <input
+                                      type="text"
+                                      class="w-full max-w-full box-border text-base text-[#f9fafb] dark:text-[#dddad5] rounded-[0.625rem] border-none bg-transparent outline-none py-2 px-3 placeholder:text-[#757575] dark:placeholder:text-[#b2aba1] placeholder:text-base placeholder:font-normal placeholder:leading-6"
+                                      placeholder="MM/YY"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- field-group -->
+                              <div class="flex w-full gap-4">
+                                <!-- input-field -->
+                                <div
+                                  class="flex flex-col gap-[0.125rem] w-full flex-1 sm:gap-[0.375rem]"
+                                >
+                                  <label
+                                    for=""
+                                    class="text-xs leading-normal sm:text-sm font-medium text-[#f9fafb] dark:text-[#dddad5]"
+                                    >Cardholder Name</label
+                                  >
+                                  <div
+                                    class="flex items-center gap-2 border-b border-[#D0D5DD] bg-white/10 [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:bg-[#181a1b1a] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-9 sm:h-10 rounded-sm"
+                                  >
+                                    <input
+                                      type="text"
+                                      class="w-full max-w-full box-border text-base text-[#f9fafb] dark:text-[#dddad5] rounded-[0.625rem] border-none bg-transparent outline-none py-2 px-3 placeholder:text-[#757575] dark:placeholder:text-[#b2aba1] placeholder:text-base placeholder:font-normal placeholder:leading-6"
+                                      placeholder="Cardholder Name"
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- input-field -->
+                                <div
+                                  class="flex flex-col gap-[0.125rem] w-full flex-1 sm:gap-[0.375rem] max-w-[10.75rem]"
+                                >
+                                  <label
+                                    for=""
+                                    class="text-xs leading-normal sm:text-sm font-medium text-[#f9fafb] dark:text-[#dddad5]"
+                                    >CVV</label
+                                  >
+                                  <div
+                                    class="flex items-center gap-2 border-b border-[#D0D5DD] bg-white/10 [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:bg-[#181a1b1a] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-9 sm:h-10 rounded-sm"
+                                  >
+                                    <input
+                                      type="text"
+                                      class="w-full max-w-full box-border text-base text-[#f9fafb] dark:text-[#dddad5] rounded-[0.625rem] border-none bg-transparent outline-none py-2 px-3 placeholder:text-[#757575] dark:placeholder:text-[#b2aba1] placeholder:text-base placeholder:font-normal placeholder:leading-6"
+                                      placeholder="CVV"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- billing-address-section -->
+                  <div class="flex flex-col gap-4">
+                    <!-- title-section -->
+                    <div class="flex justify-between items-center gap-2">
+                      <!-- left -->
+                      <div class="flex items-center gap-2">
+                        <img
+                          src="https://i.ibb.co.com/v4z8YXPS/svgviewer-png-output-34.webp"
+                          alt="svgviewer-png-output-30"
+                          class="w-5 h-5"
+                        />
+                        <span
+                          class="text-base font-semibold text-[#344054] dark:text-[#bdb8bf]"
+                          >BILLING ADDRESS</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- input-fields -->
+                    <div class="flex flex-col gap-4">
+                      <div class="flex flex-col w-full gap-3">
+                        <!-- field-group -->
+                        <div class="flex w-full gap-2 sm:gap-4">
+                          <!-- input-field -->
+                          <div
+                            class="flex flex-col gap-[0.375rem] w-full flex-grow"
+                          >
+                            <label
+                              for=""
+                              class="text-sm leading-normal font-medium text-[#667085] dark:text-[#dddad5]"
+                              >Last Name</label
+                            >
+                            <div
+                              class="flex items-center gap-2 border-b border-[#D0D5DD] bg-white/10 [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:bg-[#181a1b1a] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-10 rounded-sm"
+                            >
+                              <input
+                                type="text"
+                                class="w-full max-w-full box-border text-base text-[#0c111d] dark:text-[#dbd8d3] border-none bg-[#FFFFFF59] dark:bg-[#181a1b59] [box-shadow:0px_1px_2px_0px_#1018280D] dark:[box-shadow:0px_1px_2px_0px_#1018280d] outline-none py-2 px-3 placeholder:text-[#667085] dark:placeholder:text-[#9e9689] placeholder:text-base placeholder:font-normal placeholder:leading-6"
+                                placeholder="Last Name"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- input-field -->
+                          <div
+                            class="flex flex-col gap-[0.375rem] w-full flex-grow"
+                          >
+                            <label
+                              for=""
+                              class="text-sm leading-normal font-medium text-[#667085] dark:text-[#dddad5]"
+                              >First Name</label
+                            >
+                            <div
+                              class="flex items-center gap-2 border-b border-[#D0D5DD] bg-white/10 [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:bg-[#181a1b1a] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-10 rounded-sm"
+                            >
+                              <input
+                                type="text"
+                                class="w-full max-w-full box-border text-base text-[#0c111d] dark:text-[#dbd8d3] border-none bg-[#FFFFFF59] dark:bg-[#181a1b59] [box-shadow:0px_1px_2px_0px_#1018280D] dark:[box-shadow:0px_1px_2px_0px_#1018280d] outline-none py-2 px-3 placeholder:text-[#667085] dark:placeholder:text-[#9e9689] placeholder:text-base placeholder:font-normal placeholder:leading-6"
+                                placeholder="First Name"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- field-group -->
+                        <div class="flex w-full gap-2 sm:gap-4">
+                          <!-- input-field -->
+                          <div
+                            class="flex flex-col gap-[0.375rem] w-full flex-grow"
+                          >
+                            <label
+                              for=""
+                              class="text-sm leading-normal font-medium text-[#667085] dark:text-[#dddad5]"
+                              >Address Line 1</label
+                            >
+                            <div
+                              class="flex items-center gap-2 border-b border-[#D0D5DD] bg-white/10 [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:bg-[#181a1b1a] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-10 rounded-sm"
+                            >
+                              <input
+                                type="text"
+                                class="w-full max-w-full box-border text-base text-[#0c111d] dark:text-[#dbd8d3] border-none bg-[#FFFFFF59] dark:bg-[#181a1b59] [box-shadow:0px_1px_2px_0px_#1018280D] dark:[box-shadow:0px_1px_2px_0px_#1018280d] outline-none py-2 px-3 placeholder:text-[#667085] dark:placeholder:text-[#9e9689] placeholder:text-base placeholder:font-normal placeholder:leading-6"
+                                placeholder="Address Line 1"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- field-group -->
+                        <div class="flex w-full gap-2 sm:gap-4">
+                          <!-- input-field -->
+                          <div
+                            class="flex flex-col gap-[0.375rem] w-full flex-grow"
+                          >
+                            <label
+                              for=""
+                              class="text-sm leading-normal font-medium text-[#667085] dark:text-[#dddad5]"
+                              >Address Line 2</label
+                            >
+                            <div
+                              class="flex items-center gap-2 border-b border-[#D0D5DD] bg-white/10 [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:bg-[#181a1b1a] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-10 rounded-sm"
+                            >
+                              <input
+                                type="text"
+                                class="w-full max-w-full box-border text-base text-[#0c111d] dark:text-[#dbd8d3] border-none bg-[#FFFFFF59] dark:bg-[#181a1b59] [box-shadow:0px_1px_2px_0px_#1018280D] dark:[box-shadow:0px_1px_2px_0px_#1018280d] outline-none py-2 px-3 placeholder:text-[#667085] dark:placeholder:text-[#9e9689] placeholder:text-base placeholder:font-normal placeholder:leading-6"
+                                placeholder="Address Line 2"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- field-group -->
+                        <div class="flex w-full gap-2 sm:gap-4">
+                          <!-- input-field -->
+                          <div
+                            class="flex flex-col gap-[0.375rem] w-full flex-grow"
+                          >
+                            <label
+                              for=""
+                              class="text-sm leading-normal font-medium text-[#667085] dark:text-[#dddad5]"
+                              >Postal Code</label
+                            >
+                            <div
+                              class="flex items-center gap-2 border-b border-[#D0D5DD] bg-white/10 [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:bg-[#181a1b1a] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-10 rounded-sm"
+                            >
+                              <input
+                                type="text"
+                                class="w-full max-w-full box-border text-base text-[#0c111d] dark:text-[#dbd8d3] border-none bg-[#FFFFFF59] dark:bg-[#181a1b59] [box-shadow:0px_1px_2px_0px_#1018280D] dark:[box-shadow:0px_1px_2px_0px_#1018280d] outline-none py-2 px-3 placeholder:text-[#667085] dark:placeholder:text-[#9e9689] placeholder:text-base placeholder:font-normal placeholder:leading-6"
+                                placeholder="Postal Code"
+                                value="12345"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- input-field -->
+                          <div
+                            class="flex flex-col gap-[0.375rem] w-full flex-grow"
+                          >
+                            <label
+                              for=""
+                              class="text-sm leading-normal font-medium text-[#667085] dark:text-[#dddad5]"
+                              >City</label
+                            >
+                            <div
+                              class="flex items-center gap-2 border-b border-[#D0D5DD] bg-white/10 [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:bg-[#181a1b1a] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-10 rounded-sm"
+                            >
+                              <input
+                                type="text"
+                                class="w-full max-w-full box-border text-base text-[#0c111d] dark:text-[#dbd8d3] border-none bg-[#FFFFFF59] dark:bg-[#181a1b59] [box-shadow:0px_1px_2px_0px_#1018280D] dark:[box-shadow:0px_1px_2px_0px_#1018280d] outline-none py-2 px-3 placeholder:text-[#667085] dark:placeholder:text-[#9e9689] placeholder:text-base placeholder:font-normal placeholder:leading-6"
+                                placeholder="City"
+                                value="Kwai Chung"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- field-group -->
+                        <div class="flex w-full gap-2 sm:gap-4">
+                          <!-- input-field -->
+                          <div
+                            class="flex flex-col gap-[0.375rem] w-full flex-grow"
+                          >
+                            <label
+                              for=""
+                              class="text-sm leading-normal font-medium text-[#667085] dark:text-[#dddad5]"
+                              >Country</label
+                            >
+                            <!-- select-dropdown -->
+                            <div
+                              class="select-dropdown w-auto relative z-[10000] flex-1"
+                              id="select-dropdown"
+                            >
+                              <div
+                                class="order-select cursor-pointer min-w-[5.75rem] rounded-[0.5rem] border-none"
+                              >
+                                <div
+                                  class="dash-select__trigger flex justify-between items-center gap-2 py-2 px-3 border-b border-[#D0D5DD] bg-white/45 dark:bg-[#181a1b73] [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-10 rounded-sm"
+                                >
+                                  <span
+                                    class="text-base text-[#0c111d] dark:text-[#dbd8d3] font-semibold leading-[1.25rem] capitalize tracking-[0.01875rem] whitespace-nowrap"
+                                    >Hong Kong</span
+                                  >
+                                  <img
+                                    class="select-arrow h-4 w-4 transition-transform duration-200"
+                                    src="https://i.ibb.co.com/8DxMjVHT/svgviewer-png-output-25.webp"
+                                    alt="arrow-down"
+                                  />
+                                </div>
+                                <div
+                                  class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top scale-95 opacity-0 h-0 overflow-hidden pointer-events-none shadow-lg transition-all duration-200 ease-out [transform-origin:50%_0]"
+                                >
+                                  <div
+                                    class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white/90 dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]/90"
+                                  >
+                                    <div
+                                      class="option flex items-center justify-center gap-[0.625rem] [&.selected]:bg-white hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                                    >
+                                      <div
+                                        class="option-inner-container flex flex-1 gap-[0.625rem]"
+                                      >
+                                        <span
+                                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                                          >Hong Kong</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="option flex items-center justify-center gap-[0.625rem] [&.selected]:bg-white hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                                    >
+                                      <div
+                                        class="option-inner-container flex flex-1 gap-[0.625rem]"
+                                      >
+                                        <span
+                                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                                          >Canada</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="option flex items-center justify-center gap-[0.625rem] [&.selected]:bg-white hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                                    >
+                                      <div
+                                        class="option-inner-container flex flex-1 gap-[0.625rem]"
+                                      >
+                                        <span
+                                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                                          >Japan</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="option flex items-center justify-center gap-[0.625rem] [&.selected]:bg-white hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                                    >
+                                      <div
+                                        class="option-inner-container flex flex-1 gap-[0.625rem]"
+                                      >
+                                        <span
+                                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                                          >Brazil</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="option flex items-center justify-center gap-[0.625rem] [&.selected]:bg-white hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                                    >
+                                      <div
+                                        class="option-inner-container flex flex-1 gap-[0.625rem]"
+                                      >
+                                        <span
+                                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                                          >Australia</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <select
+                                class="dash-real-select hidden"
+                                name="order-select"
+                                required
+                              >
+                                <option value="all-types">All Types</option>
+                                <option value="p2v">P2V</option>
+                                <option value="subscription">
+                                  Subscription
+                                </option>
+                                <option value="merch">Merch</option>
+                                <option value="mix">Mix</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <!-- input-field -->
+                          <div
+                            class="flex flex-col gap-[0.375rem] w-full flex-grow"
+                          >
+                            <label
+                              for=""
+                              class="text-sm leading-normal font-medium text-[#667085] dark:text-[#dddad5]"
+                              >State</label
+                            >
+                            <!-- select-dropdown -->
+                            <div
+                              class="select-dropdown w-auto relative z-[10000] flex-1"
+                              id="select-dropdown"
+                            >
+                              <div
+                                class="order-select cursor-pointer min-w-[5.75rem] rounded-[0.5rem] border-none"
+                              >
+                                <div
+                                  class="dash-select__trigger flex justify-between items-center gap-2 py-2 px-3 border-b border-[#D0D5DD] bg-white/45 dark:bg-[#181a1b73] [box-shadow:0px_1px_2px_0px_rgba(16,24,40,0.05)] dark:border-[#3b4043] dark:[box-shadow:0px_1px_2px_0px_rgba(24,36,61,0.05)] h-10 rounded-sm"
+                                >
+                                  <span
+                                    class="text-base text-[#0c111d] dark:text-[#dbd8d3] font-semibold leading-[1.25rem] capitalize tracking-[0.01875rem] whitespace-nowrap"
+                                    >California</span
+                                  >
+                                  <img
+                                    class="select-arrow h-4 w-4 transition-transform duration-200"
+                                    src="https://i.ibb.co.com/8DxMjVHT/svgviewer-png-output-25.webp"
+                                    alt="arrow-down"
+                                  />
+                                </div>
+                                <div
+                                  class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top scale-95 opacity-0 h-0 overflow-hidden pointer-events-none shadow-lg transition-all duration-200 ease-out [transform-origin:50%_0]"
+                                >
+                                  <div
+                                    class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white/90 dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]/90"
+                                  >
+                                    <div
+                                      class="option flex items-center justify-center gap-[0.625rem] [&.selected]:bg-white hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                                    >
+                                      <div
+                                        class="option-inner-container flex flex-1 gap-[0.625rem]"
+                                      >
+                                        <span
+                                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                                          >California</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="option flex items-center justify-center gap-[0.625rem] [&.selected]:bg-white hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                                    >
+                                      <div
+                                        class="option-inner-container flex flex-1 gap-[0.625rem]"
+                                      >
+                                        <span
+                                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                                          >Bavaria</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="option flex items-center justify-center gap-[0.625rem] [&.selected]:bg-white hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                                    >
+                                      <div
+                                        class="option-inner-container flex flex-1 gap-[0.625rem]"
+                                      >
+                                        <span
+                                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                                          >Rajasthan</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="option flex items-center justify-center gap-[0.625rem] [&.selected]:bg-white hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                                    >
+                                      <div
+                                        class="option-inner-container flex flex-1 gap-[0.625rem]"
+                                      >
+                                        <span
+                                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                                          >São Paulo</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="option flex items-center justify-center gap-[0.625rem] [&.selected]:bg-white hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]"
+                                    >
+                                      <div
+                                        class="option-inner-container flex flex-1 gap-[0.625rem]"
+                                      >
+                                        <span
+                                          class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]"
+                                          >Texas</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <select
+                                class="dash-real-select hidden"
+                                name="order-select"
+                                required
+                              >
+                                <option value="all-types">All Types</option>
+                                <option value="p2v">P2V</option>
+                                <option value="subscription">
+                                  Subscription
+                                </option>
+                                <option value="merch">Merch</option>
+                                <option value="mix">Mix</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- checkbox-container -->
+                      <div class="flex items-center gap-2">
+                        <div class="flex justify-center items-center">
+                          <input
+                            type="checkbox"
+                            name="checkbox"
+                            id="checkbox-dash-4"
+                            checked
+                            class="appearance-none bg-white border border-[#D0D5DD] rounded-[4px] w-4 min-w-4 h-4 mr-1 checked:accent-[#07f468] checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-black checked:after:border-w-0 checked:after:border-b-2 checked:after:border-r-2 checked:after:rotate-45 checked:after:box-border cursor-pointer"
+                          />
+                        </div>
+                        <label
+                          for="checkbox-dash-4"
+                          class="text-sm leading-normal sm:leading-normal ma-0 cursor-pointer text-[#0C111D] dark:text-[#dbd8d3]"
+                          >Save address for future use.</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col mt-auto bg-white/50 dark:bg-[#181a1b80] pb-[3.25rem] sm:pb-0"
+            >
+              <!-- top-up amount table section -->
+              <div
+                class="flex flex-col gap-3 py-2 px-2 mt-auto md:px-4 md:mt-[unset] lg:px-6 pb-0 sm:pb-2"
+              >
+                <!-- row -->
+                <div
+                  class="flex justify-between items-center pt-2 border-t border-transparent"
+                >
+                  <span
+                    class="text-xs leading-normal text-text-primary dark:text-text-dark-primary"
+                    >Tip Amount</span
+                  >
+                  <span
+                    class="text-sm leading-[1.25rem] text-text-primary dark:text-text-dark-primary"
+                    >USD$ 600</span
+                  >
+                </div>
+
+                <!-- row -->
+                <div
+                  class="flex justify-between items-center border-t border-transparent"
+                >
+                  <span
+                    class="text-xs leading-normal text-text-primary dark:text-text-dark-primary"
+                    >Service Charge (10%)</span
+                  >
+                  <span
+                    class="text-sm leading-[1.25rem] text-text-primary dark:text-text-dark-primary"
+                    >USD$ 60</span
+                  >
+                </div>
+
+                <!-- row (final) -->
+                <div
+                  class="flex justify-between items-center pt-2 border-t border-[#fcfcfd]"
+                >
+                  <span
+                    class="text-xs leading-normal text-text-primary dark:text-text-dark-primary"
+                    >Final Payment</span
+                  >
+                  <span
+                    class="text-base font-semibold text-text-primary dark:text-text-dark-primary"
+                    >USD$ 660</span
+                  >
+                </div>
+              </div>
+
+              <!-- button -->
+              <div
+                class="flex justify-end items-end mt-auto fixed sm:relative bottom-0 right-0 z-[100000] sm:z-auto"
+              >
+                <div class="h-11 md:h-14 shadow-[0px_0px_16px_0px_#FFFFFF80]">
+                  <button
+                    class="relative flex justify-center items-center gap-2 h-11 md:h-14 bg-[#98a2b3] hover:bg-white px-4 backdrop-blur-[100px] transition-all duration-200 group pointer-events-none"
+                  >
+                    <!-- Pseudo-element for the skewed background -->
+                    <div
+                      class="absolute top-0 -left-3 w-8 h-full bg-[#98a2b3] [transform:skew(163deg,0)_translateX(3px)] backdrop-blur-[100px] shadow-[-12px_0px_16px_0px_#ffffff40] group-hover:bg-white transition-colors duration-200 z-[-1]"
+                    ></div>
+
+                    <span
+                      class="text-base text-white font-medium leading-6 group-hover:text-[#FF0066] whitespace-nowrap transition-all duration-200"
+                    >
+                      PROCESS PAYMENT
+                    </span>
+                    <img
+                      src="https://i.ibb.co.com/NdmC2BjP/arrow-right.webp"
+                      alt="arrow-right"
+                      class="w-6 h-6 group-hover:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(87%)_saturate(5028%)_hue-rotate(328deg)_brightness(98%)_contrast(114%)] transition-all duration-200"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script defer>
+      // Scroll detection code
+      const navbar = document.querySelector(".mobile-responsive-navbar");
+      const popupContainer = document.querySelector(".token-popup-container");
+      const scrollableContainer = document.querySelector(".column-container");
+      const scrollThreshold = 10;
+
+      function handleScroll() {
+          console.log("scrolled", scrollableContainer.scrollTop);
+          if (scrollableContainer.scrollTop > scrollThreshold) {
+              navbar.classList.add('backdrop-blur-[400px]', 'bg-gradient-to-b', 'from-[rgba(240,240,240,0.5)]', 'to-[rgba(240,240,240,0.375)]', 'transition-all', 'duration-300', 'ease-linear');
+          } else {
+              navbar.classList.remove('backdrop-blur-[400px]', 'bg-gradient-to-b', 'from-[rgba(240,240,240,0.5)]', 'to-[rgba(240,240,240,0.375)]', 'transition-all', 'duration-300', 'ease-linear');
+          }
+      }
+
+      scrollableContainer.addEventListener('scroll', handleScroll);
+
+      // Check initial state
+      handleScroll();
+    </script>
+
+    <!-- select-dropdown -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Initialize all dropdowns on the page
+          document.querySelectorAll('.order-select').forEach(orderSelect => {
+              const selectDropdown = orderSelect.closest('.select-dropdown');
+              const trigger = orderSelect.querySelector('.dash-select__trigger span');
+              const arrow = orderSelect.querySelector('.select-arrow');
+              const options = orderSelect.querySelectorAll('.option');
+              const realSelect = selectDropdown.querySelector('.dash-real-select');
+              const optionsContainer = orderSelect.querySelector('.dash-options-container');
+
+              // Set initial value
+              if (realSelect) {
+                  realSelect.value = 'yearly';
+              }
+
+              // Toggle dropdown with smooth transitions
+              orderSelect.addEventListener('click', function(e) {
+                  e.stopPropagation();
+
+                  const isOpening = !optionsContainer.classList.contains('open');
+
+                  // Close all other selects first
+                  document.querySelectorAll('.order-select').forEach(s => {
+                      if (s !== orderSelect) {
+                          closeDropdown(s);
+                      }
+                  });
+
+                  if (isOpening) {
+                      // Position dropdown based on available space
+                      positionDropdown(orderSelect);
+                      openDropdown(orderSelect);
+                  } else {
+                      closeDropdown(orderSelect);
+                  }
+              });
+
+              // Handle option selection
+              options.forEach(option => {
+                  option.addEventListener('click', function(e) {
+                      e.stopPropagation();
+
+                      // Remove "selected" class from all options first
+                      options.forEach(opt => opt.classList.remove('selected'));
+
+                      // Add "selected" class to the clicked option
+                      this.classList.add('selected');
+
+                      const selectedText = this.querySelector('span').textContent;
+                      if (trigger) trigger.textContent = selectedText;
+                      if (realSelect) realSelect.value = selectedText.toLowerCase();
+
+                      // Close the dropdown
+                      closeDropdown(orderSelect);
+
+                      // Trigger change event on the real select
+                      if (realSelect) realSelect.dispatchEvent(new Event('change'));
+                  });
+              });
+
+              // Position dropdown up or down based on available space
+              function positionDropdown(select) {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+                  if (!optionsContainer) return;
+
+                  const rect = select.getBoundingClientRect();
+                  const spaceBelow = window.innerHeight - rect.bottom;
+                  const spaceAbove = rect.top;
+                  const optionsHeight = optionsContainer.scrollHeight;
+
+                  optionsContainer.classList.remove('upward', 'downward');
+
+                  if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                      optionsContainer.classList.add('upward');
+                      optionsContainer.style.top = 'auto';
+                      optionsContainer.style.bottom = 'calc(100% + 0.5rem)';
+                  } else {
+                      optionsContainer.classList.add('downward');
+                      optionsContainer.style.top = 'calc(100% + 0.5rem)';
+                      optionsContainer.style.bottom = 'auto';
+                  }
+              }
+
+              function openDropdown(select) {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+                  const arrow = select.querySelector('.select-arrow');
+
+                  if (!optionsContainer || !arrow) return;
+
+                  optionsContainer.classList.add('open');
+                  arrow.classList.add('rotate-180');
+                  optionsContainer.classList.remove('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+                  optionsContainer.classList.add('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+              }
+
+              function closeDropdown(select) {
+                  const optionsContainer = select?.querySelector('.dash-options-container');
+                  const arrow = select?.querySelector('.select-arrow');
+
+                  if (!optionsContainer || !arrow) return;
+
+                  optionsContainer.classList.remove('open');
+                  arrow.classList.remove('rotate-180');
+                  optionsContainer.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+                  optionsContainer.classList.add('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+              }
+          });
+
+          // Close dropdowns when clicking outside
+          document.addEventListener('click', function() {
+              document.querySelectorAll('.order-select').forEach(select => {
+                  closeDropdown(select);
+              });
+          });
+
+          // Reposition dropdowns on window resize
+          window.addEventListener('resize', function() {
+              document.querySelectorAll('.order-select').forEach(select => {
+                  const optionsContainer = select.querySelector('.dash-options-container');
+                  if (optionsContainer && optionsContainer.classList.contains('open')) {
+                      positionDropdown(select);
+                  }
+              });
+          });
+      });
+    </script>
+  </body>
+</html>
