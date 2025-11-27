@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Avatar</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-[#444444] font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#3e4446]">
+    <!-- template-container -->
+    <div class="flex justify-center items-center w-full min-h-screen bg-[#EAECF0] dark:bg-[#222526]">
+        <!-- popup-container -->
+        <div class="flex flex-col backdrop-blur-[50px] w-full bg-white/70 sm:max-w-[22.5rem] dark:bg-[#181a1bb3]">
+            <!-- header -->
+            <div class="flex justify-between items-center p-4">
+                <h1 class="text-xl leading-normal font-semibold opacity-70 text-[#344054] dark:text-[#bdb8af]">Crop photo</h1>
+                <img src="https://i.ibb.co.com/zWwvfc1B/close-btn.webp" alt="close-btn" class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(24%)_saturate(201%)_hue-rotate(179deg)_brightness(94%)_contrast(83%)] cursor-pointer dark:[filter:invert(91%)_sepia(8%)_saturate(749%)_hue-rotate(170deg)_brightness(90%)_contrast(87%)]">
+            </div>
+
+            <!-- image-cropper-placeholder -->
+            <div class="relative flex items-center justify-center w-full aspect-[22/19] overflow-hidden sm:aspect-[90/61]">
+                <!-- Blurred Background -->
+                <img src="https://i.ibb.co.com/70sHrpv/featured-media-bg.webp" class="w-full h-full object-cover blur-[5px] brightness-50 scale-110 pointer-events-none"/>
+
+                <!-- Sharp Center Circle -->
+                <div style="background-image: url('https://i.ibb.co.com/70sHrpv/featured-media-bg.webp')" class="absolute w-[12.1875rem] aspect-square rounded-full border-[3px] border-white bg-white overflow-hidden bg-center bg-no-repeat [background-size:385%] sm:[background-size:250%] dark:bg-[#181a1b] dark:border-[#303436]"></div>
+            </div>
+
+            <!-- edit-container -->
+            <div class="flex flex-col gap-4 px-4 py-6">
+                <!-- reflect-container -->
+                <div class="flex justify-center items-center gap-9">
+                    <img src="https://i.ibb.co.com/p6ng40CG/reflect-01.webp" alt="reflect-01" class="w-6 h-6 cursor-pointer">
+
+                    <img src="https://i.ibb.co.com/p6ng40CG/reflect-01.webp" alt="reflect-01" class="w-6 h-6 cursor-pointer rotate-90">
+                </div>
+
+                <!-- zoom & rotate container -->
+                <div class="flex flex-col gap-6">
+                    <!-- zoom-container -->
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">Zoom</h3>
+                        <div class="flex justify-between items-center gap-4">
+                            <img src="https://i.ibb.co.com/8pcWQNK/zoom-out.webp" alt="zoom-out" class="w-5 h-5 cursor-pointer">
+
+                            <div class="w-full">
+                                <input data-range-input type="range" min="0" max="100" value="25"
+                                    class="w-full h-2 rounded-full appearance-none outline-none cursor-pointer bg-[linear-gradient(to_right,#07F468_0%,#07F468_var(--p),#EAECF0_var(--p),#EAECF0_100%)]
+
+                                    [&::-webkit-slider-thumb]:appearance-none
+                                    [&::-webkit-slider-thumb]:w-6
+                                    [&::-webkit-slider-thumb]:h-6
+                                    [&::-webkit-slider-thumb]:rounded-full
+                                    [&::-webkit-slider-thumb]:bg-white
+                                    dark:[&::-webkit-slider-thumb]:bg-[#181a1b]
+                                    [&::-webkit-slider-thumb]:shadow-[inset_0_0_0_1px_#DEE5EC,0px_2px_4px_-2px_rgba(16,24,40,0.06),0px_4px_8px_-2px_rgba(16,24,40,0.10)]
+                                    [&::-webkit-slider-thumb]:cursor-pointer
+
+                                    [&::-moz-range-thumb]:w-6
+                                    [&::-moz-range-thumb]:h-6
+                                    [&::-moz-range-thumb]:rounded-full
+                                    [&::-moz-range-thumb]:bg-white
+                                    dark:[&::-moz-range-thumb]:bg-[#181a1b]
+                                    [&::-moz-range-thumb]:shadow-[inset_0_0_0_1px_#DEE5EC,0px_2px_4px_-2px_rgba(16,24,40,0.06),0px_4px_8px_-2px_rgba(16,24,40,0.10)]
+                                    [&::-moz-range-thumb]:cursor-pointer
+
+                                    [&::-moz-range-track]:bg-transparent
+                                    "
+                                />
+                            </div>
+
+                            <img src="https://i.ibb.co.com/W1qpBxC/zoom-in.webp" alt="zoom-in" class="w-5 h-5 cursor-pointer">
+                        </div>
+                    </div>
+
+                    <!-- rotate-container -->
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">Rotate</h3>
+                        <div class="flex justify-between items-center gap-4">
+                            <img src="https://i.ibb.co.com/VYgmfd9T/refresh-ccw-01.webp" alt="rotate-left" class="w-5 h-5 cursor-pointer">
+
+                            <div class="w-full">
+                                <input data-range-input type="range" min="0" max="100" value="50"
+                                    class="w-full h-2 rounded-full appearance-none outline-none cursor-pointer bg-[linear-gradient(to_right,#EAECF0_0%,#EAECF0_var(--p),#EAECF0_var(--p),#EAECF0_100%)]
+
+                                    [&::-webkit-slider-thumb]:appearance-none
+                                    [&::-webkit-slider-thumb]:w-6
+                                    [&::-webkit-slider-thumb]:h-6
+                                    [&::-webkit-slider-thumb]:rounded-full
+                                    [&::-webkit-slider-thumb]:bg-white
+                                    [&::-webkit-slider-thumb]:shadow-[inset_0_0_0_1px_#DEE5EC,0px_2px_4px_-2px_rgba(16,24,40,0.06),0px_4px_8px_-2px_rgba(16,24,40,0.10)]
+                                    [&::-webkit-slider-thumb]:cursor-pointer
+
+                                    [&::-moz-range-thumb]:w-6
+                                    [&::-moz-range-thumb]:h-6
+                                    [&::-moz-range-thumb]:rounded-full
+                                    [&::-moz-range-thumb]:bg-white
+                                    [&::-moz-range-thumb]:shadow-[inset_0_0_0_1px_#DEE5EC,0px_2px_4px_-2px_rgba(16,24,40,0.06),0px_4px_8px_-2px_rgba(16,24,40,0.10)]
+                                    [&::-moz-range-thumb]:cursor-pointer
+
+                                    [&::-moz-range-track]:bg-transparent
+                                    "
+                                />
+                            </div>
+
+                            <img src="https://i.ibb.co.com/VYgmfd9T/refresh-ccw-01.webp" alt="rotate-right" class="w-5 h-5 cursor-pointer scale-x-[-1]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- button-container -->
+            <div class="flex justify-between items-center gap-4 p-4">
+                <button class="w-full h-10 flex justify-center items-center px-2 py-1 cursor-pointer">
+                    <span class="text-lg font-medium text-[#0C111D] dark:text-[#dbd8d3]">CANCEL</span>
+                </button>
+
+                <button class="w-full h-10 flex justify-center items-center bg-black px-2 py-1 group/button cursor-pointer hover:bg-[#07F468] dark:bg-[#181a1b] dark:hover:bg-[#06c454]">
+                    <span class="text-lg font-medium text-[#07F468] group-hover/button:text-black dark:text-[#23f97b] dark:group-hover/button:text-[#e8e6e3]">SAVE</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const sliders = document.querySelectorAll("[data-range-input]");
+
+            function rangeSlider(slider) {
+                const value = (slider.value / slider.max) * 100;
+                slider.style.setProperty("--p", `${value}%`);
+                console.log(value)
+            }
+
+            sliders.forEach((slider) => {
+                slider.addEventListener("input", () => rangeSlider(slider));
+                rangeSlider(slider);
+            });
+        });
+    </script>
+  </body>
+</html>

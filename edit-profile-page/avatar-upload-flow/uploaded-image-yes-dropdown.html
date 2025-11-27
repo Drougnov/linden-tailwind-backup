@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="max-sm:text-sm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Avatar</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-[#444444] font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#3e4446]">
+    <!-- dropdown-menu-list -->
+    <ul class="flex flex-col rounded-lg bg-white border-[#BABCCB80] shadow-[0px_0px_10px_0px_#0000001A] w-max dark:bg-[#181a1b] dark:border-[#41474980]">
+        <!-- list-item -->
+        <li class="h-12 flex items-center gap-2.5 p-2 border-b-[#DEE5EC] cursor-pointer dark:border-b-[#2b3b4b]">
+            <img src="https://i.ibb.co.com/wZgQbKp9/svgviewer-png-output-49.webp" alt="edit" class="w-6 h-6 [filter:brightness(0)] dark:[filter:invert(1)]">
+            <span class="text-base font-medium capitalize text-[#303437] dark:text-[#c8c3bb]">edit</span>
+        </li>
+
+        <!-- list-item -->
+        <li class="h-12 flex items-center gap-2.5 p-2 border-b-[#DEE5EC] cursor-pointer dark:border-b-[#2b3b4b]">
+            <img src="https://i.ibb.co.com/LzBLyfyn/upload-01.webp" alt="upload" class="w-6 h-6 [filter:brightness(0)] dark:[filter:invert(1)]">
+            <span class="text-base font-medium capitalize text-[#303437] dark:text-[#c8c3bb]">upload new</span>
+        </li>
+
+        <!-- list-item -->
+        <li class="h-12 flex items-center gap-2.5 p-2 border-b-[#DEE5EC] cursor-pointer dark:border-b-[#2b3b4b]">
+            <img src="https://i.ibb.co.com/HfqyVf84/Images.webp" alt="avatar" class="w-6 h-6 [filter:brightness(0)] dark:[filter:invert(1)]">
+            <span class="text-base font-medium capitalize text-[#303437] dark:text-[#c8c3bb]">choose from avatars</span>
+        </li>
+    </ul>
+  </body>
+</html>
