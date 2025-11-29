@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Avatar</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-[#444444] font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#3e4446]">
+    <!-- template-container -->
+    <div class="flex justify-center w-full min-h-screen bg-[#EAECF0] dark:bg-[#222526]">
+        <!-- progress-wrapper -->
+        <div class="w-[7.5rem] h-[7.5rem] bg-white rounded-full sm:w-[8.0475rem] sm:h-[8.0475rem] md:w-[10.6875rem] md:h-[10.6875rem] xl:w-[12.1875rem] xl:h-[12.1875rem]">
+            <div class="w-full h-full relative bg-cover bg-center bg-no-repeat rounded-full before:absolute before:content-[''] before:inset-0 before:bg-black/75 before:rounded-full" style="background-image: url('https://i.ibb.co.com/Kx9QDc68/auth-bg-compressed.webp');">
+                <svg width="200" height="200" viewBox="0 0 200 200" class="absolute w-full h-full z-[1] transform rotate-[330deg]">
+                    <circle
+                        class="[fill:none]"
+                        stroke-width="13"
+                        cx="100"
+                        cy="100"
+                        r="94"
+                    />
+
+                    <circle
+                        id="progress-circle"
+                        class="[fill:none] [stroke:#07F468] [transition:stroke-dashoffset_0.5s_ease]"
+                        stroke-width="13"
+                        cx="100"
+                        cy="100"
+                        r="94"
+                        transform="rotate(-90 100 100)"
+                    />
+
+                </svg>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-sm leading-normal font-medium tracking-[-0.0625rem] text-[#07F468]">Uploading...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get DOM elements
+        const progressCircle = document.getElementById('progress-circle');
+
+        // Calculate circumference of the circle
+        const radius = 90;
+        const circumference = 2 * Math.PI * radius;
+
+        // Set initial stroke properties
+        progressCircle.style.strokeDasharray = circumference;
+        progressCircle.style.strokeDashoffset = circumference;
+
+        // Function to update progress
+        function updateProgress(percent) {
+            // Calculate the offset based on percentage
+            const offset = circumference - (percent / 100) * circumference;
+            
+            // Apply the offset to the circle
+            progressCircle.style.strokeDashoffset = offset;
+        }
+
+        // Initialize with 90% progress
+        updateProgress(90);
+    </script>
+  </body>
+</html>

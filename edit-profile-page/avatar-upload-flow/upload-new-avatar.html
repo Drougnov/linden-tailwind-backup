@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Avatar</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Splide JS & CSS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js" integrity="sha512-4TcjHXQMLM7Y6eqfiasrsnRCc8D/unDeY1UGKGgfwyLUCTsHYMxF7/UHayjItKQKIoP6TTQ6AMamb9w2GMAvNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide.min.css" integrity="sha512-KhFXpe+VJEu5HYbJyKQs9VvwGB+jQepqb4ZnlhUF/jQGxYJcjdxOTf6cr445hOc791FFLs18DKVpfrQnONOB1g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-[#444444] font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#3e4446]">
+    <!-- template-container -->
+    <div class="flex justify-center items-center w-full min-h-screen bg-[#EAECF0] dark:bg-[#222526]">
+        <!-- popup-container -->
+        <div class="flex flex-col backdrop-blur-[50px] w-full bg-white/70 sm:max-w-[22.5rem] dark:bg-[#181a1bb3] md:max-w-[34.75rem] md:rounded-[0.3125rem] xl:max-w-[64rem]">
+            <!-- header -->
+            <div class="flex justify-between items-center p-4">
+                <h1 class="text-xl leading-normal font-semibold opacity-70 text-[#344054] dark:text-[#bdb8af]">Choose Avatar</h1>
+                <img src="https://i.ibb.co.com/zWwvfc1B/close-btn.webp" alt="close-btn" class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(24%)_saturate(201%)_hue-rotate(179deg)_brightness(94%)_contrast(83%)] cursor-pointer dark:[filter:invert(91%)_sepia(8%)_saturate(749%)_hue-rotate(170deg)_brightness(90%)_contrast(87%)]">
+            </div>
+
+            <!-- avatar-upload-container -->
+            <div class="flex justify-center items-center w-full h-[14.375rem] sm:mt-[-1.1rem]">
+                <div class="w-[12.1875rem] aspect-square rounded-full relative bg-[#55CFCD]">
+                    <!-- avatar -->
+                    <img src="https://i.ibb.co.com/kVD0Tgpx/avatar-1.webp" alt="avatar-1" class="w-full h-full object-cover rounded-full">
+
+                    <!-- upload-button -->
+                    <button class="absolute bottom-0 right-0 w-12 h-12 flex justify-center items-center rounded-full bg-[#07F468] group/button hover:bg-black">
+                        <img src="https://i.ibb.co.com/LzBLyfyn/upload-01.webp" alt="upload-01" class="w-8 h-8 group-hover/button:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(43%)_saturate(4479%)_hue-rotate(92deg)_brightness(109%)_contrast(95%)]">
+                    </button>
+                </div>
+            </div>
+
+            <!-- avatar-&-background-selection -->
+            <div class="flex flex-col gap-6 pt-1 pb-6 md:gap-4 md:py-6 xl:px-4 xl:gap-6">
+                <!-- avatar-selection-container -->
+                <div class="flex flex-col gap-2 md:py-2 xl:px-4">
+                    <!-- title -->
+                    <h3 class="text-base font-medium px-4 text-[#0C111D] dark:text-[#dbd8d3] xl:px-0">Avatar</h3>
+
+                    <!-- slider-container -->
+                    <div class="w-full flex overflow-x-scroll [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]">
+                        <div class="flex justify-center items-center gap-2 w-max md:flex-col xl:w-full">
+                            <ul data-avatar-list class="flex justify-center items-center gap-2 shrink-0 md:gap-6 xl:w-full xl:justify-between xl:gap-0">
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/kVD0Tgpx/avatar-1.webp" alt="avatar-1" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/yFPYB4Xy/avatar-2.webp" alt="avatar-2" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] active">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/Gfjkz91c/avatar-3.webp" alt="avatar-3" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/4Zc67ChD/avatar-4.webp" alt="avatar-4" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/TD734VQ0/avatar-5.webp" alt="avatar-5" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/kVD0Tgpx/avatar-1.webp" alt="avatar-1" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/yFPYB4Xy/avatar-2.webp" alt="avatar-2" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/Gfjkz91c/avatar-3.webp" alt="avatar-3" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/4Zc67ChD/avatar-4.webp" alt="avatar-4" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/TD734VQ0/avatar-5.webp" alt="avatar-5" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul data-avatar-list class="flex justify-center items-center gap-2 shrink-0 md:gap-6 xl:w-full xl:justify-between xl:gap-0">
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/kVD0Tgpx/avatar-1.webp" alt="avatar-1" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/yFPYB4Xy/avatar-2.webp" alt="avatar-2" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/Gfjkz91c/avatar-3.webp" alt="avatar-3" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/4Zc67ChD/avatar-4.webp" alt="avatar-4" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/TD734VQ0/avatar-5.webp" alt="avatar-5" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/kVD0Tgpx/avatar-1.webp" alt="avatar-1" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/yFPYB4Xy/avatar-2.webp" alt="avatar-2" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/Gfjkz91c/avatar-3.webp" alt="avatar-3" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/4Zc67ChD/avatar-4.webp" alt="avatar-4" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+
+                                <li class="w-20 min-w-[5rem] h-20 rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52]">
+                                    <div class="slide-content w-full h-full flex justify-center items-center">
+                                        <img src="https://i.ibb.co.com/TD734VQ0/avatar-5.webp" alt="avatar-5" class="w-14 h-14 object-cover pointer-events-none">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- background-selection-wrapper -->
+                <div class="flex flex-col gap-2 md:py-2">
+                    <!-- title -->
+                    <h3 class="text-base font-medium px-4 text-[#0C111D] dark:text-[#dbd8d3]">Background</h3>
+
+                    <!-- background-selection-container -->
+                    <ul data-background-list class="flex flex-wrap justify-center items-center gap-2 px-2 md:gap-4 md:px-4 xl:justify-between xl:gap-0">
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#F72485] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#680EEB] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#3A0BA3] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#4361EE] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#55AACF] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1 active">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#55CFCD] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#4CC9F0] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#8569FA] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#AE4AEF] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#FF76DD] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#89FAD3] md:w-full md:h-full"></div>
+                        </li>
+
+                        <li class="flex justify-center items-center w-[3.125rem] h-[3.125rem] rounded-full cursor-pointer [&.active]:border-[3px] [&.active]:border-[#98A2B3] dark:[&.active]:border-[#494f52] md:w-[4.625rem] md:h-[4.625rem] md:p-1">
+                            <div class="w-[2.375rem] h-[2.375rem] rounded-full bg-[#78F0F5] md:w-full md:h-full"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- button-container -->
+            <div class="flex justify-between items-center gap-4 p-4">
+                <button class="w-full h-10 flex justify-center items-center px-2 py-1 cursor-pointer">
+                    <span class="text-lg font-medium text-[#0C111D] dark:text-[#dbd8d3]">CANCEL</span>
+                </button>
+
+                <button class="w-full h-10 flex justify-center items-center bg-black px-2 py-1 group/button cursor-pointer hover:bg-[#07F468] dark:bg-[#181a1b] dark:hover:bg-[#06c454]">
+                    <span class="text-lg font-medium text-[#07F468] group-hover/button:text-black dark:text-[#23f97b] dark:group-hover/button:text-[#e8e6e3]">SAVE</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const avatarWrapper = document.querySelector('[data-avatar-list]').parentElement;
+
+        avatarWrapper.addEventListener('click', (e) => {
+            const item = e.target.closest('li');
+            if (!item) return;
+
+            // Remove active class from all list item inside both lists
+            avatarWrapper.querySelectorAll('li').forEach(li =>
+                li.classList.remove('active')
+            );
+
+            // Add active class to clicked one
+            item.classList.add('active');
+        });
+
+        const backgroundWrapper = document.querySelector('[data-background-list]');
+        backgroundWrapper.addEventListener('click', (e) => {
+            const item = e.target.closest('li');
+            if (!item) return;
+
+            // Remove active class from all list item
+            backgroundWrapper.querySelectorAll('li').forEach(li =>
+                li.classList.remove('active')
+            );
+
+            // Add active class to clicked one
+            item.classList.add('active');
+        });
+    </script>
+
+  </body>
+</html>

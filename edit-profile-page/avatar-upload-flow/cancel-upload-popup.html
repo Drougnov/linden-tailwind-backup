@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Avatar</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-[#444444] font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#3e4446]">
+    <!-- template-container -->
+    <div class="flex justify-center items-center w-full min-h-screen bg-[#EAECF0] dark:bg-[#222526]">
+        <!-- popup-outer-wrapper -->
+        <div class="w-full h-screen flex justify-center items-center backdrop-blur-[5px] w-full bg-white/5 dark:bg-[#181a1bb3]">
+            <!-- popup-container -->
+            <div class="fixed bottom-0 left-0 w-full drop-shadow-[0px_-8px_10px_#0000000D] sm:max-w-[23.4375rem] sm:shadow-[0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] sm:inset-[unset]">
+                <div class="flex flex-col gap-6 p-4 backdrop-blur-[50px] bg-white/90 dark:bg-[#181a1be6]">
+                    <p class="text-base font-semibold text-[#344054] dark:text-[#bdb8af]">Are you sure you want to delete your screenshot?</p>
+                
+                    <!-- button-container -->
+                    <div class="flex items-center gap-2">
+                        <button class="w-full h-10 flex justify-center items-center bg-transparent">
+                            <span class="text-base font-medium text-[#FF4405] dark:text-[#ff571e]">Cancel</span>
+                        </button>
+
+                        <button class="w-full h-10 flex justify-center items-center bg-[#FF4405] hover:bg-[#ff692e] dark:bg-[#c93300] dark:hover:bg-[#b03200]">
+                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">Cancel</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
