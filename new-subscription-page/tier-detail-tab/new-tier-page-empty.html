@@ -141,29 +141,56 @@
                         </section>
 
                         <!-- featured tier toggle section -->
-                        <div class="flex gap-4">
+                        <div data-featured-tier-toggle-container class="flex gap-4">
                             <label class="relative inline-block w-9 h-5 min-w-[2.25rem] my-0.5 cursor-pointer">
                                 <input type="checkbox" class="peer h-0 w-0 opacity-0" id="featured-tier">
                                 <span class="absolute inset-0 cursor-pointer rounded-[0.75rem] bg-[#98a2b380] transition-all duration-100 ease-in-out peer-checked:bg-[#0c111d] dark:bg-[#434c5b80] dark:peer-checked:bg-[#0a0e17]"></span>
                                 <span class="absolute left-[0.125rem] top-1/2 h-4 w-4 -translate-y-1/2 transform rounded-full bg-[#ffffff] shadow-[0_1px_3px_0_rgba(16,24,40,0.1),0_1px_2px_0_rgba(16,24,40,0.06)] transition-all duration-100 ease-in-out peer-checked:translate-x-[1rem] dark:bg-[#181a1b]"></span>
                             </label>
 
-                            <div class="flex flex-col gap-2">
+                            <div data-featured-toast-container class="flex flex-col gap-2 grow group/feature-toggle-container">
                                 <!-- Toggle Label -->
                                 <label for="featured-tier" class="text-base font-semibold break-words cursor-pointer text-[#0c111d] dark:text-[#dbd8d3]">This is a Featured Tier</label>
-                                <p class="text-sm text-[#0C111D] dark:text-[#dbd8d3]">Featured tier will be displayed first by default on your subscription tier page.</p>
-                            </div>
+                                <div class="flex flex-col gap-1 w-full">
+                                    <p class="text-sm text-[#0C111D] dark:text-[#dbd8d3]">Featured tier will be displayed first by default on your subscription tier page.</p>
+                                    <div data-dashboard-toast="alert" class="hidden group-[.featured-tier]/feature-toggle-container:flex w-full">
+                                        <div class="w-full border-b border-[rgba(208,213,221,1)] dark:border-[rgba(74,85,104,1)] flex relative">
+                                            <div class="toast-border w-[0.188rem] absolute h-full left-0 top-0 block bg-[rgba(253,176,34,1)] dark:bg-[rgba(255,180,34,1)]"></div>
+                                            <div class="dashboard-toast-inner-wrapper flex gap-4 py-3 px-3 flex-1 min-w-0 min-h-0
+                                                        [background:linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.9)_100%),linear-gradient(0deg,rgba(253,176,34,0.15)_0%,rgba(253,176,34,0.15)_100%),rgba(255,255,255,0.9)]
+                                                        dark:[background:linear-gradient(90deg,rgba(26,32,44,0)_0%,rgba(26,32,44,0.9)_100%),linear-gradient(0deg,rgba(253,176,34,0.15)_0%,rgba(253,176,34,0.15)_100%),rgba(26,32,44,0.9)]">
+                                            <div class="dashboard-toast-inner-container relative w-full flex items-start gap-5">
+                                                <div class="flex flex-col flex-1 min-w-0 min-h-0 pr-[1.125rem] md:pr-0">
+                                                    <div class="flex flex-col gap-2 pb-2">
+                                                        <div class="flex justify-between items-center pt-1 pr-1">
+                                                        <span class="toast-heading text-sm font-semibold text-[#B54708] dark:text-[rgba(255,180,34,1)]">
+                                                            Your ‘VIP Lounge tier’ will not longer be a featured tier.
+                                                        </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between items-center gap-4">
+                                                        <span class="text-black dark:text-[#e8e6e3] text-sm flex-1
+                                                                    [text-shadow:0_0_10px_rgba(0,0,0,0.10)] dark:[text-shadow:0_0_10px_rgba(255,255,255,0.10)]">
+                                                        This tier will be updated as the feature tier in your profile after saving.
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
 
-                            
+                                </div>
+                            </div>
                         </div>
                     </section>
 
                     <!-- price-setting-section -->
-                    <section class="flex flex-col gap-4 px-2 py-4 bg-white/25 md:gap-6 md:p-4 dark:bg-[#181a1b40]">
+                    <section data-price-setting-section class="flex flex-col gap-4 px-2 py-4 bg-white/25 group/price-container paid-tier md:gap-6 md:p-4 dark:bg-[#181a1b40]">
                         <h2 class="text-xl leading-normal font-semibold text-[#667085] dark:text-[#9e9689]">Price Setting</h2>
 
                         <!-- Tab-button-container (free/paid) -->
-                        <ul class="flex w-full h-10 whitespace-nowrap rounded-[0.3125rem] overflow-hidden border border-[#D0D5DD] bg-[#F9FAFB] dark:border-[#3b4043] dark:bg-[#1b1d1e]">
+                        <ul data-price-tab-button-container class="flex w-full h-10 whitespace-nowrap rounded-[0.3125rem] overflow-hidden border border-[#D0D5DD] bg-[#F9FAFB] dark:border-[#3b4043] dark:bg-[#1b1d1e]">
                             <li class="flex flex-1 justify-center items-center gap-2 border-r border-[#D0D5DD] cursor-pointer group/tab [&.active]:bg-[#0C111D] dark:border-[#3b4043] dark:[&.active]:bg-[#162036]">
                                 <div class="w-full flex justify-center items-center gap-2 px-4">
                                     <span class="text-sm font-medium text-[#98A2B3] whitespace-nowrap group-[.active]/tab:text-white group-[.active]/tab:font-semibold dark:text-[#b0a99e] dark:group-[.active]/tab:text-[#e8e6e3]">Free Tier</span>
@@ -178,7 +205,7 @@
                         </ul>
 
                         <!-- subscription-based-price-section -->
-                        <section class="flex flex-col gap-4">
+                        <section class="hidden flex-col gap-4 group-[.paid-tier]/price-container:flex">
                             <h3 class="text-base font-semibold text-[#0C111D] dark:text-[#dbd8d3] md:text-lg">Subscription Base Price</h3>
 
                             <div class="flex w-full">
@@ -224,7 +251,7 @@
                         </section>
 
                         <!-- subscriber-discount-section -->
-                        <div class="flex flex-col gap-4">
+                        <div class="hidden flex-col gap-4 group-[.paid-tier]/price-container:flex">
                             <div class="flex flex-col gap-2">
                                 <div class="flex items-center gap-2">
                                     <h3 class="text-base font-semibold text-[#0C111D] dark:text-[#dbd8d3] md:text-lg">Subscriber Discount</h3>
@@ -243,7 +270,7 @@
                     </section>
 
                     <!-- subscriber-setting-section -->
-                    <section class="flex flex-col gap-4 px-2 py-4 bg-white/25 md:gap-6 md:p-4 dark:bg-[#181a1b40]">
+                    <section data-subscriber-setting-wrapper class="flex flex-col gap-4 px-2 py-4 bg-white/25 group/wrapper md:gap-6 md:p-4 dark:bg-[#181a1b40]">
                         <h2 class="text-xl leading-normal font-semibold text-[#667085] dark:text-[#9e9689]">Subscriber Setting</h2>
 
                         <!-- subscriber-selection-section -->
@@ -275,6 +302,21 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="hidden group-[.only-invited]/wrapper:flex flex-col gap-2 py-2">
+                                <p class="text-base text-[#344054] dark:text-[#bdb7af]">Send subscription link below to specific fans:</p>
+                                <!-- input-field -->
+                                <div class="flex">
+                                    <!-- input-container -->
+                                    <div class="w-full h-12 flex gap-3.5 bg-white/75 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1bbf] dark:border-[#3b4043]">
+                                        <input data-invite-link type="text" placeholder="Enter amount" class="text-base bg-transparent border-none outline-none grow pl-3.5 text-[#101828] placeholder:text-[#667085] pointer-events-none dark:text-[#d6d3cd] dark:placeholder:text-[#9e9689]" value="Fansocial.app/invitelinkwww">
+                                        <button data-copy-button class="flex items-center gap-1 px-3.5 cursor-pointer">
+                                            <img src="https://i.ibb.co.com/jvvTYfmR/copy-01.webp" alt="copy-01" class="w-5 h-5">
+                                            <span class="text-sm font-semibold whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">Copy Link</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
 
                         <!-- maximum-subscribers-section -->
@@ -285,7 +327,7 @@
                                     <span class="text-xs leading-normal font-medium italic text-[#667085] dark:text-[#9e9689]">Optional</span>
                                 </div>
 
-                                <p class="text-base text-[#475467] dark:text-[#b1aba0]">Limit how many fans can join this tier at once. Leave blank to disable feature.</p>
+                                <p class="text-base text-[#344054] dark:text-[#bdb7af]">Limit how many fans can join this tier at once. Leave blank to disable feature.</p>
                             
                                 <!-- subscriber-amount input-field -->
                                 <div class="flex flex-col gap-1.5">
@@ -355,10 +397,17 @@
                                     </div>
                                 </div>
 
-                                <!-- input-container -->
-                                <div class="h-11 flex items-center bg-white/30 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b4d] dark:border-[#3b4043]">
-                                    <input type="text" class="text-base bg-transparent border-none outline-none w-full min-w-0 px-3.5 text-[#0C111D] placeholder:text-[#667085] dark:text-[#dbd8d3] dark:placeholder:text-[#9e9689]">
-                                    <span class="text-base font-semibold whitespace-nowrap px-[1.125rem] text-[#344054] dark:text-[#bdb7af]">% off</span>
+                                <div data-free-tokens-section class="flex flex-col gap-1.5 group/input">
+                                    <!-- input-container -->
+                                    <div class="h-11 flex items-center bg-white/30 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b4d] dark:border-[#3b4043]">
+                                        <div class="flex items-center gap-2 px-3.5 w-full min-w-0">
+                                            <input data-free-tokens-input type="text" class="text-base bg-transparent border-none outline-none w-full min-w-0 text-[#0C111D] placeholder:text-[#667085] dark:text-[#dbd8d3] dark:placeholder:text-[#9e9689]">
+                                            <img src="https://i.ibb.co.com/yBMzbHWz/alert-circle.webp" alt="alert-circle" class="hidden w-4 h-4 group-[.error]/input:flex">
+                                        </div>
+                                        <span class="text-base font-semibold whitespace-nowrap px-[1.125rem] text-[#344054] dark:text-[#bdb7af]">% off</span>
+                                    </div>
+
+                                    <p class="hidden text-sm text-[#FF4405] group-[.error]/input:flex dark:text-[#ff571e]">value must be between 1-99.</p>
                                 </div>
                             </div>
 
@@ -410,10 +459,17 @@
                                     </div>
                                 </div>
 
-                                <!-- input-container -->
-                                <div class="h-11 flex items-center bg-white/30 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b4d] dark:border-[#3b4043]">
-                                    <input type="text" class="text-base bg-transparent border-none outline-none w-full min-w-0 px-3.5 text-[#0C111D] placeholder:text-[#667085] dark:text-[#dbd8d3] dark:placeholder:text-[#9e9689]">
-                                    <span class="text-base font-semibold whitespace-nowrap px-[1.125rem] text-[#344054] dark:text-[#bdb7af]">% off</span>
+                                <div data-merch-discount-section class="flex flex-col gap-1.5 group/input">
+                                    <!-- input-container -->
+                                    <div class="h-11 flex items-center bg-white/30 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b4d] dark:border-[#3b4043]">
+                                        <div class="flex items-center gap-2 px-3.5 w-full min-w-0">
+                                            <input data-merch-discount-input type="text" class="text-base bg-transparent border-none outline-none w-full min-w-0 text-[#0C111D] placeholder:text-[#667085] dark:text-[#dbd8d3] dark:placeholder:text-[#9e9689]">
+                                            <img src="https://i.ibb.co.com/yBMzbHWz/alert-circle.webp" alt="alert-circle" class="hidden w-4 h-4 group-[.error]/input:flex">
+                                        </div>
+                                        <span class="text-base font-semibold whitespace-nowrap px-[1.125rem] text-[#344054] dark:text-[#bdb7af]">% off</span>
+                                    </div>
+
+                                    <p class="hidden text-sm text-[#FF4405] group-[.error]/input:flex dark:text-[#ff571e]">value must be between 1-99.</p>
                                 </div>
                             </div>
 
@@ -766,6 +822,7 @@
 
     <!-- Include the Quill library -->
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
     <!-- Initialize Quill editor with basic style -->
     <script>
       // Custom icons
@@ -1003,5 +1060,113 @@
         mediaQuery.addEventListener("change", handleResize);
     </script>
 
+    <!-- handle invalid input value -->
+    <script>
+        document.querySelectorAll('input[data-free-tokens-input], input[data-merch-discount-input]').forEach(input => {
+
+            input.addEventListener('input', () => {
+
+                const wrapper = input.closest('.group\\/input');
+                const raw = input.value.trim();
+
+                // If empty, remove error and exit
+                if (raw === '') {
+                    wrapper.classList.remove('error');
+                    return;
+                }
+
+                const value = parseInt(raw, 10);
+
+                const isInvalid = value < 1 || value > 99;
+
+                wrapper.classList.toggle('error', isInvalid);
+
+            });
+
+        });
+    </script>
+
+    <!-- handle only-invited selection -->
+    <script>
+        const wrapper = document.querySelector('[data-subscriber-setting-wrapper]');
+
+        document.querySelectorAll('.dash-option').forEach(option => {
+            option.addEventListener('click', () => {
+
+                const label = option.innerText.trim().toLowerCase();
+
+                const invited = label === 'only those invited';
+
+                wrapper.classList.toggle('only-invited', invited);
+
+            });
+        });
+    </script>
+
+    <!-- handle-invite-copy-link -->
+     <script>
+        document.querySelector('[data-copy-button]').addEventListener('click', async () => {
+
+            const input = document.querySelector('[data-invite-link]');
+            const link = input.value.trim();
+
+            if (!link) return;
+
+            try {
+                await navigator.clipboard.writeText(link);
+
+                // UI Feedback
+                const btn = document.querySelector('[data-copy-button] span');
+                btn.textContent = "Copied!";
+                
+                setTimeout(() => btn.textContent = "Copy Link", 1500);
+
+            } catch {
+                alert("Failed to copy");
+            }
+
+        });
+    </script>
+
+    <!-- handle paid/free tier -->
+    <script>
+        const priceSection = document.querySelector('[data-price-setting-section]');
+        const tabs = priceSection.querySelectorAll('[data-price-tab-button-container] > li');
+        console.log(priceSection)
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+
+                // Remove active from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+
+                // Add active to clicked tab
+                tab.classList.add('active');
+
+                const label = tab.innerText.trim().toLowerCase();
+
+                if (label === 'free tier') {
+                    priceSection.classList.remove('paid-tier');
+                } else {
+                    priceSection.classList.add('paid-tier');
+                }
+
+            });
+        });
+    </script>
+
+    <!-- handle toast for featured-tier -->
+    <script>
+        const checkbox = document.getElementById('featured-tier');
+        const toastContainer = document.querySelector('[data-featured-toast-container]');
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+            toastContainer.classList.add('featured-tier');
+            } else {
+            toastContainer.classList.remove('featured-tier');
+            }
+        });
+    </script>
   </body>
 </html>
