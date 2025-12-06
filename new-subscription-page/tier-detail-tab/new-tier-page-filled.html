@@ -52,7 +52,7 @@
 
                     <h1 class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">New Tier</h1>
 
-                    <img src="https://i.ibb.co.com/xtn4YLHF/3-dots.webp" alt="settings" class="w-6 h-6 [filter:brightness(0)] cursor-pointer dark:[filter:brightness(100%)]">
+                    <img data-save-as-draft-button src="https://i.ibb.co.com/xtn4YLHF/3-dots.webp" alt="settings" class="w-6 h-6 [filter:brightness(0)] cursor-pointer dark:[filter:brightness(100%)]">
                 </div>
 
                 <!-- desktop-nav -->
@@ -1106,6 +1106,18 @@
         <span class="text-sm text-black group-[.preview-active]/button:text-[#07F468] group-hover/button:text-[#07F468] dark:text-[#e8e6e3] dark:group-[.preview-active]/button:text-[#06c454] dark:group-hover/button:text-[#06c454]">Preview</span>
     </button>
 
+    <!-- save-as-draft -->
+    <div data-save-as-draft-popup class="hidden fixed bottom-0 left-0 w-full rounded-t-[0.625rem] bg-white shadow-[0px_0px_12px_0px_#0000001A] backdrop-blur-[50px] z-[7] md:!hidden dark:bg-[#181a1b]">
+        <div class="flex flex-col py-1 w-full">
+            <!-- item -->
+            <div class="flex justify-center items-center h-10 px-1.5 py-0.5">
+                <div class="flex justify-center items-center px-2.5 py-2">
+                    <span class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]">Save as draft</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Include the Quill library -->
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
 
@@ -1511,6 +1523,22 @@
                         morePlansPopup.classList.remove("flex");
                     }
                 });
+            }
+        });
+    </script>
+
+    <!-- hanlde save-as-draft popup -->
+    <script>
+        const draftBtn = document.querySelector('[data-save-as-draft-button]');
+        const draftPopup = document.querySelector('[data-save-as-draft-popup]');
+
+        draftBtn.addEventListener('click', () => {
+            draftPopup.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!draftPopup.contains(e.target) && !draftBtn.contains(e.target)) {
+                draftPopup.classList.add('hidden');
             }
         });
     </script>
