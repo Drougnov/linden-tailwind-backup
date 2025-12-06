@@ -890,18 +890,18 @@
                                     <!-- buttons-container -->
                                     <div class="flex items-center gap-2 py-2">
                                         <div class="flex bg-white/15 rounded-[3.125rem] backdrop-blur-[25px] w-1/2 md:w-full dark:bg-[#181a1b26]">
-                                            <button class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                            <button data-discountPlan="1d" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
                                                 <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">1 day</span>
                                             </button>
-                                            <button class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                            <button data-discountPlan="1m" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
                                                 <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">1 month</span>
                                                 <span class="text-xs leading-normal font-medium text-[#FFED29] dark:text-[#ffee37]">-5%</span>
                                             </button>
-                                            <button class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer discount-active [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                            <button data-discountPlan="6m" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer discount-active [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
                                                 <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">6 month</span>
                                                 <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#FFED29] dark:text-[#ffee37]">-50%</span>
                                             </button>
-                                            <button class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                            <button data-discountPlan="1y" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
                                                 <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">1 year</span>
                                                 <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#FFED29] dark:text-[#ffee37]">-5%</span>
                                             </button>
@@ -913,22 +913,22 @@
                                     </div>
 
                                     <!-- Price -->
-                                    <div class="flex justify-between gap-2">
-                                        <div class="flex items-baseline grow">
+                                    <div class="flex gap-2">
+                                        <div class="flex items-baseline">
                                             <span class="text-xl leading-normal font-semibold text-[#FFED29] dark:text-[#ffee37]">USD$</span>
                                             <span class="text-4xl leading-[2.75rem] font-semibold tracking-[-0.045rem] text-[#FFED29] dark:text-[#ffee37]">55.86</span>
                                         </div>
 
-                                        <div class="flex flex-col justify-between grow">
-                                            <div class="flex justify-end items-center gap-1 relative pl-2 pr-1 rounded bg-[#0C111D] dark:bg-[#dbd8d3] max-[370px]:flex-col max-[370px]:py-1">
-                                                <img src="https://i.ibb.co.com/nqWs4Ny4/flash.webp" alt="flash" class="absolute -left-[0.3125rem] top-1/2 -translate-y-1/2 h-5 max-[370px]:-left-1.5">
-                                                <span class="text-[0.6875rem] leading-[1.125rem] whitespace-nowrap text-[#07F468] dark:text-[#06c454]">Sale Ends in</span>
+                                        <div class="flex flex-col justify-between">
+                                            <div class="flex items-baseline gap-1 relative pl-4 pr-1 rounded bg-[#0C111D] ml-[0.3125rem] flex-wrap dark:bg-[#dbd8d3] max-[360px]:py-1 max-[360px]:w-min">
+                                                <img src="https://i.ibb.co.com/nqWs4Ny4/flash.webp" alt="flash" class="absolute -left-1.5 top-1/2 -translate-y-1/2 h-5">
+                                                <span class="text-[0.6875rem] leading-none whitespace-nowrap text-[#07F468] dark:text-[#06c454]">Sale Ends in</span>
                                                 <div class="flex items-center gap-0.5">
-                                                    <span class="text-xs leading-none font-bold text-[#07F468] dark:text-[#06c454]">02</span>
-                                                    <span class="text-xs leading-none font-bold text-[#07F468] dark:text-[#06c454]">:</span>
-                                                    <span class="text-xs leading-none font-bold text-[#07F468] dark:text-[#06c454]">13</span>
-                                                    <span class="text-xs leading-none font-bold text-[#07F468] dark:text-[#06c454]">:</span>
-                                                    <span class="text-xs leading-none font-bold text-[#07F468] dark:text-[#06c454]">07</span>
+                                                    <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">02</span>
+                                                    <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">:</span>
+                                                    <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">13</span>
+                                                    <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">:</span>
+                                                    <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">07</span>
                                                 </div>
                                             </div>
 
@@ -1022,6 +1022,74 @@
                                 <!-- featured-tag -->
                                 <div class="absolute -top-2 -left-2 [clip-path:polygon(0_0,100%_0,calc(100%-0.5rem)_100%,0_100%)] flex justify-center items-center pl-1.5 pr-2.5 py-0.5 z-[6] bg-black dark:bg-[#181a1b]">
                                     <span class="text-sm font-semibold text-[#07F468] dark:text-[#06c454]">FEATURED</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- more-plans-popup -->
+                    <div data-more-plans-popup class="hidden fixed bottom-0 left-0 w-full rounded-t-[0.625rem] bg-white shadow-[0px_0px_12px_0px_#0000001A] backdrop-blur-[50px] z-[5] md:!hidden dark:bg-[#181a1b]">
+                        <div class="flex flex-col py-1 w-full">
+                            <!-- item -->
+                            <div data-discountPlan="1d" class="flex justify-center items-center h-11 px-1.5 py-0.5 [&.discount-active]:bg-[#F2F4F7]">
+                                <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-sm font-medium whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">1 day</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-base font-semibold text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                                </div>
+                            </div>
+
+                            <!-- item -->
+                            <div data-discountPlan="1m" class="flex justify-center items-center h-11 px-1.5 py-0.5 [&.discount-active]:bg-[#F2F4F7]">
+                                <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]">1 month</span>
+                                            <span class="text-xs leading-normal font-medium text-[#FF0066] dark:text-[#ff1a76]">-5%</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-base font-semibold whitespace-nowrap text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                                </div>
+                            </div>
+
+                            <!-- item -->
+                            <div data-discountPlan="6m" class="flex justify-center items-center h-11 px-1.5 py-0.5 discount-active [&.discount-active]:bg-[#F2F4F7]">
+                                <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-sm font-medium whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">6 month</span>
+                                            <span class="text-xs leading-normal font-medium text-[#FF0066] dark:text-[#ff1a76]">-50%</span>
+                                        </div>
+
+                                        <!-- hot -->
+                                        <div class="backdrop-blur-[10px]">
+                                            <div class="flex justify-center items-center gap-1 rounded ml-2 pl-2.5 pr-1.5 py-0.5 backdrop-blur-[10px] bg-[#FCE40D] dark:bg-[#a19102]">
+                                                <img src="https://i.ibb.co.com/4gCVM3BW/Hot-icon.webp" alt="Hot-icon" class="absolute -top-1 -left-2 w-6 h-6">
+                                                <span class="text-[0.625rem] leading-normal whitespace-nowrap font-semibold text-black dark:text-[#e8e6e3]">Most Value</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-base font-semibold text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                                </div>
+                            </div>
+
+                            <!-- item -->
+                            <div data-discountPlan="1y" class="flex justify-center items-center h-11 px-1.5 py-0.5 [&.discount-active]:bg-[#F2F4F7]">
+                                <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-sm font-medium whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">1 year</span>
+                                            <span class="text-xs leading-normal font-medium text-[#FF0066] dark:text-[#ff1a76]">-5%</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-base font-semibold text-black dark:text-[#e8e6e3]">USD$55.86</span>
                                 </div>
                             </div>
                         </div>
@@ -1383,6 +1451,66 @@
             toastContainer.classList.add('featured-tier');
             } else {
             toastContainer.classList.remove('featured-tier');
+            }
+        });
+    </script>
+
+    <!-- handle tier card discount plan tabs -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Function to activate a plan across all elements
+            function activatePlan(planValue) {
+                // Remove 'discount-active' class from all plan elements
+                const allPlanElements = document.querySelectorAll('[data-discountPlan]');
+                allPlanElements.forEach(el => {
+                    el.classList.remove('discount-active');
+                });
+                
+                // Add 'discount-active' class to elements with matching plan value
+                const matchingElements = document.querySelectorAll(`[data-discountPlan="${planValue}"]`);
+                matchingElements.forEach(el => {
+                    el.classList.add('discount-active');
+                });
+            }
+            
+            // Add click listeners to tier card buttons
+            const tierButtons = document.querySelectorAll('[data-tier-card-wrapper] [data-discountPlan]');
+            tierButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const planValue = btn.getAttribute('data-discountPlan');
+                    activatePlan(planValue);
+                });
+            });
+            
+            // Add click listeners to more plans popup items
+            const popupItems = document.querySelectorAll('[data-more-plans-popup] [data-discountPlan]');
+            popupItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const planValue = item.getAttribute('data-discountPlan');
+                    activatePlan(planValue);
+                });
+            });
+            
+            // Optional: Handle the "More Plans" button to show the popup
+            const morePlansButton = document.querySelector('[data-more-plans-button]');
+            const morePlansPopup = document.querySelector('[data-more-plans-popup]');
+            
+            if (morePlansButton && morePlansPopup) {
+                morePlansButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    morePlansPopup.classList.add("flex");
+                    morePlansPopup.classList.remove("hidden");
+                });
+                
+                // Close popup when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!morePlansPopup.contains(e.target) && !morePlansButton.contains(e.target)) {
+                        morePlansPopup.classList.add("hidden");
+                        morePlansPopup.classList.remove("flex");
+                    }
+                });
             }
         });
     </script>
