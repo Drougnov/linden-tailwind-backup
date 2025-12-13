@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New tier page</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Quill CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-[#EAECF0] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#222526]">
+    <!-- main-wrapper -->
+    <div class="relative before:content-[''] before:fixed before:inset-0 before:pointer-events-none before:bg-cover before:bg-center before:bg-no-repeat before:bg-[url('https://i.ibb.co.com/QvpHN5vD/mobile-gradient-main-bg-1.webp')] md:before:bg-[url('https://i.ibb.co.com/dw910Z5b/gradient-main-bg.webp')]">
+        <!-- container -->
+        <div class="flex flex-col gap-6 md:gap-8">
+            <!-- header -->
+            <div class="flex flex-col gap-2 backdrop-blur-[25px] [background:linear-gradient(180deg,#F0F0F0_0%,rgba(240,240,240,0.75)_100%)] md:gap-6 md:px-4 md:bg-white/5 md:backdrop-blur-[50px] xl:px-10 dark:[background:linear-gradient(#202325_0%,rgba(32,35,37,0.75)_100%)] md:dark:bg-[#181a1b0d]">
+                <!-- mobile-nav -->
+                <div class="flex justify-between items-center p-2 md:hidden">
+                    <img src="https://i.ibb.co.com/Zpm5jfZ9/chevron-left.webp" alt="back" class="w-6 h-6 [filter:brightness(0)] cursor-pointer dark:[filter:brightness(100%)]">
+
+                    <h1 class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">New Tier</h1>
+
+                    <img data-save-as-draft-button src="https://i.ibb.co.com/xtn4YLHF/3-dots.webp" alt="settings" class="w-6 h-6 [filter:brightness(0)] cursor-pointer dark:[filter:brightness(100%)]">
+                </div>
+
+                <!-- desktop-nav -->
+                <div class="hidden justify-between items-center pt-10 md:flex">
+                    <!-- back-button -->
+                    <div class="flex justify-center items-center gap-1 cursor-pointer">
+                        <img src="https://i.ibb.co.com/HLCwss7q/arrow-left.webp" alt="back" class="w-4 h-4 [filter:brightness(0)] dark:[filter:brightness(100%)]">
+                        <span class="text-xs leading-normal font-medium text-[#344054] dark:text-[#bdb8af]">Back</span>
+                    </div>
+
+                    <div class="flex items-center gap-[1.625rem]">
+                        <!-- save-as-draft -->
+                        <a href="#" class="flex items-center gap-0.5 cursor-pointer">
+                            <img src="https://i.ibb.co.com/JWNPWKRW/upload-02.webp" alt="upload" class="w-5 h-5">
+                            <span class="text-sm font-medium text-[#155EEF]">Save as draft</span>
+                        </a>
+
+                        <button class="flex justify-center items-center px-2 h-10 bg-black cursor-pointer group/button hover:bg-[#07F468] disabled [&.disabled]:pointer-events-none [&.disabled]:bg-[#3440540D] dark:[&.disabled]:bg-[#323e520d]">
+                            <span class="text-lg font-medium text-[#07F468] group-hover/button:text-black group-[.disabled]/button:text-[#98A2B3] dark:group-[.disabled]/button:text-[#b0a99e]">SAVE & PUBLISH</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- tab-wrapper -->
+                <div class="flex items-center gap-2 px-0">
+                    <!-- tab-container -->
+                    <div class="flex items-center gap-6 px-2 sm:px00 w-full overflow-x-auto whitespace-nowrap [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]">
+                        <!-- tab-item -->
+                        <div class="flex justify-center items-center gap-2 px-1 pb-3 grow min-w-max max-w-[calc((100%/3)-1rem)] cursor-pointer group/tab [&.active]:border-b-[2px] [&.active]:border-[#FB5BA2] md:w-max md:grow-0 dark:[&.active]:border-[#950444]">
+                            <img src="https://i.ibb.co.com/qYw4qbtR/info-square.webp" alt="info-square" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(44%)_sepia(18%)_saturate(467%)_hue-rotate(183deg)_brightness(93%)_contrast(86%)] group-[.active]/tab:[filter:brightness(0)_saturate(100%)_invert(15%)_sepia(77%)_saturate(6803%)_hue-rotate(330deg)_brightness(100%)_contrast(108%)]">
+                            <span class="text-sm font-semibold whitespace-nowrap text-[#667085] group-[.active]/tab:text-[#FF0066] dark:text-[#9e9689] dark:group-[.active]/tab:text-[#ff1a76]">Plan Detail</span>
+                        </div>
+
+                        <!-- tab-item -->
+                        <div class="flex justify-center items-center gap-2 px-1 pb-3 grow min-w-max max-w-[calc((100%/3)-1rem)] cursor-pointer active group/tab [&.active]:border-b-[2px] [&.active]:border-[#FB5BA2] md:w-max md:grow-0 dark:[&.active]:border-[#950444]">
+                            <img src="https://i.ibb.co.com/NghXmqwT/dollar.webp" alt="dollar" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(44%)_sepia(18%)_saturate(467%)_hue-rotate(183deg)_brightness(93%)_contrast(86%)] group-[.active]/tab:[filter:brightness(0)_saturate(100%)_invert(15%)_sepia(77%)_saturate(6803%)_hue-rotate(330deg)_brightness(100%)_contrast(108%)]">
+                            <span class="text-sm font-semibold whitespace-nowrap text-[#667085] group-[.active]/tab:text-[#FF0066] dark:text-[#9e9689] dark:group-[.active]/tab:text-[#ff1a76]">Plan Variations & Promotion</span>
+                        </div>
+
+                        <!-- tab-item -->
+                        <div class="flex justify-center items-center gap-2 px-1 pb-3 grow min-w-max max-w-[calc((100%/3)-1rem)] cursor-pointer group/tab [&.active]:border-b-[2px] [&.active]:border-[#FB5BA2] md:w-max md:grow-0 dark:[&.active]:border-[#950444]">
+                            <img src="https://i.ibb.co/ycjs2rZ2/share.webp" alt="share" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(44%)_sepia(18%)_saturate(467%)_hue-rotate(183deg)_brightness(93%)_contrast(86%)] group-[.active]/tab:[filter:brightness(0)_saturate(100%)_invert(15%)_sepia(77%)_saturate(6803%)_hue-rotate(330deg)_brightness(100%)_contrast(108%)]">
+                            <span class="text-sm font-semibold whitespace-nowrap text-[#667085] group-[.active]/tab:text-[#FF0066] dark:text-[#9e9689] dark:group-[.active]/tab:text-[#ff1a76]">Sharing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- content-wrapper -->
+            <div class="flex gap-6 md:gap-10 xl:px-10">
+                <!-- content-container -->
+                <div class="flex flex-col gap-6 grow md:gap-8 md:pb-6 xl:pb-20">
+                    <!-- subscription-variations-section -->
+                    <div class="flex flex-col gap-4 px-2 py-4 bg-white/25 backdrop-blur-[25px] md:p-4 dark:bg-[#181a1b40]">
+                        <!-- title-section -->
+                        <div class="flex flex-col gap-2">
+                            <!-- title-section -->
+                            <div class="flex items-center gap-2">
+                                <h2 class="text-xl leading-normal font-semibold text-[#667085] dark:text-[#9e9689]">Subscription Variations</h2>
+                                <span class="text-xs leading-normal font-medium italic text-[#0C111D] dark:text-[#dbd8d3]">Optional</span>
+                            </div>
+
+                            <p class="text-sm text-[#344054] dark:text-[#bdb8af]">Award those who are loyal to you! Offer discounted plans when they subscribe for longer period of time! You may add up to 3 plan variations. Final discounted price are calculated based on your Subscription Base Price in <span class="text-sm underline text-[#344054] dark:text-[#bdb8af]">Tier Detail</span>.</p>
+                        </div>
+
+                        <!-- subscription-plans-section -->
+                        <div class="flex flex-col gap-2">
+                            <!-- subscription-plan -->
+                            <div class="flex flex-col gap-4 px-3 py-4 bg-white/25 border-b border-[#D0D5DD] rounded-md md:py-6 md:rounded-none md:bg-transparent dark:bg-[#181a1b40] dark:border-[#3b4043] md:dark:bg-transparent">
+                                <!-- top-section -->
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-base font-semibold text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">2 MONTH SUBSCRIPTION</h3>
+                                    <div class="flex flex-col gap-1 sm:flex-row-reverse sm:justify-between sm:items-center sm:flex-wrap">
+                                        <div class="flex justify-center items-center gap-1 self-end w-max px-2.5 py-0.5 rounded-[3.125rem] bg-[#F2F4F7] sm:self-center dark:bg-[#1e2022]">
+                                            <img src="https://i.ibb.co.com/wFzbBWk2/infinite.webp" alt="infinite" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">unlimited usage</span>
+                                        </div>
+
+                                        <!-- price -->
+                                        <div class="flex items-center gap-2 w-max">
+                                            <div class="inline-flex items-end">
+                                                <span class="text-base font-medium align-middle text-[#0C111D] dark:text-[#dbd8d3]">USD$</span>
+                                                <span class="text-3xl leading-[2.375rem] font-semibold align-baseline text-[#0C111D] dark:text-[#dbd8d3]">24.86</span>
+                                            </div>
+
+                                            <!-- discount-tag -->
+                                            <div class="flex justify-center items-center px-1 py-0.5 bg-[#FCE40D] dark:bg-[#a19102]">
+                                                <span class="text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3]">-20%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- bottom-section -->
+                                <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center">
+                                    <div class="flex gap-4 flex-wrap gap-y-2 sm:pt-1">
+                                        <div class="flex items-center gap-1">
+                                            <img src="https://i.ibb.co.com/GQFhzHdh/logo-bg.webp" alt="logo bg" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">Everyone</span>
+                                        </div>
+
+                                        <div class="flex items-center gap-1">
+                                            <img src="https://i.ibb.co.com/zWDYxDdt/calendar-01.webp" alt="calendar 01" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">No End Date</span>
+                                        </div>
+
+                                        <div class="flex items-center gap-1">
+                                            <img src="https://i.ibb.co.com/nsMDfjWJ/dollar-01.webp" alt="dollar 01" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">No Min. spending</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- edit & remove -->
+                                    <div class="flex justify-end items-center gap-4 sm:grow">
+                                        <button class="flex justify-center items-center gap-0.5 outline-none cursor-pointer">
+                                            <img src="https://i.ibb.co.com/d01w6NWF/pen.webp" alt="pen" class="w-5 h-5">
+                                            <span class="text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]">EDIT</span>
+                                        </button>
+
+                                        <button class="flex justify-center items-center gap-0.5 outline-none cursor-pointer">
+                                            <img src="https://i.ibb.co.com/7twNxfc1/trash.webp" alt="trash" class="w-5 h-5">
+                                            <span class="text-sm font-medium text-[#FF0066] dark:text-[#ff1a76]">REMOVE</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- subscription-plan -->
+                            <div class="flex flex-col gap-4 px-3 py-4 bg-white/25 border-b border-[#D0D5DD] rounded-md md:py-6 md:rounded-none md:bg-transparent dark:bg-[#181a1b40] dark:border-[#3b4043] md:dark:bg-transparent">
+                                <!-- top-section -->
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-base font-semibold text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">6 MONTH SUBSCRIPTION</h3>
+                                    <div class="flex flex-col gap-1 sm:flex-row-reverse sm:justify-between sm:items-center sm:flex-wrap">
+                                        <div class="flex justify-center items-center gap-1 self-end w-max px-2.5 py-0.5 rounded-[3.125rem] bg-[#F2F4F7] sm:self-center dark:bg-[#1e2022]">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">0<span class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">/100</span> usage</span>
+                                        </div>
+
+                                        <!-- price -->
+                                        <div class="flex items-center gap-2 w-max">
+                                            <div class="inline-flex items-end">
+                                                <span class="text-base font-medium align-middle text-[#0C111D] dark:text-[#dbd8d3]">USD$</span>
+                                                <span class="text-3xl leading-[2.375rem] font-semibold align-baseline text-[#0C111D] dark:text-[#dbd8d3]">55.86</span>
+                                            </div>
+
+                                            <!-- discount-tag -->
+                                            <div class="flex justify-center items-center px-1 py-0.5 bg-[#FCE40D] dark:bg-[#a19102]">
+                                                <span class="text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3]">-40%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- bottom-section -->
+                                <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center">
+                                    <div class="flex gap-4 flex-wrap gap-y-2 sm:pt-1">
+                                        <div class="flex items-center gap-1">
+                                            <img src="https://i.ibb.co.com/GQFhzHdh/logo-bg.webp" alt="logo bg" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">Everyone</span>
+                                        </div>
+
+                                        <div class="flex items-center gap-1">
+                                            <img src="https://i.ibb.co.com/zWDYxDdt/calendar-01.webp" alt="calendar 01" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">23 APR 2025-24 APR 2026</span>
+                                        </div>
+
+                                        <div class="flex items-center gap-1">
+                                            <img src="https://i.ibb.co.com/nsMDfjWJ/dollar-01.webp" alt="dollar 01" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">No Min. spending</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- edit & remove -->
+                                    <div class="flex justify-end items-center gap-4 sm:grow">
+                                        <button class="flex justify-center items-center gap-0.5 outline-none cursor-pointer">
+                                            <img src="https://i.ibb.co.com/d01w6NWF/pen.webp" alt="pen" class="w-5 h-5">
+                                            <span class="text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]">EDIT</span>
+                                        </button>
+
+                                        <button class="flex justify-center items-center gap-0.5 outline-none cursor-pointer">
+                                            <img src="https://i.ibb.co.com/7twNxfc1/trash.webp" alt="trash" class="w-5 h-5">
+                                            <span class="text-sm font-medium text-[#FF0066] dark:text-[#ff1a76]">REMOVE</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- subscription-plan -->
+                            <div class="flex flex-col gap-4 px-3 py-4 bg-white/25 border-b border-[#D0D5DD] rounded-md md:py-6 md:rounded-none md:bg-transparent dark:bg-[#181a1b40] dark:border-[#3b4043] md:dark:bg-transparent">
+                                <!-- top-section -->
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-base font-semibold text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">1 YEAR SUBSCRIPTION</h3>
+                                    <div class="flex flex-col gap-1 sm:flex-row-reverse sm:justify-between sm:items-center sm:flex-wrap">
+                                        <div class="flex justify-center items-center gap-1 self-end w-max px-2.5 py-0.5 rounded-[3.125rem] bg-[#F2F4F7] sm:self-center dark:bg-[#1e2022]">
+                                            <img src="https://i.ibb.co.com/wFzbBWk2/infinite.webp" alt="infinite" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">unlimited usage</span>
+                                        </div>
+
+                                        <!-- price -->
+                                        <div class="flex items-center gap-2 w-max">
+                                            <div class="inline-flex items-end">
+                                                <span class="text-base font-medium align-middle text-[#0C111D] dark:text-[#dbd8d3]">USD$</span>
+                                                <span class="text-3xl leading-[2.375rem] font-semibold align-baseline text-[#0C111D] dark:text-[#dbd8d3]">240.34</span>
+                                            </div>
+
+                                            <!-- discount-tag -->
+                                            <div class="flex justify-center items-center px-1 py-0.5 bg-[#FCE40D] dark:bg-[#a19102]">
+                                                <span class="text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3]">-60%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- bottom-section -->
+                                <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center">
+                                    <div class="flex gap-4 flex-wrap gap-y-2 sm:pt-1">
+                                        <div class="flex items-center gap-1">
+                                            <img src="https://i.ibb.co.com/GQFhzHdh/logo-bg.webp" alt="logo bg" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">Everyone</span>
+                                        </div>
+
+                                        <div class="flex items-center gap-1">
+                                            <img src="https://i.ibb.co.com/zWDYxDdt/calendar-01.webp" alt="calendar 01" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">23 APR 2025-24 APR 2026</span>
+                                        </div>
+
+                                        <div class="flex items-center gap-1">
+                                            <img src="https://i.ibb.co.com/nsMDfjWJ/dollar-01.webp" alt="dollar 01" class="w-4 h-4">
+                                            <span class="text-sm text-[#344054] dark:text-[#bdb8af]">USD$100 Min. spending</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- edit & remove -->
+                                    <div class="flex justify-end items-center gap-4 sm:grow">
+                                        <button class="flex justify-center items-center gap-0.5 outline-none cursor-pointer">
+                                            <img src="https://i.ibb.co.com/d01w6NWF/pen.webp" alt="pen" class="w-5 h-5">
+                                            <span class="text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]">EDIT</span>
+                                        </button>
+
+                                        <button class="flex justify-center items-center gap-0.5 outline-none cursor-pointer">
+                                            <img src="https://i.ibb.co.com/7twNxfc1/trash.webp" alt="trash" class="w-5 h-5">
+                                            <span class="text-sm font-medium text-[#FF0066] dark:text-[#ff1a76]">REMOVE</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- lucky-draw section -->
+                    <div class="flex flex-col gap-4 px-2 py-4 bg-white/25 md:p-4 dark:bg-[#181a1b40]">
+                        <!-- title-section -->
+                        <div class="flex flex-col gap-4">
+                            <!-- title-section -->
+                            <div class="flex items-center gap-1">
+                                <h2 class="text-xl leading-normal font-semibold text-[#667085] dark:text-[#9e9689]">Lucky Draw</h2>
+                                <span class="text-xs leading-normal font-medium italic text-[#0C111D] dark:text-[#dbd8d3]">Optional</span>
+                            </div>
+
+                            <p class="text-base text-[#344054] dark:text-[#bdb8af]">Customise discount for the selected special ones. Create lucky draw for your followers, invite specific fans and more.</p>
+                        </div>
+
+                        <!-- active-lucky-draw-section -->
+                        <div class="flex flex-col gap-2">
+                            <!-- title -->
+                            <div class="flex gap-1 h-[1.875rem]">
+                                <h3 class="text-base font-semibold align-middle text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">Active Lucky Draw</h3>
+                                <span class="text-[0.6em] leading-normal font-semibold align-super text-[#0C111D] dark:text-[#dbd8d3]">1</span>
+                            </div>
+
+                            <!-- lucky-draw-section -->
+                            <div class="rounded-[.3125rem] border border-transparent [background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.6))_padding-box,linear-gradient(90deg,rgba(180,84,211,0.1),rgba(254,127,54,0.1),rgba(254,212,47,0.1),rgba(38,201,201,0.1),rgba(41,114,218,0.1))_border-box,linear-gradient(90deg,#B454D3,#FE7F36,#FED42F,#26C9C9,#2972DA)_border-box]">
+                                <div class="flex flex-col gap-4 p-3 rounded bg-white/50 sm:p-4 md:gap-3">
+                                    <!-- top-section -->
+                                    <div class="flex gap-2 sm:items-center md:gap-4 md:items-start lg:items-center">
+                                        <img src="https://i.ibb.co.com/DfZPXfv9/money-cat.webp" alt="money cat" class="w-32 h-32">
+
+                                        <div data-lucky-draw-info-wrapper class="flex flex-col sm:gap-3">
+                                            <!-- info-container -->
+                                            <div class="flex flex-col gap-2">
+                                                <h3 class="text-lg font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Lucky Draw</h3>
+                                                <div class="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-4 sm:gap-y-2 sm:gap-1">
+                                                    <div class="flex items-center gap-1">
+                                                        <img src="https://i.ibb.co.com/GQFhzHdh/logo-bg.webp" alt="logo bg" class="w-4 h-4">
+                                                        <span class="text-sm text-[#344054] dark:text-[#bdb8af]">Everyone</span>
+                                                    </div>
+
+                                                    <div class="flex items-center gap-1">
+                                                        <img src="https://i.ibb.co.com/zWDYxDdt/calendar-01.webp" alt="calendar 01" class="w-4 h-4">
+                                                        <span class="text-sm text-[#344054] dark:text-[#bdb8af]">23 APR 2025-24 APR 2026</span>
+                                                    </div>
+
+                                                    <div class="flex items-center gap-1">
+                                                        <img src="https://i.ibb.co.com/nsMDfjWJ/dollar-01.webp" alt="dollar 01" class="w-4 h-4">
+                                                        <span class="text-sm text-[#344054] dark:text-[#bdb8af]">USD$100 Min. spending</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- bottom-section -->
+                                    <div data-lucky-draw-bottom-section class="flex flex-col gap-3">
+                                        <!-- draw-item-container -->
+                                        <div class="flex flex-col gap-1 sm:flex-row sm:flex-wrap">
+                                            <!-- item -->
+                                            <div class="flex items-center w-full h-9 flex rounded-[3.125rem] overflow-hidden sm:max-w-[17.8125rem] md:max-w-[19.0625rem] xl:max-w-[19.59375rem]">
+                                                <div class="h-full flex items-center gap-1 px-3 py-[0.0625rem] grow bg-[#0C111D] dark:bg-[#dbd8d3]">
+                                                    <span class="text-base font-semibold text-[#07F468] dark:text-[#06c454]">90% off 1 YEAR</span>
+                                                </div>
+
+                                                <div class="h-9 flex justify-center items-center gap-1 px-2 py-[0.0625rem] bg-[#07F468] dark:bg-[#06c454]">
+                                                    <div class="flex justify-center items-center h-5">
+                                                        <img src="https://i.ibb.co.com/S4vSFgKK/token.webp" alt="token" class="w-4 h-4">
+                                                    </div>
+                                                    <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">1/1 Left</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- item -->
+                                            <div class="flex items-center w-full h-9 flex rounded-[3.125rem] overflow-hidden sm:max-w-[17.8125rem] md:max-w-[19.0625rem] xl:max-w-[19.59375rem]">
+                                                <div class="h-full flex items-center gap-1 px-3 py-[0.0625rem] grow bg-[#0C111D] dark:bg-[#dbd8d3]">
+                                                    <span class="text-base font-semibold text-[#07F468] dark:text-[#06c454]">90% off 6 months</span>
+                                                </div>
+
+                                                <div class="h-9 flex justify-center items-center gap-1 px-2 py-[0.0625rem] bg-[#07F468] dark:bg-[#06c454]">
+                                                    <div class="flex justify-center items-center h-5">
+                                                        <img src="https://i.ibb.co.com/S4vSFgKK/token.webp" alt="token" class="w-4 h-4">
+                                                    </div>
+                                                    <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">5/5 Left</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- item -->
+                                            <div class="flex items-center w-full h-9 flex rounded-[3.125rem] overflow-hidden sm:max-w-[17.8125rem] md:max-w-[19.0625rem] xl:max-w-[19.59375rem]">
+                                                <div class="h-full flex items-center gap-1 px-3 py-[0.0625rem] grow bg-[#0C111D] dark:bg-[#dbd8d3]">
+                                                    <span class="text-base font-semibold text-[#07F468] dark:text-[#06c454]">FREE 1 month!</span>
+                                                </div>
+
+                                                <div class="h-9 flex justify-center items-center gap-1 px-2 py-[0.0625rem] bg-[#07F468] dark:bg-[#06c454]">
+                                                    <div class="flex justify-center items-center h-5">
+                                                        <img src="https://i.ibb.co.com/S4vSFgKK/token.webp" alt="token" class="w-4 h-4">
+                                                    </div>
+                                                    <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">50/50 Left</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- item -->
+                                            <div class="flex items-center w-full h-9 flex rounded-[3.125rem] overflow-hidden sm:max-w-[17.8125rem] md:max-w-[19.0625rem] xl:max-w-[19.59375rem]">
+                                                <div class="h-full flex items-center gap-1 px-3 py-[0.0625rem] grow bg-[#0C111D] dark:bg-[#dbd8d3]">
+                                                    <span class="text-base font-semibold text-[#07F468] dark:text-[#06c454]">Lifetime 50% off~</span>
+                                                </div>
+
+                                                <div class="h-9 flex justify-center items-center gap-1 px-2 py-[0.0625rem] bg-[#07F468] dark:bg-[#06c454]">
+                                                    <div class="flex justify-center items-center h-5">
+                                                        <img src="https://i.ibb.co.com/S4vSFgKK/token.webp" alt="token" class="w-4 h-4">
+                                                    </div>
+                                                    <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">1/1 Left</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- item -->
+                                            <div class="flex items-center w-full h-9 flex rounded-[3.125rem] overflow-hidden sm:max-w-[17.8125rem] md:max-w-[19.0625rem] xl:max-w-[19.59375rem]">
+                                                <div class="h-full flex items-center gap-1 px-3 py-[0.0625rem] grow bg-[#0C111D] dark:bg-[#dbd8d3]">
+                                                    <span class="text-base font-semibold text-[#07F468] dark:text-[#06c454]">FREE 6 months!</span>
+                                                </div>
+
+                                                <div class="h-9 flex justify-center items-center gap-1 px-2 py-[0.0625rem] bg-[#07F468] dark:bg-[#06c454]">
+                                                    <div class="flex justify-center items-center h-5">
+                                                        <img src="https://i.ibb.co.com/S4vSFgKK/token.webp" alt="token" class="w-4 h-4">
+                                                    </div>
+                                                    <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">10/10 Left</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- edit & remove -->
+                                        <div class="flex justify-end items-center gap-4 sm:grow">
+                                            <button class="flex justify-center items-center gap-0.5 outline-none cursor-pointer">
+                                                <img src="https://i.ibb.co.com/d01w6NWF/pen.webp" alt="pen" class="w-5 h-5">
+                                                <span class="text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]">EDIT</span>
+                                            </button>
+
+                                            <button class="flex justify-center items-center gap-0.5 outline-none cursor-pointer">
+                                                <img src="https://i.ibb.co.com/7twNxfc1/trash.webp" alt="trash" class="w-5 h-5">
+                                                <span class="text-sm font-medium text-[#FF0066] dark:text-[#ff1a76]">REMOVE</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- button-section -->
+                    <div class="flex items-center gap-2 p-2 md:gap-6 md:px-4 md:py-0 md:justify-end xl:px-0">
+                        <!-- save-as-draft -->
+                        <a href="#" class="hidden items-center gap-0.5 cursor-pointer md:flex">
+                            <img src="https://i.ibb.co.com/JWNPWKRW/upload-02.webp" alt="upload" class="w-5 h-5">
+                            <span class="text-sm font-medium text-[#155EEF]">Save as draft</span>
+                        </a>
+
+                        <button class="flex justify-center items-center px-2 h-10 bg-black cursor-pointer group/button hover:bg-[#07F468] [&.disabled]:pointer-events-none [&.disabled]:bg-[#3440540D] dark:[&.disabled]:bg-[#323e520d] w-full md:w-max">
+                            <span class="text-base font-medium text-[#07F468] group-hover/button:text-black group-[.disabled]/button:text-[#98A2B3] dark:group-[.disabled]/button:text-[#b0a99e] md:text-lg">SAVE & PUBLISH</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- tier-card-wrapper -->
+                <div data-tier-card-wrapper class="fixed h-[100svh] inset-0 z-[5] translate-x-full transition-transform duration-300 ease-out sm:w-[25.5rem] sm:right-0 sm:left-auto md:w-[28.25rem] xl:relative xl:inset-[unset] xl:h-[unset] xl:w-[unset] xl:translate-x-0 [&.preview-active]:translate-x-0">
+                    <div class="h-full flex justify-center items-center p-2 bg-black/80 backdrop-blur-[50px] sm:px-6 xl:h-max xl:p-0 xl:bg-transparent xl:backdrop-blur-0 dark:bg-[#181a1bcc] dark:xl:bg-transparent">
+                        <div class="w-full h-full [background:linear-gradient(180deg,rgba(0,0,0,0.14)_30%,rgba(0,0,0,0.7)_100%),url('https://i.ibb.co.com/70sHrpv/featured-media-bg.webp')_center/cover_no-repeat] rounded-[0.3125rem] shadow-[0px_0px_80px_0px_#07F46840,0px_0px_8px_0px_#07F46880] sm:max-h-[40.6875rem] md:w-[24rem] md:h-[37.625rem] dark:[background:linear-gradient(#181a1b24_30%,#181a1bb3_100%)]">
+                            <div class="h-full flex flex-col bg-black/30 backdrop-blur-[5px] rounded-[0.3125rem]">
+                                <div class="flex flex-col gap-3 px-4 pt-5 pb-4 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] max-h-[calc(100vh-9.5rem)] min-[350px]:max-h-[calc(100vh-8rem)] md:max-h-[unset]">
+                                    <!-- title -->
+                                    <span class="flex items-center">
+                                        <div class="w-full z-[5] relative overflow-hidden drop-shadow-[0px_4px_18px_#00000080] hover:overflow-visible hover:cursor-pointer group">
+                                            <h2 class="text-[1.875rem] leading-[2.375rem] font-semibold overflow-hidden line-clamp-2 text-white dark:text-[#e8e6e3]">My VVIP Lounge ❤️️️</h2>
+                                            <div class="absolute z-[2] flex flex-col items-start w-full max-w-[22.4375rem] md:max-w-[21.5rem] opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg bg-[#101828B2] dark:bg-[rgba(14,19,32,0.9)] dark:text-[#dbd8d3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)] left-1/2 top-full translate-x-[-50%] translate-y-2 before:content-[''] before:absolute before:w-0 before:h-0  before:left-1/2 before:top-[-5px] before:-translate-x-1/2 before:border-[6px] before:border-t-0 before:border-l-transparent before:border-r-transparent before:border-b-[#101828B2] dark:before:border-b-[rgba(14,19,32,0.9)]">My VVIP Lounge ❤️️️</div>
+                                        </div>
+                                    </span>
+
+                                    <!-- Stats (media-count) -->
+                                    <div class="flex items-center gap-2.5 drop-shadow-[0px_2px_12px_#000000BF]">
+                                        <!-- Videos count -->
+                                        <div class="flex items-center gap-[0.0625rem]">
+                                            <span class="text-xs font-medium leading-normal text-white dark:text-[#e8e6e3]">100</span>
+                                            <img src="https://i.ibb.co.com/sdBL6k4R/video.webp" alt="video" class="w-4 h-4 [filter:brightness(100%)]">
+                                        </div>
+
+                                        <div class="h-[0.188rem] w-[0.188rem] bg-white block rounded-full"></div>
+
+                                        <!-- Photos count -->
+                                        <div class="flex items-center gap-[0.0625rem]">
+                                            <span class="text-xs font-medium leading-normal text-white dark:text-[#e8e6e3]">80</span>
+                                            <img src="https://i.ibb.co.com/Qjn50qJy/Images.webp" alt="Images" class="w-4 h-4 [filter:brightness(100%)]">
+                                        </div>
+
+                                        <div class="h-[0.188rem] w-[0.188rem] bg-white block rounded-full"></div>
+
+                                        <!-- Other count -->
+                                        <div class="flex items-center gap-[0.0625rem]">
+                                            <span class="text-xs font-medium leading-normal text-white dark:text-[#e8e6e3]">70</span>
+                                            <img src="https://i.ibb.co.com/1JYD4qyw/audio.webp" alt="audio" class="w-4 h-4 [filter:brightness(100%)]">
+                                        </div>
+                                    </div>
+
+                                    <!-- buttons-container -->
+                                    <div class="flex items-center gap-2 py-2">
+                                        <div class="flex bg-white/15 rounded-[3.125rem] backdrop-blur-[25px] w-1/2 md:w-full dark:bg-[#181a1b26]">
+                                            <button data-discountPlan="1d" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                                <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">1 day</span>
+                                            </button>
+                                            <button data-discountPlan="1m" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                                <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">1 month</span>
+                                                <span class="text-xs leading-normal font-medium text-[#FFED29] dark:text-[#ffee37]">-5%</span>
+                                            </button>
+                                            <button data-discountPlan="6m" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer discount-active [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                                <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">6 month</span>
+                                                <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#FFED29] dark:text-[#ffee37]">-50%</span>
+                                            </button>
+                                            <button data-discountPlan="1y" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&.discount-active]:!flex [&.discount-active]:bg-black dark:[&.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                                <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">1 year</span>
+                                                <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#FFED29] dark:text-[#ffee37]">-5%</span>
+                                            </button>
+                                        </div>
+
+                                        <button data-more-plans-button class="flex justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] bg-white/15 backdrop-blur-[25px] cursor-pointer w-1/2 md:hidden dark:bg-[#181a1b26]">
+                                            <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">More Plans</span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Price -->
+                                    <div class="flex gap-2">
+                                        <div class="flex items-baseline">
+                                            <span class="text-xl leading-normal font-semibold text-[#FFED29] dark:text-[#ffee37]">USD$</span>
+                                            <span class="text-4xl leading-[2.75rem] font-semibold tracking-[-0.045rem] text-[#FFED29] dark:text-[#ffee37]">55.86</span>
+                                        </div>
+
+                                        <div class="flex flex-col justify-between">
+                                            <div class="flex items-baseline gap-1 relative pl-4 pr-1 rounded bg-[#0C111D] ml-[0.3125rem] flex-wrap dark:bg-[#dbd8d3] max-[360px]:py-1 max-[360px]:w-min">
+                                                <img src="https://i.ibb.co.com/nqWs4Ny4/flash.webp" alt="flash" class="absolute -left-1.5 top-1/2 -translate-y-1/2 h-5">
+                                                <span class="text-[0.6875rem] leading-none whitespace-nowrap text-[#07F468] dark:text-[#06c454]">Sale Ends in</span>
+                                                <div class="flex items-center gap-0.5">
+                                                    <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">02</span>
+                                                    <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">:</span>
+                                                    <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">13</span>
+                                                    <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">:</span>
+                                                    <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">07</span>
+                                                </div>
+                                            </div>
+
+                                            <span class="text-xs leading-normal font-medium line-through text-white dark:text-[#e8e6e3]">$111.72</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- tier-description -->
+                                    <div class="flex flex-col drop-shadow-[0px_2px_12px_0px_#000000BF]">
+                                        <p class="text-sm line-clamp-[10] drop-shadow-[0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] text-white md:line-clamp-[7] dark:text-[#e8e6e3]">Welcome to Jenny’s  VIP Lounge! This plan includes everything in Basic/VIP Lounge, plus: Behind the scene of every shot! stuff i wore from the shot for sale! Talk to me 24/7️❤️️️ Welcome to Jenny’s  VIP Lounge! Welcome to Jenny’s  VIP Lounge! This plan includes everything in Basic/VIP Lounge, plus: Behind the scene of every shot! stuff i wore from the shot for sale! Talk to me 24/7️❤️️️ Welcome to Jenny’s  VIP Lounge! Welcome to Jenny’s  VIP Lounge! This plan includes everything in Basic/VIP Lounge, plus: Behind the scene of every shot! stuff i wore from the shot for sale! Talk to me 24/7️❤️️️ Welcome to Jenny’s  VIP Lounge! ...</p>
+                                        <button class="flex items-center gap-0.5">
+                                            <span class="text-xs leading-normal font-medium text-[#D0D5DD] dark:text-[#cfcac4]">READ MORE</span>
+                                            <img src="https://i.ibb.co.com/v4YdjnyQ/double-arrows.webp" alt="double-arrows" class="w-4 h-4">
+                                        </button>
+                                    </div>
+
+                                    <!-- feature-list-container -->
+                                    <ul class="flex flex-col gap-1 drop-shadow-[0px_2px_12px_0px_#000000BF]">
+                                        <li class="flex items-center gap-4">
+                                            <div class="flex items-center gap-2 grow">
+                                                <img src="https://i.ibb.co.com/qYmSQNzZ/take-coin.webp" alt="take-coin" class="w-4 h-4">
+                                                <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">Free Tokens</span>
+                                            </div>
+
+                                            <span class="text-sm font-medium text-white dark:text-[#e8e6e3]">100 tokens everyday</span>
+                                        </li>
+
+                                        <li class="flex items-center gap-4">
+                                            <div class="flex items-center gap-2 grow">
+                                                <img src="https://i.ibb.co.com/JWqTj09z/cart.webp" alt="cart" class="w-4 h-4">
+                                                <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">Merch Discount</span>
+                                            </div>
+
+                                            <span class="text-sm font-medium text-white dark:text-[#e8e6e3]">10% off</span>
+                                        </li>
+
+                                        <li class="flex items-center gap-4">
+                                            <div class="flex items-center gap-2 grow">
+                                                <img src="https://i.ibb.co.com/Mxk1cLRC/image.webp" alt="image" class="w-4 h-4">
+                                                <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">PPV Discount</span>
+                                            </div>
+
+                                            <span class="text-sm font-medium text-white dark:text-[#e8e6e3]">10% off</span>
+                                        </li>
+
+                                        <li class="flex items-center gap-4">
+                                            <div class="flex items-center gap-2 grow">
+                                                <img src="https://i.ibb.co.com/JWqTj09z/cart.webp" alt="cart" class="w-4 h-4">
+                                                <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">Custom Request</span>
+                                            </div>
+
+                                            <span class="text-sm font-medium text-white dark:text-[#e8e6e3]">5% off</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- free subscription button -->
+                                <button class="hidden absolute w-full bottom-[-1px] left-0 h-20 p-2 rounded-t-[0.625rem] bg-[#07F468] shadow-[0px_-8px_24px_0px_#07F46840] group/button hover:bg-[#0C111D] dark:bg-[#06c454] dark:hover:bg-[#dbd8d3]">
+                                    <span class="text-lg font-bold text-[#0C111D] group-hover/button:text-[#07F468] dark:text-[#dbd8d3] dark:group-hover/button:text-[#06c454]">SUBSCRIBE FOR FREE</span>
+                                </button>
+
+                                <!-- button -->
+                                <div class="absolute bottom-[-1px] left-0 flex cursor-pointer rounded-t-[0.625rem] overflow-hidden w-full">
+                                    <div class="flex z-[1] w-full">
+                                        <div class="flex flex-col gap-2 py-2 pl-2 pr-[2.875rem] bg-black w-full dark:bg-[#181a1b]">
+                                            <div class="flex flex-col">
+                                                <h3 class="text-lg font-bold text-[#07F468] dark:text-[#06c454]">6 months for USD$55.86</h3>
+                                                <p class="text-xs leading-normal font-medium text-[#07F468] dark:text-[#06c454]">Renews at USD$55.86 every 6 months</p>
+                                            </div>
+
+                                            <div class="flex flex-col gap-[0.4375rem]">
+                                                <div class="w-full h-[0.3125rem] rounded-[0.3125rem] bg-white/20 dark:bg-[#181a1b33]">
+                                                    <div class="w-[5%] h-full rounded-[0.3125rem] bg-[#FFED29] dark:bg-[#ffee37]"></div>
+                                                </div>
+
+                                                <div class="flex justify-between gap-1">
+                                                    <span class="text-xs leading-normal font-medium text-[#FFED29] dark:text-[#ffee37]">5 Left!</span>
+                                                    <span class="text-xs leading-normal font-medium text-[#D0D5DD] dark:text-[#cfcac4]">95/100 Offer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <img src="https://i.ibb.co.com/h1DjTt7n/Union.png" alt="Union" class="absolute right-[4.425rem] w-[2.25rem] h-full [transform:rotateY(180deg)] [filter:brightness(0)_saturate(100%)_invert(77%)_sepia(10%)_saturate(6598%)_hue-rotate(86deg)_brightness(99%)_contrast(98%)]">
+                                    </div>
+
+                                    <div class="flex justify-center items-center pl-3 pr-2 bg-[#07F468] w-max z-[0]">
+                                        <span class="text-base font-bold text-[#0C111D] dark:text-[#dbd8d3]">CLAIM<br>OFFER</span>
+                                    </div>
+                                </div>
+
+                                <!-- featured-tag -->
+                                <div class="absolute -top-2 -left-2 [clip-path:polygon(0_0,100%_0,calc(100%-0.5rem)_100%,0_100%)] flex justify-center items-center pl-1.5 pr-2.5 py-0.5 z-[6] bg-black dark:bg-[#181a1b]">
+                                    <span class="text-sm font-semibold text-[#07F468] dark:text-[#06c454]">FEATURED</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- more-plans-popup -->
+                    <div data-more-plans-popup class="hidden fixed bottom-0 left-0 w-full rounded-t-[0.625rem] bg-white shadow-[0px_0px_12px_0px_#0000001A] backdrop-blur-[50px] z-[5] md:!hidden dark:bg-[#181a1b]">
+                        <div class="flex flex-col py-1 w-full">
+                            <!-- item -->
+                            <div data-discountPlan="1d" class="flex justify-center items-center h-11 px-1.5 py-0.5 [&.discount-active]:bg-[#F2F4F7] dark:[&.discount-active]bg-[#1e2022]">
+                                <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-sm font-medium whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">1 day</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-base font-semibold text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                                </div>
+                            </div>
+
+                            <!-- item -->
+                            <div data-discountPlan="1m" class="flex justify-center items-center h-11 px-1.5 py-0.5 [&.discount-active]:bg-[#F2F4F7] dark:[&.discount-active]bg-[#1e2022]">
+                                <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]">1 month</span>
+                                            <span class="text-xs leading-normal font-medium text-[#FF0066] dark:text-[#ff1a76]">-5%</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-base font-semibold whitespace-nowrap text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                                </div>
+                            </div>
+
+                            <!-- item -->
+                            <div data-discountPlan="6m" class="flex justify-center items-center h-11 px-1.5 py-0.5 discount-active [&.discount-active]:bg-[#F2F4F7] dark:[&.discount-active]bg-[#1e2022]">
+                                <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-sm font-medium whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">6 month</span>
+                                            <span class="text-xs leading-normal font-medium text-[#FF0066] dark:text-[#ff1a76]">-50%</span>
+                                        </div>
+
+                                        <!-- hot -->
+                                        <div class="backdrop-blur-[10px]">
+                                            <div class="flex justify-center items-center gap-1 rounded ml-2 pl-2.5 pr-1.5 py-0.5 backdrop-blur-[10px] bg-[#FCE40D] dark:bg-[#a19102]">
+                                                <img src="https://i.ibb.co.com/4gCVM3BW/Hot-icon.webp" alt="Hot-icon" class="absolute -top-1 -left-2 w-6 h-6">
+                                                <span class="text-[0.625rem] leading-normal whitespace-nowrap font-semibold text-black dark:text-[#e8e6e3]">Most Value</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-base font-semibold text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                                </div>
+                            </div>
+
+                            <!-- item -->
+                            <div data-discountPlan="1y" class="flex justify-center items-center h-11 px-1.5 py-0.5 [&.discount-active]:bg-[#F2F4F7] dark:[&.discount-active]bg-[#1e2022]">
+                                <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-sm font-medium whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">1 year</span>
+                                            <span class="text-xs leading-normal font-medium text-[#FF0066] dark:text-[#ff1a76]">-5%</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-base font-semibold text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- preview-button -->
+    <button data-preview-button class="fixed top-1/2 right-[-2.0625rem] translate-y-[-50%] -rotate-90 flex items-center gap-2 px-2 py-1 bg-[#07F468] shadow-[0px_1px_2px_0px_#1018280F,0px_1px_3px_0px_#1018281A] z-[10] transition-all duration-300 ease-out cursor-pointer group/button [&.preview-active]:bg-black hover:bg-black [&.preview-active]:hover:bg-[#07F468] [&.preview-active:hover>span]:!text-black [&.preview-active:hover>img]:[filter:brightness(0)] sm:[&.preview-active]:right-[23.4375rem] md:[&.preview-active]:right-[26.1875rem] xl:hidden dark:bg-[#06c454] dark:hover:bg-[#181a1b] dark:[&.preview-active]:bg-[#181a1b] dark:[&.preview-active]:hover:bg-[#06c454] [&.preview-active:hover>span]:!text-[#e8e6e3] [&.preview-active:hover>img]:[filter:brightness(0)">
+        <img src="https://i.ibb.co.com/nspLNGBK/eye-01.webp" alt="eye-01" class="block w-4 h-4 rotate-90 group-[.preview-active]/button:hidden group-hover/button:[filter:brightness(0)_saturate(100%)_invert(68%)_sepia(83%)_saturate(890%)_hue-rotate(85deg)_brightness(97%)_contrast(100%)] dark:[filter:brightness(0)_saturate(100%)_invert(98%)_sepia(3%)_saturate(213%)_hue-rotate(357deg)_brightness(94%)_contrast(94%)] dark:group-hover/button:[filter:brightness(0)_saturate(100%)_invert(48%)_sepia(45%)_saturate(3284%)_hue-rotate(114deg)_brightness(104%)_contrast(95%)]">
+        <img src="https://i.ibb.co.com/vvPDzMxj/close-green.webp" alt="close" class="hidden w-4 h-4 group-[.preview-active]/button:block">
+        <span class="text-sm text-black group-[.preview-active]/button:text-[#07F468] group-hover/button:text-[#07F468] dark:text-[#e8e6e3] dark:group-[.preview-active]/button:text-[#06c454] dark:group-hover/button:text-[#06c454]">Preview</span>
+    </button>
+
+    <!-- save-as-draft -->
+    <div data-save-as-draft-popup class="hidden fixed bottom-0 left-0 w-full rounded-t-[0.625rem] bg-white shadow-[0px_0px_12px_0px_#0000001A] backdrop-blur-[50px] z-[7] md:!hidden dark:bg-[#181a1b]">
+        <div class="flex flex-col py-1 w-full">
+            <!-- item -->
+            <div class="flex justify-center items-center h-10 px-1.5 py-0.5">
+                <div class="flex justify-center items-center px-2.5 py-2">
+                    <span class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]">Save as draft</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- handle preview visibility -->
+    <script>
+        //
+        // toggle preview based on preview button click
+        //
+
+        const previewBtn = document.querySelector("[data-preview-button]");
+        const previewCard = document.querySelector("[data-tier-card-wrapper]");
+
+        if (previewBtn && previewCard) {
+            previewBtn.addEventListener("click", () => {
+                previewBtn.classList.toggle("preview-active");
+                previewCard.classList.toggle("preview-active");
+            });
+        }
+
+
+        //
+        // move tier-card to different container based on screen size
+        //
+
+        const el = document.querySelector("[data-tier-card-wrapper]");
+        const originalParent = el.parentNode;
+        const originalNext = el.nextSibling;
+
+        const mediaQuery = window.matchMedia("(max-width: 1364px)");
+
+        function handleResize(e) {
+            if (e.matches) {
+                // Below 1365px → move to body
+                document.body.append(el);
+            } else {
+                // 1365px and above → move back
+                if (originalNext) {
+                    originalParent.insertBefore(el, originalNext);
+                } else {
+                    originalParent.append(el);
+                }
+            }
+        }
+
+        // Run once on load
+        handleResize(mediaQuery);
+
+        // Listen for screen resize
+        mediaQuery.addEventListener("change", handleResize);
+    </script>
+
+    <!-- handle tier card discount plan tabs -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Function to activate a plan across all elements
+            function activatePlan(planValue) {
+                // Remove 'discount-active' class from all plan elements
+                const allPlanElements = document.querySelectorAll('[data-discountPlan]');
+                allPlanElements.forEach(el => {
+                    el.classList.remove('discount-active');
+                });
+                
+                // Add 'discount-active' class to elements with matching plan value
+                const matchingElements = document.querySelectorAll(`[data-discountPlan="${planValue}"]`);
+                matchingElements.forEach(el => {
+                    el.classList.add('discount-active');
+                });
+            }
+            
+            // Add click listeners to tier card buttons
+            const tierButtons = document.querySelectorAll('[data-tier-card-wrapper] [data-discountPlan]');
+            tierButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const planValue = btn.getAttribute('data-discountPlan');
+                    activatePlan(planValue);
+                });
+            });
+            
+            // Add click listeners to more plans popup items
+            const popupItems = document.querySelectorAll('[data-more-plans-popup] [data-discountPlan]');
+            popupItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const planValue = item.getAttribute('data-discountPlan');
+                    activatePlan(planValue);
+                });
+            });
+            
+            // Optional: Handle the "More Plans" button to show the popup
+            const morePlansButton = document.querySelector('[data-more-plans-button]');
+            const morePlansPopup = document.querySelector('[data-more-plans-popup]');
+            
+            if (morePlansButton && morePlansPopup) {
+                morePlansButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    morePlansPopup.classList.add("flex");
+                    morePlansPopup.classList.remove("hidden");
+                });
+                
+                // Close popup when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!morePlansPopup.contains(e.target) && !morePlansButton.contains(e.target)) {
+                        morePlansPopup.classList.add("hidden");
+                        morePlansPopup.classList.remove("flex");
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- hanlde save-as-draft popup -->
+    <script>
+        const draftBtn = document.querySelector('[data-save-as-draft-button]');
+        const draftPopup = document.querySelector('[data-save-as-draft-popup]');
+
+        draftBtn.addEventListener('click', () => {
+            draftPopup.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!draftPopup.contains(e.target) && !draftBtn.contains(e.target)) {
+                draftPopup.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <!-- handle lucky draw items visibility based on screen size -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const drawItems = document.querySelector("[data-lucky-draw-bottom-section]");
+            const infoWrapper = document.querySelector("[data-lucky-draw-info-wrapper]");
+
+            if (!drawItems || !infoWrapper) return;
+
+            const originalParent = drawItems.parentElement;
+            const placeholder = document.createComment("draw-items-placeholder");
+
+            // Mark original position
+            originalParent.insertBefore(placeholder, drawItems);
+
+            const mqMoveSmall = window.matchMedia("(min-width: 480px) and (max-width: 767px)");
+            const mqMoveLarge = window.matchMedia("(min-width: 1011px)");
+
+            function updatePosition() {
+            if (mqMoveSmall.matches || mqMoveLarge.matches) {
+                // MOVE container
+                if (!infoWrapper.contains(drawItems)) {
+                infoWrapper.appendChild(drawItems);
+                }
+            } else {
+                // REVERT to original position
+                if (placeholder.parentNode) {
+                placeholder.after(drawItems);
+                }
+            }
+            }
+
+            // Initial check
+            updatePosition();
+
+            // Listen for changes
+            mqMoveSmall.addEventListener("change", updatePosition);
+            mqMoveLarge.addEventListener("change", updatePosition);
+        });
+        </script>
+  </body>
+</html>
