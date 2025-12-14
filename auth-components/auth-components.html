@@ -438,6 +438,13 @@
                       // Close the dropdown
                       select.classList.remove('open');
 
+                        const arrow = select.querySelector('.select-arrow');
+                        const optionsContainer = select.querySelector('.dash-options-container');
+
+                        arrow.classList.remove('rotate-180');
+                        optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                        optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+
                       // Trigger change event on the real select
                       realSelect.dispatchEvent(new Event('change'));
                   });

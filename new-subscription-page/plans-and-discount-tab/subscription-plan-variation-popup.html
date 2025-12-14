@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New tier page</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Quill CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+<body class="bg-[#EAECF0] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#222526]">
+    <!-- main-wrapper -->
+    <div class="relative before:content-[''] before:fixed before:inset-0 before:pointer-events-none before:bg-cover before:bg-center before:bg-no-repeat before:bg-[url('https://i.ibb.co.com/QvpHN5vD/mobile-gradient-main-bg-1.webp')] md:before:bg-[url('https://i.ibb.co.com/dw910Z5b/gradient-main-bg.webp')]">
+        <!-- popup-container -->
+        <div class="flex flex-col gap-6 px-2 py-4 rounded-[0.3125rem] bg-white/75 shadow-[0px_0px_12px_0px_#0000001A] backdrop-blur-[50px] md:px-4 dark:bg-[#181a1bbf]">
+            <!-- title-section -->
+            <header class="flex justify-between items-center gap-2">
+                <h1 class="text-lg font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Subscription Plan Variations</h1>
+                <img src="https://i.ibb.co.com/zH0qJw8m/close-01.webp" alt="close 01" class="w-6 h-6 cursor-pointer">
+            </header>
+
+            <!-- form-wrapper -->
+            <div class="flex flex-col gap-6 md:gap-8">
+                <!-- subscription-discount-section -->
+                <section class="flex flex-col gap-4">
+                    <h2 class="text-base font-semibold text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">Variation period and discount</h2>
+                    
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <!-- dropdown -->
+                        <div class="relative w-full h-12 grow md:w-[calc((100vw-15rem)/3)]">
+                            <div class="dash-select cursor-pointer">
+                                <div class="dash-select__trigger h-12 flex items-center justify-between w-full px-3.5 border-b border-b-[#EAECF0] rounded-t-sm bg-white/50 shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-b-[#353a3c]">
+                                    <span class="text-base text-[#0c111d] dark:text-[#dbd8d3]">2 months</span>
+                                    <img src="https://i.ibb.co/2mXMQ5F/chevron-down.webp" alt="chevron-down" class="select-arrow w-5 h-5 transition-transform duration-300 ease-in-out transform">
+                                </div>
+                                <div class="dash-options-container absolute w-full transition-all duration-300 z-10 top-[calc(100%+0.5rem)] shadow-none border-none opacity-0 invisible pointer-events-none">
+                                    <div class="dash-options rounded-[2px] bg-white/70 backdrop-blur-[25px] max-h-[200px] overflow-y-auto dark:bg-[#181a1bb3]">
+                                        <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                            <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">1 month</span>
+                                        </div>
+                                        <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c] selected">
+                                            <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">2 months</span>
+                                        </div>
+                                        <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                            <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">3 months</span>
+                                        </div>
+                                        <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                            <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">6 months</span>
+                                        </div>
+                                        <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                            <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">1 year</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <select class="dash-real-select hidden" name="dash-select" required="">
+                                <option value="1m">1 month</option>
+                                <option value="2m">2 months</option>
+                                <option value="3m">3 months</option>
+                                <option value="6m">6 months</option>
+                                <option value="1y">1 year</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-col gap-2 md:flex-row">
+                            <div class="flex flex-col gap-1 grow md:flex-row md:items-center">
+                                <div class="flex md:grow">
+                                    <!-- dropdown -->
+                                    <div class="relative w-1/2 h-12 grow md:w-[calc((100vw-15rem)/3)]">
+                                        <div data-discount-dropdown class="dash-select cursor-pointer">
+                                            <div class="dash-select__trigger h-12 flex items-center justify-between w-full px-3.5 border-b border-b-[#EAECF0] rounded-t-sm bg-white/50 shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-b-[#353a3c]">
+                                                <span class="text-base text-[#0c111d] dark:text-[#dbd8d3]">Percent off</span>
+                                                <img src="https://i.ibb.co/2mXMQ5F/chevron-down.webp" alt="chevron-down" class="select-arrow w-5 h-5 transition-transform duration-300 ease-in-out transform">
+                                            </div>
+                                            <div class="dash-options-container absolute w-full transition-all duration-300 z-10 top-[calc(100%+0.5rem)] shadow-none border-none opacity-0 invisible pointer-events-none">
+                                                <div class="dash-options rounded-[2px] bg-white/70 backdrop-blur-[25px] max-h-[200px] overflow-y-auto dark:bg-[#181a1bb3]">
+                                                    <div data-discount-dropdown-option="percent" class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c] selected">
+                                                        <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">Percent off</span>
+                                                    </div>
+                                                    <div data-discount-dropdown-option="amount" class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                                        <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">Amount off</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <select class="dash-real-select hidden" name="dash-select" required="">
+                                            <option value="percent">Percent off</option>
+                                            <option value="amount">Amount off</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- input-container -->
+                                    <div class="w-1/2 h-12 flex items-center bg-white/30 border-b rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] grow md:w-[calc((100vw-15rem)/3)] dark:bg-[#181a1b4d]">
+                                        <div class="flex items-center gap-2 px-3.5 w-full min-w-0">
+                                            <span data-usd-off-text class="hidden text-base font-bold text-[#101828] dark:text-[#d6d3cd]">USD$</span>
+                                            <input type="text" value="99" class="text-base bg-transparent border-none outline-none w-full min-w-0 text-[#0C111D] placeholder:text-[#667085] dark:text-[#dbd8d3] dark:placeholder:text-[#9e9689]">
+                                        </div>
+                                        <span class="text-base font-semibold whitespace-nowrap px-[1.125rem] text-[#344054] dark:text-[#bdb7af]"><span data-percent-off-text class="text-base font-semibold whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">%</span> off</span>
+                                    </div>
+                                </div>
+
+                                <p class="hidden text-xs leading-normal text-right text-[#FF4405] md:text-right md:min-w-[12.5rem] dark:text-[#ff571e]">Please enter discount amount</p>
+                            </div>
+
+                            <div class="flex flex-col items-end gap-1 md:w-[12.5rem] md:shrink-0">
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-3xl leading-[2.375rem] font-semibold align-baseline text-[#344054] dark:text-[#bdb7af]"><span class="text-base font-medium align-baseline text-[#344054] dark:text-[#bdb7af]">USD$</span>24.88</span>
+                                    <span class="hidden text-xs leading-normal font-medium align-bottom text-[#344054] dark:text-[#bdb7af]">/mo</span>
+                                </div>
+                                <p class="text-xs leading-normal text-[#344054] dark:text-[#bdb7af]">Bill every 2 months</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <!-- discount-period-section -->
+                <div class="flex flex-col gap-4 md:pb-2">
+                    <section class="flex flex-col gap-1">
+                        <h2 class="text-base font-semibold text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">Discount period</h2>
+                        <p class="text-sm text-[#475467] dark:text-[#b1aba0]">Choose how long the discount period lasts before renewing. </p>
+                    </section>
+
+                    <div class="flex flex-col gap-2">
+                        <!-- input-container -->
+                        <div class="h-10 flex items-center bg-white/50 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#3b4043]">
+                            <div class="flex items-center gap-2 px-3 w-full min-w-0">
+                                <input data-free-tokens-input type="text" value="6" class="text-base bg-transparent border-none outline-none w-full min-w-0 text-[#101828] placeholder:text-[#667085] dark:text-[#d6d3cd] dark:placeholder:text-[#9e9689]">
+                            </div>
+                            <span class="text-sm font-semibold whitespace-nowrap px-4 text-[#344054] dark:text-[#bdb7af]">Billing cycles</span>
+                        </div>
+
+                        <!-- title & checkbox container -->
+                        <div class="flex items-start gap-2">
+                            <!-- checkbox-container -->
+                            <div class="flex gap-2">
+                                <div class="flex justify-center items-center w-6 h-6">
+                                    <input type="checkbox" id="unlimited-time-checkbox" class="appearance-none bg-white border border-[#d1d5db] rounded w-4 min-w-[1rem] h-4 cursor-pointer
+                                            checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border-black checked:after:border-[2px] checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:rotate-45 checked:after:box-border">
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-1">
+                                <label for="unlimited-time-checkbox" class="h-5 cursor-pointer">
+                                    <span class="text-sm align-text-top text-[#0c111d] dark:text-[#dbd8d3]">Unlimited time</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- discount start & end date section -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1">
+                        <div class="flex items-center gap-1">
+                            <h2 class="text-base font-semibold text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">Discount start and end date</h2>
+                            <span class="text-xs leading-normal italic text-[#0C111D] dark:text-[#dbd8d3]">Optional</span>
+                        </div>
+                        <p class="text-sm text-[#303437] dark:text-[#b1aba0]">Make discount limited time only. Set start and end date to your discount. Leave blank to disable this feature.</p>
+                    </div>
+
+                    <!-- input-container -->
+                    <div class="h-10 flex items-center bg-white/50 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#3b4043]">
+                        <div class="flex items-center gap-2 px-3 w-full min-w-0">
+                            <img src="https://i.ibb.co.com/zWDYxDdt/calendar-01.webp" alt="calendar 01" class="w-5 h-5">
+                            <input type="text" placeholder="--/--/--   --:--:--" value="08/31/2024   24:00:00" class="text-base bg-transparent border-none outline-none w-full min-w-0 text-[#667085] placeholder:text-[#667085] dark:text-[#9e9689] dark:placeholder:text-[#9e9689]">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- permitted-fans-count-section -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-1">
+                        <div class="flex items-center gap-1">
+                            <h2 class="text-base font-semibold text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">How many fans can claim this discount?</h2>
+                            <span class="text-xs leading-normal italic text-[#0C111D] dark:text-[#dbd8d3]">Optional</span>
+                        </div>
+                        <p class="text-sm text-[#667085] dark:text-[#9e9689]">Leave blank for unlimited uses</p>
+                    </div>
+
+                    <!-- input-field -->
+                    <div class="flex flex-col gap-1.5">
+                        <!-- input-container -->
+                        <div class="h-11 flex items-center bg-white/50 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#3b4043]">
+                            <div class="flex items-center gap-2 px-3.5 w-full min-w-0">
+                                <input type="text" value="50" class="text-base bg-transparent border-none outline-none w-full min-w-0 text-[#0C111D] placeholder:text-[#667085] dark:text-[#dbd8d3] dark:placeholder:text-[#9e9689]">
+                                <img src="https://i.ibb.co.com/Rksp0mth/chevron-selector-vertical.webp" alt="chevron selector vertical" class="w-5 h-5">
+                            </div>
+                        </div>
+
+                        <p class="text-sm text-[#FF0066] dark:text-[#ff1a76]">Number must be smaller than maximum subscribers.</p>
+                    </div>
+
+                    <!-- title & checkbox container -->
+                    <div class="flex items-start gap-2 pt-2">
+                        <!-- checkbox-container -->
+                        <div class="flex gap-2">
+                            <div class="flex justify-center items-center w-6 h-6">
+                                <input type="checkbox" id="limit-to-1-checkbox" class="appearance-none bg-white border border-[#d1d5db] rounded w-4 min-w-[1rem] h-4 cursor-pointer
+                                        checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border-black checked:after:border-[2px] checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:rotate-45 checked:after:box-border">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-1 relative">
+                            <label for="limit-to-1-checkbox" class="h-5 cursor-pointer">
+                                <span class="text-sm align-text-top text-[#0c111d] dark:text-[#dbd8d3]">Limit to 1 time use per fan</span>
+                            </label>
+
+                            <span class="flex items-center justify-center">
+                                <div class="md:relative inline-flex overflow-hidden cursor-pointer group hover:overflow-visible">
+                                    <!-- Icon -->
+                                    <img src="https://i.ibb.co/DPgMH5GG/svgviewer-png-output-15.webp" alt="tooltip icon" class="w-4 h-4">
+
+                                    <!-- Tooltip -->
+                                    <div class="absolute z-[2] flex flex-col items-start w-max md:w-max max-w-[22.4375rem] md:max-w-[21.5rem]
+                                        opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                                        text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg
+                                        bg-[#101828B2] dark:bg-[rgba(14,19,32,0.9)] dark:text-[#dbd8d3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
+                                        left-1/2 bottom-full translate-x-[-50%] -translate-y-2 md:bottom-[unset] md:left-auto md:top-1/2 md:-right-2 md:translate-y-[-50%] md:translate-x-full
+                                        before:content-[''] before:absolute before:w-0 before:h-0 before:left-[90%] before:bottom-[-5px] before:translate-x-[-50%] before:border-[6px] before:border-b-0 before:border-l-transparent before:border-r-transparent before:border-t-[rgba(16,24,40,0.7)]
+                                        md:before:top-1/2 md:before:left-[-6px] md:before:translate-y-[-50%] md:before:border-[6px] md:before:border-r-[rgba(16,24,40,0.7)] md:before:border-t-transparent md:before:border-b-transparent md:before:border-l-transparent"
+                                    >
+                                        <p class="text-xs leading-normal font-medium text-white dark:text-[#dbd8d3]">Only 1 use per person. No repeats.</p>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- subscriber-selection-section -->
+                <section data-subscriber-setting-wrapper class="flex flex-col gap-2 group/wrapper">
+                    <h3 class="text-base font-semibold text-[#0C111D] dark:text-[#dbd8d3] md:text-lg">Who can use this discount?</h3>
+
+                    <div class="flex w-full">
+                        <!-- dropdown -->
+                        <div class="relative w-full h-11">
+                            <div class="dash-select cursor-pointer">
+                                <div class="dash-select__trigger h-11 flex items-center justify-between w-full px-3.5 border-r border-b border-b-[#EAECF0] rounded-t-sm bg-white/50 shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-b-[#353a3c]">
+                                    <span class="text-base font-medium text-[#0c111d] dark:text-[#dbd8d3]">Everyone</span>
+                                    <img src="https://i.ibb.co/2mXMQ5F/chevron-down.webp" alt="chevron-down" class="select-arrow w-5 h-5 transition-transform duration-300 ease-in-out transform">
+                                </div>
+                                <div class="dash-options-container absolute w-full transition-all duration-300 z-10 top-[calc(100%+0.5rem)] shadow-none border-none opacity-0 invisible pointer-events-none">
+                                    <div class="dash-options rounded-[2px] bg-white/70 backdrop-blur-[25px] max-h-[200px] overflow-y-auto dark:bg-[#181a1bb3]">
+                                        <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c] selected">
+                                            <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">Everyone</span>
+                                        </div>
+                                        <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                            <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">Only those invited</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <select class="dash-real-select hidden" name="dash-country-select" required="">
+                                <option value="everyone">Everyone</option>
+                                <option value="only-those-invited">Only those invited</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="hidden group-[.only-invited]/wrapper:flex flex-col gap-1.5 py-2">
+                        <p class="text-base text-[#0C111D] dark:text-[#dbd8d3]">Send below discount link to individual fans or groups to receive this discount:</p>
+                        <!-- input-field -->
+                        <div class="flex">
+                            <!-- input-container -->
+                            <div class="w-full h-10 flex gap-3.5 bg-white/75 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1bbf] dark:border-[#3b4043]">
+                                <input data-invite-link type="text" placeholder="Enter amount" class="text-base bg-transparent border-none outline-none truncate grow pl-3.5 text-[#101828] placeholder:text-[#667085] pointer-events-none dark:text-[#d6d3cd] dark:placeholder:text-[#9e9689]" value="ourwebsite.com/invitelinkwww">
+                                <button data-copy-button class="flex items-center gap-1 px-3.5 cursor-pointer">
+                                    <img src="https://i.ibb.co.com/jvvTYfmR/copy-01.webp" alt="copy-01" class="w-5 h-5">
+                                    <span class="text-sm font-semibold whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">Copy Link</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- spending-requirement-section -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-1">
+                                <h2 class="text-base font-semibold text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">Spending requirement</h2>
+                            </div>
+                            <p class="text-sm text-[#667085] dark:text-[#9e9689]">Add minimum spending requirements for fan to use this discount.</p>
+                        </div>
+
+                        <button data-add-minimum-spending-button class="flex items-center gap-0.5 cursor-pointer">
+                            <img src="https://i.ibb.co/TD3jgrGK/plus-square.webp" alt="plus-square" class="w-5 h-5">
+                            <span class="text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]">Add minimum spending</span>
+                        </button>
+                    </div>
+
+                    <!-- add-minimum-spending-section -->
+                    <div data-add-minimum-spending-section class="hidden justify-center items-center p-4 rounded-[0.625rem] bg-white/50 shadow-[0px_0px_10px_-34px_#0000001A] dark:bg-[#181a1b80]">
+                        <div class="flex flex-col gap-4 grow">
+                            <!-- minimum-spending-section -->
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-col gap-1 sm:flex-row sm:justify-between sm:flex-wrap">
+                                    <div class="flex items-center gap-1">
+                                        <h2 class="text-base font-medium text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">Minimum Spending</h2>
+                                        <span class="text-xs leading-normal italic text-[#0C111D] dark:text-[#dbd8d3]">Optional</span>
+                                    </div>
+                                    <button data-remove-spending-requirement-button class="flex items-center gap-0.5 cursor-pointer">
+                                        <img src="https://i.ibb.co.com/Zz1MWmm4/minus-square.webp" alt="minus square" class="w-5 h-5">
+                                        <span class="text-sm font-medium text-[#FF0066] dark:text-[#ff1a76]">Remove spending requirement</span>
+                                    </button>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row">
+                                    <!-- input-container -->
+                                    <div class="h-[3.625rem] flex items-center bg-white/30 border-b rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] grow sm:w-1/2 dark:bg-[#181a1b4d]">
+                                        <div class="flex items-center gap-2 px-3.5 w-full min-w-0">
+                                            <span class="text-base font-bold text-[#101828] dark:text-[#d6d3cd]">USD$</span>
+                                            <input type="text" value="1000" class="text-base bg-transparent border-none outline-none w-full min-w-0 text-[#0C111D] placeholder:text-[#667085] dark:text-[#dbd8d3] dark:placeholder:text-[#9e9689]">
+                                        </div>
+                                    </div>
+
+                                    <!-- dropdown -->
+                                    <div class="relative h-[3.625rem] grow sm:w-1/2">
+                                        <div class="checkbox-select cursor-pointer">
+                                            <div class="dash-select__trigger h-[3.625rem] flex items-center justify-between w-full px-3.5 border-b border-b-[#EAECF0] rounded-t-sm bg-white/50 shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-b-[#353a3c]">
+                                                <span data-checkbox-select-initial-text class="text-base text-[#667085] dark:text-[#9e9689]">Select spending category</span>
+                                                <div data-checkbox-selected-text-container class="hidden flex flex-col">
+                                                    <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9689]">Spending category</span>
+                                                    <span data-checkbox-selected-text class="text-base text-[#0C111D] dark:text-[#dbd8d3]">1 Selected</span>
+                                                </div>
+                                                <img src="https://i.ibb.co.com/tpVym6cg/down.webp" alt="chevron-down" class="select-arrow w-4 h-4 transition-transform duration-300 ease-in-out transform [filter:brightness(0)_saturate(100%)_invert(44%)_sepia(10%)_saturate(822%)_hue-rotate(183deg)_brightness(95%)_contrast(86%)]">
+                                            </div>
+                                            <div class="dash-options-container absolute w-full transition-all duration-300 z-10 top-[calc(100%+0.5rem)] shadow-none border-none opacity-0 invisible pointer-events-none">
+                                                <div class="dash-options rounded-[2px] bg-white/70 backdrop-blur-[25px] max-h-[200px] overflow-y-auto dark:bg-[#181a1bb3]">
+                                                    <div class="flex items-center gap-2.5 h-11 px-2 cursor-pointer bg-[#F2F4F7] hover:bg-white [&.selected]:bg-white dark:bg-[#1e2022] dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b]">
+                                                        <label for="option-select-all-checkbox" class="text-sm font-semibold text-[#0c111d] grow dark:text-[#dbd8d3]">Select All</label>
+                                                        <div class="flex justify-center items-center w-6 h-6">
+                                                            <input type="checkbox" id="option-select-all-checkbox" class="appearance-none bg-white border border-[#d1d5db] rounded w-4 min-w-[1rem] h-4 cursor-pointer
+                                                                    checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border-black checked:after:border-[2px] checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:rotate-45 checked:after:box-border">
+                                                        </div>
+                                                    </div>
+                                                    <div class="dash-option flex items-center gap-2.5 h-11 px-2 cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b]">
+                                                        <label for="option-tip-checkbox" class="text-sm font-medium text-[#0c111d] grow dark:text-[#dbd8d3]">Tip</label>
+                                                        <div class="flex justify-center items-center w-6 h-6">
+                                                            <input type="checkbox" id="option-tip-checkbox" class="appearance-none bg-white border border-[#d1d5db] rounded w-4 min-w-[1rem] h-4 cursor-pointer
+                                                                    checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border-black checked:after:border-[2px] checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:rotate-45 checked:after:box-border">
+                                                        </div>
+                                                    </div>
+                                                    <div class="dash-option flex items-center gap-2.5 h-11 px-2 cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b]">
+                                                        <label for="option-susbscription-checkbox" class="text-sm font-medium text-[#0c111d] grow dark:text-[#dbd8d3]">Subscription</label>
+                                                        <div class="flex justify-center items-center w-6 h-6">
+                                                            <input type="checkbox" id="option-susbscription-checkbox" class="appearance-none bg-white border border-[#d1d5db] rounded w-4 min-w-[1rem] h-4 cursor-pointer
+                                                                    checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border-black checked:after:border-[2px] checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:rotate-45 checked:after:box-border">
+                                                        </div>
+                                                    </div>
+                                                    <div class="dash-option flex items-center gap-2.5 h-11 px-2 cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] selected">
+                                                        <label for="option-p2v-checkbox" class="text-sm font-medium text-[#0c111d] grow dark:text-[#dbd8d3]">Pay to View</label>
+                                                        <div class="flex justify-center items-center w-6 h-6">
+                                                            <input type="checkbox" id="option-p2v-checkbox" class="appearance-none bg-white border border-[#d1d5db] rounded w-4 min-w-[1rem] h-4 cursor-pointer
+                                                                    checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border-black checked:after:border-[2px] checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:rotate-45 checked:after:box-border">
+                                                        </div>
+                                                    </div>
+                                                    <div class="dash-option flex items-center gap-2.5 h-11 px-2 cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b]">
+                                                        <label for="option-merch-checkbox" class="text-sm font-medium text-[#0c111d] grow dark:text-[#dbd8d3]">Merch</label>
+                                                        <div class="flex justify-center items-center w-6 h-6">
+                                                            <input type="checkbox" id="option-merch-checkbox" class="appearance-none bg-white border border-[#d1d5db] rounded w-4 min-w-[1rem] h-4 cursor-pointer
+                                                                    checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border-black checked:after:border-[2px] checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:rotate-45 checked:after:box-border">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <select class="dash-real-select hidden" name="dash-select" required="">
+                                            <option value="all">Select All</option>
+                                            <option value="tip">Tip</option>
+                                            <option value="subscription">Subscription</option>
+                                            <option value="p2v">Pay to View</option>
+                                            <option value="merch">Merch</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- spending-period-section -->
+                            <div class="flex flex-col gap-4">
+                                <!-- title-section -->
+                                <section class="flex flex-col gap-2">
+                                    <h2 class="text-base font-medium text-[#0C111D] md:text-lg dark:text-[#dbd8d3]">Spending period</h2>
+                                    <p class="text-sm text-[#667085] dark:text-[#9e9689]">Only purchases made during the specified time below will be counted</p>
+                                </section>
+
+                                <!-- input-container -->
+                                <div class="h-10 flex items-center bg-white/50 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b80] dark:border-[#3b4043]">
+                                    <div class="flex items-center gap-2 px-3 w-full min-w-0">
+                                        <img src="https://i.ibb.co.com/zWDYxDdt/calendar-01.webp" alt="calendar 01" class="w-5 h-5">
+                                        <input type="text" placeholder="--/--/--   --:--:--" value="08/31/2024   24:00:00" class="text-base bg-transparent border-none outline-none w-full min-w-0 text-[#667085] placeholder:text-[#667085] dark:text-[#9e9689] dark:placeholder:text-[#9e9689]">
+                                    </div>
+                                </div>
+
+                                <!-- title & checkbox container -->
+                                <div class="flex items-start gap-2">
+                                    <!-- checkbox-container -->
+                                    <div class="flex gap-2">
+                                        <div class="flex justify-center items-center w-6 h-6">
+                                            <input type="checkbox" id="allow-lifetime-spending-checkbox" class="appearance-none bg-white border border-[#d1d5db] rounded w-4 min-w-[1rem] h-4 cursor-pointer
+                                                    checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border-black checked:after:border-[2px] checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:rotate-45 checked:after:box-border">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center gap-1">
+                                        <label for="allow-lifetime-spending-checkbox" class="h-5 cursor-pointer">
+                                            <span class="text-sm align-text-top text-[#0c111d] dark:text-[#dbd8d3]">Allow fan’s lifetime spending</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- button-container -->
+            <div class="flex items-center gap-6">
+                <button class="flex justify-center items-center bg-transparent outline-none border-none cursor-pointer">
+                    <span class="text-lg font-medium text-[#0C111D] dark:text-[#dbd8d3]">CANCEL</span>
+                </button>
+
+                <button class="flex justify-center items-center gap-2.5 px-2 h-10 bg-black cursor-pointer group/button disabled hover:bg-[#07F468] [&.disabled]:pointer-events-none [&.disabled]:bg-[#3440540D] dark:[&.disabled]:bg-[#323e520d] w-max">
+                    <img src="https://i.ibb.co/TD3jgrGK/plus-square.webp" alt="plus-square" class="w-5 h-5 group-[.disabled]/button:[filter:brightness(0)_saturate(100%)_invert(76%)_sepia(27%)_saturate(176%)_hue-rotate(179deg)_brightness(81%)_contrast(87%)] [filter:brightness(0)_saturate(100%)_invert(74%)_sepia(36%)_saturate(5644%)_hue-rotate(95deg)_brightness(111%)_contrast(94%)] group-hover/button:[filter:brightness(0)]">
+                    <span class="text-lg font-medium text-[#07F468] group-hover/button:text-black group-[.disabled]/button:text-[#98A2B3] dark:group-[.disabled]/button:text-[#b0a99e]">ADD DISCOUNT</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- custom select-dropdown -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const customSelects = document.querySelectorAll('.dash-select');
+
+          customSelects.forEach(select => {
+              const trigger = select.querySelector('.dash-select__trigger span');
+              const options = select.querySelectorAll('.dash-option');
+              const realSelect = select.parentElement.querySelector('.dash-real-select');
+
+              // Set initial value
+              const selectedOption = select.querySelector('.dash-option.selected');
+              if (selectedOption) {
+                  trigger.textContent = selectedOption.querySelector('span').textContent;
+                  realSelect.value = selectedOption.dataset.value;
+              }
+
+              // Toggle dropdown
+              select.addEventListener('click', function(e) {
+                  e.stopPropagation();
+
+                  // Close all other selects first
+                  document.querySelectorAll('.dash-select').forEach(s => {
+                      if (s !== select) {
+                          s.classList.remove('open');
+                          s.querySelector('.select-arrow').classList.remove('rotate-180');
+                          s.querySelector('.dash-options-container').classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                          s.querySelector('.dash-options-container').classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                      }
+                  });
+
+                  // Position dropdown based on available space
+                  positionDropdown(this);
+
+                  // Toggle this select
+                  this.classList.toggle('open');
+                  const arrow = this.querySelector('.select-arrow');
+                  const optionsContainer = this.querySelector('.dash-options-container');
+
+                  if (this.classList.contains('open')) {
+                      arrow.classList.add('rotate-180');
+                      optionsContainer.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+                      optionsContainer.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+                  } else {
+                      arrow.classList.remove('rotate-180');
+                      optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                      optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                  }
+              });
+
+              // Handle option selection
+              options.forEach(option => {
+                  option.addEventListener('click', function(e) {
+                      e.stopPropagation();
+
+                      options.forEach(opt => {
+                          opt.classList.remove('selected');
+                      });
+
+                      this.classList.add('selected');
+                      const optionSpan = this.querySelector('span');
+
+                      trigger.textContent = optionSpan.textContent;
+                      realSelect.value = this.dataset.value || optionSpan.textContent.toLowerCase();
+
+                      // Close the dropdown
+                      select.classList.remove('open');
+
+                        const arrow = select.querySelector('.select-arrow');
+                        const optionsContainer = select.querySelector('.dash-options-container');
+
+                        arrow.classList.remove('rotate-180');
+                        optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                        optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+
+                      // Trigger change event on the real select
+                      realSelect.dispatchEvent(new Event('change'));
+                  });
+              });
+          });
+
+          // Close dropdown when clicking outside
+          document.addEventListener('click', function() {
+              document.querySelectorAll('.dash-select').forEach(select => {
+                  select.classList.remove('open');
+
+                    const arrow = select.querySelector('.select-arrow');
+                    const optionsContainer = select.querySelector('.dash-options-container');
+
+                    arrow.classList.remove('rotate-180');
+                    optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                    optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+              });
+          });
+
+          // Position dropdown up or down based on available space
+          function positionDropdown(select) {
+              const optionsContainer = select.querySelector('.dash-options-container');
+              const rect = select.getBoundingClientRect();
+              const spaceBelow = window.innerHeight - rect.bottom;
+              const spaceAbove = rect.top;
+              const optionsHeight = select.querySelector('.dash-options').scrollHeight;
+
+              // Reset classes
+              select.classList.remove('upward');
+              optionsContainer.classList.remove('bottom-[calc(100%+0.5rem)]');
+              optionsContainer.classList.add('top-[calc(100%+0.5rem)]');
+
+              if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                  select.classList.add('upward');
+                  optionsContainer.classList.remove('top-[calc(100%+0.5rem)]');
+                  optionsContainer.classList.add('bottom-[calc(100%+0.5rem)]');
+              }
+          }
+
+          // Reposition dropdowns on window resize
+          window.addEventListener('resize', function() {
+              document.querySelectorAll('.dash-select.open').forEach(select => {
+                  positionDropdown(select);
+              });
+          });
+      });
+    </script>
+
+    <!-- custom select-dropdown with checkboxes -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxSelects = document.querySelectorAll('.checkbox-select');
+
+            checkboxSelects.forEach(select => {
+                const trigger = select.querySelector('.dash-select__trigger');
+                const arrow = select.querySelector('.select-arrow');
+                const optionsContainer = select.querySelector('.dash-options-container');
+                const optionsWrapper = select.querySelector('.dash-options');
+
+                const selectAll = select.querySelector('#option-select-all-checkbox');
+                const checkboxes = select.querySelectorAll(
+                    'input[type="checkbox"]:not(#option-select-all-checkbox)'
+                );
+
+                const initialText = select.querySelector('[data-checkbox-select-initial-text]');
+                const selectedContainer = select.querySelector('[data-checkbox-selected-text-container]');
+                const selectedText = select.querySelector('[data-checkbox-selected-text]');
+
+                /* ---------------- OPEN / CLOSE ---------------- */
+
+                trigger.addEventListener('click', e => {
+                    e.stopPropagation();
+
+                    // Close other checkbox-selects
+                    checkboxSelects.forEach(s => {
+                        if (s !== select) closeDropdown(s);
+                    });
+
+                    toggleDropdown(select);
+                });
+
+                function toggleDropdown(select) {
+                    const open = select.classList.toggle('open');
+
+                    arrow.classList.toggle('rotate-180', open);
+                    optionsContainer.classList.toggle('opacity-0', !open);
+                    optionsContainer.classList.toggle('invisible', !open);
+                    optionsContainer.classList.toggle('pointer-events-none', !open);
+
+                    optionsContainer.classList.toggle('opacity-100', open);
+                    optionsContainer.classList.toggle('visible', open);
+                    optionsContainer.classList.toggle('pointer-events-auto', open);
+
+                    if (open) positionDropdown(select);
+                }
+
+                function closeDropdown(select) {
+                    select.classList.remove('open');
+                    arrow.classList.remove('rotate-180');
+
+                    optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                    optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                }
+
+                /* ---------------- POSITIONING ---------------- */
+
+                function positionDropdown(select) {
+                    const rect = select.getBoundingClientRect();
+                    const spaceBelow = window.innerHeight - rect.bottom;
+                    const spaceAbove = rect.top;
+                    const optionsHeight = optionsWrapper.scrollHeight;
+
+                    optionsContainer.classList.remove('bottom-[calc(100%+0.5rem)]');
+                    optionsContainer.classList.add('top-[calc(100%+0.5rem)]');
+
+                    if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                        optionsContainer.classList.remove('top-[calc(100%+0.5rem)]');
+                        optionsContainer.classList.add('bottom-[calc(100%+0.5rem)]');
+                    }
+                }
+
+                /* ---------------- CHECKBOX LOGIC ---------------- */
+
+                function updateUI() {
+                    const checked = [...checkboxes].filter(cb => cb.checked);
+
+                    // Select all sync
+                    selectAll.checked = checked.length === checkboxes.length;
+
+                    // Selected state styling
+                    checkboxes.forEach(cb => {
+                        cb.closest('.dash-option')?.classList.toggle('selected', cb.checked);
+                    });
+
+                    // Trigger text
+                    if (checked.length === 0) {
+                        initialText.classList.remove('hidden');
+                        selectedContainer.classList.add('hidden');
+                    } else {
+                        initialText.classList.add('hidden');
+                        selectedContainer.classList.remove('hidden');
+                        selectedText.textContent = `${checked.length} Selected`;
+                    }
+                }
+
+                checkboxes.forEach(cb => {
+                    cb.addEventListener('click', e => {
+                        e.stopPropagation();
+                        updateUI();
+                    });
+                });
+
+                selectAll.addEventListener('click', e => {
+                    e.stopPropagation();
+                    const checked = selectAll.checked;
+                    checkboxes.forEach(cb => cb.checked = checked);
+                    updateUI();
+                });
+
+                /* ---------------- SAFETY ---------------- */
+
+                optionsWrapper.addEventListener('click', e => e.stopPropagation());
+
+                document.addEventListener('click', () => closeDropdown(select));
+                window.addEventListener('resize', () => {
+                    if (select.classList.contains('open')) positionDropdown(select);
+                });
+
+                /* ---------------- INIT ---------------- */
+
+                updateUI();
+            });
+        });
+    </script>
+
+    <!-- show different label based on discount type -->
+    <script>
+        const dropdown = document.querySelector("[data-discount-dropdown]");
+        const trigger = dropdown.querySelector(".dash-select__trigger span");
+        const options = dropdown.querySelectorAll("[data-discount-dropdown-option]");
+        const usdText = document.querySelector("[data-usd-off-text]");
+        const percentText = document.querySelector("[data-percent-off-text]");
+
+        // option click
+        options.forEach(option => {
+            option.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                const type = option.dataset.discountDropdownOption;
+
+                // update displayed text
+                trigger.textContent = option.textContent.trim();
+
+                // remove selected from all and set new
+                options.forEach(o => o.classList.remove("selected"));
+                option.classList.add("selected");
+
+                // show/hide based on type
+                if (type === "percent") {
+                    percentText.classList.remove("hidden");
+                    usdText.classList.add("hidden");
+                } else {
+                    usdText.classList.remove("hidden");
+                    percentText.classList.add("hidden");
+                }
+            });
+        });
+    </script>
+
+    <!-- handle only-invited selection -->
+    <script>
+        const wrapper = document.querySelector('[data-subscriber-setting-wrapper]');
+
+        document.querySelectorAll('.dash-option').forEach(option => {
+            option.addEventListener('click', () => {
+
+                const label = option.innerText.trim().toLowerCase();
+
+                const invited = label === 'only those invited';
+
+                wrapper.classList.toggle('only-invited', invited);
+
+            });
+        });
+    </script>
+
+    <!-- handle-invite-copy-link -->
+     <script>
+        document.querySelector('[data-copy-button]').addEventListener('click', async () => {
+
+            const input = document.querySelector('[data-invite-link]');
+            const link = input.value.trim();
+
+            if (!link) return;
+
+            try {
+                await navigator.clipboard.writeText(link);
+
+                // UI Feedback
+                const btn = document.querySelector('[data-copy-button] span');
+                btn.textContent = "Copied!";
+                
+                setTimeout(() => btn.textContent = "Copy Link", 1500);
+
+            } catch {
+                alert("Failed to copy");
+            }
+
+        });
+    </script>
+
+    <!-- show/hide add-minimum-spending section -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addBtn = document.querySelector('[data-add-minimum-spending-button]');
+            const removeBtn = document.querySelector('[data-remove-spending-requirement-button]');
+            const spendingSection = document.querySelector('[data-add-minimum-spending-section]');
+
+            if (!addBtn || !removeBtn || !spendingSection) return;
+
+            // Show section
+            addBtn.addEventListener('click', () => {
+            spendingSection.classList.remove('hidden');
+            spendingSection.classList.add('flex');
+            });
+
+            // Hide section
+            removeBtn.addEventListener('click', () => {
+            spendingSection.classList.add('hidden');
+            spendingSection.classList.remove('flex');
+            });
+        });
+</script>
+
+</body>
+</html>

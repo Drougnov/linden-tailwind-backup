@@ -43,7 +43,7 @@
     <!-- main-wrapper -->
     <div class="relative before:content-[''] before:fixed before:inset-0 before:pointer-events-none before:bg-cover before:bg-center before:bg-no-repeat before:bg-[url('https://i.ibb.co.com/QvpHN5vD/mobile-gradient-main-bg-1.webp')] md:before:bg-[url('https://i.ibb.co.com/dw910Z5b/gradient-main-bg.webp')]">
         <!-- popup-container -->
-        <div class="flex flex-col gap-6 px-4 py-2 rounded-[0.3125rem] bg-white/75 shadow-[0px_0px_12px_0px_#0000001A] backdrop-blur-[50px] md:py-4 dark:bg-[#181a1bbf]">
+        <div class="flex flex-col gap-6 px-2 py-4 rounded-[0.3125rem] bg-white/75 shadow-[0px_0px_12px_0px_#0000001A] backdrop-blur-[50px] md:px-4 dark:bg-[#181a1bbf]">
             <!-- title-section -->
             <header class="flex justify-between items-center gap-2">
                 <h1 class="text-lg font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Subscriber discount</h1>
@@ -209,12 +209,12 @@
                                 <img src="https://i.ibb.co/DPgMH5GG/svgviewer-png-output-15.webp" alt="tooltip icon" class="w-4 h-4">
 
                                 <!-- Tooltip -->
-                                <div class="absolute z-[2] flex flex-col items-start w-full md:w-max max-w-[22.4375rem] md:max-w-[21.5rem]
+                                <div class="absolute z-[2] flex flex-col items-start w-max md:w-max max-w-[22.4375rem] md:max-w-[21.5rem]
                                     opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
                                     text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg
                                     bg-[#101828B2] dark:bg-[rgba(14,19,32,0.9)] dark:text-[#dbd8d3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
-                                    left-1/2 top-full translate-x-[-50%] translate-y-2 md:left-auto md:top-1/2 md:-right-2 md:translate-y-[-50%] md:translate-x-full
-                                    before:content-[''] before:absolute before:w-0 before:h-0 before:left-1/2 before:top-[-6px] before:translate-x-[-50%] before:border-[6px] before:border-t-0 before:border-l-transparent before:border-r-transparent before:border-b-[rgba(16,24,40,0.7)]
+                                    left-1/2 bottom-full translate-x-[-50%] -translate-y-2 md:bottom-[unset] md:left-auto md:top-1/2 md:-right-2 md:translate-y-[-50%] md:translate-x-full
+                                    before:content-[''] before:absolute before:w-0 before:h-0 before:left-[90%] before:bottom-[-5px] before:translate-x-[-50%] before:border-[6px] before:border-b-0 before:border-l-transparent before:border-r-transparent before:border-t-[rgba(16,24,40,0.7)]
                                     md:before:top-1/2 md:before:left-[-6px] md:before:translate-y-[-50%] md:before:border-[6px] md:before:border-r-[rgba(16,24,40,0.7)] md:before:border-t-transparent md:before:border-b-transparent md:before:border-l-transparent"
                                 >
                                     <p class="text-xs leading-normal font-medium text-white dark:text-[#dbd8d3]">Only 1 use per person. No repeats.</p>
@@ -323,6 +323,13 @@
                       // Close the dropdown
                       select.classList.remove('open');
 
+                        const arrow = select.querySelector('.select-arrow');
+                        const optionsContainer = select.querySelector('.dash-options-container');
+
+                        arrow.classList.remove('rotate-180');
+                        optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                        optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+
                       // Trigger change event on the real select
                       realSelect.dispatchEvent(new Event('change'));
                   });
@@ -333,6 +340,13 @@
           document.addEventListener('click', function() {
               document.querySelectorAll('.dash-select').forEach(select => {
                   select.classList.remove('open');
+
+                    const arrow = select.querySelector('.select-arrow');
+                    const optionsContainer = select.querySelector('.dash-options-container');
+
+                    arrow.classList.remove('rotate-180');
+                    optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                    optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
               });
           });
 

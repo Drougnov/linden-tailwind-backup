@@ -43,7 +43,7 @@
     <!-- main-wrapper -->
     <div class="relative before:content-[''] before:fixed before:inset-0 before:pointer-events-none before:bg-cover before:bg-center before:bg-no-repeat before:bg-[url('https://i.ibb.co.com/QvpHN5vD/mobile-gradient-main-bg-1.webp')] md:before:bg-[url('https://i.ibb.co.com/dw910Z5b/gradient-main-bg.webp')]">
         <!-- popup-container -->
-        <div class="flex flex-col gap-6 px-4 py-2 rounded-[0.3125rem] bg-white/75 min-h-screen shadow-[0px_0px_12px_0px_#0000001A] backdrop-blur-[50px] md:py-4 dark:bg-[#181a1bbf]">
+        <div class="flex flex-col gap-6 px-2 py-4 rounded-[0.3125rem] bg-white/75 min-h-screen shadow-[0px_0px_12px_0px_#0000001A] backdrop-blur-[50px] md:px-4 dark:bg-[#181a1bbf]">
             <!-- title-section -->
             <header class="flex justify-between items-center gap-2">
                 <h1 class="text-lg font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Unsubscribe Discount</h1>
@@ -241,6 +241,13 @@
                       // Close the dropdown
                       select.classList.remove('open');
 
+                        const arrow = select.querySelector('.select-arrow');
+                        const optionsContainer = select.querySelector('.dash-options-container');
+
+                        arrow.classList.remove('rotate-180');
+                        optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                        optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+
                       // Trigger change event on the real select
                       realSelect.dispatchEvent(new Event('change'));
                   });
@@ -251,6 +258,13 @@
           document.addEventListener('click', function() {
               document.querySelectorAll('.dash-select').forEach(select => {
                   select.classList.remove('open');
+
+                    const arrow = select.querySelector('.select-arrow');
+                    const optionsContainer = select.querySelector('.dash-options-container');
+
+                    arrow.classList.remove('rotate-180');
+                    optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                    optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
               });
           });
 
