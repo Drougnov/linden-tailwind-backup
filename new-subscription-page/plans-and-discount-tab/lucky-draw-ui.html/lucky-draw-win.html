@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucky Draw</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+<body class="bg-[url('https://i.ibb.co.com/2Yg9hKBv/checkout-header.webp')] bg-cover bg-center bg-no-repeat font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]">
+    <!-- close-button -->
+    <button class="fixed top-6 right-6 w-8 h-8 bg-transparent border-none outline-none z-10 cursor-pointer xl:top-12 xl:right-12">
+        <img src="https://i.ibb.co.com/DfT6Sg5g/x-close.webp" alt="x close" class="w-full h-full">
+    </button>  
+
+    <!-- overlay-wrapper -->
+    <div class="flex justify-center items-center bg-black/50 backdrop-blur-[12.5px] bg-[url('https://i.ibb.co.com/pv1H3SNH/confetti-bg.webp')] bg-no-repeat bg-[length:116%_auto] bg-[position:center_top] min-h-screen dark:bg-[#181a1b]/50">
+        <!-- content-wrapper -->
+        <div class="flex flex-col justify-center items-center gap-8 w-full mt-[3.75rem] px-2 pt-[2.6875rem] pb-12 sm:max-w-[23.375rem] md:max-w-[22.5rem] md:pt-0 md:mt-12">
+          <!-- top-section -->
+          <div class="w-[18.75rem] aspect-[0.8377] relative md:w-[37.5rem]">
+            <img src="https://8upload.com/image/ffdebf73d9ece928/slot-machine-1-mobile.gif" alt="slot machine 1" class="w-full h-full object-cover block md:hidden">
+            <img src="https://i.ibb.co.com/mPZPPvX/slot-machine-1-desktop.gif" alt="slot machine 1" class="w-full h-full object-cover hidden md:block">
+
+            <!-- claim-prize-button -->
+            <div class="absolute left-1/2 -translate-x-1/2 bottom-16">
+                <button class="relative w-[21.375rem] h-[69px] rounded-[0.46875rem] bg-[linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),linear-gradient(90deg,rgba(41,114,218,0.25)_0%,rgba(38,201,201,0.25)_26.92%,rgba(254,212,47,0.25)_51.44%,rgba(254,127,54,0.25)_74.68%,rgba(180,84,211,0.25)_100%)] backdrop-blur-[9.375px] z-[1] overflow-hidden shadow-[0px_-3.75px_18px_0px_#367CFD80,0px_6px_18px_0px_#BC59C180] before:content-[''] before:absolute before:inset-0 before:rounded-[inherit] before:p-[0.75px] before:bg-[linear-gradient(90deg,rgba(41,114,218,0.9)_0%,rgba(38,201,201,0.9)_26.92%,rgba(254,212,47,0.9)_51.44%,rgba(254,127,54,0.9)_74.68%,rgba(180,84,211,0.9)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:pointer-events-none">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col gap-1.5 relative z-10 drop-shadow-[0px_2.25px_6px_rgba(0,0,0,0.5)]">
+                            <h1 class="text-white">FREE 1 Month!</h1>
+                        </div>
+                        <div class="flex justify-center items-center h-[69px] pl-[1.875rem] pr-4 relative z-10 bg-[url('https://i.ibb.co.com/27RGp9NL/Union-claim-prize.webp')] bg-no-repeat bg-cover">
+                            <span class="text-[0.9375rem] leading-normal font-bold text-white dark:text-[#e8e6e3]">CLAIM PRIZE</span>
+                        </div>
+                    </div>
+                </button>
+            </div>
+          </div>
+
+          <!-- bottom-section -->
+          <div class="md:opacity-0 md:visibility-hidden md:pointer-events-none flex flex-col justify-center items-center gap-6 w-full md:gap-4 md:-mt-[3.75rem]">
+            <!-- progress-info-section -->
+            <div class="flex flex-col w-full">
+              <!-- progress-section -->
+              <div class="flex flex-col gap-[0.4375rem] p-2">
+                  <div class="w-full h-[0.3125rem] rounded-[0.3125rem] bg-white/20 dark:bg-[#181a1b33]">
+                      <div class="w-[5%] h-full rounded-[0.3125rem] bg-[#FFED29] dark:bg-[#ffee37]"></div>
+                  </div>
+
+                  <div class="flex justify-between gap-1">
+                      <span class="text-xs leading-normal font-medium text-[#FFED29] dark:text-[#ffee37]">50 Rewards Left!</span>
+                      <span class="text-xs leading-normal font-medium text-[#D0D5DD] dark:text-[#cfcac4]">95/100 Offer</span>
+                  </div>
+              </div>
+
+              <!-- ends-in-section -->
+              <div class="flex justify-center items-center gap-3">
+                <span class="text-[1.03125rem] leading-[1.6875rem] text-white dark:text-[#e8e6e3]"> Ends in</span>
+
+                <!-- time -->
+                <div class="flex items-center gap-[0.1875rem]">
+                  <div class="flex justify-center items-center w-[1.875rem] h-[1.875rem] rounded-[0.375rem] bg-[#FB0464] dark:bg-[#c90350]">
+                    <span class="text-lg leading-none font-semibold text-white dark:text-[#e8e6e3]">02</span>
+                  </div>
+
+                  <span class="text-lg leading-none font-bold text-[#FB0464]">:</span>
+
+                  <div class="flex justify-center items-center w-[1.875rem] h-[1.875rem] rounded-[0.375rem] bg-[#FB0464] dark:bg-[#c90350]">
+                    <span class="text-lg leading-none font-semibold text-white dark:text-[#e8e6e3]">13</span>
+                  </div>
+
+                  <span class="text-lg leading-none font-bold text-[#FB0464]">:</span>
+
+                  <div class="flex justify-center items-center w-[1.875rem] h-[1.875rem] rounded-[0.375rem] bg-[#FB0464] dark:bg-[#c90350]">
+                    <span class="text-lg leading-none font-semibold text-white dark:text-[#e8e6e3]">07</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- not-interested-button -->
+            <button class="flex justify-center items-center w-max p-1 border-b-[0.5px] border-b-[#D0D5DD] dark:border-b-[#3b4043]">
+              <span class="text-xs leading-normal font-medium text-[#D0D5DD] dark:text-[#cfcac4]">I’m not interested</span>
+            </button>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
