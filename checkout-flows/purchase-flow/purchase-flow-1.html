@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    screens: {
+                        sm: '480px',
+                        md: '768px',
+                        lg: '1010px',
+                        xl: '1365px',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-[#333333] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#35393b]">
+    <!-- popup-wrapper -->
+    <div class="flex flex-col min-h-screen bg-white/10 backdrop-blur-[50px] shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] md:rounded-t-[0.625rem] lg:rounded-[0.625rem] dark:bg-[#181a1b]/10">
+        <!-- mobile-nav -->
+        <div class="flex items-center gap-1 px-2 py-1 md:hidden">
+            <!-- back-button -->
+            <div class="flex justify-center items-center w-10 h-10 cursor-pointer">
+                <img src="https://i.ibb.co.com/Gvkq58F5/chevron-left.webp" alt="chevron-left" class="w-6 h-6">
+            </div>
+        </div>
+
+        <!-- content-container -->
+        <div class="flex flex-col gap-6 px-2 grow md:px-4 md:pt-6 lg:flex-row lg:p-0 lg:gap-0">
+            <!-- left-column -->
+            <div data-left-column class="flex flex-col gap-6 lg:w-1/2 lg:px-4 lg:py-6 lg:grow">
+                <!-- order-summary-section -->
+                <div data-order-summary-section class="flex flex-col gap-6">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/xSK3W1w6/General.webp" alt="list" class="w-5 h-5">
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">ORDER SUMMARY</h3>
+                        </div>
+
+                        <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                            <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- shipping-address-section -->
+                <div class="flex flex-col gap-4">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/5gv74YLd/Maps-travel.webp" alt="location-marker"
+                                    class="w-5 h-5">
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
+                                SHIPPING ADDRESS
+                            </h3>
+                        </div>
+
+                        <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                            <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
+                        </div>
+                    </div>
+
+                    <!-- form-container -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-3">
+                            <!-- input-group -->
+                            <div class="flex items-center gap-2">
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- input-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="last-name" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Last
+                                            Name</label>
+                                        <input id="last-name" type="text"
+                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                            placeholder="Last Name">
+                                    </div>
+                                </div>
+
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- input-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="first-name" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">First
+                                            Name</label>
+                                        <input id="first-name" type="text"
+                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                            placeholder="First Name">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- input-wrapper -->
+                            <div class="flex flex-col gap-1.5 w-full">
+                                <!-- input-field -->
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="address-line-1" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Address Line
+                                        1</label>
+                                    <input id="address-line-1" type="text"
+                                        class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                        placeholder="Address Line 1">
+                                </div>
+                            </div>
+
+                            <!-- input-wrapper -->
+                            <div class="flex flex-col gap-1.5 w-full">
+                                <!-- input-field -->
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="address-line-2" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Address Line
+                                        2</label>
+                                    <input id="address-line-2" type="text"
+                                        class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                        placeholder="Address Line 2">
+                                </div>
+                            </div>
+
+                            <!-- input-group -->
+                            <div class="flex items-center gap-2">
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- input-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="postal-code" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Postal
+                                            Code</label>
+                                        <input id="postal-code" type="text" value="12345"
+                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                            placeholder="Postal Code">
+                                    </div>
+                                </div>
+
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- input-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="city" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">City</label>
+                                        <input id="city" type="text" value="Kwai Chung"
+                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                            placeholder="City">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- dropdown-group -->
+                            <div class="flex items-center gap-2">
+                                <!-- dropdown-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- dropdown-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="country" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Country</label>
+
+                                        <!-- select-dropdown -->
+                                        <div id="select-dropdown"
+                                            class="select-dropdown relative z-[10000] flex w-full">
+                                            <div class="country-select w-full cursor-pointer border-none">
+                                                <div
+                                                    class="dash-select__trigger w-full h-10 flex items-center gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D]">
+                                                    <span
+                                                        class="text-base flex-grow text-[#F9FAFB] dark:text-[#e5e3df] capitalize text-balance">Hong
+                                                        Kong</span>
+                                                    <img class="select-arrow h-4 w-4 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]"
+                                                        src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp"
+                                                        alt="arrow-down">
+                                                </div>
+                                                <div class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top shadow-lg transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] upward scale-95 opacity-0 pointer-events-none h-0 overflow-hidden">
+                                                    <div
+                                                        class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]">
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Hong
+                                                                    Kong</span>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Australia</span>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <select class="dash-real-select hidden" name="country-select" required="">
+                                                <option value="hong-kong">Hong Kong</option>
+                                                <option value="australia">Australia</option>
+                                                <option value="usa">USA</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dropdown-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- dropdown-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="state" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">State</label>
+
+                                        <!-- select-dropdown -->
+                                        <div id="select-dropdown"
+                                            class="select-dropdown relative z-[10000] flex w-full">
+                                            <div class="country-select w-full cursor-pointer border-none">
+                                                <div
+                                                    class="dash-select__trigger w-full h-10 flex items-center gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D]">
+                                                    <span
+                                                        class="text-base flex-grow text-[#F9FAFB] dark:text-[#e5e3df] capitalize text-balance">
+                                                    </span>
+                                                    <img class="select-arrow h-4 w-4 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]"
+                                                        src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp"
+                                                        alt="arrow-down">
+                                                </div>
+                                                <div
+                                                    class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top scale-95 opacity-0 shadow-lg transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] h-0 overflow-hidden pointer-events-none">
+                                                    <div
+                                                        class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]">
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Florida</span>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Hawaii</span>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">New
+                                                                    York</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <select class="dash-real-select hidden" name="country-select" required="">
+                                                <option value="florida">Florida</option>
+                                                <option value="hawaii">Hawaii</option>
+                                                <option value="new-york">New York</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- checkbox-container -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2">
+                                <input type="checkbox" name="save" id="save" checked=""
+                                    class="appearance-none bg-[white] dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                                <label for="save" class="text-sm text-[#98A2B3] dark:text-[#b0a993]">Save this address for future
+                                    use.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- billing-address-section -->
+                <div class="flex flex-col gap-4">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/5gv74YLd/Maps-travel.webp" alt="location-marker"
+                                    class="w-5 h-5">
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
+                                BILLING ADDRESS
+                            </h3>
+                        </div>
+
+                        <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                            <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down" class="rotate-180">
+                        </div>
+                    </div>
+
+                    <!-- checkbox-container -->
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="same-as-shipping" id="same-as-shipping" checked="" class="appearance-none bg-[white] dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#3b4043] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                            <label for="same-as-shipping" class="text-sm leading-normal text-[#98A2B3] dark:text-[#b0a993]">Same as Shipping Address</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right-column -->
+            <div data-right-column class="flex flex-col gap-6 lg:w-1/2 lg:px-4 lg:py-6 lg:grow lg:bg-black/50 dark:lg:bg-[#181a1b]/50">
+                <!-- notes-section -->
+                <div data-notes-section class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-4">
+                        <!-- title-container -->
+                        <div class="flex justify-between items-center border-b border-transparent">
+                            <!-- section-title -->
+                            <div class="flex items-center gap-2">
+                                <div class="flex justify-center items-center w-5 h-5">
+                                    <img src="https://i.ibb.co.com/rRp5t6qr/Finance-e-Commerce.webp" alt="coins" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]">
+                                </div>
+                                <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
+                                    Notes
+                                    <span class="text-xs font-normal leading-normal italic text-[#98A2B3] dark:text-[#b0a993]">Optional</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- text-area-section -->
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-2">
+                                <div class="px-1 border-b border-[#07F468] dark:border-[#05af4a] cursor-pointer">
+                                    <div class="flex items-center gap-1 py-1">
+                                        <div class="w-6 h-6 relative">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                            <div class="absolute right-0 bottom-0 w-1.5 h-1.5 bg-[#14E04D] dark:bg-[#10b63e] rounded-full"></div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex gap-1">
+                                                <span class="text-xs leading-normal text-[#07F468] dark:text-[#23f97b]">Princess Carrot Pop</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6 relative">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                            <div class="absolute right-0 bottom-0 w-1.5 h-1.5 bg-[#14E04D] dark:bg-[#10b63e] rounded-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- text-area-wrapper -->
+                            <div class="relative h-[6.25rem]">
+                                <div class="flex gap-2.5 p-2 bg-white/10 dark:bg-[#181a1b]/10 border-b border-[#EAECF0] dark:border-[#353a3c]">
+                                    <div class="w-6 h-6">
+                                        <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                    </div>
+
+                                    <div class="flex flex-col justify-end items-end gap-2 w-full">
+                                        <textarea name="" id="" placeholder="Enter notes to @jenny1234...." class="w-full h-full text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#98A2B3] dark:placeholder:text-[#b0a993] placeholder:font-sans bg-transparent border-none outline-none"></textarea>
+
+                                        <!-- characters-left-container -->
+                                        <div class="flex items-center gap-2.5 min-h-[1.5rem] pointer-events-none w-max">
+                                            <span class="text-xs leading-loose text-right tracking-[0.0075rem] opacity-70 text-[#F9FAFB] dark:text-[#e5e3df]">300 Characters Left</span>
+                                            <div class="flex justify-center items-center cursor-pointer">
+                                                <img src="https://i.ibb.co.com/G3rtn7Sj/face-smile.webp" alt="face-smile" class="w-5 h-5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- total-section -->
+    <div data-total-section class="fixed bottom-0 w-full backdrop-blur-[50px] group/wrapper shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] lg:w-1/2 lg:right-0 lg:bg-transparent">
+        <div class="flex gap-6 px-2 pb-6 md:px-4 md:rounded-b-[0.625rem] lg:rounded-b-none">
+            <div class="flex flex-col gap-4 w-full">
+                <!-- total-price-section -->
+                <div class="flex gap-4 pt-2 border-t border-[#DEE5EC] dark:border-[#353a3c] group-[.scrolling]/wrapper:border-transparent w-full">
+                    <div class="flex gap-4 border-t border-transparent w-full">
+                        <div class="flex justify-between items-end gap-1 w-full">
+                            <h3 class="text-base font-semibold flex-grow text-[#F9FAFB] dark:text-[#e5e3df]">Total</h3>
+                            <h2 class="text-2xl font-semibold align-middle text-[#07F468] dark:text-[#23f97b]">USD$6.99</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- checkbox-container -->
+                <div class="flex items-center gap-2">
+                    <div class="flex items-start gap-2">
+                        <input type="checkbox" name="terms-condition" id="terms-condition" class="appearance-none dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#3b4043] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 mt-0.5 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                        <label for="terms-condition" class="text-sm leading-normal tracking-[0.0175rem] text-[#98A2B3] dark:text-[#b0a993]">I agree to Our Website's
+                            <span class="text-sm leading-normal font-medium tracking-[0.0175rem] text-[#07F468] dark:text-[#23f97b] cursor-pointer">Terms and Condition</span>
+                            and
+                            <span class="text-sm leading-normal font-medium tracking-[0.0075rem] text-[#07F468] dark:text-[#23f97b] cursor-pointer">Privacy Policy</span>.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- button -->
+                <div class="w-full h-12">
+                    <button class="flex justify-center items-center gap-2 w-full h-12 border-t-[1.5px] border-b-[1.5px] border-transparent bg-[#07F468] [&.disabled]:bg-white/20 px-4 [clip-path:polygon(24px_0,100%_0,calc(100%_-_24px)_100%,0_100%)] [&.disabled]:cursor-not-allowed dark:bg-[#0aff78] [&.disabled]:dark:bg-[#181a1b]/20 group/button hover:bg-black dark:hover:bg-[#181a1b] disabled">
+                        <span class="text-base leading-[1.875rem] font-semibold uppercase text-black group-[.disabled]/button:text-white/30 group-hover/button:text-[#07F468] dark:text-[#e8e6e3] dark:group-[.disabled]/button:text-[#e8e6e3]/30 dark:group-hover/button:text-[#23f97b]">next</span>
+                        <img src="https://i.ibb.co.com/5hFPTwZr/arrow-right.webp" alt="arrow-right" class="w-6 h-6 [filter:brightness(0)] group-[.disabled]/button:[filter:brightness(0)_saturate(100%)_invert(100%)_sepia(6%)_saturate(678%)_hue-rotate(146deg)_brightness(115%)_contrast(100%)] group-[.disabled]/button:opacity-30 group-hover/button:[filter:brightness(0)_saturate(100%)_invert(66%)_sepia(68%)_saturate(2102%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] dark:group-hover/button:[filter:brightness(0)_saturate(100%)_invert(87%)_sepia(99%)_saturate(7463%)_hue-rotate(65deg)_brightness(102%)_contrast(95%)]">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- custom-select-dropdown -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize all dropdowns on the page
+            document.querySelectorAll('.country-select').forEach(countrySelect => {
+                const selectDropdown = countrySelect.closest('.select-dropdown');
+                const trigger = countrySelect.querySelector('.dash-select__trigger span');
+                const arrow = countrySelect.querySelector('.select-arrow');
+                const options = countrySelect.querySelectorAll('.option');
+                const realSelect = selectDropdown.querySelector('.dash-real-select');
+                const optionsContainer = countrySelect.querySelector('.dash-options-container');
+
+                // Set initial value
+                if (realSelect) {
+                    realSelect.value = 'yearly';
+                }
+
+                // Toggle dropdown with smooth transitions
+                countrySelect.addEventListener('click', function (e) {
+                    e.stopPropagation();
+
+                    const isOpening = !optionsContainer.classList.contains('open');
+
+                    // Close all other selects first
+                    document.querySelectorAll('.country-select').forEach(s => {
+                        if (s !== countrySelect) {
+                            closeDropdown(s);
+                        }
+                    });
+
+                    if (isOpening) {
+                        // Position dropdown based on available space
+                        positionDropdown(countrySelect);
+                        openDropdown(countrySelect);
+                    } else {
+                        closeDropdown(countrySelect);
+                    }
+                });
+
+                // Handle option selection
+                options.forEach(option => {
+                    option.addEventListener('click', function (e) {
+                        e.stopPropagation();
+
+                        const selectedText = this.querySelector('span').textContent;
+                        if (trigger) trigger.textContent = selectedText;
+                        if (realSelect) realSelect.value = selectedText.toLowerCase();
+
+                        // Close the dropdown
+                        closeDropdown(countrySelect);
+
+                        // Trigger change event on the real select
+                        if (realSelect) realSelect.dispatchEvent(new Event('change'));
+                    });
+                });
+
+                // Position dropdown up or down based on available space
+                function positionDropdown(select) {
+                    const optionsContainer = select.querySelector('.dash-options-container');
+                    if (!optionsContainer) return;
+
+                    const rect = select.getBoundingClientRect();
+                    const spaceBelow = window.innerHeight - rect.bottom;
+                    const spaceAbove = rect.top;
+                    const optionsHeight = optionsContainer.scrollHeight;
+
+                    optionsContainer.classList.remove('upward', 'downward');
+
+                    if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                        optionsContainer.classList.add('upward');
+                        optionsContainer.style.top = 'auto';
+                        optionsContainer.style.bottom = 'calc(100% + 0.5rem)';
+                    } else {
+                        optionsContainer.classList.add('downward');
+                        optionsContainer.style.top = 'calc(100% + 0.5rem)';
+                        optionsContainer.style.bottom = 'auto';
+                    }
+                }
+
+                function openDropdown(select) {
+                    const optionsContainer = select.querySelector('.dash-options-container');
+                    const arrow = select.querySelector('.select-arrow');
+                    if (!optionsContainer || !arrow) return;
+
+                    optionsContainer.classList.add('open');
+                    arrow.classList.add('rotate-180');
+
+                    // Apply visible state (no height transition)
+                    optionsContainer.classList.remove(
+                        'scale-95',
+                        'opacity-0',
+                        'pointer-events-none',
+                        'h-0',
+                        'overflow-hidden'
+                    );
+                    optionsContainer.classList.add(
+                        'scale-100',
+                        'opacity-100',
+                        'pointer-events-auto',
+                        'h-auto',
+                        'overflow-auto'
+                    );
+                }
+
+                function closeDropdown(select) {
+                    const optionsContainer = select?.querySelector('.dash-options-container');
+                    const arrow = select?.querySelector('.select-arrow');
+                    if (!optionsContainer || !arrow) return;
+
+                    optionsContainer.classList.remove('open');
+                    arrow.classList.remove('rotate-180');
+
+                    optionsContainer.classList.remove(
+                        'scale-100',
+                        'opacity-100',
+                        'pointer-events-auto',
+                        'h-auto',
+                        'overflow-auto'
+                    );
+                    optionsContainer.classList.add(
+                        'scale-95',
+                        'opacity-0',
+                        'pointer-events-none',
+                        'h-0',
+                        'overflow-hidden'
+                    );
+                }
+
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function () {
+                document.querySelectorAll('.country-select').forEach(select => {
+                    closeDropdown(select);
+                });
+            });
+
+            // Reposition dropdowns on window resize
+            window.addEventListener('resize', function () {
+                document.querySelectorAll('.country-select').forEach(select => {
+                    const optionsContainer = select.querySelector('.dash-options-container');
+                    if (optionsContainer && optionsContainer.classList.contains('open')) {
+                        positionDropdown(select);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- handle total section's visibility based on scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalSection = document.querySelector('[data-total-section]');
+
+            function updateBorder() {
+                // check if the container is at the bottom of the screen
+                const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 1;
+
+                totalSection.classList.toggle('scrolling', !isAtBottom);
+            }
+
+            updateBorder(); // initial check
+            window.addEventListener('scroll', updateBorder);
+        });
+    </script>
+
+    <!-- adjust right column padding to avoid overlap with total section -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalSection = document.querySelector('[data-total-section]');
+            const rightColumn = document.querySelector('[data-right-column]');
+
+            if (!totalSection || !rightColumn) return;
+
+            function updateRightPadding() {
+                // calculate total section height and set as padding-bottom for right column
+                const totalHeight = totalSection.offsetHeight;
+                rightColumn.style.paddingBottom = `${totalHeight + 24}px`;
+            }
+
+            // Initial
+            updateRightPadding();
+
+            // Update on resize
+            window.addEventListener('resize', updateRightPadding);
+        });
+    </script>
+
+    <!-- move order summary between left and right columns based on viewport size -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderSummary = document.querySelector('[data-order-summary-section]');
+            const leftColumn = document.querySelector('[data-left-column]');
+            const rightColumn = document.querySelector('[data-right-column]');
+            const notesSection = document.querySelector('[data-notes-section]');
+
+            const LG_BREAKPOINT = 1010; // desktop breakpoint
+
+            if (!orderSummary || !leftColumn || !rightColumn || !notesSection) return;
+
+            // Preserve original order-summary position for reset in mobile screen
+            const originalNextSibling = orderSummary.nextElementSibling;
+
+            function updateLayout() {
+                const isLg = window.innerWidth >= LG_BREAKPOINT;
+
+                if (isLg) {
+                    // On desktop: place order summary in right column below notes
+                    if (!rightColumn.contains(orderSummary)) {
+                        notesSection.after(orderSummary);
+                    }
+                } else {
+                    // On smaller screens: restore order summary to left column
+                    if (!leftColumn.contains(orderSummary)) {
+                        if (originalNextSibling) {
+                            leftColumn.insertBefore(orderSummary, originalNextSibling);
+                        } else {
+                            leftColumn.appendChild(orderSummary);
+                        }
+                    }
+                }
+            }
+
+            // Apply layout on load and viewport resize
+            updateLayout();
+            window.addEventListener('resize', updateLayout, { passive: true });
+        });
+    </script>
+
+</body>
+</html>
