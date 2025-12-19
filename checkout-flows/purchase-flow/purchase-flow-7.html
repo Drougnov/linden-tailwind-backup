@@ -51,42 +51,278 @@
         <div class="flex flex-col gap-6 px-2 grow md:px-4 md:pt-6 lg:flex-row lg:p-0 lg:gap-0 lg:h-screen">
             <!-- left-column -->
             <div data-left-column class="flex flex-col gap-6  [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:w-1/2 lg:px-4 lg:py-6 lg:grow lg:h-screen lg:overflow-y-auto">
-                <!-- subscription-section -->
-                <div data-subscription-section class="flex flex-col gap-4">
+                <!-- order-summary-section -->
+                <div data-order-summary-section class="flex flex-col gap-4">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/xSK3W1w6/General.webp" alt="list" class="w-5 h-5">
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">ORDER SUMMARY</h3>
+                        </div>
+
+                        <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                            <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- shipping-address-section -->
+                <div class="flex flex-col gap-4">
                     <!-- title-container -->
                     <div class="flex justify-between items-center gap-2 border-b border-transparent">
                         <!-- section-title -->
                         <div class="flex items-center gap-2">
                             <div class="flex justify-center items-center w-5 h-5">
-                                <img src="https://i.ibb.co.com/chd372MJ/logo-bg.webp" alt="logo bg"
+                                <img src="https://i.ibb.co.com/5gv74YLd/Maps-travel.webp" alt="location-marker"
                                     class="w-5 h-5">
                             </div>
                             <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
-                                SUBSCRIPTION
+                                SHIPPING ADDRESS
                             </h3>
+                        </div>
+
+                        <div class="hidden items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Use New Address</span>
+
+                            <img src="https://i.ibb.co.com/RMdb57b/plus-circle.webp" alt="plus circle" class="w-5 h-5">
+                        </div>
+
+                        <div class="flex items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Change Address</span>
+
+                            <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                                <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col gap-2">
-                        <span class="text-xs leading-normal text-[#98A2B3] dark:text-[#b0a993]">New Subscription</span>
+                    <!-- form-container -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-3">
+                            <!-- input-group -->
+                            <div class="flex items-center gap-2">
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- input-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="last-name" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Last
+                                            Name</label>
+                                        <input id="last-name" type="text" value="Chan"
+                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                            placeholder="Last Name">
+                                    </div>
+                                </div>
 
-                        <div class="flex bg-[url('https://i.ibb.co.com/LXPfFX03/profile-slidein-bg.webp')] bg-cover bg-center bg-no-repeat shadow-[4px_4px_0px_0px_#D8AF0D,4px_4px_4px_0px_#00000026]">
-                            <div class="w-[4.75rem] min-w-[4.75rem] pl-[0.4375rem] flex items-center relative bg-cover bg-center bg-[url('https://i.ibb.co.com/LXPfFX03/profile-slidein-bg.webp')] before:content-[''] before:absolute before:opacity-75 before:inset-0 before:bg-[linear-gradient(109.27deg,#D8AF0D_8.76%,#EFCA38_29.78%,#C6A00C_55.76%,#9F8009_91.24%)] before:z-0">
-                                <img src="https://i.ibb.co.com/p6RVnpkx/logo-1.webp" alt="logo (1)" class="w-[3.125rem] w-[3.125rem] z-10">
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- input-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="first-name" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">First
+                                            Name</label>
+                                        <input id="first-name" type="text" value="Tai Man"
+                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                            placeholder="First Name">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex grow h-full -ml-5 pl-5 [background:linear-gradient(0deg,rgba(0,0,0,0.75),rgba(0,0,0,0.75)),linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.4)_100%)] backdrop-blur-[5px] [clip-path:polygon(20px_0,100%_0,100%_100%,0_100%)]">
-                                <div class="flex flex-col justify-center gap-1 p-2 grow drop-shadow-[0px_0px_4px_#00000066]">
-                                    <h3 class="text-sm font-semibold line-clamp-2 text-white dark:text-[#e8e6e3]">FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.</h3>
-                                    
-                                    <div class="flex items-center h-[1.1875rem]">
-                                        <h3 class="text-lg font-semibold align-middle text-white dark:text-[#e8e6e3]">USD$499.99</h3>
-                                        <span class="text-sm font-medium mt-1 text-white dark:text-[#e8e6e3]">/mo</span>
+
+                            <!-- input-wrapper -->
+                            <div class="flex flex-col gap-1.5 w-full">
+                                <!-- input-field -->
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="address-line-1" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Address Line
+                                        1</label>
+                                    <input id="address-line-1" type="text" value="10/F Block5"
+                                        class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                        placeholder="Address Line 1">
+                                </div>
+                            </div>
+
+                            <!-- input-wrapper -->
+                            <div class="flex flex-col gap-1.5 w-full">
+                                <!-- input-field -->
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="address-line-2" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Address Line
+                                        2</label>
+                                    <input id="address-line-2" type="text" value="Fook Yip Bldg"
+                                        class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                        placeholder="Address Line 2">
+                                </div>
+                            </div>
+
+                            <!-- input-group -->
+                            <div class="flex items-center gap-2">
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- input-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="postal-code" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Postal
+                                            Code</label>
+                                        <input id="postal-code" type="text" value="12345"
+                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                            placeholder="Postal Code">
+                                    </div>
+                                </div>
+
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- input-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="city" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">City</label>
+                                        <input id="city" type="text" value="Kwai Chung"
+                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
+                                            placeholder="City">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- dropdown-group -->
+                            <div class="flex items-center gap-2">
+                                <!-- dropdown-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- dropdown-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="country" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Country</label>
+
+                                        <!-- select-dropdown -->
+                                        <div id="select-dropdown"
+                                            class="select-dropdown relative z-[10000] flex w-full">
+                                            <div class="country-select w-full cursor-pointer border-none">
+                                                <div
+                                                    class="dash-select__trigger w-full h-10 flex items-center gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D]">
+                                                    <span
+                                                        class="text-base flex-grow text-[#F9FAFB] dark:text-[#e5e3df] capitalize text-balance">Hong
+                                                        Kong</span>
+                                                    <img class="select-arrow h-4 w-4 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]"
+                                                        src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp"
+                                                        alt="arrow-down">
+                                                </div>
+                                                <div class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top shadow-lg transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] upward scale-95 opacity-0 pointer-events-none h-0 overflow-hidden">
+                                                    <div
+                                                        class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]">
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Hong
+                                                                    Kong</span>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Australia</span>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <select class="dash-real-select hidden" name="country-select" required="">
+                                                <option value="hong-kong">Hong Kong</option>
+                                                <option value="australia">Australia</option>
+                                                <option value="usa">USA</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dropdown-wrapper -->
+                                <div class="flex flex-col gap-1.5 w-full">
+                                    <!-- dropdown-field -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="state" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">State</label>
+
+                                        <!-- select-dropdown -->
+                                        <div id="select-dropdown"
+                                            class="select-dropdown relative z-[10000] flex w-full">
+                                            <div class="country-select w-full cursor-pointer border-none">
+                                                <div
+                                                    class="dash-select__trigger w-full h-10 flex items-center gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D]">
+                                                    <span
+                                                        class="text-base flex-grow text-[#F9FAFB] dark:text-[#e5e3df] capitalize text-balance">
+                                                    </span>
+                                                    <img class="select-arrow h-4 w-4 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]"
+                                                        src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp"
+                                                        alt="arrow-down">
+                                                </div>
+                                                <div
+                                                    class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top scale-95 opacity-0 shadow-lg transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] h-0 overflow-hidden pointer-events-none">
+                                                    <div
+                                                        class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]">
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Florida</span>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Hawaii</span>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                            <div
+                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                <span
+                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">New
+                                                                    York</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <select class="dash-real-select hidden" name="country-select" required="">
+                                                <option value="florida">Florida</option>
+                                                <option value="hawaii">Hawaii</option>
+                                                <option value="new-york">New York</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <p class="text-xs leading-normal text-[#98A2B3] dark:text-[#b0a993]">Your subscription will begin as soon as you complete checkout. Your billing cycle will start (02-26-2025).</p>
+                        <!-- checkbox-container -->
+                        <div class="hidden items-center gap-2">
+                            <div class="flex items-center gap-2">
+                                <input type="checkbox" name="save" id="save" checked=""
+                                    class="appearance-none bg-[white] dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                                <label for="save" class="text-sm text-[#98A2B3] dark:text-[#b0a993] cursor-pointer">Save this address for future
+                                    use.</label>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end items-center gap-2">
+                            <button class="w-[7.5rem] h-8 flex justify-center items-center bg-black/50 border border-[#07F468] group/button disabled hover:bg-[#07F468] [&.disabled]:bg-white/20 [&.disabled]:cursor-not-allowed [&.disabled]:border-none dark:bg-[#181a1b]/50 dark:border-[#0aff78] dark:hover:bg-[#06c454] dark:[&.disabled]:bg-[#181a1b]/20">
+                                <span class="text-sm font-medium tracking-[0.0218rem] text-[#07F468] group-hover/button:text-black group-[.disabled]/button:text-white/30 dark:text-[#23f97b] dark:group-hover/button:text-[#e8e6e3] dark:group-[.disabled]/button:text-[#e8e6e3]/30">Cancel</span>
+                            </button>
+
+                            <button class="w-[7.5rem] h-8 flex justify-center items-center bg-[#07F468] group/button disabled hover:bg-[#0C111D] [&.disabled]:bg-white/20 [&.disabled]:cursor-not-allowed [&.disabled]:border-none dark:bg-[#0aff78] dark:hover:bg-[#162036] dark:[&.disabled]:bg-[#181a1b]/20">
+                                <span class="text-sm font-medium tracking-[0.0218rem] text-[#0C111D] group-hover/button:text-[#07F468] group-[.disabled]/button:text-white/30 dark:text-[#dbd8d3] dark:group-hover/button:text-[#23f97b] dark:group-[.disabled]/button:text-[#e8e6e3]/30">Update</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -102,6 +338,20 @@
                             <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
                                 PAYMENT METHOD
                             </h3>
+                        </div>
+
+                        <div class="hidden items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Use New Card</span>
+
+                            <img src="https://i.ibb.co.com/RMdb57b/plus-circle.webp" alt="plus circle" class="w-5 h-5">
+                        </div>
+
+                        <div class="flex items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Change Card</span>
+
+                            <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                                <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
+                            </div>
                         </div>
                     </div>
 
@@ -166,12 +416,20 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- checkbox-container -->
+                    <div class="hidden items-center gap-2 lg:flex">
+                        <div class="flex justify-center items-center w-4 min-w-4 h-4">
+                            <input data-save-card-checkbox type="checkbox" name="checkbox" id="checkbox-dash-3-2" checked="" class="appearance-none border border-[#D0D5DD] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-black checked:after:border-w-0 checked:after:border-b-2 checked:after:border-r-2 checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                        </div>
+                        <label for="checkbox-dash-3-2" class="text-xs sm:text-sm leading-normal sm:leading-normal ma-0 cursor-pointer text-[#98A2B3] dark:text-[#b0a99e]">Save this card for faster checkout.</label>
+                    </div>
                 </div>
 
                 <!-- billing-address-section -->
                 <div class="flex flex-col gap-4">
                     <!-- title-container -->
-                    <div class="flex justify-between items-center gap-2 border-b border-transparent">
+                    <div class="flex justify-between items-center border-b border-transparent">
                         <!-- section-title -->
                         <div class="flex items-center gap-2">
                             <div class="flex justify-center items-center w-5 h-5">
@@ -183,13 +441,13 @@
                             </h3>
                         </div>
 
-                        <div class="flex items-center gap-2.5 w-max shrink-0 cursor-pointer md:hidden">
+                        <div class="hidden items-center gap-2.5 w-max shrink-0 cursor-pointer">
                             <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Use New Address</span>
 
                             <img src="https://i.ibb.co.com/RMdb57b/plus-circle.webp" alt="plus circle" class="w-5 h-5">
                         </div>
 
-                        <div class="hidden md:flex items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                        <div class="flex items-center gap-2.5 w-max shrink-0 cursor-pointer">
                             <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Change Address</span>
 
                             <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
@@ -198,6 +456,15 @@
                         </div>
                     </div>
 
+                    <!-- checkbox-container -->
+                    <div class="hidden items-center gap-2">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="same-as-shipping" id="same-as-shipping" checked="" class="appearance-none bg-[white] dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#3b4043] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                            <label for="same-as-shipping" class="text-sm leading-normal text-[#98A2B3] dark:text-[#b0a993]">Same as Shipping Address</label>
+                        </div>
+                    </div>
+
+                    <!-- edit-container -->
                     <div class="flex justify-between items-center gap-2 p-4 bg-black/25 dark:bg-[#181a1b]/25 border border-[#EAECF0]/50 dark:border-[#353a3c]/50 rounded-md">
                         <p class="text-base font-medium text-[#EAECF0] dark:text-[#dddad5] line-clamp-2">Chan Tai Man,10/F Block5,Fook Yip Bldg,12345,Kwai Chung,Hong Kong</p>
                     
@@ -246,6 +513,39 @@
                                             <div class="flex gap-1">
                                                 <span class="text-xs leading-normal text-[#07F468] dark:text-[#23f97b]">Princess Carrot Pop</span>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6 relative">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                            <div class="absolute right-0 bottom-0 w-1.5 h-1.5 bg-[#14E04D] dark:bg-[#10b63e] rounded-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
                                         </div>
                                     </div>
                                 </div>
@@ -310,8 +610,6 @@
     <!-- total-section -->
     <div data-total-section class="fixed bottom-0 w-full backdrop-blur-[50px] group/wrapper shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] lg:w-1/2 lg:right-0 lg:bg-transparent">
         <div class="flex flex-col gap-4 px-2 pb-6 md:px-4 md:rounded-b-[0.625rem] lg:rounded-b-none">
-            <p class="text-sm leading-normal tracking-[0.0175rem] text-[#98A2B3] dark:text-[#b0a993]">You will be charged <span class="text-sm leading-normal tracking-[0.0175rem] text-[#07F468] dark:text-[#23f97b]">$499.99</span> today (02-26-2025) and on the same day each month. This subscription renews automatically, and you can cancel anytime in your account.</p>
-            
             <div class="flex flex-col gap-4 w-full">
                 <!-- total-price-section -->
                 <div class="flex flex-col gap-1 pt-2 border-t border-[#DEE5EC] dark:border-[#353a3c] group-[.scrolling]/wrapper:border-transparent w-full">
@@ -501,6 +799,23 @@
         });
     </script>
 
+    <!-- handle total section's visibility based on scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalSection = document.querySelector('[data-total-section]');
+
+            function updateBorder() {
+                // check if the container is at the bottom of the screen
+                const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 1;
+
+                totalSection.classList.toggle('scrolling', !isAtBottom);
+            }
+
+            updateBorder(); // initial check
+            window.addEventListener('scroll', updateBorder);
+        });
+    </script>
+
     <!-- adjust right column padding to avoid overlap with total section -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -523,43 +838,84 @@
         });
     </script>
 
-    <!-- move subscription section between columns based on screen size -->
+    <!-- move order summary between left and right columns based on viewport size -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const subscriptionSection = document.querySelector('[data-subscription-section]');
+            const orderSummary = document.querySelector('[data-order-summary-section]');
             const leftColumn = document.querySelector('[data-left-column]');
             const rightColumn = document.querySelector('[data-right-column]');
             const notesSection = document.querySelector('[data-notes-section]');
 
-            const LG_BREAKPOINT = 1010;
+            const LG_BREAKPOINT = 1010; // desktop breakpoint
 
-            if (!subscriptionSection || !leftColumn || !rightColumn || !notesSection) return;
+            if (!orderSummary || !leftColumn || !rightColumn || !notesSection) return;
 
-            // Save original position to restore on mobile
-            const originalNextSibling = subscriptionSection.nextElementSibling;
+            // Preserve original order-summary position for reset in mobile screen
+            const originalNextSibling = orderSummary.nextElementSibling;
 
             function updateLayout() {
                 const isLg = window.innerWidth >= LG_BREAKPOINT;
 
                 if (isLg) {
-                    // On desktop: move subscription to right column ABOVE notes
-                    if (!rightColumn.contains(subscriptionSection)) {
-                        rightColumn.insertBefore(subscriptionSection, notesSection);
+                    // On desktop: place order summary in right column below notes
+                    if (!rightColumn.contains(orderSummary)) {
+                        notesSection.after(orderSummary);
                     }
                 } else {
-                    // On mobile: move subscription back to left column
-                    if (!leftColumn.contains(subscriptionSection)) {
+                    // On smaller screens: restore order summary to left column
+                    if (!leftColumn.contains(orderSummary)) {
                         if (originalNextSibling) {
-                            leftColumn.insertBefore(subscriptionSection, originalNextSibling);
+                            leftColumn.insertBefore(orderSummary, originalNextSibling);
                         } else {
-                            leftColumn.appendChild(subscriptionSection);
+                            leftColumn.appendChild(orderSummary);
                         }
                     }
                 }
             }
 
+            // Apply layout on load and viewport resize
             updateLayout();
             window.addEventListener('resize', updateLayout, { passive: true });
+        });
+    </script>
+    
+    <!-- toggle class to handle visibility of tip options based on checkbox state -->
+    <script>
+        // === for single checkbox ===
+
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     const checkbox = document.querySelector('[data-save-card-checkbox]');
+        //     const rightColumn = document.querySelector('[data-right-column]');
+        //     const tipSummaryContainer = document.querySelector('[data-tip-summary-container]');
+
+        //     if (!checkbox || !rightColumn) return;
+
+        //     const toggleTip = () => {
+        //         rightColumn.classList.toggle("tip-active", !checkbox.checked);
+        //         tipSummaryContainer.classList.toggle("tip-active", !checkbox.checked);
+        //     };
+
+        //     toggleTip();
+        //     checkbox.addEventListener('change', toggleTip);
+        // });
+
+        // === for multiple checkbox ===
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('[data-save-card-checkbox]');
+            const rightColumn = document.querySelector('[data-right-column]');
+            const tipSummaryContainer = document.querySelector('[data-tip-summary-container]');
+
+            if (!checkboxes.length || !rightColumn || !tipSummaryContainer) return;
+
+            const toggleTip = () => {
+                const hasUnchecked = [...checkboxes].some(cb => !cb.checked);
+
+                rightColumn.classList.toggle('tip-active', hasUnchecked);
+                tipSummaryContainer.classList.toggle('tip-active', hasUnchecked);
+            };
+
+            toggleTip();
+            checkboxes.forEach(cb => cb.addEventListener('change', toggleTip));
         });
     </script>
 
@@ -588,25 +944,6 @@
                 }
                 updateCounter();
             });
-        });
-    </script>
-
-    <!-- toggle class to handle visibility of tip options based on checkbox state -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const checkbox = document.querySelector('[data-save-card-checkbox]');
-            const rightColumn = document.querySelector('[data-right-column]');
-            const tipSummaryContainer = document.querySelector('[data-tip-summary-container]');
-
-            if (!checkbox || !rightColumn) return;
-
-            const toggleTip = () => {
-                rightColumn.classList.toggle("tip-active", !checkbox.checked);
-                tipSummaryContainer.classList.toggle("tip-active", !checkbox.checked);
-            };
-
-            toggleTip();
-            checkbox.addEventListener('change', toggleTip);
         });
     </script>
 
