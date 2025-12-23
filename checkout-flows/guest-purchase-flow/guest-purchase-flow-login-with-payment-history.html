@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    screens: {
+                        sm: '480px',
+                        md: '768px',
+                        lg: '1010px',
+                        xl: '1365px',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-[#242424] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#35393b]">
+    <!-- popup-wrapper -->
+    <div class="flex flex-col min-h-screen bg-white/10 shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] md:rounded-t-[0.625rem] lg:rounded-[0.625rem] dark:bg-[#181a1b]/10">
+        <!-- Parent blur layer -->
+        <div class="absolute inset-0 backdrop-blur-[50px] pointer-events-none z-[-1] lg:backdrop-blur-[10px]"></div>
+
+        <!-- mobile-nav -->
+        <div class="flex items-center gap-1 px-2 py-1 md:hidden">
+            <!-- back-button -->
+            <div class="flex justify-center items-center w-10 h-10 cursor-pointer">
+                <img src="https://i.ibb.co.com/Gvkq58F5/chevron-left.webp" alt="chevron-left" class="w-6 h-6">
+            </div>
+        </div>
+
+        <!-- content-container -->
+        <div class="flex flex-col gap-6 px-2 grow md:px-4 md:pt-6 lg:flex-row lg:p-0 lg:gap-0 lg:h-screen">
+            <!-- left-column -->
+            <div data-left-column class="flex flex-col gap-6  [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:w-1/2 lg:px-4 lg:py-6 lg:grow lg:h-screen lg:overflow-y-auto">
+                <!-- billing-email-section -->
+                <div class="flex flex-col gap-2">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/XfdvLvLC/mail.webp" alt="mail" class="w-5 h-5">
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">BILLING EMAIL</h3>
+                        </div>
+                    </div>
+
+                    <!-- email-container -->
+                    <div class="flex justify-between items-end">
+                        <!-- model-info -->
+                        <div class="flex items-center gap-2 py-1">
+                            <!-- avatar -->
+                            <div class="flex justify-center items-center w-10 h-9">
+                                <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar" class="h-full object-cover"/>
+                            </div>
+                            <!-- info -->
+                            <div class="flex flex-col">
+                                <h3 class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">Man goes 4eva</h3>
+                                <span class="text-xs leading-normal font-medium text-[#98A2B3] dark:text-[#b0a993]">existingmember@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <!-- log-out-button -->
+                        <button class="flex items-center gap-0.5 bg-transparent border-none outline-none cursor-pointer">
+                            <img src="https://i.ibb.co.com/Gfb88yFY/log-out.webp" alt="log-out" class="w-4 h-4 [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(4%)_saturate(1168%)_hue-rotate(179deg)_brightness(98%)_contrast(82%)]"/>
+                            <span class="text-xs leading-normal font-medium text-[#98A2B3] dark:text-[#b0a993]">Log out</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- order-summary-section -->
+                <div data-order-summary-section class="flex flex-col gap-4">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/xSK3W1w6/General.webp" alt="list" class="w-5 h-5">
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">ORDER SUMMARY</h3>
+                        </div>
+
+                        <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                            <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- shipping-address-section -->
+                <div class="flex flex-col gap-4">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center gap-2 border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/5gv74YLd/Maps-travel.webp" alt="location-marker"
+                                    class="w-5 h-5">
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
+                                SHIPPING ADDRESS
+                            </h3>
+                        </div>
+
+                        <div class="flex sm:hidden items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Use New Address</span>
+
+                            <img src="https://i.ibb.co.com/RMdb57b/plus-circle.webp" alt="plus circle" class="w-5 h-5">
+                        </div>
+
+                        <div class="hidden sm:flex items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5] lg:hidden">Change Address</span>
+
+                            <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                                <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center gap-2 p-4 bg-black/25 dark:bg-[#181a1b]/25 border border-[#EAECF0]/50 dark:border-[#353a3c]/50 rounded-md">
+                        <p class="text-base font-medium text-[#EAECF0] dark:text-[#dddad5] line-clamp-2">Chan Tai Man,10/F Block5,Fook Yip Bldg,12345,Kwai Chung,Hong Kong</p>
+                    
+                        <div class="w-[1.125rem] h-[1.125rem] min-w-[1.125rem] flex justify-center items-center w-max shrink-0 cursor-pointer">
+                            <img src="https://i.ibb.co.com/JWT03TyR/svgviewer-png-output-33.png" alt="edit" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(2%)_saturate(335%)_hue-rotate(184deg)_brightness(97%)_contrast(95%)] cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- payment-method-section -->
+                <div class="flex flex-col gap-4">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/m5nstLw2/svgviewer-png-output-30.png" alt="credit-card" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]">
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
+                                PAYMENT METHOD
+                            </h3>
+                        </div>
+
+                        <div class="flex sm:hidden items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Use New Card</span>
+
+                            <img src="https://i.ibb.co.com/RMdb57b/plus-circle.webp" alt="plus circle" class="w-5 h-5">
+                        </div>
+
+                        <div class="hidden sm:flex items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Change Card</span>
+
+                            <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                                <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-wrapper -->
+                    <div class="hidden lg:block">
+                        <div class="flex w-full max-w-[29.6875rem] min-h-[12.5rem] aspect-[1.715/1] bg-[#1D1D1D] [background-image:url('https://i.ibb.co.com/jvrYTGkd/card-bg.webp')] bg-cover bg-center border border border-[#EAECF0]/50 dark:border-[#353a3c]/50 rounded-xl">
+                            <div class="px-4 py-5 flex flex-col justify-between w-full sm:p-6 rounded-xl">
+                                <!-- edit-card-container -->
+                                <div class="flex justify-between items-center gap-[0.625rem] h-4">
+                                    <button class="flex items-center gap-0.5 bg-transparent border-none outline-none cursor-pointer">
+                                        <img src="https://i.ibb.co.com/YMvbDsR/trash-03.webp" alt="trash-03" class="w-4 h-4">
+                                        <span class="text-xs leading-normal font-medium text-[#EAECF0] dark:text-[#dddad5]">delete Card</span>
+                                    </button>
+
+                                    <img src="https://i.ibb.co.com/pr2VM4zR/svgviewer-png-output-32.png" alt="visa" class="h-[1.002rem]">
+                                </div>
+
+                                <!-- info-container -->
+                                <div class="flex flex-col gap-10">
+                                    <h2 class="text-[2.5rem] leading-[2.75rem] font-semibold tracking-[-0.05rem] bg-[linear-gradient(180deg,#FFFFFF_0%,rgba(248,248,248,0.81)_100%)] bg-clip-text text-transparent drop-shadow-[0px_0.83px_3.34px_#00000029]">**** **** **** 3507</h2>
+                                
+                                    <div class="flex w-full h-[2.875rem]">
+                                        <div class="flex flex-col justify-between h-full w-1/2">
+                                            <span class="text-xs leading-normal font-medium drop-shadow-[0px_-0.83px_0.83px_0px_#51515166_inset] text-[#f3f3f3]/80 dark:text-[#dddad5]/80">Card Holder Name</span>
+                                            <div class="py-0.5">
+                                                <span class="text-base font-bold text-[#F3F3F3] dark:text-[#e5e3df]">John Carter</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex flex-col justify-between h-full w-1/2">
+                                            <span class="text-xs leading-normal font-medium drop-shadow-[0px_-0.83px_0.83px_0px_#51515166_inset] text-[#f3f3f3]/80 dark:text-[#dddad5]/80">Expiry Date</span>
+                                            <div class="py-0.5">
+                                                <span class="text-base font-bold text-[#F3F3F3] dark:text-[#e5e3df]">02/30</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- editable-card-mobile -->
+                    <div class="flex lg:hidden justify-between items-center gap-2 p-4 bg-black/25 dark:bg-[#181a1b]/25 border border-[#EAECF0]/50 dark:border-[#353a3c]/50 rounded-md">
+                        <div class="flex justify-between items-center gap-2 grow">
+                            <div class="flex justify-between items-center gap-2 grow min-w-0 truncate sm:grow-0">
+                                <span class="text-base font-medium text-white grow min-w-0 truncate dark:text-[#e8e6e3] sm:min-w-[8.5rem]">John Carter</span>
+                                <span class="text-base font-medium text-white shrink-0 dark:text-[#e8e6e3]">****3746</span>
+                            </div>
+
+                            <div class="flex justify-between items-center gap-2 shrink-0">
+                                <span class="text-xs leading-normal text-white shrink-0 dark:text-[#e8e6e3]">EXP 02/30</span>
+                                <img src="https://i.ibb.co.com/pr2VM4zR/svgviewer-png-output-32.png" alt="visa" class="h-3">
+                            </div>
+                        </div>
+                    
+                        <div class="w-[1.125rem] h-[1.125rem] min-w-[1.125rem] flex justify-center items-center w-max shrink-0 cursor-pointer">
+                            <img src="https://i.ibb.co.com/YMvbDsR/trash-03.webp" alt="trash-03" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(2%)_saturate(335%)_hue-rotate(184deg)_brightness(97%)_contrast(95%)] cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- billing-address-section -->
+                <div class="flex flex-col gap-4">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center gap-2 border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/5gv74YLd/Maps-travel.webp" alt="location-marker"
+                                    class="w-5 h-5">
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
+                                BILLING ADDRESS
+                            </h3>
+                        </div>
+
+                        <div class="flex sm:hidden items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Use New Address</span>
+
+                            <img src="https://i.ibb.co.com/RMdb57b/plus-circle.webp" alt="plus circle" class="w-5 h-5">
+                        </div>
+
+                        <div class="hidden sm:flex items-center gap-2.5 w-max shrink-0 cursor-pointer">
+                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5] lg:hidden">Change Address</span>
+
+                            <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                                <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center gap-2 p-4 bg-black/25 dark:bg-[#181a1b]/25 border border-[#EAECF0]/50 dark:border-[#353a3c]/50 rounded-md">
+                        <p class="text-base font-medium text-[#EAECF0] dark:text-[#dddad5] line-clamp-2">Chan Tai Man,10/F Block5,Fook Yip Bldg,12345,Kwai Chung,Hong Kong</p>
+                    
+                        <div class="w-[1.125rem] h-[1.125rem] min-w-[1.125rem] flex justify-center items-center w-max shrink-0 cursor-pointer">
+                            <img src="https://i.ibb.co.com/JWT03TyR/svgviewer-png-output-33.png" alt="edit" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(2%)_saturate(335%)_hue-rotate(184deg)_brightness(97%)_contrast(95%)] cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right-column -->
+            <div data-right-column class="flex flex-col gap-6 group/right-col [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:w-1/2 lg:px-4 lg:pt-6 lg:-mb-[1px] lg:grow lg:bg-black/50 dark:lg:bg-[#181a1b]/50 lg:h-screen lg:overflow-y-auto">
+                <!-- notes-section -->
+                <div data-notes-section class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-4">
+                        <!-- title-container -->
+                        <div class="flex justify-between items-center border-b border-transparent">
+                            <!-- section-title -->
+                            <div class="flex items-center gap-2">
+                                <div class="flex justify-center items-center w-5 h-5">
+                                    <img src="https://i.ibb.co.com/rRp5t6qr/Finance-e-Commerce.webp" alt="coins" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]">
+                                </div>
+                                <h3 class="group-[.tip-active]/right-col:hidden text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
+                                    Notes 
+                                    <span class="text-xs font-normal leading-normal italic pl-1 text-[#98A2B3] dark:text-[#b0a993]">Optional</span>
+                                </h3>
+                                <h3 class="hidden group-[.tip-active]/right-col:inline text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
+                                    Note & Tip 
+                                    <span class="text-xs font-normal leading-normal italic pl-1 text-[#98A2B3] dark:text-[#b0a993]">Optional</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- text-area-section -->
+                        <div class="flex flex-col gap-2">
+                            <!-- avatars-row -->
+                            <div class="flex items-center gap-2">
+                                <div class="px-1 border-b border-[#07F468] dark:border-[#05af4a] cursor-pointer">
+                                    <div class="flex items-center gap-1 py-1">
+                                        <div class="w-6 h-6 relative">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                            <div class="absolute right-0 bottom-0 w-1.5 h-1.5 bg-[#14E04D] dark:bg-[#10b63e] rounded-full"></div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex gap-1">
+                                                <span class="text-xs leading-normal text-[#07F468] dark:text-[#23f97b]">Princess Carrot Pop</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6 relative">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                            <div class="absolute right-0 bottom-0 w-1.5 h-1.5 bg-[#14E04D] dark:bg-[#10b63e] rounded-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-1 border-b-[0.5px] border-transparent cursor-pointer">
+                                    <div class="flex justify-center items-center gap-1 py-1">
+                                        <div class="w-6 h-6">
+                                            <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- tips-container -->
+                            <div class="hidden group-[.tip-active]/right-col:flex items-center gap-2 flex-wrap">
+                                <button class="flex justify-center items-center gap-0.5 px-2 py-1 rounded-md border border-[#98A2B3] group/tip cursor-pointer active [&.active]:border-[#07F468] dark:border-[#b0a993] dark:[&.active]:border-[#23f97b]">
+                                    <span class="text-xs leading-normal text-[#98A2B3] group-[.active]/tip:text-[#07F468] dark:text-[#b0a993] dark:group-[.active]/tip:text-[#23f97b]">$1.00</span>
+                                    <img src="https://i.ibb.co.com/67H4YXLp/x.webp" alt="x" class="hidden w-4 h-4 group-[.active]/tip:block">
+                                </button>
+
+                                <button class="flex justify-center items-center gap-0.5 px-2 py-1 rounded-md border border-[#98A2B3] group/tip cursor-pointer [&.active]:border-[#07F468] dark:border-[#b0a993] dark:[&.active]:border-[#23f97b]">
+                                    <span class="text-xs leading-normal text-[#98A2B3] group-[.active]/tip:text-[#07F468] dark:text-[#b0a993] dark:group-[.active]/tip:text-[#23f97b]">$3.00</span>
+                                    <img src="https://i.ibb.co.com/67H4YXLp/x.webp" alt="x" class="hidden w-4 h-4 group-[.active]/tip:block">
+                                </button>
+
+                                <button class="flex justify-center items-center gap-0.5 px-2 py-1 rounded-md border border-[#98A2B3] group/tip cursor-pointer [&.active]:border-[#07F468] dark:border-[#b0a993] dark:[&.active]:border-[#23f97b]">
+                                    <span class="text-xs leading-normal text-[#98A2B3] group-[.active]/tip:text-[#07F468] dark:text-[#b0a993] dark:group-[.active]/tip:text-[#23f97b]">$5.00</span>
+                                    <img src="https://i.ibb.co.com/67H4YXLp/x.webp" alt="x" class="hidden w-4 h-4 group-[.active]/tip:block">
+                                </button>
+
+                                <button class="flex justify-center items-center gap-0.5 px-2 py-1 rounded-md border border-[#98A2B3] group/tip cursor-pointer [&.active]:border-[#07F468] dark:border-[#b0a993] dark:[&.active]:border-[#23f97b]">
+                                    <span class="text-xs leading-normal text-[#98A2B3] group-[.active]/tip:text-[#07F468] dark:text-[#b0a993] dark:group-[.active]/tip:text-[#23f97b]">$10.00</span>
+                                    <img src="https://i.ibb.co.com/67H4YXLp/x.webp" alt="x" class="hidden w-4 h-4 group-[.active]/tip:block">
+                                </button>
+
+                                <div class="flex justify-center items-center gap-0.5 rounded-md border border-[#98A2B3] dark:border-[#b0a993] max-w-[3.875rem]">
+                                    <input type="text" placeholder="custom" class="w-full text-xs leading-normal text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-xs placeholder:leading-normal placeholder:text-[#98A2B3]/50 dark:placeholder:text-[#b0a993]/50 placeholder:font-sans bg-transparent border-none outline-none px-2 py-1">
+                                </div>
+                            </div>
+
+                            <p class="hidden group-[.tip-active]/right-col:inline text-sm text-[#98A2B3] dark:text-[#b0a993]">Eek! Thank you so much for tipping!   100% tips will go to the creators.💖</p>
+
+                            <!-- text-area-wrapper -->
+                            <div class="relative min-h-[6.25rem]">
+                                <div class="flex gap-2.5 p-2 bg-white/10 dark:bg-[#181a1b]/10 border-b border-[#EAECF0] h-full dark:border-[#353a3c]">
+                                    <div class="w-6 h-6">
+                                        <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar">
+                                    </div>
+
+                                    <div class="flex flex-col justify-end items-end gap-2 w-full">
+                                        <textarea data-notes-to-creator-textarea name="" id="" placeholder="Enter notes to @jenny1234...." class="w-full h-full min-h-[3.125rem] text-base [field-sizing:content] text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#98A2B3] dark:placeholder:text-[#b0a993] placeholder:font-sans bg-transparent border-none outline-none"></textarea>
+
+                                        <!-- characters-left-container -->
+                                        <div class="flex items-center gap-2.5 min-h-[1.5rem] pointer-events-none w-max">
+                                            <span data-characters-left-text class="text-xs leading-loose text-right tracking-[0.0075rem] opacity-70 text-[#F9FAFB] dark:text-[#e5e3df]">300 Characters Left</span>
+                                            <div class="flex justify-center items-center cursor-pointer">
+                                                <img src="https://i.ibb.co.com/G3rtn7Sj/face-smile.webp" alt="face-smile" class="w-5 h-5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- total-section -->
+        <div data-total-section class="sticky bottom-0 mt-6 w-full bg-[linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%)] [&.at-bottom]:[background:transparent] backdrop-blur-[35px] group/wrapper shadow-[0px_0px_8px_0px_black] [&.at-bottom]:shadow-none z-[10001] [&.at-bottom]:backdrop-blur-0 lg:w-[calc(100%+2rem)] md:backdrop-blur-[2.5px] lg:mt-auto lg:-ml-4 lg:rounded-br-[0.625rem]">
+            <div class="flex flex-col gap-4 px-2 pb-4 sm:pb-6 md:px-4 md:pb-4 md:rounded-b-[0.625rem] lg:pb-6 lg:rounded-b-none">
+                <div class="flex flex-col gap-4 w-full">
+                    <!-- total-price-section -->
+                    <div class="flex flex-col gap-1 pt-2 border-t border-transparent group-[.at-bottom]/wrapper:border-[#DEE5EC] dark:group-[.at-bottom]/wrapper:border-[#353a3c] w-full">
+                        <!-- tip-summary-container -->
+                        <div data-tip-summary-container class="hidden [&.tip-active]:flex justify-between items-center gap-2 w-full">
+                            <span class="text-base text-[#F9FAFB] dark:text-[#e5e3df]">Tip</span>
+                            <span data-tip-amount-text class="text-base text-[#F9FAFB] dark:text-[#e5e3df]">USD$ 2.00</span>
+                        </div>
+
+                        <div class="flex gap-4 border-t border-transparent w-full">
+                            <div class="flex justify-between items-start gap-1 w-full">
+                                <div class="flex flex-col gap-0.5">
+                                    <h3 class="text-base font-semibold flex-grow text-[#F9FAFB] dark:text-[#e5e3df]">Total</h3>
+
+                                    <span class="text-xs leading-normal underline text-[#F9FAFB] dark:text-[#e5e3df] inline lg:hidden">See Summary</span>
+                                </div>
+
+                                <h2 class="text-2xl font-semibold align-middle text-[#07F468] dark:text-[#23f97b]">USD$6.99</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- checkbox-container -->
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-start gap-2">
+                            <input type="checkbox" name="terms-condition" id="terms-condition" class="appearance-none dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#3b4043] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 mt-0.5 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                            <label for="terms-condition" class="text-sm leading-normal tracking-[0.0175rem] cursor-pointer text-[#98A2B3] dark:text-[#b0a993]">I agree to Our Website's
+                                <span class="text-sm leading-normal font-medium tracking-[0.0175rem] text-[#07F468] dark:text-[#23f97b] cursor-pointer">Terms and Condition</span>
+                                and
+                                <span class="text-sm leading-normal font-medium tracking-[0.0075rem] text-[#07F468] dark:text-[#23f97b] cursor-pointer">Privacy Policy</span>.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- button -->
+                    <div class="w-full h-12">
+                        <button class="flex justify-center items-center gap-2 w-full h-12 border-t-[1.5px] border-b-[1.5px] border-transparent bg-[#07F468] [&.disabled]:bg-white/20 px-4 [clip-path:polygon(24px_0,100%_0,calc(100%_-_24px)_100%,0_100%)] [&.disabled]:cursor-not-allowed dark:bg-[#0aff78] [&.disabled]:dark:bg-[#181a1b]/20 group/button hover:bg-black dark:hover:bg-[#181a1b]">
+                            <span class="text-base leading-[1.875rem] font-semibold uppercase text-black group-[.disabled]/button:text-white/30 group-hover/button:text-[#07F468] dark:text-[#e8e6e3] dark:group-[.disabled]/button:text-[#e8e6e3]/30 dark:group-hover/button:text-[#23f97b]">Proceed Payment</span>
+                            <img src="https://i.ibb.co.com/5hFPTwZr/arrow-right.webp" alt="arrow-right" class="w-6 h-6 [filter:brightness(0)] group-[.disabled]/button:[filter:brightness(0)_saturate(100%)_invert(100%)_sepia(6%)_saturate(678%)_hue-rotate(146deg)_brightness(115%)_contrast(100%)] group-[.disabled]/button:opacity-30 group-hover/button:[filter:brightness(0)_saturate(100%)_invert(66%)_sepia(68%)_saturate(2102%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] dark:group-hover/button:[filter:brightness(0)_saturate(100%)_invert(87%)_sepia(99%)_saturate(7463%)_hue-rotate(65deg)_brightness(102%)_contrast(95%)]">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- custom-select-dropdown -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize all dropdowns on the page
+            document.querySelectorAll('.country-select').forEach(countrySelect => {
+                const selectDropdown = countrySelect.closest('.select-dropdown');
+                const trigger = countrySelect.querySelector('.dash-select__trigger span');
+                const arrow = countrySelect.querySelector('.select-arrow');
+                const options = countrySelect.querySelectorAll('.option');
+                const realSelect = selectDropdown.querySelector('.dash-real-select');
+                const optionsContainer = countrySelect.querySelector('.dash-options-container');
+
+                // Set initial value
+                if (realSelect) {
+                    realSelect.value = 'yearly';
+                }
+
+                // Toggle dropdown with smooth transitions
+                countrySelect.addEventListener('click', function (e) {
+                    e.stopPropagation();
+
+                    const isOpening = !optionsContainer.classList.contains('open');
+
+                    // Close all other selects first
+                    document.querySelectorAll('.country-select').forEach(s => {
+                        if (s !== countrySelect) {
+                            closeDropdown(s);
+                        }
+                    });
+
+                    if (isOpening) {
+                        // Position dropdown based on available space
+                        positionDropdown(countrySelect);
+                        openDropdown(countrySelect);
+                    } else {
+                        closeDropdown(countrySelect);
+                    }
+                });
+
+                // Handle option selection
+                options.forEach(option => {
+                    option.addEventListener('click', function (e) {
+                        e.stopPropagation();
+
+                        const selectedText = this.querySelector('span').textContent;
+                        if (trigger) trigger.textContent = selectedText;
+                        if (realSelect) realSelect.value = selectedText.toLowerCase();
+
+                        // Close the dropdown
+                        closeDropdown(countrySelect);
+
+                        // Trigger change event on the real select
+                        if (realSelect) realSelect.dispatchEvent(new Event('change'));
+                    });
+                });
+
+                // Position dropdown up or down based on available space
+                function positionDropdown(select) {
+                    const optionsContainer = select.querySelector('.dash-options-container');
+                    if (!optionsContainer) return;
+
+                    const rect = select.getBoundingClientRect();
+                    const spaceBelow = window.innerHeight - rect.bottom;
+                    const spaceAbove = rect.top;
+                    const optionsHeight = optionsContainer.scrollHeight;
+
+                    optionsContainer.classList.remove('upward', 'downward');
+
+                    if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                        optionsContainer.classList.add('upward');
+                        optionsContainer.style.top = 'auto';
+                        optionsContainer.style.bottom = 'calc(100% + 0.5rem)';
+                    } else {
+                        optionsContainer.classList.add('downward');
+                        optionsContainer.style.top = 'calc(100% + 0.5rem)';
+                        optionsContainer.style.bottom = 'auto';
+                    }
+                }
+
+                function openDropdown(select) {
+                    const optionsContainer = select.querySelector('.dash-options-container');
+                    const arrow = select.querySelector('.select-arrow');
+                    if (!optionsContainer || !arrow) return;
+
+                    optionsContainer.classList.add('open');
+                    arrow.classList.add('rotate-180');
+
+                    // Apply visible state (no height transition)
+                    optionsContainer.classList.remove(
+                        'scale-95',
+                        'opacity-0',
+                        'pointer-events-none',
+                        'h-0',
+                        'overflow-hidden'
+                    );
+                    optionsContainer.classList.add(
+                        'scale-100',
+                        'opacity-100',
+                        'pointer-events-auto',
+                        'h-auto',
+                        'overflow-auto'
+                    );
+                }
+
+                function closeDropdown(select) {
+                    const optionsContainer = select?.querySelector('.dash-options-container');
+                    const arrow = select?.querySelector('.select-arrow');
+                    if (!optionsContainer || !arrow) return;
+
+                    optionsContainer.classList.remove('open');
+                    arrow.classList.remove('rotate-180');
+
+                    optionsContainer.classList.remove(
+                        'scale-100',
+                        'opacity-100',
+                        'pointer-events-auto',
+                        'h-auto',
+                        'overflow-auto'
+                    );
+                    optionsContainer.classList.add(
+                        'scale-95',
+                        'opacity-0',
+                        'pointer-events-none',
+                        'h-0',
+                        'overflow-hidden'
+                    );
+                }
+
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function () {
+                document.querySelectorAll('.country-select').forEach(select => {
+                    closeDropdown(select);
+                });
+            });
+
+            // Reposition dropdowns on window resize
+            window.addEventListener('resize', function () {
+                document.querySelectorAll('.country-select').forEach(select => {
+                    const optionsContainer = select.querySelector('.dash-options-container');
+                    if (optionsContainer && optionsContainer.classList.contains('open')) {
+                        positionDropdown(select);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- move order summary between left and right columns based on viewport size -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderSummary = document.querySelector('[data-order-summary-section]');
+            const leftColumn = document.querySelector('[data-left-column]');
+            const rightColumn = document.querySelector('[data-right-column]');
+            const notesSection = document.querySelector('[data-notes-section]');
+
+            const LG_BREAKPOINT = 1010; // desktop breakpoint
+
+            if (!orderSummary || !leftColumn || !rightColumn || !notesSection) return;
+
+            // Preserve original order-summary position for reset in mobile screen
+            const originalNextSibling = orderSummary.nextElementSibling;
+
+            function updateLayout() {
+                const isLg = window.innerWidth >= LG_BREAKPOINT;
+
+                if (isLg) {
+                    // On desktop: place order summary in right column below notes
+                    if (!rightColumn.contains(orderSummary)) {
+                        notesSection.after(orderSummary);
+                    }
+                } else {
+                    // On smaller screens: restore order summary to left column
+                    if (!leftColumn.contains(orderSummary)) {
+                        if (originalNextSibling) {
+                            leftColumn.insertBefore(orderSummary, originalNextSibling);
+                        } else {
+                            leftColumn.appendChild(orderSummary);
+                        }
+                    }
+                }
+            }
+
+            // Apply layout on load and viewport resize
+            updateLayout();
+            window.addEventListener('resize', updateLayout, { passive: true });
+        });
+    </script>
+
+    <!-- move total-section into right column in desktop & toggle class of total-section based on scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalSection = document.querySelector('[data-total-section]');
+            const rightColumn = document.querySelector('[data-right-column]');
+            const wrapper = totalSection?.parentElement;
+
+            const LG_BREAKPOINT = 1010;
+
+            if (!totalSection || !rightColumn || !wrapper) return;
+
+            // Save original mobile position
+            const originalNextSibling = totalSection.nextElementSibling;
+
+            const isLg = () => window.innerWidth >= LG_BREAKPOINT;
+
+            function moveTotalSection() {
+                if (isLg()) {
+                    // Move totalSection into right column for desktop
+                    if (!rightColumn.contains(totalSection)) {
+                        rightColumn.appendChild(totalSection);
+                    }
+                } else {
+                    // Move back to original place for mobile
+                    if (rightColumn.contains(totalSection)) {
+                        if (originalNextSibling) {
+                            wrapper.insertBefore(totalSection, originalNextSibling);
+                        } else {
+                            wrapper.appendChild(totalSection);
+                        }
+                    }
+                }
+
+                // Check bottom after layout stabilizes
+                requestAnimationFrame(updateAtBottomState);
+            }
+
+            function updateAtBottomState() {
+                let atBottom = false;
+
+                if (isLg()) {
+                    const { scrollTop, clientHeight, scrollHeight } = rightColumn;
+
+                    const hasScroll = scrollHeight > clientHeight + 1;
+                    // If no scroll, consider it already at bottom
+                    atBottom = !hasScroll || scrollTop + clientHeight >= scrollHeight - 1;
+                } else {
+                    atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1;
+                }
+
+                totalSection.classList.toggle('at-bottom', atBottom);
+            }
+
+            // Initial move and state check
+            moveTotalSection();
+            updateAtBottomState();
+
+            // Scroll listeners
+            rightColumn.addEventListener('scroll', updateAtBottomState, { passive: true });
+            window.addEventListener('scroll', updateAtBottomState, { passive: true });
+
+            // Resize listener
+            window.addEventListener('resize', moveTotalSection, { passive: true });
+        });
+    </script>
+
+    <!-- handle character count for notes to creator textarea -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const MAX_CHARS = 300;
+
+            const textarea = document.querySelector("[data-notes-to-creator-textarea]");
+            const counter = document.querySelector("[data-characters-left-text]");
+
+            if (!textarea || !counter) return;
+
+            const updateCounter = () => {
+                const length = textarea.value.length;
+                const remaining = Math.max(0, MAX_CHARS - length);
+                counter.textContent = `${remaining} Characters Left`;
+            };
+
+            // Initial count
+            updateCounter();
+
+            textarea.addEventListener("input", () => {
+                if (textarea.value.length > MAX_CHARS) {
+                    textarea.value = textarea.value.slice(0, MAX_CHARS);
+                }
+                updateCounter();
+            });
+        });
+    </script>
+
+</body>
+</html>
