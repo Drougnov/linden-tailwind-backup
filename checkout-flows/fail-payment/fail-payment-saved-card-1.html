@@ -38,7 +38,10 @@
 
 <body class="bg-[#333333] [background-image:url('https://i.ibb.co.com/SwFy98RJ/checkout-header.webp')] bg-cover bg-center bg-no-repeat font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#35393b]">
     <!-- popup-wrapper -->
-    <div class="flex flex-col min-h-screen bg-white/10 backdrop-blur-[50px] shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] md:rounded-t-[0.625rem] dark:bg-[#181a1b]/10 lg:w-full lg:justify-center lg:items-center lg:min-h-[unset] lg:max-h-full lg:h-screen lg:py-[4.3125rem] lg:bg-transparent">
+    <div class="flex flex-col min-h-screen bg-white/10 shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] md:rounded-t-[0.625rem] dark:bg-[#181a1b]/10 relative lg:p-[69px] lg:bg-black/40 lg:h-screen lg:overflow-hidden">
+        <!-- Parent blur layer -->
+        <div class="absolute inset-0 backdrop-blur-[50px] pointer-events-none z-[-1] lg:backdrop-blur-[10px]"></div>
+        
         <!-- mobile-nav -->
         <div class="flex items-center gap-1 px-2 py-1 md:hidden">
             <!-- back-button -->
@@ -48,7 +51,7 @@
         </div>
 
         <!-- content-container -->
-        <div class="flex flex-col gap-6 px-2 grow md:px-4 md:pt-6 lg:flex-row lg:p-0 lg:gap-0 lg:max-w-[62.875rem] lg:h-[calc(100vh-(4.3125rem*2))] lg:bg-white/10 lg:dark:bg-[#181a1b]/10 lg:rounded-[0.625rem] lg:overflow-hidden">
+        <div class="flex flex-col gap-6 px-2 grow md:px-4 md:pt-6 lg:flex-row lg:p-0 lg:gap-0 lg:bg-white/10 lg:rounded-[0.625rem] lg:overflow-hidden">
             <!-- left-column -->
             <div data-left-column class="flex flex-col gap-6 [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:w-1/2 lg:px-4 lg:py-6 lg:grow lg:overflow-y-auto">
                 <!-- order-summary-section -->
@@ -74,12 +77,12 @@
                             <!-- table-header -->
                             <div class="flex items-center">
                                 <span class="text-sm leading-6 tracking-[0.0044rem] text-[#F9FAFB] dark:text-[#e5e3df] opacity-50 flex-grow w-[17.5rem] min-w-[17.5rem] max-w-[17.5rem]">Product</span>
-                                <span class="text-sm leading-6 tracking-[0.0044rem] text-[#F9FAFB] dark:text-[#e5e3df] opacity-50 w-[6.25rem]">Quantity</span>
+                                <span class="text-sm leading-6 tracking-[0.0044rem] text-[#F9FAFB] dark:text-[#e5e3df] opacity-50 text-center w-[6.25rem]">Quantity</span>
                                 <span class="text-sm leading-6 tracking-[0.0044rem] text-[#F9FAFB] dark:text-[#e5e3df] opacity-50 flex-grow text-right">Subtotal</span>
                             </div>
 
                             <!-- table-row -->
-                            <div class="flex h-12">
+                            <div class="flex">
                                 <!-- product -->
                                 <div class="flex gap-1.5 flex-grow w-[17.5rem] min-w-[17.5rem] max-w-[17.5rem]">
                                     <!-- image-container -->
@@ -106,9 +109,9 @@
                                 <div class="flex justify-center items-center w-[6.25rem]"></div>
 
                                 <!-- subtotal -->
-                                <div class="flex flex-col shrink-0">
+                                <div class="flex flex-col shrink-0 grow">
                                     <span class="text-xs leading-normal font-medium text-[#98A2B3] line-through text-right tracking-[0.0075rem]">$123.45</span>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex justify-end items-center gap-1">
                                         <img src="https://i.ibb.co.com/chd372MJ/logo-bg.webp" alt="logo bg" class="w-3 h-3 [filter:brightness(0)_saturate(100%)_invert(78%)_sepia(46%)_saturate(6043%)_hue-rotate(97deg)_brightness(114%)_contrast(94%)]">
                                         <span class="text-[0.625rem] leading-[0.75rem] h-3 tracking-[0.0156rem] text-[#07F468] dark:text-[#23f97b]">Orange Tier Benefit</span>
                                     </div>
@@ -117,7 +120,7 @@
                             </div>
 
                             <!-- table-row -->
-                            <div class="flex h-12">
+                            <div class="flex">
                                 <!-- product -->
                                 <div class="flex gap-1.5 flex-grow w-[17.5rem] min-w-[17.5rem] max-w-[17.5rem]">
                                     <!-- image-container -->
@@ -144,14 +147,14 @@
                                 <div class="flex justify-center items-center w-[6.25rem]"></div>
 
                                 <!-- subtotal -->
-                                <div class="flex flex-col shrink-0">
+                                <div class="flex flex-col shrink-0 grow">
                                     <span class="text-xs leading-normal font-medium text-[#98A2B3] line-through text-right tracking-[0.0075rem]">$123.45</span>
                                     <span class="text-base font-semibold mt-auto text-[#F9FAFB] text-right tracking-[0.01rem]">$5.99/mo</span>
                                 </div>
                             </div>
 
                             <!-- table-row -->
-                            <div class="flex h-12">
+                            <div class="flex">
                                 <!-- product -->
                                 <div class="flex gap-1.5 flex-grow w-[17.5rem] min-w-[17.5rem] max-w-[17.5rem]">
                                     <!-- image-container -->
@@ -178,14 +181,14 @@
                                 <div class="flex justify-center items-center w-[6.25rem]"></div>
 
                                 <!-- subtotal -->
-                                <div class="flex flex-col shrink-0">
+                                <div class="flex flex-col shrink-0 grow">
                                     <span class="text-xs leading-normal font-medium text-[#98A2B3] line-through text-right tracking-[0.0075rem]">$123.45</span>
                                     <span class="text-base font-semibold mt-auto text-[#F9FAFB] text-right tracking-[0.01rem]">$5.99/mo</span>
                                 </div>
                             </div>
 
                             <!-- table-row -->
-                            <div class="flex h-12">
+                            <div class="flex">
                                 <!-- product -->
                                 <div class="flex gap-1.5 flex-grow w-[17.5rem] min-w-[17.5rem] max-w-[17.5rem]">
                                     <!-- image-container -->
@@ -212,7 +215,7 @@
                                 <div class="flex justify-center items-center w-[6.25rem]"></div>
 
                                 <!-- subtotal -->
-                                <div class="flex flex-col shrink-0">
+                                <div class="flex flex-col shrink-0 grow">
                                     <span class="text-base font-semibold mt-auto text-[#F9FAFB] text-right tracking-[0.01rem]">$5.99/mo</span>
                                 </div>
                             </div>
@@ -476,7 +479,7 @@
                         <div class="flex items-center gap-2">
                             <div class="flex items-center gap-2">
                                 <input type="checkbox" name="save" id="save" checked=""
-                                    class="appearance-none bg-[white] dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                                    class="appearance-none dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
                                 <label for="save" class="text-sm text-[#98A2B3] dark:text-[#b0a993] cursor-pointer">Save this address for future
                                     use.</label>
                             </div>
@@ -673,7 +676,7 @@
             </div>
 
             <!-- right-column -->
-            <div data-right-column class="flex flex-col gap-6 group/right-col [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:w-1/2 lg:px-4 lg:py-6 lg:grow lg:bg-black/50 dark:lg:bg-[#181a1b]/50 lg:overflow-y-auto">
+            <div data-right-column class="flex flex-col gap-6 group/right-col  [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:w-1/2 lg:px-4 lg:pt-6 lg:-mb-[1px] lg:grow lg:bg-black/50 dark:lg:bg-[#181a1b]/50 lg:overflow-y-auto">
                 <!-- notes-section -->
                 <div data-notes-section class="flex flex-col gap-6">
                     <div class="flex flex-col gap-4">
@@ -802,46 +805,46 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- total-section -->
-    <div data-total-section class="fixed bottom-0 w-full backdrop-blur-[50px] group/wrapper shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] lg:w-[calc(62.875rem/2)] lg:left-1/2 lg:bottom-[4.3125rem] lg:overflow-hidden lg:rounded-br-[0.625rem]">
-        <div class="flex flex-col gap-4 px-2 pb-6 md:px-4 md:rounded-b-[0.625rem] lg:rounded-b-none">
-            <div class="flex flex-col gap-4 w-full">
-                <!-- total-price-section -->
-                <div class="flex flex-col gap-1 pt-2 border-t border-[#DEE5EC] dark:border-[#353a3c] group-[.scrolling]/wrapper:border-transparent w-full">
-                    <!-- tip-summary-container -->
-                    <div data-tip-summary-container class="!hidden [&.tip-active]:flex justify-between items-center gap-2 w-full">
-                        <span class="text-base text-[#F9FAFB] dark:text-[#e5e3df]">Tip</span>
-                        <span data-tip-amount-text class="text-base text-[#F9FAFB] dark:text-[#e5e3df]">USD$ 2.00</span>
-                    </div>
+        <!-- total-section -->
+        <div data-total-section class="sticky bottom-0 mt-6 w-full backdrop-blur-[50px] group/wrapper shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] z-[10001] [&.at-bottom]:backdrop-blur-0 lg:w-[calc(100%+2rem)] lg:mt-0 lg:-ml-4 lg:rounded-br-[0.625rem]">
+            <div class="flex flex-col gap-4 px-2 pb-6 md:px-4 md:rounded-b-[0.625rem] lg:rounded-b-none">
+                <div class="flex flex-col gap-4 w-full">
+                    <!-- total-price-section -->
+                    <div class="flex flex-col gap-1 pt-2 border-t border-transparent group-[.at-bottom]/wrapper:border-[#DEE5EC] dark:group-[.at-bottom]/wrapper:border-[#353a3c] w-full">
+                        <!-- tip-summary-container -->
+                        <div data-tip-summary-container class="!hidden [&.tip-active]:flex justify-between items-center gap-2 w-full">
+                            <span class="text-base text-[#F9FAFB] dark:text-[#e5e3df]">Tip</span>
+                            <span data-tip-amount-text class="text-base text-[#F9FAFB] dark:text-[#e5e3df]">USD$ 2.00</span>
+                        </div>
 
-                    <div class="flex gap-4 border-t border-transparent w-full">
-                        <div class="flex justify-between items-end gap-1 w-full">
-                            <h3 class="text-base font-semibold flex-grow text-[#F9FAFB] dark:text-[#e5e3df]">Amount Due</h3>
-                            <h2 class="text-2xl font-semibold align-middle text-[#07F468] dark:text-[#23f97b]">USD$6.99</h2>
+                        <div class="flex gap-4 border-t border-transparent w-full">
+                            <div class="flex justify-between items-end gap-1 w-full">
+                                <h3 class="text-base font-semibold flex-grow text-[#F9FAFB] dark:text-[#e5e3df]">Amount Due</h3>
+                                <h2 class="text-2xl font-semibold align-middle text-[#07F468] dark:text-[#23f97b]">USD$6.99</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- checkbox-container -->
-                <div class="flex items-center gap-2">
-                    <div class="flex items-start gap-2">
-                        <input type="checkbox" checked name="terms-condition" id="terms-condition" class="appearance-none dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#3b4043] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 mt-0.5 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
-                        <label for="terms-condition" class="text-sm leading-normal tracking-[0.0175rem] cursor-pointer text-[#98A2B3] dark:text-[#b0a993]">I agree to Our Website's
-                            <span class="text-sm leading-normal font-medium tracking-[0.0175rem] text-[#07F468] dark:text-[#23f97b] cursor-pointer">Terms and Condition</span>
-                            and
-                            <span class="text-sm leading-normal font-medium tracking-[0.0075rem] text-[#07F468] dark:text-[#23f97b] cursor-pointer">Privacy Policy</span>.
-                        </label>
+                    <!-- checkbox-container -->
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-start gap-2">
+                            <input type="checkbox" checked name="terms-condition" id="terms-condition" class="appearance-none dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#3b4043] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 mt-0.5 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                            <label for="terms-condition" class="text-sm leading-normal tracking-[0.0175rem] cursor-pointer text-[#98A2B3] dark:text-[#b0a993]">I agree to Our Website's
+                                <span class="text-sm leading-normal font-medium tracking-[0.0175rem] text-[#07F468] dark:text-[#23f97b] cursor-pointer">Terms and Condition</span>
+                                and
+                                <span class="text-sm leading-normal font-medium tracking-[0.0075rem] text-[#07F468] dark:text-[#23f97b] cursor-pointer">Privacy Policy</span>.
+                            </label>
+                        </div>
                     </div>
-                </div>
 
-                <!-- button -->
-                <div class="w-full h-12">
-                    <button class="flex justify-center items-center gap-2 w-full h-12 border-t-[1.5px] border-b-[1.5px] border-transparent bg-[#07F468] [&.disabled]:bg-white/20 px-4 [clip-path:polygon(24px_0,100%_0,calc(100%_-_24px)_100%,0_100%)] [&.disabled]:cursor-not-allowed dark:bg-[#0aff78] [&.disabled]:dark:bg-[#181a1b]/20 group/button hover:bg-black dark:hover:bg-[#181a1b] disabled lg:justify-between lg:px-10">
-                        <span class="text-base leading-[1.875rem] font-semibold uppercase text-black group-[.disabled]/button:text-white/30 group-hover/button:text-[#07F468] dark:text-[#e8e6e3] dark:group-[.disabled]/button:text-[#e8e6e3]/30 dark:group-hover/button:text-[#23f97b]">Proceed Payment</span>
-                        <img src="https://i.ibb.co.com/5hFPTwZr/arrow-right.webp" alt="arrow-right" class="w-6 h-6 [filter:brightness(0)] group-[.disabled]/button:[filter:brightness(0)_saturate(100%)_invert(100%)_sepia(6%)_saturate(678%)_hue-rotate(146deg)_brightness(115%)_contrast(100%)] group-[.disabled]/button:opacity-30 group-hover/button:[filter:brightness(0)_saturate(100%)_invert(66%)_sepia(68%)_saturate(2102%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] dark:group-hover/button:[filter:brightness(0)_saturate(100%)_invert(87%)_sepia(99%)_saturate(7463%)_hue-rotate(65deg)_brightness(102%)_contrast(95%)]">
-                    </button>
+                    <!-- button -->
+                    <div class="w-full h-12">
+                        <button class="flex justify-center items-center gap-2 w-full h-12 border-t-[1.5px] border-b-[1.5px] border-transparent bg-[#07F468] [&.disabled]:bg-white/20 px-4 [clip-path:polygon(24px_0,100%_0,calc(100%_-_24px)_100%,0_100%)] [&.disabled]:cursor-not-allowed dark:bg-[#0aff78] [&.disabled]:dark:bg-[#181a1b]/20 group/button hover:bg-black dark:hover:bg-[#181a1b] disabled lg:justify-between lg:px-10">
+                            <span class="text-base leading-[1.875rem] font-semibold uppercase text-black group-[.disabled]/button:text-white/30 group-hover/button:text-[#07F468] dark:text-[#e8e6e3] dark:group-[.disabled]/button:text-[#e8e6e3]/30 dark:group-hover/button:text-[#23f97b]">Proceed Payment</span>
+                            <img src="https://i.ibb.co.com/5hFPTwZr/arrow-right.webp" alt="arrow-right" class="w-6 h-6 [filter:brightness(0)] group-[.disabled]/button:[filter:brightness(0)_saturate(100%)_invert(100%)_sepia(6%)_saturate(678%)_hue-rotate(146deg)_brightness(115%)_contrast(100%)] group-[.disabled]/button:opacity-30 group-hover/button:[filter:brightness(0)_saturate(100%)_invert(66%)_sepia(68%)_saturate(2102%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] dark:group-hover/button:[filter:brightness(0)_saturate(100%)_invert(87%)_sepia(99%)_saturate(7463%)_hue-rotate(65deg)_brightness(102%)_contrast(95%)]">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1015,72 +1018,6 @@
         });
     </script>
 
-    <!-- handle total section's visibility based on scroll -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const totalSection = document.querySelector('[data-total-section]');
-            const rightColumn = document.querySelector('[data-right-column]');
-
-            function updateBorder() {
-                if (!rightColumn) return;
-
-                // Check if we're on desktop screens
-                if (window.innerWidth >= 1010) {
-                    // For desktop: check if right column is at the bottom
-                    const rightColumnScrollBottom = rightColumn.scrollHeight - rightColumn.scrollTop - rightColumn.clientHeight;
-                    const isAtBottom = rightColumnScrollBottom <= 1;
-                    totalSection.classList.toggle('scrolling', !isAtBottom);
-                } else {
-                    // For mobile: check if the container is at the bottom of the screen
-                    const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 1;
-                    totalSection.classList.toggle('scrolling', !isAtBottom);
-                }
-            }
-
-            requestAnimationFrame(updateBorder); // initial check
-            
-            // Listen to both scroll events
-            window.addEventListener('scroll', () => {
-                if (window.innerWidth < 1010) {
-                    updateBorder();
-                }
-            });
-
-            if (rightColumn) {
-                rightColumn.addEventListener('scroll', () => {
-                    if (window.innerWidth >= 1010) {
-                        updateBorder();
-                    }
-                });
-            }
-
-            // Also update on resize
-            window.addEventListener('resize', updateBorder);
-        });
-    </script>
-
-    <!-- adjust right column padding to avoid overlap with total section -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const totalSection = document.querySelector('[data-total-section]');
-            const rightColumn = document.querySelector('[data-right-column]');
-
-            if (!totalSection || !rightColumn) return;
-
-            function updateRightPadding() {
-                // calculate total section height and set as padding-bottom for right column
-                const totalHeight = totalSection.offsetHeight;
-                rightColumn.style.paddingBottom = `${totalHeight + 24}px`;
-            }
-
-            // Initial
-            updateRightPadding();
-
-            // Update on resize
-            window.addEventListener('resize', updateRightPadding);
-        });
-    </script>
-
     <!-- move order summary between left and right columns based on viewport size -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -1119,6 +1056,72 @@
             // Apply layout on load and viewport resize
             updateLayout();
             window.addEventListener('resize', updateLayout, { passive: true });
+        });
+    </script>
+        
+    <!-- move total-section into right column in desktop & toggle class of total-section based on scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalSection = document.querySelector('[data-total-section]');
+            const rightColumn = document.querySelector('[data-right-column]');
+            const wrapper = totalSection?.parentElement;
+
+            const LG_BREAKPOINT = 1010;
+
+            if (!totalSection || !rightColumn || !wrapper) return;
+
+            // Save original mobile position
+            const originalNextSibling = totalSection.nextElementSibling;
+
+            const isLg = () => window.innerWidth >= LG_BREAKPOINT;
+
+            function moveTotalSection() {
+                if (isLg()) {
+                    // Move totalSection into right column for desktop
+                    if (!rightColumn.contains(totalSection)) {
+                        rightColumn.appendChild(totalSection);
+                    }
+                } else {
+                    // Move back to original place for mobile
+                    if (rightColumn.contains(totalSection)) {
+                        if (originalNextSibling) {
+                            wrapper.insertBefore(totalSection, originalNextSibling);
+                        } else {
+                            wrapper.appendChild(totalSection);
+                        }
+                    }
+                }
+
+                // Check bottom after layout stabilizes
+                requestAnimationFrame(updateAtBottomState);
+            }
+
+            function updateAtBottomState() {
+                let atBottom = false;
+
+                if (isLg()) {
+                    const { scrollTop, clientHeight, scrollHeight } = rightColumn;
+
+                    const hasScroll = scrollHeight > clientHeight + 1;
+                    // If no scroll, consider it already at bottom
+                    atBottom = !hasScroll || scrollTop + clientHeight >= scrollHeight - 1;
+                } else {
+                    atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1;
+                }
+
+                totalSection.classList.toggle('at-bottom', atBottom);
+            }
+
+            // Initial move and state check
+            moveTotalSection();
+            updateAtBottomState();
+
+            // Scroll listeners
+            rightColumn.addEventListener('scroll', updateAtBottomState, { passive: true });
+            window.addEventListener('scroll', updateAtBottomState, { passive: true });
+
+            // Resize listener
+            window.addEventListener('resize', moveTotalSection, { passive: true });
         });
     </script>
     

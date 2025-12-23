@@ -36,12 +36,12 @@
     </script>
 </head>
 
-<body class="bg-[#333333] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#35393b]">
+<body class="bg-[#333333] [background-image:url('https://i.ibb.co.com/SwFy98RJ/checkout-header.webp')] bg-cover bg-center bg-no-repeat font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#35393b]">
     <!-- popup-wrapper -->
-    <div class="flex flex-col min-h-screen bg-white/10 shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] md:rounded-t-[0.625rem] lg:rounded-[0.625rem] dark:bg-[#181a1b]/10">
+    <div class="flex flex-col min-h-screen bg-white/10 shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] md:rounded-t-[0.625rem] dark:bg-[#181a1b]/10 relative lg:p-[69px] lg:bg-black/40 lg:h-screen lg:overflow-hidden">
         <!-- Parent blur layer -->
-        <div class="absolute inset-0 backdrop-blur-[50px] pointer-events-none z-[-1] lg:backdrop-blur-[10px]"></div>
-        
+         <div class="absolute inset-0 backdrop-blur-[50px] pointer-events-none z-[-1] lg:backdrop-blur-[10px]"></div>
+
         <!-- mobile-nav -->
         <div class="flex items-center gap-1 px-2 py-1 md:hidden">
             <!-- back-button -->
@@ -51,9 +51,9 @@
         </div>
 
         <!-- content-container -->
-        <div class="flex flex-col gap-6 px-2 grow md:px-4 md:pt-6 lg:flex-row lg:p-0 lg:gap-0 lg:h-screen">
+        <div class="flex flex-col gap-6 px-2 grow md:px-4 md:pt-6 lg:flex-row lg:p-0 lg:gap-0 lg:bg-white/10 lg:rounded-[0.625rem] lg:overflow-hidden">
             <!-- left-column -->
-            <div data-left-column class="flex flex-col gap-6  [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:w-1/2 lg:px-4 lg:py-6 lg:grow lg:h-screen lg:overflow-y-auto">
+            <div data-left-column class="flex flex-col gap-6  [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:w-1/2 lg:px-4 lg:py-6 lg:grow lg:overflow-y-auto">
                 <!-- order-summary-section -->
                 <div data-order-summary-section class="flex flex-col gap-4">
                     <!-- title-container -->
@@ -67,264 +67,173 @@
                         </div>
 
                         <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
-                            <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- shipping-address-section -->
-                <div class="flex flex-col gap-4">
-                    <!-- title-container -->
-                    <div class="flex justify-between items-center gap-2 border-b border-transparent">
-                        <!-- section-title -->
-                        <div class="flex items-center gap-2">
-                            <div class="flex justify-center items-center w-5 h-5">
-                                <img src="https://i.ibb.co.com/5gv74YLd/Maps-travel.webp" alt="location-marker"
-                                    class="w-5 h-5">
-                            </div>
-                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
-                                SHIPPING ADDRESS
-                            </h3>
-                        </div>
-
-                        <div class="hidden items-center gap-2.5 w-max shrink-0 cursor-pointer">
-                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Use New Address</span>
-
-                            <img src="https://i.ibb.co.com/RMdb57b/plus-circle.webp" alt="plus circle" class="w-5 h-5">
-                        </div>
-
-                        <div class="flex items-center gap-2.5 w-max shrink-0 cursor-pointer">
-                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Change Address</span>
-
-                            <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
-                                <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
-                            </div>
+                            <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down" class="rotate-180">
                         </div>
                     </div>
 
-                    <!-- form-container -->
-                    <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-5">
+                        <!-- table-container -->
                         <div class="flex flex-col gap-3">
-                            <!-- input-group -->
-                            <div class="flex items-center gap-2">
-                                <!-- input-wrapper -->
-                                <div class="flex flex-col gap-1.5 w-full">
-                                    <!-- input-field -->
-                                    <div class="flex flex-col gap-1.5">
-                                        <label for="last-name" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Last
-                                            Name</label>
-                                        <input id="last-name" type="text" value="Chan"
-                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
-                                            placeholder="Last Name">
-                                    </div>
-                                </div>
-
-                                <!-- input-wrapper -->
-                                <div class="flex flex-col gap-1.5 w-full">
-                                    <!-- input-field -->
-                                    <div class="flex flex-col gap-1.5">
-                                        <label for="first-name" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">First
-                                            Name</label>
-                                        <input id="first-name" type="text" value="Tai Man"
-                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
-                                            placeholder="First Name">
-                                    </div>
-                                </div>
+                            <!-- table-header -->
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm leading-6 tracking-[0.0044rem] text-[#F9FAFB] dark:text-[#e5e3df] flex-grow opacity-50">Product</span>
+                                <span class="text-sm leading-6 tracking-[0.0044rem] text-[#F9FAFB] dark:text-[#e5e3df] flex-grow opacity-50 text-right">Subtotal</span>
                             </div>
 
-                            <!-- input-wrapper -->
-                            <div class="flex flex-col gap-1.5 w-full">
-                                <!-- input-field -->
-                                <div class="flex flex-col gap-1.5">
-                                    <label for="address-line-1" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Address Line
-                                        1</label>
-                                    <input id="address-line-1" type="text" value="10/F Block5"
-                                        class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
-                                        placeholder="Address Line 1">
-                                </div>
-                            </div>
-
-                            <!-- input-wrapper -->
-                            <div class="flex flex-col gap-1.5 w-full">
-                                <!-- input-field -->
-                                <div class="flex flex-col gap-1.5">
-                                    <label for="address-line-2" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Address Line
-                                        2</label>
-                                    <input id="address-line-2" type="text" value="Fook Yip Bldg"
-                                        class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
-                                        placeholder="Address Line 2">
-                                </div>
-                            </div>
-
-                            <!-- input-group -->
-                            <div class="flex items-center gap-2">
-                                <!-- input-wrapper -->
-                                <div class="flex flex-col gap-1.5 w-full">
-                                    <!-- input-field -->
-                                    <div class="flex flex-col gap-1.5">
-                                        <label for="postal-code" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Postal
-                                            Code</label>
-                                        <input id="postal-code" type="text" value="12345"
-                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
-                                            placeholder="Postal Code">
+                            <!-- table-row -->
+                            <div class="flex gap-2 h-12">
+                                <!-- product -->
+                                <div class="flex gap-1.5 flex-grow min-w-0">
+                                    <!-- image-container -->
+                                    <div class="w-12 h-12 min-w-[3rem] rounded-lg overflow-hidden">
+                                        <img src="https://i.ibb.co.com/70sHrpv/featured-media-bg.webp" alt="featured-media-bg" class="w-full h-full object-cover">
                                     </div>
-                                </div>
 
-                                <!-- input-wrapper -->
-                                <div class="flex flex-col gap-1.5 w-full">
-                                    <!-- input-field -->
-                                    <div class="flex flex-col gap-1.5">
-                                        <label for="city" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">City</label>
-                                        <input id="city" type="text" value="Kwai Chung"
-                                            class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#F9FAFB]/50 dark:placeholder:text-[#e5e3df]/50 placeholder:font-sans outline-none"
-                                            placeholder="City">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- dropdown-group -->
-                            <div class="flex items-center gap-2">
-                                <!-- dropdown-wrapper -->
-                                <div class="flex flex-col gap-1.5 w-full">
-                                    <!-- dropdown-field -->
-                                    <div class="flex flex-col gap-1.5">
-                                        <label for="country" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">Country</label>
-
-                                        <!-- select-dropdown -->
-                                        <div id="select-dropdown"
-                                            class="select-dropdown relative z-[10000] flex w-full">
-                                            <div class="country-select w-full cursor-pointer border-none">
-                                                <div
-                                                    class="dash-select__trigger w-full h-10 flex items-center gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D]">
-                                                    <span
-                                                        class="text-base flex-grow text-[#F9FAFB] dark:text-[#e5e3df] capitalize text-balance">Hong
-                                                        Kong</span>
-                                                    <img class="select-arrow h-4 w-4 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]"
-                                                        src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp"
-                                                        alt="arrow-down">
-                                                </div>
-                                                <div class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top shadow-lg transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] upward scale-95 opacity-0 pointer-events-none h-0 overflow-hidden">
-                                                    <div
-                                                        class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]">
-                                                        <div
-                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
-                                                            <div
-                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
-                                                                <span
-                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Hong
-                                                                    Kong</span>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
-                                                            <div
-                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
-                                                                <span
-                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Australia</span>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
-                                                            <div
-                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
-                                                                <span
-                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">USA</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    <!-- product-info -->
+                                    <div class="flex flex-col min-w-0">
+                                        <h3 class="text-base font-semibold truncate text-[#F9FAFB] dark:text-[#e5e3df]">Orange (Philippines)</h3>
+                                        <div class="flex items-center gap-1 py-1 h-6">
+                                            <div class="flex justify-center items-center w-6 h-6 min-w-[1.5rem]">
+                                                <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar" class="h-[1.375rem]">
                                             </div>
-
-                                            <select class="dash-real-select hidden" name="country-select" required="">
-                                                <option value="hong-kong">Hong Kong</option>
-                                                <option value="australia">Australia</option>
-                                                <option value="usa">USA</option>
-                                            </select>
+                                            <div class="flex items-center gap-1">
+                                                <h3 class="text-xs leading-normal font-medium truncate text-[#98A2B3] dark:text-[#b0a993]">Princess Carrot Pop</h3>
+                                                <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="w-2.5 h-2.5">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- dropdown-wrapper -->
-                                <div class="flex flex-col gap-1.5 w-full">
-                                    <!-- dropdown-field -->
-                                    <div class="flex flex-col gap-1.5">
-                                        <label for="state" class="text-sm font-medium text-[#F9FAFB] dark:text-[#e5e3df]">State</label>
+                                <!-- subtotal -->
+                                <div class="flex flex-col gap-1 shrink-0">
+                                    <span class="text-base font-semibold text-[#F9FAFB] text-right tracking-[0.01rem]">$5.99/mo</span>
+                                    <span class="text-xs leading-normal font-medium text-[#98A2B3] line-through text-right tracking-[0.0075rem]">$123.45</span>
+                                </div>
+                            </div>
 
-                                        <!-- select-dropdown -->
-                                        <div id="select-dropdown"
-                                            class="select-dropdown relative z-[10000] flex w-full">
-                                            <div class="country-select w-full cursor-pointer border-none">
-                                                <div
-                                                    class="dash-select__trigger w-full h-10 flex items-center gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D]">
-                                                    <span
-                                                        class="text-base flex-grow text-[#F9FAFB] dark:text-[#e5e3df] capitalize text-balance">
-                                                    </span>
-                                                    <img class="select-arrow h-4 w-4 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(1%)_saturate(934%)_hue-rotate(29deg)_brightness(120%)_contrast(100%)]"
-                                                        src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp"
-                                                        alt="arrow-down">
-                                                </div>
-                                                <div
-                                                    class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top scale-95 opacity-0 shadow-lg transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] h-0 overflow-hidden pointer-events-none">
-                                                    <div
-                                                        class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]">
-                                                        <div
-                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
-                                                            <div
-                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
-                                                                <span
-                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Florida</span>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
-                                                            <div
-                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
-                                                                <span
-                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Hawaii</span>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
-                                                            <div
-                                                                class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
-                                                                <span
-                                                                    class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">New
-                                                                    York</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                            <!-- table-row -->
+                            <div class="flex gap-2 h-12">
+                                <!-- product -->
+                                <div class="flex gap-1.5 flex-grow min-w-0">
+                                    <!-- image-container -->
+                                    <div class="w-12 h-12 min-w-[3rem] rounded-lg overflow-hidden">
+                                        <img src="https://i.ibb.co.com/70sHrpv/featured-media-bg.webp" alt="featured-media-bg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- product-info -->
+                                    <div class="flex flex-col min-w-0">
+                                        <h3 class="text-base font-semibold truncate text-[#F9FAFB] dark:text-[#e5e3df]">Orange (Philippines)</h3>
+                                        <div class="flex items-center gap-1 py-1 h-6">
+                                            <div class="flex justify-center items-center w-6 h-6 min-w-[1.5rem]">
+                                                <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar" class="h-[1.375rem]">
                                             </div>
-
-                                            <select class="dash-real-select hidden" name="country-select" required="">
-                                                <option value="florida">Florida</option>
-                                                <option value="hawaii">Hawaii</option>
-                                                <option value="new-york">New York</option>
-                                            </select>
+                                            <div class="flex items-center gap-1">
+                                                <h3 class="text-xs leading-normal font-medium truncate text-[#98A2B3] dark:text-[#b0a993]">Princess Carrot Pop</h3>
+                                                <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="w-2.5 h-2.5">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- subtotal -->
+                                <div class="flex flex-col gap-1 shrink-0">
+                                    <span class="text-base font-semibold text-[#F9FAFB] text-right tracking-[0.01rem]">$5.99/mo</span>
+                                    <span class="text-xs leading-normal font-medium text-[#98A2B3] line-through text-right tracking-[0.0075rem]">$123.45</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- checkbox-container -->
-                        <div class="hidden items-center gap-2">
-                            <div class="flex items-center gap-2">
-                                <input type="checkbox" name="save" id="save" checked=""
-                                    class="appearance-none bg-[white] dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
-                                <label for="save" class="text-sm text-[#98A2B3] dark:text-[#b0a993] cursor-pointer">Save this address for future
-                                    use.</label>
+                            <!-- table-row -->
+                            <div class="flex gap-2 h-12">
+                                <!-- product -->
+                                <div class="flex gap-1.5 flex-grow min-w-0">
+                                    <!-- image-container -->
+                                    <div class="w-12 h-12 min-w-[3rem] rounded-lg overflow-hidden">
+                                        <img src="https://i.ibb.co.com/70sHrpv/featured-media-bg.webp" alt="featured-media-bg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- product-info -->
+                                    <div class="flex flex-col min-w-0">
+                                        <h3 class="text-base font-semibold truncate text-[#F9FAFB] dark:text-[#e5e3df]">Orange (Philippines)</h3>
+                                        <div class="flex items-center gap-1 py-1 h-6">
+                                            <div class="flex justify-center items-center w-6 h-6 min-w-[1.5rem]">
+                                                <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar" class="h-[1.375rem]">
+                                            </div>
+                                            <div class="flex items-center gap-1">
+                                                <h3 class="text-xs leading-normal font-medium truncate text-[#98A2B3] dark:text-[#b0a993]">Princess Carrot Pop</h3>
+                                                <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="w-2.5 h-2.5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- subtotal -->
+                                <div class="flex flex-col gap-1 shrink-0">
+                                    <span class="text-base font-semibold text-[#F9FAFB] text-right tracking-[0.01rem]">$5.99/mo</span>
+                                    <span class="text-xs leading-normal font-medium text-[#98A2B3] line-through text-right tracking-[0.0075rem]">$123.45</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="flex justify-end items-center gap-2">
-                            <button class="w-[7.5rem] h-8 flex justify-center items-center bg-black/50 border border-[#07F468] group/button hover:bg-[#07F468] [&.disabled]:bg-white/20 [&.disabled]:cursor-not-allowed [&.disabled]:border-none dark:bg-[#181a1b]/50 dark:border-[#0aff78] dark:hover:bg-[#06c454] dark:[&.disabled]:bg-[#181a1b]/20">
-                                <span class="text-sm font-medium tracking-[0.0218rem] text-[#07F468] group-hover/button:text-black group-[.disabled]/button:text-white/30 dark:text-[#23f97b] dark:group-hover/button:text-[#e8e6e3] dark:group-[.disabled]/button:text-[#e8e6e3]/30">Cancel</span>
-                            </button>
+                            <!-- table-row -->
+                            <div class="flex gap-2 h-12">
+                                <!-- product -->
+                                <div class="flex gap-1.5 flex-grow min-w-0">
+                                    <!-- image-container -->
+                                    <div class="w-12 h-12 min-w-[3rem] rounded-lg overflow-hidden">
+                                        <img src="https://i.ibb.co.com/70sHrpv/featured-media-bg.webp" alt="featured-media-bg" class="w-full h-full object-cover">
+                                    </div>
 
-                            <button class="w-[7.5rem] h-8 flex justify-center items-center bg-[#07F468] group/button hover:bg-[#0C111D] [&.disabled]:bg-white/20 [&.disabled]:cursor-not-allowed [&.disabled]:border-none dark:bg-[#0aff78] dark:hover:bg-[#162036] dark:[&.disabled]:bg-[#181a1b]/20">
-                                <span class="text-sm font-medium tracking-[0.0218rem] text-[#0C111D] group-hover/button:text-[#07F468] group-[.disabled]/button:text-white/30 dark:text-[#dbd8d3] dark:group-hover/button:text-[#23f97b] dark:group-[.disabled]/button:text-[#e8e6e3]/30">Update</span>
-                            </button>
+                                    <!-- product-info -->
+                                    <div class="flex flex-col min-w-0">
+                                        <h3 class="text-base font-semibold truncate text-[#F9FAFB] dark:text-[#e5e3df]">Orange (Philippines)</h3>
+                                        <div class="flex items-center gap-1 py-1 h-6">
+                                            <div class="flex justify-center items-center w-6 h-6 min-w-[1.5rem]">
+                                                <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar" class="h-[1.375rem]">
+                                            </div>
+                                            <div class="flex items-center gap-1">
+                                                <h3 class="text-xs leading-normal font-medium truncate text-[#98A2B3] dark:text-[#b0a993]">Princess Carrot Pop</h3>
+                                                <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="w-2.5 h-2.5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- subtotal -->
+                                <div class="flex flex-col gap-1 shrink-0">
+                                    <span class="text-base font-semibold text-[#F9FAFB] text-right tracking-[0.01rem]">$5.99/mo</span>
+                                    <span class="text-xs leading-normal font-medium text-[#98A2B3] line-through text-right tracking-[0.0075rem]">$123.45</span>
+                                </div>
+                            </div>
+
+                            <!-- table-row -->
+                            <div class="flex gap-2 h-12">
+                                <!-- product -->
+                                <div class="flex gap-1.5 flex-grow min-w-0">
+                                    <!-- image-container -->
+                                    <div class="w-12 h-12 min-w-[3rem] rounded-lg overflow-hidden">
+                                        <img src="https://i.ibb.co.com/70sHrpv/featured-media-bg.webp" alt="featured-media-bg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- product-info -->
+                                    <div class="flex flex-col min-w-0">
+                                        <h3 class="text-base font-semibold truncate text-[#F9FAFB] dark:text-[#e5e3df]">Orange (Philippines)</h3>
+                                        <div class="flex items-center gap-1 py-1 h-6">
+                                            <div class="flex justify-center items-center w-6 h-6 min-w-[1.5rem]">
+                                                <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="avatar" class="h-[1.375rem]">
+                                            </div>
+                                            <div class="flex items-center gap-1">
+                                                <h3 class="text-xs leading-normal font-medium truncate text-[#98A2B3] dark:text-[#b0a993]">Princess Carrot Pop</h3>
+                                                <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="w-2.5 h-2.5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- subtotal -->
+                                <div class="flex flex-col gap-1 shrink-0">
+                                    <span class="text-base font-semibold text-[#F9FAFB] text-right tracking-[0.01rem]">$5.99/mo</span>
+                                    <span class="text-xs leading-normal font-medium text-[#98A2B3] line-through text-right tracking-[0.0075rem]">$123.45</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -342,20 +251,6 @@
                                 PAYMENT METHOD
                             </h3>
                         </div>
-
-                        <div class="hidden items-center gap-2.5 w-max shrink-0 cursor-pointer">
-                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Use New Address</span>
-
-                            <img src="https://i.ibb.co.com/RMdb57b/plus-circle.webp" alt="plus circle" class="w-5 h-5">
-                        </div>
-
-                        <div class="flex items-center gap-2.5 w-max shrink-0 cursor-pointer">
-                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Change Card</span>
-
-                            <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
-                                <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
-                            </div>
-                        </div>
                     </div>
 
                     <!-- card-wrapper -->
@@ -366,7 +261,7 @@
                                 <div class="flex justify-between items-center gap-[0.625rem] h-4">
                                     <div class="flex items-center gap-2">
                                         <div class="flex justify-center items-center w-4 min-w-4 h-4">
-                                            <input data-save-card-checkbox type="checkbox" name="checkbox" id="checkbox-dash-3" checked="" class="appearance-none border border-[#D0D5DD] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-black checked:after:border-w-0 checked:after:border-b-2 checked:after:border-r-2 checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                                            <input data-save-card-checkbox type="checkbox" name="checkbox" id="checkbox-dash-3" class="appearance-none border border-[#D0D5DD] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-black checked:after:border-w-0 checked:after:border-b-2 checked:after:border-r-2 checked:after:rotate-45 checked:after:box-border cursor-pointer">
                                         </div>
                                         <label for="checkbox-dash-3" class="text-xs sm:text-sm leading-normal sm:leading-normal ma-0 cursor-pointer text-[#98A2B3] dark:text-[#b0a99e]">Save this card for faster checkout.</label>
                                     </div>
@@ -419,13 +314,43 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- shipping-address-section -->
+                <div class="flex flex-col gap-4">
+                    <!-- title-container -->
+                    <div class="flex justify-between items-center border-b border-transparent">
+                        <!-- section-title -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex justify-center items-center w-5 h-5">
+                                <img src="https://i.ibb.co.com/5gv74YLd/Maps-travel.webp" alt="location-marker"
+                                    class="w-5 h-5">
+                            </div>
+                            <h3 class="text-base font-semibold text-[#F9FAFB] dark:text-[#e5e3df] align-middle">
+                                SHIPPING ADDRESS
+                            </h3>
+                        </div>
+
+                        <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                            <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
+                        </div>
+                    </div>
 
                     <!-- checkbox-container -->
-                    <div class="hidden items-center gap-2 lg:flex">
-                        <div class="flex justify-center items-center w-4 min-w-4 h-4">
-                            <input data-save-card-checkbox type="checkbox" name="checkbox" id="checkbox-dash-3-2" checked="" class="appearance-none border border-[#D0D5DD] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] checked:border-[#07f468] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-black checked:after:border-w-0 checked:after:border-b-2 checked:after:border-r-2 checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                    <div class="hidden items-center gap-2">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="same-as-shipping" id="same-as-shipping" checked="" class="appearance-none bg-[white] dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#3b4043] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                            <label for="same-as-shipping" class="text-sm leading-normal text-[#98A2B3] dark:text-[#b0a993]">Same as Shipping Address</label>
                         </div>
-                        <label for="checkbox-dash-3-2" class="text-xs sm:text-sm leading-normal sm:leading-normal ma-0 cursor-pointer text-[#98A2B3] dark:text-[#b0a99e]">Save this card for faster checkout.</label>
+                    </div>
+
+                    <!-- edit-container -->
+                    <div class="flex justify-between items-center gap-2 p-4 bg-black/25 dark:bg-[#181a1b]/25 border border-[#EAECF0]/50 dark:border-[#353a3c]/50 rounded-md">
+                        <p class="text-base font-medium text-[#EAECF0] dark:text-[#dddad5] line-clamp-2">Chan Tai Man,10/F Block5,Fook Yip Bldg,12345,Kwai Chung,Hong Kong</p>
+                    
+                        <div class="w-[1.125rem] h-[1.125rem] min-w-[1.125rem] flex justify-center items-center w-max shrink-0 cursor-pointer">
+                            <img src="https://i.ibb.co.com/JWT03TyR/svgviewer-png-output-33.png" alt="edit" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(98%)_sepia(2%)_saturate(335%)_hue-rotate(184deg)_brightness(97%)_contrast(95%)] cursor-pointer">
+                        </div>
                     </div>
                 </div>
 
@@ -444,18 +369,8 @@
                             </h3>
                         </div>
 
-                        <div class="hidden items-center gap-2.5 w-max shrink-0 cursor-pointer">
-                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Use New Address</span>
-
-                            <img src="https://i.ibb.co.com/RMdb57b/plus-circle.webp" alt="plus circle" class="w-5 h-5">
-                        </div>
-
-                        <div class="flex items-center gap-2.5 w-max shrink-0 cursor-pointer">
-                            <span class="text-sm font-medium whitespace-nowrap text-[#EAECF0] dark:text-[#dddad5]">Change Address</span>
-
-                            <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
-                                <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
-                            </div>
+                        <div class="flex justify-center items-center w-6 h-6 cursor-pointer">
+                            <img src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="chevron-down">
                         </div>
                     </div>
 
@@ -479,7 +394,7 @@
             </div>
 
             <!-- right-column -->
-            <div data-right-column class="flex flex-col gap-6 group/right-col [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:w-1/2 lg:px-4 lg:pt-6 lg:-mb-[1px] lg:grow lg:bg-black/50 dark:lg:bg-[#181a1b]/50 lg:h-screen lg:overflow-y-auto">
+            <div data-right-column class="flex flex-col gap-6 group/right-col tip-active [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:w-1/2 lg:px-4 lg:pt-6 lg:-mb-[1px] lg:grow lg:bg-black/50 dark:lg:bg-[#181a1b]/50 lg:overflow-y-auto">
                 <!-- notes-section -->
                 <div data-notes-section class="flex flex-col gap-6">
                     <div class="flex flex-col gap-4">
@@ -591,7 +506,7 @@
                                     </div>
 
                                     <div class="flex flex-col justify-end items-end gap-2 w-full">
-                                        <textarea data-notes-to-creator-textarea name="" id="" placeholder="Enter notes to @jenny1234...." class="w-full h-full min-h-[3.125rem] text-base [field-sizing:content] text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#98A2B3] dark:placeholder:text-[#b0a993] placeholder:font-sans bg-transparent border-none outline-none"></textarea>
+                                        <textarea data-notes-to-creator-textarea name="" id="" placeholder="Enter notes to @jenny1234...." class="w-full h-full min-h-[3.125rem] text-base [field-sizing:content] text-[#F9FAFB] dark:text-[#e5e3df] placeholder:text-base placeholder:text-[#98A2B3] dark:placeholder:text-[#b0a993] placeholder:font-sans bg-transparent border-none outline-none">I'm constantly waiting for your next piece. And if you're ever stuck or just wanna chat ideas, hit me up!😍</textarea>
 
                                         <!-- characters-left-container -->
                                         <div class="flex items-center gap-2.5 min-h-[1.5rem] pointer-events-none w-max">
@@ -610,13 +525,13 @@
         </div>
 
         <!-- total-section -->
-        <div data-total-section class="sticky bottom-0 mt-6 w-full backdrop-blur-[50px] group/wrapper shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] z-[10001] [&.at-bottom]:backdrop-blur-0 lg:w-[calc(100%+2rem)] lg:mt-auto lg:-ml-4 lg:rounded-br-[0.625rem]">
+        <div data-total-section class="sticky bottom-0 mt-6 w-full backdrop-blur-[50px] group/wrapper shadow-[0px_4px_6px_-2px_#10182808,0px_12px_16px_-4px_#10182814] [&.at-bottom]:backdrop-blur-0 lg:w-[calc(100%+2rem)] lg:mt-0 lg:-ml-4 lg:rounded-br-[0.625rem]">
             <div class="flex flex-col gap-4 px-2 pb-6 md:px-4 md:rounded-b-[0.625rem] lg:rounded-b-none">
                 <div class="flex flex-col gap-4 w-full">
                     <!-- total-price-section -->
-                    <div class="flex flex-col gap-1 pt-2 border-t border-transparent group-[.at-bottom]/wrapper:border-[#DEE5EC] dark:group-[.at-bottom]/wrapper:border-[#353a3c] w-full">
+                    <div class="flex flex-col gap-1 pt-2 border-t border-transparent group-[.at-bottom]/wrapper:border-[#DEE5EC] w-full dark:group-[.at-bottom]/wrapper:border-[#353a3c]">
                         <!-- tip-summary-container -->
-                        <div data-tip-summary-container class="hidden [&.tip-active]:flex justify-between items-center gap-2 w-full">
+                        <div data-tip-summary-container class="hidden tip-active [&.tip-active]:flex justify-between items-center gap-2 w-full">
                             <span class="text-base text-[#F9FAFB] dark:text-[#e5e3df]">Tip</span>
                             <span data-tip-amount-text class="text-base text-[#F9FAFB] dark:text-[#e5e3df]">USD$ 2.00</span>
                         </div>
@@ -650,17 +565,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- alert-container -->
-    <div class="fixed top-0 left-0 flex items-center gap-4 px-2 py-3 w-full min-h-[4.125rem] border-l-[3px] border-b-[0.5px] border-[#344054] border-l-[#FF4405] bg-[linear-gradient(0deg,rgba(255,68,5,0.3),rgba(255,68,5,0.3)),linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,1)_100%)] after:content-[''] after:absolute after:inset-0 after:z-[1] after:bg-[linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.9)_100%)] lg:max-w-[29.5rem] lg:top-4 lg:left-[unset] lg:right-4">
-        <img src="https://i.ibb.co.com/jk86n9zL/alert.webp" alt="alert" class="w-10 h-10 min-w-[2.5rem] z-10">
-
-        <div class="flex justify-between gap-6 grow h-full z-10 pr-12">
-            <h3 class="text-sm font-semibold text-[#FF4405]">Please confirm your addresses and credit card information.</h3>
-
-            <img src="https://i.ibb.co.com/DfT6Sg5g/x-close.webp" alt="x close" class="absolute top-3 right-2 w-6 h-6 min-w-[1.5rem] cursor-pointer">
         </div>
     </div>
 
@@ -853,8 +757,27 @@
             window.addEventListener('resize', updateLayout, { passive: true });
         });
     </script>
+    
+    <!-- toggle class to handle visibility of tip options based on checkbox state -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkbox = document.querySelector('[data-save-card-checkbox]');
+            const rightColumn = document.querySelector('[data-right-column]');
+            const tipSummaryContainer = document.querySelector('[data-tip-summary-container]');
 
-    <!-- move total-section into right column in desktop & toggle class of total-section based on scroll -->
+            if (!checkbox || !rightColumn) return;
+
+            const toggleTip = () => {
+                rightColumn.classList.toggle("tip-active", !checkbox.checked);
+                tipSummaryContainer.classList.toggle("tip-active", !checkbox.checked);
+            };
+
+            toggleTip();
+            checkbox.addEventListener('change', toggleTip);
+        });
+    </script>
+
+    <!-- handle right section -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const totalSection = document.querySelector('[data-total-section]');
@@ -917,46 +840,6 @@
 
             // Resize listener
             window.addEventListener('resize', moveTotalSection, { passive: true });
-        });
-    </script>
-    
-    <!-- toggle class to handle visibility of tip options based on checkbox state -->
-    <script>
-        // === for single checkbox ===
-
-        // document.addEventListener('DOMContentLoaded', () => {
-        //     const checkbox = document.querySelector('[data-save-card-checkbox]');
-        //     const rightColumn = document.querySelector('[data-right-column]');
-        //     const tipSummaryContainer = document.querySelector('[data-tip-summary-container]');
-
-        //     if (!checkbox || !rightColumn) return;
-
-        //     const toggleTip = () => {
-        //         rightColumn.classList.toggle("tip-active", !checkbox.checked);
-        //         tipSummaryContainer.classList.toggle("tip-active", !checkbox.checked);
-        //     };
-
-        //     toggleTip();
-        //     checkbox.addEventListener('change', toggleTip);
-        // });
-
-        // === for multiple checkbox ===
-        document.addEventListener('DOMContentLoaded', () => {
-            const checkboxes = document.querySelectorAll('[data-save-card-checkbox]');
-            const rightColumn = document.querySelector('[data-right-column]');
-            const tipSummaryContainer = document.querySelector('[data-tip-summary-container]');
-
-            if (!checkboxes.length || !rightColumn || !tipSummaryContainer) return;
-
-            const toggleTip = () => {
-                const hasUnchecked = [...checkboxes].some(cb => !cb.checked);
-
-                rightColumn.classList.toggle('tip-active', hasUnchecked);
-                tipSummaryContainer.classList.toggle('tip-active', hasUnchecked);
-            };
-
-            toggleTip();
-            checkboxes.forEach(cb => cb.addEventListener('change', toggleTip));
         });
     </script>
 
