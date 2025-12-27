@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New tier page</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Quill CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-[#EAECF0] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#222526]">
+    <!-- main-wrapper -->
+    <div class="relative before:content-[''] before:fixed before:inset-0 before:pointer-events-none before:bg-cover before:bg-center before:bg-no-repeat before:bg-[url('https://i.ibb.co.com/QvpHN5vD/mobile-gradient-main-bg-1.webp')] md:before:bg-[url('https://i.ibb.co.com/dw910Z5b/gradient-main-bg.webp')]">
+        <!-- container -->
+        <div class="flex flex-col gap-6 md:gap-8">
+            <!-- tier-card-wrapper -->
+            <div data-tier-card-wrapper="" class="h-[100svh] sm:w-[25.5rem] md:w-[28.25rem] p-2 sm:px-6">
+                <div class="w-full h-full [background:linear-gradient(180deg,rgba(0,0,0,0.14)_30%,rgba(0,0,0,0.7)_100%),url('https://i.ibb.co.com/70sHrpv/featured-media-bg.webp')_center/cover_no-repeat] rounded-[0.3125rem] shadow-[0px_0px_80px_0px_#07F46840,0px_0px_8px_0px_#07F46880] sm:max-h-[40.6875rem] md:w-[24rem] md:h-[37.625rem] dark:[background:linear-gradient(#181a1b24_30%,#181a1bb3_100%)]">
+                    <div class="h-full flex flex-col bg-black/30 backdrop-blur-[5px] rounded-[0.3125rem]">
+                        <div data-tier-content class="flex flex-col gap-3 px-4 pt-5 pb-4 overflow-y-hidden grow [&amp;::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]">
+                            <!-- title -->
+                            <span class="flex items-center">
+                                <div class="w-full z-[5] relative overflow-hidden drop-shadow-[0px_4px_18px_#00000080] hover:overflow-visible hover:cursor-pointer group">
+                                    <h2 class="text-[1.875rem] leading-[2.375rem] font-semibold overflow-hidden line-clamp-2 text-white dark:text-[#e8e6e3]">My VVIP Lounge ❤️️️</h2>
+                                    <div class="absolute z-[2] flex flex-col items-start w-full max-w-[22.4375rem] md:max-w-[21.5rem] opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg bg-[#101828B2] dark:bg-[rgba(14,19,32,0.9)] dark:text-[#dbd8d3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)] left-1/2 top-full translate-x-[-50%] translate-y-2 before:content-[''] before:absolute before:w-0 before:h-0  before:left-1/2 before:top-[-5px] before:-translate-x-1/2 before:border-[6px] before:border-t-0 before:border-l-transparent before:border-r-transparent before:border-b-[#101828B2] dark:before:border-b-[rgba(14,19,32,0.9)]">My VVIP Lounge ❤️️️</div>
+                                </div>
+                            </span>
+
+                            <!-- Stats (media-count) -->
+                            <div class="flex items-center gap-2.5 drop-shadow-[0px_2px_12px_#000000BF]">
+                                <!-- Videos count -->
+                                <div class="flex items-center gap-[0.0625rem]">
+                                    <span class="text-xs font-medium leading-normal text-white dark:text-[#e8e6e3]">100</span>
+                                    <img src="https://i.ibb.co.com/sdBL6k4R/video.webp" alt="video" class="w-4 h-4 [filter:brightness(100%)]">
+                                </div>
+
+                                <div class="h-[0.188rem] w-[0.188rem] bg-white block rounded-full"></div>
+
+                                <!-- Photos count -->
+                                <div class="flex items-center gap-[0.0625rem]">
+                                    <span class="text-xs font-medium leading-normal text-white dark:text-[#e8e6e3]">80</span>
+                                    <img src="https://i.ibb.co.com/Qjn50qJy/Images.webp" alt="Images" class="w-4 h-4 [filter:brightness(100%)]">
+                                </div>
+
+                                <div class="h-[0.188rem] w-[0.188rem] bg-white block rounded-full"></div>
+
+                                <!-- Other count -->
+                                <div class="flex items-center gap-[0.0625rem]">
+                                    <span class="text-xs font-medium leading-normal text-white dark:text-[#e8e6e3]">70</span>
+                                    <img src="https://i.ibb.co.com/1JYD4qyw/audio.webp" alt="audio" class="w-4 h-4 [filter:brightness(100%)]">
+                                </div>
+                            </div>
+
+                            <!-- buttons-container -->
+                            <div class="flex items-center gap-2 py-2">
+                                <div class="flex bg-white/15 rounded-[3.125rem] backdrop-blur-[25px] w-1/2 md:w-full dark:bg-[#181a1b26]">
+                                    <button data-discountplan="1d" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&amp;.discount-active]:!flex [&amp;.discount-active]:bg-black dark:[&amp;.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">1 day</span>
+                                    </button>
+                                    <button data-discountplan="1m" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&amp;.discount-active]:!flex [&amp;.discount-active]:bg-black dark:[&amp;.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">1 month</span>
+                                        <span class="text-xs leading-normal font-medium text-[#FFED29] dark:text-[#ffee37]">-5%</span>
+                                    </button>
+                                    <button data-discountplan="6m" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer discount-active [&amp;.discount-active]:!flex [&amp;.discount-active]:bg-black dark:[&amp;.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">6 month</span>
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#FFED29] dark:text-[#ffee37]">-50%</span>
+                                    </button>
+                                    <button data-discountplan="1y" class="hidden justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] w-full cursor-pointer [&amp;.discount-active]:!flex [&amp;.discount-active]:bg-black dark:[&amp;.discount-active]:bg-[#181a1b] md:!flex md:grow">
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-white dark:text-[#e8e6e3]">1 year</span>
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#FFED29] dark:text-[#ffee37]">-5%</span>
+                                    </button>
+                                </div>
+
+                                <button data-more-plans-button="" class="flex justify-center items-center gap-0.5 px-2.5 py-1.5 rounded-[3.125rem] bg-white/15 backdrop-blur-[25px] cursor-pointer w-1/2 md:hidden dark:bg-[#181a1b26]">
+                                    <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">More Plans</span>
+                                </button>
+                            </div>
+
+                            <!-- Price -->
+                            <div class="flex gap-2">
+                                <div class="flex items-baseline">
+                                    <span class="text-xl leading-normal font-semibold text-[#FFED29] dark:text-[#ffee37]">USD$</span>
+                                    <span class="text-4xl leading-[2.75rem] font-semibold tracking-[-0.045rem] text-[#FFED29] dark:text-[#ffee37]">55.86</span>
+                                </div>
+
+                                <div class="flex flex-col justify-between">
+                                    <div class="flex items-baseline gap-1 relative pl-4 pr-1 rounded bg-[#0C111D] ml-[0.3125rem] flex-wrap dark:bg-[#dbd8d3] max-[360px]:py-1 max-[360px]:w-min">
+                                        <img src="https://i.ibb.co.com/nqWs4Ny4/flash.webp" alt="flash" class="absolute -left-1.5 top-1/2 -translate-y-1/2 h-5">
+                                        <span class="text-[0.6875rem] leading-none whitespace-nowrap text-[#07F468] dark:text-[#06c454]">Sale Ends in</span>
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">02</span>
+                                            <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">:</span>
+                                            <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">13</span>
+                                            <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">:</span>
+                                            <span class="text-xs leading-normal font-bold text-[#07F468] dark:text-[#06c454]">07</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-xs leading-normal font-medium line-through text-white dark:text-[#e8e6e3]">$111.72</span>
+                                </div>
+                            </div>
+
+                            <!-- tier-description -->
+                            <div data-tier-description class="flex flex-col md:gap-2 drop-shadow-[0px_2px_12px_0px_#000000BF]">
+                                <p data-tier-description-text class="text-sm drop-shadow-[0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] text-white dark:text-[#e8e6e3]">Welcome to Jenny’s  VIP Lounge! This plan includes everything in Basic/VIP Lounge, plus: Behind the scene of every shot! stuff i wore from the shot for sale! Talk to me 24/7️❤️️️ Welcome to Jenny’s  VIP Lounge! Welcome to Jenny’s  VIP Lounge! This plan includes everything in Basic/VIP Lounge, plus: Behind the scene of every shot! stuff i wore from the shot for sale! Talk to me 24/7️❤️️️ Welcome to Jenny’s  VIP Lounge! Welcome to Jenny’s  VIP Lounge! This plan includes everything in Basic/VIP Lounge, plus: Behind the scene of every shot! stuff i wore from the shot for sale! Talk to me 24/7️❤️️️ Welcome to Jenny’s  VIP Lounge! ...</p>
+                                <button data-read-more class="flex items-center gap-0.5">
+                                    <span class="text-xs leading-normal font-medium text-[#D0D5DD] dark:text-[#cfcac4]">READ MORE</span>
+                                    <img src="https://i.ibb.co.com/v4YdjnyQ/double-arrows.webp" alt="double-arrows" class="w-4 h-4">
+                                </button>
+                            </div>
+
+                            <!-- feature-list-container -->
+                            <ul data-feature-list class="flex flex-col gap-1 drop-shadow-[0px_2px_12px_0px_#000000BF]">
+                                <li class="flex items-start gap-4">
+                                    <div class="flex items-center gap-2 w-1/2">
+                                        <img src="https://i.ibb.co.com/qYmSQNzZ/take-coin.webp" alt="take-coin" class="w-4 h-4">
+                                        <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">Free Tokens</span>
+                                    </div>
+
+                                    <span class="text-sm font-medium text-white dark:text-[#e8e6e3] w-1/2">100 tokens everyday</span>
+                                </li>
+
+                                <li class="flex items-start gap-4">
+                                    <div class="flex items-center gap-2 w-1/2">
+                                        <img src="https://i.ibb.co.com/JWqTj09z/cart.webp" alt="cart" class="w-4 h-4">
+                                        <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">Merch Discount</span>
+                                    </div>
+
+                                    <span class="text-sm font-medium text-white dark:text-[#e8e6e3] w-1/2">10% off</span>
+                                </li>
+
+                                <li class="flex items-start gap-4">
+                                    <div class="flex items-center gap-2 w-1/2">
+                                        <img src="https://i.ibb.co.com/Mxk1cLRC/image.webp" alt="image" class="w-4 h-4">
+                                        <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">PPV Discount</span>
+                                    </div>
+
+                                    <span class="text-sm font-medium text-white dark:text-[#e8e6e3] w-1/2">10% off</span>
+                                </li>
+
+                                <li class="flex items-start gap-4">
+                                    <div class="flex items-center gap-2 w-1/2">
+                                        <img src="https://i.ibb.co.com/JWqTj09z/cart.webp" alt="cart" class="w-4 h-4">
+                                        <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">Custom Request</span>
+                                    </div>
+
+                                    <span class="text-sm font-medium text-white dark:text-[#e8e6e3] w-1/2">5% off</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- button -->
+                        <div class="flex cursor-pointer rounded-t-[0.625rem] overflow-hidden w-full min-h-fit mt-auto relative shadow-[0px_-8px_24px_0px_#07F46840] bg-black dark:bg-[#181a1b]">
+                            <div class="flex items-center z-[1] w-full min-h-[5rem]">
+                                <div class="flex flex-col gap-2 pl-2 py-2 w-full">
+                                    <div class="flex flex-col">
+                                        <h3 class="text-lg font-bold text-[#07F468] dark:text-[#06c454]">6 months for USD$55.86</h3>
+                                        <p class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">Renews at USD$55.86 every 6 months</p>
+                                    </div>
+
+                                    <div class="hidden flex-col gap-[0.4375rem]">
+                                        <div class="w-full h-[0.3125rem] rounded-[0.3125rem] bg-white/20 dark:bg-[#181a1b33]">
+                                            <div class="w-[5%] h-full rounded-[0.3125rem] bg-[#FFED29] dark:bg-[#ffee37]"></div>
+                                        </div>
+
+                                        <div class="flex justify-between gap-1">
+                                            <span class="text-xs leading-normal font-medium text-[#FFED29] dark:text-[#ffee37]">5 Left!</span>
+                                            <span class="text-xs leading-normal font-medium text-[#D0D5DD] dark:text-[#cfcac4]">95/100 Offer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-center items-center pl-[1.625rem] pr-2.5 w-max z-[0] bg-[url('https://i.ibb.co.com/B5M5ccbD/union-green.webp')] bg-cover bg-no-repeat">
+                                <span class="text-base font-bold italic text-[#0C111D] dark:text-[#dbd8d3]">SUBSCRIBE</span>
+                            </div>
+                        </div>
+
+                        <!-- featured-tag -->
+                        <div class="hidden absolute -top-2 -left-2 [clip-path:polygon(0_0,100%_0,calc(100%-0.5rem)_100%,0_100%)] flex justify-center items-center pl-1.5 pr-2.5 py-0.5 z-[6] bg-black dark:bg-[#181a1b]">
+                            <span class="text-sm font-semibold text-[#07F468] dark:text-[#06c454]">FEATURED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- more-plans-popup -->
+                <div data-more-plans-popup="" class="hidden fixed bottom-0 left-0 w-full rounded-t-[0.625rem] bg-white shadow-[0px_0px_12px_0px_#0000001A] backdrop-blur-[50px] z-[5] md:!hidden dark:bg-[#181a1b]">
+                    <div class="flex flex-col py-1 w-full">
+                        <!-- item -->
+                        <div data-discountplan="1d" class="flex justify-center items-center h-11 px-1.5 py-0.5 [&amp;.discount-active]:bg-[#F2F4F7] dark:[&amp;.discount-active]:bg-[#1e2022] cursor-pointer">
+                            <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center gap-0.5">
+                                        <span class="text-sm font-medium whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">1 day</span>
+                                    </div>
+                                </div>
+
+                                <span class="text-base font-semibold text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div data-discountplan="1m" class="flex justify-center items-center h-11 px-1.5 py-0.5 [&amp;.discount-active]:bg-[#F2F4F7] dark:[&amp;.discount-active]:bg-[#1e2022] cursor-pointer">
+                            <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center gap-0.5">
+                                        <span class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]">1 month</span>
+                                        <span class="text-xs leading-normal font-medium text-[#FF0066] dark:text-[#ff1a76]">-5%</span>
+                                    </div>
+                                </div>
+
+                                <span class="text-base font-semibold whitespace-nowrap text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div data-discountplan="6m" class="flex justify-center items-center h-11 px-1.5 py-0.5 discount-active [&amp;.discount-active]:bg-[#F2F4F7] dark:[&amp;.discount-active]:bg-[#1e2022] cursor-pointer">
+                            <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center gap-0.5">
+                                        <span class="text-sm font-medium whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">6 month</span>
+                                        <span class="text-xs leading-normal font-medium text-[#FF0066] dark:text-[#ff1a76]">-50%</span>
+                                    </div>
+
+                                    <!-- hot -->
+                                    <div class="backdrop-blur-[10px]">
+                                        <div class="flex justify-center items-center gap-1 rounded ml-2 pl-2.5 pr-1.5 py-0.5 backdrop-blur-[10px] bg-[#FCE40D] dark:bg-[#a19102]">
+                                            <img src="https://i.ibb.co.com/4gCVM3BW/Hot-icon.webp" alt="Hot-icon" class="absolute -top-1 -left-2 w-6 h-6">
+                                            <span class="text-[0.625rem] leading-normal whitespace-nowrap font-semibold text-black dark:text-[#e8e6e3]">Most Value</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <span class="text-base font-semibold text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div data-discountplan="1y" class="flex justify-center items-center h-11 px-1.5 py-0.5 [&amp;.discount-active]:bg-[#F2F4F7] dark:[&amp;.discount-active]:bg-[#1e2022] cursor-pointer">
+                            <div class="flex justify-between items-center gap-6 px-2.5 py-2 w-full max-[350px]:gap-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center gap-0.5">
+                                        <span class="text-sm font-medium whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">1 year</span>
+                                        <span class="text-xs leading-normal font-medium text-[#FF0066] dark:text-[#ff1a76]">-5%</span>
+                                    </div>
+                                </div>
+
+                                <span class="text-base font-semibold text-black dark:text-[#e8e6e3]">USD$55.86</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- handle tier card discount plan tabs -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Function to activate a plan across all elements
+            function activatePlan(planValue) {
+                // Remove 'discount-active' class from all plan elements
+                const allPlanElements = document.querySelectorAll('[data-discountPlan]');
+                allPlanElements.forEach(el => {
+                    el.classList.remove('discount-active');
+                });
+                
+                // Add 'discount-active' class to elements with matching plan value
+                const matchingElements = document.querySelectorAll(`[data-discountPlan="${planValue}"]`);
+                matchingElements.forEach(el => {
+                    el.classList.add('discount-active');
+                });
+            }
+
+            // Function to close the more plans popup
+            function closeMorePlansPopup() {
+                const morePlansPopup = document.querySelector('[data-more-plans-popup]');
+                if (morePlansPopup) {
+                    morePlansPopup.classList.add("hidden");
+                    morePlansPopup.classList.remove("flex");
+                }
+            }
+            
+            // Add click listeners to tier card buttons
+            const tierButtons = document.querySelectorAll('[data-tier-card-wrapper] [data-discountPlan]');
+            tierButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const planValue = btn.getAttribute('data-discountPlan');
+                    activatePlan(planValue);
+                    closeMorePlansPopup();
+                });
+            });
+            
+            // Add click listeners to more plans popup items
+            const popupItems = document.querySelectorAll('[data-more-plans-popup] [data-discountPlan]');
+            popupItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const planValue = item.getAttribute('data-discountPlan');
+                    activatePlan(planValue);
+                    closeMorePlansPopup();
+                });
+            });
+            
+            // Handle the "More Plans" button to show the popup
+            const morePlansButton = document.querySelector('[data-more-plans-button]');
+            const morePlansPopup = document.querySelector('[data-more-plans-popup]');
+            
+            if (morePlansButton && morePlansPopup) {
+                morePlansButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    // Toggle popup visibility
+                    if (morePlansPopup.classList.contains("hidden")) {
+                        morePlansPopup.classList.add("flex");
+                        morePlansPopup.classList.remove("hidden");
+                    } else {
+                        morePlansPopup.classList.add("hidden");
+                        morePlansPopup.classList.remove("flex");
+                    }
+                });
+                
+                // Close popup when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (morePlansPopup && morePlansButton && 
+                        !morePlansPopup.contains(e.target) && 
+                        !morePlansButton.contains(e.target)) {
+                        closeMorePlansPopup();
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- set line clamp dynamically to tier-description -->
+    <script>
+        const cards = document.querySelectorAll("[data-tier-card-wrapper]");
+
+        function clampDescriptions() {
+            cards.forEach(card => {
+                const content = card.querySelector("[data-tier-content]");
+                const descWrap = card.querySelector("[data-tier-description]");
+                const descText = card.querySelector("[data-tier-description-text]");
+                const readMore = card.querySelector("[data-read-more]");
+                const featureList = card.querySelector("[data-feature-list]");
+
+                if (!content || !descWrap || !descText) return;
+
+                // Reset clamp
+                descText.style.webkitLineClamp = "unset";
+
+                const contentRect = content.getBoundingClientRect();
+                const descRect = descWrap.getBoundingClientRect();
+
+                let usedBelow = 0;
+
+                if (readMore) {
+                    const r = readMore.getBoundingClientRect();
+                    usedBelow += r.height;
+                }
+
+                if (featureList) {
+                    const f = featureList.getBoundingClientRect();
+                    usedBelow += f.height;
+                }
+
+                // Gap buffer
+                const gapBuffer = window.innerWidth >= 768 ? 20 : 16;
+                usedBelow += gapBuffer;
+
+                const availableHeight =
+                    contentRect.bottom - descRect.top - usedBelow;
+
+                if (availableHeight <= 0) return;
+
+                const style = getComputedStyle(descText);
+                const lineHeight = parseFloat(style.lineHeight);
+
+                if (!lineHeight) return;
+
+                const maxLines = Math.floor(availableHeight / lineHeight);
+
+                if (maxLines > 0) {
+                    descText.style.display = "-webkit-box";
+                    descText.style.webkitBoxOrient = "vertical";
+                    descText.style.overflow = "hidden";
+                    descText.style.webkitLineClamp = maxLines;
+                }
+            });
+        }
+
+        clampDescriptions();
+
+        window.addEventListener("resize", () => {
+            requestAnimationFrame(clampDescriptions);
+        });
+    </script>
+
+</body>
+</html>
