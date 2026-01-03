@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New tier page</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Quill CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+<body class="bg-[#4E4E4E] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] dark:bg-[#444a4d]">
+    <!-- slidein-wrapper -->
+    <div class="flex flex-col h-screen backdrop-blur-[25px] bg-[#EAECF0]/70 dark:bg-[#222526]/70">
+        <!-- header-section -->
+        <div class="flex flex-col backdrop-blur-[05px] bg-[#EAECF0]/70 dark:bg-[#222526]/70">
+            <!-- header -->
+            <div class="flex justify-between items-center gap-1 pt-2 px-2">
+                <!-- header-left -->
+                <div class="flex items-center gap-2 grow">
+                    <img src="https://i.ibb.co/cX3Y4YZx/svgviewer-png-output-71.webp" alt="Notifications" class="w-5 h-5" />
+                    <span class="text-sm font-semibold text-[#667085]">Notifications</span>
+                </div>
+
+                <!-- close-icon -->
+                <div class="flex justify-center items-center w-8 h-8 cursor-pointer md:w-10 md:h-10">
+                    <img class="hidden md:block w-6 h-6 pointer-events-none [filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]" src="https://i.ibb.co/KxKfkV17/svgviewer-png-output-59.webp" alt="close"/>
+                    <img class="block md:hidden w-6 h-6 pointer-events-none [filter:brightness(0)_saturate(100%)_invert(45%)_sepia(13%)_saturate(594%)_hue-rotate(183deg)_brightness(92%)_contrast(92%)]" src="https://i.ibb.co/N2VqD6yD/svgviewer-png-output-60.webp" alt="close"/>
+                </div>
+            </div>
+
+            <!-- tab-buttons -->
+            <div class="h-14 pt-2 backdrop-blur-[25px] shadow-[0px_4px_12px_-2px_#10182808] overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                <ul class="flex gap-1 w-max whitespace-nowrap scroll-smooth border-b border-[#D0D5DD] sm:px-2 dark:border-[#3b4043]">
+                    <li data-tab-btn="all" class="flex justify-center items-center min-w-[5rem] h-12 p-2 border-b-[1.5px] border-transparent opacity-70 group/tab-button tab-active cursor-pointer [&.tab-active]:opacity-100 [&.tab-active]:border-[#0C111D] sm:px-4 dark:[&.tab-active]:border-[#857c6d]">
+                        <div class="flex items-center gap-0.5">
+                            <span class="text-sm font-medium group-[.tab-active]/tab-button:font-semibold text-[#344054] group-[.tab-active]/tab-button:text-[#0C111D] dark:text-[#bdb7af] dark:group-[.tab-active]/tab-button:text-[#dbd8d3]">ALL</span>
+                        
+                            <div class="flex h-8">
+                                <span class="text-[0.625rem] leading-normal tracking-[0.015625rem] text-[#667085] dark:text-[#9e9689]">120</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li data-tab-btn="unread" class="flex justify-center items-center min-w-[5rem] h-12 p-2 border-b-[1.5px] border-transparent opacity-70 group/tab-button cursor-pointer [&.tab-active]:opacity-100 [&.tab-active]:border-[#0C111D] sm:px-4 dark:[&.tab-active]:border-[#857c6d]">
+                        <div class="flex items-center gap-0.5">
+                            <span class="text-sm font-medium group-[.tab-active]/tab-button:font-semibold text-[#344054] group-[.tab-active]/tab-button:text-[#0C111D] dark:text-[#bdb7af] dark:group-[.tab-active]/tab-button:text-[#dbd8d3]">UNREAD</span>
+                        
+                            <div class="flex h-8">
+                                <span class="text-[0.625rem] leading-normal tracking-[0.015625rem] text-[#667085] dark:text-[#9e9689]">5</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li data-tab-btn="custom-request" class="flex justify-center items-center min-w-[5rem] w-[10.75rem] h-12 p-2 border-b-[1.5px] border-transparent opacity-70 group/tab-button cursor-pointer [&.tab-active]:opacity-100 [&.tab-active]:border-[#0C111D] sm:px-4 dark:[&.tab-active]:border-[#857c6d]">
+                        <div class="flex items-center gap-0.5">
+                            <span class="text-sm font-medium group-[.tab-active]/tab-button:font-semibold text-[#344054] group-[.tab-active]/tab-button:text-[#0C111D] dark:text-[#bdb7af] dark:group-[.tab-active]/tab-button:text-[#dbd8d3]">CUSTOM REQUEST</span>
+                        
+                            <div class="flex h-8">
+                                <span class="text-[0.625rem] leading-normal tracking-[0.015625rem] text-[#667085] dark:text-[#9e9689]">2</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li data-tab-btn="account" class="flex justify-center items-center min-w-[5rem] h-12 p-2 border-b-[1.5px] border-transparent opacity-70 group/tab-button cursor-pointer [&.tab-active]:opacity-100 [&.tab-active]:border-[#0C111D] sm:px-4 dark:[&.tab-active]:border-[#857c6d]">
+                        <div class="flex items-center gap-0.5">
+                            <span class="text-sm font-medium group-[.tab-active]/tab-button:font-semibold text-[#344054] group-[.tab-active]/tab-button:text-[#0C111D] dark:text-[#bdb7af] dark:group-[.tab-active]/tab-button:text-[#dbd8d3]">ACCOUNT</span>
+                        
+                            <div class="flex h-8">
+                                <span class="text-[0.625rem] leading-normal tracking-[0.015625rem] text-[#667085] dark:text-[#9e9689]"></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- tab-container -->
+        <div class="flex flex-col grow overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] backdrop-blur-[50px] bg-white/50 dark:bg-[#181a1b]/50">
+            <!-- all-tab -->
+            <ul data-tab-panel="all" class="flex flex-col">
+                <li class="border-b-[0.5px] border-b-[#EAECF0] border-l-[3px] border-l-[#2ED3B7]">
+
+                </li>
+
+                <!-- notification -->
+                <li class="flex items-center gap-2.5 opacity-70 min-h-[4rem] notification-cart bg-white/70 border-l-[3px] [&.notification-info]:border-l-[#22CCEE] [&.notification-cart]:border-l-[#2ED3B7] [&.notification-warning]:border-l-[#FDB022] [&.notification-error]:border-l-[#FF4405] [&.notification-info]:shadow-[0px_0px_8px_0px_#22CCEE14] [&.notification-cart]:shadow-[0px_0px_8px_0px_#2ED3B714] [&.notification-warning]:shadow-[0px_0px_8px_0px_#FDB02214] [&.notification-error]:shadow-[0px_0px_8px_0px_#FF440514] group/notification">
+                    <div class="w-full h-full flex items-center gap-2.5 px-4 py-3.5 group-[.notification-info]/notification:[background:linear-gradient(90deg,rgba(103,227,249,0.15)_0%,rgba(103,227,249,0)_75%)] group-[.notification-cart]/notification:[background:linear-gradient(90deg,rgba(46,211,183,0.15)_0%,rgba(46,211,183,0)_75%)] group-[.notification-warning]/notification:[background:linear-gradient(90deg,rgba(254,223,137,0.15)_0%,rgba(254,223,137,0)_75%)] group-[.notification-error]/notification:[background:linear-gradient(90deg,rgba(255,68,5,0.15)_0%,rgba(255,68,5,0)_75%)]">
+                        <img src="https://i.ibb.co.com/RGtnmtYZ/merch.webp" alt="merch" class="w-6 h-6 drop-shadow-[0px_0px_10.67px_#2FD0B580] [filter:brightness(0)_saturate(100%)_invert(65%)_sepia(76%)_saturate(384%)_hue-rotate(119deg)_brightness(92%)_contrast(93%)]">
+                    </div>
+                </li>
+            </ul>
+
+            <!-- unread-tab -->
+            <div data-tab-panel="unread" class="hidden flex flex-col">
+                <span>Unread</span>
+            </div>
+
+            <!-- custom-request-tab -->
+            <div data-tab-panel="custom-request" class="hidden flex flex-col">
+                <span>Custom Request</span>
+            </div>
+
+            <!-- account-tab -->
+            <div data-tab-panel="account" class="hidden flex flex-col">
+                <span>Account</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- handle-tab-switching -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('[data-tab-btn]');
+            const tabPanels  = document.querySelectorAll('[data-tab-panel]');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.dataset.tabBtn;
+
+                    // update active button
+                    tabButtons.forEach(btn => btn.classList.remove('tab-active'));
+                    button.classList.add('tab-active');
+
+                    // toggle panels
+                    tabPanels.forEach(panel => {
+                        panel.classList.add('hidden');
+                        if (panel.dataset.tabPanel === target) {
+                            panel.classList.remove('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
