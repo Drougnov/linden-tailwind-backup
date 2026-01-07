@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New tier page</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+<body class="bg-[#EAECF0] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#222526]">
+    <!-- main-wrapper -->
+    <div class="relative before:content-[''] before:fixed before:inset-0 before:pointer-events-none before:bg-cover before:bg-center before:bg-no-repeat before:bg-[url('https://i.ibb.co.com/QvpHN5vD/mobile-gradient-main-bg-1.webp')] md:before:bg-[url('https://i.ibb.co.com/dw910Z5b/gradient-main-bg.webp')]">
+        <!-- page-container -->
+        <div class="h-screen min-h-0 flex flex-col xl:bg-gradient-to-b from-white/30 to-white/0 md:gap-6 lg:gap-4">
+            <!-- page-header -->
+            <div class="flex flex-col p-2 px-2 gap-6 md:pt-6 md:px-4 lg:pb-0 xl:px-10 xl:pt-10">
+            <!-- title-container -->
+            <div class="hidden w-full gap-4 md:flex justify-between items-center xl:gap-6">
+                <h1 class="text-[1.875rem] leading-[2.375rem] text-[#475467] dark:text-[#b1aba0] tracking-[-0.045rem] font-medium m-0 xl:text-[1.875rem] xl:leading-[2.375rem]">Orders Received</h1>
+            </div>
+
+            <!-- page-settings -->
+            <div class="flex flex-col items-start gap-2 lg:gap-4 lg:flex-row lg:items-center">
+                <!-- tab-buttons -->
+                <div class="w-full lg:w-1/2 lg:flex-1 xl:w-max xl:flex-none">
+                <ul class="flex rounded-[0.3125rem] bg-[#f9fafb]/50 border border-[#D0D5DD] overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] dark:bg-[#1b1d1e]/50 dark:border-[#3b4043]">
+                    <li class="flex justify-center items-center gap-1 p-2 border-r border-[#D0D5DD] flex-1 min-w-max cursor-pointer group/tab-button [&.tab-button-active]:bg-white dark:border-[#3b4043] md:gap-2 md:px-4 dark:[&.tab-button-active]:bg-[#181a1b] tab-button-active">
+                        <span class="text-xs leading-normal font-medium group-[.tab-button-active]/tab-button:font-semibold text-[#98A2B3] group-[.tab-button-active]/tab-button:text-[#344054] md:text-sm dark:text-[#b0a993] dark:group-[.tab-button-active]/tab-button:text-[#344054]">In Progress</span>
+                        <div class="flex h-[1.125rem] md:h-6">
+                            <span class="text-[0.625rem] leading-normal font-medium tracking-[0.015625rem] text-[#98A2B3] group-[.tab-button-active]/tab-button:text-[#667085] dark:text-[#b0a993] dark:group-[.tab-button-active]/tab-button:text-[#9e9698]">5</span>
+                        </div>
+                    </li>
+
+                    <li class="flex justify-center items-center gap-1 p-2 border-r border-[#D0D5DD] flex-1 min-w-max cursor-pointer group/tab-button [&.tab-button-active]:bg-white dark:border-[#3b4043] md:gap-2 md:px-4 dark:[&.tab-button-active]:bg-[#181a1b]">
+                        <span class="text-xs leading-normal font-medium group-[.tab-button-active]/tab-button:font-semibold text-[#98A2B3] group-[.tab-button-active]/tab-button:text-[#344054] md:text-sm dark:text-[#b0a993] dark:group-[.tab-button-active]/tab-button:text-[#344054]">Completed</span>
+                        <div class="flex h-[1.125rem] md:h-6">
+                            <span class="text-[0.625rem] leading-normal font-medium tracking-[0.015625rem] text-[#98A2B3] group-[.tab-button-active]/tab-button:text-[#667085] dark:text-[#b0a993] dark:group-[.tab-button-active]/tab-button:text-[#9e9698]">40</span>
+                        </div>
+                    </li>
+
+                    <li class="flex justify-center items-center gap-1 p-2 border-r border-[#D0D5DD] flex-1 min-w-max cursor-pointer group/tab-button [&.tab-button-active]:bg-white dark:border-[#3b4043] md:gap-2 md:px-4 dark:[&.tab-button-active]:bg-[#181a1b]">
+                        <span class="text-xs leading-normal font-medium group-[.tab-button-active]/tab-button:font-semibold text-[#98A2B3] group-[.tab-button-active]/tab-button:text-[#344054] md:text-sm dark:text-[#b0a993] dark:group-[.tab-button-active]/tab-button:text-[#344054]">Canceled</span>
+                        <div class="flex h-[1.125rem] md:h-6">
+                            <span class="text-[0.625rem] leading-normal font-medium tracking-[0.015625rem] text-[#98A2B3] group-[.tab-button-active]/tab-button:text-[#667085] dark:text-[#b0a993] dark:group-[.tab-button-active]/tab-button:text-[#9e9698]">4</span>
+                        </div>
+                    </li>
+
+                    <li class="flex justify-center items-center gap-1 p-2 border-r border-[#D0D5DD] flex-1 min-w-max cursor-pointer group/tab-button [&.tab-button-active]:bg-white dark:border-[#3b4043] md:gap-2 md:px-4 dark:[&.tab-button-active]:bg-[#181a1b]">
+                        <span class="text-xs leading-normal font-medium group-[.tab-button-active]/tab-button:font-semibold text-[#98A2B3] group-[.tab-button-active]/tab-button:text-[#344054] md:text-sm dark:text-[#b0a993] dark:group-[.tab-button-active]/tab-button:text-[#344054]">All</span>
+                        <div class="flex h-[1.125rem] md:h-6">
+                            <span class="text-[0.625rem] leading-normal font-medium tracking-[0.015625rem] text-[#98A2B3] group-[.tab-button-active]/tab-button:text-[#667085] dark:text-[#b0a993] dark:group-[.tab-button-active]/tab-button:text-[#9e9698]">120</span>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+
+                <!-- search & dropdown -->
+                <div class="flex items-center gap-2 flex-1 w-full lg:w-1/2">
+                    <!-- search -->
+                    <div class="flex w-full gap-[0.375rem] min-w-0">
+                        <div class="flex items-center gap-2 w-full px-3 py-2 rounded-t-sm">
+                        <div class="flex items-center gap-2 w-full">
+                            <span><img src="https://i.ibb.co.com/8gjMKbFY/svgviewer-png-output-24.webp" alt="search" class="w-5 h-5 min-w-5"></span>
+                            <div class="flex-none w-[9.375rem] sm:auto overflow-hidden">
+                            <input type="text" placeholder="Search..." class="border-none bg-transparent outline-none text-base text-[#101828] placeholder:text-[#757575]">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- dropdown -->
+                    <div class="relative w-max">
+                        <div class="dash-select cursor-pointer">
+                            <div class="dash-select__trigger flex justify-center items-center gap-2 px-2">
+                                <span class="text-sm leading-normal font-medium text-[#344054] capitalize tracking-[0.01875rem] dark:text-[#bdb7af] whitespace-nowrap">Order Type</span>
+                                <img src="https://i.ibb.co.com/8DxMjVHT/svgviewer-png-output-25.webp" alt="arrow-down" class="select-arrow w-4 h-4 transition-transform duration-300 ease-in-out transform">
+                            </div>
+                            <div class="dash-options-container absolute right-0 w-max transition-all duration-300 z-10 top-[calc(100%+0.5rem)] shadow-none border-none opacity-0 invisible pointer-events-none">
+                                <div class="dash-options rounded-[2px] bg-white/70 backdrop-blur-[25px] max-h-[245px] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] dark:bg-[#181a1bb3]">
+                                    <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                        <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">All Types</span>
+                                    </div>
+                                    <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                        <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">P2V</span>
+                                    </div>
+                                    <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                        <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">Subscription</span>
+                                    </div>
+                                    <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                        <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">Merch</span>
+                                    </div>
+                                    <div class="dash-option flex items-center gap-2 h-12 px-3 border-b border-[#EAECF0] cursor-pointer hover:bg-white [&.selected]:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#181a1b] dark:border-[#353a3c]">
+                                        <span class="text-sm font-medium text-[#0c111d] dark:text-[#dbd8d3]">Mix</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <select class="dash-real-select hidden" name="dash-select" required="">
+                            <option value="all">All Types</option>
+                            <option value="p2v">P2V</option>
+                            <option value="subscription">Subscription</option>
+                            <option value="merch">Merch</option>
+                            <option value="mix">Mix</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- table -->
+            <div class="flex flex-col w-full flex-1 min-h-0">
+                <!-- table-header -->
+                <div class="flex md:grid items-center border-b border-[#667085] dark:border-[#655e53] md:grid-cols-[minmax(12rem,1fr)_1fr_1fr_1fr_minmax(8rem,1fr)] lg:grid-cols-[minmax(12.5rem,1fr)_12.5rem_8.875rem_11.25rem_minmax(8rem,1fr)] xl:grid-cols-[minmax(12.5rem,17rem)_12.5rem_8.875rem_11.25rem_12.5rem] w-full">
+                    <!-- order -->
+                    <div data-title="order" class="flex items-center min-h-[2.625rem] p-2.5 w-full">
+                        <span class="truncate block text-sm text-[#667085] dark:text-[#655e53] whitespace-nowrap">Order#</span>
+                    </div>
+
+                    <!-- from -->
+                    <div data-title="from" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                        <span class="truncate block text-sm text-[#667085] dark:text-[#655e53] whitespace-nowrap">From</span>
+                    </div>
+
+                    <!-- status -->
+                    <div data-title="status" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                        <span class="truncate block text-sm text-[#667085] dark:text-[#655e53] whitespace-nowrap">Status</span>
+                    </div>
+
+                    <!-- date -->
+                    <div data-title="date" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                        <span class="truncate block text-sm text-[#667085] dark:text-[#655e53] whitespace-nowrap">Date</span>
+                    </div>
+
+                    <!-- total -->
+                    <div data-title="total" class="flex items-center min-h-[2.625rem] p-2.5 md:pr-6 xl:pr-10 justify-end">
+                        <span class="truncate block text-sm text-[#667085] dark:text-[#655e53] whitespace-nowrap">Total</span>
+                    </div>
+                </div>
+
+                <!-- table-row-container -->
+                <div class="w-full overflow-y-auto w-full flex-1 min-h-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                    <!-- table-row -->
+                    <div class="flex md:grid items-center cursor-pointer odd:bg-[#F2F4F7]/50 dark:odd:bg-[#1e2022] md:grid-cols-[minmax(12.5rem,1fr)_1fr_1fr_1fr_minmax(8rem,1fr)] lg:grid-cols-[minmax(12.5rem,1fr)_12.5rem_8.875rem_11.25rem_minmax(8rem,1fr)] xl:grid-cols-[minmax(12.5rem,17rem)_12.5rem_8.875rem_11.25rem_12.5rem] w-full">
+                        <!-- order -->
+                        <div data-title="order" class="flex items-center min-h-[2.625rem] p-0 w-full">
+                            <!-- icon-container -->
+                            <div class="flex justify-center items-center w-[3.5rem] h-[4.5rem] md:w-[4.5rem] bg-black md:border-b md:border-[#98A2B3] dark:bg-[#181a1b] dark:md:border-[#b0a993]">
+                                <img src="https://i.ibb.co.com/RGtnmtYZ/merch.webp" alt="merch" class="w-9 h-9"/>
+                            </div>
+
+                            <!-- text-container -->
+                            <div class="flex flex-col justify-center items-start flex-1 min-h-[4.5rem] p-1.5 md:p-2.5 md:gap-0.5">
+                                <span class="text-xs font-semibold leading-normal truncate whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">Merch</span>
+                                <span class="hidden md:flex text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345</span>
+
+                                <div class="flex md:hidden flex-col gap-1">
+                                    <div class="flex items-center">
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345 &nbsp;</span>
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#667085] dark:text-[#655e53]">22 Jan</span>
+                                    </div>
+                                    <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                        <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                        <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- from -->
+                        <div data-title="from" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                            </span>
+                        </div>
+
+                        <!-- status -->
+                        <div data-title="status" class="hidden md:flex items-start min-h-[2.625rem] p-2.5">
+                            <div class="flex items-start">
+                                <span class="flex justify-center items-center p-1 bg-[#FFE500] backdrop-blur-[10px] dark:bg-[#a99700]">
+                                    <img src="https://i.ibb.co.com/cSnyRK5k/stars.webp" alt="stars" class="w-4 h-4"/>
+                                </span>
+                                <span class="flex justify-center items-center px-1.5 py-[0.188rem] gap-2 text-xs leading-normal font-medium text-[#FFE500] bg-black backdrop-blur-[10px] whitespace-nowrap dark:text-[#ffe81a] dark:bg-[#181a1b]">New</span>
+                            </div>
+                        </div>
+
+                        <!-- date -->
+                        <div data-title="date" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="truncate text-xs leading-[1.125rem] text-[#667085] dark:text-[#655e53] whitespace-nowrap">22 Jan 2022</span>
+                        </div>
+
+                        <!-- total -->
+                        <div data-title="total" class="flex items-center min-h-[2.625rem] p-2.5 md:pr-6 xl:pr-10 justify-end text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3] whitespace-nowrap">USD$ 9.99</div>
+                    </div>
+
+                    <!-- table-row -->
+                    <div class="flex md:grid items-center cursor-pointer odd:bg-[#F2F4F7]/50 dark:odd:bg-[#1e2022] md:grid-cols-[minmax(12.5rem,1fr)_1fr_1fr_1fr_minmax(8rem,1fr)] lg:grid-cols-[minmax(12.5rem,1fr)_12.5rem_8.875rem_11.25rem_minmax(8rem,1fr)] xl:grid-cols-[minmax(12.5rem,17rem)_12.5rem_8.875rem_11.25rem_12.5rem] w-full">
+                        <!-- order -->
+                        <div data-title="order" class="flex items-center min-h-[2.625rem] p-0 w-full">
+                            <!-- icon-container -->
+                            <div class="flex justify-center items-center w-[3.5rem] h-[4.5rem] md:w-[4.5rem] bg-black md:border-b md:border-[#98A2B3] dark:bg-[#181a1b] dark:md:border-[#b0a993]">
+                                <img src="https://i.ibb.co.com/RGtnmtYZ/merch.webp" alt="merch" class="w-9 h-9"/>
+                            </div>
+
+                            <!-- text-container -->
+                            <div class="flex flex-col justify-center items-start flex-1 min-h-[4.5rem] p-1.5 md:p-2.5 md:gap-0.5">
+                                <span class="text-xs font-semibold leading-normal truncate whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">Merch</span>
+                                <span class="hidden md:flex text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345</span>
+
+                                <div class="flex md:hidden flex-col gap-1">
+                                    <div class="flex items-center">
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345 &nbsp;</span>
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#667085] dark:text-[#655e53]">22 Jan</span>
+                                    </div>
+                                    <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                        <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                        <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- from -->
+                        <div data-title="from" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                            </span>
+                        </div>
+
+                        <!-- status -->
+                        <div data-title="status" class="hidden md:flex items-start min-h-[2.625rem] p-2.5">
+                            <div class="flex items-start">
+                                <span class="flex justify-center items-center p-1 bg-[#FFE500] backdrop-blur-[10px] dark:bg-[#a99700]">
+                                    <img src="https://i.ibb.co.com/cSnyRK5k/stars.webp" alt="stars" class="w-4 h-4"/>
+                                </span>
+                                <span class="flex justify-center items-center px-1.5 py-[0.188rem] gap-2 text-xs leading-normal font-medium text-[#FFE500] bg-black backdrop-blur-[10px] whitespace-nowrap dark:text-[#ffe81a] dark:bg-[#181a1b]">New</span>
+                            </div>
+                        </div>
+
+                        <!-- date -->
+                        <div data-title="date" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="truncate text-xs leading-[1.125rem] text-[#667085] dark:text-[#655e53] whitespace-nowrap">22 Jan 2022</span>
+                        </div>
+
+                        <!-- total -->
+                        <div data-title="total" class="flex items-center min-h-[2.625rem] p-2.5 md:pr-6 xl:pr-10 justify-end text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3] whitespace-nowrap">USD$ 9.99</div>
+                    </div>
+
+                    <!-- table-row -->
+                    <div class="flex md:grid items-center cursor-pointer odd:bg-[#F2F4F7]/50 dark:odd:bg-[#1e2022] md:grid-cols-[minmax(12.5rem,1fr)_1fr_1fr_1fr_minmax(8rem,1fr)] lg:grid-cols-[minmax(12.5rem,1fr)_12.5rem_8.875rem_11.25rem_minmax(8rem,1fr)] xl:grid-cols-[minmax(12.5rem,17rem)_12.5rem_8.875rem_11.25rem_12.5rem] w-full">
+                        <!-- order -->
+                        <div data-title="order" class="flex items-center min-h-[2.625rem] p-0 w-full">
+                            <!-- icon-container -->
+                            <div class="flex justify-center items-center w-[3.5rem] h-[4.5rem] md:w-[4.5rem] bg-[#07F468] md:border-b md:border-[#98A2B3] dark:bg-[#0aff78] dark:md:border-[#b0a993]">
+                                <img src="https://i.ibb.co.com/0wRg4N7/cart-1.webp" alt="cart-1" class="w-9 h-9 [filter:brightness(0)]"/>
+                            </div>
+
+                            <!-- text-container -->
+                            <div class="flex flex-col justify-center items-start flex-1 min-h-[4.5rem] p-1.5 md:p-2.5 md:gap-0.5">
+                                <span class="text-xs font-semibold leading-normal truncate whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">Merch</span>
+                                <span class="hidden md:flex text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345</span>
+
+                                <div class="flex md:hidden flex-col gap-1">
+                                    <div class="flex items-center">
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345 &nbsp;</span>
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#667085] dark:text-[#655e53]">22 Jan</span>
+                                    </div>
+                                    <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                        <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                        <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- from -->
+                        <div data-title="from" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                            </span>
+                        </div>
+
+                        <!-- status -->
+                        <div data-title="status" class="hidden md:flex items-start min-h-[2.625rem] p-2.5">
+                            <div class="flex items-start">
+                                <span class="flex justify-center items-center p-1 bg-[#FFE500] backdrop-blur-[10px] dark:bg-[#a99700]">
+                                    <img src="https://i.ibb.co.com/cSnyRK5k/stars.webp" alt="stars" class="w-4 h-4"/>
+                                </span>
+                                <span class="flex justify-center items-center px-1.5 py-[0.188rem] gap-2 text-xs leading-normal font-medium text-[#FFE500] bg-black backdrop-blur-[10px] whitespace-nowrap dark:text-[#ffe81a] dark:bg-[#181a1b]">New</span>
+                            </div>
+                        </div>
+
+                        <!-- date -->
+                        <div data-title="date" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="truncate text-xs leading-normal text-[#475467] dark:text-[#b1aba0] whitespace-nowrap">22 Jan 2022</span>
+                        </div>
+
+                        <!-- total -->
+                        <div data-title="total" class="flex items-center min-h-[2.625rem] p-2.5 md:pr-6 xl:pr-10 justify-end text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3] whitespace-nowrap">USD$ 9.99</div>
+                    </div>
+
+                    <!-- table-row -->
+                    <div class="flex md:grid items-center cursor-pointer odd:bg-[#F2F4F7]/50 dark:odd:bg-[#1e2022] md:grid-cols-[minmax(12.5rem,1fr)_1fr_1fr_1fr_minmax(8rem,1fr)] lg:grid-cols-[minmax(12.5rem,1fr)_12.5rem_8.875rem_11.25rem_minmax(8rem,1fr)] xl:grid-cols-[minmax(12.5rem,17rem)_12.5rem_8.875rem_11.25rem_12.5rem] w-full">
+                        <!-- order -->
+                        <div data-title="order" class="flex items-center min-h-[2.625rem] p-0 w-full">
+                            <!-- icon-container -->
+                            <div class="flex justify-center items-center w-[3.5rem] h-[4.5rem] md:w-[4.5rem] bg-black md:border-b md:border-[#98A2B3] dark:bg-[#181a1b] dark:md:border-[#b0a993]">
+                                <img src="https://i.ibb.co.com/RGtnmtYZ/merch.webp" alt="merch" class="w-9 h-9"/>
+                            </div>
+
+                            <!-- text-container -->
+                            <div class="flex flex-col justify-center items-start flex-1 min-h-[4.5rem] p-1.5 md:p-2.5 md:gap-0.5">
+                                <span class="text-xs font-semibold leading-normal truncate whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">Merch</span>
+                                <span class="hidden md:flex text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345</span>
+
+                                <div class="flex md:hidden flex-col gap-1">
+                                    <div class="flex items-center">
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345 &nbsp;</span>
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#667085] dark:text-[#655e53]">22 Jan</span>
+                                    </div>
+                                    <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                        <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                        <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- from -->
+                        <div data-title="from" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                            </span>
+                        </div>
+
+                        <!-- status -->
+                        <div data-title="status" class="hidden md:flex items-start min-h-[2.625rem] p-2.5">
+                            <div class="flex items-start">
+                                <span class="flex justify-center items-center p-1 bg-[#FFE500] backdrop-blur-[10px] dark:bg-[#a99700]">
+                                    <img src="https://i.ibb.co.com/cSnyRK5k/stars.webp" alt="stars" class="w-4 h-4"/>
+                                </span>
+                                <span class="flex justify-center items-center px-1.5 py-[0.188rem] gap-2 text-xs leading-normal font-medium text-[#FFE500] bg-black backdrop-blur-[10px] whitespace-nowrap dark:text-[#ffe81a] dark:bg-[#181a1b]">New</span>
+                            </div>
+                        </div>
+
+                        <!-- date -->
+                        <div data-title="date" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="truncate text-xs leading-[1.125rem] text-[#667085] dark:text-[#655e53] whitespace-nowrap">22 Jan 2022</span>
+                        </div>
+
+                        <!-- total -->
+                        <div data-title="total" class="flex items-center min-h-[2.625rem] p-2.5 md:pr-6 xl:pr-10 justify-end text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3] whitespace-nowrap">USD$ 9.99</div>
+                    </div>
+
+                    <!-- table-row -->
+                    <div class="flex md:grid items-center cursor-pointer odd:bg-[#F2F4F7]/50 dark:odd:bg-[#1e2022] md:grid-cols-[minmax(12.5rem,1fr)_1fr_1fr_1fr_minmax(8rem,1fr)] lg:grid-cols-[minmax(12.5rem,1fr)_12.5rem_8.875rem_11.25rem_minmax(8rem,1fr)] xl:grid-cols-[minmax(12.5rem,17rem)_12.5rem_8.875rem_11.25rem_12.5rem] w-full">
+                        <!-- order -->
+                        <div data-title="order" class="flex items-center min-h-[2.625rem] p-0 w-full">
+                            <!-- icon-container -->
+                            <div class="flex justify-center items-center w-[3.5rem] h-[4.5rem] md:w-[4.5rem] bg-black md:border-b md:border-[#98A2B3] dark:bg-[#181a1b] dark:md:border-[#b0a993]">
+                                <img src="https://i.ibb.co.com/RGtnmtYZ/merch.webp" alt="merch" class="w-9 h-9"/>
+                            </div>
+
+                            <!-- text-container -->
+                            <div class="flex flex-col justify-center items-start flex-1 min-h-[4.5rem] p-1.5 md:p-2.5 md:gap-0.5">
+                                <span class="text-xs font-semibold leading-normal truncate whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">Merch</span>
+                                <span class="hidden md:flex text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345</span>
+
+                                <div class="flex md:hidden flex-col gap-1">
+                                    <div class="flex items-center">
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345 &nbsp;</span>
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#667085] dark:text-[#655e53]">22 Jan</span>
+                                    </div>
+                                    <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                        <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                        <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- from -->
+                        <div data-title="from" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                            </span>
+                        </div>
+
+                        <!-- status -->
+                        <div data-title="status" class="hidden md:flex items-start min-h-[2.625rem] p-2.5">
+                            <div class="flex items-start">
+                                <span class="flex justify-center items-center p-1 bg-[#FFE500] backdrop-blur-[10px] dark:bg-[#a99700]">
+                                    <img src="https://i.ibb.co.com/cSnyRK5k/stars.webp" alt="stars" class="w-4 h-4"/>
+                                </span>
+                                <span class="flex justify-center items-center px-1.5 py-[0.188rem] gap-2 text-xs leading-normal font-medium text-[#FFE500] bg-black backdrop-blur-[10px] whitespace-nowrap dark:text-[#ffe81a] dark:bg-[#181a1b]">New</span>
+                            </div>
+                        </div>
+
+                        <!-- date -->
+                        <div data-title="date" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="truncate text-xs leading-[1.125rem] text-[#667085] dark:text-[#655e53] whitespace-nowrap">22 Jan 2022</span>
+                        </div>
+
+                        <!-- total -->
+                        <div data-title="total" class="flex items-center min-h-[2.625rem] p-2.5 md:pr-6 xl:pr-10 justify-end text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3] whitespace-nowrap">USD$ 9.99</div>
+                    </div>
+
+                    <!-- table-row -->
+                    <div class="flex md:grid items-center cursor-pointer odd:bg-[#F2F4F7]/50 dark:odd:bg-[#1e2022] md:grid-cols-[minmax(12.5rem,1fr)_1fr_1fr_1fr_minmax(8rem,1fr)] lg:grid-cols-[minmax(12.5rem,1fr)_12.5rem_8.875rem_11.25rem_minmax(8rem,1fr)] xl:grid-cols-[minmax(12.5rem,17rem)_12.5rem_8.875rem_11.25rem_12.5rem] w-full">
+                        <!-- order -->
+                        <div data-title="order" class="flex items-center min-h-[2.625rem] p-0 w-full">
+                            <!-- icon-container -->
+                            <div class="flex justify-center items-center w-[3.5rem] h-[4.5rem] md:w-[4.5rem] bg-[#07F468] md:border-b md:border-[#98A2B3] dark:bg-[#0aff78] dark:md:border-[#b0a993]">
+                                <img src="https://i.ibb.co.com/0wRg4N7/cart-1.webp" alt="cart-1" class="w-9 h-9 [filter:brightness(0)]"/>
+                            </div>
+
+                            <!-- text-container -->
+                            <div class="flex flex-col justify-center items-start flex-1 min-h-[4.5rem] p-1.5 md:p-2.5 md:gap-0.5">
+                                <span class="text-xs font-semibold leading-normal truncate whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">Merch</span>
+                                <span class="hidden md:flex text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345</span>
+
+                                <div class="flex md:hidden flex-col gap-1">
+                                    <div class="flex items-center">
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345 &nbsp;</span>
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#667085] dark:text-[#655e53]">22 Jan</span>
+                                    </div>
+                                    <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                        <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                        <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- from -->
+                        <div data-title="from" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                            </span>
+                        </div>
+
+                        <!-- status -->
+                        <div data-title="status" class="hidden md:flex items-start min-h-[2.625rem] p-2.5">
+                            <div class="flex items-start">
+                                <span class="flex justify-center items-center p-1 bg-[#FFE500] backdrop-blur-[10px] dark:bg-[#a99700]">
+                                    <img src="https://i.ibb.co.com/cSnyRK5k/stars.webp" alt="stars" class="w-4 h-4"/>
+                                </span>
+                                <span class="flex justify-center items-center px-1.5 py-[0.188rem] gap-2 text-xs leading-normal font-medium text-[#FFE500] bg-black backdrop-blur-[10px] whitespace-nowrap dark:text-[#ffe81a] dark:bg-[#181a1b]">New</span>
+                            </div>
+                        </div>
+
+                        <!-- date -->
+                        <div data-title="date" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="truncate text-xs leading-normal text-[#475467] dark:text-[#b1aba0] whitespace-nowrap">22 Jan 2022</span>
+                        </div>
+
+                        <!-- total -->
+                        <div data-title="total" class="flex items-center min-h-[2.625rem] p-2.5 md:pr-6 xl:pr-10 justify-end text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3] whitespace-nowrap">USD$ 9.99</div>
+                    </div>
+
+                    <!-- table-row -->
+                    <div class="flex md:grid items-center cursor-pointer odd:bg-[#F2F4F7]/50 dark:odd:bg-[#1e2022] md:grid-cols-[minmax(12.5rem,1fr)_1fr_1fr_1fr_minmax(8rem,1fr)] lg:grid-cols-[minmax(12.5rem,1fr)_12.5rem_8.875rem_11.25rem_minmax(8rem,1fr)] xl:grid-cols-[minmax(12.5rem,17rem)_12.5rem_8.875rem_11.25rem_12.5rem] w-full">
+                        <!-- order -->
+                        <div data-title="order" class="flex items-center min-h-[2.625rem] p-0 w-full">
+                            <!-- icon-container -->
+                            <div class="flex justify-center items-center w-[3.5rem] h-[4.5rem] md:w-[4.5rem] bg-[#07F468] md:border-b md:border-[#98A2B3] dark:bg-[#0aff78] dark:md:border-[#b0a993]">
+                                <img src="https://i.ibb.co.com/0wRg4N7/cart-1.webp" alt="cart-1" class="w-9 h-9 [filter:brightness(0)]"/>
+                            </div>
+
+                            <!-- text-container -->
+                            <div class="flex flex-col justify-center items-start flex-1 min-h-[4.5rem] p-1.5 md:p-2.5 md:gap-0.5">
+                                <span class="text-xs font-semibold leading-normal truncate whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">Merch</span>
+                                <span class="hidden md:flex text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345</span>
+
+                                <div class="flex md:hidden flex-col gap-1">
+                                    <div class="flex items-center">
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345 &nbsp;</span>
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#667085] dark:text-[#655e53]">22 Jan</span>
+                                    </div>
+                                    <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                        <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                        <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- from -->
+                        <div data-title="from" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                            </span>
+                        </div>
+
+                        <!-- status -->
+                        <div data-title="status" class="hidden md:flex items-start min-h-[2.625rem] p-2.5">
+                            <div class="flex items-start">
+                                <span class="flex justify-center items-center p-1 bg-[#FFE500] backdrop-blur-[10px] dark:bg-[#a99700]">
+                                    <img src="https://i.ibb.co.com/cSnyRK5k/stars.webp" alt="stars" class="w-4 h-4"/>
+                                </span>
+                                <span class="flex justify-center items-center px-1.5 py-[0.188rem] gap-2 text-xs leading-normal font-medium text-[#FFE500] bg-black backdrop-blur-[10px] whitespace-nowrap dark:text-[#ffe81a] dark:bg-[#181a1b]">New</span>
+                            </div>
+                        </div>
+
+                        <!-- date -->
+                        <div data-title="date" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="truncate text-xs leading-normal text-[#475467] dark:text-[#b1aba0] whitespace-nowrap">22 Jan 2022</span>
+                        </div>
+
+                        <!-- total -->
+                        <div data-title="total" class="flex items-center min-h-[2.625rem] p-2.5 md:pr-6 xl:pr-10 justify-end text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3] whitespace-nowrap">USD$ 9.99</div>
+                    </div>
+
+                    <!-- table-row -->
+                    <div class="flex md:grid items-center cursor-pointer odd:bg-[#F2F4F7]/50 dark:odd:bg-[#1e2022] md:grid-cols-[minmax(12.5rem,1fr)_1fr_1fr_1fr_minmax(8rem,1fr)] lg:grid-cols-[minmax(12.5rem,1fr)_12.5rem_8.875rem_11.25rem_minmax(8rem,1fr)] xl:grid-cols-[minmax(12.5rem,17rem)_12.5rem_8.875rem_11.25rem_12.5rem] w-full">
+                        <!-- order -->
+                        <div data-title="order" class="flex items-center min-h-[2.625rem] p-0 w-full">
+                            <!-- icon-container -->
+                            <div class="flex justify-center items-center w-[3.5rem] h-[4.5rem] md:w-[4.5rem] bg-[#07F468] md:border-b md:border-[#98A2B3] dark:bg-[#0aff78] dark:md:border-[#b0a993]">
+                                <img src="https://i.ibb.co.com/0wRg4N7/cart-1.webp" alt="cart-1" class="w-9 h-9 [filter:brightness(0)]"/>
+                            </div>
+
+                            <!-- text-container -->
+                            <div class="flex flex-col justify-center items-start flex-1 min-h-[4.5rem] p-1.5 md:p-2.5 md:gap-0.5">
+                                <span class="text-xs font-semibold leading-normal truncate whitespace-nowrap text-[#0C111D] dark:text-[#dbd8d3]">Merch</span>
+                                <span class="hidden md:flex text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345</span>
+
+                                <div class="flex md:hidden flex-col gap-1">
+                                    <div class="flex items-center">
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">#12345 &nbsp;</span>
+                                        <span class="text-xs leading-[1.125rem] truncate whitespace-nowrap text-[#667085] dark:text-[#655e53]">22 Jan</span>
+                                    </div>
+                                    <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                        <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                        <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- from -->
+                        <div data-title="from" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="flex items-center gap-[0.3125rem] self-stretch">
+                                <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full"/>
+                                <span class="text-xs leading-normal truncate whitespace-nowrap text-[#344054] dark:text-[#bdb7af]">@Mangoes4eva</span>
+                            </span>
+                        </div>
+
+                        <!-- status -->
+                        <div data-title="status" class="hidden md:flex items-start min-h-[2.625rem] p-2.5">
+                            <div class="flex items-start">
+                                <span class="flex justify-center items-center p-1 bg-[#FFE500] backdrop-blur-[10px] dark:bg-[#a99700]">
+                                    <img src="https://i.ibb.co.com/cSnyRK5k/stars.webp" alt="stars" class="w-4 h-4"/>
+                                </span>
+                                <span class="flex justify-center items-center px-1.5 py-[0.188rem] gap-2 text-xs leading-normal font-medium text-[#FFE500] bg-black backdrop-blur-[10px] whitespace-nowrap dark:text-[#ffe81a] dark:bg-[#181a1b]">New</span>
+                            </div>
+                        </div>
+
+                        <!-- date -->
+                        <div data-title="date" class="hidden md:flex items-center min-h-[2.625rem] p-2.5">
+                            <span class="truncate text-xs leading-normal text-[#475467] dark:text-[#b1aba0] whitespace-nowrap">22 Jan 2022</span>
+                        </div>
+
+                        <!-- total -->
+                        <div data-title="total" class="flex items-center min-h-[2.625rem] p-2.5 md:pr-6 xl:pr-10 justify-end text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3] whitespace-nowrap">USD$ 9.99</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- custom select-dropdown -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const customSelects = document.querySelectorAll('.dash-select');
+
+          customSelects.forEach(select => {
+              const trigger = select.querySelector('.dash-select__trigger span');
+              const options = select.querySelectorAll('.dash-option');
+              const realSelect = select.parentElement.querySelector('.dash-real-select');
+
+              // Set initial value
+              const selectedOption = select.querySelector('.dash-option.selected');
+              if (selectedOption) {
+                  trigger.textContent = selectedOption.querySelector('span').textContent;
+                  realSelect.value = selectedOption.dataset.value;
+              }
+
+              // Toggle dropdown
+              select.addEventListener('click', function(e) {
+                  e.stopPropagation();
+
+                  // Close all other selects first
+                  document.querySelectorAll('.dash-select').forEach(s => {
+                      if (s !== select) {
+                          s.classList.remove('open');
+                          s.querySelector('.select-arrow').classList.remove('rotate-180');
+                          s.querySelector('.dash-options-container').classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                          s.querySelector('.dash-options-container').classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                      }
+                  });
+
+                  // Position dropdown based on available space
+                  positionDropdown(this);
+
+                  // Toggle this select
+                  this.classList.toggle('open');
+                  const arrow = this.querySelector('.select-arrow');
+                  const optionsContainer = this.querySelector('.dash-options-container');
+
+                  if (this.classList.contains('open')) {
+                      arrow.classList.add('rotate-180');
+                      optionsContainer.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+                      optionsContainer.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+                  } else {
+                      arrow.classList.remove('rotate-180');
+                      optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                      optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                  }
+              });
+
+              // Handle option selection
+              options.forEach(option => {
+                  option.addEventListener('click', function(e) {
+                      e.stopPropagation();
+
+                      options.forEach(opt => {
+                          opt.classList.remove('selected');
+                      });
+
+                      this.classList.add('selected');
+                      const optionSpan = this.querySelector('span');
+
+                      trigger.textContent = optionSpan.textContent;
+                      realSelect.value = this.dataset.value || optionSpan.textContent.toLowerCase();
+
+                      // Close the dropdown
+                      select.classList.remove('open');
+
+                        const arrow = select.querySelector('.select-arrow');
+                        const optionsContainer = select.querySelector('.dash-options-container');
+
+                        arrow.classList.remove('rotate-180');
+                        optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                        optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+
+                      // Trigger change event on the real select
+                      realSelect.dispatchEvent(new Event('change'));
+                  });
+              });
+          });
+
+          // Close dropdown when clicking outside
+          document.addEventListener('click', function() {
+              document.querySelectorAll('.dash-select').forEach(select => {
+                  select.classList.remove('open');
+
+                    const arrow = select.querySelector('.select-arrow');
+                    const optionsContainer = select.querySelector('.dash-options-container');
+
+                    arrow.classList.remove('rotate-180');
+                    optionsContainer.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                    optionsContainer.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+              });
+          });
+
+          // Position dropdown up or down based on available space
+          function positionDropdown(select) {
+              const optionsContainer = select.querySelector('.dash-options-container');
+              const rect = select.getBoundingClientRect();
+              const spaceBelow = window.innerHeight - rect.bottom;
+              const spaceAbove = rect.top;
+              const optionsHeight = select.querySelector('.dash-options').scrollHeight;
+
+              // Reset classes
+              select.classList.remove('upward');
+              optionsContainer.classList.remove('bottom-[calc(100%+0.5rem)]');
+              optionsContainer.classList.add('top-[calc(100%+0.5rem)]');
+
+              if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                  select.classList.add('upward');
+                  optionsContainer.classList.remove('top-[calc(100%+0.5rem)]');
+                  optionsContainer.classList.add('bottom-[calc(100%+0.5rem)]');
+              }
+          }
+
+          // Reposition dropdowns on window resize
+          window.addEventListener('resize', function() {
+              document.querySelectorAll('.dash-select.open').forEach(select => {
+                  positionDropdown(select);
+              });
+          });
+      });
+    </script>
+</body>
+</html>
