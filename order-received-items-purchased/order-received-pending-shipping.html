@@ -634,10 +634,168 @@
                     </div>
                 </div>
 
-                <!-- spinner-wrapper -->
-                <div class="flex flex-col justify-center items-center grow mt-1">
-                    <div class="w-[9.375rem] h-[9.375rem]">
-                        <img src="https://i.ibb.co.com/TM7mTrZJ/spinner.webp" alt="spinner" class="w-full h-full animate-spin-slow">
+                <!-- pending-shipping-section -->
+                <section class="flex flex-col gap-2 p-2 bg-[#07F468] md:p-4 dark:bg-[#06c454]">
+                    <h2 class="text-base font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Pending Shipping</h2>
+                    <p class="text-sm text-[#0C111D] dark:text-[#dbd8d3]">Please add tracking details to this order when item(s) is shipped.</p>
+                    <button class="flex justify-center items-center gap-2.5 px-2 py-1 bg-black group/button hover:bg-[#07F468] dark:bg-[#181a1b] dark:hover:bg-[#06c454]">
+                        <img src="https://i.ibb.co.com/S4bDBh8V/location.webp" alt="location" class="w-5 h-5 group-hover/button:[filter:brightness(0)]">
+                        <span class="text-base font-medium text-[#07F468] group-hover/button:text-black dark:text-[#23f97b] dark:group-hover/button:text-[#e8e6e3]">Add Tracking Details</span>
+                    </button>
+                </section>
+
+                <!-- shipping-details -->
+                <div class="flex flex-col gap-4 px-2 py-4 md:px-4 md:py-6">
+                    <!-- from -->
+                    <div class="flex items-start gap-2">
+                        <img src="https://i.ibb.co.com/9kSNFDsp/Users.webp" alt="Users" class="w-4 h-4">
+
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xs leading-normal text-[#667085] dark:text-[#655e53]">From</span>
+
+                            <div class="flex items-center gap-2">
+                                <div class="flex items-center gap-1 self-stretch">
+                                    <img src="https://i.ibb.co.com/jkjtwC9C/svgviewer-png-output-17.webp" alt="avatar" class="w-5 h-5 rounded-full">
+                                    <span class="text-sm text-[#344054] dark:text-[#bdb7af]">@mangoes</span>
+                                </div>
+
+                                <span class="text-xs leading-normal text-[#98A2B3] dark:text-[#b0a993]">email@email.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ship to -->
+                    <div class="flex items-start gap-2">
+                        <img src="https://i.ibb.co.com/v4tpXWd1/location-1.webp" alt="location 1" class="w-4 h-4">
+
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xs leading-normal text-[#667085] dark:text-[#655e53]">Ship to</span>
+
+                            <p class="text-sm text-black dark:text-[#e8e6e3]">101 S Chicago Ave. Portales, New York, 88130</p>
+                        </div>
+                    </div>
+
+                    <!-- notes from buyer -->
+                    <div class="flex items-start gap-2">
+                        <img src="https://i.ibb.co.com/sdq4sD9r/files-green.webp" alt="files green" class="w-4 h-4">
+
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xs leading-normal text-[#667085] dark:text-[#655e53]">Notes from buyer</span>
+
+                            <p class="text-sm text-black dark:text-[#e8e6e3]">Here is some order notes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis tortor at sem luctus blandit ac ac tortor. Vivamus lobortis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- price-table -->
+                <div class="flex flex-col gap-3 px-2 py-4 bg-white md:px-4 dark:bg-[#181a1b]">
+                    <!-- table-row -->
+                    <div class="flex justify-between">
+                        <!-- left-column -->
+                        <div class="flex gap-1 w-1/2">
+                            <span class="text-xs leading-normal font-semibold text-black dark:text-[#e8e6e3]">3x</span>
+
+                            <div class="flex flex-col gap-2">
+                                <span class="text-xs leading-normal font-medium truncate text-[#0C111D] dark:text-[#dbd8d3]">Mango (Taiwan)</span>
+
+                                <div class="flex items-center gap-2 overflow-visible">
+                                    <div class="flex items-center gap-1 w-max h-5">
+                                        <img src="https://i.ibb.co.com/qT1g1tJ/logo-bg-green.webp" alt="logo bg green" class="w-3 h-3">
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#17B26A] dark:text-[#56e9a5]">10% off merch</span>
+                                    </div>
+
+                                    <div class="w-0.5 h-0.5 rounded-full bg-[#667085] dark:bg-[#535c6d]"></div>
+
+                                    <div class="flex items-center gap-1 w-max h-5">
+                                        <img src="https://i.ibb.co.com/yBSNyYfQ/tag-green.webp" alt="tag green" class="w-3 h-3">
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#17B26A] dark:text-[#56e9a5]">JENNY2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- right-column -->
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">USD$ 123.45</span>
+                            <span class="text-[0.625rem] leading-[1.125rem] text-right line-through text-[#667085] dark:text-[#655e53]">USD$ 123.45</span>
+                        </div>
+                    </div>
+
+                    <!-- table-row -->
+                    <div class="flex justify-between">
+                        <!-- left-column -->
+                        <div class="flex gap-1 w-1/2">
+                            <span class="text-xs leading-normal font-semibold text-black dark:text-[#e8e6e3]">3x</span>
+
+                            <div class="flex flex-col gap-2">
+                                <span class="text-xs leading-normal font-medium truncate text-[#0C111D] dark:text-[#dbd8d3]">Mango (Philippines)</span>
+
+                                <div class="flex items-center gap-2 overflow-visible">
+                                    <div class="flex items-center gap-1 w-max h-5">
+                                        <img src="https://i.ibb.co.com/qT1g1tJ/logo-bg-green.webp" alt="logo bg green" class="w-3 h-3">
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#17B26A] dark:text-[#56e9a5]">10% off merch</span>
+                                    </div>
+
+                                    <div class="w-0.5 h-0.5 rounded-full bg-[#667085] dark:bg-[#535c6d]"></div>
+
+                                    <div class="flex items-center gap-1 w-max h-5">
+                                        <img src="https://i.ibb.co.com/yBSNyYfQ/tag-green.webp" alt="tag green" class="w-3 h-3">
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#17B26A] dark:text-[#56e9a5]">JENNY2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- right-column -->
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">USD$ 123.45</span>
+                            <span class="text-[0.625rem] leading-[1.125rem] text-right line-through text-[#667085] dark:text-[#655e53]">USD$ 123.45</span>
+                        </div>
+                    </div>
+
+                    <!-- table-row -->
+                    <div class="flex justify-between">
+                        <!-- left-column -->
+                        <div class="flex gap-1 w-1/2">
+                            <span class="text-xs leading-normal font-semibold text-black dark:text-[#e8e6e3]">3x</span>
+
+                            <div class="flex flex-col gap-2 overflow-hidden">
+                                <span class="text-xs leading-normal font-medium truncate text-[#0C111D] dark:text-[#dbd8d3]">Watch me eat 10 family size chicken bucket!! You wont’s bel</span>
+
+                                <div class="flex items-center gap-2 overflow-visible">
+                                    <div class="flex items-center gap-1 w-max h-5">
+                                        <img src="https://i.ibb.co.com/qT1g1tJ/logo-bg-green.webp" alt="logo bg green" class="w-3 h-3">
+                                        <span class="text-xs leading-normal font-medium whitespace-nowrap text-[#17B26A] dark:text-[#56e9a5]">10% off P2V</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- right-column -->
+                        <div class="flex flex-col gap-1 w-1/2">
+                            <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">USD$ 123.45</span>
+                            <span class="text-[0.625rem] leading-[1.125rem] text-right line-through text-[#667085] dark:text-[#655e53]">USD$ 123.45</span>
+                        </div>
+                    </div>
+
+                    <!-- subtotal -->
+                    <div class="flex justify-between items-center pt-2 border-t border-[#EAECF0] dark:border-[#353a3c]">
+                        <span class="text-xs leading-normal text-[#0C111D] dark:text-[#dbd8d3]">Subtotal</span>
+                        <span class="text-xs leading-normal text-[#0C111D] dark:text-[#dbd8d3]">USD$ 370.35</span>
+                    </div>
+
+                    <!-- total discount -->
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs leading-normal text-[#0C111D] dark:text-[#dbd8d3]">Total Discount</span>
+                        <div class="flex justify-center items-center px-1 h-5 rounded-[1.25rem] bg-[#DCFAE6] dark:bg-[#094226]">
+                            <span class="text-xs leading-normal font-medium text-[#067647] dark:text-[#7cf8c4]">-USD$ 32.45</span>
+                        </div>
+                    </div>
+
+                    <!-- total -->
+                    <div class="flex justify-between items-center pt-2 border-t border-[#EAECF0] dark:border-[#353a3c]">
+                        <span class="text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Total</span>
+                        <span class="text-lg font-semibold text-[#0C111D] dark:text-[#dbd8d3]">USD$ 337.9</span>
                     </div>
                 </div>
             </div>
