@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New tier page</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+<body class="bg-[#EAECF0] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#222526]">
+    <!-- main-wrapper -->
+    <div class="relative before:content-[''] before:fixed before:inset-0 before:pointer-events-none before:bg-cover before:bg-center before:bg-no-repeat before:bg-[url('https://i.ibb.co.com/QvpHN5vD/mobile-gradient-main-bg-1.webp')] md:before:bg-[url('https://i.ibb.co.com/dw910Z5b/gradient-main-bg.webp')]">
+        <!-- section-wrapper -->
+        <div class="flex flex-col min-h-screen bg-[linear-gradient(180deg,rgba(255,255,255,0.3)_0%,rgba(255,255,255,0)_8%)] xl:p-10">
+            
+            <!-- section-container -->
+            <div class="flex flex-col gap-4 w-full backdrop-blur-[25px] bg-white/40 lg:gap-6 lg:shadow-[0px_4px_6px_-2px_#10182814] dark:bg-[#181a1b]/40">
+                <!-- title-section -->
+                <section class="flex items-center gap-2 px-2 pt-4 md:px-4">
+                    <img src="https://i.ibb.co.com/tMLFjGS0/calendar-date.webp" alt="calendar date" class="w-5 h-5">
+                    <h2 class="text-xl leading-normal font-medium text-[#667085] dark:text-[#9e9689]">You have 2 events today:</h2>
+                </section>
+
+                <!-- event & calender wrapper -->
+                <div class="flex gap-6 md:px-4 lg:pb-4">
+                    <!-- event-section -->
+                    <div class="flex flex-col gap-2 px-2 w-full md:px-0">
+                        <!-- upcoming events -->
+                        <div class="flex pr-1 pl-1.5 rounded shadow-[0_0_8px_0_#6358FF80] border-l-[4px] border-[#5549FF] bg-[#F9FAFB] dark:border-[#363b3d] dark:bg-[#1b1d1e]">
+                            <div class="flex gap-1 py-2 w-full">
+                                <div class="flex items-center min-w-[3.4375rem] h-[3.125rem]">
+                                    <span class="align-middle text-[0.6875rem] leading-4 font-bold text-[#344054] dark:text-[#bdb8af]">2:15pm-<br />9:30pm</span>
+                                </div>
+
+                                <div class="flex flex-col gap-1 grow">
+                                    <h3 class="text-sm font-semibold text-[#5549FF] dark:text-[#4d89ff]">Live call</h3>
+
+                                    <div class="flex items-center gap-1">
+                                        <div class="w-5 h-5 flex justify-center items-center">
+                                            <img src="https://i.ibb.co.com/rGTykjYb/Vector.webp" alt="Vector" class="w-full h-full"/>
+                                        </div>
+                                        <span class="text-[0.6875rem] leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9689]">Apples</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-end items-center gap-1.5 h-[3.125rem]">
+                                    <div class="flex items-center gap-1 rounded">
+                                        <div class="w-1.5 h-1.5 min-w-[0.375rem] db bg-[#FF0464] dark:bg-[#ca004d] rounded-full"></div>
+                                        <span class="text-xs leading-normal font-medium text-[#FF0464] dark:text-[#ff1d73]">in 5 min</span>
+                                    </div>
+
+                                    <button class="flex items-center gap-1 rounded px-3 py-[0.4375rem] cursor-pointer bg-[#5549FF] dark:bg-[#0b00a0]">
+                                        <img src="https://i.ibb.co.com/ZpLTw1Sm/phone-incoming-02.webp" alt="phone-incoming-02" class="w-5 h-5"/>
+                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">JOIN CALL</span>
+                                    </button>
+                                </div>
+
+                                <img src="https://i.ibb.co.com/rKfXgfjL/dots-vertical.webp" alt="dots-vertical" class="w-4 h-4 cursor-pointer self-center [filter:brightness(0)_saturate(100%)_invert(66%)_sepia(25%)_saturate(195%)_hue-rotate(179deg)_brightness(94%)_contrast(86%)]"/>
+                            </div>
+                        </div>
+
+                        <!-- upcoming events -->
+                        <div class="flex pr-1 pl-1.5 rounded shadow-[0_0_8px_0_#6358FF80] border-l-[4px] border-[#5549FF] bg-[#F9FAFB] dark:border-[#363b3d] dark:bg-[#1b1d1e]">
+                            <div class="flex gap-1 py-2 w-full">
+                                <div class="flex items-center min-w-[3.4375rem] h-[2.75rem]">
+                                    <span class="align-middle text-[0.6875rem] leading-4 font-medium text-[#344054] dark:text-[#bdb8af]">9:40pm-<br />9:55pm</span>
+                                </div>
+
+                                <div class="flex flex-col gap-1 grow">
+                                    <h3 class="text-sm font-semibold text-[#5549FF] dark:text-[#4d89ff]">Live call</h3>
+
+                                    <div class="flex items-center gap-1">
+                                        <div class="w-5 h-5 flex justify-center items-center">
+                                            <img src="https://i.ibb.co.com/rGTykjYb/Vector.webp" alt="Vector" class="w-full h-full"/>
+                                        </div>
+                                        <span class="text-[0.6875rem] leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9689]">Apples</span>
+                                    </div>
+                                </div>
+
+                                <img src="https://i.ibb.co.com/rKfXgfjL/dots-vertical.webp" alt="dots-vertical" class="w-4 h-4 cursor-pointer [filter:brightness(0)_saturate(100%)_invert(44%)_sepia(31%)_saturate(289%)_hue-rotate(183deg)_brightness(91%)_contrast(83%)]"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- calender-section -->
+                    <div class="hidden lg:flex flex-col gap-2.5 rounded-lg w-80 min-w-[20rem] h-[16.125rem]">
+                        <!-- calender-header -->
+                        <div class="grid grid-rows-1 grid-cols-7 w-full h-5">
+                            <div class="flex justify-center items-center px-2.5 h-5">
+                                <span class="text-xs leading-normal font-semibold text-[#FF6A6A] dark:text-[#ff6464]">S</span>
+                            </div>
+                            <div class="flex justify-center items-center px-2.5 h-5">
+                                <span class="text-xs leading-normal font-semibold text-[#667085] dark:text-[#9e9689]">M</span>
+                            </div>
+                            <div class="flex justify-center items-center px-2.5 h-5">
+                                <span class="text-xs leading-normal font-semibold text-[#667085] dark:text-[#9e9689]">T</span>
+                            </div>
+                            <div class="flex justify-center items-center px-2.5 h-5">
+                                <span class="text-xs leading-normal font-semibold text-[#667085] dark:text-[#9e9689]">W</span>
+                            </div>
+                            <div class="flex justify-center items-center px-2.5 h-5">
+                                <span class="text-xs leading-normal font-semibold text-[#667085] dark:text-[#9e9689]">T</span>
+                            </div>
+                            <div class="flex justify-center items-center px-2.5 h-5">
+                                <span class="text-xs leading-normal font-semibold text-[#667085] dark:text-[#9e9689]">F</span>
+                            </div>
+                            <div class="flex justify-center items-center px-2.5 h-5">
+                                <span class="text-xs leading-normal font-semibold text-[#667085] dark:text-[#9e9689]">S</span>
+                            </div>
+                        </div>
+
+                        <!-- calender-row -->
+                        <div class="grid grid-rows-5 grid-cols-7 w-full h-[14.25rem]">
+                            <div class="flex justify-center items-center group/day passed">
+                                <div></div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">1</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">2</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">3</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">4</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">5</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">6</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed off">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">7</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">8</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">9</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">10</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">11</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">12</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed marked">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">13</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed off">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">14</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">15</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">16</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">17</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">18</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">19</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">20</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed off">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">21</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day passed">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">22</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day current marked">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">23</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">24</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day marked">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">25</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">26</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">27</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day off">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">28</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">29</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day marked">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">30</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center group/day">
+                                <div class="flex flex-col items-center gap-0.5 p-2.5 w-full h-full rounded-[3.125rem] group-[.passed]/day:opacity-60 group-[.current]/day:bg-[#344054] group-[.current]/day:dark:bg-[#323e52]">
+                                    <span class="text-xs leading-normal font-medium text-[#667085] group-[.off]/day:text-[#FF6A6A] group-[.current]/day:text-white dark:group-[.off]/day:text-[#ff6464] dark:text-[#9e9689] dark:group-[.current]/day:text-[#e8e6e3]">31</span>
+                                
+                                    <div class="hidden group-[.marked]/day:block group w-[0.3125rem] h-[0.3125rem] rounded-full group-[.passed]/day:!bg-[#98A2B3] bg-[#FF0066] dark:group-[.passed]/day:!bg-[#444c5b] dark:bg-[#cc0052]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- button-section -->
+                <div class="flex justify-end items-end w-full lg:absolute lg:top-4 lg:right-4">
+                    <button class="flex justify-center items-center gap-1 pl-4 pr-2 py-1 [clip-path:polygon(10.16px_0,100%_0,100%_100%,0_100%)] bg-[#344054] lg:[clip-path:polygon(0_0,100%_0,100%_100%,10.16px_100%)] dark:bg-[#323e52]">
+                        <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">All Events</span>
+                        <img src="https://i.ibb.co.com/H8dfS3q/arrow-up-right.png" alt="arrow-up-right" class="w-4 h-4 [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(123deg)_brightness(112%)_contrast(100%)]">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
