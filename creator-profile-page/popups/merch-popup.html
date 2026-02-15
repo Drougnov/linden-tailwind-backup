@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merch popup</title>
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Splide CSS/JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <!-- lightgallery CSS/JS + plugins -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.umd.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            screens: {
+              sm: '480px',
+              md: '768px',
+              lg: '1010px',
+              xl: '1365px',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+<body class="bg-[#444444] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#3e4446]">
+  <!-- wrapper   -->
+  <div class="bg-black/50 relative dark:bg-[#181a1b]/50">
+    <!-- bg-overlay -->
+    <div class="absolute inset-0 w-full h-full bg-black/5 backdrop-blur-[125px] pointer-events-none z-[-1] dark:bg-[#181a1b]/5"></div>
+  
+    <!-- container -->
+    <div class="flex flex-col min-h-screen">
+      <!-- close-button -->
+      <button class="fixed top-4 right-4 flex justify-center items-center w-8 h-8 z-50 drop-shadow-[0px_30px_-34px_#0000004D] cursor-pointer">
+          <img src="https://i.ibb.co.com/DfT6Sg5g/x-close.webp" alt="x close" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(97%)_sepia(1%)_saturate(5636%)_hue-rotate(182deg)_brightness(95%)_contrast(81%)]">
+      </button>
+
+      <!-- splide-section -->
+      <div class="h-full">
+        <div class="">
+          <section data-main-slider class="splide bg-black/25 dark:bg-[#181a1b]/25" aria-label="Main Gallery">
+              <div class="splide__track">
+                  <ul class="splide__list"></ul>
+              </div>
+          </section>
+
+          <section data-thumbs-slider class="splide pt-2" aria-label="Thumbnails">
+              <div class="splide__track">
+                  <ul class="splide__list drop-shadow-[0px_30px_-34px_#0000004D]"></ul>
+              </div>
+          </section>
+        </div>
+
+        <div data-lightGallery class="hidden"></div>
+      </div>
+
+      <!-- text-section -->
+      <div class="">
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const images = [
+        { src: "https://picsum.photos/id/1015/1920/1080", thumb: "https://picsum.photos/id/1015/240/160" },
+        { src: "https://picsum.photos/id/133/1920/1080", thumb: "https://picsum.photos/id/133/240/160" },
+        { src: "https://picsum.photos/id/160/1920/1080", thumb: "https://picsum.photos/id/160/240/160" },
+        { src: "https://picsum.photos/id/201/1920/1080", thumb: "https://picsum.photos/id/201/240/160" },
+        { src: "https://picsum.photos/id/251/1920/1080", thumb: "https://picsum.photos/id/251/240/160" },
+        { src: "https://picsum.photos/id/160/1920/1080", thumb: "https://picsum.photos/id/160/240/160" },
+    ];
+
+    function buildSlides() {
+        const mainList = document.querySelector('[data-main-slider] .splide__list');
+        const thumbsList = document.querySelector('[data-thumbs-slider] .splide__list');
+
+        images.forEach((img, i) => {
+            mainList.innerHTML += `<li class="splide__slide relative"><img src="${img.src}" alt="Image ${i+1}" class="w-full h-auto block cursor-zoom-in rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.6)]"></li>`;
+            thumbsList.innerHTML += `<li class="splide__slide aspect-square backdrop-blur-[10px] border ![border:1px_solid_transparent_!important;] transition-all duration-300 cursor-pointer [&.is-active]:[border:1px_solid_#F5F5F4_!important;] after:content-[''] after:absolute after:inset-0 after:bg-[#222222]/10 after:pointer-events-none dark:after:bg-[#2b2f31]/10 dark:[&.is-active]:border-[#333739]"><img src="${img.thumb}" alt="Thumb ${i+1}" class="w-full h-full object-cover"></li>`;
+        });
+    }
+
+    function initSplide() {
+        const main = new Splide('[data-main-slider]', {
+            type: 'fade',
+            pagination: false,
+            arrows: false,
+            cover: true,
+            heightRatio: 1.22445,
+            mediaQuery: 'min',
+            breakpoints: {
+                480: { heightRatio: 1.1755 },
+                1010: { heightRatio: 'auto', fixedHeight: '100vh' },
+
+            }
+        });
+
+        const thumbs = new Splide('[data-thumbs-slider]', {
+            perPage: 6,
+            gap: 8,
+            pagination: false,
+            isNavigation: true,
+            arrows: false,
+            drag: true,
+            mediaQuery: 'min',
+        });
+
+        main.sync(thumbs);
+        main.mount();
+        thumbs.mount();
+    }
+
+    let lgInstance;
+
+    function initLightGallery() {
+        const container = document.querySelector('[data-lightGallery]');
+
+        const dynamicItems = images.map(img => ({
+            src: img.src,
+            thumb: img.thumb,
+        }));
+
+        setupParallax(container);
+
+        lgInstance = lightGallery(container, {
+            dynamic: true,
+            dynamicEl: dynamicItems,
+            plugins: [lgThumbnail, lgZoom],
+            thumbnail: true,
+            thumbMargin: '4',
+            alignThumbnails: 'middle',
+            animateThumb: true,
+            zoom: true,
+            actualSize: true,
+            showZoomInOutIcons: false,
+            speed: 400,
+            download: false,
+            counter: false,
+            controls: false,
+            addClass: 'lg-custom-thumbs'
+        });
+
+        return lgInstance;
+    }
+function setupParallax(container) {
+    container.addEventListener('lgAfterOpen', () => {
+        const outer = document.querySelector('.lg-outer');
+        if (!outer) return;
+
+        const thumbOuter = outer.querySelector('.lg-thumb-outer');
+        if (thumbOuter) {
+            thumbOuter.classList.add('!bg-transparent')
+        }
+
+        const thumbInner = outer.querySelector('.lg-thumb');
+        if (thumbInner) {
+            thumbInner.classList.add('!flex', '!w-full', '!bg-transparent', 'drop-shadow-[0px_30px_-34px_#0000004D]', '!p-1', '!m-0')
+        }
+
+        const thumbImageWrappers = outer.querySelectorAll('.lg-thumb-item');
+        if (thumbImageWrappers) {
+            thumbImageWrappers.forEach(wrapper => {
+                wrapper.classList.add('!w-auto', '!h-auto', 'flex-1', 'flex-grow', '!aspect-square', '!mb-0', 'backdrop-blur-[10px]', 'bg-white/20', 'dark:bg-[#181a1b]/20')
+            });
+        }
+
+        const imgWraps = outer.querySelectorAll('.lg-img-wrap');
+        imgWraps.forEach(wrap => {
+            wrap.style.transition = 'transform 0.08s cubic-bezier(0.23, 1, 0.32, 1) !important';
+            wrap.style.willChange = 'transform';
+        });
+
+        const getCurrentImgWrap = () => {
+            return outer.querySelector('.lg-current .lg-img-wrap');
+        };
+
+        const handleMouseMove = (e) => {
+            const imgWrap = getCurrentImgWrap();
+            if (!imgWrap) return;
+
+            const isZoomed = outer.classList.contains('lg-zoomed');
+
+            if (isZoomed) {
+                const rect = outer.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width - 0.5) * 80;
+                const y = ((e.clientY - rect.top) / rect.height - 0.5) * 80;
+
+                imgWrap.style.transform = `translate(${x}px, ${y}px)`;
+            } else {
+                imgWrap.style.transform = '';
+            }
+        };
+
+        // Attach once
+        outer.addEventListener('mousemove', handleMouseMove);
+
+        // 🔥 IMPORTANT: Reset transform on slide change
+        container.addEventListener('lgAfterSlide', () => {
+            const imgWrap = getCurrentImgWrap();
+            if (imgWrap) imgWrap.style.transform = '';
+        });
+
+        container.addEventListener('lgBeforeClose', () => {
+            outer.removeEventListener('mousemove', handleMouseMove);
+
+            const imgWrap = getCurrentImgWrap();
+            if (imgWrap) imgWrap.style.transform = '';
+        }, { once: true });
+    });
+}
+    function setupLightboxTrigger() {
+        const mainSlides = document.querySelectorAll('[data-main-slider] .splide__slide');
+
+        mainSlides.forEach((slide, index) => {
+            let startX, startY;
+
+            slide.addEventListener('mousedown', (e) => {
+                startX = e.clientX;
+                startY = e.clientY;
+            });
+
+            slide.addEventListener('click', (e) => {
+                if (!startX || !startY) return;
+                const dist = Math.hypot(e.clientX - startX, e.clientY - startY);
+                if (dist < 12) {
+                    lgInstance.openGallery(index);
+                }
+            });
+        });
+    }
+
+    window.addEventListener('load', () => {
+        buildSlides();
+        initSplide();
+        lgInstance = initLightGallery();
+        setupLightboxTrigger();
+
+        console.log('✅ Single click + ultra-strong parallax + fixed after zoom + slide switch');
+    });
+</script>
+</body>
+</html>
