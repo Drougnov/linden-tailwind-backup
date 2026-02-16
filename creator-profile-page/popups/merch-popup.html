@@ -45,39 +45,76 @@
   </head>
 <body class="bg-[#444444] font-sans p-0 m-0 box-border overflow-x-hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#3e4446]">
   <!-- wrapper   -->
-  <div class="bg-black/50 relative dark:bg-[#181a1b]/50">
+  <div class="bg-black/50 relative before:absolute before:inset-0 before:bg-[url('https://i.ibb.co.com/5WQ43b48/sample-bg-image-compressed.webp')] before:bg-cover before:bg-center before:bg-no-repeat before:content-[''] before:z-[-1] dark:bg-[#181a1b]/50">
     <!-- bg-overlay -->
     <div class="absolute inset-0 w-full h-full bg-black/5 backdrop-blur-[125px] pointer-events-none z-[-1] dark:bg-[#181a1b]/5"></div>
   
     <!-- container -->
-    <div class="flex flex-col min-h-screen">
+    <div class="flex flex-col min-h-screen md:flex-row md:h-screen md:overflow-hidden">
       <!-- close-button -->
       <button class="fixed top-4 right-4 flex justify-center items-center w-8 h-8 z-50 drop-shadow-[0px_30px_-34px_#0000004D] cursor-pointer">
           <img src="https://i.ibb.co.com/DfT6Sg5g/x-close.webp" alt="x close" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(97%)_sepia(1%)_saturate(5636%)_hue-rotate(182deg)_brightness(95%)_contrast(81%)]">
       </button>
 
       <!-- splide-section -->
-      <div class="h-full">
-        <div class="">
-          <section data-main-slider class="splide bg-black/25 dark:bg-[#181a1b]/25" aria-label="Main Gallery">
-              <div class="splide__track">
-                  <ul class="splide__list"></ul>
-              </div>
-          </section>
+      <div class="h-full md:w-1/2 md:flex md:flex-col md:h-screen md:overflow-hidden">
+        <section data-main-slider class="splide bg-black/25 flex-1 min-h-0 dark:bg-[#181a1b]/25" aria-label="Main Gallery">
+            <div class="splide__track h-full">
+                <ul class="splide__list h-full items-center"></ul>
+            </div>
+        </section>
 
-          <section data-thumbs-slider class="splide pt-2" aria-label="Thumbnails">
-              <div class="splide__track">
-                  <ul class="splide__list drop-shadow-[0px_30px_-34px_#0000004D]"></ul>
-              </div>
-          </section>
-        </div>
+        <section data-thumbs-slider class="splide pt-2 shrink-0" aria-label="Thumbnails">
+            <div class="splide__track">
+                <ul class="splide__list drop-shadow-[0px_30px_-34px_#0000004D]"></ul>
+            </div>
+        </section>
 
         <div data-lightGallery class="hidden"></div>
       </div>
 
       <!-- text-section -->
-      <div class="">
-        
+      <div class="flex flex-col p-2 md:w-1/2 md:overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] md:p-6 md:px-10">
+        <div class="flex flex-col gap-6 md:gap-10">
+            <!-- text-section__header -->
+            <div class="flex flex-col gap-6">
+                <!-- title-section -->
+                <section class="flex flex-col gap-4 pt-3">
+                    <!-- tag-link-section -->
+                    <div class="flex items-center gap-1 flex-wrap">
+                        <a href="#" class="text-sm text-[#D0D5DD] hover:underline hover:text-[#07F468] dark:text-[#cfcac4] dark:hover:text-[#23f97b]">Seasonal Fruits</a>
+                        <span class="text-xs leading-normal tracking-[0.01875rem] text-[#D0D5DD] dark:text-[#cfcac4]">,</span>
+                        <a href="#" class="text-sm text-[#D0D5DD] hover:underline hover:text-[#07F468] dark:text-[#cfcac4] dark:hover:text-[#23f97b]">Mostly Eating</a>
+                        <span class="text-xs leading-normal tracking-[0.01875rem] text-[#D0D5DD] dark:text-[#cfcac4]">,</span>
+                        <a href="#" class="text-sm text-[#D0D5DD] hover:underline hover:text-[#07F468] dark:text-[#cfcac4] dark:hover:text-[#23f97b]">Fried Chicken</a>
+                    </div>
+
+                    <h1 class="text-xl leading-normal font-semibold drop-shadow-[0px_0px_10px_#0000001A] text-[#F5F5F4] md:text-3xl md:leading-[2.375rem] dark:text-[#e1dfdb]">[Peach] from my farm-Peach from my farm (Autumn harvest)</h1>
+                </section>
+
+                <!-- tags-container -->
+                <div class="flex items-center gap-2">
+                    <img src="https://i.ibb.co.com/ZRFYW4BD/tag-01.webp" alt="tag 01" class="w-4 h-4 min-w-[1rem]">
+
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <!-- tag -->
+                        <div class="flex justify-center items-center px-2 h-6 bg-[#0C111D] cursor-pointer dark:bg-[#0a0e17]">
+                            <span class="text-sm font-medium text-[#F9FAFB] dark:text-[#dddad5]">Featured</span>
+                        </div>
+
+                        <!-- tag -->
+                        <div class="flex justify-center items-center px-2 h-6 bg-[#0C111D] cursor-pointer dark:bg-[#0a0e17]">
+                            <span class="text-sm font-medium text-[#F9FAFB] dark:text-[#dddad5]">Best Seller</span>
+                        </div>
+
+                        <!-- tag -->
+                        <div class="flex justify-center items-center px-2 h-6 bg-[#0C111D] cursor-pointer dark:bg-[#0a0e17]">
+                            <span class="text-sm font-medium text-[#F9FAFB] dark:text-[#dddad5]">Seasonal Offers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
     </div>
   </div>
@@ -98,7 +135,7 @@
 
         images.forEach((img, i) => {
             mainList.innerHTML += `<li class="splide__slide relative"><img src="${img.src}" alt="Image ${i+1}" class="w-full h-auto block cursor-zoom-in rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.6)]"></li>`;
-            thumbsList.innerHTML += `<li class="splide__slide aspect-square backdrop-blur-[10px] border ![border:1px_solid_transparent_!important;] transition-all duration-300 cursor-pointer [&.is-active]:[border:1px_solid_#F5F5F4_!important;] after:content-[''] after:absolute after:inset-0 after:bg-[#222222]/10 after:pointer-events-none dark:after:bg-[#2b2f31]/10 dark:[&.is-active]:border-[#333739]"><img src="${img.thumb}" alt="Thumb ${i+1}" class="w-full h-full object-cover"></li>`;
+            thumbsList.innerHTML += `<li class="splide__slide aspect-square backdrop-blur-[10px] border ![border:1px_solid_transparent_!important;] transition-all duration-300 cursor-pointer [&.is-active]:[border:1px_solid_#F5F5F4_!important;] after:content-[''] after:absolute after:inset-0 after:bg-[#222222]/10 after:pointer-events-none dark:after:bg-[#2b2f31]/10 dark:[&.is-active]:[border:1px_solid_#333739_!important;]"><img src="${img.thumb}" alt="Thumb ${i+1}" class="w-full h-full object-cover"></li>`;
         });
     }
 
@@ -149,7 +186,7 @@
             dynamicEl: dynamicItems,
             plugins: [lgThumbnail, lgZoom],
             thumbnail: true,
-            thumbMargin: '4',
+            thumbMargin: 0,
             alignThumbnails: 'middle',
             animateThumb: true,
             zoom: true,
@@ -159,77 +196,202 @@
             download: false,
             counter: false,
             controls: false,
+            showCloseIcon: false,  // ✅ Hide default close icon
             addClass: 'lg-custom-thumbs'
         });
 
         return lgInstance;
     }
-function setupParallax(container) {
-    container.addEventListener('lgAfterOpen', () => {
-        const outer = document.querySelector('.lg-outer');
-        if (!outer) return;
 
-        const thumbOuter = outer.querySelector('.lg-thumb-outer');
-        if (thumbOuter) {
-            thumbOuter.classList.add('!bg-transparent')
-        }
+    function hasFinePointer() {
+        return window.matchMedia('(pointer: fine)').matches;
+    }
 
-        const thumbInner = outer.querySelector('.lg-thumb');
-        if (thumbInner) {
-            thumbInner.classList.add('!flex', '!w-full', '!bg-transparent', 'drop-shadow-[0px_30px_-34px_#0000004D]', '!p-1', '!m-0')
-        }
+    function setupParallax(container) {
+        container.addEventListener('lgAfterOpen', () => {
+            const outer = document.querySelector('.lg-outer');
+            if (!outer) return;
 
-        const thumbImageWrappers = outer.querySelectorAll('.lg-thumb-item');
-        if (thumbImageWrappers) {
-            thumbImageWrappers.forEach(wrapper => {
-                wrapper.classList.add('!w-auto', '!h-auto', 'flex-1', 'flex-grow', '!aspect-square', '!mb-0', 'backdrop-blur-[10px]', 'bg-white/20', 'dark:bg-[#181a1b]/20')
-            });
-        }
-
-        const imgWraps = outer.querySelectorAll('.lg-img-wrap');
-        imgWraps.forEach(wrap => {
-            wrap.style.transition = 'transform 0.08s cubic-bezier(0.23, 1, 0.32, 1) !important';
-            wrap.style.willChange = 'transform';
-        });
-
-        const getCurrentImgWrap = () => {
-            return outer.querySelector('.lg-current .lg-img-wrap');
-        };
-
-        const handleMouseMove = (e) => {
-            const imgWrap = getCurrentImgWrap();
-            if (!imgWrap) return;
-
-            const isZoomed = outer.classList.contains('lg-zoomed');
-
-            if (isZoomed) {
-                const rect = outer.getBoundingClientRect();
-                const x = ((e.clientX - rect.left) / rect.width - 0.5) * 80;
-                const y = ((e.clientY - rect.top) / rect.height - 0.5) * 80;
-
-                imgWrap.style.transform = `translate(${x}px, ${y}px)`;
-            } else {
-                imgWrap.style.transform = '';
+            // Hide default toolbar (includes all controls)
+            const toolbar = outer.querySelector('.lg-toolbar');
+            if (toolbar) {
+                toolbar.classList.add('!hidden');
             }
-        };
 
-        // Attach once
-        outer.addEventListener('mousemove', handleMouseMove);
+            const lgImageContainer = outer.querySelector('.lg-content');
+            if(lgImageContainer) {
+                lgImageContainer.classList.add('!bottom-[7.875rem]'); // Move up to make room for custom thumbs on desktop
+            }
 
-        // 🔥 IMPORTANT: Reset transform on slide change
-        container.addEventListener('lgAfterSlide', () => {
-            const imgWrap = getCurrentImgWrap();
-            if (imgWrap) imgWrap.style.transform = '';
+            // Add custom close button
+            const closeBtn = document.createElement('button');
+            closeBtn.className = 'fixed top-6 right-6 flex justify-center items-center w-12 h-12 bg-black/30 backdrop-blur-[10px] rounded-full cursor-pointer z-[10000] dark:bg-[#181a1b]/30';
+            closeBtn.innerHTML = `
+                <img src="https://i.ibb.co.com/DfT6Sg5g/x-close.webp" 
+                     alt="x close" 
+                     class="w-8 h-8 drop-shadow-[0px_0px_8px_#00000080] [filter:brightness(0)_saturate(100%)_invert(97%)_sepia(1%)_saturate(5636%)_hue-rotate(182deg)_brightness(95%)_contrast(81%)]">
+            `;
+            closeBtn.addEventListener('click', () => {
+                if (lgInstance) lgInstance.closeGallery();
+            });
+            outer.appendChild(closeBtn);
+
+            // ✅ CUSTOM CURSOR (only on lightbox image) - UPDATED FOR Z-INDEX & CURSOR OVERRIDE
+            // ✅ ONLY create custom cursor on real mouse devices
+            if (!hasFinePointer()) return;
+
+            const customCursor = document.createElement('div');
+            customCursor.id = 'lg-custom-cursor';
+            customCursor.className = `flex justify-center items-center w-10 h-10 md:w-20 md:h-20 rounded-full bg-black/25 backdrop-blur-[10px] group/cursor dark:bg-[#181a1b]/25 pointer-events-none fixed z-[9999] transition-opacity duration-200`;
+            customCursor.innerHTML = `
+                <img src="https://i.ibb.co.com/TDGYvfTn/zoom-in.webp" alt="zoom in" class="w-6 h-6 md:w-10 md:h-10 zoom-in-icon transition-all duration-200">
+                <img src="https://i.ibb.co.com/jdwwgzf/zoom-out.webp" alt="zoom out" class="w-6 h-6 md:w-10 md:h-10 zoom-out-icon hidden transition-all duration-200">
+            `;
+            outer.appendChild(customCursor);
+
+            // Force-hide ALL default cursors (grab, zoom, etc.) **ONLY** on the image elements
+            const forceNoCursor = () => {
+                const imageAreas = outer.querySelectorAll('.lg-object, .lg-image');
+                imageAreas.forEach(el => {
+                    if (el) el.style.setProperty('cursor', 'none', 'important');
+                });
+            };
+            forceNoCursor();
+
+            // Inject strong cursor override
+            const style = document.createElement('style');
+            style.id = 'lg-cursor-override';
+            style.innerHTML = `
+            @media (pointer: fine) {
+                .lg-outer.lg-grab .lg-item img,
+                .lg-outer.lg-grabbing .lg-item img {
+                    cursor: none !important;
+                }
+            }
+            `;
+            document.head.appendChild(style);
+
+            const lgBackgroundWrapper = document.querySelector('.lg-backdrop');
+            if (lgBackgroundWrapper) {
+                lgBackgroundWrapper.classList.add('after:content-[""]', 'after:absolute', 'after:inset-0', 'after:!bg-black/50', 'after:backdrop-blur-[125px]', 'dark:after:!bg-[#181a1b]/50', 'after:bg-cover', 'after:bg-center', 'after:bg-no-repeat', 'after:z-[1]');
+            }
+
+            function updateBackground() {
+                const currentImg = outer.querySelector('.lg-current img');
+                if (currentImg && lgBackgroundWrapper) {
+                    lgBackgroundWrapper.style.backgroundImage = `url(${currentImg.src})`;
+                }
+            }
+
+            updateBackground();
+
+            const thumbOuter = outer.querySelector('.lg-thumb-outer');
+            if (thumbOuter) {
+                thumbOuter.classList.add('!bg-transparent')
+            }
+
+            const thumbInner = outer.querySelector('.lg-thumb');
+            if (thumbInner) {
+                thumbInner.classList.add('!w-full', '!flex', 'justify-self-center', 'gap-1', '!bg-transparent', 'drop-shadow-[0px_30px_-34px_#0000004D]', '!p-1', '!m-0', '!flex-nowrap', '!overflow-x-hidden', '!transform-none', '!transition-none', 'md:!w-[45rem]', 'md:!p-2', 'md:gap-2')
+            }
+
+            const thumbImageWrappers = outer.querySelectorAll('.lg-thumb-item');
+            if (thumbImageWrappers) {
+                thumbImageWrappers.forEach(wrapper => {
+                    wrapper.classList.add(`!w-[calc((100vw-1.75rem)/${images.length})]`, '!h-auto', '!aspect-square', '!mb-0', 'backdrop-blur-[10px]', 'bg-white/20', '[border:1px_solid_transparent_!important;]', '[&.active]:[border:1px_solid_#F5F5F4_!important;]', `md:!w-[calc((45rem-1.75rem)/${images.length})]`, 'dark:bg-[#181a1b]/20', 'dark:[&.active]:[border:1px_solid_#333739_!important;]')
+                    // Ensure images fill the square wrapper
+                    const img = wrapper.querySelector('img');
+                    if (img) {
+                        img.classList.add('!w-full', '!h-full', '!object-cover');
+                    }
+                });
+            }
+
+            const imgWraps = outer.querySelectorAll('.lg-img-wrap');
+            imgWraps.forEach(wrap => {
+                wrap.style.transition = 'transform 0.08s cubic-bezier(0.23, 1, 0.32, 1) !important';
+                wrap.style.willChange = 'transform';
+            });
+
+            const getCurrentImgWrap = () => {
+                return outer.querySelector('.lg-current .lg-img-wrap');
+            };
+
+            const handleMouseMove = (e) => {
+                const imgWrap = getCurrentImgWrap();
+                if (!imgWrap) return;
+
+                const isZoomed = outer.classList.contains('lg-zoomed');
+
+                if (isZoomed) {
+                    const rect = outer.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 80;
+                    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 80;
+
+                    imgWrap.style.transform = `translate(${x}px, ${y}px)`;
+                } else {
+                    imgWrap.style.transform = '';
+                }
+
+                // ✅ CUSTOM CURSOR: Applied **ONLY** to .lg-object & .lg-image (even during click/drag)
+                const isOverImage = e.target.closest('.lg-object') || e.target.closest('.lg-image');
+                if (isOverImage) {
+                    customCursor.style.left = `${e.clientX}px`;
+                    customCursor.style.top = `${e.clientY}px`;
+                    customCursor.style.transform = 'translate(-50%, -50%)';
+                    customCursor.style.opacity = '1';
+
+                    // Toggle icons
+                    const zoomInIcon = customCursor.querySelector('.zoom-in-icon');
+                    const zoomOutIcon = customCursor.querySelector('.zoom-out-icon');
+                    if (isZoomed) {
+                        zoomInIcon.classList.add('hidden');
+                        zoomOutIcon.classList.remove('hidden');
+                    } else {
+                        zoomInIcon.classList.remove('hidden');
+                        zoomOutIcon.classList.add('hidden');
+                    }
+                } else {
+                    customCursor.style.opacity = '0';
+                }
+            };
+
+            // Attach once
+            outer.addEventListener('mousemove', handleMouseMove);
+
+            // 🔥 IMPORTANT: Reset transform on slide change + fix thumbnail positioning
+            container.addEventListener('lgAfterSlide', () => {
+                const imgWrap = getCurrentImgWrap();
+                if (imgWrap) imgWrap.style.transform = '';
+
+                updateBackground();
+
+                // Fix thumbnail bar from shifting on slide change (due to custom widths overriding LG's calc)
+                const thumb = outer.querySelector('.lg-thumb');
+                if (thumb) {
+                    thumb.style.left = '0px';
+                    thumb.style.transform = 'translateX(0px)';
+                    // Re-apply flex if needed (in case LG overrides)
+                    thumb.style.display = 'flex';
+                }
+
+                // Re-apply cursor override after slide change
+                forceNoCursor();
+            });
+
+            container.addEventListener('lgBeforeClose', () => {
+                outer.removeEventListener('mousemove', handleMouseMove);
+
+                const imgWrap = getCurrentImgWrap();
+                if (imgWrap) imgWrap.style.transform = '';
+
+                // Cleanup custom cursor
+                const cursor = outer.querySelector('#lg-custom-cursor');
+                if (cursor) cursor.remove();
+            }, { once: true });
         });
+    }
 
-        container.addEventListener('lgBeforeClose', () => {
-            outer.removeEventListener('mousemove', handleMouseMove);
-
-            const imgWrap = getCurrentImgWrap();
-            if (imgWrap) imgWrap.style.transform = '';
-        }, { once: true });
-    });
-}
     function setupLightboxTrigger() {
         const mainSlides = document.querySelectorAll('[data-main-slider] .splide__slide');
 
