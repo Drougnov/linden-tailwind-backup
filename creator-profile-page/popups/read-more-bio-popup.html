@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read more (bio) popup</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+</head>
+<body class="bg-black/10 font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]">
+    <!-- template-wrapper -->
+    <div class="flex flex-col min-h-screen relative before:absolute before:inset-0 before:bg-[url('https://i.ibb.co.com/5WQ43b48/sample-bg-image-compressed.webp')] before:bg-cover before:bg-center before:bg-no-repeat before:content-[''] before:z-[-1]">
+        <!-- bg-overlay -->
+        <div class="absolute inset-0 w-full h-full bg-white/5 backdrop-blur-[5px] pointer-events-none z-[-1] dark:bg-[#181a1b]/5"></div>
+    
+        <!-- popup-wrapper -->
+        <div class="absolute bottom-0 left-0 w-full flex flex-col gap-4 p-6 rounded-t-[0.625rem] bg-black/50 backdrop-blur-[25px] sm:p-4 sm:rounded-t-3xl md:top-1/2 md:bottom-[unset] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:w-[45rem] md:min-w-[45rem] md:min-h-[32.4375rem] md:p-6 md:rounded-none dark:bg-[#181a1b]/50">
+            <!-- popup-header -->
+            <div class="flex justify-between items-center gap-2">
+                <h1 class="text-2xl font-semibold text-white dark:bg-[#181a1b]">Yumi’s always eating</h1>
+
+                <button class="flex justify-center items-center w-8 h-8">
+                    <img src="https://i.ibb.co.com/W4TXDR0j/x-close.webp" alt="x close" class="w-full h-full">
+                </button>
+            </div>
+
+            <!-- popup-content -->
+            <div class="flex flex-col">
+<p class="text-base text-white sm:text-sm md:text-base dark:bg-[#181a1b]">I love eating! watch me eat different food every 8pm EST time👅!Here is Jenny’s bio. I love eating!  I  I love eating! watch me eat different food every 8pm EST time👅!Here is Jenny’s bio. I love eating! watch me eat different food every We..Read morelove eating! watch me eat different food every 8pm EST time👅!Here is Jenny’s bio. I love eating!<span class="block mt-4"></span>
+        ‎ • content update weekly!<br>
+        ‎ • 100% real content<br>
+        ‎ • no editing<br>
+        ‎ • Ad free<br>
+        ‎ • content update weekly!<br>
+        ‎ • 100% real content<br>
+        ‎ • no editing<br>
+        ‎ • Ad free<br></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
