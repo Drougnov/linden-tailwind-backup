@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login popup</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Splide CSS/JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+</head>
+<body class="bg-black/10 font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] dark:bg-[#181a1b]/10">
+    <!-- template-wrapper -->
+    <div class="flex flex-col min-h-screen relative before:absolute before:inset-0 before:bg-[url('https://i.ibb.co.com/5WQ43b48/sample-bg-image-compressed.webp')] before:bg-cover before:bg-center before:bg-no-repeat before:content-[''] before:z-[-1]">
+        <!-- bg-overlay -->
+        <div class="absolute inset-0 w-full h-full bg-[#121212]/70 backdrop-blur-[12.5px] pointer-events-none z-[-1] lg:bg-black/70 dark:bg-[#222526]/70 lg:dark:bg-black/70"></div>
+    
+        <!-- close-button -->
+        <button class="fixed top-2 right-2 flex justify-center items-center p-2 bg-black/30 backdrop-blur-[10px] rounded-full z-10 lg:top-6 lg:right-6 dark:bg-[#181a1b]/30">
+            <img src="https://i.ibb.co.com/W4TXDR0j/x-close.webp" alt="x close" class="w-8 h-8 drop-shadow-[0px_0px_8px_#00000080] [filter:brightness(0)_saturate(100%)_invert(99%)_sepia(5%)_saturate(90%)_hue-rotate(189deg)_brightness(115%)_contrast(100%)]">
+        </button>
+        
+        <!-- popup-wrapper -->
+        <div class="flex flex-col gap-10 pb-6 lg:gap-[1.125rem] lg:pb-0">
+            <!-- header-section -->
+            <div class="min-h-screen flex flex-col justify-between pt-6 bg-black/5 lg:pt-16 dark:bg-[#181a1b]/5">
+                <!-- header-top-section -->
+                <div class="flex flex-col gap-8 px-2 lg:gap-[4.375rem]">
+                    <!-- title-section -->
+                    <div class="flex flex-col justify-center items-center gap-2.5">
+                        <!-- avatar-container -->
+                        <div class="flex flex-col justify-center items-center mb-1.5">
+                            <img src="https://i.ibb.co.com/tMwcx1KR/avatar-6.webp" alt="avatar 6" class="w-16 h-16 lg:w-24 lg:h-24">
+
+                            <!-- online-now -->
+                            <div class="flex justify-center items-center gap-2.5 h-[1.375rem] px-2 py-1 -mt-1 border-[0.5px] border-[#14E04D]/50 rounded-[3.125rem] bg-black/30 backdrop-blur-[5px] dark:bg-[#181a1b]/30 dark:border-[#0fa739]/50">
+                                <div class="w-2 h-2 bg-[#14E04D] rounded-full drop-shadow-[0px_0px_10px_#14E04D] dark:bg-[#10b63e]"></div>
+
+                                <span class="text-[0.625rem] leading-[.5rem] font-medium uppercase tracking-[0.03125rem] text-white dark:text-[#e8e6e3]">online NOW!</span>
+                            </div>
+                        </div>
+
+                        <h1 class="text-2xl font-bold text-center text-[#07F468] lg:pt-4 lg:px-4 lg:text-5xl lg:leading-[4rem] dark:text-[#23f97b]">Connect instantly. Call now!</h1>
+                        <p class="text-sm font-medium text-center px-4 text-white lg:pb-4 lg:text-base lg:font-normal dark:text-[#e8e6e3]">“Connect through a call to discuss details faster and efficiently.”</p>
+                    </div> 
+
+                    <!-- button-section -->
+                    <div class="flex flex-col gap-4 lg:flex-row lg:justify-center lg:gap-20 lg:pl-14">
+                        <!-- button -->
+                        <div class="flex justify-between rounded-lg bg-[linear-gradient(180deg,rgba(255,255,255,0.075)_0%,rgba(255,255,255,0.375)_100%)] overflow-hidden group/button lg:w-[26.25rem] lg:h-[6.5rem] lg:rounded-2xl lg:relative lg:overflow-visible">
+                            <!-- button-left -->
+                            <div class="flex pl-2 py-2 lg:pl-14 lg:py-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://i.ibb.co.com/NMpB4TZ/video-call.webp" alt="video call" class="w-16 h-16 min-w-[4rem] group-[.in-call]/button:grayscale lg:w-[6rem] lg:h-[6rem] lg:min-w-[6rem] lg:absolute lg:-left-[3.375rem] lg:bottom-2">
+                                
+                                    <div class="flex flex-col items-start gap-2 lg:gap-1">
+                                        <h3 class="text-lg leading-[1.875rem] font-bold text-white lg:text-2xl lg:font-semibold dark:text-[#e8e6e3]">Video Call</h3>
+
+                                        <div class="flex items-center gap-1">
+                                            <div class="flex items-center gap-0.5">
+                                                <img src="https://i.ibb.co.com/1GRCWdQf/token.webp" alt="token" class="w-6 h-6 min-w-[1.5rem]">
+                                                <span class="text-lg font-semibold text-white dark:text-[#e8e6e3]">5,000</span>
+                                            </div>
+
+                                            <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">every 30 sec.</span>
+                                        </div>
+
+                                        <p class="hidden text-[0.5rem] leading-normal font-medium text-white dark:text-[#e8e6e3]">Minimum Call Time: <span class="hidden lg:inline text-[0.5rem] leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">5 mins</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- button-right -->
+                            <div class="flex flex-col items-end gap-3 lg:gap-0">
+                                <div class="flex justify-center items-center h-[1.875rem] mr-2 mt-2 lg:m-0 lg:h-0">
+                                    <div class="flex justify-center items-center px-1.5 py-0.5 rounded-sm bg-white/5 lg:absolute lg:-top-8 lg:left-10 dark:bg-[#181a1b]/5">
+                                        <span class="inline group-[.in-call]/button:hidden text-xs leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">AVAILABLE NOW!</span>
+                                        <span class="group-[.in-call]/button:inline hidden text-xs leading-normal font-medium text-[#FDB022] dark:text-[#fdb632]">IN A CALL </span>
+                                    </div>
+                                </div>
+
+                                <button class="flex justify-center items-center w-max h-[2.3125rem] pl-[24.31px] pr-3 py-2 [clip-path:polygon(8px_0%,100%_0%,100%_100%,8px_100%,12.31px_50%,0%_50%)] bg-[#07F468] group-[.in-call]/button:bg-[#EAECF0] lg:h-[6.5rem] lg:pl-[58.6px] lg:[clip-path:polygon(24px_0%,100%_0%,100%_100%,24px_100%,34.6px_50%,0%_50%)] lg:pr-6 lg:rounded-r-2xl dark:bg-[#07f468] dark:group-[.in-call]/button:bg-[#222526]">
+                                    <span class="text-base font-bold italic text-[#0C111D] group-[.in-call]/button:text-[#98A2B3] lg:text-xl lg:leading-normal dark:text-[#dbd8d3] dark:group-[.in-call]/button:text-[#b0a993]">CALL</span>
+                                    <img src="https://i.ibb.co.com/RGNXf1Zn/arrow-up-right.webp" alt="arrow up right" class="w-5 h-5 lg:w-8 lg:h-8 group-[.in-call]/button:[filter:brightness(0)_saturate(100%)_invert(67%)_sepia(6%)_saturate(775%)_hue-rotate(179deg)_brightness(94%)_contrast(92%)] dark:group-[.in-call]/button:[filter:brightness(0)_saturate(100%)_invert(76%)_sepia(12%)_saturate(417%)_hue-rotate(8deg)_brightness(88%)_contrast(86%)]">
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- button -->
+                        <div class="flex justify-between rounded-lg bg-[linear-gradient(180deg,rgba(255,255,255,0.075)_0%,rgba(255,255,255,0.375)_100%)] overflow-hidden group/button lg:w-[26.25rem] lg:h-[6.5rem] lg:rounded-2xl lg:relative lg:overflow-visible">
+                            <!-- button-left -->
+                            <div class="flex pl-2 py-2 lg:pl-14 lg:py-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://i.ibb.co.com/Nnjyvf5r/audio-call.webp" alt="audio call" class="w-16 h-16 min-w-[4rem] group-[.in-call]/button:grayscale lg:w-[6.875rem] lg:h-[6.875rem] lg:min-w-[6.875rem] lg:absolute lg:-left-16 lg:bottom-2">
+                                
+                                    <div class="flex flex-col items-start gap-2 lg:gap-1">
+                                        <h3 class="text-lg leading-[1.875rem] font-bold text-white lg:text-2xl lg:font-semibold dark:text-[#e8e6e3]">Audio Call</h3>
+
+                                        <div class="flex items-center gap-1">
+                                            <div class="flex items-center gap-0.5">
+                                                <img src="https://i.ibb.co.com/1GRCWdQf/token.webp" alt="token" class="w-6 h-6 min-w-[1.5rem]">
+                                                <span class="text-lg font-semibold text-white dark:text-[#e8e6e3]">5,000</span>
+                                            </div>
+
+                                            <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">every 30 sec.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- button-right -->
+                            <div class="flex flex-col items-end gap-3 lg:gap-0">
+                                <div class="flex justify-center items-center h-[1.875rem] mr-2 mt-2 lg:m-0 lg:h-0">
+                                    <div class="flex justify-center items-center px-1.5 py-0.5 rounded-sm bg-white/5 lg:absolute lg:-top-8 lg:left-10 dark:bg-[#181a1b]/5">
+                                        <span class="inline group-[.in-call]/button:hidden text-xs leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">AVAILABLE NOW!</span>
+                                        <span class="group-[.in-call]/button:inline hidden text-xs leading-normal font-medium text-[#FDB022] dark:text-[#fdb632]">IN A CALL </span>
+                                    </div>
+                                </div>
+
+                                <button class="flex justify-center items-center w-max h-[2.3125rem] pl-[24.31px] pr-3 py-2 [clip-path:polygon(8px_0%,100%_0%,100%_100%,8px_100%,12.31px_50%,0%_50%)] bg-[#07F468] group-[.in-call]/button:bg-[#EAECF0] lg:h-[6.5rem] lg:pl-[58.6px] lg:[clip-path:polygon(24px_0%,100%_0%,100%_100%,24px_100%,34.6px_50%,0%_50%)] lg:pr-6 lg:rounded-r-2xl dark:bg-[#07f468] dark:group-[.in-call]/button:bg-[#222526]">
+                                    <span class="text-base font-bold italic text-[#0C111D] group-[.in-call]/button:text-[#98A2B3] lg:text-xl lg:leading-normal dark:text-[#dbd8d3] dark:group-[.in-call]/button:text-[#b0a993]">CALL</span>
+                                    <img src="https://i.ibb.co.com/RGNXf1Zn/arrow-up-right.webp" alt="arrow up right" class="w-5 h-5 lg:w-8 lg:h-8 group-[.in-call]/button:[filter:brightness(0)_saturate(100%)_invert(67%)_sepia(6%)_saturate(775%)_hue-rotate(179deg)_brightness(94%)_contrast(92%)] dark:group-[.in-call]/button:[filter:brightness(0)_saturate(100%)_invert(76%)_sepia(12%)_saturate(417%)_hue-rotate(8deg)_brightness(88%)_contrast(86%)]">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- header-bottom-section -->
+                <div class="flex flex-col mt-4 lg:flex-row lg:mt-6">
+                    <!-- book-session -->
+                    <div class="flex items-center gap-4 px-2 py-3 bg-[linear-gradient(180deg,rgba(255,0,102,0)_0%,rgba(255,0,102,0.3)_100%)] flex-1 lg:flex-col lg:pt-2 lg:pb-6">
+                        <img src="https://i.ibb.co.com/HDK7zN8r/book-session.webp" alt="book session" class="w-[2.8125rem] h-12 min-w-[2.8125rem] lg:w-[7.0625rem] lg:h-[7.5rem]">
+
+                        <div class="flex flex-col justify-center items-center gap-2 grow lg:gap-4">
+                            <h3 class="text-base font-semibold text-white lg:text-xl lg:text-normal dark:text-[#e8e6e3]">In a hurry? Book a session for later</h3>
+                        
+                            <button class="flex justify-between items-center w-max pl-4 rounded-[3.125rem] overflow-hidden bg-[#FF0066] dark:bg-[#cc0052]">
+                                <span class="text-xs leading-normal font-semibold italic pr-2 text-white lg:text-base lg:pr-3 dark:text-[#e8e6e3]">SEE OPTIONS</span>
+                            
+                                <div class="flex justify-center items-center h-full grow pl-[12.65px] pr-2 py-2 [clip-path:polygon(4px_0%,100%_0%,100%_100%,4px_100%,8.65px_50%,0%_50%)] bg-[#0C111D] lg:pl-[21.31px] lg:[clip-path:polygon(8px_0%,100%_0%,100%_100%,8px_100%,13.31px_50%,0%_50%)] dark:bg-[#162036]">
+                                    <img src="https://i.ibb.co.com/hxnTW1ys/chevron-down-double.webp" alt="chevron down double" class="w-4 h-4 lg:w-6 lg:h-6">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- scheduled-call-section -->
+            <section class="flex flex-col gap-4 py-4 lg:gap-8 lg:pt-16 lg:pb-0 lg:mb-[1.875rem]">
+                <h2 class="inline lg:hidden text-xl leading-normal font-medium text-center text-white dark:text-[#e8e6e3]">Scheduled Call</h2>
+
+                <div class="hidden lg:flex justify-center items-center gap-1.5">
+                    <h2 class="text-2xl font-medium text-white dark:text-[#e8e6e3]">Schedule call with</h2>
+                    <h2 class="text-2xl font-bold text-white dark:text-[#e8e6e3]">Princess Carrot Pop</h2>
+                </div>
+
+                <!-- splide-wrapper -->
+                <div data-splide-wrapper class="flex flex-col gap-4">
+                    <div data-card-slider data-fixed-width="21.4375rem" data-fixed-height="31.25rem" class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list lg:!flex lg:flex-row lg:justify-center lg:items-start lg:gap-6">
+                                <li class="splide__slide flex w-[21.4375rem] h-[31.25rem] rounded-3xl overflow-hidden bg-[url('https://i.ibb.co.com/vxMgZvJD/hero-bg-image-1-1.webp')] bg-cover bg-center bg-no-repeat lg:w-[25rem] lg:h-[41rem]">
+                                    <div class="flex flex-col justify-between w-full h-full bg-[linear-gradient(180deg,rgba(12,17,29,0)_25%,#0C111D_100%)]">
+                                        <div class="flex flex-col grow relative bg-black/15 dark:bg-[#181a1b]/15">
+                                            <!-- blur-wrapper -->
+                                            <div class="absolute inset-0 w-full h-full backdrop-blur-[5px] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)] pointer-events-none z-[0]"></div>
+
+                                            <!-- event-type -->
+                                            <div class="absolute top-0 left-0 flex justify-center items-center rounded-br pl-4 pr-1.5 py-1 h-max z-[2] bg-[#22CCEE] dark:bg-[#0e98b4]">
+                                                <span class="text-sm font-bold text-[#0C111D] dark:text-[#dbd8d3]">1 on 1 call</span>
+                                            </div>
+
+                                            <!-- card-top-section -->
+                                            <div class="flex flex-col justify-end gap-4 px-4 pt-4 pb-2 grow bg-[#0C111D]/20 z-[1] dark:bg-[#162036]/20">
+                                                <div class="flex flex-col gap-4 drop-shadow-[0_2px_16px_#000000BF,0_0_16px_#22CCEE33]">
+                                                    <h3 class="text-xl leading-normal font-medium text-white lg:text-3xl lg:leading-[2.375rem] dark:text-[#e8e6e3]">High School Life Simulator</h3>
+                                                
+                                                    <div class="flex items-center gap-2">
+                                                        <img src="https://i.ibb.co.com/1GRCWdQf/token.webp" alt="token" class="w-8 h-8">
+
+                                                        <div class="flex items-center gap-[0.3125rem]">
+                                                            <span class="text-2xl font-semibold text-white lg:text-4xl lg:leading-[2.75rem] dark:text-[#e8e6e3]">500 <span class="text-base font-semibold text-white lg:text-2xl dark:text-[#e8e6e3]">Tokens</span> <span class="text-xs leading-normal font-normal text-white lg:text-sm dark:text-[#e8e6e3]">/15 minutes</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- card-bottom-section -->
+                                            <div class="flex flex-col gap-4 px-4 pt-2 pb-4 z-[1] bg-[#0C111D]/20 dark:bg-[#162036]/20">
+                                                <p class="text-base line-clamp-[2] text-white lg:line-clamp-[5] dark:text-[#e8e6e3]">Looking for a more personalized conversation? In this private 1-on-1 call, we’ll focus on meaningful discussion tailored to your interests. Ask questions, share ideas, and enjoy a comfortable space designed for real-time connection and engaging interaction.</p>
+                                            
+                                                <div class="flex flex-col gap-1 drop-shadow-[0px_2px_16px_#000000BF,0px_0px_8px_#00000040]">
+                                                    <div class="flex justify-between items-center gap-4 ">
+                                                        <span class="text-sm truncate text-white dark:text-[#e8e6e3]">Record the session</span>
+                                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">+50 Tokens</span>
+                                                    </div>
+
+                                                    <div class="flex justify-between items-center gap-4 ">
+                                                        <span class="text-sm truncate text-white dark:text-[#e8e6e3]">Personalized call title</span>
+                                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">+50 Tokens</span>
+                                                    </div>
+
+                                                    <div class="flex justify-between items-center gap-4 ">
+                                                        <span class="text-sm truncate text-white dark:text-[#e8e6e3]">Custom name preference</span>
+                                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">+50 Tokens</span>
+                                                    </div>
+
+                                                    <div class="flex justify-between items-center gap-4 ">
+                                                        <span class="text-sm truncate text-white dark:text-[#e8e6e3]">Friendly interaction style</span>
+                                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">+50 Tokens</span>
+                                                    </div>
+
+                                                    <div class="flex justify-between items-center gap-4 ">
+                                                        <span class="text-sm truncate text-white dark:text-[#e8e6e3]">Video call option</span>
+                                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">+500 Tokens</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- button-container -->
+                                        <div class="flex h-[4.5rem] rounded-b-3xl bg-[#0C111D] dark:bg-[#162036]">
+                                            <div class="flex flex-col justify-center items-center gap-0.5 pl-2 pr-8 py-2 grow [clip-path:polygon(calc(100%-16px)_0%,100%_50%,calc(100%-23.95px)_50%,calc(100%-16px)_100%,0%_100%,0%_0%)] bg-[#22CCEE] dark:bg-[#0e98b4]">
+                                                <h3 class="text-base font-bold italic text-[#0C111D] lg:text-xl lg:leading-normal dark:text-[#dbd8d3]">BOOK NOW</h3>
+
+                                                <div class="flex items-center gap-1 ">
+                                                    <span class="text-xs leading-normal opacity-90 text-[#0C111D] lg:text-sm dark:text-[#dbd8d3]">Next available time: </span>
+                                                
+                                                    <span class="text-xs leading-normal font-semibold text-[#0C111D] lg:text-sm dark:text-[#dbd8d3]">Today @5pm</span>
+                                                </div>
+                                            </div>
+
+                                            <button class="flex justify-center items-center pl-4 pr-6 py-2 bg-[#0C111D] dark:bg-[#162036]">
+                                                <img src="https://i.ibb.co.com/RGNXf1Zn/arrow-up-right.webp" alt="arrow up right" class="w-8 h-8 [filter:brightness(0)_saturate(100%)_invert(83%)_sepia(34%)_saturate(5188%)_hue-rotate(150deg)_brightness(96%)_contrast(94%)]">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="splide__slide flex w-[21.4375rem] h-[31.25rem] rounded-3xl overflow-hidden bg-[url('https://i.ibb.co.com/j9b5wvYV/hero-bg-image-2-2.webp')] bg-cover bg-center bg-no-repeat lg:w-[25rem] lg:h-[41rem]">
+                                    <div class="flex flex-col justify-between w-full h-full bg-[linear-gradient(180deg,rgba(12,17,29,0)_25%,#0C111D_100%)]">
+                                        <div class="flex flex-col grow relative bg-black/15 dark:bg-[#181a1b]/15">
+                                            <!-- blur-wrapper -->
+                                            <div class="absolute inset-0 w-full h-full backdrop-blur-[5px] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)] pointer-events-none z-[0]"></div>
+
+                                            <!-- event-type -->
+                                            <div class="absolute top-0 left-0 flex justify-center items-center rounded-br pl-4 pr-1.5 py-1 h-max z-[2] bg-[#22CCEE] dark:bg-[#0e98b4]">
+                                                <span class="text-sm font-bold text-[#0C111D] dark:text-[#dbd8d3]">1 on 1 call</span>
+                                            </div>
+
+                                            <!-- card-top-section -->
+                                            <div class="flex flex-col justify-end gap-4 px-4 pt-4 pb-2 grow bg-[#0C111D]/20 z-[1] dark:bg-[#162036]/20">
+                                                <div class="flex flex-col gap-4 drop-shadow-[0_2px_16px_#000000BF,0_0_16px_#22CCEE33]">
+                                                    <h3 class="text-xl leading-normal font-medium text-white lg:text-3xl lg:leading-[2.375rem] dark:text-[#e8e6e3]">Maid Cafe Simulator</h3>
+                                                
+                                                    <div class="flex items-center gap-2">
+                                                        <img src="https://i.ibb.co.com/1GRCWdQf/token.webp" alt="token" class="w-8 h-8">
+
+                                                        <div class="flex items-center gap-[0.3125rem]">
+                                                            <span class="text-2xl font-semibold text-white lg:text-4xl lg:leading-[2.75rem] dark:text-[#e8e6e3]">500 <span class="text-base font-semibold text-white lg:text-2xl dark:text-[#e8e6e3]">Tokens</span> <span class="text-xs leading-normal font-normal text-white lg:text-sm dark:text-[#e8e6e3]">/15 minutes</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- card-bottom-section -->
+                                            <div class="flex flex-col gap-4 px-4 pt-2 pb-4 z-[1] bg-[#0C111D]/20 dark:bg-[#162036]/20">
+                                                <p class="text-base line-clamp-[2] text-white lg:line-clamp-[5] dark:text-[#e8e6e3]">Looking for a more personalized conversation? In this private 1-on-1 call, we’ll focus on meaningful discussion tailored to your interests. Ask questions, share ideas, and enjoy a comfortable space designed for real-time connection and engaging interaction.</p>
+                                            
+                                                <div class="flex flex-col gap-1 drop-shadow-[0px_2px_16px_#000000BF,0px_0px_8px_#00000040]">
+                                                    <div class="flex justify-between items-center gap-4 ">
+                                                        <span class="text-sm truncate text-white dark:text-[#e8e6e3]">Record the session</span>
+                                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">+50 Tokens</span>
+                                                    </div>
+
+                                                    <div class="flex justify-between items-center gap-4 ">
+                                                        <span class="text-sm truncate text-white dark:text-[#e8e6e3]">Personalized call title</span>
+                                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">+50 Tokens</span>
+                                                    </div>
+
+                                                    <div class="flex justify-between items-center gap-4 ">
+                                                        <span class="text-sm truncate text-white dark:text-[#e8e6e3]">Custom name preference</span>
+                                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">+50 Tokens</span>
+                                                    </div>
+
+                                                    <div class="flex justify-between items-center gap-4 ">
+                                                        <span class="text-sm truncate text-white dark:text-[#e8e6e3]">Friendly interaction style</span>
+                                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">+50 Tokens</span>
+                                                    </div>
+
+                                                    <div class="flex justify-between items-center gap-4 ">
+                                                        <span class="text-sm truncate text-white dark:text-[#e8e6e3]">Video call option</span>
+                                                        <span class="text-sm font-semibold text-white dark:text-[#e8e6e3]">+500 Tokens</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- button-container -->
+                                        <div class="flex h-[4.5rem] rounded-b-3xl bg-[#0C111D] dark:bg-[#162036]">
+                                            <div class="flex flex-col justify-center items-center gap-0.5 pl-2 pr-8 py-2 grow [clip-path:polygon(calc(100%-16px)_0%,100%_50%,calc(100%-23.95px)_50%,calc(100%-16px)_100%,0%_100%,0%_0%)] bg-[#22CCEE] dark:bg-[#0e98b4]">
+                                                <h3 class="text-base font-bold italic text-[#0C111D] lg:text-xl lg:leading-normal dark:text-[#dbd8d3]">BOOK NOW</h3>
+
+                                                <div class="flex items-center gap-1 ">
+                                                    <span class="text-xs leading-normal opacity-90 text-[#0C111D] lg:text-sm dark:text-[#dbd8d3]">Next available time: </span>
+                                                
+                                                    <span class="text-xs leading-normal font-semibold text-[#0C111D] lg:text-sm dark:text-[#dbd8d3]">Today @5pm</span>
+                                                </div>
+                                            </div>
+
+                                            <button class="flex justify-center items-center pl-4 pr-6 py-2 bg-[#0C111D] dark:bg-[#162036]">
+                                                <img src="https://i.ibb.co.com/RGNXf1Zn/arrow-up-right.webp" alt="arrow up right" class="w-8 h-8 [filter:brightness(0)_saturate(100%)_invert(83%)_sepia(34%)_saturate(5188%)_hue-rotate(150deg)_brightness(96%)_contrast(94%)]">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- arrow-buttons -->
+                    <div class="flex lg:hidden justify-center items-center gap-3 slider-arrows">
+                        <button data-prev class="flex justify-center items-center p-2 rounded-full backdrop-blur-[10px] bg-white/10 dark:bg-[#181a1b]/10 cursor-pointer">
+                            <img src="https://i.ibb.co.com/Gvkq58F5/chevron-left.webp" alt="chevron-left" class="w-8 h-8 drop-shadow-[0px_0px_8px_#00000080] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(93deg)_brightness(103%)_contrast(103%)]">
+                        </button>
+
+                        <button data-next class="flex justify-center items-center p-2 rounded-full backdrop-blur-[10px] bg-white/10 dark:bg-[#181a1b]/10 cursor-pointer">
+                            <img src="https://i.ibb.co.com/Gvkq58F5/chevron-left.webp" alt="chevron-left" class="w-8 h-8 drop-shadow-[0px_0px_8px_#00000080] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(93deg)_brightness(103%)_contrast(103%)] rotate-180">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- live-events-section -->
+            <section class="flex flex-col gap-4 py-4 lg:gap-8 lg:pt-0 lg:pb-0">
+                <h2 class="inline text-xl leading-normal font-medium text-center text-white lg:text-2xl lg:font-medium dark:text-[#e8e6e3]">Live Events</h2>
+
+                <!-- splide-wrapper -->
+                <div data-splide-wrapper class="flex flex-col gap-4">
+                    <div data-card-slider data-fixed-width="21.4375rem" data-fixed-height="31.25rem" class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list lg:!flex lg:flex-row lg:justify-center lg:items-start lg:gap-6">
+                                <li class="splide__slide flex w-[21.4375rem] h-[31.25rem] rounded-3xl overflow-hidden bg-[url('https://i.ibb.co.com/vxMgZvJD/hero-bg-image-1-1.webp')] bg-cover bg-center bg-no-repeat lg:w-[25rem] lg:h-[38rem]">
+                                    <div class="flex flex-col justify-between w-full h-full bg-[linear-gradient(180deg,rgba(12,17,29,0)_25%,#0C111D_100%)]">
+                                        <div class="flex flex-col grow relative bg-black/15 dark:bg-[#181a1b]/15">
+                                            <!-- blur-wrapper -->
+                                            <div class="absolute inset-0 w-full h-full backdrop-blur-[5px] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)] pointer-events-none z-[0]"></div>
+
+                                            <!-- event-type -->
+                                            <div class="absolute top-0 left-0 flex justify-center items-center rounded-br pl-4 pr-1.5 py-1 h-max z-[2] bg-[#FF0066] dark:bg-[#cc0052]">
+                                                <span class="text-sm font-bold text-[#0C111D] dark:text-[#dbd8d3]">Group Event</span>
+                                            </div>
+
+                                            <!-- card-top-section -->
+                                            <div class="flex flex-col justify-end gap-4 px-4 pt-4 pb-2 grow bg-[linear-gradient(180deg,rgba(255,4,100,0.03)_0%,rgba(255,4,100,0.3)_100%)] z-[1]">
+                                                <div class="flex flex-col gap-4 drop-shadow-[0_2px_16px_#000000BF,0_0_16px_#22CCEE33]">
+                                                    <h3 class="text-xl leading-normal font-medium text-white dark:text-[#e8e6e3]">J&B’s Cooking Show</h3>
+                                                
+                                                    <div class="flex items-center gap-2">
+                                                        <img src="https://i.ibb.co.com/1GRCWdQf/token.webp" alt="token" class="w-8 h-8">
+
+                                                        <div class="flex items-center gap-[0.3125rem]">
+                                                            <span class="text-2xl font-semibold text-white dark:text-[#e8e6e3]">500 <span class="text-base font-semibold text-white dark:text-[#e8e6e3]">Tokens</span> <span class="text-xs leading-normal font-normal text-white dark:text-[#e8e6e3]">minimum contribution</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- card-bottom-section -->
+                                            <div class="flex flex-col gap-2 px-4 pt-2 pb-4 z-[1] bg-[#FF0464]/30 dark:bg-[#ca004d]/30">
+                                                <!-- models-container -->
+                                                <div class="flex items-center gap-1 flex-wrap drop-shadow-[0px_2px_16px_#000000BF] mb-2">
+                                                    <!-- model -->
+                                                    <div class="flex items-center gap-1.5">
+                                                        <img src="https://i.ibb.co.com/tMwcx1KR/avatar-6.webp" alt="avatar 6" class="w-6 h-6 min-w-[1.5rem]">
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">Princess Carrot Pop</span>
+                                                        
+                                                            <!-- host -->
+                                                            <div class="flex justify-center items-center px-1.5 rounded-[3.125rem] bg-[#FF0066] dark:bg-[#cc0052]">
+                                                                <span class="text-sm font-medium text-white dark:text-[#e8e6e3]">Host</span>
+                                                            </div>
+
+                                                            <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="h-2.5"/>
+                                                        </div>
+                                                    </div>
+
+                                                    <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">,</span>
+
+                                                    <!-- model -->
+                                                    <div class="flex items-center gap-1.5">
+                                                        <img src="https://i.ibb.co.com/35W4r1KX/Vector-user.webp" alt="Vector-user" class="w-6 h-6 min-w-[1.5rem]">
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">De La Queen</span>
+
+                                                            <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="h-2.5"/>
+                                                        </div>
+                                                    </div>
+
+                                                    <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">,</span>
+
+                                                    <!-- model -->
+                                                    <div class="flex items-center gap-1.5">
+                                                        <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="Frame-1410098582" class="w-6 h-6 min-w-[1.5rem]">
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">Buff Bunny</span>
+
+                                                            <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="h-2.5"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <p class="text-base leading-3 line-clamp-[1] drop-shadow-[0px_2px_16px_#000000BF] text-white dark:text-[#e8e6e3]">Join us for a spectacular live stream event featuring engaging hosts sharing their skills and insights in real time. Enjoy interactive discussions, live demonstrations, and a welcoming atmosphere that keeps you entertained throughout the session. Ask questions, share your thoughts, and be part of a truly interactive experience.</p>
+
+                                                <div class="flex flex-col gap-4">
+                                                    <div class="flex items-start gap-4">
+                                                        <img src="https://i.ibb.co.com/j92Lj05r/clock.webp" alt="clock" class="w-6 h-6 min-w-[1.5rem]">
+                                                    
+                                                        <div class="flex flex-col gap-2">
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">Wednesday, August 24, 2025</span>
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">9:30pm-10:30pm</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-start gap-4">
+                                                        <img src="https://i.ibb.co.com/8DBbYnKK/users-03.webp" alt="users 03" class="w-6 h-6 min-w-[1.5rem]">
+                                                    
+                                                        <div class="flex flex-col gap-2">
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">30 fans already joined</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- button-container -->
+                                        <div class="flex h-[4.5rem] rounded-b-3xl bg-[#0C111D] dark:bg-[#162036]">
+                                            <div class="flex flex-col justify-center items-center gap-0.5 pl-2 pr-8 py-2 grow [clip-path:polygon(calc(100%-16px)_0%,100%_50%,calc(100%-23.95px)_50%,calc(100%-16px)_100%,0%_100%,0%_0%)] bg-[#FF0066] dark:bg-[#cc0052]">
+                                                <h3 class="text-base font-bold italic text-white dark:text-[#e8e6e3]">BOOK NOW</h3>
+
+                                                <div class="flex items-center gap-1 ">
+                                                    <span class="text-xs leading-normal opacity-90 text-white dark:text-[#e8e6e3]">Contribute </span>
+                                                
+                                                    <span class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">500 Tokens or more</span>
+                                                </div>
+                                            </div>
+
+                                            <button class="flex justify-center items-center pl-4 pr-6 py-2 bg-[#0C111D] dark:bg-[#162036]">
+                                                <img src="https://i.ibb.co.com/RGNXf1Zn/arrow-up-right.webp" alt="arrow up right" class="w-8 h-8 [filter:brightness(0)_saturate(100%)_invert(18%)_sepia(92%)_saturate(6113%)_hue-rotate(330deg)_brightness(99%)_contrast(104%)]">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="splide__slide flex w-[21.4375rem] h-[31.25rem] rounded-3xl overflow-hidden bg-[url('https://i.ibb.co.com/j9b5wvYV/hero-bg-image-2-2.webp')] bg-cover bg-center bg-no-repeat lg:w-[25rem] lg:h-[38rem]">
+                                    <div class="flex flex-col justify-between w-full h-full bg-[linear-gradient(180deg,rgba(12,17,29,0)_25%,#0C111D_100%)]">
+                                        <div class="flex flex-col grow relative bg-black/15 dark:bg-[#181a1b]/15">
+                                            <!-- blur-wrapper -->
+                                            <div class="absolute inset-0 w-full h-full backdrop-blur-[5px] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)] pointer-events-none z-[0]"></div>
+
+                                            <!-- event-type -->
+                                            <div class="absolute top-0 left-0 flex justify-center items-center rounded-br pl-4 pr-1.5 py-1 h-max z-[2] bg-[#FF0066] dark:bg-[#cc0052]">
+                                                <span class="text-sm font-bold text-[#0C111D] dark:text-[#dbd8d3]">Group Event</span>
+                                            </div>
+
+                                            <!-- card-top-section -->
+                                            <div class="flex flex-col justify-end gap-4 px-4 pt-4 pb-2 grow bg-[linear-gradient(180deg,rgba(255,4,100,0.03)_0%,rgba(255,4,100,0.3)_100%)] z-[1]">
+                                                <div class="flex flex-col gap-4 drop-shadow-[0_2px_16px_#000000BF,0_0_16px_#22CCEE33]">
+                                                    <h3 class="text-xl leading-normal font-medium text-white dark:text-[#e8e6e3]">J&B’s Cooking Show</h3>
+                                                
+                                                    <div class="flex items-center gap-2">
+                                                        <img src="https://i.ibb.co.com/1GRCWdQf/token.webp" alt="token" class="w-8 h-8">
+
+                                                        <div class="flex items-center gap-[0.3125rem]">
+                                                            <span class="text-2xl font-semibold text-white dark:text-[#e8e6e3]">500 <span class="text-base font-semibold text-white dark:text-[#e8e6e3]">Tokens</span> <span class="text-xs leading-normal font-normal text-white dark:text-[#e8e6e3]">minimum contribution</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- card-bottom-section -->
+                                            <div class="flex flex-col gap-2 px-4 pt-2 pb-4 z-[1] bg-[#FF0464]/30 dark:bg-[#ca004d]/30">
+                                                <!-- models-container -->
+                                                <div class="flex items-center gap-1 flex-wrap drop-shadow-[0px_2px_16px_#000000BF] mb-2">
+                                                    <!-- model -->
+                                                    <div class="flex items-center gap-1.5">
+                                                        <img src="https://i.ibb.co.com/tMwcx1KR/avatar-6.webp" alt="avatar 6" class="w-6 h-6 min-w-[1.5rem]">
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">Princess Carrot Pop</span>
+                                                        
+                                                            <!-- host -->
+                                                            <div class="flex justify-center items-center px-1.5 rounded-[3.125rem] bg-[#FF0066] dark:bg-[#cc0052]">
+                                                                <span class="text-sm font-medium text-white dark:text-[#e8e6e3]">Host</span>
+                                                            </div>
+
+                                                            <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="h-2.5"/>
+                                                        </div>
+                                                    </div>
+
+                                                    <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">,</span>
+
+                                                    <!-- model -->
+                                                    <div class="flex items-center gap-1.5">
+                                                        <img src="https://i.ibb.co.com/35W4r1KX/Vector-user.webp" alt="Vector-user" class="w-6 h-6 min-w-[1.5rem]">
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">De La Queen</span>
+
+                                                            <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="h-2.5"/>
+                                                        </div>
+                                                    </div>
+
+                                                    <span class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">,</span>
+
+                                                    <!-- model -->
+                                                    <div class="flex items-center gap-1.5">
+                                                        <img src="https://i.ibb.co.com/67B4Cz6d/Frame-1410098582.webp" alt="Frame-1410098582" class="w-6 h-6 min-w-[1.5rem]">
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">Buff Bunny</span>
+
+                                                            <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="h-2.5"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <p class="text-base leading-3 line-clamp-[1] drop-shadow-[0px_2px_16px_#000000BF] text-white dark:text-[#e8e6e3]">Join us for a spectacular live stream event featuring engaging hosts sharing their skills and insights in real time. Enjoy interactive discussions, live demonstrations, and a welcoming atmosphere that keeps you entertained throughout the session. Ask questions, share your thoughts, and be part of a truly interactive experience.</p>
+
+                                                <div class="flex flex-col gap-4">
+                                                    <div class="flex items-start gap-4">
+                                                        <img src="https://i.ibb.co.com/j92Lj05r/clock.webp" alt="clock" class="w-6 h-6 min-w-[1.5rem]">
+                                                    
+                                                        <div class="flex flex-col gap-2">
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">Wednesday, August 24, 2025</span>
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">9:30pm-10:30pm</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-start gap-4">
+                                                        <img src="https://i.ibb.co.com/8DBbYnKK/users-03.webp" alt="users 03" class="w-6 h-6 min-w-[1.5rem]">
+                                                    
+                                                        <div class="flex flex-col gap-2">
+                                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">30 fans already joined</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- button-container -->
+                                        <div class="flex h-[4.5rem] rounded-b-3xl bg-[#0C111D] dark:bg-[#162036]">
+                                            <div class="flex flex-col justify-center items-center gap-0.5 pl-2 pr-8 py-2 grow [clip-path:polygon(calc(100%-16px)_0%,100%_50%,calc(100%-23.95px)_50%,calc(100%-16px)_100%,0%_100%,0%_0%)] bg-[#FF0066] dark:bg-[#cc0052]">
+                                                <h3 class="text-base font-bold italic text-white dark:text-[#e8e6e3]">BOOK NOW</h3>
+
+                                                <div class="flex items-center gap-1 ">
+                                                    <span class="text-xs leading-normal opacity-90 text-white dark:text-[#e8e6e3]">Contribute </span>
+                                                
+                                                    <span class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">500 Tokens or more</span>
+                                                </div>
+                                            </div>
+
+                                            <button class="flex justify-center items-center pl-4 pr-6 py-2 bg-[#0C111D] dark:bg-[#162036]">
+                                                <img src="https://i.ibb.co.com/RGNXf1Zn/arrow-up-right.webp" alt="arrow up right" class="w-8 h-8 [filter:brightness(0)_saturate(100%)_invert(18%)_sepia(92%)_saturate(6113%)_hue-rotate(330deg)_brightness(99%)_contrast(104%)]">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- arrow-buttons -->
+                    <div class="flex lg:hidden justify-center items-center gap-3 slider-arrows">
+                        <button data-prev class="flex justify-center items-center p-2 rounded-full backdrop-blur-[10px] bg-white/10 dark:bg-[#181a1b]/10 cursor-pointer">
+                            <img src="https://i.ibb.co.com/Gvkq58F5/chevron-left.webp" alt="chevron-left" class="w-8 h-8 drop-shadow-[0px_0px_8px_#00000080] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(93deg)_brightness(103%)_contrast(103%)]">
+                        </button>
+
+                        <button data-next class="flex justify-center items-center p-2 rounded-full backdrop-blur-[10px] bg-white/10 dark:bg-[#181a1b]/10 cursor-pointer">
+                            <img src="https://i.ibb.co.com/Gvkq58F5/chevron-left.webp" alt="chevron-left" class="w-8 h-8 drop-shadow-[0px_0px_8px_#00000080] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(93deg)_brightness(103%)_contrast(103%)] rotate-180">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- back-to-top-button -->
+            <button data-back-to-top-button class="flex flex-col justify-center items-center gap-[1.47px] w-14 h-14 mx-auto backdrop-blur-[7.37px] rounded-full bg-black/30 lg:gap-0.5 lg:w-[4.75rem] lg:h-[4.75rem] dark:bg-[#181a1b]/30">
+                <img src="https://i.ibb.co.com/kgjwwFjM/upload-03.webp" alt="upload 03" class="w-[1.105rem] h-[1.105rem] drop-shadow-[0px_0px_8px_#00000080] lg:w-6 lg:h-6">
+                <span class="text-xs leading-normal text-center text-white lg:text-[0.656rem] lg:leading-[1.125rem] dark:text-[#e8e6e3]">Top</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- handle card sliders -->
+    <script>
+        document.querySelectorAll('[data-splide-wrapper]').forEach(wrapper => {
+            const slider = wrapper.querySelector('[data-card-slider]');
+            if (!slider) return;
+
+            // read per-slider config
+            const fixedWidth  = slider.dataset.fixedWidth  || '21rem';
+            const fixedHeight = slider.dataset.fixedHeight || '30rem';
+
+            // create splide
+            const splide = new Splide(slider, {
+                type: 'loop',
+                pagination: false,
+                arrows: false,
+                focus: 'center',
+                gap: '1.5rem',
+                fixedWidth,
+                fixedHeight,
+                mediaQuery: 'min',
+                start: 2,
+
+                breakpoints: {
+                    1010: {
+                        destroy: true,
+                    },
+                },
+            });
+
+            splide.mount();
+
+            // buttons scoped to THIS wrapper only
+            const prevBtn = wrapper.querySelector('[data-prev]');
+            const nextBtn = wrapper.querySelector('[data-next]');
+
+            prevBtn?.addEventListener('click', () => {
+                if (!splide.destroyed) splide.go('<');
+            });
+
+            nextBtn?.addEventListener('click', () => {
+                if (!splide.destroyed) splide.go('>');
+            });
+
+        });
+    </script>
+
+    <!-- handle back-to-top button -->
+    <script>
+        const backToTopBtn = document.querySelector('[data-back-to-top-button]');
+
+        backToTopBtn?.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
