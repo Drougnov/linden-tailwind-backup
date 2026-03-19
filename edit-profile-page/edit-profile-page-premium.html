@@ -696,18 +696,170 @@
                     <section class="flex flex-col gap-4">
                         <h3 class="text-sm font-bold text-[#667085] dark:text-[#9e9589]">Share Settings</h3>
 
-                        <div class="flex items-center gap-2">
-                            <!-- toggle-switch-container  -->
-                            <label class="relative inline-block w-9 h-[1.28125rem] cursor-pointer">
-                                <input type="checkbox" class="peer h-0 w-0 opacity-0" id="post-to-x" />
-                                <span class="absolute inset-0 cursor-pointer rounded-[0.75rem] bg-[#98a2b380] transition-all duration-100 ease-in-out peer-checked:bg-[#0c111d] dark:bg-[#434c5b80] dark:peer-checked:bg-[#0a0e17]"></span>
-                                <span class="absolute left-[0.125rem] top-1/2 h-4 w-4 -translate-y-1/2 transform rounded-full bg-white shadow-[0_1px_3px_0_rgba(16,24,40,0.1),0_1px_2px_0_rgba(16,24,40,0.06)] transition-all duration-100 ease-in-out peer-checked:translate-x-[1rem] dark:bg-[#181a1b]"></span>
-                            </label>
+                        <div data-settings-wrapper class="flex flex-col gap-4 min-[600px]:flex-row lg:gap-6">
+                            <!-- settings-section -->
+                            <div class="flex flex-col gap-4 min-[600px]:flex-1">
+                                <!-- toggle-switch-wrapper -->
+                                <div class="flex items-center gap-2">
+                                    <!-- toggle-switch-container  -->
+                                    <label class="relative inline-block w-9 h-[1.28125rem] cursor-pointer">
+                                        <input data-post-to-x-toggle-switch type="checkbox" class="peer h-0 w-0 opacity-0" id="post-to-x" />
+                                        <span class="absolute inset-0 cursor-pointer rounded-[0.75rem] bg-[#98a2b380] transition-all duration-100 ease-in-out peer-checked:bg-[#0c111d] dark:bg-[#434c5b80] dark:peer-checked:bg-[#0a0e17]"></span>
+                                        <span class="absolute left-[0.125rem] top-1/2 h-4 w-4 -translate-y-1/2 transform rounded-full bg-white shadow-[0_1px_3px_0_rgba(16,24,40,0.1),0_1px_2px_0_rgba(16,24,40,0.06)] transition-all duration-100 ease-in-out peer-checked:translate-x-[1rem] dark:bg-[#181a1b]"></span>
+                                    </label>
 
-                            <label for="post-to-x" class="cursor-pointer">
-                                <span class="text-base font-medium text-black dark:text-[#e8e6e3]">Post to X when you receive tips</span>
-                            </label>
+                                    <label for="post-to-x" class="cursor-pointer">
+                                        <span class="text-base font-medium text-black dark:text-[#e8e6e3]">Post to X when you receive tips</span>
+                                    </label>
+                                </div>
+
+                                <!-- form-section -->
+                                <div data-post-to-x-form-section class="hidden flex flex-col gap-4">
+                                    <!-- post-message-section -->
+                                    <section class="flex flex-col gap-2">
+                                        <h3 class="text-sm font-semibold text-[#667085] dark:text-[#9e9589]">Post Message (Leave blank to use system default message.)</h3>
+                                        
+                                        <!-- input-container -->
+                                        <div class="flex flex-col gap-1.5">
+                                            <!-- input-field -->
+                                            <div class="w-full flex items-center gap-2 bg-white/30 border-b border-[#D0D5DD] rounded-t-sm shadow-[0px_1px_2px_0px_#1018280D] dark:bg-[#181a1b4d] dark:border-[#3b4043]">
+                                                <textarea placeholder="I got some lovely tips from @username..." class="px-3.5 py-2.5 text-base bg-transparent border-none outline-none w-full min-w-0 text-[#0C111D] placeholder:text-[#667085] dark:text-[#dbd8d3] dark:placeholder:text-[#9e9689]"></textarea>
+                                            </div>
+
+                                            <span class="text-sm text-[#475467] dark:text-[#b1aba0]">66/72 characters</span>
+                                        </div>
+
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex justify-center items-center w-6 h-6">
+                                                <input data-show-username type="checkbox" name="save" id="show-username" class="appearance-none bg-[white] dark:bg-[#2d3748] border border-[#D0D5DD] dark:border-[#4a5568] rounded-[4px] w-4 min-w-4 h-4 checked:accent-[#07f468] checked:bg-[#07f468] dark:checked:bg-[#0aff78] checked:border-[#07f468] dark:checked:border-[#0aff78] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[0.3rem] checked:after:top-[0.15rem] checked:after:w-1 checked:after:h-2 checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-[black] dark:checked:after:border-[white] checked:after:border-b-[2px] checked:after:border-r-[2px] checked:after:rotate-45 checked:after:box-border cursor-pointer">
+                                            </div>
+
+                                            <div class="flex items-center gap-1">
+                                                <label for="show-username" class="text-sm text-[#0C111D] dark:text-[#dbd8d3] cursor-pointer">Show fan’s username on your post</label>
+                                            
+                                                <div class="relative inline-flex overflow-hidden cursor-pointer group hover:overflow-visible">
+                                                    <!-- Icon -->
+                                                    <img src="https://i.ibb.co/DPgMH5GG/svgviewer-png-output-15.webp" alt="tooltip icon" class="w-4 h-4 [filter:brightness(0)_saturate(100%)_invert(45%)_sepia(12%)_saturate(597%)_hue-rotate(183deg)_brightness(96%)_contrast(100%)]">
+
+                                                    <!-- Tooltip -->
+                                                    <div class="absolute z-[2] flex flex-col items-start text-center min-w-[18.75rem] md:w-max
+                                                        opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                                                        text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg
+                                                        bg-[#101828] dark:bg-[rgba(14,19,32,1)] dark:text-[#e8e6e3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
+                                                        -right-2 bottom-full -translate-y-2 sm:bottom-[unset] sm:top-full sm:left-1/2 sm:-translate-x-1/2 sm:translate-y-2
+                                                        before:content-[''] before:absolute before:w-0 before:h-0 before:right-2.5 before:bottom-[-5px] before:border-[6px] before:border-b-0 before:border-l-transparent before:border-r-transparent before:border-t-[rgba(16,24,40)]
+                                                        sm:before:left-1/2 sm:before:top-[-5px] sm:before:-translate-x-1/2 sm:before:bottom-[unset] sm:before:border-[6px] sm:before:border-t-0 sm:before:border-b-[rgba(16,24,40)] sm:before:border-l-transparent sm:before:border-r-transparent"
+                                                    >
+                                                        <p class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">Fan who tips anonymously will be recognized as '@anonymous'.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- attach-media-section -->
+                                    <section class="flex flex-col gap-2">
+                                        <h3 class="text-sm font-semibold text-[#667085] dark:text-[#9e9589]">Attach Media</h3>
+
+                                        <!-- round-checkbox-input-container -->
+                                        <div class="flex flex-col gap-2">
+                                            <!-- Choice -->
+                                            <div class="flex items-center gap-2 relative">
+                                                <input type="radio" id="upload-media" checked name="dash-radio-group" class="hidden peer" />
+
+                                                <label
+                                                    for="upload-media"
+                                                    class="relative pl-8 cursor-pointer text-base font-medium
+                                                    text-black dark:text-[#e8e6e3]
+                                                    before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+                                                    before:w-5 before:h-5 before:rounded-full before:border
+                                                    before:border-[#d0d5dd] dark:before:border-[#3b4043]
+                                                    before:bg-[#ffffff] dark:before:bg-[#181a1b]
+                                                    peer-checked:before:bg-[#000000] dark:peer-checked:before:bg-[#000000]
+                                                    after:content-[''] after:absolute after:left-[0.4375rem] after:top-1/2 after:-translate-y-1/2
+                                                    after:w-[0.375rem] after:h-[0.375rem] after:rounded-full
+                                                    after:bg-[#07f468] dark:after:bg-[#07f468]
+                                                    after:hidden peer-checked:after:block"
+                                                >
+                                                    Upload media
+                                                </label>
+                                            </div>
+
+                                            <!-- Choice -->
+                                            <div class="flex items-center gap-2 relative">
+                                                <input type="radio" id="no-media" name="dash-radio-group" class="hidden peer" />
+
+                                                <label
+                                                    for="no-media"
+                                                    class="relative pl-8 cursor-pointer text-base font-medium
+                                                    text-black dark:text-[#e8e6e3]
+                                                    before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+                                                    before:w-5 before:h-5 before:rounded-full before:border
+                                                    before:border-[#d0d5dd] dark:before:border-[#3b4043]
+                                                    before:bg-[#ffffff] dark:before:bg-[#181a1b]
+                                                    peer-checked:before:bg-[#000000] dark:peer-checked:before:bg-[#000000]
+                                                    after:content-[''] after:absolute after:left-[0.4375rem] after:top-1/2 after:-translate-y-1/2
+                                                    after:w-[0.375rem] after:h-[0.375rem] after:rounded-full
+                                                    after:bg-[#07f468] dark:after:bg-[#07f468]
+                                                    after:hidden peer-checked:after:block"
+                                                >
+                                                    Do not attach media
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div data-upload-media-container class="hidden flex flex-col">
+                                            <!-- upload-container -->
+                                            <div data-media-upload="" class="cursor-pointer border-2 border-transparent bg-[rgba(0,0,0,0.05)] rounded-xl px-6 py-4 h-[12.5rem] w-full flex flex-col items-center justify-center hover:border-[#0c111d] dark:bg-[#181a1b]/5 dark:hover:border-[#857c6d] hover:bg-[rgba(0,0,0,0.10)] dark:hover:bg-[rgba(0,0,0,0.05)] group/upload sm:h-[13.3125rem] md:h-[12.5rem] lg:h-[13.3125rem]">
+                                                <div data-media-upload-input-wrap="" class="gap-3 w-full flex flex-col justify-center items-center self-stretch border-2 border-dashed border-transparent">
+                                                    <div class="flex justify-center items-center w-10 h-10 rounded-lg shadow-[0px_1px_2px_0px_#1018280D] bg-[#07F468] group-hover/upload:bg-[#0C111D] dark:bg-[#06c454] dark:group-hover/upload:bg-[#162036]">
+                                                        <img src="https://i.ibb.co.com/9JDWMW1/upload-03.webp" alt="upload 03" class="w-5 h-5 [filter:brightness(0)] group-hover/upload:[filter:brightness(0)_saturate(100%)_invert(65%)_sepia(22%)_saturate(4910%)_hue-rotate(97deg)_brightness(113%)_contrast(94%)]">
+                                                    </div>
+                                                    <div class="flex flex-col gap-1 text-center">
+                                                        <p class="text-sm text-[#475467] dark:text-[#b1aba0]"><span class="text-sm font-semibold text-center text-[#0C111D] dark:text-[#dbd8d3]">Click to upload</span> or drag and drop image or video files here</p>
+                                                        <p class="text-xs leading-normal text-[#475467] dark:text-[#b1aba0]">MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG, PNG or JPG (max. 15MB)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!-- post-preview-section -->
+                            <div data-post-to-x-post-preview class="hidden flex flex-col gap-2 w-full min-[600px]:w-[17.625rem] min-[600px]:shrink-0 lg:w-[22.5625rem]">
+                                <h3 class="text-xs leading-normal text-right text-[#667085] dark:text-[#9e9689]">POST PREVIEW</h3>
+
+                                <div class="flex gap-2 px-2 py-2 rounded-[0.3125rem] bg-white/70 w-ful min-[600px]:min-h-[6.3125rem] min-[600px]:max-h-[14.3125rem] lg:max-h-[unset] dark:bg-[#181a1bb3]">
+                                    <!-- avatar-container -->
+                                    <div class="w-6 h-6 rounded-md overflow-hidden min-w-[1.5rem]">
+                                        <img src="https://i.ibb.co.com/70sHrpv/featured-media-bg.webp" alt="featured-media-bg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- post-container -->
+                                    <div class="flex flex-col gap-1 flex-1">
+                                        <!-- post creator info -->
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex items-center gap-1">
+                                                <h4 class="text-xs leading-normal font-semibold text-[#0C111D] truncate dark:text-[#dbd8d3]">Jelly FISH</h4>
+                                                <img src="https://i.ibb.co.com/nMhY8CpS/svgviewer-png-output-22.webp" alt="verified-tick" class="w-3 h-3"/>
+                                            </div>
+
+                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9689]">@jellyf1sh</span>
+
+                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9689]">Jul 31</span>
+                                        </div>
+
+                                        <p class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">I got some lovely tips from fans...<span class="hidden" data-preview-tip-info>@manogoes4eva tipped 400 tokens</span></p>
+                                    
+                                        <div data-preview-media-container class="flex justify-center items-center rounded-[0.625rem] overflow-hidden bg-[#F2F6FC] w-full h-[10.9375rem] min-[600px]:h-[8.9375rem] lg:h-[11.9375rem] dark:bg-[#1d1f20]">
+                                            <img src="https://i.ibb.co.com/Kx9QDc68/auth-bg-compressed.webp" alt="auth-bg-compressed" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </section>
                 </section>
 
@@ -886,16 +1038,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!-- handle cancle/save button visibility based on input value change -->
+<!-- handle cancel/save button visibility based on input value change -->
 <script>
 /**
  * Changed state handling for edit profile form.
- * Supports: text inputs, textareas, dropdowns
+ * Supports: text inputs, textareas, dropdowns, checkboxes, radios, toggle switches.
  * Shows cancel/save buttons and hides right nav icons when any field changes.
- * Cancel restores all fields to their initial values; save captures new baseline.
+ * Cancel restores all fields to their initial states; save captures new baseline.
  */
 document.addEventListener('DOMContentLoaded', function() {
-  // update custom dropdowns trigger when hidden select changes
+  // Update custom dropdowns trigger when hidden select changes
   document.querySelectorAll('.dash-real-select').forEach(realSelect => {
     realSelect.addEventListener('change', function(e) {
       const select = this;
@@ -935,19 +1087,27 @@ document.addEventListener('DOMContentLoaded', function() {
   // All input, select, and textarea fields inside the container
   const formFields = container.querySelectorAll('input, select, textarea');
 
-  // Store initial values (Map: element → initial value)
-  let initialValues = new Map();
+  // Store initial states (for checkboxes/radios we store checked; for others we store value)
+  let initialStates = new Map();
 
-  function captureInitialValues() {
-    initialValues.clear();
+  function captureInitialStates() {
+    initialStates.clear();
     formFields.forEach(field => {
-      initialValues.set(field, field.value);
+      if (field.type === 'checkbox' || field.type === 'radio') {
+        initialStates.set(field, field.checked);
+      } else {
+        initialStates.set(field, field.value);
+      }
     });
   }
 
   function isUpdated() {
-    for (let [field, initialVal] of initialValues.entries()) {
-      if (field.value !== initialVal) return true;
+    for (let [field, initialState] of initialStates.entries()) {
+      if (field.type === 'checkbox' || field.type === 'radio') {
+        if (field.checked !== initialState) return true;
+      } else {
+        if (field.value !== initialState) return true;
+      }
     }
     return false;
   }
@@ -968,39 +1128,132 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Attach listeners to all fields (input events for live updates, change for final selection)
   formFields.forEach(field => {
-    console.log(field)
     field.addEventListener('input', handleChange);
     field.addEventListener('change', handleChange);
   });
 
-  // Cancel button: revert all fields to initial values
+  // Cancel button: revert all fields to initial states
   cancelButtons.forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
-      for (let [field, initialVal] of initialValues.entries()) {
-        if (field.value !== initialVal) {
-          field.value = initialVal;
-          // Dispatch change event so custom dropdowns update
-          field.dispatchEvent(new Event('change', { bubbles: true }));
+      for (let [field, initialState] of initialStates.entries()) {
+        if (field.type === 'checkbox' || field.type === 'radio') {
+          if (field.checked !== initialState) {
+            field.checked = initialState;
+            // Dispatch change event so custom dropdowns and other listeners update
+            field.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+        } else {
+          if (field.value !== initialState) {
+            field.value = initialState;
+            field.dispatchEvent(new Event('change', { bubbles: true }));
+          }
         }
       }
       updateVisibility();
     });
   });
 
-  // Save button: accept current values as new baseline
+  // Save button: accept current states as new baseline
   saveButtons.forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
-      captureInitialValues();
+      captureInitialStates();
       updateVisibility();
     });
   });
 
   // Initialize
-  captureInitialValues();
+  captureInitialStates();
   updateVisibility();
 });
+</script>
+
+<!-- handle Ppost to X Toggle, Username Checkbox & Media Upload Controller -->
+<script>
+  /**
+   *    When main toggle (Post to X) is ON → Show form section, post preview section.
+   *    When "Show fan’s username" checkbox is checked (and main toggle ON) → Show the user info span inside preview.
+   *    When "Upload media" radio is selected → Show the upload container AND the preview media container.
+   *    When "Do not attach media" is selected → Hide the upload container AND the preview media container.
+   */
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector('[data-post-to-x-toggle-switch]');
+    const formSection = document.querySelector('[data-post-to-x-form-section]');
+    const previewSection = document.querySelector('[data-post-to-x-post-preview]');
+    const tipSpan = document.querySelector('[data-preview-tip-info]');
+
+    const showUsernameCheckbox = document.getElementById('show-username');
+
+    const uploadRadio = document.getElementById('upload-media');
+    const noMediaRadio = document.getElementById('no-media');
+    const uploadContainer = document.querySelector('[data-upload-media-container]');
+    const previewMediaContainer = document.querySelector('[data-preview-media-container]');
+
+    // Update tip span visibility based on checkbox
+    function updateTipSpan() {
+      if (!tipSpan || !showUsernameCheckbox) return;
+      // Show span only if checkbox is checked, otherwise hide
+      tipSpan.classList.toggle('hidden', !showUsernameCheckbox.checked);
+    }
+
+    // Update visibility of main sections
+    function updateMainToggle(show) {
+      // Show/hide the entire form and preview sections
+      formSection.classList.toggle('hidden', !show);
+      previewSection.classList.toggle('hidden', !show);
+
+      if (show) {
+        updateTipSpan();
+      }
+    }
+
+    // Update upload container AND preview media container based on radio selection
+    function updateUploadAndPreviewMedia() {
+      // Determine if "Upload media" is selected
+      const showMedia = uploadRadio && uploadRadio.checked;
+
+      // Toggle upload container
+      if (uploadContainer) {
+        uploadContainer.classList.toggle('hidden', !showMedia);
+      }
+
+      // Toggle preview media container
+      if (previewMediaContainer) {
+        previewMediaContainer.classList.toggle('hidden', !showMedia);
+      }
+    }
+
+    // Initial state setup (runs once when page loads)
+    if (toggle && formSection && previewSection) {
+      updateMainToggle(toggle.checked);
+    }
+    updateUploadAndPreviewMedia();
+
+    // Event listeners for user interactions
+    if (toggle) {
+      toggle.addEventListener('change', function(e) {
+        updateMainToggle(e.target.checked);
+      });
+    }
+
+    if (showUsernameCheckbox) {
+      showUsernameCheckbox.addEventListener('change', function() {
+        // Only update the tip span if the preview is currently visible (main toggle ON)
+        if (previewSection && !previewSection.classList.contains('hidden')) {
+          updateTipSpan();
+        }
+      });
+    }
+
+    if (uploadRadio) {
+      uploadRadio.addEventListener('change', updateUploadAndPreviewMedia);
+    }
+    if (noMediaRadio) {
+      noMediaRadio.addEventListener('change', updateUploadAndPreviewMedia);
+    }
+  });
 </script>
 </body>
 </html>
