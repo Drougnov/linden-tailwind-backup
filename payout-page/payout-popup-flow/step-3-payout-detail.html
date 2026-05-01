@@ -801,8 +801,31 @@
                 <!-- popup-container -->
                 <div class="flex flex-col h-full shadow-[0px_0px_10px_-34px_#0000001A] [background:linear-gradient(0deg,rgba(255,255,255,0.9),rgba(255,255,255,0.9)),linear-gradient(180deg,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0)_100%)] before:inset-0 before:content-[''] before:absolute before:bg-[url('https://i.ibb.co.com/6Rz2GJd8/payout-popup-gradient.png')] before:bg-cover before:bg-center before:bg-no-repeat before:[opacity:12.5%] before:z-[0] before:pointer-events-none">
                     <!-- progress-bar -->
-                    <div class="hidden overflow-hidden w-full h-2 bg-[#EAECF0] dark:bg-[#222526] z-[1]">
-                      <div class="w-0 h-full bg-[#0c111d] dark:bg-[#0a0e17]"></div>
+                    <div class="overflow-hidden w-full h-2 bg-[#EAECF0] dark:bg-[#222526] z-[1]">
+                      <div class="w-[74.656%] h-full bg-[#0c111d] dark:bg-[#0a0e17]"></div>
+                    </div>
+
+                    <!-- alert-container -->
+                    <div data-alert-container class="hidden w-full border-b-[0.5px] border-[#EAECF0] relative dark:border-[#222526]">
+                        <div class="w-[3px] block bg-[#FF4405] dark:bg-[#c93300]"></div>
+                        <div class="flex gap-4 px-4 py-3.5 flex-1 min-w-0 min-h-0 shadow-[0px_0px_8px_0px_#FF44051A] [background:linear-gradient(0deg,rgba(255,255,255,0.9),rgba(255,255,255))] before:absolute before:content-[''] before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:from-[rgba(255,68,5,0.1)] before:to-[rgba(255,255,255,0.9)] relative">
+                            <div class="relative w-full flex items-center gap-2.5">
+                                <img src="https://i.ibb.co.com/chj0VK84/alert-orange-full.webp" alt="alert orange full" class="w-6 min-w-[1.5rem] shrink-0 [filter:brightness(0)_saturate(100%)_invert(41%)_sepia(57%)_saturate(6607%)_hue-rotate(358deg)_brightness(101%)_contrast(100%)]">
+
+                                <div class="flex flex-col w-full flex-1">
+                                    <div class="flex justify-between items-start gap-1">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="text-sm font-semibold text-[#FF4405] dark:text-[#ff571e]">Something isn’t right with the information you provided, please double check.</h3>
+                                        </div>
+
+                                        <!-- close-button -->
+                                        <button class="hidden justify-center items-center w-6 h-6">
+                                            <img src="https://i.ibb.co.com/DfT6Sg5g/x-close.webp" alt="x close" class="w-6 h-6 min-w-[1.5rem] [filter:brightness(0)_saturate(100%)_invert(92%)_sepia(8%)_saturate(217%)_hue-rotate(178deg)_brightness(97%)_contrast(82%)]">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- main-section -->
@@ -817,90 +840,70 @@
                         </div>
 
                         <!-- back-button -->
-                        <button class="hidden justify-center items-center gap-1 w-max">
+                        <button class="flex justify-center items-center gap-1 w-max">
                           <img src="https://i.ibb.co.com/tPzh072N/chevron-left.webp" alt="chevron left" class="w-4 h-4 [filter:brightness(0)_saturate(100%)_invert(46%)_sepia(8%)_saturate(955%)_hue-rotate(183deg)_brightness(91%)_contrast(88%)]">
                           <span class="text-sm leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9589]">Back</span>
                         </button>
 
+                        <h3 class="text-lg font-medium text-[#0C111D] dark:text-[#dbd8d3]">Payout Details</h3>
+
                         <!-- form-container -->
                         <div class="flex flex-col gap-6">
-                            <!-- dropdown-section -->
-                            <div class="flex flex-col gap-4">
-                                <h3 class="text-base font-medium text-[#344054] dark:text-[#bdb8af]">Where would you like to send money?</h3>
-                            
-                                <!-- select-dropdown -->
-                                <div class="select-dropdown relative flex w-full">
-                                    <div class="dropdown-select w-full cursor-pointer border-none">
-                                        <div class="payout-select__trigger w-full h-[3.5rem] flex justify-between items-center gap-2 p-4 border-b-[1.5px] border-[#D0D5DD] bg-white/75 dark:bg-[#181a1b]/75 dark:border-[#3b4043]">
-                                            <div class="flex items-center gap-2">
-                                                <img src="https://i.ibb.co.com/21zPFPz7/globe.webp" alt="globe" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(78%)_sepia(17%)_saturate(268%)_hue-rotate(179deg)_brightness(81%)_contrast(86%)]">
-                                                <span data-selected-dropdown-text class="text-base flex-grow text-balance text-[#667085] dark:text-[#9e9589]">Select country</span>
-                                            </div>
-                                            <img class="select-arrow h-5 w-5 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(78%)_sepia(17%)_saturate(268%)_hue-rotate(179deg)_brightness(81%)_contrast(86%)]" src="https://i.ibb.co.com/jkt6FN7G/chevron-down.webp" alt="chevron down" />
-                                        </div>
-                                        <div class="payout-options-container max-md:!fixed max-md:!flex max-md:!flex-col max-md:!justify-end max-md:!inset-0 max-md:!bg-white/60 max-md:!backdrop-blur-[2.5px] max-md:!shadow-[0px_-2px_4px_0px_#0000001A] absolute left-auto right-0 top-[calc(100%+1.5px)] z-[9999] w-full origin-top scale-95 opacity-0 shadow-[0px_0px_10px_-34px_#0000001A] transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] h-0 overflow-hidden pointer-events-none">
-                                            <div class="flex flex-col gap-2 max-md:gap-1 max-md:shadow-[0px_0px_12px_0px_#00000033] bg-white dark:bg-[#181a1b]">
-                                                <div class="flex items-center gap-2 p-4 border-b border-[#D0D5DD]/50 max-md:py-3 dark:border-[#3b4043]/50">
-                                                    <img src="https://i.ibb.co.com/TxLHy0g9/Search.webp" alt="Search" class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(25%)_sepia(27%)_saturate(547%)_hue-rotate(179deg)_brightness(89%)_contrast(94%)]">
-                                                    <input data-search-country type="text" placeholder="Search country" class="w-full text-base text-[#667085] dark:text-[#9e9589] bg-transparent focus:outline-none">
-                                                </div>
-                                                <div class="flex flex-col gap-2 max-md:gap-1 max-md:h-[10.75rem] h-[15.5rem] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]">
-                                                    <div data-value="australia" class="option flex items-center justify-center gap-[0.625rem] cursor-pointer group [&.selected]:bg-[#F2F4F7] hover:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
-                                                        <div class="option-inner-container flex items-center flex-1 gap-2 p-4 max-md:py-2">
-                                                            <span class="text-base font-medium text-[#0C111D] text-balance dark:text-[#dbd8d3]">Australia</span>
-                                                        </div>
-                                                    </div>
-                                                    <div data-value="china" class="option flex items-center justify-center gap-[0.625rem] cursor-pointer group [&.selected]:bg-[#F2F4F7] hover:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
-                                                        <div class="option-inner-container flex items-center flex-1 gap-2 p-4 max-md:py-2">
-                                                            <span class="text-base font-medium text-[#0C111D] text-balance dark:text-[#dbd8d3]">China</span>
-                                                        </div>
-                                                    </div>
-                                                    <div data-value="uk" class="option flex items-center justify-center gap-[0.625rem] cursor-pointer group [&.selected]:bg-[#F2F4F7] hover:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
-                                                        <div class="option-inner-container flex items-center flex-1 gap-2 p-4 max-md:py-2">
-                                                            <span class="text-base font-medium text-[#0C111D] text-balance dark:text-[#dbd8d3]">UK</span>
-                                                        </div>
-                                                    </div>
-                                                    <div data-value="usa" class="option flex items-center justify-center gap-[0.625rem] cursor-pointer group [&.selected]:bg-[#F2F4F7] hover:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
-                                                        <div class="option-inner-container flex items-center flex-1 gap-2 p-4 max-md:py-2">
-                                                            <span class="text-base font-medium text-[#0C111D] text-balance dark:text-[#dbd8d3]">USA</span>
-                                                        </div>
-                                                    </div>
-                                                    <div data-value="singapore" class="option flex items-center justify-center gap-[0.625rem] cursor-pointer group [&.selected]:bg-[#F2F4F7] hover:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
-                                                        <div class="option-inner-container flex items-center flex-1 gap-2 p-4 max-md:py-2">
-                                                            <span class="text-base font-medium text-[#0C111D] text-balance dark:text-[#dbd8d3]">Singapore</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <select class="payout-real-select hidden" name="dropdown-select" required>
-                                        <option value="" disabled selected>Select country</option>
-                                        <option value="australia">Australia</option>
-                                        <option value="china">China</option>
-                                        <option value="uk">UK</option>
-                                        <option value="usa">USA</option>
-                                        <option value="singapore">Singapore</option>
-                                    </select>
-                                </div>
-                            </div>
-
                             <!-- input-section -->
                             <div class="flex flex-col gap-4">
-                                <h3 class="text-base font-medium text-[#344054] dark:text-[#bdb8af]">Enter the payout amount:</h3>
+                                <h3 class="xl:hidden text-base font-medium text-[#344054] dark:text-[#bdb8af]">Enter the necessary information for this transaction:</h3>
+                                <h3 class="hidden xl:inline text-base font-medium text-[#344054] dark:text-[#bdb8af]">Please provide the following information for your transaction:</h3>
 
                                 <!-- input-wrapper -->
-                                <div data-payout-amount-input-wrapper class="flex flex-col gap-1">
-                                    <!-- input-field -->
-                                    <div class="flex items-center gap-2 p-4 border-b-[1.5px] border-[#D0D5DD] bg-white/75 dark:bg-[#181a1b]/75 dark:border-[#3b4043]">
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-base font-medium text-[#0C111D] dark:text-[#dbd8d3]">USD$</span>
-
-                                            <input data-payout-amount-input type="text" placeholder="00.00" class="text-base placeholder:text-[#98A2B3] text-[#0C111D] bg-transparent focus:outline-none dark:placeholder:text-[#b0a993] dark:text-[#dbd8d3]">
+                                <div class="flex flex-col gap-4">
+                                    <div data-bank-swift-bic-code class="flex flex-col gap-1.5 group/input-container">
+                                        <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Bank Swift/BIC Code</label>
+                                    
+                                        <!-- input-field -->
+                                        <div class="flex items-center gap-2 px-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                            <div class="flex items-center gap-2 w-full">
+                                                <input type="text" placeholder="Enter BIC/SWIFT code" value="123456789012" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                            
+                                                <div class="relative inline-flex overflow-hidden w-4 h-4 cursor-pointer group hover:overflow-visible">
+                                                    <!-- Icon -->
+                                                    <img src="https://i.ibb.co.com/Hp1tznKk/help-circle.webp" alt="help circle" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(65%)_sepia(19%)_saturate(239%)_hue-rotate(179deg)_brightness(96%)_contrast(90%)]">
+                                                    <!-- Tooltip -->
+                                                    <div class="absolute z-[2] flex flex-col items-start text-center min-w-[18.75rem] md:w-max
+                                                        opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                                                        text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg
+                                                        bg-[#101828] dark:bg-[rgba(14,19,32,1)] dark:text-[#e8e6e3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
+                                                        -right-2 bottom-full -translate-y-2
+                                                        before:content-[''] before:absolute before:w-0 before:h-0 before:right-2.5 before:bottom-[-5px] before:border-[6px] before:border-b-0 before:border-l-transparent before:border-r-transparent before:border-t-[rgba(16,24,40)]"
+                                                    >
+                                                        <p class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">Enter Bank Swift/BIC Code</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <span data-payout-amount-input-error class="hidden text-xs leading-normal text-[#FF4405] dark:text-[#ff571e]">Insufficient Balance</span>
+                                        <!-- error-text -->
+                                        <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                    </div>
+                                </div>
+
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-4">
+                                    <div data-bank-account-number class="flex flex-col gap-1.5 group/input-container">
+                                        <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Bank Account Number or IBAN</label>
+                                    
+                                        <!-- input-field -->
+                                        <div class="flex items-center gap-2 px-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                            <div class="flex items-center gap-2 w-full">
+                                                <input type="text" placeholder="Enter Bank Account Number or IBAN" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                            </div>
+                                        </div>
+
+                                        <span class="xl:hidden group-[.input-error]/input-container:!hidden text-sm text-[#475467] dark:text-[#b1aaa0]">If you're unsure whether an intermediary bank is required for your international transfer, please contact your bank for further information.</span>
+                                        <span class="hidden xl:inline group-[.input-error]/input-container:!hidden text-sm text-[#475467] dark:text-[#b1aaa0]">If you are not sure if you need an intermediary Bank for international transfer, please contact your bank for future information.</span>
+                                        
+                                        <!-- error-text -->
+                                        <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -908,16 +911,25 @@
 
                     <!-- total-section -->
                     <div data-total-section class="flex flex-col flex-none z-[1] min-h-[7.5rem] shadow-[0px_0px_8px_0px_#00000026] relative before:inset-0 before:content-[''] before:absolute before:bg-[url('https://i.ibb.co.com/6Rz2GJd8/payout-popup-gradient.png')] before:bg-cover before:bg-center before:bg-no-repeat before:z-[-1] before:pointer-events-none group/total-section">
-                      <div class="flex justify-between items-end flex-grow w-full h-full bg-black/80 dark:bg-[#181a1b]/80">
+                      <div class="flex justify-between items-end flex-grow w-full h-full bg-white/50 dark:bg-[#181a1b]/80">
+                        
                         <div class="flex items-start h-full px-2 py-4 md:pl-6">
                           <!-- available-balance -->
-                          <div class="flex flex-col gap-1 md:gap-2">
+                          <div class="hidden flex-col gap-1 md:gap-2">
                             <h3 class="text-base font-medium text-white dark:text-[#e8e6e3]">Available Balance</h3>
                             <span data-available-balance-text class="text-3xl leading-[2.375rem] font-semibold text-white md:text-4xl md:leading-[2.75rem] md:tracking-[-0.045rem] dark:text-[#e8e6e3]">USD$30054.40</span>
                           </div>
+
+                          <!-- payout-summary -->
+                          <div class="flex flex-col gap-1 md:gap-2">
+                            <h3 class="text-base font-medium text-[#0C111D] dark:text-[#dbd8d3]">YOUR FINAL PAYOUT <span class="hidden xl:inline">INCLUSIVE</span></h3>
+                            <span class="text-3xl leading-[2.375rem] font-semibold text-[#0C111D] md:text-4xl md:leading-[2.75rem] md:tracking-[-0.045rem] dark:text-[#dbd8d3]">EUR€114.48</span>
+                            <span class="xl:hidden text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">Service Charge USD$3.45</span>
+                            <span class="hidden xl:inline text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">USD$38 Transfer Fee</span>
+                          </div>
                         </div>
 
-                        <button class="hidden group-[.proceed-next]/total-section:flex items-center gap-2 pl-[2.125rem] pr-4 h-11 shadow-[0px_0px_16px_0px_#FFFFFF80] [clip-path:polygon(100%_0%,100%_100%,0%_100%,1.125rem_0%)] bg-black group/button hover:bg-[#07F468] md:pl-[3.64125rem] md:pr-6 md:h-[5.25rem] md:[clip-path:polygon(100%_0%,100%_100%,0%_100%,2.14125rem_0%)] dark:bg-[#181a1b] dark:hover:bg-[#06c454]">
+                        <button data-next-button class="hidden group-[.proceed-next]/total-section:flex items-center gap-2 pl-[2.125rem] pr-4 h-11 shadow-[0px_0px_16px_0px_#FFFFFF80] [clip-path:polygon(100%_0%,100%_100%,0%_100%,1.125rem_0%)] bg-black group/button hover:bg-[#07F468] md:pl-[3.64125rem] md:pr-6 md:h-[5.25rem] md:[clip-path:polygon(100%_0%,100%_100%,0%_100%,2.14125rem_0%)] dark:bg-[#181a1b] dark:hover:bg-[#06c454]">
                           <span class="text-lg font-semibold text-[#07F468] group-hover/button:text-black dark:text-[#23f97b] dark:group-hover/button:text-[#e8e6e3]">NEXT</span>
                           <img src="https://i.ibb.co.com/pjKMT4nR/arrow-right.webp" alt="arrow right" class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(53%)_sepia(97%)_saturate(459%)_hue-rotate(93deg)_brightness(114%)_contrast(94%)] group-hover/button:[filter:brightness(0)_saturate(100%)]">
                         </button>
@@ -929,449 +941,100 @@
       </div>
     </div>
 
-<!-- handle payout dropdowns -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // HELPER FUNCTIONS (shared across all dropdowns)
+    <!-- handle bank details validatation -->
+    <script>
+        // ==================== DOM ELEMENT SELECTORS ====================
 
-    /**
-     * Positions the dropdown options either below or above the trigger,
-     * based on available space in the viewport.
-     * @param {HTMLElement} select - The .dropdown-select container element
-     */
-    function positionDropdown(select) {
-        const optionsContainer = select.querySelector('.payout-options-container');
-        if (!optionsContainer) return;
+        // Get input fields
+        const swiftInput = document.querySelector('[data-bank-swift-bic-code] input');
+        const accountInput = document.querySelector('[data-bank-account-number] input');
 
-        // Get position and dimensions of the select trigger
-        const rect = select.getBoundingClientRect();
-        const spaceBelow = window.innerHeight - rect.bottom;
-        const spaceAbove = rect.top;
-        const optionsHeight = optionsContainer.scrollHeight;
+        // Get container elements (for styling error states)
+        const swiftContainer = document.querySelector('[data-bank-swift-bic-code]');
+        const accountContainer = document.querySelector('[data-bank-account-number]');
 
-        // Remove any previous positioning classes
-        optionsContainer.classList.remove('upward', 'downward');
+        // Get UI elements for feedback and progression
+        const totalSection = document.querySelector('[data-total-section]');
+        const alertContainer = document.querySelector('[data-alert-container]');
+        const nextBtn = totalSection.querySelector('[data-next-button]');
 
-        // Decide direction: if not enough space below but enough above, place upward
-        if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
-            optionsContainer.classList.add('upward');
-            optionsContainer.style.top = 'auto';
-            optionsContainer.style.bottom = 'calc(100%)';
+        // VALIDATION PATTERNS
+
+        // SWIFT/BIC code pattern: 8-11 alphanumeric characters (letters and numbers only)
+        const swiftRegex = /^[A-Z0-9]{8,11}$/i;
+
+        // Account/IBAN pattern: 10-34 alphanumeric characters (simplified validation)
+        const ibanRegex = /^[A-Z0-9]{10,34}$/i;
+
+        // HELPER FUNCTIONS
+
+        /**
+         * Checks if both input fields have values (basic presence check)
+         * This enables/disables the next button visual state
+         */
+        function checkInputsFilled() {
+        const swiftVal = swiftInput.value.trim();
+        const accountVal = accountInput.value.trim();
+
+        // Both fields must have content to proceed
+        if (swiftVal && accountVal) {
+            totalSection.classList.add('proceed-next');  // Enable next button
         } else {
-            optionsContainer.classList.add('downward');
-            optionsContainer.style.top = 'calc(100%)';
-            optionsContainer.style.bottom = 'auto';
+            totalSection.classList.remove('proceed-next'); // Disable next button
         }
-    }
-
-    /**
-     * Opens a dropdown: adds open class, rotates arrow, and applies visible state classes.
-     * @param {HTMLElement} select - The .dropdown-select container element
-     */
-    function openDropdown(select) {
-        const optionsContainer = select.querySelector('.payout-options-container');
-        const arrow = select.querySelector('.select-arrow');
-        if (!optionsContainer || !arrow) return;
-
-        // Mark as open (used for state checks)
-        optionsContainer.classList.add('open');
-        arrow.classList.add('rotate-180');
-
-        // Transition from hidden to visible
-        optionsContainer.classList.remove('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
-        optionsContainer.classList.add('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
-        
-        // Update border color when open
-        updateTriggerBorderColor(select, true);
-    }
-
-    /**
-     * Closes a dropdown: removes open class, resets arrow, and applies hidden state classes.
-     * @param {HTMLElement} select - The .dropdown-select container element
-     */
-    function closeDropdown(select) {
-        const optionsContainer = select?.querySelector('.payout-options-container');
-        const arrow = select?.querySelector('.select-arrow');
-        if (!optionsContainer || !arrow) return;
-
-        optionsContainer.classList.remove('open');
-        arrow.classList.remove('rotate-180');
-
-        // Hide with smooth transition
-        optionsContainer.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
-        optionsContainer.classList.add('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
-        
-        // Update border color when closed
-        updateTriggerBorderColor(select, false);
-    }
-
-    /**
-     * Updates the trigger border color based on dropdown state
-     * @param {HTMLElement} select - The .dropdown-select container element
-     * @param {boolean} isOpen - Whether dropdown is open
-     */
-    function updateTriggerBorderColor(select, isOpen) {
-        const triggerElement = select.querySelector('.payout-select__trigger');
-        if (triggerElement) {
-            if (isOpen) {
-                triggerElement.classList.add('border-black');
-                triggerElement.classList.remove('border-[#D0D5DD]');
-            } else {
-                triggerElement.classList.add('border-[#D0D5DD]');
-                triggerElement.classList.remove('border-black');
-            }
-        }
-    }
-
-    /**
-     * Updates the trigger text color based on whether an option is selected
-     * @param {HTMLElement} triggerSpan - The span element showing selected country
-     */
-    function updateTriggerTextColor(triggerSpan) {
-        if (!triggerSpan) return;
-        const hasSelection = triggerSpan.textContent !== 'Select country';
-        if (hasSelection) {
-            triggerSpan.classList.add('text-[#344054]', 'dark:text-[#bdb8af]', 'font-medium');
-            triggerSpan.classList.remove('text-[#667085]', 'dark:text-[#9e9589]');
-        } else {
-            triggerSpan.classList.add('text-[#667085]', 'dark:text-[#9e9589]');
-            triggerSpan.classList.remove('text-[#344054]', 'dark:text-[#bdb8af]', 'font-medium');
-        }
-    }
-
-    /**
-     * Filters country options based on search input
-     * @param {string} searchTerm - The search term to filter by
-     * @param {HTMLElement} select - The dropdown select container
-     */
-    function filterCountries(searchTerm, select) {
-        const options = select.querySelectorAll('.option');
-        const searchTermLower = searchTerm.toLowerCase();
-        
-        options.forEach(option => {
-            const countryName = option.querySelector('span').textContent.toLowerCase();
-            if (searchTermLower === '' || countryName.includes(searchTermLower)) {
-                option.style.display = '';
-            } else {
-                option.style.display = 'none';
-            }
-        });
-    }
-
-    // ==================== INITIALIZE EACH DROPDOWN ====================
-    document.querySelectorAll('.dropdown-select').forEach(trendsSelect => {
-        // Find related elements within this dropdown
-        const selectDropdown = trendsSelect.closest('.select-dropdown');
-        const triggerSpan = trendsSelect.querySelector('[data-selected-dropdown-text]');
-        const arrow = trendsSelect.querySelector('.select-arrow');
-        const options = trendsSelect.querySelectorAll('.option');
-        const realSelect = selectDropdown.querySelector('.payout-real-select');
-        const optionsContainer = trendsSelect.querySelector('.payout-options-container');
-        const searchInput = trendsSelect.querySelector('[data-search-country]');
-
-        // Initialize text color
-        if (triggerSpan) {
-            updateTriggerTextColor(triggerSpan);
         }
 
-        // Initialize selected class based on current trigger text
-        if (triggerSpan && realSelect) {
-            const currentValue = realSelect?.value;
-            options.forEach(opt => {
-                if (opt.dataset.value === currentValue) {
-                    opt.classList.add('selected');
-                    if (triggerSpan) triggerSpan.textContent = opt.querySelector('span').textContent.trim();
-                    updateTriggerTextColor(triggerSpan);
-                } else {
-                    opt.classList.remove('selected');
-                }
-            });
+        /**
+         * Performs format validation on both input fields
+         * @returns {boolean} - Returns true if both inputs pass validation, false otherwise
+         * 
+         * Validation rules:
+         * - SWIFT/BIC: Must be 8-11 alphanumeric characters
+         * - Account/IBAN: Must be 10-34 alphanumeric characters
+         */
+        function validateInputs() {
+        let isValid = true;
+
+        // Remove any existing error styling and hide alert
+        swiftContainer.classList.remove('input-error');
+        accountContainer.classList.remove('input-error');
+        alertContainer.classList.add('hidden');
+
+        const swiftVal = swiftInput.value.trim();
+        const accountVal = accountInput.value.trim();
+
+        // Validate SWIFT/BIC code format
+        if (!swiftRegex.test(swiftVal)) {
+            swiftContainer.classList.add('input-error');
+            isValid = false;
         }
 
-        // Click on the dropdown trigger toggles open/close
-        trendsSelect.addEventListener('click', function(e) {
-            e.stopPropagation();
-
-            const isOpening = !optionsContainer.classList.contains('open');
-
-            // Close any other dropdown
-            document.querySelectorAll('.dropdown-select').forEach(s => {
-                if (s !== trendsSelect) {
-                    closeDropdown(s);
-                }
-            });
-
-            if (isOpening) {
-                // Position and open this dropdown
-                positionDropdown(trendsSelect);
-                openDropdown(trendsSelect);
-                // Clear search input when opening
-                if (searchInput) {
-                    searchInput.value = '';
-                    filterCountries('', trendsSelect);
-                }
-            } else {
-                // Close it if already open
-                closeDropdown(trendsSelect);
-            }
-        });
-
-        // Prevent dropdown from closing when clicking on search input
-        if (searchInput) {
-            searchInput.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-
-            // Add search functionality
-            searchInput.addEventListener('input', function(e) {
-                filterCountries(e.target.value, trendsSelect);
-            });
+        // Validate account number/IBAN format
+        if (!ibanRegex.test(accountVal)) {
+            accountContainer.classList.add('input-error');
+            isValid = false;
         }
 
-        // Handle option selection
-        options.forEach(option => {
-            option.addEventListener('click', function(e) {
-                e.stopPropagation();
-
-                // Get the text of the clicked option
-                const selectedText = this.querySelector('span').textContent.trim();
-                const selectedValue = this.dataset.value;
-
-                // Update trigger text
-                if (triggerSpan) {
-                    triggerSpan.textContent = selectedText;
-                    updateTriggerTextColor(triggerSpan);
-                }
-                
-                // Update hidden select
-                if (realSelect) realSelect.value = selectedValue;
-
-                // Clear search input and reset filter
-                if (searchInput) {
-                    searchInput.value = '';
-                    filterCountries('', trendsSelect);
-                }
-
-                // Update selected class: remove from all, add to this
-                options.forEach(opt => opt.classList.remove('selected'));
-                this.classList.add('selected');
-
-                // Close the dropdown after selection
-                closeDropdown(trendsSelect);
-
-                // Trigger a 'change' event on the hidden select
-                if (realSelect) realSelect.dispatchEvent(new Event('change'));
-            });
-        });
-    });
-
-    // ==================== GLOBAL EVENT HANDLERS ====================
-
-    // Close all dropdowns when clicking anywhere outside them
-    document.addEventListener('click', function() {
-        document.querySelectorAll('.dropdown-select').forEach(select => {
-            closeDropdown(select);
-        });
-    });
-
-    // Reposition any open dropdown when the window is resized
-    window.addEventListener('resize', function() {
-        document.querySelectorAll('.dropdown-select').forEach(select => {
-            const optionsContainer = select.querySelector('.payout-options-container');
-            // Only reposition if this dropdown is currently open
-            if (optionsContainer && optionsContainer.classList.contains('open')) {
-                positionDropdown(select);
-            }
-        });
-    });
-});
-</script>
-
-<!-- payout amount validation script -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set available balance as variable
-    const AVAILABLE_BALANCE = 30054.40;
-    
-    // Get elements
-    const amountInput = document.querySelector('[data-payout-amount-input]');
-    const amountWrapper = document.querySelector('[data-payout-amount-input-wrapper]');
-    const errorSpan = document.querySelector('[data-payout-amount-input-error]');
-    const totalSection = document.querySelector('[data-total-section]');
-    const countrySelect = document.querySelector('.payout-real-select');
-    const countryTriggerSpan = document.querySelector('[data-selected-dropdown-text]');
-    const availableBalanceSpan = document.querySelector('[data-available-balance-text]');
-
-    // Update available balance display
-    if (availableBalanceSpan) {
-        availableBalanceSpan.textContent = `USD$${AVAILABLE_BALANCE.toLocaleString('en-US', {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        })}`;
-    }
-
-    // Get current amount value
-    function getCurrentAmount() {
-        if (!amountInput) return 0;
-        const value = amountInput.value.trim();
-        return value === '' ? 0 : parseFloat(value);
-    }
-
-    // Validate amount input (only digits and decimal point)
-    function validateAmountInput(value) {
-        // Allow empty string, digits, and single decimal point
-        const regex = /^\d*\.?\d*$/;
-        return regex.test(value);
-    }
-
-    // Format amount to prevent multiple decimal points
-    function formatAmount(value) {
-        // Replace multiple decimal points with single one
-        const parts = value.split('.');
-        if (parts.length > 2) {
-            return parts[0] + '.' + parts.slice(1).join('');
+        // Show error alert if any validation failed
+        if (!isValid) {
+            alertContainer.classList.remove('hidden');
         }
-        return value;
-    }
 
-    // Check if amount exceeds balance and show/hide error
-    function checkAmountBalance() {
-        if (!amountInput || !errorSpan) return;
-        
-        const amount = getCurrentAmount();
-        const isValidAmount = !isNaN(amount) && amount > 0;
-        
-        if (isValidAmount && amount > AVAILABLE_BALANCE) {
-            errorSpan.classList.remove('hidden');
-            return false;
-        } else {
-            errorSpan.classList.add('hidden');
-            return true;
+        return isValid;
         }
-    }
 
-    // Check if country is selected
-    function isCountrySelected() {
-        if (!countrySelect) return false;
-        const selectedValue = countrySelect.value;
-        return selectedValue && selectedValue !== '';
-    }
+        // EVENT LISTENERS
+        swiftInput.addEventListener('input', checkInputsFilled);
+        accountInput.addEventListener('input', checkInputsFilled);
 
-    // Update proceed-next class on total section
-    function updateProceedButton() {
-        if (!totalSection) return;
-        
-        const countrySelected = isCountrySelected();
-        const amount = getCurrentAmount();
-        const isValidAmount = !isNaN(amount) && amount > 0 && amount <= AVAILABLE_BALANCE;
-        const noError = errorSpan && errorSpan.classList.contains('hidden');
-        
-        // Add proceed-next class if country is selected AND amount is valid
-        if (countrySelected && isValidAmount && noError) {
-            totalSection.classList.add('proceed-next');
-        } else {
-            totalSection.classList.remove('proceed-next');
+        // Handle next button click - validates format before proceeding
+        nextBtn.addEventListener('click', () => {
+        const isValid = validateInputs();
+
+        if (isValid) {
+            console.log('Proceed to next step');
         }
-    }
-
-    // Handle input validation and formatting
-    if (amountInput) {
-        amountInput.addEventListener('input', function(e) {
-            let value = e.target.value;
-            
-            // Validate input (only digits and decimal point)
-            if (!validateAmountInput(value)) {
-                // Remove last invalid character
-                e.target.value = value.slice(0, -1);
-                return;
-            }
-            
-            // Format to prevent multiple decimal points
-            value = formatAmount(value);
-            e.target.value = value;
-            
-            // Limit to 2 decimal places
-            if (value.includes('.')) {
-                const parts = value.split('.');
-                if (parts[1] && parts[1].length > 2) {
-                    e.target.value = parts[0] + '.' + parts[1].slice(0, 2);
-                }
-            }
-            
-            // Check balance and update error
-            checkAmountBalance();
-            
-            // Update proceed button state
-            updateProceedButton();
         });
-        
-        // Handle paste event to filter invalid characters
-        amountInput.addEventListener('paste', function(e) {
-            e.preventDefault();
-            const pastedText = (e.clipboardData || window.clipboardData).getData('text');
-            
-            // Check if pasted text contains only valid characters
-            if (validateAmountInput(pastedText)) {
-                let formattedValue = formatAmount(pastedText);
-                
-                // Limit to 2 decimal places
-                if (formattedValue.includes('.')) {
-                    const parts = formattedValue.split('.');
-                    if (parts[1] && parts[1].length > 2) {
-                        formattedValue = parts[0] + '.' + parts[1].slice(0, 2);
-                    }
-                }
-                
-                amountInput.value = formattedValue;
-                checkAmountBalance();
-                updateProceedButton();
-            }
-        });
-        
-        // Handle blur event to format amount properly
-        amountInput.addEventListener('blur', function(e) {
-            let value = e.target.value;
-            if (value && !isNaN(parseFloat(value))) {
-                const num = parseFloat(value);
-                // Don't allow amount greater than balance
-                if (num > AVAILABLE_BALANCE) {
-                    e.target.value = AVAILABLE_BALANCE.toFixed(2);
-                } else {
-                    e.target.value = num.toFixed(2);
-                }
-                checkAmountBalance();
-                updateProceedButton();
-            }
-        });
-    }
-    
-    // Watch for country selection changes
-    if (countrySelect) {
-        countrySelect.addEventListener('change', function() {
-            updateProceedButton();
-        });
-    }
-    
-    // Also watch for changes to the trigger span (in case dropdown updates it)
-    if (countryTriggerSpan) {
-        const observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
-                if (mutation.type === 'characterData' || mutation.type === 'childList') {
-                    updateProceedButton();
-                }
-            });
-        });
-        
-        observer.observe(countryTriggerSpan, {
-            characterData: true,
-            childList: true,
-            subtree: true
-        });
-    }
-    
-    // Initial check
-    updateProceedButton();
-});
-</script>
+    </script>
   </body>
 </html>
