@@ -801,8 +801,8 @@
                 <!-- popup-container -->
                 <div class="flex flex-col h-full shadow-[0px_0px_10px_-34px_#0000001A] [background:linear-gradient(0deg,rgba(255,255,255,0.9),rgba(255,255,255,0.9)),linear-gradient(180deg,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0)_100%)] before:inset-0 before:content-[''] before:absolute before:bg-[url('https://i.ibb.co.com/6Rz2GJd8/payout-popup-gradient.png')] before:bg-cover before:bg-center before:bg-no-repeat before:[opacity:12.5%] before:z-[0] before:pointer-events-none">
                     <!-- progress-bar -->
-                    <div class="overflow-hidden w-full h-2 bg-[#EAECF0] dark:bg-[#222526] z-[1]">
-                      <div class="w-[40%] h-full bg-[#0c111d] dark:bg-[#0a0e17]"></div>
+                    <div class="hidden overflow-hidden w-full h-2 bg-[#EAECF0] dark:bg-[#222526] z-[1]">
+                      <div class="w-0 h-full bg-[#0c111d] dark:bg-[#0a0e17]"></div>
                     </div>
 
                     <!-- main-section -->
@@ -817,139 +817,160 @@
                         </div>
 
                         <!-- back-button -->
-                        <button class="flex justify-center items-center gap-1 w-max">
+                        <button class="hidden justify-center items-center gap-1 w-max">
                           <img src="https://i.ibb.co.com/tPzh072N/chevron-left.webp" alt="chevron left" class="w-4 h-4 [filter:brightness(0)_saturate(100%)_invert(46%)_sepia(8%)_saturate(955%)_hue-rotate(183deg)_brightness(91%)_contrast(88%)]">
-                          <span class="text-xs leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9589]">Back</span>
+                          <span class="text-sm leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9589]">Back</span>
                         </button>
 
-                        <h3 class="text-lg font-medium text-[#0C111D] dark:text-[#dbd8d3]">Payout options in your chosen country:</h3>
-
-                        <!-- options-container -->
-                        <div data-option-container class="flex flex-col gap-2">
-                          <!-- option -->
-                          <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
-                            <!-- option__top -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Bank Deposit</span>
-                              <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
-                                <div class="w-4 h-4">
-                                  <img src="https://i.ibb.co.com/hJStBf17/bank.webp" alt="bank" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
+                        <!-- form-container -->
+                        <div class="flex flex-col gap-6 lg:gap-10">
+                            <div class="flex flex-col gap-6">
+                                <!-- dropdown-section -->
+                                <div class="flex flex-col gap-4">
+                                    <h3 class="text-base font-medium text-[#344054] dark:text-[#bdb8af]">Where would you like to send money?</h3>
+                                
+                                    <!-- select-dropdown -->
+                                    <div data-payout-country-dropdown class="select-dropdown relative flex w-full [&.disabled]:opacity-50 [&.disabled]:cursor-not-allowed">
+                                        <div class="dropdown-select w-full cursor-pointer border-none">
+                                            <div class="payout-select__trigger w-full h-[3.5rem] flex justify-between items-center gap-2 p-4 border-b-[1.5px] border-[#D0D5DD] bg-white/75 dark:bg-[#181a1b]/75 dark:border-[#3b4043]">
+                                                <div class="flex items-center gap-2">
+                                                    <img src="https://i.ibb.co.com/21zPFPz7/globe.webp" alt="globe" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(78%)_sepia(17%)_saturate(268%)_hue-rotate(179deg)_brightness(81%)_contrast(86%)]">
+                                                    <span data-selected-dropdown-text class="text-base flex-grow text-balance text-[#667085] dark:text-[#9e9589]">Select country</span>
+                                                </div>
+                                                <img class="select-arrow h-5 w-5 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(78%)_sepia(17%)_saturate(268%)_hue-rotate(179deg)_brightness(81%)_contrast(86%)]" src="https://i.ibb.co.com/jkt6FN7G/chevron-down.webp" alt="chevron down" />
+                                            </div>
+                                            <div class="payout-options-container max-md:!fixed max-md:!flex max-md:!flex-col max-md:!justify-end max-md:!inset-0 max-md:!bg-white/60 max-md:!backdrop-blur-[2.5px] max-md:!shadow-[0px_-2px_4px_0px_#0000001A] absolute left-auto right-0 top-[calc(100%+1.5px)] z-[9999] w-full origin-top scale-95 opacity-0 shadow-[0px_0px_10px_-34px_#0000001A] transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] h-0 overflow-hidden pointer-events-none">
+                                                <div class="flex flex-col gap-2 max-md:gap-1 max-md:shadow-[0px_0px_12px_0px_#00000033] bg-white dark:bg-[#181a1b]">
+                                                    <div class="flex items-center gap-2 p-4 border-b border-[#D0D5DD]/50 max-md:py-3 dark:border-[#3b4043]/50">
+                                                        <img src="https://i.ibb.co.com/TxLHy0g9/Search.webp" alt="Search" class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(25%)_sepia(27%)_saturate(547%)_hue-rotate(179deg)_brightness(89%)_contrast(94%)]">
+                                                        <input data-search-country type="text" placeholder="Search country" class="w-full text-base text-[#667085] dark:text-[#9e9589] bg-transparent focus:outline-none">
+                                                    </div>
+                                                    <div class="flex flex-col gap-2 max-md:gap-1 max-md:h-[10.75rem] h-[15.5rem] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]">
+                                                        <div data-value="australia" class="option flex items-center justify-center gap-[0.625rem] cursor-pointer group [&.selected]:bg-[#F2F4F7] hover:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
+                                                            <div class="option-inner-container flex items-center flex-1 gap-2 p-4 max-md:py-2">
+                                                                <span class="text-base font-medium text-[#0C111D] text-balance dark:text-[#dbd8d3]">Australia</span>
+                                                            </div>
+                                                        </div>
+                                                        <div data-value="china" class="option flex items-center justify-center gap-[0.625rem] cursor-pointer group [&.selected]:bg-[#F2F4F7] hover:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
+                                                            <div class="option-inner-container flex items-center flex-1 gap-2 p-4 max-md:py-2">
+                                                                <span class="text-base font-medium text-[#0C111D] text-balance dark:text-[#dbd8d3]">China</span>
+                                                            </div>
+                                                        </div>
+                                                        <div data-value="uk" class="option flex items-center justify-center gap-[0.625rem] cursor-pointer group [&.selected]:bg-[#F2F4F7] hover:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
+                                                            <div class="option-inner-container flex items-center flex-1 gap-2 p-4 max-md:py-2">
+                                                                <span class="text-base font-medium text-[#0C111D] text-balance dark:text-[#dbd8d3]">UK</span>
+                                                            </div>
+                                                        </div>
+                                                        <div data-value="usa" class="option flex items-center justify-center gap-[0.625rem] cursor-pointer group [&.selected]:bg-[#F2F4F7] hover:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
+                                                            <div class="option-inner-container flex items-center flex-1 gap-2 p-4 max-md:py-2">
+                                                                <span class="text-base font-medium text-[#0C111D] text-balance dark:text-[#dbd8d3]">USA</span>
+                                                            </div>
+                                                        </div>
+                                                        <div data-value="singapore" class="option flex items-center justify-center gap-[0.625rem] cursor-pointer group [&.selected]:bg-[#F2F4F7] hover:bg-white dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
+                                                            <div class="option-inner-container flex items-center flex-1 gap-2 p-4 max-md:py-2">
+                                                                <span class="text-base font-medium text-[#0C111D] text-balance dark:text-[#dbd8d3]">Singapore</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <select class="payout-real-select hidden" name="dropdown-select" required>
+                                            <option value="" disabled selected>Select country</option>
+                                            <option value="australia">Australia</option>
+                                            <option value="china">China</option>
+                                            <option value="uk">UK</option>
+                                            <option value="usa">USA</option>
+                                            <option value="singapore">Singapore</option>
+                                        </select>
+                                    </div>
                                 </div>
 
-                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">Bank</span>
-                              </div>
-                            </div>
+                                <!-- last-used-section -->
+                                <div class="flex flex-col gap-4">
+                                    <!-- last-used-tag -->
+                                    <div class="flex items-center gap-1 px-2 py-0.5 w-max bg-[#07F468] dark:bg-[#06c454]">
+                                        <img src="https://i.ibb.co.com/MD1R1D9z/flash-black.webp" alt="flash black" class="w-3 h-3 [filter:brightness(0)_saturate(100%)]">
+                                    
+                                        <span class="text-xs leading-normal font-semibold text-black dark:text-[#e8e6e3]">LAST USED</span>
+                                    </div>
 
-                            <!-- option__bottom -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">EUR</span></span>
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
-                            </div>
-                          </div>
+                                    <!-- options-container -->
+                                    <div data-option-container class="flex flex-col gap-4">
+                                        <!-- option -->
+                                        <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
+                                            <!-- option__top -->
+                                            <div class="flex justify-between items-center gap-2">
+                                            <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Bank Deposit</span>
+                                            <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
+                                                <div class="w-4 h-4">
+                                                <img src="https://i.ibb.co.com/21zPFPz7/globe.webp" alt="globe" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
+                                                </div>
 
-                          <!-- option -->
-                          <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
-                            <!-- option__top -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Bank Deposit</span>
-                              <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
-                                <div class="w-4 h-4">
-                                  <img src="https://i.ibb.co.com/hJStBf17/bank.webp" alt="bank" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
+                                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">USA - Bank</span>
+                                            </div>
+                                            </div>
+
+                                            <!-- option__bottom -->
+                                            <div class="flex justify-between items-center gap-2">
+                                            <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD</span></span>
+                                            <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- option -->
+                                        <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
+                                            <!-- option__top -->
+                                            <div class="flex justify-between items-center gap-2">
+                                            <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Bank Wire</span>
+                                            <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
+                                                <div class="w-4 h-4">
+                                                <img src="https://i.ibb.co.com/21zPFPz7/globe.webp" alt="globe" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
+                                                </div>
+
+                                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">USA - Bank</span>
+                                            </div>
+                                            </div>
+
+                                            <!-- option__bottom -->
+                                            <div class="flex justify-between items-center gap-2">
+                                            <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">EUR</span></span>
+                                            <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$23.45 fee</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">Bank</span>
-                              </div>
                             </div>
 
-                            <!-- option__bottom -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD</span></span>
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
-                            </div>
-                          </div>
+                            <!-- input-section -->
+                            <div class="flex flex-col gap-4">
+                                <h3 class="text-base font-medium text-[#344054] dark:text-[#bdb8af]">Enter the payout amount:</h3>
 
-                          <!-- option -->
-                          <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
-                            <!-- option__top -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Bank Wire</span>
-                              <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
-                                <div class="w-4 h-4">
-                                  <img src="https://i.ibb.co.com/hJStBf17/bank.webp" alt="bank" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
+                                <!-- input-wrapper -->
+                                <div data-payout-amount-input-wrapper class="flex flex-col gap-1">
+                                    <!-- input-field -->
+                                    <div class="flex items-center gap-2 p-4 border-b-[1.5px] border-[#D0D5DD] bg-white/75 dark:bg-[#181a1b]/75 dark:border-[#3b4043]">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-base font-medium text-[#0C111D] dark:text-[#dbd8d3]">USD$</span>
+
+                                            <input data-payout-amount-input type="text" placeholder="00.00" class="text-base placeholder:text-[#98A2B3] text-[#0C111D] bg-transparent focus:outline-none dark:placeholder:text-[#b0a993] dark:text-[#dbd8d3]">
+                                        </div>
+                                    </div>
+
+                                    <span data-payout-amount-input-error class="hidden text-xs leading-normal text-[#FF4405] dark:text-[#ff571e]">Insufficient Balance</span>
                                 </div>
-
-                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">Bank</span>
-                              </div>
                             </div>
-
-                            <!-- option__bottom -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD</span></span>
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
-                            </div>
-                          </div>
-
-                          <!-- option -->
-                          <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
-                            <!-- option__top -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Bank Wire</span>
-                              <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
-                                <div class="w-4 h-4">
-                                  <img src="https://i.ibb.co.com/hJStBf17/bank.webp" alt="bank" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
-                                </div>
-
-                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">Bank</span>
-                              </div>
-                            </div>
-
-                            <!-- option__bottom -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">CZK</span></span>
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
-                            </div>
-                          </div>
-
-                          <!-- option -->
-                          <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
-                            <!-- option__top -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USDT - Ethereum(ERC20)</span>
-                              <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
-                                <div class="w-4 h-4">
-                                  <img src="https://i.ibb.co.com/qFdZMDc2/crypto.webp" alt="crypto" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
-                                </div>
-
-                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">Crypto</span>
-                              </div>
-                            </div>
-
-                            <!-- option__bottom -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USDT</span></span>
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
-                            </div>
-                          </div>
                         </div>
                     </div>
 
                     <!-- total-section -->
                     <div data-total-section class="flex flex-col flex-none z-[1] min-h-[7.5rem] shadow-[0px_0px_8px_0px_#00000026] relative before:inset-0 before:content-[''] before:absolute before:bg-[url('https://i.ibb.co.com/6Rz2GJd8/payout-popup-gradient.png')] before:bg-cover before:bg-center before:bg-no-repeat before:z-[-1] before:pointer-events-none group/total-section">
-                      <div class="flex justify-between items-end flex-grow w-full h-full bg-black/80 group-[.proceed-next]/total-section:bg-white/50 dark:bg-[#181a1b]/80 dark:group-[.proceed-next]/total-section:bg-[#181a1b]/50">
-                        
+                      <div class="flex justify-between items-end flex-grow w-full h-full bg-black/80 dark:bg-[#181a1b]/80">
                         <div class="flex items-start h-full px-2 py-4 md:pl-6">
                           <!-- available-balance -->
-                          <div class="flex group-[.proceed-next]/total-section:hidden flex-col gap-1 md:gap-2">
-                            <h3 class="text-base font-medium text-white dark:text-[#e8e6e3]">Available Balance</h3>
-                            <span data-available-balance-text class="text-3xl leading-[2.375rem] font-semibold text-white md:text-4xl md:leading-[2.75rem] md:tracking-[-0.045rem] dark:text-[#e8e6e3]">USD$30054.40</span>
-                          </div>
-
-                          <!-- payout-summary -->
-                          <div class="hidden group-[.proceed-next]/total-section:flex flex-col gap-1 md:gap-2">
-                            <h3 class="text-base font-medium text-white group-[.proceed-next]/total-section:text-[#0C111D] dark:text-[#e8e6e3] dark:group-[.proceed-next]/total-section:text-[#dbd8d3]">YOUR FINAL PAYOUT <span class="hidden xl:inline">INCLUSIVE</span></h3>
-                            <span class="text-3xl leading-[2.375rem] font-semibold text-white group-[.proceed-next]/total-section:text-[#0C111D] md:text-4xl md:leading-[2.75rem] md:tracking-[-0.045rem] dark:text-[#e8e6e3] dark:group-[.proceed-next]/total-section:text-[#dbd8d3]">EUR€114.48</span>
-                            <span class="xl:hidden text-xs leading-normal font-medium text-white group-[.proceed-next]/total-section:text-[#0C111D] dark:text-[#e8e6e3] dark:group-[.proceed-next]/total-section:text-[#dbd8d3]">Service Charge USD$3.45</span>
-                            <span class="hidden xl:inline text-xs leading-normal font-medium text-white group-[.proceed-next]/total-section:text-[#0C111D] dark:text-[#e8e6e3] dark:group-[.proceed-next]/total-section:text-[#dbd8d3]">USD$38 Transfer Fee</span>
+                          <div class="flex flex-col gap-1 md:gap-2">
+                            <h3 class="text-base font-medium text-white group-[.error]/total-section:text-[#FF4405] dark:text-[#e8e6e3] dark:group-[.error]/total-section:text-[#ff571e]">Available Balance</h3>
+                            <span data-available-balance-text class="text-3xl leading-[2.375rem] font-semibold text-white group-[.error]/total-section:text-[#FF4405] md:text-4xl md:leading-[2.75rem] md:tracking-[-0.045rem] dark:text-[#e8e6e3] dark:group-[.error]/total-section:text-[#ff571e]">USD$30054.40</span>
                           </div>
                         </div>
 
@@ -965,40 +986,407 @@
       </div>
     </div>
 
-    <!-- handle validation & active state of options -->
-    <script>
-      const optionContainer = document.querySelector('[data-option-container]');
-      const options = optionContainer.querySelectorAll('[data-option]');
-      const totalSection = document.querySelector('[data-total-section]');
-      
-      // Function to update total section class based on selection
-      function updateTotalSectionClass() {
-        const hasSelectedOption = Array.from(options).some(option => 
-          option.classList.contains('option-selected')
-        );
-        
-        if (hasSelectedOption) {
-          totalSection.classList.add('proceed-next');
-        } else {
-          totalSection.classList.remove('proceed-next');
-        }
-      }
+<!-- handle payout dropdowns -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // HELPER FUNCTIONS (shared across all dropdowns)
 
-      options.forEach(option => {
-        option.addEventListener('click', () => {
-          // remove active from all
-          options.forEach(o => o.classList.remove('option-selected'));
-          
-          // add to clicked one
-          option.classList.add('option-selected');
-          
-          // update total section class
-          updateTotalSectionClass();
+    /**
+     * Positions the dropdown options either below or above the trigger,
+     * based on available space in the viewport.
+     * @param {HTMLElement} select - The .dropdown-select container element
+     */
+    function positionDropdown(select) {
+        const optionsContainer = select.querySelector('.payout-options-container');
+        if (!optionsContainer) return;
+
+        // Get position and dimensions of the select trigger
+        const rect = select.getBoundingClientRect();
+        const spaceBelow = window.innerHeight - rect.bottom;
+        const spaceAbove = rect.top;
+        const optionsHeight = optionsContainer.scrollHeight;
+
+        // Remove any previous positioning classes
+        optionsContainer.classList.remove('upward', 'downward');
+
+        // Decide direction: if not enough space below but enough above, place upward
+        if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+            optionsContainer.classList.add('upward');
+            optionsContainer.style.top = 'auto';
+            optionsContainer.style.bottom = 'calc(100%)';
+        } else {
+            optionsContainer.classList.add('downward');
+            optionsContainer.style.top = 'calc(100%)';
+            optionsContainer.style.bottom = 'auto';
+        }
+    }
+
+    /**
+     * Opens a dropdown: adds open class, rotates arrow, and applies visible state classes.
+     * @param {HTMLElement} select - The .dropdown-select container element
+     */
+    function openDropdown(select) {
+        const optionsContainer = select.querySelector('.payout-options-container');
+        const arrow = select.querySelector('.select-arrow');
+        if (!optionsContainer || !arrow) return;
+
+        // Mark as open (used for state checks)
+        optionsContainer.classList.add('open');
+        arrow.classList.add('rotate-180');
+
+        // Transition from hidden to visible
+        optionsContainer.classList.remove('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+        optionsContainer.classList.add('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+        
+        // Update border color when open
+        updateTriggerBorderColor(select, true);
+    }
+
+    /**
+     * Closes a dropdown: removes open class, resets arrow, and applies hidden state classes.
+     * @param {HTMLElement} select - The .dropdown-select container element
+     */
+    function closeDropdown(select) {
+        const optionsContainer = select?.querySelector('.payout-options-container');
+        const arrow = select?.querySelector('.select-arrow');
+        if (!optionsContainer || !arrow) return;
+
+        optionsContainer.classList.remove('open');
+        arrow.classList.remove('rotate-180');
+
+        // Hide with smooth transition
+        optionsContainer.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto', 'h-auto', 'overflow-auto');
+        optionsContainer.classList.add('scale-95', 'opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+        
+        // Update border color when closed
+        updateTriggerBorderColor(select, false);
+    }
+
+    /**
+     * Updates the trigger border color based on dropdown state
+     * @param {HTMLElement} select - The .dropdown-select container element
+     * @param {boolean} isOpen - Whether dropdown is open
+     */
+    function updateTriggerBorderColor(select, isOpen) {
+        const triggerElement = select.querySelector('.payout-select__trigger');
+        if (triggerElement) {
+            if (isOpen) {
+                triggerElement.classList.add('border-black');
+                triggerElement.classList.remove('border-[#D0D5DD]');
+            } else {
+                triggerElement.classList.add('border-[#D0D5DD]');
+                triggerElement.classList.remove('border-black');
+            }
+        }
+    }
+
+    /**
+     * Updates the trigger text color based on whether an option is selected
+     * @param {HTMLElement} triggerSpan - The span element showing selected country
+     */
+    function updateTriggerTextColor(triggerSpan) {
+        if (!triggerSpan) return;
+        const hasSelection = triggerSpan.textContent !== 'Select country';
+        if (hasSelection) {
+            triggerSpan.classList.add('text-[#344054]', 'dark:text-[#bdb8af]', 'font-medium');
+            triggerSpan.classList.remove('text-[#667085]', 'dark:text-[#9e9589]');
+        } else {
+            triggerSpan.classList.add('text-[#667085]', 'dark:text-[#9e9589]');
+            triggerSpan.classList.remove('text-[#344054]', 'dark:text-[#bdb8af]', 'font-medium');
+        }
+    }
+
+    /**
+     * Filters country options based on search input
+     * @param {string} searchTerm - The search term to filter by
+     * @param {HTMLElement} select - The dropdown select container
+     */
+    function filterCountries(searchTerm, select) {
+        const options = select.querySelectorAll('.option');
+        const searchTermLower = searchTerm.toLowerCase();
+        
+        options.forEach(option => {
+            const countryName = option.querySelector('span').textContent.toLowerCase();
+            if (searchTermLower === '' || countryName.includes(searchTermLower)) {
+                option.style.display = '';
+            } else {
+                option.style.display = 'none';
+            }
         });
-      });
-      
-      // Initial check in case any option is pre-selected
-      updateTotalSectionClass();
-    </script>
+    }
+
+    // ==================== INITIALIZE EACH DROPDOWN ====================
+    document.querySelectorAll('.dropdown-select').forEach(trendsSelect => {
+        // Find related elements within this dropdown
+        const selectDropdown = trendsSelect.closest('.select-dropdown');
+        const triggerSpan = trendsSelect.querySelector('[data-selected-dropdown-text]');
+        const arrow = trendsSelect.querySelector('.select-arrow');
+        const options = trendsSelect.querySelectorAll('.option');
+        const realSelect = selectDropdown.querySelector('.payout-real-select');
+        const optionsContainer = trendsSelect.querySelector('.payout-options-container');
+        const searchInput = trendsSelect.querySelector('[data-search-country]');
+
+        // Initialize text color
+        if (triggerSpan) {
+            updateTriggerTextColor(triggerSpan);
+        }
+
+        // Initialize selected class based on current trigger text
+        if (triggerSpan && realSelect) {
+            const currentValue = realSelect?.value;
+            options.forEach(opt => {
+                if (opt.dataset.value === currentValue) {
+                    opt.classList.add('selected');
+                    if (triggerSpan) triggerSpan.textContent = opt.querySelector('span').textContent.trim();
+                    updateTriggerTextColor(triggerSpan);
+                } else {
+                    opt.classList.remove('selected');
+                }
+            });
+        }
+
+        // Click on the dropdown trigger toggles open/close
+        trendsSelect.addEventListener('click', function(e) {
+            e.stopPropagation();
+
+            const isOpening = !optionsContainer.classList.contains('open');
+
+            // Close any other dropdown
+            document.querySelectorAll('.dropdown-select').forEach(s => {
+                if (s !== trendsSelect) {
+                    closeDropdown(s);
+                }
+            });
+
+            if (isOpening) {
+                // Position and open this dropdown
+                positionDropdown(trendsSelect);
+                openDropdown(trendsSelect);
+                // Clear search input when opening
+                if (searchInput) {
+                    searchInput.value = '';
+                    filterCountries('', trendsSelect);
+                }
+            } else {
+                // Close it if already open
+                closeDropdown(trendsSelect);
+            }
+        });
+
+        // Prevent dropdown from closing when clicking on search input
+        if (searchInput) {
+            searchInput.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+
+            // Add search functionality
+            searchInput.addEventListener('input', function(e) {
+                filterCountries(e.target.value, trendsSelect);
+            });
+        }
+
+        // Handle option selection
+        options.forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.stopPropagation();
+
+                // Get the text of the clicked option
+                const selectedText = this.querySelector('span').textContent.trim();
+                const selectedValue = this.dataset.value;
+
+                // Update trigger text
+                if (triggerSpan) {
+                    triggerSpan.textContent = selectedText;
+                    updateTriggerTextColor(triggerSpan);
+                }
+                
+                // Update hidden select
+                if (realSelect) realSelect.value = selectedValue;
+
+                // Clear search input and reset filter
+                if (searchInput) {
+                    searchInput.value = '';
+                    filterCountries('', trendsSelect);
+                }
+
+                // Update selected class: remove from all, add to this
+                options.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+
+                // Close the dropdown after selection
+                closeDropdown(trendsSelect);
+
+                // Trigger a 'change' event on the hidden select
+                if (realSelect) realSelect.dispatchEvent(new Event('change'));
+            });
+        });
+    });
+
+    // ==================== GLOBAL EVENT HANDLERS ====================
+
+    // Close all dropdowns when clicking anywhere outside them
+    document.addEventListener('click', function() {
+        document.querySelectorAll('.dropdown-select').forEach(select => {
+            closeDropdown(select);
+        });
+    });
+
+    // Reposition any open dropdown when the window is resized
+    window.addEventListener('resize', function() {
+        document.querySelectorAll('.dropdown-select').forEach(select => {
+            const optionsContainer = select.querySelector('.payout-options-container');
+            // Only reposition if this dropdown is currently open
+            if (optionsContainer && optionsContainer.classList.contains('open')) {
+                positionDropdown(select);
+            }
+        });
+    });
+});
+</script>
+
+<!-- handle validation and UI updates for payout amount and option selection  -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const AVAILABLE_BALANCE = 30054.40;
+
+    // عناصر
+    const countryDropdown = document.querySelector('[data-payout-country-dropdown]');
+    const countrySelect = document.querySelector('.payout-real-select');
+    const options = document.querySelectorAll('[data-option]');
+    const amountInput = document.querySelector('[data-payout-amount-input]');
+    const errorSpan = document.querySelector('[data-payout-amount-input-error]');
+    const totalSection = document.querySelector('[data-total-section]');
+    const nextBtn = totalSection.querySelector('button');
+
+    // ================= HELPERS =================
+
+    const getAmount = () => parseFloat(amountInput.value);
+
+    const isAmountValid = () => {
+        const amount = getAmount();
+        return !isNaN(amount) && amount > 0 && amount <= AVAILABLE_BALANCE;
+    };
+
+    const isCountrySelected = () => {
+        return countrySelect && countrySelect.value;
+    };
+
+    const isLastUsedSelected = () => {
+        return Array.from(options).some(o => o.classList.contains('option-selected'));
+    };
+
+    // ================= UI CONTROLLER =================
+
+    function updateUI() {
+        const amount = getAmount();
+        const amountValid = isAmountValid();
+        const countrySelected = isCountrySelected();
+        const lastUsedSelected = isLastUsedSelected();
+
+        const shouldShowNext =
+            (countrySelected && amountValid) ||
+            (lastUsedSelected && amountValid);
+
+        // NEXT BUTTON (no Tailwind dependency anymore)
+        nextBtn.classList.toggle('hidden', !shouldShowNext);
+
+        // proceed-next class (optional, for styling only)
+        totalSection.classList.toggle('proceed-next', shouldShowNext);
+
+        // ERROR STATE
+        if (!isNaN(amount) && amount > AVAILABLE_BALANCE) {
+            errorSpan.classList.remove('hidden');
+            totalSection.classList.add('error');
+        } else {
+            errorSpan.classList.add('hidden');
+            totalSection.classList.remove('error');
+        }
+
+        // DISABLE DROPDOWN IF LAST USED SELECTED
+        if (lastUsedSelected) {
+            countryDropdown.classList.add('disabled');
+        } else {
+            countryDropdown.classList.remove('disabled');
+        }
+    }
+
+    // ================= EVENTS =================
+
+    // Country change
+    if (countrySelect) {
+        countrySelect.addEventListener('change', () => {
+            // Remove last-used selection if country picked
+            options.forEach(o => o.classList.remove('option-selected'));
+            updateUI();
+        });
+    }
+
+    // Last used option click
+    options.forEach(option => {
+        option.addEventListener('click', function () {
+            options.forEach(o => o.classList.remove('option-selected'));
+            this.classList.add('option-selected');
+
+            // Clear country if last-used selected
+            if (countrySelect) countrySelect.value = '';
+
+            updateUI();
+        });
+    });
+
+    // Amount input
+    if (amountInput) {
+        amountInput.addEventListener('input', function (e) {
+            let value = e.target.value;
+
+            // Allow only numbers + decimal
+            if (!/^\d*\.?\d*$/.test(value)) {
+                e.target.value = value.slice(0, -1);
+                return;
+            }
+
+            // Fix multiple decimals
+            const parts = value.split('.');
+            if (parts.length > 2) {
+                value = parts[0] + '.' + parts.slice(1).join('');
+            }
+
+            // Limit to 2 decimal places
+            if (value.includes('.')) {
+                const [int, dec] = value.split('.');
+                value = int + '.' + dec.slice(0, 2);
+            }
+
+            e.target.value = value;
+
+            updateUI();
+        });
+
+        amountInput.addEventListener('blur', function () {
+            const amount = getAmount();
+            if (!isNaN(amount) && amount > 0) {
+                amountInput.value = Math.min(amount, AVAILABLE_BALANCE).toFixed(2);
+            }
+            updateUI();
+        });
+    }
+
+    // ================= DROPDOWN DISABLE FIX =================
+
+    const dropdownTrigger = document.querySelector('.dropdown-select');
+
+    if (dropdownTrigger) {
+        dropdownTrigger.addEventListener('click', function (e) {
+            if (countryDropdown.classList.contains('disabled')) {
+                e.stopPropagation();
+                e.preventDefault();
+            }
+        });
+    }
+
+    // ================= INIT =================
+    updateUI();
+});
+</script>
   </body>
 </html>

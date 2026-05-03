@@ -802,7 +802,7 @@
                 <div class="flex flex-col h-full shadow-[0px_0px_10px_-34px_#0000001A] [background:linear-gradient(0deg,rgba(255,255,255,0.9),rgba(255,255,255,0.9)),linear-gradient(180deg,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0)_100%)] before:inset-0 before:content-[''] before:absolute before:bg-[url('https://i.ibb.co.com/6Rz2GJd8/payout-popup-gradient.png')] before:bg-cover before:bg-center before:bg-no-repeat before:[opacity:12.5%] before:z-[0] before:pointer-events-none">
                     <!-- progress-bar -->
                     <div class="overflow-hidden w-full h-2 bg-[#EAECF0] dark:bg-[#222526] z-[1]">
-                      <div class="w-[40%] h-full bg-[#0c111d] dark:bg-[#0a0e17]"></div>
+                      <div class="w-[92%] h-full bg-[#0c111d] dark:bg-[#0a0e17]"></div>
                     </div>
 
                     <!-- main-section -->
@@ -822,140 +822,91 @@
                           <span class="text-xs leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9589]">Back</span>
                         </button>
 
-                        <h3 class="text-lg font-medium text-[#0C111D] dark:text-[#dbd8d3]">Payout options in your chosen country:</h3>
+                        <h3 class="text-lg font-medium text-[#0C111D] dark:text-[#dbd8d3]">Summary</h3>
+                        
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-base text-[#0C111D] dark:text-[#dbd8d3]">Please confirm that the information below is correct:</h3>
 
-                        <!-- options-container -->
-                        <div data-option-container class="flex flex-col gap-2">
-                          <!-- option -->
-                          <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
-                            <!-- option__top -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Bank Deposit</span>
-                              <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
-                                <div class="w-4 h-4">
-                                  <img src="https://i.ibb.co.com/hJStBf17/bank.webp" alt="bank" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
+                            <!-- table-container -->
+                            <div class="grid grid-cols-[80px_1fr] gap-x-2 gap-y-4 sm:grid-cols-[150px_1fr] md:gap-x-4">
+                                <!-- row -->
+                                <span class="text-sm text-[#344054] dark:text-[#bdb8af]">Country</span>
+                                <span class="text-base font-medium text-black dark:text-[#e8e6e3]">USA</span>
+
+                                <!-- row -->
+                                <span class="text-sm text-[#344054] dark:text-[#bdb8af]">Payout Method</span>
+                                <div class="flex flex-col gap-2">
+                                    <span class="text-base font-medium text-black dark:text-[#e8e6e3]">Bank Deposit - EUR</span>
+                                    <span class="text-sm text-[#182230] dark:text-[#d1cdc7]">USD$3.45 fee</span>
+                                </div>
+                                
+                                <!-- row -->
+                                <span class="text-sm text-[#344054] dark:text-[#bdb8af]">Payout Details</span>
+                                <div class="flex flex-col gap-2">
+                                    <span class="text-base font-medium text-black dark:text-[#e8e6e3]">Bank name bank bank bank name</span>
+                                    <span class="text-base font-medium text-black dark:text-[#e8e6e3]">C**** J** H** </span>
+                                    <span class="text-sm text-[#182230] dark:text-[#d1cdc7]">Account number ending 123</span>
                                 </div>
 
-                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">Bank</span>
-                              </div>
-                            </div>
-
-                            <!-- option__bottom -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">EUR</span></span>
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
-                            </div>
-                          </div>
-
-                          <!-- option -->
-                          <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
-                            <!-- option__top -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Bank Deposit</span>
-                              <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
-                                <div class="w-4 h-4">
-                                  <img src="https://i.ibb.co.com/hJStBf17/bank.webp" alt="bank" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
+                                <!-- row -->
+                                <span class="text-sm text-[#344054] dark:text-[#bdb8af]">Withdraw Amount</span>
+                                <div class="flex flex-col gap-2">
+                                    <span class="text-base font-medium text-black dark:text-[#e8e6e3]">USD$120.00</span>
+                                    
+                                    <div class="flex flex-col gap-2 h-[1.125rem]"></div>
                                 </div>
+                                
+                                <!-- row -->
+                                <span class="hidden lg:inline text-sm text-[#344054] dark:text-[#bdb8af]">Latest Balance</span>
+                                <div class="hidden lg:flex flex-col gap-2">
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex justify-between items-center gap-2">
+                                            <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Available Balance</span>
+                                            <span class="text-base font-semibold text-[#0C111D] dark:text-[#dbd8d3]">USD$500.99</span>
+                                        </div>
 
-                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">Bank</span>
-                              </div>
-                            </div>
+                                        <div class="flex justify-between items-center gap-2">
+                                            <span class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]">Payout Amount</span>
+                                            <span class="text-base text-[#0C111D] dark:text-[#dbd8d3]">-USD$10</span>
+                                        </div>
 
-                            <!-- option__bottom -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD</span></span>
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
-                            </div>
-                          </div>
+                                        <hr class="border-t border-black dark:border-[#363b3d]">
 
-                          <!-- option -->
-                          <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
-                            <!-- option__top -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Bank Wire</span>
-                              <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
-                                <div class="w-4 h-4">
-                                  <img src="https://i.ibb.co.com/hJStBf17/bank.webp" alt="bank" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
+                                        <div class="flex justify-between items-center gap-2">
+                                            <span class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]">Latest Balance</span>
+                                            <span class="text-base font-semibold text-[#0C111D] dark:text-[#dbd8d3]">USD$490.99</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-2 h-[1.125rem]"></div>
                                 </div>
-
-                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">Bank</span>
-                              </div>
                             </div>
-
-                            <!-- option__bottom -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD</span></span>
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
-                            </div>
-                          </div>
-
-                          <!-- option -->
-                          <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
-                            <!-- option__top -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Bank Wire</span>
-                              <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
-                                <div class="w-4 h-4">
-                                  <img src="https://i.ibb.co.com/hJStBf17/bank.webp" alt="bank" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
-                                </div>
-
-                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">Bank</span>
-                              </div>
-                            </div>
-
-                            <!-- option__bottom -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">CZK</span></span>
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
-                            </div>
-                          </div>
-
-                          <!-- option -->
-                          <div data-option class="flex flex-col gap-2 p-4 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 group/option [&.option-selected]:bg-black/90 [&.option-selected]:border-white cursor-pointer dark:border-[#3b4043] dark:bg-[#181a1b]/50 dark:[&.option-selected]:bg-[#181a1b]/90 dark:[&.option-selected]:border-[#303436]">
-                            <!-- option__top -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-lg font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USDT - Ethereum(ERC20)</span>
-                              <div class="flex items-center gap-1 flex-wrap px-2 py-1 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white dark:bg-[#181a1b]">
-                                <div class="w-4 h-4">
-                                  <img src="https://i.ibb.co.com/qFdZMDc2/crypto.webp" alt="crypto" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
-                                </div>
-
-                                <span class="text-sm leading-4 font-medium text-[#182230] dark:text-[#d1cdc7]">Crypto</span>
-                              </div>
-                            </div>
-
-                            <!-- option__bottom -->
-                            <div class="flex justify-between items-center gap-2">
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">Pays in <span class="text-sm font-medium text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USDT</span></span>
-                              <span class="text-sm text-[#182230] group-[.option-selected]/option:text-[#FCFCFD] dark:text-[#d1cdc7] dark:group-[.option-selected]/option:text-[#e6e4e1]">USD$3.45 fee</span>
-                            </div>
-                          </div>
                         </div>
                     </div>
 
                     <!-- total-section -->
                     <div data-total-section class="flex flex-col flex-none z-[1] min-h-[7.5rem] shadow-[0px_0px_8px_0px_#00000026] relative before:inset-0 before:content-[''] before:absolute before:bg-[url('https://i.ibb.co.com/6Rz2GJd8/payout-popup-gradient.png')] before:bg-cover before:bg-center before:bg-no-repeat before:z-[-1] before:pointer-events-none group/total-section">
-                      <div class="flex justify-between items-end flex-grow w-full h-full bg-black/80 group-[.proceed-next]/total-section:bg-white/50 dark:bg-[#181a1b]/80 dark:group-[.proceed-next]/total-section:bg-[#181a1b]/50">
+                      <div class="flex justify-between items-end flex-grow w-full h-full bg-white/50 dark:bg-[#181a1b]/80">
                         
                         <div class="flex items-start h-full px-2 py-4 md:pl-6">
                           <!-- available-balance -->
-                          <div class="flex group-[.proceed-next]/total-section:hidden flex-col gap-1 md:gap-2">
+                          <div class="hidden flex-col gap-1 md:gap-2">
                             <h3 class="text-base font-medium text-white dark:text-[#e8e6e3]">Available Balance</h3>
                             <span data-available-balance-text class="text-3xl leading-[2.375rem] font-semibold text-white md:text-4xl md:leading-[2.75rem] md:tracking-[-0.045rem] dark:text-[#e8e6e3]">USD$30054.40</span>
                           </div>
 
                           <!-- payout-summary -->
-                          <div class="hidden group-[.proceed-next]/total-section:flex flex-col gap-1 md:gap-2">
-                            <h3 class="text-base font-medium text-white group-[.proceed-next]/total-section:text-[#0C111D] dark:text-[#e8e6e3] dark:group-[.proceed-next]/total-section:text-[#dbd8d3]">YOUR FINAL PAYOUT <span class="hidden xl:inline">INCLUSIVE</span></h3>
-                            <span class="text-3xl leading-[2.375rem] font-semibold text-white group-[.proceed-next]/total-section:text-[#0C111D] md:text-4xl md:leading-[2.75rem] md:tracking-[-0.045rem] dark:text-[#e8e6e3] dark:group-[.proceed-next]/total-section:text-[#dbd8d3]">EUR€114.48</span>
-                            <span class="xl:hidden text-xs leading-normal font-medium text-white group-[.proceed-next]/total-section:text-[#0C111D] dark:text-[#e8e6e3] dark:group-[.proceed-next]/total-section:text-[#dbd8d3]">Service Charge USD$3.45</span>
-                            <span class="hidden xl:inline text-xs leading-normal font-medium text-white group-[.proceed-next]/total-section:text-[#0C111D] dark:text-[#e8e6e3] dark:group-[.proceed-next]/total-section:text-[#dbd8d3]">USD$38 Transfer Fee</span>
+                          <div class="flex flex-col gap-1 md:gap-2">
+                            <h3 class="text-base font-medium text-[#0C111D] dark:text-[#dbd8d3]">YOUR FINAL PAYOUT <span class="hidden xl:inline">INCLUSIVE</span></h3>
+                            <span class="text-3xl leading-[2.375rem] font-semibold text-[#0C111D] md:text-4xl md:leading-[2.75rem] md:tracking-[-0.045rem] dark:text-[#dbd8d3]">EUR€114.48</span>
+                            <span class="xl:hidden text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">Service Charge USD$3.45</span>
+                            <span class="hidden xl:inline text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">USD$38 Transfer Fee</span>
                           </div>
                         </div>
 
-                        <button class="hidden group-[.proceed-next]/total-section:flex items-center gap-2 pl-[2.125rem] pr-4 h-11 shadow-[0px_0px_16px_0px_#FFFFFF80] [clip-path:polygon(100%_0%,100%_100%,0%_100%,1.125rem_0%)] bg-black group/button hover:bg-[#07F468] md:pl-[3.64125rem] md:pr-6 md:h-[5.25rem] md:[clip-path:polygon(100%_0%,100%_100%,0%_100%,2.14125rem_0%)] dark:bg-[#181a1b] dark:hover:bg-[#06c454]">
-                          <span class="text-lg font-semibold text-[#07F468] group-hover/button:text-black dark:text-[#23f97b] dark:group-hover/button:text-[#e8e6e3]">NEXT</span>
-                          <img src="https://i.ibb.co.com/pjKMT4nR/arrow-right.webp" alt="arrow right" class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(53%)_sepia(97%)_saturate(459%)_hue-rotate(93deg)_brightness(114%)_contrast(94%)] group-hover/button:[filter:brightness(0)_saturate(100%)]">
+                        <button data-next-button class="flex items-center gap-2 pl-[2.125rem] pr-4 h-11 shadow-[0px_0px_16px_0px_#FFFFFF80] [clip-path:polygon(100%_0%,100%_100%,0%_100%,1.125rem_0%)] bg-[#07F468] group/button hover:bg-black md:pl-[3.64125rem] md:pr-6 md:h-[5.25rem] md:[clip-path:polygon(100%_0%,100%_100%,0%_100%,2.14125rem_0%)] dark:bg-[#06c454] dark:hover:bg-[#181a1b]">
+                          <span class="text-lg font-semibold text-black group-hover/button:text-[#07F468] dark:text-[#e8e6e3] dark:group-hover/button:text-[#23f97b]">SUBMIT</span>
+                          <img src="https://i.ibb.co.com/pjKMT4nR/arrow-right.webp" alt="arrow right" class="w-6 h-6 [filter:brightness(0)_saturate(100%)] group-hover/button:[filter:brightness(0)_saturate(100%)_invert(53%)_sepia(97%)_saturate(459%)_hue-rotate(93deg)_brightness(114%)_contrast(94%)]">
                         </button>
                       </div>
                     </div>
@@ -964,41 +915,5 @@
         </div>
       </div>
     </div>
-
-    <!-- handle validation & active state of options -->
-    <script>
-      const optionContainer = document.querySelector('[data-option-container]');
-      const options = optionContainer.querySelectorAll('[data-option]');
-      const totalSection = document.querySelector('[data-total-section]');
-      
-      // Function to update total section class based on selection
-      function updateTotalSectionClass() {
-        const hasSelectedOption = Array.from(options).some(option => 
-          option.classList.contains('option-selected')
-        );
-        
-        if (hasSelectedOption) {
-          totalSection.classList.add('proceed-next');
-        } else {
-          totalSection.classList.remove('proceed-next');
-        }
-      }
-
-      options.forEach(option => {
-        option.addEventListener('click', () => {
-          // remove active from all
-          options.forEach(o => o.classList.remove('option-selected'));
-          
-          // add to clicked one
-          option.classList.add('option-selected');
-          
-          // update total section class
-          updateTotalSectionClass();
-        });
-      });
-      
-      // Initial check in case any option is pre-selected
-      updateTotalSectionClass();
-    </script>
   </body>
 </html>
