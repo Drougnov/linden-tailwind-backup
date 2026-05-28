@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payout Popup</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-white font-sans p-0 m-0 box-border overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#181a1b] !overflow-hidden"> <!-- Add overflow-hidden to body when popup opened -->
+    <!-- main-wrapper -->
+    <div class="flex flex-col md:flex-row">
+      <!-- dashboard-template-main -->
+      <div class="w-full relative z-[2] bg-transparent before:content-[''] before:fixed before:bg-[url('https://i.ibb.co.com/Y4zzyNCR/mobile-fansocial-gradient.png')] md:before:bg-[url('https://i.ibb.co.com/spGHXsL9/desktop-fansocial-gradient.png')] before:bg-cover before:bg-center before:w-screen before:h-screen before:bg-no-repeat before:left-0 before:top-0 before:pointer-events-none">
+
+        <!-- template starts from here -->
+
+        <!-- popup start -->
+        <div class="fixed inset-0 w-screen h-screen overflow-hidden z-[9999]">
+            <!-- popup-inner-wrapper -->
+            <div class="absolute top-0 right-0 w-full h-screen overflow-hidden md:w-[42.125rem]">
+                <!-- popup-container -->
+                <div class="flex flex-col h-full bg-[#f9fafb]/70  overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] relative md:shadow-[0px_0px_10px_0px_#00000040] dark:bg-[#1b1d1e]/70">
+                    <!-- blur-overlay -->
+                    <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1] md:backdrop-blur-[10px]"></div>
+
+                    <div class="flex flex-col gap-4">
+                        <!-- refund request send popup -->
+                        <div class="fixed top-0 right-0 w-full h-max flex flex-col items-end gap-6 p-2 overflow-hidden z-[9999]">
+                            <div class="flex flex-col justify-center items-center p-4 w-full rounded-[0.3125rem] bg-white/90 shadow-[0px_0px_12px_0px_#0000001A] relative md:max-w-[26rem] dark:bg-[#181a1b]/90">
+                                <!-- blur-overlay -->
+                                <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1] md:backdrop-blur-[10px]"></div>
+
+                                <!-- content-container -->
+                                <div class="flex flex-col gap-2 w-full">
+                                    <!-- title-container -->
+                                    <div class="flex justify-between gap-2">
+                                        <h3 class="text-base font-semibold text-[#344054] dark:text-[#bdb8af]">Refund request sent</h3>
+                                    
+                                        <!-- close-button -->
+                                        <button class="flex justify-center items-center w-6 h-6 min-w-[1.5rem]">
+                                            <img src="https://i.ibb.co.com/5WjG5Fkv/close-cross.webp" alt="close cross" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]">
+                                        </button>
+                                    </div>
+
+                                    <p class="text-base text-[#344054] dark:text-[#bdb8af]">We will process your refund request for order #123456. @creator will be notified.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- popup end -->
+
+        <!-- template ends here -->
+      </div>
+    </div>
+  </body>
+</html>

@@ -54,7 +54,7 @@
                     <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1] md:backdrop-blur-[10px]"></div>
 
                     <div class="flex flex-col gap-4">
-                        <!-- confirm & create custom order popup -->
+                        <!-- extend order deadline popup -->
                         <div class="fixed inset-0 w-screen h-screen overflow-hidden bg-white/60 z-[9999] dark:bg-[#181a1b]/60">
                             <!-- blur-overlay -->
                             <div class="absolute inset-0 w-full h-full backdrop-blur-[2.5px] pointer-events-none z-[-1]"></div>
@@ -65,47 +65,31 @@
                                 <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1]"></div>
                                 
                                 <!-- popup-container -->
-                                <div class="flex flex-col w-full h-max relative shadow-[0px_0px_12px_0px_#0000001A] rounded-t-[0.6125rem] overflow-hidden bg-[#F9FAFB]/90 relative md:max-w-[34.6875rem] dark:bg-[#1b1d1e]/90">
+                                <div class="flex flex-col w-full h-max relative shadow-[0px_0px_12px_0px_#0000001A] rounded-t-[0.6125rem] overflow-hidden bg-[#F9FAFB]/90 relative md:gap-2 md:rounded-[0.3125rem] md:max-w-[26rem] dark:bg-[#1b1d1e]/90">
                                     <!-- blur-overlay -->
                                     <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1]"></div>
 
-                                    <!-- checkbox-section -->
-                                    <div class="flex flex-col py-1">
-                                        <div class="flex flex-col gap-2.5 px-3 py-2">
-                                            <h3 class="text-base font-medium text-[#0C111D] dark:text-[#dbd8d3]">Are you sure you want to decline this order?</h3>
-                                        
-                                            <!-- checkbox-container -->
-                                            <div class="flex gap-2">
-                                                <div class="flex justify-center items-center w-6 min-w-6 h-6">
-                                                    <input type="checkbox" name="checkbox" id="block-custom-request"
-                                                    class="flex justify-center items-center appearance-none bg-white border-2 border-[#FF4405] rounded-[4px] w-5 min-w-[1.25rem] h-5 m-1 checked:accent-[#FF4405] checked:bg-[#FF4405] checked:border-[#FF4405] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[7px] md:checked:after:left-[6px] checked:after:top-[3px] md:checked:after:top-[2px] checked:after:w-[5px] checked:after:h-[10px] checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-white checked:after:border-w-0 checked:after:border-b-[2.5px] checked:after:border-r-[2.5px] checked:after:rotate-45 checked:after:box-border cursor-pointer"/>
-                                                </div>
-
-                                                <label for="block-custom-request" class="text-sm font-medium ma-0 pt-0.5 cursor-pointer text-[#FF4405] dark:text-[#ff571e]">Block <span class="font-semibold">@mangoes</span> from sending custom request</label>
-                                            </div>
-
-                                            <!-- checkbox-container -->
-                                            <div class="flex gap-2">
-                                                <div class="flex justify-center items-center w-6 min-w-6 h-6">
-                                                    <input type="checkbox" name="checkbox" id="block-user"
-                                                    class="flex justify-center items-center appearance-none bg-white border-2 border-[#FF4405] rounded-[4px] w-5 min-w-[1.25rem] h-5 m-1 checked:accent-[#FF4405] checked:bg-[#FF4405] checked:border-[#FF4405] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[7px] md:checked:after:left-[6px] checked:after:top-[3px] md:checked:after:top-[2px] checked:after:w-[5px] checked:after:h-[10px] checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-white checked:after:border-w-0 checked:after:border-b-[2.5px] checked:after:border-r-[2.5px] checked:after:rotate-45 checked:after:box-border cursor-pointer"/>
-                                                </div>
-
-                                                <label for="block-user" class="text-sm font-medium ma-0 pt-0.5 cursor-pointer text-[#FF4405] dark:text-[#ff571e]">Block <span class="font-semibold">@mangoes</span> on everything</label>
+                                    <!-- text-section -->
+                                    <div class="flex flex-col py-1 md:py-0">
+                                        <div class="flex flex-col gap-2.5 px-3 py-2 md:gap-2 md:p-4">
+                                            <h3 class="text-base font-medium text-[#0C111D] dark:text-[#dbd8d3]">You are about to extend @jenny’s custom order deadline for 7 days.</h3>
+                                            <div class="flex flex-col gap-4">
+                                                <p class="text-base text-[#344054] dark:text-[#bdb8af]">@Jenny is required to provide tracking detail within the 14-day grace period. We strongly encourage you to message @creator to follow up on the progress.</p>
+                                                <p class="text-base text-[#344054] dark:text-[#bdb8af]">You will not be able to request a refund once you confirm to wait. If @creator still doesn’t upload the clip within this period, the order will be canceled, and you will be refunded.</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     <!-- button-container -->
-                                    <div class="flex items-center gap-2.5 p-2">
+                                    <div class="flex items-center gap-2.5 p-2 md:gap-2">
                                         <!-- cancel-button -->
-                                        <button class="flex justify-center items-center px-2.5 py-2 h-10 bg-white border border-white group hover:border-[#C73203] flex-1 dark:bg-[#181a1b]">
+                                        <button class="flex justify-center items-center px-2.5 py-2 h-10 border border-transparent group hover:border-[#C73203] flex-1 md:w-max min-w-[6.25rem] md:flex-[unset]">
                                             <span class="text-base font-medium text-[#FF4405] group-hover:text-[#C73203] dark:text-[#ff571e]">Cancel</span>
                                         </button>
 
-                                        <!-- decline-button -->
-                                        <button class="flex justify-center items-center px-2.5 py-2 h-10 bg-[#FF4405] group hover:bg-[#FF4405]/80 flex-1 dark:bg-[#c93300] dark:hover:bg-[#c93300]/80">
-                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">request decline</span>
+                                        <!-- confirm-button -->
+                                        <button class="flex justify-center items-center px-2.5 py-2 h-10 bg-[#FF4405] group hover:bg-[#FF4405]/80 flex-1 md:w-max min-w-[6.25rem] md:flex-[unset] dark:bg-[#c93300] dark:hover:bg-[#c93300]/80">
+                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">Confirm</span>
                                         </button>
                                     </div>
                                 </div>
