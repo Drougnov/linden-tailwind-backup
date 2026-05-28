@@ -655,6 +655,1011 @@
                             </div>
                         </section>
 
+                        <!-- Add tracking details -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">ADD TRACKING DETAIL:</h3>
+
+                            <!-- tracking details form -->
+                            <div class="flex flex-col gap-4 px-2 py-4 md:px-4">
+                                <div class="flex flex-col gap-4">
+                                    <!-- select-dropdown -->
+                                    <div data-tracking-detail-select-container class="relative flex w-full">
+                                        <div data-tracking-detail-select class="w-full cursor-pointer border-none">
+                                            <div data-value="manual-enter-tracking-details" data-tracking-detail-select-trigger class="w-full flex items-center gap-2.5 pl-2.5 pr-[0.9375rem] py-2 border-b border-[#344054] rounded-t-lg bg-white dark:border-[#766d61] dark:bg-[#181a1b]">
+                                                <div class="flex items-center gap-2 flex-1">
+                                                    <img data-tracking-detail-select-trigger-icon src="https://i.ibb.co.com/YTPQMXgk/write.webp" alt="write" class="w-6 h-6 [filter:brightness(0)_saturate(100%)]">
+                                                    <div class="flex flex-col">
+                                                        <h4 data-tracking-detail-select-trigger-title class="text-sm leading-6 font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Manual enter tracking details</h4>
+                                                        <span data-tracking-detail-select-trigger-text class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">We will share these information to @fan</span>
+                                                    </div>
+                                                </div>
+                                                <img data-tracking-detail-select-arrow class="select-arrow h-6 w-6 transition-transform [filter:brightness(0)_saturate(100%)_invert(22%)_sepia(11%)_saturate(1594%)_hue-rotate(179deg)_brightness(93%)_contrast(86%)]" src="https://i.ibb.co.com/WpfP7SBK/arrow2-down.webp" alt="arrow2 down" />
+                                            </div>
+
+                                            <div data-tracking-detail-select-options-container data-value="upload-screenshot" class="tracking-detail-options-container max-md:!fixed max-md:!inset-0 max-md:!flex max-md:!items-end max-md:bg-white/60 max-md:bg-[#181a1b]/60 max-md:backdrop-blur-[2.5px] absolute left-auto right-0 top-[calc(100%rem)] rounded-b-lg overflow-hidden z-[9999] w-full origin-top scale-95 opacity-0 transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] h-0 overflow-hidden pointer-events-none md:shadow-[0_3px_12px_0_#0000001A]">
+                                                <div class="flex flex-col gap-2 p-2 max-md:w-full max-md:!shadow-[0_0_12px_0_#00000033] backdrop-blur-[50px] bg-white/90 dark:bg-[#181a1b]/90">
+                                                    <!-- option -->
+                                                    <div
+                                                        data-tracking-detail-select-option
+                                                        data-value="manual-enter-tracking-details"
+                                                        data-icon="https://i.ibb.co.com/YTPQMXgk/write.webp"
+                                                        data-title="Manual enter tracking details"
+                                                        data-text="We will share these information to @fan"
+                                                        class="flex items-center gap-2 flex-1 cursor-pointer"
+                                                    >
+                                                        <img src="https://i.ibb.co.com/YTPQMXgk/write.webp" class="w-6 h-6 [filter:brightness(0)_saturate(100%)]">
+
+                                                        <div class="flex flex-col">
+                                                            <h4 class="text-sm leading-6 font-semibold text-[#0C111D] dark:text-[#dbd8d3]">
+                                                                Manual enter tracking details
+                                                            </h4>
+
+                                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">
+                                                                We will share these information to @fan
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- option -->
+                                                    <div
+                                                        data-tracking-detail-select-option
+                                                        data-value="upload-screenshot"
+                                                        data-icon="https://i.ibb.co.com/HZFyKbZ/upload.webp"
+                                                        data-title="Upload Screenshot"
+                                                        data-text="We will share this screenshot to @fan"
+                                                        class="flex items-center gap-2 flex-1 cursor-pointer"
+                                                    >
+                                                        <img src="https://i.ibb.co.com/HZFyKbZ/upload.webp" class="w-6 h-6 [filter:brightness(0)_saturate(100%)]">
+
+                                                        <div class="flex flex-col">
+                                                            <h4 class="text-sm leading-6 font-semibold text-[#0C111D] dark:text-[#dbd8d3]">
+                                                                Upload Screenshot
+                                                            </h4>
+
+                                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">
+                                                                We will share this screenshot to @fan
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <select class="dash-real-select hidden" name="dropdown-select" required>
+                                            <option value="manual-enter-tracking-details">
+                                                Manual enter tracking details
+                                            </option>
+                                            <option value="upload-screenshot">
+                                                Upload Screenshot
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <!-- dropdown-content -->
+                                    <div class="flex flex-col gap-4">
+                                        <!-- manual-enter-tracking-details-container -->
+                                        <div data-tracking-detail-section="manual-enter-tracking-details" class="flex flex-col gap-4">
+                                            <!-- input-wrapper -->
+                                            <div class="flex flex-col gap-4">
+                                                <div class="flex flex-col gap-1.5 group/input-container">
+                                                    <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Courier</label>
+                                                
+                                                    <!-- input-field -->
+                                                    <div class="flex items-center gap-2 px-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                                        <div class="flex items-center gap-2 w-full">
+                                                            <input type="text" placeholder="Enter Courier Name" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                                        
+                                                            <div class="relative inline-flex overflow-hidden w-4 h-4 cursor-pointer group hover:overflow-visible">
+                                                                <!-- Icon -->
+                                                                <img src="https://i.ibb.co.com/Hp1tznKk/help-circle.webp" alt="help circle" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]">
+                                                                <!-- Tooltip -->
+                                                                <div class="absolute z-[2] flex flex-col items-start text-center min-w-[18.75rem] md:w-max
+                                                                    opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                                                                    text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg
+                                                                    bg-[#101828] dark:bg-[rgba(14,19,32,1)] dark:text-[#e8e6e3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
+                                                                    -right-2 bottom-full -translate-y-2
+                                                                    before:content-[''] before:absolute before:w-0 before:h-0 before:right-2.5 before:bottom-[-5px] before:border-[6px] before:border-b-0 before:border-l-transparent before:border-r-transparent before:border-t-[rgba(16,24,40)]"
+                                                                >
+                                                                    <p class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">Enter Courier Name</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- error-text -->
+                                                    <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- input-wrapper -->
+                                            <div class="flex flex-col gap-4">
+                                                <div class="flex flex-col gap-1.5 group/input-container">
+                                                    <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Tracking number/ID</label>
+                                                
+                                                    <!-- input-field -->
+                                                    <div class="flex items-center gap-2 px-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                                        <div class="flex items-center gap-2 w-full">
+                                                            <input type="text" placeholder="Tracking Number/ID" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                                        
+                                                            <div class="relative inline-flex overflow-hidden w-4 h-4 cursor-pointer group hover:overflow-visible">
+                                                                <!-- Icon -->
+                                                                <img src="https://i.ibb.co.com/Hp1tznKk/help-circle.webp" alt="help circle" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]">
+                                                                <!-- Tooltip -->
+                                                                <div class="absolute z-[2] flex flex-col items-start text-center min-w-[18.75rem] md:w-max
+                                                                    opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                                                                    text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg
+                                                                    bg-[#101828] dark:bg-[rgba(14,19,32,1)] dark:text-[#e8e6e3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
+                                                                    -right-2 bottom-full -translate-y-2
+                                                                    before:content-[''] before:absolute before:w-0 before:h-0 before:right-2.5 before:bottom-[-5px] before:border-[6px] before:border-b-0 before:border-l-transparent before:border-r-transparent before:border-t-[rgba(16,24,40)]"
+                                                                >
+                                                                    <p class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">Enter Tracking Number/ID</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- error-text -->
+                                                    <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div data-tracking-detail-section="upload-screenshot" class="hidden flex flex-col">
+                                            <!-- upload-container -->
+                                            <div data-media-upload="" class="cursor-pointer border-2 border-transparent bg-[rgba(0,0,0,0.05)] rounded-xl px-6 py-4 relative h-max w-full flex flex-col items-center justify-center hover:border-[#0c111d] dark:bg-[#181a1b]/5 dark:hover:border-[#857c6d] hover:bg-[rgba(0,0,0,0.10)] dark:hover:bg-[rgba(0,0,0,0.05)] group/upload sm:h-[16.5rem] md:h-auto">
+                                                <div data-media-upload-input-wrap="" class="gap-3 w-full flex flex-col justify-center items-center self-stretch">
+                                                    <div class="flex justify-center items-center w-10 h-10 rounded-lg shadow-[0px_1px_2px_0px_#1018280D] bg-[#07F468] group-hover/upload:bg-[#0C111D] dark:bg-[#06c454] dark:group-hover/upload:bg-[#162036]">
+                                                        <img src="https://i.ibb.co.com/9JDWMW1/upload-03.webp" alt="upload 03" class="w-5 h-5 [filter:brightness(0)] group-hover/upload:[filter:brightness(0)_saturate(100%)_invert(65%)_sepia(22%)_saturate(4910%)_hue-rotate(97deg)_brightness(113%)_contrast(94%)]">
+                                                    </div>
+                                                    <div class="flex flex-col gap-1 text-center">
+                                                        <p class="text-sm text-center text-[#475467] dark:text-[#b1aba0]"><span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Select Image</span> Upload single image here </p>
+                                                        <p class="text-xs leading-normal text-[#475467] dark:text-[#b1aba0]">JPEG AND PNG. (Max size: 800x400px)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- uploaded-container -->
+                                            <div class="hidden flex w-full aspect-video relative">
+                                                <img src="https://i.ibb.co.com/nMgQC5R7/hero-bg-video-2.webp" alt="hero bg video 2" class="w-full h-full object-cover">
+                                                
+                                                <!-- expand-button -->
+                                                <button class="absolute top-0 right-0 flex justify-center items-center w-6 h-6 bg-[#FF4405] z-[1] dark:bg-[#c93300]">
+                                                    <img src="https://i.ibb.co.com/YMvbDsR/trash-03.webp" alt="trash-03" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(5%)_saturate(7497%)_hue-rotate(193deg)_brightness(114%)_contrast(105%)]">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- handle dropdowns -->
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+
+                                    // =========================
+                                    // HELPERS
+                                    // =========================
+
+                                    function positionDropdown(select) {
+
+                                        const optionsContainer = select.querySelector(
+                                            '[data-tracking-detail-select-options-container]'
+                                        );
+
+                                        if (!optionsContainer) return;
+
+                                        const rect = select.getBoundingClientRect();
+
+                                        const spaceBelow = window.innerHeight - rect.bottom;
+                                        const spaceAbove = rect.top;
+
+                                        const optionsHeight = optionsContainer.scrollHeight;
+
+                                        optionsContainer.classList.remove('upward', 'downward');
+
+                                        if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+
+                                            optionsContainer.classList.add('upward');
+
+                                            optionsContainer.style.top = 'auto';
+                                            optionsContainer.style.bottom = '100%';
+
+                                        } else {
+
+                                            optionsContainer.classList.add('downward');
+
+                                            optionsContainer.style.top = '100%';
+                                            optionsContainer.style.bottom = 'auto';
+                                        }
+                                    }
+
+                                    function openDropdown(select) {
+
+                                        const optionsContainer = select.querySelector(
+                                            '[data-tracking-detail-select-options-container]'
+                                        );
+
+                                        const arrow = select.querySelector(
+                                            '[data-tracking-detail-select-arrow]'
+                                        );
+
+                                        if (!optionsContainer || !arrow) return;
+
+                                        optionsContainer.classList.add('open');
+
+                                        arrow.classList.add('rotate-180');
+
+                                        optionsContainer.classList.remove(
+                                            'scale-95',
+                                            'opacity-0',
+                                            'pointer-events-none',
+                                            'h-0',
+                                            'overflow-hidden'
+                                        );
+
+                                        optionsContainer.classList.add(
+                                            'scale-100',
+                                            'opacity-100',
+                                            'pointer-events-auto',
+                                            'h-auto',
+                                            'overflow-auto'
+                                        );
+                                    }
+
+                                    function closeDropdown(select) {
+
+                                        const optionsContainer = select.querySelector(
+                                            '[data-tracking-detail-select-options-container]'
+                                        );
+
+                                        const arrow = select.querySelector(
+                                            '[data-tracking-detail-select-arrow]'
+                                        );
+
+                                        if (!optionsContainer || !arrow) return;
+
+                                        optionsContainer.classList.remove('open');
+
+                                        arrow.classList.remove('rotate-180');
+
+                                        optionsContainer.classList.remove(
+                                            'scale-100',
+                                            'opacity-100',
+                                            'pointer-events-auto',
+                                            'h-auto',
+                                            'overflow-auto'
+                                        );
+
+                                        optionsContainer.classList.add(
+                                            'scale-95',
+                                            'opacity-0',
+                                            'pointer-events-none',
+                                            'h-0',
+                                            'overflow-hidden'
+                                        );
+                                    }
+
+                                    function toggleTrackingDetailSections(container, selectedValue) {
+
+                                        const sections = container.querySelectorAll(
+                                            '[data-tracking-detail-section]'
+                                        );
+
+                                        sections.forEach(section => {
+
+                                            const sectionValue = section.dataset.trackingDetailSection;
+
+                                            if (sectionValue === selectedValue) {
+
+                                                section.classList.remove('hidden');
+
+                                            } else {
+
+                                                section.classList.add('hidden');
+                                            }
+
+                                        });
+                                    }
+
+                                    // =========================
+                                    // INIT DROPDOWNS
+                                    // =========================
+
+                                    document.querySelectorAll('[data-tracking-detail-select]').forEach(select => {
+
+                                        const trigger = select.querySelector(
+                                            '[data-tracking-detail-select-trigger]'
+                                        );
+
+                                        const triggerIcon = select.querySelector(
+                                            '[data-tracking-detail-select-trigger-icon]'
+                                        );
+
+                                        const triggerTitle = select.querySelector(
+                                            '[data-tracking-detail-select-trigger-title]'
+                                        );
+
+                                        const triggerText = select.querySelector(
+                                            '[data-tracking-detail-select-trigger-text]'
+                                        );
+
+                                        const options = select.querySelectorAll(
+                                            '[data-tracking-detail-select-option]'
+                                        );
+
+                                        const optionsContainer = select.querySelector(
+                                            '[data-tracking-detail-select-options-container]'
+                                        );
+
+                                        const realSelect = select
+                                            .closest('[data-tracking-detail-select-container]')
+                                            ?.querySelector('.dash-real-select');
+
+                                        const mainContainer = select.closest('section');
+
+                                        // =========================
+                                        // INITIAL STATE
+                                        // =========================
+
+                                        if (realSelect) {
+
+                                            toggleTrackingDetailSections(
+                                                mainContainer,
+                                                realSelect.value
+                                            );
+
+                                            options.forEach(option => {
+
+                                                if (option.dataset.value === realSelect.value) {
+                                                    option.classList.add('selected');
+                                                }
+
+                                            });
+                                        }
+
+                                        // =========================
+                                        // TOGGLE DROPDOWN
+                                        // =========================
+
+                                        trigger.addEventListener('click', function (e) {
+
+                                            e.stopPropagation();
+
+                                            const isOpening = !optionsContainer.classList.contains('open');
+
+                                            document.querySelectorAll(
+                                                '[data-tracking-detail-select]'
+                                            ).forEach(otherSelect => {
+
+                                                if (otherSelect !== select) {
+                                                    closeDropdown(otherSelect);
+                                                }
+
+                                            });
+
+                                            if (isOpening) {
+
+                                                positionDropdown(select);
+
+                                                openDropdown(select);
+
+                                            } else {
+
+                                                closeDropdown(select);
+                                            }
+                                        });
+
+                                        // =========================
+                                        // OPTION CLICK
+                                        // =========================
+
+                                        options.forEach(option => {
+
+                                            option.addEventListener('click', function (e) {
+
+                                                e.stopPropagation();
+
+                                                const value = this.dataset.value;
+                                                const icon = this.dataset.icon;
+                                                const title = this.dataset.title;
+                                                const text = this.dataset.text;
+
+                                                // update trigger icon
+                                                if (triggerIcon) {
+                                                    triggerIcon.src = icon;
+                                                }
+
+                                                // update trigger title
+                                                if (triggerTitle) {
+                                                    triggerTitle.textContent = title;
+                                                }
+
+                                                // update trigger text
+                                                if (triggerText) {
+                                                    triggerText.textContent = text;
+                                                }
+
+                                                // update hidden select
+                                                if (realSelect) {
+
+                                                    realSelect.value = value;
+
+                                                    realSelect.dispatchEvent(
+                                                        new Event('change')
+                                                    );
+                                                }
+
+                                                // update visible section
+                                                toggleTrackingDetailSections(
+                                                    mainContainer,
+                                                    value
+                                                );
+
+                                                // selected state
+                                                options.forEach(opt => {
+                                                    opt.classList.remove('selected');
+                                                });
+
+                                                this.classList.add('selected');
+
+                                                // close dropdown
+                                                closeDropdown(select);
+
+                                            });
+
+                                        });
+
+                                    });
+
+                                    // =========================
+                                    // OUTSIDE CLICK
+                                    // =========================
+
+                                    document.addEventListener('click', function () {
+
+                                        document.querySelectorAll(
+                                            '[data-tracking-detail-select]'
+                                        ).forEach(select => {
+
+                                            closeDropdown(select);
+
+                                        });
+
+                                    });
+
+                                    // =========================
+                                    // WINDOW RESIZE
+                                    // =========================
+
+                                    window.addEventListener('resize', function () {
+
+                                        document.querySelectorAll(
+                                            '[data-tracking-detail-select]'
+                                        ).forEach(select => {
+
+                                            const optionsContainer = select.querySelector(
+                                                '[data-tracking-detail-select-options-container]'
+                                            );
+
+                                            if (optionsContainer?.classList.contains('open')) {
+
+                                                positionDropdown(select);
+
+                                            }
+
+                                        });
+
+                                    });
+
+                                });
+                            </script>
+                        </section>
+
+                        <!-- Add tracking details - screenshot uploaded -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">ADD TRACKING DETAIL - screenshot uploaded:</h3>
+
+                            <!-- tracking details form -->
+                            <div class="flex flex-col gap-4 px-2 py-4 md:px-4">
+                                <div class="flex flex-col gap-4">
+                                    <!-- select-dropdown -->
+                                    <div data-tracking-detail-select-container class="relative flex w-full">
+                                        <div data-tracking-detail-select class="w-full cursor-pointer border-none">
+                                            <div data-value="manual-enter-tracking-details" data-tracking-detail-select-trigger class="w-full flex items-center gap-2.5 pl-2.5 pr-[0.9375rem] py-2 border-b border-[#344054] rounded-t-lg bg-white dark:border-[#766d61] dark:bg-[#181a1b]">
+                                                <div class="flex items-center gap-2 flex-1">
+                                                    <img data-tracking-detail-select-trigger-icon src="https://i.ibb.co.com/YTPQMXgk/write.webp" alt="write" class="w-6 h-6 [filter:brightness(0)_saturate(100%)]">
+                                                    <div class="flex flex-col">
+                                                        <h4 data-tracking-detail-select-trigger-title class="text-sm leading-6 font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Manual enter tracking details</h4>
+                                                        <span data-tracking-detail-select-trigger-text class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">We will share these information to @fan</span>
+                                                    </div>
+                                                </div>
+                                                <img data-tracking-detail-select-arrow class="select-arrow h-6 w-6 transition-transform [filter:brightness(0)_saturate(100%)_invert(22%)_sepia(11%)_saturate(1594%)_hue-rotate(179deg)_brightness(93%)_contrast(86%)]" src="https://i.ibb.co.com/WpfP7SBK/arrow2-down.webp" alt="arrow2 down" />
+                                            </div>
+
+                                            <div data-tracking-detail-select-options-container data-value="upload-screenshot" class="tracking-detail-options-container max-md:!fixed max-md:!inset-0 max-md:!flex max-md:!items-end max-md:bg-white/60 max-md:bg-[#181a1b]/60 max-md:backdrop-blur-[2.5px] absolute left-auto right-0 top-[calc(100%rem)] rounded-b-lg overflow-hidden z-[9999] w-full origin-top scale-95 opacity-0 transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] h-0 overflow-hidden pointer-events-none md:shadow-[0_3px_12px_0_#0000001A]">
+                                                <div class="flex flex-col gap-2 p-2 max-md:w-full max-md:!shadow-[0_0_12px_0_#00000033] backdrop-blur-[50px] bg-white/90 dark:bg-[#181a1b]/90">
+                                                    <!-- option -->
+                                                    <div
+                                                        data-tracking-detail-select-option
+                                                        data-value="manual-enter-tracking-details"
+                                                        data-icon="https://i.ibb.co.com/YTPQMXgk/write.webp"
+                                                        data-title="Manual enter tracking details"
+                                                        data-text="We will share these information to @fan"
+                                                        class="flex items-center gap-2 flex-1 cursor-pointer"
+                                                    >
+                                                        <img src="https://i.ibb.co.com/YTPQMXgk/write.webp" class="w-6 h-6 [filter:brightness(0)_saturate(100%)]">
+
+                                                        <div class="flex flex-col">
+                                                            <h4 class="text-sm leading-6 font-semibold text-[#0C111D] dark:text-[#dbd8d3]">
+                                                                Manual enter tracking details
+                                                            </h4>
+
+                                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">
+                                                                We will share these information to @fan
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- option -->
+                                                    <div
+                                                        data-tracking-detail-select-option
+                                                        data-value="upload-screenshot"
+                                                        data-icon="https://i.ibb.co.com/HZFyKbZ/upload.webp"
+                                                        data-title="Upload Screenshot"
+                                                        data-text="We will share this screenshot to @fan"
+                                                        class="flex items-center gap-2 flex-1 cursor-pointer"
+                                                    >
+                                                        <img src="https://i.ibb.co.com/HZFyKbZ/upload.webp" class="w-6 h-6 [filter:brightness(0)_saturate(100%)]">
+
+                                                        <div class="flex flex-col">
+                                                            <h4 class="text-sm leading-6 font-semibold text-[#0C111D] dark:text-[#dbd8d3]">
+                                                                Upload Screenshot
+                                                            </h4>
+
+                                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">
+                                                                We will share this screenshot to @fan
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <select class="dash-real-select hidden" name="dropdown-select" required>
+                                            <option value="manual-enter-tracking-details">
+                                                Manual enter tracking details
+                                            </option>
+                                            <option value="upload-screenshot">
+                                                Upload Screenshot
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <!-- dropdown-content -->
+                                    <div class="flex flex-col gap-4">
+                                        <!-- manual-enter-tracking-details-container -->
+                                        <div data-tracking-detail-section="manual-enter-tracking-details" class="flex flex-col gap-4">
+                                            <!-- input-wrapper -->
+                                            <div class="flex flex-col gap-4">
+                                                <div data-bank-swift-bic-code class="flex flex-col gap-1.5 group/input-container">
+                                                    <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Courier</label>
+                                                
+                                                    <!-- input-field -->
+                                                    <div class="flex items-center gap-2 px-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                                        <div class="flex items-center gap-2 w-full">
+                                                            <input type="text" placeholder="Enter Courier Name" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                                        
+                                                            <div class="relative inline-flex overflow-hidden w-4 h-4 cursor-pointer group hover:overflow-visible">
+                                                                <!-- Icon -->
+                                                                <img src="https://i.ibb.co.com/Hp1tznKk/help-circle.webp" alt="help circle" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]">
+                                                                <!-- Tooltip -->
+                                                                <div class="absolute z-[2] flex flex-col items-start text-center min-w-[18.75rem] md:w-max
+                                                                    opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                                                                    text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg
+                                                                    bg-[#101828] dark:bg-[rgba(14,19,32,1)] dark:text-[#e8e6e3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
+                                                                    -right-2 bottom-full -translate-y-2
+                                                                    before:content-[''] before:absolute before:w-0 before:h-0 before:right-2.5 before:bottom-[-5px] before:border-[6px] before:border-b-0 before:border-l-transparent before:border-r-transparent before:border-t-[rgba(16,24,40)]"
+                                                                >
+                                                                    <p class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">Enter Courier Name</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- error-text -->
+                                                    <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- input-wrapper -->
+                                            <div class="flex flex-col gap-4">
+                                                <div data-bank-swift-bic-code class="flex flex-col gap-1.5 group/input-container">
+                                                    <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Tracking number/ID</label>
+                                                
+                                                    <!-- input-field -->
+                                                    <div class="flex items-center gap-2 px-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                                        <div class="flex items-center gap-2 w-full">
+                                                            <input type="text" placeholder="Tracking Number/ID" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                                        
+                                                            <div class="relative inline-flex overflow-hidden w-4 h-4 cursor-pointer group hover:overflow-visible">
+                                                                <!-- Icon -->
+                                                                <img src="https://i.ibb.co.com/Hp1tznKk/help-circle.webp" alt="help circle" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]">
+                                                                <!-- Tooltip -->
+                                                                <div class="absolute z-[2] flex flex-col items-start text-center min-w-[18.75rem] md:w-max
+                                                                    opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                                                                    text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg
+                                                                    bg-[#101828] dark:bg-[rgba(14,19,32,1)] dark:text-[#e8e6e3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
+                                                                    -right-2 bottom-full -translate-y-2
+                                                                    before:content-[''] before:absolute before:w-0 before:h-0 before:right-2.5 before:bottom-[-5px] before:border-[6px] before:border-b-0 before:border-l-transparent before:border-r-transparent before:border-t-[rgba(16,24,40)]"
+                                                                >
+                                                                    <p class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">Enter Tracking Number/ID</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- error-text -->
+                                                    <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div data-tracking-detail-section="upload-screenshot" class="hidden flex flex-col">
+                                            <!-- upload-container -->
+                                            <div data-media-upload="" class="hidden cursor-pointer border-2 border-transparent bg-[rgba(0,0,0,0.05)] rounded-xl px-6 py-4 relative h-max w-full flex flex-col items-center justify-center hover:border-[#0c111d] dark:bg-[#181a1b]/5 dark:hover:border-[#857c6d] hover:bg-[rgba(0,0,0,0.10)] dark:hover:bg-[rgba(0,0,0,0.05)] group/upload sm:h-[16.5rem] md:h-auto">
+                                                <div data-media-upload-input-wrap="" class="gap-3 w-full flex flex-col justify-center items-center self-stretch">
+                                                    <div class="flex justify-center items-center w-10 h-10 rounded-lg shadow-[0px_1px_2px_0px_#1018280D] bg-[#07F468] group-hover/upload:bg-[#0C111D] dark:bg-[#06c454] dark:group-hover/upload:bg-[#162036]">
+                                                        <img src="https://i.ibb.co.com/9JDWMW1/upload-03.webp" alt="upload 03" class="w-5 h-5 [filter:brightness(0)] group-hover/upload:[filter:brightness(0)_saturate(100%)_invert(65%)_sepia(22%)_saturate(4910%)_hue-rotate(97deg)_brightness(113%)_contrast(94%)]">
+                                                    </div>
+                                                    <div class="flex flex-col gap-1 text-center">
+                                                        <p class="text-sm text-center text-[#475467] dark:text-[#b1aba0]"><span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Select Image</span> Upload single image here </p>
+                                                        <p class="text-xs leading-normal text-[#475467] dark:text-[#b1aba0]">JPEG AND PNG. (Max size: 800x400px)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- uploaded-container -->
+                                            <div class="flex w-full aspect-video relative">
+                                                <img src="https://i.ibb.co.com/nMgQC5R7/hero-bg-video-2.webp" alt="hero bg video 2" class="w-full h-full object-cover">
+                                                
+                                                <!-- expand-button -->
+                                                <button class="absolute top-0 right-0 flex justify-center items-center w-6 h-6 bg-[#FF4405] z-[1] dark:bg-[#c93300]">
+                                                    <img src="https://i.ibb.co.com/YMvbDsR/trash-03.webp" alt="trash-03" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(5%)_saturate(7497%)_hue-rotate(193deg)_brightness(114%)_contrast(105%)]">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Delivery option -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">Delivery Option:</h3>
+
+                            <div class="flex flex-col md:p-4 md:gap-4">
+                                <div class="flex flex-col gap-4 px-2 py-4 md:p-0">
+                                    <!-- message to creator -->
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex flex-col gap-1.5 group/input-container">
+                                            <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Message to @creator</label>
+
+                                            <!-- text-area -->
+                                            <div class="flex items-center gap-2 p-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white dark:bg-[#181a1b] dark:border-[#3b4043]">
+                                                <textarea name="" id="" rows="5" placeholder="Enter message..." class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent [field-sizing:content] focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">Here is the description of how I want my socks to look like Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                                            </div>
+
+                                            <!-- error-text -->
+                                            <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- deliver options -->
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex flex-col gap-1.5 group/input-container">
+                                            <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Delivery Options</label>
+
+                                            <div class="flex shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-black bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#181a1b]">
+                                                <!-- input-wrapper -->
+                                                <div class="flex items-center pl-3 py-2 flex-1">
+                                                    <input type="text" placeholder="Enter duration" value="4 weeks" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                                </div>
+
+                                                <!-- select-dropdown -->
+                                                <div id="select-dropdown"
+                                                    class="select-dropdown relative z-[10000] flex">
+                                                    <div class="country-select cursor-pointer border-none">
+                                                        <div class="dash-select__trigger w-full flex items-center py-2 px-3">
+                                                            <span class="text-base flex-grow text-[#344054] dark:text-[#bdb8af] capitalize text-balance">$25</span>
+                                                            <img class="select-arrow h-5 w-5 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]" src="https://i.ibb.co.com/WpfP7SBK/arrow2-down.webp" alt="arrow2 down">
+                                                        </div>
+                                                        <div class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top shadow-lg transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] upward scale-95 opacity-0 pointer-events-none h-0 overflow-hidden">
+                                                            <div class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]">
+                                                                <div class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                                    <div class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                        <span class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">$25</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                                    <div class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                        <span class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">$50</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="option flex items-center justify-center gap-[0.625rem] hover:bg-white p-[0.75rem] dark:hover:bg-[#e8e6e3]">
+                                                                    <div class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                        <span class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">$100</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <select class="dash-real-select hidden" name="country-select" required="">
+                                                        <option value="hong-kong">Hong Kong</option>
+                                                        <option value="australia">Australia</option>
+                                                        <option value="usa">USA</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Clip duration -->
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex flex-col gap-1.5 group/input-container">
+                                            <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Clip duration</label>
+
+                                            <!-- input-field -->
+                                            <div class="flex items-center gap-2 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] dark:border-[#3b4043]">
+                                                <div class="flex items-center h-full w-max px-3">
+                                                    <span class="text-base text-[#475467] dark:text-[#b1aba0]">25 minutes</span>
+                                                </div>
+                                                <div class="flex items-center gap-2 flex-1 px-3">
+                                                    <input type="text" placeholder="$25" value="" class="text-base text-right placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Special request -->
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex flex-col gap-1.5 group/input-container">
+                                            <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Special request</label>
+
+                                            <!-- input-field -->
+                                            <div class="flex items-center gap-2 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] dark:border-[#3b4043]">
+                                                <div class="flex items-center h-full w-max px-3">
+                                                    <span class="text-base text-[#475467] dark:text-[#b1aba0]">Exclusivity</span>
+                                                </div>
+                                                <div class="flex items-center gap-2 flex-1 px-3">
+                                                    <input type="text" placeholder="$25" value="" class="text-base text-right placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- T shirt -->
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex flex-col gap-1.5 group/input-container">
+                                            <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">T shirt</label>
+
+                                            <!-- input-field -->
+                                            <div class="flex items-center gap-2 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] dark:border-[#3b4043]">
+                                                <div class="flex items-center h-full w-max px-3">
+                                                    <span class="text-base text-[#475467] dark:text-[#b1aba0]">Medium</span>
+                                                </div>
+                                                <div class="flex items-center gap-2 flex-1 px-3">
+                                                    <input type="text" placeholder="$25" value="" class="text-base text-right placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Trouser -->
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex flex-col gap-1.5 group/input-container">
+                                            <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Trouser</label>
+
+                                            <!-- input-field -->
+                                            <div class="flex items-center gap-2 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] dark:border-[#3b4043]">
+                                                <div class="flex items-center h-full w-max px-3">
+                                                    <span class="text-base text-[#475467] dark:text-[#b1aba0]">Extra Large</span>
+                                                </div>
+                                                <div class="flex items-center gap-2 flex-1 px-3">
+                                                    <input type="text" placeholder="$25" value="" class="text-base text-right placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Adjustment -->
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex flex-col gap-1.5 group/input-container">
+                                            <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Adjustment</label>
+
+                                            <!-- input-field -->
+                                            <div class="flex items-center gap-2 pl-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                                <span class="text-base text-[#475467] dark:text-[#b1aba0]">$</span>
+                                                <div class="flex items-center gap-2 flex-1 px-3">
+                                                    <input type="number" placeholder="" value="5.00" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                                </div>
+
+                                                <button class="flex justify-center items-center px-3">
+                                                    <img src="https://i.ibb.co.com/Rksp0mth/chevron-selector-vertical.webp" alt="chevron selector vertical" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(5%)_sepia(10%)_saturate(3687%)_hue-rotate(185deg)_brightness(100%)_contrast(96%)]">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col items-end gap-2.5 md:flex-row md:justify-between md:gap-2.5">
+                                    <div class="flex flex-col items-end gap-0.5 px-2 md:items-start md:px-0">
+                                        <span class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">Total price after adjustment</span>
+                                        <span class="text-2xl font-semibold text-[#0C111D] dark:text-[#dbd8d3]">USD$ 337.9</span>
+                                        <p class="text-xs leading-normal text-[#0C111D] dark:text-[#dbd8d3]">(<span class="font-semibold">USD$ 332.9</span> before adjustment)</p>
+                                    </div>
+
+                                    <!-- button -->
+                                    <div class="filter drop-shadow-[2px_3px_0px_#000000] group hover:drop-shadow-[2px_3px_0px_#07F468]">
+                                        <button class="flex justify-center items-center gap-2.5 pl-[20.5px] pr-2 min-h-[2rem] [clip-path:polygon(12.5px_0%,100%_0%,100%_100%,0%_100%)] bg-[#07F468] group-hover:bg-black">
+                                            <span class="text-base font-medium text-black group-hover:text-[#07F468]">SUBMIT</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- custom-select-dropdown -->
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    // Initialize all dropdowns on the page
+                                    document.querySelectorAll('.country-select').forEach(countrySelect => {
+                                        const selectDropdown = countrySelect.closest('.select-dropdown');
+                                        const trigger = countrySelect.querySelector('.dash-select__trigger span');
+                                        const arrow = countrySelect.querySelector('.select-arrow');
+                                        const options = countrySelect.querySelectorAll('.option');
+                                        const realSelect = selectDropdown.querySelector('.dash-real-select');
+                                        const optionsContainer = countrySelect.querySelector('.dash-options-container');
+
+                                        // Set initial value
+                                        if (realSelect) {
+                                            realSelect.value = 'yearly';
+                                        }
+
+                                        // Toggle dropdown with smooth transitions
+                                        countrySelect.addEventListener('click', function (e) {
+                                            e.stopPropagation();
+
+                                            const isOpening = !optionsContainer.classList.contains('open');
+
+                                            // Close all other selects first
+                                            document.querySelectorAll('.country-select').forEach(s => {
+                                                if (s !== countrySelect) {
+                                                    closeDropdown(s);
+                                                }
+                                            });
+
+                                            if (isOpening) {
+                                                // Position dropdown based on available space
+                                                positionDropdown(countrySelect);
+                                                openDropdown(countrySelect);
+                                            } else {
+                                                closeDropdown(countrySelect);
+                                            }
+                                        });
+
+                                        // Handle option selection
+                                        options.forEach(option => {
+                                            option.addEventListener('click', function (e) {
+                                                e.stopPropagation();
+
+                                                const selectedText = this.querySelector('span').textContent;
+                                                if (trigger) trigger.textContent = selectedText;
+                                                if (realSelect) realSelect.value = selectedText.toLowerCase();
+
+                                                // Close the dropdown
+                                                closeDropdown(countrySelect);
+
+                                                // Trigger change event on the real select
+                                                if (realSelect) realSelect.dispatchEvent(new Event('change'));
+                                            });
+                                        });
+
+                                        // Position dropdown up or down based on available space
+                                        function positionDropdown(select) {
+                                            const optionsContainer = select.querySelector('.dash-options-container');
+                                            if (!optionsContainer) return;
+
+                                            const rect = select.getBoundingClientRect();
+                                            const spaceBelow = window.innerHeight - rect.bottom;
+                                            const spaceAbove = rect.top;
+                                            const optionsHeight = optionsContainer.scrollHeight;
+
+                                            optionsContainer.classList.remove('upward', 'downward');
+
+                                            if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                                                optionsContainer.classList.add('upward');
+                                                optionsContainer.style.top = 'auto';
+                                                optionsContainer.style.bottom = 'calc(100% + 0.5rem)';
+                                            } else {
+                                                optionsContainer.classList.add('downward');
+                                                optionsContainer.style.top = 'calc(100% + 0.5rem)';
+                                                optionsContainer.style.bottom = 'auto';
+                                            }
+                                        }
+
+                                        function openDropdown(select) {
+                                            const optionsContainer = select.querySelector('.dash-options-container');
+                                            const arrow = select.querySelector('.select-arrow');
+                                            if (!optionsContainer || !arrow) return;
+
+                                            optionsContainer.classList.add('open');
+                                            arrow.classList.add('rotate-180');
+
+                                            // Apply visible state (no height transition)
+                                            optionsContainer.classList.remove(
+                                                'scale-95',
+                                                'opacity-0',
+                                                'pointer-events-none',
+                                                'h-0',
+                                                'overflow-hidden'
+                                            );
+                                            optionsContainer.classList.add(
+                                                'scale-100',
+                                                'opacity-100',
+                                                'pointer-events-auto',
+                                                'h-auto',
+                                                'overflow-auto'
+                                            );
+                                        }
+
+                                        function closeDropdown(select) {
+                                            const optionsContainer = select?.querySelector('.dash-options-container');
+                                            const arrow = select?.querySelector('.select-arrow');
+                                            if (!optionsContainer || !arrow) return;
+
+                                            optionsContainer.classList.remove('open');
+                                            arrow.classList.remove('rotate-180');
+
+                                            optionsContainer.classList.remove(
+                                                'scale-100',
+                                                'opacity-100',
+                                                'pointer-events-auto',
+                                                'h-auto',
+                                                'overflow-auto'
+                                            );
+                                            optionsContainer.classList.add(
+                                                'scale-95',
+                                                'opacity-0',
+                                                'pointer-events-none',
+                                                'h-0',
+                                                'overflow-hidden'
+                                            );
+                                        }
+
+                                    });
+
+                                    // Close dropdowns when clicking outside
+                                    document.addEventListener('click', function () {
+                                        document.querySelectorAll('.country-select').forEach(select => {
+                                            closeDropdown(select);
+                                        });
+                                    });
+
+                                    // Reposition dropdowns on window resize
+                                    window.addEventListener('resize', function () {
+                                        document.querySelectorAll('.country-select').forEach(select => {
+                                            const optionsContainer = select.querySelector('.dash-options-container');
+                                            if (optionsContainer && optionsContainer.classList.contains('open')) {
+                                                positionDropdown(select);
+                                            }
+                                        });
+                                    });
+                                });
+                            </script>
+                        </section>
+
                         <!-- notificatin/alert -->
                         <section class="flex flex-col gap-4 py-2">
                             <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">Notifications/alert</h3>
