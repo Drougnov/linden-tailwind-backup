@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payout Popup</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-white font-sans p-0 m-0 box-border overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#181a1b] !overflow-hidden"> <!-- Add overflow-hidden to body when popup opened -->
+    <!-- main-wrapper -->
+    <div class="flex flex-col md:flex-row">
+      <!-- dashboard-template-main -->
+      <div class="w-full relative z-[2] bg-transparent before:content-[''] before:fixed before:bg-[url('https://i.ibb.co.com/Y4zzyNCR/mobile-fansocial-gradient.png')] md:before:bg-[url('https://i.ibb.co.com/spGHXsL9/desktop-fansocial-gradient.png')] before:bg-cover before:bg-center before:w-screen before:h-screen before:bg-no-repeat before:left-0 before:top-0 before:pointer-events-none">
+
+        <!-- template starts from here -->
+
+        <!-- popup start -->
+        <div class="fixed inset-0 w-screen h-screen overflow-hidden z-[9999]">
+            <!-- popup-inner-wrapper -->
+            <div class="absolute top-0 right-0 w-full h-screen overflow-hidden md:w-[42.125rem]">
+                <!-- popup-container -->
+                <div class="flex flex-col h-full bg-[#f9fafb]/70  overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] relative md:shadow-[0px_0px_10px_0px_#00000040] dark:bg-[#1b1d1e]/70">
+                    <!-- blur-overlay -->
+                    <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1] md:backdrop-blur-[10px]"></div>
+
+                    <div class="flex flex-col gap-4">
+                        <!-- header -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">Header:</h3>
+
+                            <!-- header -->
+                            <div class="flex w-full">
+                                <!-- thumbnail-container -->
+                                <div class="flex justify-center items-center w-[3.25rem] h-[3.25rem] min-w-[3.25rem] p-2.5 bg-[#FEE8D6] md:w-[3.5rem] md:h-[3.5rem] md:min-w-[3.5rem] dark:bg-[#4a2202]">
+                                    <img src="https://i.ibb.co.com/tpcX2XS5/film-02.webp" alt="film 02" class="w-9 h-9 min-w-[2.25rem] [filter:brightness(0)_saturate(100%)_invert(58%)_sepia(19%)_saturate(6217%)_hue-rotate(325deg)_brightness(105%)_contrast(111%)]">
+                                </div>
+
+                                <div class="flex justify-between gap-1 p-2 bg-[#F9FAFB] w-full md:px-4 dark:bg-[#1b1d1e]">
+                                    <div class="flex flex-col md:gap-1">
+                                        <div class="flex items-center gap-1">
+                                            <h1 class="text-xs leading-normal font-semibold text-[#FF6C5A] dark:text-[#ff6b59]">Likes</h1>
+                                            <span class="text-xs leading-normal text-[#FF6C5A] dark:text-[#ff6b59]">#123456</span>
+                                        </div>
+                                        <p class="text-xs leading-normal text-[#FF6C5A] dark:text-[#ff6b59]">Received on 22 Jan 2024</p>
+                                    </div>
+
+                                    <!-- close-button -->
+                                    <button class="flex justify-center items-center w-6 h-6">
+                                        <img src="https://i.ibb.co.com/5WjG5Fkv/close-cross.webp" alt="close cross" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]">
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- processes -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold text-black px-4 dark:text-[#e8e6e3]">Processes:</h3>
+
+                            <!-- Process -->
+                            <div class="flex flex-col gap-3 px-2 py-3 w-full [background:linear-gradient(180deg,#F5F5DC_0%,#FFE7D5_100%)] md:gap-6 md:px-4 md:py-6">
+                                <div class="flex flex-col gap-1 md:gap-4">
+                                    <h1 class="text-lg font-semibold text-[#FF6C5A] md:text-2xl dark:text-[#ff6b59]">You have received a new order request from @fan.</h1>
+                                    <p class="text-sm text-[#0C111D] md:text-base dark:text-[#dbd8d3]">Please message @fan to arrive a mutual consent for this order. They will be notified to pay once you agree and confirm this order</p>
+                                </div>
+
+                                <!-- status-bar -->
+                                <div class="flex w-full">
+                                    <!-- Processing -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar filled">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Processing</h4>
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Payment</h4>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shipping -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Shipping</h4>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shipped -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Shipped</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Process -->
+                            <div class="flex flex-col gap-3 px-2 py-3 w-full [background:linear-gradient(180deg,#F5F5DC_0%,#FFE7D5_100%)] md:gap-6 md:px-4 md:py-6">
+                                <div class="flex flex-col gap-1 md:gap-4">
+                                    <h1 class="text-lg font-semibold text-[#FF6C5A] md:text-2xl dark:text-[#ff6b59]">You have declined this order</h1>
+                                    <p class="text-sm text-[#0C111D] md:text-base dark:text-[#dbd8d3]">You have declined this custom request from @fan.<br>reason: Unsuccessful negotiation</p>
+                                </div>
+                            </div>
+
+                            <!-- Process -->
+                            <div class="flex flex-col gap-3 px-2 py-3 w-full [background:linear-gradient(180deg,#F5F5DC_0%,#FFE7D5_100%)] md:gap-6 md:px-4 md:py-6">
+                                <div class="flex flex-col gap-1 md:gap-4">
+                                    <h1 class="text-lg font-semibold text-[#FF6C5A] md:text-2xl dark:text-[#ff6b59]">Cancelled</h1>
+                                    <div class="flex flex-col gap-3.5 md:gap-4">
+                                        <p class="text-sm text-[#0C111D] md:text-base dark:text-[#dbd8d3]">Your custom order with @creator is cancelled.</p>
+                                        <p class="text-sm text-[#0C111D] md:text-base dark:text-[#dbd8d3]">Reason: Payment overdue.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Process -->
+                            <div class="flex flex-col gap-3 px-2 py-3 w-full [background:linear-gradient(180deg,#F5F5DC_0%,#FFE7D5_100%)] md:gap-6 md:px-4 md:py-6">
+                                <div class="flex flex-col gap-1 md:gap-4">
+                                    <h1 class="text-lg font-semibold text-[#FF6C5A] md:text-2xl dark:text-[#ff6b59]">Payment request sent to @fan</h1>
+                                    <p class="text-sm text-[#0C111D] md:text-base dark:text-[#dbd8d3]">@fan has 7 days to pay for this order.</p>
+                                </div>
+
+                                <!-- status-bar -->
+                                <div class="flex w-full">
+                                    <!-- Processing -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar filled">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Processing</h4>
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar filled">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Payment</h4>
+                                            <span class="text-[0.625rem] leading-4 text-[#FF0066] md:leading-[1.125rem] dark:text-[#ff1a76]">7 days left to pay</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shipping -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Shipping</h4>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shipped -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Shipped</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Process -->
+                            <div class="flex flex-col gap-3 px-2 py-3 w-full [background:linear-gradient(180deg,#F5F5DC_0%,#FFE7D5_100%)] md:gap-6 md:px-4 md:py-6">
+                                <div class="flex flex-col gap-1 md:gap-4">
+                                    <h1 class="text-lg font-semibold text-[#FF6C5A] md:text-2xl dark:text-[#ff6b59]">Payment received from @fan.</h1>
+                                    <p class="text-sm text-[#0C111D] md:text-base dark:text-[#dbd8d3]">Please add tracking information by 30 Nov, 2023</p>
+                                </div>
+
+                                <!-- button -->
+                                <div class="filter drop-shadow-[4px_3px_0px_#000000] group hover:drop-shadow-[4px_3px_0px_#07F468]">
+                                    <button class="flex justify-center items-center gap-2.5 pl-2 pr-[20.5px] min-h-[2rem] [clip-path:polygon(calc(100%-12.5px)_0%,100%_100%,0%_100%,0%_0%)] bg-[#07F468] group-hover:bg-black">
+                                        <img src="https://i.ibb.co.com/gL3bHtZc/tracking-location.webp" alt="tracking location" class="w-5 h-5 [filter:brightness(0)_saturate(100%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(73%)_sepia(24%)_saturate(6026%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]" />
+                                        <span class="text-base font-medium text-black group-hover:text-[#07F468]">Add tracking detail</span>
+                                    </button>
+                                </div>
+
+                                <!-- status-bar -->
+                                <div class="flex w-full">
+                                    <!-- Processing -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar filled">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Processing</h4>
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar filled">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Payment</h4>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shipping -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar filled">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Shipping</h4>
+                                            <span class="text-[0.625rem] leading-4 text-[#FF6C5A] md:leading-[1.125rem] dark:text-[#ff6b59]">Due 30 Nov,2023</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shipped -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Shipped</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Process -->
+                            <div class="flex flex-col gap-3 px-2 py-3 w-full [background:linear-gradient(180deg,#F5F5DC_0%,#FFE7D5_100%)] md:gap-6 md:px-4 md:py-6">
+                                <div class="flex flex-col gap-1 md:gap-4">
+                                    <h1 class="text-lg font-semibold text-[#FF6C5A] md:text-2xl dark:text-[#ff6b59]">Payment received from @fan.</h1>
+                                    <p class="text-sm text-[#0C111D] md:text-base dark:text-[#dbd8d3]">Please add tracking information by 30 Nov, 2023</p>
+                                </div>
+
+                                <!-- status-bar -->
+                                <div class="flex w-full">
+                                    <!-- Processing -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar filled">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Processing</h4>
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar filled">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Payment</h4>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shipping -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar filled active">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Shipping</h4>
+                                            <span class="text-[0.625rem] leading-4 text-[#FF0004] md:leading-[1.125rem] dark:text-[#ff1a1e]">Due 30 Nov,2023</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shipped -->
+                                    <div class="flex flex-col gap-2 flex-1 group/status-bar">
+                                        <!-- bar -->
+                                        <div class="w-full h-[0.4375rem] bg-white group-[.filled]/status-bar:bg-[#FFBB54] group-[.active]/status-bar:!bg-[#FF0004] dark:bg-[#181a1b] dark:group-[.filled]/status-bar:bg-[#995c00] dark:group-[.active]/status-bar:!bg-[#cc0003]"></div>
+                                    
+                                        <div class="flex flex-col items-center md:gap-0.5">
+                                            <h4 class="text-xs leading-normal text-[#FF6C5A] group-[.filled]/status-bar:font-semibold group-[.active]/status-bar:text-[#FF0004] dark:text-[#ff6b59] dark:group-[.active]/status-bar:text-[#ff1a1e]">Shipped</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Order Summary (model) -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">Order Summary (model):</h3>
+
+                            <!-- order-summary -->
+                            <div class="flex flex-col gap-4 px-2 md:px-4 md:py-6">
+                                <h3 class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">Order Summary</h3>
+
+                                <!-- from -->
+                                <div class="flex flex-col gap-1">
+                                    <div class="flex gap-2">
+                                        <img src="https://i.ibb.co.com/qMKJ7Qnf/user-profile.webp" alt="user profile" class="w-4 h-4 min-w-[1rem] [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                        <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">From</span>
+                                    </div>
+
+                                    <div class="flex justify-between items-center gap-1 flex-wrap">
+                                        <div class="flex items-center gap-2 md:pl-6">
+                                            <div class="flex justify-center items-center w-6 h-6">
+                                                <img  src="https://i.ibb.co.com/tMwcx1KR/avatar-6.webp" alt="avatar 6" class="w-full h-full">
+                                            </div>
+
+                                            <div class="flex flex-col md:flex-row md:items-center md:gap-1">
+                                                <h3 class="text-sm font-medium text-[#0C111D] dark:text-[#dbd8d3]">@Mangoes</h3>
+                                                <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">email@email.com</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- button -->
+                                        <div class="filter drop-shadow-[3px_3px_0px_#07F468] group hover:drop-shadow-[3px_3px_0px_#000000]">
+                                            <button class="flex justify-center items-center gap-2.5 pl-[20.5px] pr-2 min-h-[2rem] [clip-path:polygon(12.5px_0%,100%_0%,100%_100%,0%_100%)] bg-black group-hover:bg-[#07F468]">
+                                                <img src="https://i.ibb.co.com/hRjzPn6L/chat.webp" alt="chat" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(73%)_sepia(24%)_saturate(6026%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] group-hover:[filter:brightness(0)_saturate(100%)]" />
+                                                <span class="text-base font-medium text-[#07F468] group-hover:text-black">OPEN CHAT</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- message from fan -->
+                                <div class="flex flex-col gap-1">
+                                    <div class="flex gap-2">
+                                        <img src="https://i.ibb.co.com/ksyDfMyH/file.webp" alt="file" class="w-4 h-4 min-w-[1rem] [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                        <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">Message from Fan</span>
+                                    </div>
+
+                                    <div class="flex flex-col md:pl-6">
+                                        <p class="text-sm text-[#0C111D] dark:text-[#dbd8d3]">Here is some order notes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis tortor at sem luctus blandit ac ac tortor. Vivamus lobortis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Order Summary (fan) -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">Order Summary (fan):</h3>
+
+                            <!-- order-summary -->
+                            <div class="flex flex-col gap-4 px-2 md:px-4 md:py-6">
+                                <h3 class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">Order Summary</h3>
+
+                                <!-- to -->
+                                <div class="flex flex-col gap-1">
+                                    <div class="flex gap-2">
+                                        <img src="https://i.ibb.co.com/qMKJ7Qnf/user-profile.webp" alt="user profile" class="w-4 h-4 min-w-[1rem] [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                        <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">To</span>
+                                    </div>
+
+                                    <div class="flex justify-between items-center gap-1 flex-wrap">
+                                        <div class="flex items-center gap-2 md:pl-6">
+                                            <div class="flex justify-center items-center w-6 h-6">
+                                                <img  src="https://i.ibb.co.com/tMwcx1KR/avatar-6.webp" alt="avatar 6" class="w-full h-full">
+                                            </div>
+
+                                            <div class="flex flex-col md:flex-row md:items-center md:gap-2">
+                                                <div class="flex items-center gap-1">
+                                                    <h3 class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">Princess Carrot Pop</h3>
+                                                    <img src="https://i.ibb.co.com/Z66C5Rqj/verified-tick-blue.webp" alt="verified tick blue" class="w-2.5 h-2.5">
+                                                </div>
+                                                <span class="text-xs leading-normal font-medium text-[#98A2B3] dark:text-[#b0a99e]">email@email.com</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- button -->
+                                        <div class="filter drop-shadow-[3px_3px_0px_#07F468] group hover:drop-shadow-[3px_3px_0px_#000000]">
+                                            <button class="flex justify-center items-center gap-2.5 pl-[20.5px] pr-2 min-h-[2rem] [clip-path:polygon(12.5px_0%,100%_0%,100%_100%,0%_100%)] bg-black group-hover:bg-[#07F468]">
+                                                <img src="https://i.ibb.co.com/hRjzPn6L/chat.webp" alt="chat" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(73%)_sepia(24%)_saturate(6026%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] group-hover:[filter:brightness(0)_saturate(100%)]" />
+                                                <span class="md:hidden text-base font-medium text-[#07F468] group-hover:text-black">CHAT HISTORY</span>
+                                                <span class="hidden md:inline text-base font-medium text-[#07F468] group-hover:text-black">OPEN CHAT</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="md:mt-1 md:pl-6">
+                                        <div class="flex flex-col gap-1 p-2 bg-white dark:bg-[#181a1b]">
+                                            <h4 class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">I want a pair of white socks please</h4>
+                                            <p class="text-sm text-black dark:text-[#e8e6e3]">Here is the description of how I want my socks to look like Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- message from fan -->
+                                <div class="flex flex-col gap-1">
+                                    <div class="flex gap-2">
+                                        <img src="https://i.ibb.co.com/ksyDfMyH/file.webp" alt="file" class="w-4 h-4 min-w-[1rem] [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                        <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">Message from Fan</span>
+                                    </div>
+
+                                    <div class="flex flex-col md:pl-6">
+                                        <p class="text-sm text-[#0C111D] dark:text-[#dbd8d3]">Here is some order notes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis tortor at sem luctus blandit ac ac tortor. Vivamus lobortis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Order Table -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">Order Table</h3>
+
+                            <div class="flex flex-col gap-3 px-2 py-4 bg-white dark:bg-[#181a1b]">
+                                <!-- table -->
+                                <div class="flex flex-col gap-3 px-2">
+                                    <!-- row -->
+                                    <div class="flex justify-between gap-[0.3125rem]">
+                                        <span class="text-xs leading-normal flex-1 text-[#0C111D] dark:text-[#dbd8d3]">Delivery options</span>
+                                    
+                                        <div class="flex items-center pl-2 flex-1">
+                                            <span class="text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3]">4 weeks</span>
+                                        </div>
+
+                                        <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">$25</span>
+                                    </div>
+
+                                    <!-- row -->
+                                    <div class="flex justify-between gap-[0.3125rem]">
+                                        <span class="text-xs leading-normal flex-1 text-[#0C111D] dark:text-[#dbd8d3]">Clip duration</span>
+                                    
+                                        <div class="flex items-center pl-2 flex-1">
+                                            <span class="text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3]">25 minutes</span>
+                                        </div>
+
+                                        <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">$80</span>
+                                    </div>
+
+                                    <!-- row -->
+                                    <div class="flex justify-between gap-[0.3125rem]">
+                                        <span class="text-xs leading-normal flex-1 text-[#0C111D] dark:text-[#dbd8d3]">Special request</span>
+                                    
+                                        <div class="flex items-center pl-2 flex-1">
+                                            <span class="text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Exclusivity</span>
+                                        </div>
+
+                                        <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">$120</span>
+                                    </div>
+
+                                    <!-- row -->
+                                    <div class="flex justify-between gap-[0.3125rem]">
+                                        <span class="text-xs leading-normal flex-1 text-[#0C111D] dark:text-[#dbd8d3]">T Shirt</span>
+                                    
+                                        <div class="flex items-center pl-2 flex-1">
+                                            <span class="text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Medium</span>
+                                        </div>
+
+                                        <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">$20</span>
+                                    </div>
+
+                                    <!-- row -->
+                                    <div class="flex justify-between gap-[0.3125rem]">
+                                        <span class="text-xs leading-normal flex-1 text-[#0C111D] dark:text-[#dbd8d3]">Trouser</span>
+                                    
+                                        <div class="flex items-center pl-2 flex-1">
+                                            <span class="text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Extra Large</span>
+                                        </div>
+
+                                        <span class="text-sm font-semibold text-[#0C111D] dark:text-[#dbd8d3]">$22</span>
+                                    </div>
+                                </div>
+
+                                <!-- adjustment -->
+                                <div class="flex flex-col gap-4 pl-2 pt-2 border-t border-[#D0D5DD] dark:border-[#4a5568]">
+                                    <div class="flex justify-between items-center gap-1">
+                                        <span class="text-xs leading-normal text-[#0C111D] dark:text-[#dbd8d3]">Adjustment</span>
+                                    
+                                        <div class="flex justify-center items-center px-2 py-1 rounded-[1.25rem] bg-[#DCFAE6]">
+                                            <span class="text-sm font-semibold text-[#067647]">-USD$ 5</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-between items-center gap-3">
+                                    <div class="hidden md:block filter drop-shadow-[4px_3px_0px_#000000] group hover:drop-shadow-[4px_3px_0px_#07F468]" bis_skin_checked="1">
+                                        <button class="flex justify-center items-center gap-2.5 pl-2 pr-[20.5px] min-h-[2rem] [clip-path:polygon(calc(100%-12.5px)_0%,100%_100%,0%_100%,0%_0%)] bg-[#07F468] group-hover:bg-black">
+                                            <img src="https://i.ibb.co.com/LDtQg4d8/tick-circle.webp" alt="tick circle" class="w-5 h-5 [filter:brightness(0)_saturate(100%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(73%)_sepia(24%)_saturate(6026%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]">
+                                            <span class="text-base font-medium text-black group-hover:text-[#07F468]">CONFIRM & CREATE ORDER</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="flex items-center gap-2 ml-auto">
+                                        <span class="text-xs leading-normal font-semibold text-[#0C111D] dark:text-[#dbd8d3]">Total</span>
+                                        <span class="text-2xl font-semibold text-[#0C111D] dark:text-[#dbd8d3]">USD$ 337.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Payment -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">Payment:</h3>
+
+                            <div class="flex flex-col gap-4 px-2 md:p-4">
+                                <h3 class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">Payment</h3>
+
+                                <div class="flex justify-between gap-4">
+                                    <div class="flex flex-col gap-1 flex-1">
+                                        <div class="flex gap-2">
+                                            <img src="https://i.ibb.co.com/xS73h6R4/calender.webp" alt="calender" class="w-4 h-4 min-w-[1rem] [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">Payment date</span>
+                                        </div>
+
+                                        <span class="text-sm text-black md:pl-6 dark:text-[#e8e6e3]">01-03-2025</span>
+                                    </div>
+
+                                    <div class="flex flex-col gap-1 flex-1">
+                                        <div class="flex gap-2">
+                                            <img src="https://i.ibb.co.com/ZRh9vXv6/mail.webp" alt="mail" class="w-4 h-4 min-w-[1rem] [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">Email</span>
+                                        </div>
+
+                                        <span class="text-sm text-black md:pl-6 dark:text-[#e8e6e3]">mangoes@gmail.com</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 flex-1">
+                                    <div class="flex gap-2">
+                                        <img src="https://i.ibb.co.com/spSvN0bg/location-marker.webp" alt="location marker" class="h-4 [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                        <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">Shipping Address</span>
+                                    </div>
+
+                                    <span class="text-sm text-black md:pl-6 dark:text-[#e8e6e3]">10/F Block5, Fook Yip Bldg<br>Kwai Chung, Hong Kong</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Tracking Information -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">Tracking Information:</h3>
+
+                            <div class="flex flex-col gap-4 px-2 md:p-4">
+                                <div class="flex justify-between">
+                                    <h3 class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">Tracking information</h3>
+
+                                    <!-- button -->
+                                    <div class="filter drop-shadow-[2px_3px_0px_#000000] group hover:drop-shadow-[2px_3px_0px_#07F468]">
+                                        <button class="flex justify-center items-center gap-2.5 pl-[20.5px] pr-2 min-h-[2rem] [clip-path:polygon(100%_0%,100%_100%,12.5px_100%,0%_0%);] bg-[#07F468] group-hover:bg-black">
+                                            <img src="https://i.ibb.co.com/n9QRsgS/edit.webp" alt="edit" class="w-5 h-5 [filter:brightness(0)_saturate(100%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(73%)_sepia(24%)_saturate(6026%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]" />
+                                            <span class="text-base font-medium text-black group-hover:text-[#07F468]">Edit detail</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-between gap-4">
+                                    <div class="flex flex-col gap-1 flex-1">
+                                        <div class="flex gap-2">
+                                            <img src="https://i.ibb.co.com/tMS1xVbq/courier-van.webp" alt="courier van" class="w-4 h-4 min-w-[1rem] [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">Courier</span>
+                                        </div>
+
+                                        <span class="text-sm underline text-black md:pl-6 dark:text-[#e8e6e3]">DHL</span>
+                                    </div>
+
+                                    <div class="flex flex-col gap-1 flex-1">
+                                        <div class="flex gap-2">
+                                            <img src="https://i.ibb.co.com/VYS9SwY7/tracking-marker.webp" alt="tracking marker" class="w-4 h-4 min-w-[1rem] [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">Tracking number/ID</span>
+                                        </div>
+
+                                        <div class="flex items-center gap-2 md:pl-6">
+                                            <span data-tracking-number class="text-sm text-black dark:text-[#e8e6e3]">HG65TY782401</span>
+                                            <button data-tracking-copy-button class="flex justify-center items-center w-4 h-4 bg-transparent">
+                                                <img src="https://i.ibb.co.com/ksSB13F3/copy.webp" alt="copy" class="w-4 h-4 [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- copy text to clipboard -->
+                            <script>
+                                const trackingNumberCopyButton = document.querySelector('[data-tracking-copy-button]');
+                                const trackingNumber = document.querySelector('[data-tracking-number]');
+
+                                trackingNumberCopyButton.addEventListener('click', () => {
+                                    const text = trackingNumber.textContent.trim();
+
+                                    navigator.clipboard.writeText(text);
+                                });
+                            </script>
+                        </section>
+
+                        <!-- Tracking Information - screenshot -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">Tracking Information - Screenshot:</h3>
+
+                            <div class="flex flex-col gap-4 px-2 md:p-4">
+                                <div class="flex justify-between">
+                                    <h3 class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">Tracking information</h3>
+
+                                    <!-- button -->
+                                    <div class="filter drop-shadow-[2px_3px_0px_#000000] group hover:drop-shadow-[2px_3px_0px_#07F468]">
+                                        <button class="flex justify-center items-center gap-2.5 pl-[20.5px] pr-2 min-h-[2rem] [clip-path:polygon(100%_0%,100%_100%,12.5px_100%,0%_0%);] bg-[#07F468] group-hover:bg-black">
+                                            <img src="https://i.ibb.co.com/n9QRsgS/edit.webp" alt="edit" class="w-5 h-5 [filter:brightness(0)_saturate(100%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(73%)_sepia(24%)_saturate(6026%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]" />
+                                            <span class="text-base font-medium text-black group-hover:text-[#07F468]">Edit detail</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-between gap-4">
+                                    <div class="flex flex-col gap-1 flex-1">
+                                        <div class="flex gap-2">
+                                            <img src="https://i.ibb.co.com/99Zxm0HG/display.webp" alt="display" class="w-4 h-4 min-w-[1rem] [filter:brightness(0)_saturate(100%)_invert(54%)_sepia(56%)_saturate(1690%)_hue-rotate(323deg)_brightness(101%)_contrast(107%)]">
+                                            <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">Screenshot</span>
+                                        </div>
+
+                                        <div class="flex w-full aspect-video relative md:pl-6 md:max-w-[18.0625rem]">
+                                            <img src="https://i.ibb.co.com/nMgQC5R7/hero-bg-video-2.webp" alt="hero bg video 2" class="w-full h-full object-cover">
+                                            
+                                            <!-- expand-button -->
+                                            <button class="absolute top-0 right-0 flex justify-center items-center w-6 h-6 bg-[#FF6C5A] z-[1]">
+                                                <img src="https://i.ibb.co.com/ym3nr0T7/expand-01.webp" alt="expand 01" class="w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(5%)_saturate(7497%)_hue-rotate(193deg)_brightness(114%)_contrast(105%)]">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- notificatin/alert -->
+                        <section class="flex flex-col gap-4 py-2">
+                            <h3 class="text-sm font-semibold underline text-black px-4 dark:text-[#e8e6e3]">Notifications/alert</h3>
+                            
+                            <!-- alert -->
+                            <div class="w-full border-b-[0.5px] border-b-[#EAECF0] border-l-[0.1875rem] border-l-[#22CCEE] [background:linear-gradient(0deg,rgba(34,204,238,0.15),rgba(34,204,238,0.15)),linear-gradient(0deg,rgba(255,255,255,0.9),rgba(255,255,255,0.9))] dark:border-b-[#353a3c] dark:border-l-[#0e98b4]">
+                                <div class="w-full h-full flex justify-between gap-4 px-2 py-3 [background:linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.9)_100%)]">
+                                    <!-- thumbnail -->
+                                    <div class="flex justify-center items-center w-10 h-10 min-w-[2.5rem] rounded-lg bg-[#22ccee]/10 relative dark:bg-[#0e98b4]/10">
+                                        <img src="https://i.ibb.co.com/vxMgZvJD/hero-bg-image-1-1.webp" alt="hero bg image 1 1" class="w-full h-full object-cover rounded-full">
+                                        
+                                        <div class="absolute -bottom-2 -right-2 flex justify-center items-center w-[1.375rem] h-[1.375rem] rounded-lg bg-[#22ccee] dark:bg-[#0e98b4]">
+                                            <img src="https://i.ibb.co.com/tpcX2XS5/film-02.webp" alt="film 02" class="w-4 h-4 [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(93deg)_brightness(103%)_contrast(103%)]">
+                                        </div>
+                                    </div>
+
+                                    <!-- text-content -->
+                                    <div class="flex flex-col flex-1">
+                                        <!-- top-section -->
+                                        <div class="flex flex-col gap-2 pb-2">
+                                            <div class="flex justify-between">
+                                                <div class="flex flex-col gap-2.5 pt-1 pr-1">
+                                                    <h3 class="text-sm font-semibold text-[#088AB2] dark:text-[#53d1f7]">You have received a new custom request from @Mango</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- bottom-section -->
+                                        <div class="flex flex-col">
+                                            <p class="text-sm text-black dark:text-[#e8e6e3]">Check out @Mangoes’s request and response to their order.</p>
+                                            
+                                            <div class="flex justify-between items-end">
+                                                <span class="text-xs leading-normal text-[#667085] dark:text-[#a0aec0]">Just now</span>
+                                            
+                                                <div class="flex gap-2 pt-2">
+                                                    <button class="flex items-center gap-1">
+                                                        <span class="text-xs leading-normal font-medium text-[#088AB2] dark:text-[#53d1f7]">Detail</span>
+                                                        <img src="https://i.ibb.co.com/r2G9ggZ2/arrow-right.webp" alt="arrow right" class="w-4 h-4 [filter:brightness(0)_saturate(100%)_invert(39%)_sepia(40%)_saturate(5163%)_hue-rotate(170deg)_brightness(91%)_contrast(94%)]">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- popup end -->
+
+        <!-- template ends here -->
+      </div>
+    </div>
+  </body>
+</html>
