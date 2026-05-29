@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payout Popup</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-white font-sans p-0 m-0 box-border overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#181a1b] !overflow-hidden"> <!-- Add overflow-hidden to body when popup opened -->
+    <!-- main-wrapper -->
+    <div class="flex flex-col md:flex-row">
+      <!-- dashboard-template-main -->
+      <div class="w-full relative z-[2] bg-transparent before:content-[''] before:fixed before:bg-[url('https://i.ibb.co.com/Y4zzyNCR/mobile-fansocial-gradient.png')] md:before:bg-[url('https://i.ibb.co.com/spGHXsL9/desktop-fansocial-gradient.png')] before:bg-cover before:bg-center before:w-screen before:h-screen before:bg-no-repeat before:left-0 before:top-0 before:pointer-events-none">
+
+        <!-- template starts from here -->
+
+        <!-- popup start -->
+        <div class="fixed inset-0 w-screen h-screen overflow-hidden z-[9999]">
+            <!-- popup-inner-wrapper -->
+            <div class="absolute top-0 right-0 w-full h-screen overflow-hidden md:w-[42.125rem]">
+                <!-- popup-container -->
+                <div class="flex flex-col h-full bg-[#f9fafb]/70  overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] relative md:shadow-[0px_0px_10px_0px_#00000040] dark:bg-[#1b1d1e]/70">
+                    <!-- blur-overlay -->
+                    <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1] md:backdrop-blur-[10px]"></div>
+
+                    <div class="flex flex-col gap-4">
+                        <!-- request decline popup -->
+                        <div class="fixed inset-0 w-screen h-screen bg-white/60 z-[9999] dark:bg-[#181a1b]/60">
+                            <!-- blur-overlay -->
+                            <div class="absolute inset-0 w-full h-full backdrop-blur-[2.5px] pointer-events-none z-[-1]"></div>
+                            
+                            <!-- popup-inner-wrapper -->
+                            <div class="absolute top-0 right-0 w-full h-full flex items-end overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] shadow-[0px_0px_10px_0px_#00000040] bg-[#F9FAFB]/90 md:justify-center md:items-center md:max-w-[42.125rem] dark:bg-[#1b1d1e]/90">
+                                <!-- blur-overlay -->
+                                <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1]"></div>
+                                
+                                <!-- popup-container -->
+                                <div class="flex flex-col w-full h-max relative shadow-[0px_0px_12px_0px_#0000001A] rounded-t-[0.6125rem] bg-[#F9FAFB]/90 relative md:gap-2 md:p-4 md:rounded-[0.3125rem] md:max-w-[34.1875rem] dark:bg-[#1b1d1e]/90">
+                                    <!-- blur-overlay -->
+                                    <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1]"></div>
+
+                                    <div class="flex flex-col py-1 md:p-0">
+                                        <div class="flex flex-col gap-2.5 px-3 py-2 md:p-0">
+                                            <!-- header -->
+                                            <div class="flex justify-between items-center gap-2">
+                                                <h3 class="text-base font-medium text-[#0C111D] dark:text-[#dbd8d3]">Decline custom order form</h3>
+                                            
+                                                <!-- close-button -->
+                                                <button class="flex justify-center items-center w-6 h-6">
+                                                    <img src="https://i.ibb.co.com/5WjG5Fkv/close-cross.webp" alt="close cross" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]">
+                                                </button>
+                                            </div>
+
+                                            <!-- form-container -->
+                                            <div class="flex flex-col gap-4">
+                                                <p class="text-sm text-[#344054] md:text-base dark:text-[#bdb8af]">Please provide reasons for canceling this custom request. Our team will review your request and cancel your order on a case-by-case basis.</p>
+                                            
+                                                <div class="flex flex-col gap-6">
+                                                    <div class="flex flex-col gap-1.5 group/input-container">
+                                                        <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Decline reason</label>
+
+                                                        <div class="flex shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-black bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#181a1b]" >
+                                                            <!-- select-dropdown -->
+                                                            <div id="select-dropdown" class="select-dropdown relative z-[10000] flex w-full">
+                                                                <div class="country-select cursor-pointer border-none w-full">
+                                                                    <div class="dash-select__trigger w-full flex items-center py-2 px-3" >
+                                                                        <span class="text-base flex-grow text-[#101828] dark:text-[#d6d3cd] capitalize text-balance">Please select</span>
+                                                                        <img class="select-arrow h-5 w-5 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]" src="https://i.ibb.co.com/WpfP7SBK/arrow2-down.webp" alt="arrow2 down">
+                                                                    </div>
+                                                                    <div class="dash-options-container max-md:!fixed max-md:!inset-0 max-md:!flex max-md:!items-end max-md:backdrop-blur-[12.5px] max-md:!shadow-[0_0_12px_0_#00000033] absolute left-auto right-0 top-[calc(100%rem)] rounded-b-lg overflow-hidden z-[9999] w-full origin-top scale-95 opacity-0 transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] h-0 overflow-hidden pointer-events-none md:shadow-[0_-2px_4px_0_#0000001A]" >
+                                                                        <div class="flex flex-col py-1 max-md:w-full bg-white/90 dark:bg-[#181a1b]/90" >
+                                                                            <div class="option flex justify-center items-center p-2.5 group [&.selected]:bg-[#EAECF0] hover:bg-[#EAECF0] dark:[&.selected]:bg-[#222526] dark:hover:bg-[#222526]">
+                                                                                <span class="text-sm font-medium group-[.selected]:font-semibold text-[#344054] dark:text-[#bdb8af]">Unacceptable content request(s)</span>
+                                                                            </div>
+
+                                                                            <div class="option flex justify-center items-center p-2.5 group [&.selected]:bg-[#EAECF0] hover:bg-[#EAECF0] dark:[&.selected]:bg-[#222526] dark:hover:bg-[#222526]">
+                                                                                <span class="text-sm font-medium group-[.selected]:font-semibold text-[#344054] dark:text-[#bdb8af]">Unable to meet delivery request</span>
+                                                                            </div>
+
+                                                                            <div class="option flex justify-center items-center p-2.5 group [&.selected]:bg-[#EAECF0] hover:bg-[#EAECF0] dark:[&.selected]:bg-[#222526] dark:hover:bg-[#222526]">
+                                                                                <span class="text-sm font-medium group-[.selected]:font-semibold text-[#344054] dark:text-[#bdb8af]">Unsuccessful negotiation</span>
+                                                                            </div>
+
+                                                                            <div class="option flex justify-center items-center p-2.5 group [&.selected]:bg-[#EAECF0] hover:bg-[#EAECF0] dark:[&.selected]:bg-[#222526] dark:hover:bg-[#222526]">
+                                                                                <span class="text-sm font-medium group-[.selected]:font-semibold text-[#344054] dark:text-[#bdb8af]">Other reasons</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <select class="dash-real-select hidden" name="country-select" required="">
+                                                                    <option value="unacceptable-content-request">Unacceptable content request(s)</option>
+                                                                    <option value="unable-to-meet-delivery-request">Unable to meet delivery request</option>
+                                                                    <option value="unsuccessful-negotiation">Unsuccessful negotiation</option>
+                                                                    <option value="other-reasons">Other reasons</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex flex-col gap-1.5 group/input-container">
+                                                        <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Decline reason</label>
+
+                                                        <!-- text-area -->
+                                                        <div class="flex items-center px-3 py-2 min-h-[8rem] shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                                            <textarea name="" id="" rows="5" placeholder="Describe what you what to report in details..." class="text-sm placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+
+                                            <!-- checkbox-container -->
+                                            <div class="flex md:hidden gap-2">
+                                                <div class="flex justify-center items-center w-6 min-w-6 h-6">
+                                                    <input type="checkbox" name="checkbox" id="block-custom-request"
+                                                    class="flex justify-center items-center appearance-none bg-white border-2 border-[#FF4405] rounded-[4px] w-5 min-w-[1.25rem] h-5 m-1 checked:accent-[#FF4405] checked:bg-[#FF4405] checked:border-[#FF4405] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[7px] md:checked:after:left-[6px] checked:after:top-[3px] md:checked:after:top-[2px] checked:after:w-[5px] checked:after:h-[10px] checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-white checked:after:border-w-0 checked:after:border-b-[2.5px] checked:after:border-r-[2.5px] checked:after:rotate-45 checked:after:box-border cursor-pointer"/>
+                                                </div>
+
+                                                <label for="block-custom-request" class="text-sm font-medium ma-0 pt-0.5 cursor-pointer text-[#FF4405] dark:text-[#ff571e]">Block <span class="font-semibold">@mangoes</span> from sending custom request</label>
+                                            </div>
+
+                                            <!-- checkbox-container -->
+                                            <div class="flex md:hidden gap-2">
+                                                <div class="flex justify-center items-center w-6 min-w-6 h-6">
+                                                    <input type="checkbox" name="checkbox" id="block-user"
+                                                    class="flex justify-center items-center appearance-none bg-white border-2 border-[#FF4405] rounded-[4px] w-5 min-w-[1.25rem] h-5 m-1 checked:accent-[#FF4405] checked:bg-[#FF4405] checked:border-[#FF4405] checked:relative checked:after:content-[''] checked:after:absolute checked:after:left-[7px] md:checked:after:left-[6px] checked:after:top-[3px] md:checked:after:top-[2px] checked:after:w-[5px] checked:after:h-[10px] checked:after:border checked:after:border-solid checked:after:border-t-0 checked:after:border-l-0 checked:after:border-white checked:after:border-w-0 checked:after:border-b-[2.5px] checked:after:border-r-[2.5px] checked:after:rotate-45 checked:after:box-border cursor-pointer"/>
+                                                </div>
+
+                                                <label for="block-user" class="text-sm font-medium ma-0 pt-0.5 cursor-pointer text-[#FF4405] dark:text-[#ff571e]">Block <span class="font-semibold">@mangoes</span> on everything</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- button-container -->
+                                    <div class="flex items-center gap-2.5 p-2 md:p-0">
+                                        <!-- cancel-button -->
+                                        <button class="flex md:hidden justify-center items-center px-2.5 py-2 h-10 border border-transparent group hover:border-[#C73203] flex-1 md:w-max min-w-[6.25rem] md:flex-[unset]">
+                                            <span class="text-base font-medium text-[#FF4405] group-hover:text-[#C73203] dark:text-[#ff571e]">Cancel</span>
+                                        </button>
+
+                                        <!-- confirm-button -->
+                                        <button class="flex justify-center items-center px-2.5 py-2 h-10 bg-[#FF4405] group hover:bg-[#FF4405]/80 flex-1 md:w-max min-w-[6.25rem] md:flex-[unset] dark:bg-[#c93300] dark:hover:bg-[#c93300]/80">
+                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">Decline Order</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- popup end -->
+
+        <!-- template ends here -->
+      </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize all dropdowns on the page
+        document.querySelectorAll('.country-select').forEach(countrySelect => {
+            const selectDropdown = countrySelect.closest('.select-dropdown');
+            const trigger = countrySelect.querySelector('.dash-select__trigger span');
+            const arrow = countrySelect.querySelector('.select-arrow');
+            const options = countrySelect.querySelectorAll('.option');
+            const realSelect = selectDropdown.querySelector('.dash-real-select');
+            const optionsContainer = countrySelect.querySelector('.dash-options-container');
+
+            // Set initial value
+            if (realSelect) {
+                realSelect.value = 'yearly';
+            }
+
+            // Add selected class to initial matching option
+            options.forEach(option => {
+                const optionText = option.querySelector('span')?.textContent?.toLowerCase();
+
+                if (optionText === realSelect?.value?.toLowerCase()) {
+                    option.classList.add('selected');
+                } else {
+                    option.classList.remove('selected');
+                }
+            });
+
+            // Toggle dropdown with smooth transitions
+            countrySelect.addEventListener('click', function (e) {
+                e.stopPropagation();
+
+                const isOpening = !optionsContainer.classList.contains('open');
+
+                // Close all other selects first
+                document.querySelectorAll('.country-select').forEach(s => {
+                    if (s !== countrySelect) {
+                        closeDropdown(s);
+                    }
+                });
+
+                if (isOpening) {
+                    // Position dropdown based on available space
+                    positionDropdown(countrySelect);
+                    openDropdown(countrySelect);
+                } else {
+                    closeDropdown(countrySelect);
+                }
+            });
+
+            // Handle option selection
+            options.forEach(option => {
+                option.addEventListener('click', function (e) {
+                    e.stopPropagation();
+
+                    const selectedText = this.querySelector('span').textContent;
+
+                    // Remove selected class from all options
+                    options.forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+
+                    if (trigger) trigger.textContent = selectedText;
+                    if (realSelect) realSelect.value = selectedText.toLowerCase();
+
+                    // Close the dropdown
+                    closeDropdown(countrySelect);
+
+                    // Trigger change event on the real select
+                    if (realSelect) {
+                        realSelect.dispatchEvent(new Event('change'));
+                    }
+                });
+            });
+
+            // Position dropdown up or down based on available space
+            function positionDropdown(select) {
+                const optionsContainer = select.querySelector('.dash-options-container');
+                if (!optionsContainer) return;
+
+                const rect = select.getBoundingClientRect();
+                const spaceBelow = window.innerHeight - rect.bottom;
+                const spaceAbove = rect.top;
+                const optionsHeight = optionsContainer.scrollHeight;
+
+                optionsContainer.classList.remove('upward', 'downward');
+
+                if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+                    optionsContainer.classList.add('upward');
+                    optionsContainer.style.top = 'auto';
+                    optionsContainer.style.bottom = 'calc(100% + 0.5rem)';
+                } else {
+                    optionsContainer.classList.add('downward');
+                    optionsContainer.style.top = 'calc(100% + 0.5rem)';
+                    optionsContainer.style.bottom = 'auto';
+                }
+            }
+
+            function openDropdown(select) {
+                const optionsContainer = select.querySelector('.dash-options-container');
+                const arrow = select.querySelector('.select-arrow');
+
+                if (!optionsContainer || !arrow) return;
+
+                optionsContainer.classList.add('open');
+                arrow.classList.add('rotate-180');
+
+                // Apply visible state
+                optionsContainer.classList.remove(
+                    'scale-95',
+                    'opacity-0',
+                    'pointer-events-none',
+                    'h-0',
+                    'overflow-hidden'
+                );
+
+                optionsContainer.classList.add(
+                    'scale-100',
+                    'opacity-100',
+                    'pointer-events-auto',
+                    'h-auto',
+                    'overflow-auto'
+                );
+            }
+
+            function closeDropdown(select) {
+                const optionsContainer = select?.querySelector('.dash-options-container');
+                const arrow = select?.querySelector('.select-arrow');
+
+                if (!optionsContainer || !arrow) return;
+
+                optionsContainer.classList.remove('open');
+                arrow.classList.remove('rotate-180');
+
+                optionsContainer.classList.remove(
+                    'scale-100',
+                    'opacity-100',
+                    'pointer-events-auto',
+                    'h-auto',
+                    'overflow-auto'
+                );
+
+                optionsContainer.classList.add(
+                    'scale-95',
+                    'opacity-0',
+                    'pointer-events-none',
+                    'h-0',
+                    'overflow-hidden'
+                );
+            }
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function () {
+            document.querySelectorAll('.country-select').forEach(select => {
+                closeDropdown(select);
+            });
+        });
+
+        // Reposition dropdowns on window resize
+        window.addEventListener('resize', function () {
+            document.querySelectorAll('.country-select').forEach(select => {
+                const optionsContainer = select.querySelector('.dash-options-container');
+
+                if (optionsContainer && optionsContainer.classList.contains('open')) {
+                    positionDropdown(select);
+                }
+            });
+        });
+    });
+</script>
+  </body>
+</html>

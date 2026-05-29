@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payout Popup</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-white font-sans p-0 m-0 box-border overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#181a1b] !overflow-hidden"> <!-- Add overflow-hidden to body when popup opened -->
+    <!-- main-wrapper -->
+    <div class="flex flex-col md:flex-row">
+      <!-- dashboard-template-main -->
+      <div class="w-full relative z-[2] bg-transparent before:content-[''] before:fixed before:bg-[url('https://i.ibb.co.com/Y4zzyNCR/mobile-fansocial-gradient.png')] md:before:bg-[url('https://i.ibb.co.com/spGHXsL9/desktop-fansocial-gradient.png')] before:bg-cover before:bg-center before:w-screen before:h-screen before:bg-no-repeat before:left-0 before:top-0 before:pointer-events-none">
+
+        <!-- template starts from here -->
+
+        <!-- popup start -->
+        <div class="fixed inset-0 w-screen h-screen overflow-hidden z-[9999]">
+            <!-- popup-inner-wrapper -->
+            <div class="absolute top-0 right-0 w-full h-screen overflow-hidden md:w-[42.125rem]">
+                <!-- popup-container -->
+                <div class="flex flex-col h-full bg-[#f9fafb]/70  overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] relative md:shadow-[0px_0px_10px_0px_#00000040] dark:bg-[#1b1d1e]/70">
+                    <!-- blur-overlay -->
+                    <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1] md:backdrop-blur-[10px]"></div>
+
+                    <div class="flex flex-col gap-4">
+                        <!-- request decline popup -->
+                        <div class="fixed inset-0 w-screen h-screen overflow-hidden bg-white/60 z-[9999] dark:bg-[#181a1b]/60">
+                            <!-- blur-overlay -->
+                            <div class="absolute inset-0 w-full h-full backdrop-blur-[2.5px] pointer-events-none z-[-1]"></div>
+                            
+                            <!-- popup-inner-wrapper -->
+                            <div class="absolute top-0 right-0 w-full h-full flex items-end overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] shadow-[0px_0px_10px_0px_#00000040] bg-[#F9FAFB]/90 md:justify-center md:items-center md:max-w-[42.125rem] dark:bg-[#1b1d1e]/90">
+                                <!-- blur-overlay -->
+                                <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1]"></div>
+                                
+                                <!-- popup-container -->
+                                <div class="flex flex-col gap-6 p-4 w-full h-max relative shadow-[0px_0px_12px_0px_#0000001A] rounded-t-[0.3125rem] overflow-hidden bg-white/90 relative md:max-w-[26rem] md:rounded-[0.3125rem] dark:bg-[#181a1b]/90">
+                                    <!-- blur-overlay -->
+                                    <div class="absolute inset-0 w-full h-full backdrop-blur-[50px] pointer-events-none z-[-1]"></div>
+
+                                    <div class="flex flex-col gap-2">
+                                        <h3 class="text-base font-semibold text-[#344054] dark:text-[#bdb8af]">You are about to decline @jenny’s request.</h3>
+                                        <p class="text-base text-[#344054] dark:text-[#bdb8af]">@Jenny will have to adhere to the original delivery time but may opt to decline the order.</p>
+                                    </div>
+
+                                    <!-- button-container -->
+                                    <div class="flex gap-2">
+                                        <!-- back-button -->
+                                        <button class="flex justify-center items-center px-2.5 py-2 h-10 border border-transparent group hover:border-[#C73203] w-max min-w-[6.25rem]">
+                                            <span class="text-base font-medium text-[#FF4405] group-hover:text-[#C73203] dark:text-[#ff571e]">Back</span>
+                                        </button>
+
+                                        <!-- decline-button -->
+                                        <button class="flex justify-center items-center px-2.5 py-2 h-10 bg-[#FF4405] group hover:bg-[#FF4405]/80 w-max min-w-[6.25rem] dark:bg-[#c93300] dark:hover:bg-[#c93300]/80">
+                                            <span class="text-base font-medium text-white dark:text-[#e8e6e3]">Decline</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- popup end -->
+
+        <!-- template ends here -->
+      </div>
+    </div>
+  </body>
+</html>
