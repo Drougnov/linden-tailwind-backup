@@ -62,7 +62,7 @@
             <!-- top-page-settings -->
             <div class="flex flex-col items-start gap-2 z-[1] sm:gap-4 md:gap-2 lg:flex-row lg:gap-4">
               <!-- card-section -->
-              <div class="flex flex-col justify-start items-start gap-4 w-full min-[700px]:flex-row min-[700px]:items-center min-[700px]:gap-2.5 min-[700px]:px-2 min-[700px]:pt-4 min-[700px]:pb-0 md:flex-col md:items-start md:gap-4 md:px-0 md:py-4 lg:flex-row lg:py-6 min-[1250px]:flex-row">
+              <div class="flex flex-col justify-start items-start gap-4 w-full min-[700px]:flex-row min-[700px]:gap-2.5 min-[700px]:px-2 min-[700px]:pt-4 min-[700px]:pb-0 md:flex-col md:items-start md:gap-4 md:px-0 md:py-4 lg:flex-row lg:py-6 min-[1250px]:flex-row">
                 <!-- card-outer-wrapper -->
                 <div class="flex flex-col gap-2.5 w-full min-[700px]:gap-4 md:gap-2.5 md:w-max">
                     <!-- card -->
@@ -165,33 +165,49 @@
                 </div>
 
                 <!-- progress-section -->
-                <div class="flex flex-col gap-2 w-full px-2 min-[700px]:px-0 md:justify-between md:gap-2 md:h-full lg:min-h-[14.75rem] lg:gap-10 lg:px-6">
-                  <h2 class="text-xl leading-normal font-medium text-[#0C111D] md:text-4xl md:leading-[2.75rem] md:-tracking-[0.045rem] dark:text-[#dbd8d3]">You don’t have available balance to cash out yet.</h2>
+                <div class="flex flex-col gap-2 w-full px-2 min-[700px]:justify-center min-[700px]:px-0 min-[700px]:min-h-[12.875rem] md:justify-between md:gap-2 md:h-full lg:min-h-[14.75rem] lg:gap-10 lg:px-6">
+                    <!-- title-section -->
+                    <section class="flex flex-col gap-2 lg:gap-4">
+                        <h2 class="text-xl leading-normal font-medium text-[#0C111D] md:text-4xl md:leading-[2.75rem] md:-tracking-[0.045rem] dark:text-[#dbd8d3]">Your Balance are now available for withdrawal.</h2>
+                        <p class="text-sm text-[#344054] dark:text-[#bdb8af]">💯You're grinding and it’s paying off. Keep hustling, stay lit, and remember—you're a boss. </p>
+                    </section>
 
-                  <div class="flex items-center gap-1">
-                    <div class="flex items-center gap-0.5">
-                        <span class="text-xs leading-4 text-[#0C111D] dark:text-[#dbd8d3]">Next Payout Date</span>
-
-                        <div class="relative inline-flex overflow-hidden w-4 h-4 cursor-pointer group hover:overflow-visible">
-                            <!-- Icon -->
-                            <img src="https://i.ibb.co.com/Hp1tznKk/help-circle.webp" alt="help circle" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(70%)_sepia(16%)_saturate(274%)_hue-rotate(179deg)_brightness(89%)_contrast(90%)]">
-                            
-                            <!-- Tooltip -->
-                            <div class="absolute left-1/2 top-full -translate-x-1/2 translate-y-2 z-[2] 
-                                flex flex-col items-start min-w-[13.5rem] lg:min-w-[17.5rem] bg-[#101828] dark:bg-[rgba(14,19,32,1)] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
-                                opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
-                                text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg dark:text-[#e8e6e3] 
-                                before:content-[''] before:absolute before:w-0 before:h-0 before:left-1/2 before:-translate-x-1/2 before:top-[-5px] before:border-[6px] before:border-t-0 before:border-l-transparent before:border-r-transparent before:border-b-[rgba(16,24,40)]"
-                            >
-                                <p class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">Payout date happens monthly on the 28th. Earnings made in the previous month will be transferred to your available balance for withdrawal.</p>
-                            </div>
+                    <!-- withdraw-section -->
+                    <div class="flex flex-col gap-4">
+                        <!-- withdraw-button -->
+                        <div class="filter drop-shadow-[5px_4px_0px_#000000] group hover:drop-shadow-[5px_4px_0px_#07F468]">
+                            <button class="flex justify-center items-center gap-2.5 pl-2 pr-[23.63px] min-h-[2.5rem] [clip-path:polygon(calc(100%-15.63px)_0%,100%_100%,0%_100%,0%_0%)] bg-[#07F468] group-hover:bg-black">
+                                <img src="https://i.ibb.co.com/Rkc5pFC1/credit-card-download.webp" alt="credit card download" class="w-6 h-6 [filter:brightness(0)_saturate(100%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(73%)_sepia(24%)_saturate(6026%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]">
+                                <span class="text-lg font-medium text-black group-hover:text-[#07F468]">WITHDRAW NOW</span>
+                            </button>
                         </div>
 
-                        <span class="text-xs leading-4 text-[#0C111D] dark:text-[#dbd8d3]">:</span>
-                    </div>
+                        <!-- next-payout-date -->
+                        <div class="flex items-center gap-1">
+                            <div class="flex items-center gap-0.5">
+                                <span class="text-xs leading-4 text-[#0C111D] dark:text-[#dbd8d3]">Next Payout Date</span>
 
-                    <span class="text-xs leading-normal text-[#0C111D] dark:text-[#dbd8d3]">28/05/25</span>
-                  </div>
+                                <div class="relative inline-flex overflow-hidden w-4 h-4 cursor-pointer group hover:overflow-visible">
+                                    <!-- Icon -->
+                                    <img src="https://i.ibb.co.com/Hp1tznKk/help-circle.webp" alt="help circle" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(70%)_sepia(16%)_saturate(274%)_hue-rotate(179deg)_brightness(89%)_contrast(90%)]">
+                                    
+                                    <!-- Tooltip -->
+                                    <div class="absolute left-1/2 top-full -translate-x-1/2 translate-y-2 z-[2] 
+                                        flex flex-col items-start min-w-[13.5rem] lg:min-w-[17.5rem] bg-[#101828] dark:bg-[rgba(14,19,32,1)] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
+                                        opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                                        text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg dark:text-[#e8e6e3] 
+                                        before:content-[''] before:absolute before:w-0 before:h-0 before:left-1/2 before:-translate-x-1/2 before:top-[-5px] before:border-[6px] before:border-t-0 before:border-l-transparent before:border-r-transparent before:border-b-[rgba(16,24,40)]"
+                                    >
+                                        <p class="text-xs leading-normal font-medium text-white dark:text-[#e8e6e3]">Payout date happens monthly on the 28th. Earnings made in the previous month will be transferred to your available balance for withdrawal.</p>
+                                    </div>
+                                </div>
+
+                                <span class="text-xs leading-4 text-[#0C111D] dark:text-[#dbd8d3]">:</span>
+                            </div>
+
+                            <span class="text-xs leading-normal text-[#0C111D] dark:text-[#dbd8d3]">28/05/25</span>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
