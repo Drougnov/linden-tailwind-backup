@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payout Popup</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                      emoji: ['Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+  </head>
+  <body class="bg-white font-sans p-0 m-0 box-border overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#181a1b] !overflow-hidden"> <!-- Add overflow-hidden to body when popup opened -->
+    <!-- main-wrapper -->
+    <div class="flex flex-col md:flex-row">
+      <!-- dashboard-template-main -->
+      <div class="w-full relative z-[2] bg-transparent before:content-[''] before:fixed before:bg-[url('https://i.ibb.co.com/Y4zzyNCR/mobile-fansocial-gradient.png')] md:before:bg-[url('https://i.ibb.co.com/spGHXsL9/desktop-fansocial-gradient.png')] before:bg-cover before:bg-center before:w-screen before:h-screen before:bg-no-repeat before:left-0 before:top-0 before:pointer-events-none">
+        <!-- template-container -->
+        <div class="flex flex-col gap-4 flex-grow md:gap-6">
+          <!-- top page header section -->
+          <div class="relative flex flex-col gap-6 bg-cover md:backdrop-blur-[5px] md:[background-image:url('https://i.ibb.co.com/RGG4fpDF/header-gradient-bg.webp')] md:px-4 md:pt-4 xl:px-6 xl:pt-6 before:content-[''] md:before:hidden before:fixed before:bg-[url('https://i.ibb.co.com/QvpHN5vD/mobile-gradient-main-bg-1.webp')] before:bg-cover before:w-full before:bg-no-repeat before:h-full before:left-0 before:top-0 before:pointer-events-none">
+
+            <!-- overlay (above image, below content) -->
+            <div class="max-md:hidden absolute inset-0 bg-white/10 pointer-events-none"></div> 
+
+            <!-- custom-title -->
+            <div class="hidden md:flex justify-between items-center gap-4 w-full z-[1] xl:gap-6">
+              <h1 class="text-3xl leading-[2.375rem] font-medium tracking-[-0.045rem] text-[#475467] dark:text-[#b1aaa0]">Your Earnings</h1>
+            
+              <!-- payout-settings-button -->
+              <button class="flex justify-center items-center gap-2.5 pl-1 pr-2 h-10">
+                <img src="https://i.ibb.co.com/xt47cMfQ/settings-02.webp" alt="settings 02" class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(49%)_sepia(5%)_saturate(1614%)_hue-rotate(183deg)_brightness(85%)_contrast(84%)]">
+                <span class="text-lg font-medium text-[#667085] dark:text-[#9e9589]">Payout Settings</span>
+              </button>
+            </div>
+
+            <!-- top-page-settings -->
+            <div class="flex flex-col items-start gap-2 z-[1] sm:gap-4 md:gap-2 lg:flex-row lg:gap-4">
+              <!-- card-section -->
+              <div class="flex flex-col justify-start items-start gap-4 w-full min-[700px]:flex-row min-[700px]:items-center min-[700px]:gap-2.5 min-[700px]:px-2 min-[700px]:py-4 md:flex-col md:gap-6 md:px-0 lg:flex-row lg:py-6 xl:py-8 min-[1250px]:flex-row">
+                <!-- card -->
+                <div class="flex flex-col gap-2.5 w-full lg:w-max">
+                  <!-- card-outer-wrapper -->
+                  <div class="w-full h-[12.875rem] min-h-[12.875rem] relative shadow-[0_0_8px_0_rgba(0,0,0,0.25)] overflow-hidden z-0 sm:w-[23.4375rem] sm:min-w-[23.4375rem] md:w-[26.875rem] md:min-w-[26.875rem] md:h-[14.75rem] md:rounded-lg">
+                    <!-- card-background-wrapper -->
+                    <div class="absolute -top-0.5 -left-0.5 flex justify-center items-center w-[calc(100%+4px)] h-[calc(100%+4px)] [background-image:url(https://i.ibb.co.com/6RbpTFYw/card-gradient-bg-mobile.webp)] bg-cover bg-center bg-no-repeat z-0 pointer-events-none md:[background-image:url(https://i.ibb.co.com/r2mg80bZ/card-gradient-bg.webp)]"></div>
+
+                    <!-- card-border-wrapper -->
+                    <div class="hidden absolute top-0 left-0 md:flex justify-center items-center w-full h-full border-solid border-2 [border-image-slice:2] [border-image-source:linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(222,222,222,0.25)_100%)] rounded-lg z-[100] pointer-events-none"></div>
+
+                    <!-- card-contents-wrapper -->
+                    <div class="flex flex-col w-full h-full relative z-[2]">
+                      <!-- card-contents-container -->
+                      <div class="flex flex-col h-full justify-between">
+                        <!-- card-content__top -->
+                        <div class="flex flex-col w-full px-4 pt-4 md:px-5 md:pt-5">
+                          <div class="flex justify-between items-start gap-5">
+                            <!-- card-content__top--text-container -->
+                            <div class="flex flex-col h-9 md:h-auto">
+                              <span class="text-sm font-bold tracking-[-0.056rem] text-white md:text-lg md:text-black">OUR WEBSITE</span>
+                              <span class="text-sm font-bold text-white md:text-base md:text-black">PREMIUM</span>
+                            </div>
+
+                            <!-- card-logo-icon -->
+                            <div class="flex justify-center items-center w-9 h-9">
+                              <img src="https://i.ibb.co.com/nqKrwfwB/our-website-logo.webp" alt="our-website-logo-with-bg" class="w-full h-full opacity-80 md:opacity-100 md:[filter:brightness(0)_saturate(100)]"/>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- card-content__bottom -->
+                        <div class="flex flex-col w-full px-4 py-3 gap-0.5 sm:gap-1 md:px-5">
+                          <span class="text-sm font-medium text-[#F2F4F7] md:text-[#344054]">BALANCE</span>
+
+                          <div class="flex justify-between items-center gap-1">
+                            <div class="flex items-center gap-1">
+                              <span class="text-2xl font-medium tracking-[-0.045rem] text-white md:text-4xl md:leading-[2.75rem] md:text-black">$</span>
+                              <span class="text-2xl font-medium tracking-[-0.045rem] text-white md:text-4xl md:leading-[2.75rem] md:text-black">30054.40</span>
+                              <img src="https://i.ibb.co.com/675rpz03/eye.webp" alt="eye" class="w-6 h-6 md:[filter:brightness(0)_saturate(100)]"/>
+                            </div>
+
+                            <!-- credit-card-download-icon -->
+                            <div class="flex justify-center items-center w-[1.875rem] h-[1.875rem] rounded bg-white/80 md:bg-[#182230]">
+                              <img src="https://i.ibb.co.com/p6Ntxgtt/download.webp" alt="download" class="w-[1.125rem] h-[1.125rem] md:[filter:_brightness(0)_saturate(100%)_invert(94%)_sepia(0%)_saturate(7500%)_hue-rotate(124deg)_brightness(115%)_contrast(105%)]"/>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- card-blur-bottom-section -->
+                        <div class="flex justify-center items-center gap-5 h-max md:h-full px-4 md:px-5 py-4 bg-black/10 backdrop-blur-[2px]">
+                          <div class="flex justify-between items-start w-full h-full drop-shadow-[0_0_10px_-34px_rgba(0,0,0,0.75)]">
+                            <div class="flex flex-col">
+                              <span class="text-xs leading-normal text-white">NAME</span>
+                              <span class="text-sm leading-normal font-medium text-white">MAX WANG</span>
+                            </div>
+
+                            <div class="flex flex-col">
+                              <div class="flex justify-end items-center gap-1">
+                                <span class="text-xs leading-normal text-right text-[#F2F4F7] md:text-white">Last Withdrawn</span>
+                                <span class="text-xs leading-normal text-right text-[#F2F4F7] md:text-white">11-31-2024</span>
+                              </div>
+
+                              <div class="flex">
+                                <a href="" class="flex items-center gap-0.5">
+                                  <img src="https://i.ibb.co.com/WWphLLQb/history.webp" alt="history" class="w-[1.125rem] h-[1.125rem]"/>
+                                  <span class="text-sm leading-normal font-medium text-right underline text-[#F2F4F7] md:text-white">TRANSCATION HISTORY</span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- progress-section -->
+                <div class="flex flex-col gap-4 w-full px-2 min-[700px]:px-0 md:gap-6 lg:gap-10 lg:px-6 xl:py-6">
+                  <!-- progress-section__top -->
+                  <div class="flex flex-col gap-2 w-full md:gap-4 lg:gap-6">
+                    <h2 class="text-xl leading-normal font-medium text-[#0C111D] md:text-3xl md:leading-[2.375rem] lg:text-4xl lg:leading-[2.75rem] lg:tracking-[-0.045rem] dark:text-[#dbd8d3]">Your payout is being processed.</h2>
+
+                    <div class="flex flex-col gap-2">
+                      <div class="flex items-center gap-2">
+                        <span class="text-base font-semibold text-[#0C111D] dark:text-[#dbd8d3]">EUR€114.48 </span>
+
+                        <div class="flex items-center gap-1 flex-wrap px-2 py-0.5 shadow-[0px_0px_4px_0px_#00000026] rounded-[3.125rem] bg-white/50 dark:bg-[#181a1b]/50">
+                          <div class="w-4 h-4">
+                            <img src="https://i.ibb.co.com/zhwwszjh/globe-1.webp" alt="globe-1" class="w-full h-full [filter:_brightness(0)_saturate(100%)]"/>
+                          </div>
+
+                          <span class="text-sm font-medium text-[#182230] dark:text-[#d1cdc7]">USA - </span>
+
+                          <span class="text-sm font-medium text-[#182230] dark:text-[#d1cdc7]">Bank Deposit</span>
+                        </div>
+                      </div>
+                      <span class="text-base text-[#0C111D] dark:text-[#dbd8d3]">12/12/2024</span>
+                    </div>
+                  </div>
+
+                  <!-- progress-section__bottom -->
+                  <div class="flex flex-col gap-4 w-full lg:max-w-[31.25rem]">
+                    <!-- progress-bar -->
+                    <div class="rounded-lg overflow-hidden w-full h-[0.375rem] bg-[#EAECF0] dark:bg-[#222526] z-0">
+                      <div class="w-1/2 h-full rounded bg-[#0c111d] dark:bg-[#0a0e17]"></div>
+                    </div>
+
+                    <div class="w-full flex justify-between">
+                      <div class="text-xs leading-[1.125rem] text-[#0c111d] dark:text-[#dbd8d3]">Pending</div>
+                      <div class="text-xs leading-[1.125rem] text-[#0c111d] dark:text-[#dbd8d3]">Processing</div>
+                      <div class="text-xs leading-[1.125rem] text-[#98A2B3] dark:text-[#b0a993]">Completed</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- payout-history section -->
+          <div class="flex flex-col gap-2 md:gap-4">
+            <!-- title-container -->
+            <div class="flex justify-between items-center gap-2.5 px-2 md:px-4">
+              <h2 class="text-lg font-medium text-[#667085] md:text-xl md:leading-normal dark:text-[#9e9589]">Payout History</h2>
+            </div>
+
+            <!-- table-wrapper -->
+            <div class="flex flex-col">
+              <!-- table-wrapper (desktop) -->
+              <div class="hidden md:flex overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none]">
+                <div class="flex flex-col w-full">
+                  <!-- table-header -->
+                  <div class="flex items-center w-full">
+                    <!-- Period -->
+                    <div class="flex items-center pl-6 pr-2.5 py-2.5 min-w-[11.75rem] min-h-[2.625rem] border-b border-[#667085] dark:border-[#655e53]">
+                      <span class="text-sm text-[#667085] dark:text-[#9e9589]">Period</span>
+                    </div>
+
+                    <!-- Status -->
+                    <div class="flex items-center p-2.5 min-w-[7.375rem] min-h-[2.625rem] border-b border-[#667085] lg:min-w-[8.875rem] dark:border-[#655e53]">
+                      <span class="text-sm text-[#667085] dark:text-[#9e9589]">Status</span>
+                    </div>
+
+                    <!-- Total Earned -->
+                    <div class="flex justify-end items-center pl-2.5 pr-6 py-2.5 min-w-[7.625rem] min-h-[2.625rem] border-b border-[#667085] lg:min-w-[9.8125rem] xl:min-w-[12.125rem] dark:border-[#655e53]">
+                      <span class="text-sm text-right text-[#667085] dark:text-[#9e9589]">Total Earned</span>
+                    </div>
+
+                    <!-- Rollover -->
+                    <div class="flex justify-end items-center pl-2.5 pr-6 py-2.5 min-w-[6.4375rem] min-h-[2.625rem] border-b border-[#667085] lg:min-w-[8.5625rem] dark:border-[#655e53]">
+                      <span class="text-sm text-right text-[#667085] dark:text-[#9e9589]">Rollover</span>
+                    </div>
+
+                    <!-- Transfer Fee -->
+                    <div class="flex justify-end items-center pl-2.5 pr-6 py-2.5 min-w-[7.5rem] min-h-[2.625rem] border-b border-[#667085] lg:min-w-[8.5625rem] dark:border-[#655e53]">
+                      <span class="text-sm text-right text-[#667085] dark:text-[#9e9589]">Transfer Fee</span>
+                    </div>
+
+                    <!-- Commission % -->
+                    <div class="flex justify-end items-center pl-2.5 pr-6 py-2.5 min-w-[8.5625rem] min-h-[2.625rem] border-b border-[#667085] dark:border-[#655e53]">
+                      <span class="text-sm text-right text-[#667085] dark:text-[#9e9589]">Commission %</span>
+                    </div>
+
+                    <!-- Final Payout -->
+                    <div class="flex justify-end items-center pl-2.5 pr-6 py-2.5 min-w-[9.8125rem] min-h-[2.625rem] border-b border-[#667085] xl:min-w-[12.125rem] dark:border-[#655e53]">
+                      <span class="text-sm text-right text-[#667085] dark:text-[#9e9589]">Final Payout</span>
+                    </div>
+
+                    <!-- action -->
+                    <div class="flex justify-end items-center pl-2.5 pr-6 py-2.5 flex-grow min-w-[5rem] min-h-[2.625rem] border-b border-[#667085] dark:border-[#655e53]"></div>
+                  </div>
+
+                  <!-- table-row-container -->
+                  <div class="flex flex-col w-full min-w-min z-[1] [&>*:nth-child(odd)]:bg-white/50 dark:[&>*:nth-child(odd)]:bg-[#181a1b]/50">
+                    <!-- row -->
+                    <div class="flex items-center w-full min-h-[4.5rem]">
+                      <!-- Period -->
+                      <div class="flex items-center pl-6 pr-3 py-2 min-w-[11.75rem] h-full">
+                        <span class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">1 Jan 2024 - 31 Jan 2024</span>
+                      </div>
+
+                      <!-- Status -->
+                      <div class="flex items-center pl-3 py-2 min-w-[7.375rem] h-full lg:min-w-[8.875rem]">
+                        <div class="flex h-6">
+                          <div class="flex justify-center items-center w-6 h-full backdrop-blur-[10px] bg-[#FFE500] dark:bg-[#a99700]">
+                            <img src="https://i.ibb.co.com/qP4Jr6q/clock.webp" alt="clock" class="w-4 h-4 [filter:brightness(0)_saturate(100%)]">
+                          </div>
+                          <div class="flex justify-center items-center px-1.5 h-full backdrop-blur-[10px] bg-black dark:bg-[#181a1b]">
+                            <span class="text-xs leading-normal font-medium text-[#FFE500] dark:text-[#ffe81a]">Pending</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Total Earned -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[7.625rem] h-full lg:min-w-[9.8125rem] xl:min-w-[12.125rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">USD$ 130.86</span>
+                      </div>
+
+                      <!-- Rollover -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[6.4375rem] h-full lg:min-w-[8.5625rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">$0</span>
+                      </div>
+
+                      <!-- Transfer Fee -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[7.5rem] h-full lg:min-w-[8.5625rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">$0</span>
+                      </div>
+
+                      <!-- Commission % -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[8.5625rem] h-full">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">88.8%</span>
+                      </div>
+
+                      <!-- Final Payout -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[9.8125rem] h-full xl:min-w-[12.125rem]">
+                        <span class="text-xs leading-normal font-bold text-right text-[#004EEB] dark:text-[#3f9dff]">USD$ 123.08</span>
+                      </div>
+
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2.5 flex-grow min-w-[5rem] h-full">
+                        <button class="flex justify-center items-center w-8 h-8">
+                          <img src="https://i.ibb.co.com/qMVbj8VQ/search-icon.webp" alt="search icon" class="w-6 h-6">
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- row -->
+                    <div class="flex items-center w-full min-h-[4.5rem]">
+                      <!-- Period -->
+                      <div class="flex items-center pl-6 pr-3 py-2 min-w-[11.75rem] h-full">
+                        <span class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">1 Jan 2024 - 31 Jan 2024</span>
+                      </div>
+
+                      <!-- Status -->
+                      <div class="flex items-center pl-3 py-2 min-w-[7.375rem] h-full lg:min-w-[8.875rem]">
+                        <div class="flex h-6">
+                          <div class="flex justify-center items-center w-6 h-full backdrop-blur-[10px] bg-[#07F468] dark:bg-[#06c454]">
+                            <img src="https://i.ibb.co.com/pBCPJv0c/tick-mark.webp" alt="tick mark" class="w-4 h-4 [filter:brightness(0)_saturate(100%)]">
+                          </div>
+                          <div class="flex justify-center items-center px-1.5 h-full backdrop-blur-[10px] bg-black dark:bg-[#181a1b]">
+                            <span class="text-xs leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">Paid</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Total Earned -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[7.625rem] h-full lg:min-w-[9.8125rem] xl:min-w-[12.125rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">USD$ 130.86</span>
+                      </div>
+
+                      <!-- Rollover -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[6.4375rem] h-full lg:min-w-[8.5625rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">$0</span>
+                      </div>
+
+                      <!-- Transfer Fee -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[7.5rem] h-full lg:min-w-[8.5625rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">$0</span>
+                      </div>
+
+                      <!-- Commission % -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[8.5625rem] h-full">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">88.8%</span>
+                      </div>
+
+                      <!-- Final Payout -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[9.8125rem] h-full xl:min-w-[12.125rem]">
+                        <span class="text-xs leading-normal font-bold text-right text-[#004EEB] dark:text-[#3f9dff]">USD$ 123.08</span>
+                      </div>
+
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2.5 flex-grow min-w-[5rem] h-full">
+                        <button class="flex justify-center items-center w-8 h-8">
+                          <img src="https://i.ibb.co.com/qMVbj8VQ/search-icon.webp" alt="search icon" class="w-6 h-6">
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <!-- row -->
+                    <div class="flex items-center w-full min-h-[4.5rem]">
+                      <!-- Period -->
+                      <div class="flex items-center pl-6 pr-3 py-2 min-w-[11.75rem] h-full">
+                        <span class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">1 Jan 2024 - 31 Jan 2024</span>
+                      </div>
+
+                      <!-- Status -->
+                      <div class="flex items-center pl-3 py-2 min-w-[7.375rem] h-full lg:min-w-[8.875rem]">
+                        <div class="flex h-6">
+                          <div class="flex justify-center items-center w-6 h-full backdrop-blur-[10px] bg-[#07F468] dark:bg-[#06c454]">
+                            <img src="https://i.ibb.co.com/pBCPJv0c/tick-mark.webp" alt="tick mark" class="w-4 h-4 [filter:brightness(0)_saturate(100%)]">
+                          </div>
+                          <div class="flex justify-center items-center px-1.5 h-full backdrop-blur-[10px] bg-black dark:bg-[#181a1b]">
+                            <span class="text-xs leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">Paid</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Total Earned -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[7.625rem] h-full lg:min-w-[9.8125rem] xl:min-w-[12.125rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">USD$ 130.86</span>
+                      </div>
+
+                      <!-- Rollover -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[6.4375rem] h-full lg:min-w-[8.5625rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">$0</span>
+                      </div>
+
+                      <!-- Transfer Fee -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[7.5rem] h-full lg:min-w-[8.5625rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">$0</span>
+                      </div>
+
+                      <!-- Commission % -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[8.5625rem] h-full">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">88.8%</span>
+                      </div>
+
+                      <!-- Final Payout -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[9.8125rem] h-full xl:min-w-[12.125rem]">
+                        <span class="text-xs leading-normal font-bold text-right text-[#004EEB] dark:text-[#3f9dff]">USD$ 123.08</span>
+                      </div>
+
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2.5 flex-grow min-w-[5rem] h-full">
+                        <button class="flex justify-center items-center w-8 h-8">
+                          <img src="https://i.ibb.co.com/qMVbj8VQ/search-icon.webp" alt="search icon" class="w-6 h-6">
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- row -->
+                    <div class="flex items-center w-full min-h-[4.5rem]">
+                      <!-- Period -->
+                      <div class="flex items-center pl-6 pr-3 py-2 min-w-[11.75rem] h-full">
+                        <span class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">1 Jan 2024 - 31 Jan 2024</span>
+                      </div>
+
+                      <!-- Status -->
+                      <div class="flex items-center pl-3 py-2 min-w-[7.375rem] h-full lg:min-w-[8.875rem]">
+                        <div class="flex h-6">
+                          <div class="flex justify-center items-center w-6 h-full backdrop-blur-[10px] bg-[#07F468] dark:bg-[#06c454]">
+                            <img src="https://i.ibb.co.com/pBCPJv0c/tick-mark.webp" alt="tick mark" class="w-4 h-4 [filter:brightness(0)_saturate(100%)]">
+                          </div>
+                          <div class="flex justify-center items-center px-1.5 h-full backdrop-blur-[10px] bg-black dark:bg-[#181a1b]">
+                            <span class="text-xs leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">Paid</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Total Earned -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[7.625rem] h-full lg:min-w-[9.8125rem] xl:min-w-[12.125rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">USD$ 130.86</span>
+                      </div>
+
+                      <!-- Rollover -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[6.4375rem] h-full lg:min-w-[8.5625rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">$0</span>
+                      </div>
+
+                      <!-- Transfer Fee -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[7.5rem] h-full lg:min-w-[8.5625rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">$0</span>
+                      </div>
+
+                      <!-- Commission % -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[8.5625rem] h-full">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">88.8%</span>
+                      </div>
+
+                      <!-- Final Payout -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[9.8125rem] h-full xl:min-w-[12.125rem]">
+                        <span class="text-xs leading-normal font-bold text-right text-[#004EEB] dark:text-[#3f9dff]">USD$ 123.08</span>
+                      </div>
+
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2.5 flex-grow min-w-[5rem] h-full">
+                        <button class="flex justify-center items-center w-8 h-8">
+                          <img src="https://i.ibb.co.com/qMVbj8VQ/search-icon.webp" alt="search icon" class="w-6 h-6">
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- row -->
+                    <div class="flex items-center w-full min-h-[4.5rem]">
+                      <!-- Period -->
+                      <div class="flex items-center pl-6 pr-3 py-2 min-w-[11.75rem] h-full">
+                        <span class="text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">1 Jan 2024 - 31 Jan 2024</span>
+                      </div>
+
+                      <!-- Status -->
+                      <div class="flex items-center pl-3 py-2 min-w-[7.375rem] h-full lg:min-w-[8.875rem]">
+                        <div class="flex h-6">
+                          <div class="flex justify-center items-center w-6 h-full backdrop-blur-[10px] bg-[#07F468] dark:bg-[#06c454]">
+                            <img src="https://i.ibb.co.com/pBCPJv0c/tick-mark.webp" alt="tick mark" class="w-4 h-4 [filter:brightness(0)_saturate(100%)]">
+                          </div>
+                          <div class="flex justify-center items-center px-1.5 h-full backdrop-blur-[10px] bg-black dark:bg-[#181a1b]">
+                            <span class="text-xs leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">Paid</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Total Earned -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[7.625rem] h-full lg:min-w-[9.8125rem] xl:min-w-[12.125rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">USD$ 130.86</span>
+                      </div>
+
+                      <!-- Rollover -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[6.4375rem] h-full lg:min-w-[8.5625rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">$0</span>
+                      </div>
+
+                      <!-- Transfer Fee -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[7.5rem] h-full lg:min-w-[8.5625rem]">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">$0</span>
+                      </div>
+
+                      <!-- Commission % -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[8.5625rem] h-full">
+                        <span class="text-xs leading-normal font-medium text-right text-[#0C111D] dark:text-[#dbd8d3]">88.8%</span>
+                      </div>
+
+                      <!-- Final Payout -->
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2 min-w-[9.8125rem] h-full xl:min-w-[12.125rem]">
+                        <span class="text-xs leading-normal font-bold text-right text-[#004EEB] dark:text-[#3f9dff]">USD$ 123.08</span>
+                      </div>
+
+                      <div class="flex justify-end items-center pl-3 pr-6 py-2.5 flex-grow min-w-[5rem] h-full">
+                        <button class="flex justify-center items-center w-8 h-8">
+                          <img src="https://i.ibb.co.com/qMVbj8VQ/search-icon.webp" alt="search icon" class="w-6 h-6">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- table-wrapper (mobile) -->
+              <div class="flex flex-col gap-1 sm:px-2 md:hidden">
+                <!-- row -->
+                <div class="flex justify-center items-center p-2 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 sm:py-3 dark:border-[#3b4043] dark:bg-[#181a1b]/50">
+                  <div class="flex justify-between gap-0.5 w-full">
+                    <!-- row-left -->
+                    <div class="flex flex-col gap-1 w-[10.625rem] sm:gap-1.5">
+                      <span class="text-sm font-medium py-0.5 text-[#182230] dark:text-[#d1cdc7]">1 Jan 2024 - 31 Jan 2024</span>
+                    
+                      <!-- table -->
+                      <div class="flex flex-col gap-0.5 sm:gap-1">
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Rollover</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">$0</span>
+                        </div>
+
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Transfer Fee</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">$0</span>
+                        </div>
+
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Commission %</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">88.8%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- row-right -->
+                    <div class="flex flex-col items-end gap-0.5 min-w-[9.4375rem] sm:gap-1.5">
+                      <!-- status -->
+                      <div class="flex h-6">
+                        <div class="flex justify-center items-center w-6 h-full backdrop-blur-[10px] bg-[#FFE500] dark:bg-[#a99700]">
+                          <img src="https://i.ibb.co.com/qP4Jr6q/clock.webp" alt="clock" class="w-4 h-4 [filter:brightness(0)_saturate(100%)]">
+                        </div>
+                        <div class="flex justify-center items-center px-1.5 h-full backdrop-blur-[10px] bg-black dark:bg-[#181a1b]">
+                          <span class="text-xs leading-normal font-medium text-[#FFE500] dark:text-[#ffe81a]">Pending</span>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col sm:gap-1">
+                        <!-- total-earned -->
+                        <div class="flex items-center gap-1">
+                          <span class="text-[0.625rem] leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9589]">Total Earned</span>
+                          <span class="text-[0.625rem] leading-[1.125rem] text-[#667085] dark:text-[#9e9589]">USD$ 130.86</span>
+                        </div>
+
+                        <!-- final-payout -->
+                        <div class="flex flex-col">
+                          <span class="text-xs leading-normal font-medium text-right text-[#667085] dark:text-[#9e9589]">Final Payout</span>
+                          <span class="text-lg font-bold text-right -mt-1 text-[#004EEB] dark:text-[#3f9dff]">USD$ 123.08</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- row -->
+                <div class="flex justify-center items-center p-2 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 sm:py-3 dark:border-[#3b4043] dark:bg-[#181a1b]/50">
+                  <div class="flex justify-between gap-0.5 w-full">
+                    <!-- row-left -->
+                    <div class="flex flex-col gap-1 w-[10.625rem] sm:gap-1.5">
+                      <span class="text-sm font-medium py-0.5 text-[#182230] dark:text-[#d1cdc7]">1 Jan 2024 - 31 Jan 2024</span>
+                    
+                      <!-- table -->
+                      <div class="flex flex-col gap-0.5 sm:gap-1">
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Rollover</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">$0</span>
+                        </div>
+
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Transfer Fee</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">$0</span>
+                        </div>
+
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Commission %</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">88.8%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- row-right -->
+                    <div class="flex flex-col items-end gap-0.5 min-w-[9.4375rem] sm:gap-1.5">
+                      <!-- status -->
+                      <div class="flex h-6">
+                        <div class="flex justify-center items-center w-6 h-full backdrop-blur-[10px] bg-[#07F468] dark:bg-[#06c454]">
+                          <img src="https://i.ibb.co.com/pBCPJv0c/tick-mark.webp" alt="tick mark" class="w-4 h-4 [filter:brightness(0)_saturate(100%)]">
+                        </div>
+                        <div class="flex justify-center items-center px-1.5 h-full backdrop-blur-[10px] bg-black dark:bg-[#181a1b]">
+                          <span class="text-xs leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">Paid</span>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col sm:gap-1">
+                        <!-- total-earned -->
+                        <div class="flex items-center gap-1">
+                          <span class="text-[0.625rem] leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9589]">Total Earned</span>
+                          <span class="text-[0.625rem] leading-[1.125rem] text-[#667085] dark:text-[#9e9589]">USD$ 130.86</span>
+                        </div>
+
+                        <!-- final-payout -->
+                        <div class="flex flex-col">
+                          <span class="text-xs leading-normal font-medium text-right text-[#667085] dark:text-[#9e9589]">Final Payout</span>
+                          <span class="text-lg font-bold text-right -mt-1 text-[#004EEB] dark:text-[#3f9dff]">USD$ 123.08</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- row -->
+                <div class="flex justify-center items-center p-2 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 sm:py-3 dark:border-[#3b4043] dark:bg-[#181a1b]/50">
+                  <div class="flex justify-between gap-0.5 w-full">
+                    <!-- row-left -->
+                    <div class="flex flex-col gap-1 w-[10.625rem] sm:gap-1.5">
+                      <span class="text-sm font-medium py-0.5 text-[#182230] dark:text-[#d1cdc7]">1 Jan 2024 - 31 Jan 2024</span>
+                    
+                      <!-- table -->
+                      <div class="flex flex-col gap-0.5 sm:gap-1">
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Rollover</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">$0</span>
+                        </div>
+
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Transfer Fee</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">$0</span>
+                        </div>
+
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Commission %</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">88.8%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- row-right -->
+                    <div class="flex flex-col items-end gap-0.5 min-w-[9.4375rem] sm:gap-1.5">
+                      <!-- status -->
+                      <div class="flex h-6">
+                        <div class="flex justify-center items-center w-6 h-full backdrop-blur-[10px] bg-[#07F468] dark:bg-[#06c454]">
+                          <img src="https://i.ibb.co.com/pBCPJv0c/tick-mark.webp" alt="tick mark" class="w-4 h-4 [filter:brightness(0)_saturate(100%)]">
+                        </div>
+                        <div class="flex justify-center items-center px-1.5 h-full backdrop-blur-[10px] bg-black dark:bg-[#181a1b]">
+                          <span class="text-xs leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">Paid</span>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col sm:gap-1">
+                        <!-- total-earned -->
+                        <div class="flex items-center gap-1">
+                          <span class="text-[0.625rem] leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9589]">Total Earned</span>
+                          <span class="text-[0.625rem] leading-[1.125rem] text-[#667085] dark:text-[#9e9589]">USD$ 130.86</span>
+                        </div>
+
+                        <!-- final-payout -->
+                        <div class="flex flex-col">
+                          <span class="text-xs leading-normal font-medium text-right text-[#667085] dark:text-[#9e9589]">Final Payout</span>
+                          <span class="text-lg font-bold text-right -mt-1 text-[#004EEB] dark:text-[#3f9dff]">USD$ 123.08</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- row -->
+                <div class="flex justify-center items-center p-2 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 sm:py-3 dark:border-[#3b4043] dark:bg-[#181a1b]/50">
+                  <div class="flex justify-between gap-0.5 w-full">
+                    <!-- row-left -->
+                    <div class="flex flex-col gap-1 w-[10.625rem] sm:gap-1.5">
+                      <span class="text-sm font-medium py-0.5 text-[#182230] dark:text-[#d1cdc7]">1 Jan 2024 - 31 Jan 2024</span>
+                    
+                      <!-- table -->
+                      <div class="flex flex-col gap-0.5 sm:gap-1">
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Rollover</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">$0</span>
+                        </div>
+
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Transfer Fee</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">$0</span>
+                        </div>
+
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Commission %</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">88.8%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- row-right -->
+                    <div class="flex flex-col items-end gap-0.5 min-w-[9.4375rem] sm:gap-1.5">
+                      <!-- status -->
+                      <div class="flex h-6">
+                        <div class="flex justify-center items-center w-6 h-full backdrop-blur-[10px] bg-[#07F468] dark:bg-[#06c454]">
+                          <img src="https://i.ibb.co.com/pBCPJv0c/tick-mark.webp" alt="tick mark" class="w-4 h-4 [filter:brightness(0)_saturate(100%)]">
+                        </div>
+                        <div class="flex justify-center items-center px-1.5 h-full backdrop-blur-[10px] bg-black dark:bg-[#181a1b]">
+                          <span class="text-xs leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">Paid</span>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col sm:gap-1">
+                        <!-- total-earned -->
+                        <div class="flex items-center gap-1">
+                          <span class="text-[0.625rem] leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9589]">Total Earned</span>
+                          <span class="text-[0.625rem] leading-[1.125rem] text-[#667085] dark:text-[#9e9589]">USD$ 130.86</span>
+                        </div>
+
+                        <!-- final-payout -->
+                        <div class="flex flex-col">
+                          <span class="text-xs leading-normal font-medium text-right text-[#667085] dark:text-[#9e9589]">Final Payout</span>
+                          <span class="text-lg font-bold text-right -mt-1 text-[#004EEB] dark:text-[#3f9dff]">USD$ 123.08</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- row -->
+                <div class="flex justify-center items-center p-2 rounded-sm backdrop-blur-[5px] border-[1.5px] border-[#D0D5DD] bg-white/50 sm:py-3 dark:border-[#3b4043] dark:bg-[#181a1b]/50">
+                  <div class="flex justify-between gap-0.5 w-full">
+                    <!-- row-left -->
+                    <div class="flex flex-col gap-1 w-[10.625rem] sm:gap-1.5">
+                      <span class="text-sm font-medium py-0.5 text-[#182230] dark:text-[#d1cdc7]">1 Jan 2024 - 31 Jan 2024</span>
+                    
+                      <!-- table -->
+                      <div class="flex flex-col gap-0.5 sm:gap-1">
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Rollover</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">$0</span>
+                        </div>
+
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Transfer Fee</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">$0</span>
+                        </div>
+
+                        <!-- row -->
+                        <div class="flex justify-between items-center gap-0.5">
+                          <span class="text-xs leading-normal font-medium text-[#667085] dark:text-[#9e9589]">Commission %</span>
+                          <span class="text-xs leading-normal text-[#667085] dark:text-[#9e9589]">88.8%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- row-right -->
+                    <div class="flex flex-col items-end gap-0.5 min-w-[9.4375rem] sm:gap-1.5">
+                      <!-- status -->
+                      <div class="flex h-6">
+                        <div class="flex justify-center items-center w-6 h-full backdrop-blur-[10px] bg-[#07F468] dark:bg-[#06c454]">
+                          <img src="https://i.ibb.co.com/pBCPJv0c/tick-mark.webp" alt="tick mark" class="w-4 h-4 [filter:brightness(0)_saturate(100%)]">
+                        </div>
+                        <div class="flex justify-center items-center px-1.5 h-full backdrop-blur-[10px] bg-black dark:bg-[#181a1b]">
+                          <span class="text-xs leading-normal font-medium text-[#07F468] dark:text-[#23f97b]">Paid</span>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col sm:gap-1">
+                        <!-- total-earned -->
+                        <div class="flex items-center gap-1">
+                          <span class="text-[0.625rem] leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9589]">Total Earned</span>
+                          <span class="text-[0.625rem] leading-[1.125rem] text-[#667085] dark:text-[#9e9589]">USD$ 130.86</span>
+                        </div>
+
+                        <!-- final-payout -->
+                        <div class="flex flex-col">
+                          <span class="text-xs leading-normal font-medium text-right text-[#667085] dark:text-[#9e9589]">Final Payout</span>
+                          <span class="text-lg font-bold text-right -mt-1 text-[#004EEB] dark:text-[#3f9dff]">USD$ 123.08</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- payout-popup -->
+        <div class="fixed inset-0 w-screen h-screen overflow-hidden bg-white/10 z-[9999] dark:bg-[#181a1b]/10">
+            <!-- blur-overlay -->
+            <div class="absolute inset-0 w-full h-full backdrop-blur-[5px] pointer-events-none z-[-1]"></div>
+            
+            <!-- popup-inner-wrapper -->
+            <div class="absolute top-0 right-0 w-full h-screen overflow-hidden backdrop-blur-[50px] shadow-[0px_0px_10px_0px_#00000040] bg-[#F9FAFB]/90 md:w-[29.1875rem] dark:bg-[#1b1d1e]/90">
+                <!-- popup-container -->
+                <div class="flex flex-col h-full shadow-[0px_0px_10px_-34px_#0000001A] [background:linear-gradient(0deg,rgba(255,255,255,0.9),rgba(255,255,255,0.9)),linear-gradient(180deg,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0)_100%)] before:inset-0 before:content-[''] before:absolute before:bg-[url('https://i.ibb.co.com/6Rz2GJd8/payout-popup-gradient.png')] before:bg-cover before:bg-center before:bg-no-repeat before:[opacity:12.5%] before:z-[0] before:pointer-events-none">
+                    <!-- progress-bar -->
+                    <div class="overflow-hidden w-full h-2 bg-[#EAECF0] dark:bg-[#222526] z-[1]">
+                      <div class="w-[74.656%] h-full bg-[#0c111d] dark:bg-[#0a0e17]"></div>
+                    </div>
+
+                    <!-- alert-container -->
+                    <div data-alert-container class="hidden w-full border-b-[0.5px] border-[#EAECF0] relative dark:border-[#222526]">
+                        <div class="w-[3px] block bg-[#FF4405] dark:bg-[#c93300]"></div>
+                        <div class="flex gap-4 px-4 py-3.5 flex-1 min-w-0 min-h-0 shadow-[0px_0px_8px_0px_#FF44051A] [background:linear-gradient(0deg,rgba(255,255,255,0.9),rgba(255,255,255))] before:absolute before:content-[''] before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:from-[rgba(255,68,5,0.1)] before:to-[rgba(255,255,255,0.9)] relative">
+                            <div class="relative w-full flex items-center gap-2.5">
+                                <img src="https://i.ibb.co.com/chj0VK84/alert-orange-full.webp" alt="alert orange full" class="w-6 min-w-[1.5rem] shrink-0 [filter:brightness(0)_saturate(100%)_invert(41%)_sepia(57%)_saturate(6607%)_hue-rotate(358deg)_brightness(101%)_contrast(100%)]">
+
+                                <div class="flex flex-col w-full flex-1">
+                                    <div class="flex justify-between items-start gap-1">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="text-sm font-semibold text-[#FF4405] dark:text-[#ff571e]">Something isn’t right with the information you provided, please double check.</h3>
+                                        </div>
+
+                                        <!-- close-button -->
+                                        <button class="hidden justify-center items-center w-6 h-6">
+                                            <img src="https://i.ibb.co.com/DfT6Sg5g/x-close.webp" alt="x close" class="w-6 h-6 min-w-[1.5rem] [filter:brightness(0)_saturate(100%)_invert(92%)_sepia(8%)_saturate(217%)_hue-rotate(178deg)_brightness(97%)_contrast(82%)]">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- main-section -->
+                    <div class="flex flex-col gap-4 px-2 pt-2 pb-4 min-h-0 flex-1 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] z-[2] md:p-4 xl:px-6">
+                        <!-- header -->
+                        <div class="flex justify-between items-center">
+                            <h2 class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">WITHDRAW EARNINGS</h2>
+
+                            <button class="flex justify-center items-center w-6 h-6 md:w-10 md:h-10">
+                                <img src="https://i.ibb.co.com/Q3RfM295/close.webp" alt="close" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(73%)_sepia(11%)_saturate(425%)_hue-rotate(179deg)_brightness(87%)_contrast(89%)]">
+                            </button>
+                        </div>
+
+                        <!-- back-button -->
+                        <button class="flex justify-center items-center gap-1 w-max">
+                          <img src="https://i.ibb.co.com/tPzh072N/chevron-left.webp" alt="chevron left" class="w-4 h-4 [filter:brightness(0)_saturate(100%)_invert(46%)_sepia(8%)_saturate(955%)_hue-rotate(183deg)_brightness(91%)_contrast(88%)]">
+                          <span class="text-xs leading-[1.125rem] font-medium text-[#667085] dark:text-[#9e9589]">Back</span>
+                        </button>
+
+                        <h3 class="text-lg font-medium text-[#0C111D] dark:text-[#dbd8d3]">Payout Details</h3>
+
+                        <h3 class="xl:hidden text-base text-[#0C111D] dark:text-[#dbd8d3]">Enter the necessary information for this transaction:</h3>
+                        <h3 class="hidden xl:inline text-base text-[#0C111D] dark:text-[#dbd8d3]">Please provide the following information for your transaction:</h3>
+
+                        <!-- form-container -->
+                        <div class="flex flex-col gap-6">
+                            <!-- input-wrapper -->
+                            <div class="flex flex-col gap-4">
+                                <div data-bank-swift-bic-code class="flex flex-col gap-1.5 group/input-container">
+                                    <label for="" class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">Bank Swift/BIC Code</label>
+                                
+                                    <!-- input-field -->
+                                    <div class="flex items-center gap-2 px-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                        <div class="flex items-center gap-2 w-full">
+                                            <input type="text" placeholder="Enter BIC/SWIFT code" value="123456789012" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                        
+                                            <div class="relative inline-flex overflow-hidden w-4 h-4 cursor-pointer group hover:overflow-visible">
+                                                <!-- Icon -->
+                                                <img src="https://i.ibb.co.com/Hp1tznKk/help-circle.webp" alt="help circle" class="w-full h-full [filter:brightness(0)_saturate(100%)_invert(65%)_sepia(19%)_saturate(239%)_hue-rotate(179deg)_brightness(96%)_contrast(90%)]">
+                                                <!-- Tooltip -->
+                                                <div class="absolute z-[2] flex flex-col items-start text-center min-w-[18.75rem] md:w-max
+                                                    opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                                                    text-xs leading-normal font-medium text-white py-2 px-3 rounded-lg
+                                                    bg-[#101828] dark:bg-[rgba(14,19,32,1)] dark:text-[#e8e6e3] [box-shadow:0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A] [backdrop-filter:blur(25px)]
+                                                    -right-2 bottom-full -translate-y-2
+                                                    before:content-[''] before:absolute before:w-0 before:h-0 before:right-2.5 before:bottom-[-5px] before:border-[6px] before:border-b-0 before:border-l-transparent before:border-r-transparent before:border-t-[rgba(16,24,40)]"
+                                                >
+                                                    <p class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">Enter Bank Swift/BIC Code</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- error-text -->
+                                    <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                </div>
+                            </div>
+
+                            <!-- input-wrapper -->
+                            <div class="flex flex-col gap-4">
+                                <div data-bank-account-number class="flex flex-col gap-1.5 group/input-container">
+                                    <label for="" class="text-sm font-medium text-[#667085] dark:text-[#9e9589]">Bank Account Number or IBAN</label>
+                                
+                                    <!-- input-field -->
+                                    <div class="flex items-center gap-2 px-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                        <div class="flex items-center gap-2 w-full">
+                                            <input type="text" placeholder="Enter Bank Account Number or IBAN" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                        </div>
+                                    </div>
+
+                                    <span class="xl:hidden group-[.input-error]/input-container:!hidden text-sm text-[#475467] dark:text-[#b1aaa0]">If you're unsure whether an intermediary bank is required for your international transfer, please contact your bank for further information.</span>
+                                    <span class="hidden xl:inline group-[.input-error]/input-container:!hidden text-sm text-[#475467] dark:text-[#b1aaa0]">If you are not sure if you need an intermediary Bank for international transfer, please contact your bank for future information.</span>
+                                    
+                                    <!-- error-text -->
+                                    <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                </div>
+                            </div>
+
+                            <!-- Address section -->
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">Address</h3>
+
+                                <p class="text-sm text-[#475467] dark:text-[#b1aaa0]">Please ensure this address matches the one on your bank statement. Depending on your payout method, the financial institution may require your bank statement as proof of address to approve the transfer.</p>
+
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-1.5 group/input-container">
+                                    <!-- input-field -->
+                                    <div class="flex items-center gap-2 px-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                        <div class="flex items-center gap-2 w-full">
+                                            <input type="text" placeholder="Address Line 1" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                        </div>
+                                    </div>
+
+                                    <!-- error-text -->
+                                    <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                </div>
+
+                                <!-- input-wrapper -->
+                                <div class="flex flex-col gap-1.5 group/input-container">
+                                    <!-- input-field -->
+                                    <div class="flex items-center gap-2 px-3 py-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                        <div class="flex items-center gap-2 w-full">
+                                            <input type="text" placeholder="Address Line 2" class="text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                        </div>
+                                    </div>
+
+                                    <!-- error-text -->
+                                    <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                </div>
+
+                                <!-- input-group -->
+                                <div class="flex items-center gap-2">
+                                    <!-- input-wrapper -->
+                                    <div class="flex flex-col gap-1.5 w-full">
+                                        <!-- input-field -->
+                                        <div class="flex flex-col gap-1.5">
+                                            <input id="postal-code" type="text" class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]" placeholder="Postal Code">
+                                        </div>
+                                    </div>
+
+                                    <!-- input-wrapper -->
+                                    <div class="flex flex-col gap-1.5 w-full">
+                                        <!-- input-field -->
+                                        <div class="flex flex-col gap-1.5">
+                                            <input id="city" type="text" class="w-full h-10 flex gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D] text-base placeholder:text-[#667085] text-[#101828] bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]" placeholder="City">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dropdown-group -->
+                                <div class="flex items-center gap-2">
+                                    <!-- dropdown-wrapper -->
+                                    <div class="flex flex-col gap-1.5 w-full">
+                                        <!-- dropdown-field -->
+                                        <div class="flex flex-col gap-1.5">
+                                            <!-- select-dropdown -->
+                                            <div id="select-dropdown" class="select-dropdown relative z-[10000] flex w-full">
+                                                <div class="dropdown-select w-full cursor-pointer border-none">
+                                                    <div class="dash-select__trigger w-full h-10 flex items-center gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D]">
+                                                        <span class="text-base flex-grow text-[#667085] dark:text-[#9e9589] capitalize text-balance">State/Province</span>
+                                                        <img class="select-arrow h-4 w-4 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]" src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="arrow-down">
+                                                    </div>
+                                                    <div class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top scale-95 opacity-0 shadow-lg transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] pointer-events-none h-0 overflow-hidden hidden">
+                                                        <div class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]">
+
+                                                            <div data-value="hong-kong" class="option flex items-center justify-center gap-[0.625rem] p-[0.75rem] hover:bg-white dark:hover:bg-[#e8e6e3] [&.selected]:bg-[#EAECF0] dark:[&.selected]:bg-[#222526]">
+                                                                <div class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem] cursor-pointer">
+                                                                    <span class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] tracking-[0.01875rem] dark:text-[#dbd8d3]">
+                                                                        Hong Kong
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div data-value="australia" class="option flex items-center justify-center gap-[0.625rem] p-[0.75rem] hover:bg-white dark:hover:bg-[#e8e6e3] [&.selected]:bg-[#EAECF0] dark:[&.selected]:bg-[#222526]">
+                                                                <div class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem] cursor-pointer">
+                                                                    <span class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] tracking-[0.01875rem] dark:text-[#dbd8d3]">
+                                                                        Australia
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div data-value="usa" class="option flex items-center justify-center gap-[0.625rem] p-[0.75rem] hover:bg-white dark:hover:bg-[#e8e6e3] [&.selected]:bg-[#EAECF0] dark:[&.selected]:bg-[#222526]">
+                                                                <div class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem] cursor-pointer">
+                                                                    <span class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] tracking-[0.01875rem] dark:text-[#dbd8d3]">
+                                                                        USA
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <select class="dash-real-select hidden" name="dropdown-select" required="">
+                                                    <option value="hong-kong">Hong Kong</option>
+                                                    <option value="australia">Australia</option>
+                                                    <option value="usa">USA</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- dropdown-wrapper -->
+                                    <div class="flex flex-col gap-1.5 w-full">
+                                        <!-- dropdown-field -->
+                                        <div class="flex flex-col gap-1.5">
+                                            <!-- select-dropdown -->
+                                            <div id="select-dropdown" class="select-dropdown relative z-[10000] flex w-full">
+                                                <div class="dropdown-select w-full cursor-pointer border-none">
+                                                    <div class="dash-select__trigger w-full h-10 flex items-center gap-2 py-2 px-3 border-b border-[#D0D5DD] dark:border-[#3b4043] bg-white/10 dark:bg-[#181a1b]/10 shadow-[0_1px_2px_0_#1018280D]">
+                                                        <span class="text-base flex-grow text-[#667085] dark:text-[#9e9589] capitalize text-balance">Country</span>
+                                                        <img class="select-arrow h-4 w-4 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]" src="https://i.ibb.co.com/qLW7tf3T/Arrows.webp" alt="arrow-down">
+                                                    </div>
+                                                    <div class="dash-options-container absolute left-auto right-0 top-[calc(100%+0.5rem)] z-[9999] w-full origin-top scale-95 opacity-0 shadow-lg transition-[opacity,transform] duration-200 ease-out [transform-origin:50%_0] pointer-events-none hidden">
+                                                        <div class="rounded-[0.125rem] border border-[rgba(186,188,203,0.5)] bg-white dark:border-[rgba(61,71,73,0.5)] dark:bg-[#181a1b]">
+                                                            <div class="option flex items-center justify-center gap-[0.625rem] p-[0.75rem] hover:bg-white dark:hover:bg-[#e8e6e3] cursor-pointer [&.selected]:bg-[#EAECF0] dark:[&.selected]:bg-[#222526]">
+                                                                <div class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                    <span class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Florida</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="option flex items-center justify-center gap-[0.625rem] p-[0.75rem] hover:bg-white dark:hover:bg-[#e8e6e3] cursor-pointer [&.selected]:bg-[#EAECF0] dark:[&.selected]:bg-[#222526]">
+                                                                <div class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                    <span class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">Hawaii</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="option flex items-center justify-center gap-[0.625rem] p-[0.75rem] hover:bg-white dark:hover:bg-[#e8e6e3] cursor-pointer [&.selected]:bg-[#EAECF0] dark:[&.selected]:bg-[#222526]">
+                                                                <div class="option-inner-container flex flex-1 gap-[0.625rem] px-[0.625rem] py-[0.563rem]">
+                                                                    <span class="text-[0.875rem] font-medium leading-[1.25rem] text-[#0c111d] capitalize tracking-[0.01875rem] text-balance dark:text-[#dbd8d3]">New York</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <select class="dash-real-select hidden" name="dropdown-select" required="">
+                                                    <option value="florida">Florida</option>
+                                                    <option value="hawaii">Hawaii</option>
+                                                    <option value="new-york">New York</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- input-wrapper -->
+                            <div class="flex flex-col gap-4">
+                                <div data-bank-swift-bic-code class="flex flex-col gap-1.5 group/input-container">
+                                    <label for="" class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">Phone Number</label>
+                                
+                                    <!-- input-field -->
+                                    <div class="flex items-center gap-2 shadow-[0px_1px_2px_0px_#1018280D] rounded-t-sm border-b border-[#D0D5DD] bg-white/50 dark:bg-[#181a1b]/50 dark:border-[#3b4043]">
+                                        <div class="flex items-center w-full">
+                                            <!-- select-dropdown -->
+                                            <div data-country-phone-dropdown class="relative flex w-max z-[10001]">
+
+                                              <div data-country-phone-dropdown-select class="w-full cursor-pointer border-none">
+
+                                                <!-- TRIGGER -->
+                                                <div data-country-phone-select-trigger
+                                                    class="w-full min-w-[8.5rem] h-10 flex items-center justify-between gap-2 py-2 px-3">
+
+                                                  <div class="flex items-center gap-3">
+                                                    <span data-country-flag
+                                                          class="text-xl leading-6 text-[#101828] font-emoji dark:text-[#d6d3cd]">
+                                                      🇭🇰
+                                                    </span>
+
+                                                    <span data-country-code
+                                                          class="text-xl leading-6 text-[#101828] dark:text-[#d6d3cd]">
+                                                      +852
+                                                    </span>
+                                                  </div>
+
+                                                  <img data-select-arrow
+                                                      class="select-arrow h-5 w-5 transition-transform duration-200
+                                                              [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(10%)_saturate(466%)_hue-rotate(179deg)_brightness(96%)_contrast(81%)]"
+                                                      src="https://i.ibb.co.com/jkt6FN7G/chevron-down.webp"
+                                                      alt="chevron down" />
+
+                                                </div>
+
+                                                <!-- OPTIONS -->
+                                                <div data-country-phone-options-container
+                                                    class="max-md:!fixed max-md:!w-full max-md:!left-0 max-md:!bottom-0 max-md:!top-auto max-md:!shadow-[0px_-2px_4px_0px_#0000001A]
+                                                            absolute left-0 top-[calc(100%+0.5rem)]
+                                                            z-[9999] w-full origin-top scale-95 opacity-0
+                                                            backdrop-blur-[12.5px] shadow-lg rounded-lg
+                                                            transition-[opacity,transform] duration-200 ease-out
+                                                            [transform-origin:50%_0] h-0 overflow-hidden
+                                                            pointer-events-none hidden min-w-[14.6875rem] ">
+
+                                                  <div class="flex flex-col">
+
+                                                    <div data-option data-value="hong-kong" data-flag="🇭🇰" data-code="+852"
+                                                        class="flex items-center gap-2 p-3 group cursor-pointer selected
+                                                                [&.selected]:bg-[#EAECF0] hover:bg-white
+                                                                dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
+
+                                                      <span class="text-xl leading-6 text-[#101828] font-emoji dark:text-[#d6d3cd]">🇭🇰</span>
+                                                      <div class="flex items-center gap-1">
+                                                        <span class="text-base text-[#101828] dark:text-[#d6d3cd]">Hong Kong</span>
+                                                        <span class="text-base font-semibold text-[#101828] dark:text-[#d6d3cd]">+852</span>
+                                                      </div>
+
+                                                    </div>
+
+                                                    <div data-option data-value="france" data-flag="🇫🇷" data-code="+33"
+                                                        class="flex items-center gap-2 p-3 group cursor-pointer
+                                                                [&.selected]:bg-[#EAECF0] hover:bg-white
+                                                                dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
+
+                                                      <span class="text-xl leading-6 text-[#101828] font-emoji dark:text-[#d6d3cd]">🇫🇷</span>
+                                                      <div class="flex items-center gap-1">
+                                                        <span class="text-base text-[#101828] dark:text-[#d6d3cd]">France</span>
+                                                        <span class="text-base font-semibold text-[#101828] dark:text-[#d6d3cd]">+33</span>
+                                                      </div>
+
+                                                    </div>
+
+                                                    <div data-option data-value="india" data-flag="🇮🇳" data-code="+91"
+                                                        class="flex items-center gap-2 p-3 group cursor-pointer
+                                                                [&.selected]:bg-[#EAECF0] hover:bg-white
+                                                                dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
+
+                                                      <span class="text-xl leading-6 text-[#101828] font-emoji dark:text-[#d6d3cd]">🇮🇳</span>
+                                                      <div class="flex items-center gap-1">
+                                                        <span class="text-base text-[#101828] dark:text-[#d6d3cd]">India</span>
+                                                        <span class="text-base font-semibold text-[#101828] dark:text-[#d6d3cd]">+91</span>
+                                                      </div>
+
+                                                    </div>
+
+                                                    <div data-option data-value="united-kingdom" data-flag="🇬🇧" data-code="+44"
+                                                        class="flex items-center gap-2 p-3 group cursor-pointer
+                                                                [&.selected]:bg-[#EAECF0] hover:bg-white
+                                                                dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
+
+                                                      <span class="text-xl leading-6 text-[#101828] font-emoji dark:text-[#d6d3cd]">🇬🇧</span>
+                                                      <div class="flex items-center gap-1">
+                                                        <span class="text-base text-[#101828] dark:text-[#d6d3cd]">United Kingdom</span>
+                                                        <span class="text-base font-semibold text-[#101828] dark:text-[#d6d3cd]">+44</span>
+                                                      </div>
+
+                                                    </div>
+
+                                                    <div data-option data-value="united-states" data-flag="🇺🇸" data-code="+1"
+                                                        class="flex items-center gap-2 p-3 group cursor-pointer
+                                                                [&.selected]:bg-[#EAECF0] hover:bg-white
+                                                                dark:hover:bg-[#181a1b] dark:[&.selected]:bg-[#222526]">
+
+                                                      <span class="text-xl leading-6 text-[#101828] font-emoji dark:text-[#d6d3cd]">🇺🇸</span>
+                                                      <div class="flex items-center gap-1">
+                                                        <span class="text-base text-[#101828] dark:text-[#d6d3cd]">United States</span>
+                                                        <span class="text-base font-semibold text-[#101828] dark:text-[#d6d3cd]">+1</span>
+                                                      </div>
+
+                                                    </div>
+
+                                                  </div>
+                                                </div>
+
+                                              </div>
+
+                                              <!-- hidden real select -->
+                                              <select data-country-phone-real-select class="hidden" name="dropdown-select" required>
+                                                <option value="hong-kong">Hong Kong</option>
+                                                <option value="france">France</option>
+                                                <option value="india">India</option>
+                                                <option value="united-kingdom">United Kingdom</option>
+                                                <option value="united-states">United States</option>
+                                              </select>
+
+                                            </div>
+
+                                            <input type="text" placeholder="Phone Number" class="text-base placeholder:text-[#667085] text-[#101828] px-3 py-2 bg-transparent focus:outline-none flex-grow dark:placeholder:text-[#9e9589] dark:text-[#d6d3cd]">
+                                        </div>
+                                    </div>
+
+                                    <!-- error-text -->
+                                    <span class="hidden group-[.input-error]/input-container:inline text-sm text-[#FF4405] dark:text-[#ff571e]">Invalid Format</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- total-section -->
+                    <div data-total-section class="flex flex-col flex-none z-[1] min-h-[7.5rem] shadow-[0px_0px_8px_0px_#00000026] relative before:inset-0 before:content-[''] before:absolute before:bg-[url('https://i.ibb.co.com/6Rz2GJd8/payout-popup-gradient.png')] before:bg-cover before:bg-center before:bg-no-repeat before:z-[-1] before:pointer-events-none group/total-section">
+                      <div class="flex justify-between items-end flex-grow w-full h-full bg-white/50 dark:bg-[#181a1b]/80">
+                        
+                        <div class="flex items-start h-full px-2 py-4 md:pl-6">
+                          <!-- available-balance -->
+                          <div class="hidden flex-col gap-1 md:gap-2">
+                            <h3 class="text-base font-medium text-white dark:text-[#e8e6e3]">Available Balance</h3>
+                            <span data-available-balance-text class="text-3xl leading-[2.375rem] font-semibold text-white md:text-4xl md:leading-[2.75rem] md:tracking-[-0.045rem] dark:text-[#e8e6e3]">USD$30054.40</span>
+                          </div>
+
+                          <!-- payout-summary -->
+                          <div class="flex flex-col gap-1 md:gap-2">
+                            <h3 class="text-base font-medium text-[#0C111D] dark:text-[#dbd8d3]">YOUR FINAL PAYOUT <span class="hidden xl:inline">INCLUSIVE</span></h3>
+                            <span class="text-3xl leading-[2.375rem] font-semibold text-[#0C111D] md:text-4xl md:leading-[2.75rem] md:tracking-[-0.045rem] dark:text-[#dbd8d3]">EUR€114.48</span>
+                            <span class="xl:hidden text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">Service Charge USD$3.45</span>
+                            <span class="hidden xl:inline text-xs leading-normal font-medium text-[#0C111D] dark:text-[#dbd8d3]">USD$38 Transfer Fee</span>
+                          </div>
+                        </div>
+
+                        <button data-next-button class="hidden group-[.proceed-next]/total-section:flex items-center gap-2 pl-[2.125rem] pr-4 h-11 shadow-[0px_0px_16px_0px_#FFFFFF80] [clip-path:polygon(100%_0%,100%_100%,0%_100%,1.125rem_0%)] bg-black group/button hover:bg-[#07F468] md:pl-[3.64125rem] md:pr-6 md:h-[5.25rem] md:[clip-path:polygon(100%_0%,100%_100%,0%_100%,2.14125rem_0%)] dark:bg-[#181a1b] dark:hover:bg-[#06c454]">
+                          <span class="text-lg font-semibold text-[#07F468] group-hover/button:text-black dark:text-[#23f97b] dark:group-hover/button:text-[#e8e6e3]">NEXT</span>
+                          <img src="https://i.ibb.co.com/pjKMT4nR/arrow-right.webp" alt="arrow right" class="w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(53%)_sepia(97%)_saturate(459%)_hue-rotate(93deg)_brightness(114%)_contrast(94%)] group-hover/button:[filter:brightness(0)_saturate(100%)]">
+                        </button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- handle dropdowns (state & country) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // HELPER FUNCTIONS (shared across all dropdowns)
+
+    /**
+     * Positions the dropdown options either below or above the trigger,
+     * based on available space in the viewport.
+     * @param {HTMLElement} select - The .dropdown-select container element
+     */
+    function positionDropdown(select) {
+        const optionsContainer = select.querySelector('.dash-options-container');
+        if (!optionsContainer) return;
+
+        // Get position and dimensions of the select trigger
+        const rect = select.getBoundingClientRect();
+        const spaceBelow = window.innerHeight - rect.bottom; // pixels below the trigger
+        const spaceAbove = rect.top; // pixels above the trigger
+        const optionsHeight = optionsContainer.scrollHeight; // total height of options list
+
+        // Remove any previous positioning classes
+        optionsContainer.classList.remove('upward', 'downward');
+
+        // Decide direction: if not enough space below but enough above, place upward
+        if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+        optionsContainer.classList.add('upward');
+        optionsContainer.style.top = 'auto';
+        optionsContainer.style.bottom = 'calc(100% + 0.5rem)'; // appear above with a small gap
+        } else {
+        optionsContainer.classList.add('downward');
+        optionsContainer.style.top = 'calc(100% + 0.5rem)'; // appear below with a gap
+        optionsContainer.style.bottom = 'auto';
+        }
+    }
+
+    /**
+     * Opens a dropdown: adds open class, rotates arrow, and applies visible state classes.
+     * @param {HTMLElement} select - The .dropdown-select container element
+     */
+    function openDropdown(select) {
+    const optionsContainer = select.querySelector('.dash-options-container');
+    const arrow = select.querySelector('.select-arrow');
+
+    if (!optionsContainer || !arrow) return;
+
+    const triggerRect = select.getBoundingClientRect();
+
+    // mark open FIRST
+    optionsContainer.classList.add('open');
+
+    // IMPORTANT: make it visible in layout system
+    optionsContainer.style.display = 'block';
+
+    // move to body
+    optionsContainer._originalParent = optionsContainer.parentNode;
+    optionsContainer._dropdownSelect = select;
+    document.body.appendChild(optionsContainer);
+
+    optionsContainer.style.position = 'fixed';
+    optionsContainer.style.left = `${triggerRect.left}px`;
+    optionsContainer.style.top = `${triggerRect.bottom + 8}px`;
+    optionsContainer.style.width = `${triggerRect.width}px`;
+    optionsContainer.style.zIndex = '999999';
+
+    arrow.classList.add('rotate-180');
+
+    optionsContainer.classList.remove(
+        'scale-95',
+        'opacity-0',
+        'pointer-events-none',
+        'h-0',
+        'overflow-hidden'
+    );
+
+    optionsContainer.classList.add(
+        'scale-100',
+        'opacity-100',
+        'pointer-events-auto',
+        'overflow-auto'
+    );
+}
+    /**
+     * Closes a dropdown: removes open class, resets arrow, and applies hidden state classes.
+     * @param {HTMLElement} select - The .dropdown-select container element
+     */
+    function closeDropdown(select) {
+    const optionsContainer = document.querySelector('.dash-options-container.open');
+    if (!optionsContainer) return;
+
+    const arrow = select?.querySelector('.select-arrow');
+
+    // remove state
+    optionsContainer.classList.remove('open');
+    arrow?.classList.remove('rotate-180');
+
+    // FULL hide (fixes gap + layout issues)
+    optionsContainer.style.display = 'none';
+
+    // restore DOM position
+    if (optionsContainer._originalParent) {
+        optionsContainer._originalParent.appendChild(optionsContainer);
+    }
+
+    // cleanup positioning (important for body-portal)
+    optionsContainer.style.position = '';
+    optionsContainer.style.left = '';
+    optionsContainer.style.top = '';
+    optionsContainer.style.width = '';
+    optionsContainer.style.zIndex = '';
+}
+    // ==================== INITIALIZE EACH DROPDOWN ====================
+    document.querySelectorAll('.dropdown-select').forEach(trendsSelect => {
+        // Find related elements within this dropdown
+        const selectDropdown = trendsSelect.closest('.select-dropdown');
+        const trigger = trendsSelect.querySelector('.dash-select__trigger span');
+        const arrow = trendsSelect.querySelector('.select-arrow');
+        const options = trendsSelect.querySelectorAll('.option');
+        const realSelect = selectDropdown.querySelector('.dash-real-select');
+        const optionsContainer = trendsSelect.querySelector('.dash-options-container');
+
+        // --- Initialize selected class based on current trigger text ---
+        if (trigger) {
+            const currentValue = realSelect?.value;
+
+            options.forEach(opt => {
+                if (opt.dataset.value === currentValue) {
+                    opt.classList.add('selected');
+                } else {
+                    opt.classList.remove('selected');
+                }
+            });
+        }
+
+        // Click on the dropdown trigger toggles open/close
+        trendsSelect.addEventListener('click', function(e) {
+        e.stopPropagation();
+
+        const isOpening = !optionsContainer.classList.contains('open');
+
+        // Close any other dropdown
+        document.querySelectorAll('.dropdown-select').forEach(s => {
+            if (s !== trendsSelect) {
+            closeDropdown(s);
+            }
+        });
+
+        if (isOpening) {
+            // Position and open this dropdown
+            openDropdown(trendsSelect);
+            positionDropdown(trendsSelect);
+        } else {
+            // Close it if already open
+            closeDropdown(trendsSelect);
+        }
+        });
+
+        // Click on an option updates the displayed value and the hidden select
+        options.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.stopPropagation();
+
+            // Get the text of the clicked option
+            const selectedText = this.querySelector('span').textContent.trim();
+            const selectedValue = this.dataset.value;
+
+            if (trigger) trigger.textContent = selectedText;
+            if (realSelect) realSelect.value = selectedValue;
+
+            // --- Update selected class: remove from all, add to this ---
+            options.forEach(opt => opt.classList.remove('selected'));
+            this.classList.add('selected');
+
+            // Close the dropdown after selection
+            closeDropdown(trendsSelect);
+
+            // Trigger a 'change' event on the hidden select
+            if (realSelect) realSelect.dispatchEvent(new Event('change'));
+        });
+        });
+    });
+
+    // ==================== GLOBAL EVENT HANDLERS ====================
+
+    // Close all dropdowns when clicking anywhere outside them
+    document.addEventListener('click', function (e) {
+    const openDropdown = document.querySelector('.dash-options-container.open');
+
+    if (!openDropdown) return;
+
+    // find the related dropdown wrapper (if still needed)
+    const parentSelect = openDropdown._originalParent?.closest('.dropdown-select');
+
+    // if click is inside dropdown OR inside trigger → do nothing
+    const clickedInsideDropdown = openDropdown.contains(e.target);
+    const clickedTrigger = parentSelect?.contains(e.target);
+
+    if (clickedInsideDropdown || clickedTrigger) return;
+
+    // otherwise close it
+    const realSelect = parentSelect;
+    if (realSelect) closeDropdown(realSelect);
+});
+
+    // Reposition any open dropdown when the window is resized
+    window.addEventListener('resize', function() {
+        document.querySelectorAll('.dropdown-select').forEach(select => {
+        const optionsContainer = select.querySelector('.dash-options-container');
+        // Only reposition if this dropdown is currently open
+        if (optionsContainer && optionsContainer.classList.contains('open')) {
+            positionDropdown(select);
+        }
+        });
+    });
+    });
+    </script>
+
+    <!-- handle Country Phone Dropdowns -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // ====================
+      // POSITION (SAME STYLE AS YOUR MAIN DROPDOWN)
+      // ====================
+      function positionDropdown(wrapper) {
+        const container = wrapper.querySelector('[data-country-phone-options-container]');
+        if (!container) return;
+
+        const rect = wrapper.getBoundingClientRect();
+        const spaceBelow = window.innerHeight - rect.bottom;
+        const spaceAbove = rect.top;
+        const optionsHeight = container.scrollHeight;
+
+        container.classList.remove('upward', 'downward');
+
+        if (spaceBelow < optionsHeight && spaceAbove > spaceBelow) {
+          container.classList.add('upward');
+          container.style.top = 'auto';
+          container.style.bottom = 'calc(100% + 0.5rem)';
+        } else {
+          container.classList.add('downward');
+          container.style.top = 'calc(100% + 0.5rem)';
+          container.style.bottom = 'auto';
+        }
+      }
+
+      // ====================
+      // OPEN
+      // ====================
+      function openDropdown(wrapper) {
+        const container = wrapper.querySelector('[data-country-phone-options-container]');
+        const arrow = wrapper.querySelector('[data-select-arrow]');
+
+        if (!container || !arrow) return;
+
+        container.classList.add('open');
+
+        arrow.classList.add('rotate-180');
+
+        container.classList.remove(
+          'scale-95',
+          'opacity-0',
+          'pointer-events-none',
+          'h-0',
+          'overflow-hidden',
+          'hidden'
+        );
+
+        container.classList.add(
+          'scale-100',
+          'opacity-100',
+          'pointer-events-auto',
+          'overflow-auto'
+        );
+      }
+
+      // ====================
+      // CLOSE
+      // ====================
+      function closeDropdown(wrapper) {
+        const container = wrapper.querySelector('[data-country-phone-options-container]');
+        const arrow = wrapper.querySelector('[data-select-arrow]');
+
+        if (!container || !arrow) return;
+
+        container.classList.remove('open');
+        arrow.classList.remove('rotate-180');
+
+        container.classList.remove(
+          'scale-100',
+          'opacity-100',
+          'pointer-events-auto',
+          'overflow-auto'
+        );
+
+        container.classList.add(
+          'scale-95',
+          'opacity-0',
+          'pointer-events-none',
+          'h-0',
+          'overflow-hidden'
+        );
+      }
+
+      function closeAll(except = null) {
+        document.querySelectorAll('[data-country-phone-dropdown]').forEach(w => {
+          if (w !== except) closeDropdown(w);
+        });
+      }
+
+      // ====================
+      // INIT
+      // ====================
+      document.querySelectorAll('[data-country-phone-dropdown]').forEach(wrapper => {
+
+        const trigger = wrapper.querySelector('[data-country-phone-select-trigger]');
+        const container = wrapper.querySelector('[data-country-phone-options-container]');
+        const realSelect = wrapper.querySelector('[data-country-phone-real-select]');
+        const options = wrapper.querySelectorAll('[data-option]');
+
+        const flagEl = wrapper.querySelector('[data-country-flag]');
+        const codeEl = wrapper.querySelector('[data-country-code]');
+
+        // OPEN/CLOSE TOGGLE
+        trigger.addEventListener('click', function (e) {
+          e.stopPropagation();
+
+          const isOpen = container.classList.contains('open');
+
+          closeAll(wrapper);
+
+          if (!isOpen) {
+            openDropdown(wrapper);
+            positionDropdown(wrapper);
+          } else {
+            closeDropdown(wrapper);
+          }
+        });
+
+        // OPTION SELECT
+        options.forEach(option => {
+          option.addEventListener('click', function (e) {
+            e.stopPropagation();
+
+            const flag = this.dataset.flag;
+            const code = this.dataset.code;
+            const value = this.dataset.value;
+
+            if (flagEl) flagEl.textContent = flag;
+            if (codeEl) codeEl.textContent = code;
+
+            if (realSelect) realSelect.value = value;
+
+            options.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+
+            closeDropdown(wrapper);
+
+            if (realSelect) realSelect.dispatchEvent(new Event('change'));
+          });
+        });
+
+      });
+
+      // ====================
+      // OUTSIDE CLICK (MATCH MAIN SYSTEM)
+      // ====================
+      document.addEventListener('click', function () {
+        document.querySelectorAll('[data-country-phone-dropdown]').forEach(wrapper => {
+          closeDropdown(wrapper);
+        });
+      });
+
+      // ====================
+      // RESIZE REPOSITION
+      // ====================
+      window.addEventListener('resize', function () {
+        document.querySelectorAll('[data-country-phone-dropdown]').forEach(wrapper => {
+          const container = wrapper.querySelector('[data-country-phone-options-container]');
+          if (container && container.classList.contains('open')) {
+            positionDropdown(wrapper);
+          }
+        });
+      });
+
+    });
+    </script>
+
+    <!-- handle bank details validatation -->
+    <script>
+        // ==================== DOM ELEMENT SELECTORS ====================
+
+        // Get input fields
+        const swiftInput = document.querySelector('[data-bank-swift-bic-code] input');
+        const accountInput = document.querySelector('[data-bank-account-number] input');
+
+        // Get container elements (for styling error states)
+        const swiftContainer = document.querySelector('[data-bank-swift-bic-code]');
+        const accountContainer = document.querySelector('[data-bank-account-number]');
+
+        // Get UI elements for feedback and progression
+        const totalSection = document.querySelector('[data-total-section]');
+        const alertContainer = document.querySelector('[data-alert-container]');
+        const nextBtn = totalSection.querySelector('[data-next-button]');
+
+        // VALIDATION PATTERNS
+
+        // SWIFT/BIC code pattern: 8-11 alphanumeric characters (letters and numbers only)
+        const swiftRegex = /^[A-Z0-9]{8,11}$/i;
+
+        // Account/IBAN pattern: 10-34 alphanumeric characters (simplified validation)
+        const ibanRegex = /^[A-Z0-9]{10,34}$/i;
+
+        // HELPER FUNCTIONS
+
+        /**
+         * Checks if both input fields have values (basic presence check)
+         * This enables/disables the next button visual state
+         */
+        function checkInputsFilled() {
+        const swiftVal = swiftInput.value.trim();
+        const accountVal = accountInput.value.trim();
+
+        // Both fields must have content to proceed
+        if (swiftVal && accountVal) {
+            totalSection.classList.add('proceed-next');  // Enable next button
+        } else {
+            totalSection.classList.remove('proceed-next'); // Disable next button
+        }
+        }
+
+        /**
+         * Performs format validation on both input fields
+         * @returns {boolean} - Returns true if both inputs pass validation, false otherwise
+         * 
+         * Validation rules:
+         * - SWIFT/BIC: Must be 8-11 alphanumeric characters
+         * - Account/IBAN: Must be 10-34 alphanumeric characters
+         */
+        function validateInputs() {
+        let isValid = true;
+
+        // Remove any existing error styling and hide alert
+        swiftContainer.classList.remove('input-error');
+        accountContainer.classList.remove('input-error');
+        alertContainer.classList.add('hidden');
+
+        const swiftVal = swiftInput.value.trim();
+        const accountVal = accountInput.value.trim();
+
+        // Validate SWIFT/BIC code format
+        if (!swiftRegex.test(swiftVal)) {
+            swiftContainer.classList.add('input-error');
+            isValid = false;
+        }
+
+        // Validate account number/IBAN format
+        if (!ibanRegex.test(accountVal)) {
+            accountContainer.classList.add('input-error');
+            isValid = false;
+        }
+
+        // Show error alert if any validation failed
+        if (!isValid) {
+            alertContainer.classList.remove('hidden');
+        }
+
+        return isValid;
+        }
+
+        // EVENT LISTENERS
+        swiftInput.addEventListener('input', checkInputsFilled);
+        accountInput.addEventListener('input', checkInputsFilled);
+
+        // Handle next button click - validates format before proceeding
+        nextBtn.addEventListener('click', () => {
+        const isValid = validateInputs();
+
+        if (isValid) {
+            console.log('Proceed to next step');
+        }
+        });
+    </script>
+  </body>
+</html>
